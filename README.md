@@ -16,7 +16,7 @@ Hace unos años trasteé con BattleScribe para poder hacerme las listas de Breto
 ### Ficheros de ejércitos
 * [Bretonia](./files/MNDR_Bretonia_2020.cat)
 
-## Importar els fitxers
+## Importar los ficheros
 ### Usando el repositorio
 Copiar [este enlance](./repo/index.bsi) a la aplicación de BattleScribe.
 
