@@ -18,7 +18,7 @@ Hace unos años trasteé con BattleScribe para poder hacerme las listas de Breto
 
 ## Importar els fitxers
 ### Usando el repositorio
-Tarea en Progreso.
+Copiar [este enlance](./repo/index.bsi) a la aplicación de BattleScribe.
 
 ### Importar localmente los ficheros
 Hay que tener BattleScribe instalado en tu PC, Mac o Linux. Y seguir los pasos del [tutorial](http://www.leyendasenminiatura.com/2018/02/recursos-tutorial-battlescribe-mdnr.html) que se han currado los compis de Leyendas en Miniatura. (¡gracias de nuevo!)
