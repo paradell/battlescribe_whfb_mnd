@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+# Ficheros de BattleScribe para Warhammer Fantasy usando Manuscritos de Nuth
 
-You can use the [editor on GitHub](https://github.com/paradell/battelscribe_whfb_mnd/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Qué es BattleScribe.
+[BattleScribe](https://www.battlescribe.net) es un programa para ordenador, y app para móbil y tablet que permite crear listas de ejército para varios juegos.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Que son los Manuscritos de Nuth.
+[Manuscritos de Nuth](https://www.cargad.com/index.php/manuscritos-de-nuth/) es una iniciativa de un grupo de jugadores de Warhammer Fantasy 6a edición para poder seguir jugando a ella añadiendo a cada ejército opciones de tropas que tuviesen miniatura y/o reglas en las ediciones de Warhammer de 3a a 8a.
 
-### Markdown
+## Por qué este proyecto.
+Hace unos años trasteé con BattleScribe para poder hacerme las listas de Bretonia (mi ejército) aplicado a Manuscritos de Nuth. Y en paralelo, desde el blog [Leyendas en Miniatura](http://www.leyendasenminiatura.com/p/recursos.html) hicieron lo mismo para todos los ejércitos (muchas gracias, compis!). Por diversas razones, no se van a actualizar las versiones 2020 de los Manuscritos de Nuth, así que he retomado mi pequeño proyecto y le he dado un meneo para pulir y añadir cosas nuevas a cómo se generan las listas para WH-MNDR en BattleScribe.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Lista de Ficheros
+### Fichero Base
+* [Warhammer Fantasy MNDR](./files/Warhammer_Fantasy_MDNR.gst)
 
-```markdown
-Syntax highlighted code block
+### Ficheros de ejércitos
+* [Bretonia](./files/MNDR_Bretonia_2020.cat)
 
-# Header 1
-## Header 2
-### Header 3
+## Importar los ficheros
+### Usando el repositorio
+Tarea en Progreso.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/paradell/battelscribe_whfb_mnd/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Importar localmente los ficheros
+Hay que tener BattleScribe instalado en tu PC, Mac o Linux. Y seguir los pasos del [tutorial](http://www.leyendasenminiatura.com/2018/02/recursos-tutorial-battlescribe-mdnr.html) que se han currado los compis de Leyendas en Miniatura. (¡gracias de nuevo!)
