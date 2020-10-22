@@ -11,10 +11,10 @@ Hace unos años trasteé con BattleScribe para poder hacerme las listas de Breto
 
 ## Lista de Ficheros
 ### Fichero Base
-* [Warhammer Fantasy MNDR](./Warhammer_Fantasy_MDNR.gst)
+* [Warhammer Fantasy MNDR](./files/Warhammer_Fantasy_MDNR.gst)
 
 ### Ficheros de ejércitos
-* [Bretonia](./Bretonia.cat)
+* [Bretonia](./files/MNDR_Bretonia_2020.cat)
 
 ## Importar els fitxers
 ### Usando el repositorio
