@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MNDR v2020" revision="2" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="paradell.aleix@gmail.com" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN v2020" revision="3" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="paradell.aleix@gmail.com" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="95b0-9aeb-pubN66253" name="PDF Bretonia MNDR"/>
     <publication id="95b0-9aeb-pubN90612" name="PDF Bretonia MDNR"/>
@@ -245,6 +245,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="6dbc-f7e5-bee5-4cf0" name="Escuderos" publicationId="95b0-9aeb-pubN66253" page="23" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set-primary" field="category" value="102e-012c-5785-3354">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="e83c-665f-c60a-9971" name="Manteletes" hidden="false" targetId="4fca-f66e-61e9-2719" type="rule"/>
         <infoLink id="473e-6f92-fa11-b46c" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
@@ -408,6 +415,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="e73b-29fd-998f-22cf" name="Brigands" publicationId="95b0-9aeb-pubN66253" page="23" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set-primary" field="category" value="102e-012c-5785-3354">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="f28d-7829-1181-690e" name="Escoria" hidden="false">
           <description>Los Brigands nunca causan pánico en unidades amigas (ni siquiera a los Campesinos)
@@ -483,6 +497,13 @@ No se benefician de un Estandarte de Batalla</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="0e07-93aa-8221-9fc7" name="Arqueros Campesinos" publicationId="95b0-9aeb-pubN66253" page="23" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set-primary" field="category" value="102e-012c-5785-3354">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="9eff-5260-d238-8598" name="Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
         <infoLink id="da46-d09a-0e0d-c526" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
@@ -1225,6 +1246,13 @@ No se benefician de un Estandarte de Batalla</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="0da0-39ff-e291-58ba" name="Caballeros del Grial" publicationId="95b0-9aeb-pubN66253" page="31" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="6a6e-68ff-d238-df92" value="-1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a6e-68ff-d238-df92" type="max"/>
       </constraints>
@@ -2188,8 +2216,9 @@ La unidad queda de repente en un estado de euforia, y es inmune al pánico. Desg
         <infoLink id="b44a-80f7-d78c-9387" name="Inestable" hidden="false" targetId="e1e7-a7dd-415e-a2a4" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="7d65-9127-1cc6-78b4" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="true"/>
+        <categoryLink id="7d65-9127-1cc6-78b4" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
         <categoryLink id="a1e1-2737-9005-2bbc" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="354b-acc9-ddeb-8cb5" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="275.0"/>
@@ -2244,8 +2273,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d7f3-f0cc-857a-be00" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
-        <categoryLink id="d7bd-54da-785e-2c4d" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="true"/>
+        <categoryLink id="d7bd-54da-785e-2c4d" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
         <categoryLink id="e770-cc47-afc1-ba66" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="26d9-2391-e6a1-3dc8" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="b54c-a1fa-7519-61ca" name="Montura" hidden="false" collective="false" import="true" defaultSelectionEntryId="a10d-5ffd-88f7-df81">
@@ -2409,9 +2439,10 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
         <infoLink id="4162-0e02-5d6b-8622" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="7379-240e-79a9-fd6b" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="true"/>
+        <categoryLink id="7379-240e-79a9-fd6b" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
         <categoryLink id="2e44-7241-5c2c-1074" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
         <categoryLink id="5406-3a1f-317b-5633" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="550c-424b-f526-1a90" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="9699-a75b-5a39-3396" name="Guardianes del Grial" hidden="false" collective="false" import="true" type="upgrade">
@@ -2685,6 +2716,13 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
       </costs>
     </selectionEntry>
     <selectionEntry id="da73-6b97-c3d4-4701" name="Cazadores" publicationId="95b0-9aeb-pubN66253" page="23" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set-primary" field="category" value="102e-012c-5785-3354">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c945-ec10-0e51-8539" type="max"/>
       </constraints>
@@ -2809,6 +2847,13 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
       </costs>
     </selectionEntry>
     <selectionEntry id="77aa-4d56-2b86-6ab9" name="Arblastiers" publicationId="95b0-9aeb-pubN66253" page="23" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set-primary" field="category" value="102e-012c-5785-3354">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="c6b5-ad47-f613-7ee9" name="Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
         <infoLink id="beaa-adba-5c1e-62b2" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
@@ -2974,6 +3019,13 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
       </costs>
     </selectionEntry>
     <selectionEntry id="d47c-018e-c9f6-ef7a" name="Hombres de Armas" publicationId="95b0-9aeb-pubN66253" page="23" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set-primary" field="category" value="102e-012c-5785-3354">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="9219-2b45-5e5e-b086" name="el Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
         <infoLink id="3b38-a228-ce09-a3bf" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
@@ -3692,8 +3744,9 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="657c-11ac-d639-6c63" type="max"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="df1e-1a04-4793-a48c" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
+        <categoryLink id="df1e-1a04-4793-a48c" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
         <categoryLink id="3e31-6ecb-6af4-048b" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="1bff-257e-90d5-9375" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="80aa-4c07-5b51-60d3" name="Tristán el Trovador" hidden="false" collective="false" import="true" type="upgrade">
@@ -3797,92 +3850,6 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="645c-abe3-7694-6f7b" name="Paladín Especial" publicationId="95b0-9aeb-pubN66253" page="22" hidden="true" collective="false" import="true" type="model">
-      <profiles>
-        <profile id="c9ef-6217-32bf-795b" name="Paladín" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Caballero</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="8bb6-1ff7-cfc6-c33a" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
-        <infoLink id="6367-b844-d593-2960" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
-        <infoLink id="0c74-9d18-3034-5ee3" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
-        <infoLink id="9242-e47c-30ff-e6b5" name="Arma a dos manos " hidden="false" targetId="bc8b-5380-77a9-7fe7" type="profile"/>
-        <infoLink id="5ed9-6c51-c4e4-2b48" name="Lanza de caballería" hidden="false" targetId="5bcd-ff0b-d571-38d0" type="profile"/>
-        <infoLink id="7e36-2563-87dd-c63a" name="Voto de la Búsqueda" hidden="false" targetId="a134-9ec0-1ae3-19c9" type="rule"/>
-        <infoLink id="0aee-739c-3521-5303" name="Voto del Caballero" hidden="false" targetId="fb8b-353f-ce50-d6af" type="rule"/>
-        <infoLink id="c178-ec47-ba32-a32b" name="Voto del Grial" hidden="false" targetId="3634-f177-bf91-ee8f" type="rule"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="29d6-6cfd-e941-c580" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
-        <categoryLink id="7f95-f9e3-8c8d-a555" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="4a80-870b-edc5-0b46" name="Caballo de Guerra con barda" hidden="false" collective="false" import="true" targetId="6d9c-6159-156b-e21c" type="selectionEntry"/>
-        <entryLink id="cc28-159c-b295-f99f" name="Pegaso Real" hidden="false" collective="false" import="true" targetId="cced-4661-858c-8862" type="selectionEntry"/>
-      </entryLinks>
-      <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="fe98-02ba-ad7d-35a0" name="Señor Especial" publicationId="95b0-9aeb-pubN66253" page="22" hidden="true" collective="false" import="true" type="model">
-      <profiles>
-        <profile id="e2ef-cfff-6e7e-d07e" name="Señor Bretoniano" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Caballero</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="8f63-e9bd-8848-b062" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
-        <infoLink id="6b18-f60e-6151-ed11" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
-        <infoLink id="2a64-218a-1ba3-0a1b" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
-        <infoLink id="48b9-ad3c-d258-1380" name="Arma a dos manos " hidden="false" targetId="bc8b-5380-77a9-7fe7" type="profile"/>
-        <infoLink id="7825-0a61-36ca-2174" name="Lanza de caballería" hidden="false" targetId="5bcd-ff0b-d571-38d0" type="profile"/>
-        <infoLink id="177e-bd55-c0c7-b358" name="Voto de la Búsqueda" hidden="false" targetId="a134-9ec0-1ae3-19c9" type="rule"/>
-        <infoLink id="020b-836a-8b9e-5306" name="Voto del Caballero" hidden="false" targetId="fb8b-353f-ce50-d6af" type="rule"/>
-        <infoLink id="9097-ac88-a5f6-1619" name="Voto del Grial" hidden="false" targetId="3634-f177-bf91-ee8f" type="rule"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="47fd-bf95-3611-b6f6" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
-        <categoryLink id="b8d5-15aa-fd46-6708" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="7302-3ade-db47-4e67" name="Caballo de Guerra con barda" hidden="false" collective="false" import="true" targetId="6d9c-6159-156b-e21c" type="selectionEntry"/>
-        <entryLink id="f4fc-2e7d-0930-9874" name="Pegaso Real" hidden="false" collective="false" import="true" targetId="cced-4661-858c-8862" type="selectionEntry"/>
-      </entryLinks>
-      <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="60.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="b8e5-22c8-9a21-c159" name="Agravain de la Noble Gesta" publicationId="95b0-9aeb-pubN66253" page="26" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="5cad-b206-1a32-9a8c" name="Agravain" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -3920,8 +3887,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
         <infoLink id="8e6e-6243-3a36-c4d2" name="Voto de la Búsqueda" hidden="false" targetId="a134-9ec0-1ae3-19c9" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="407e-8435-432f-d3ac" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
+        <categoryLink id="407e-8435-432f-d3ac" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
         <categoryLink id="4a2d-fde2-98f6-dd60" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="2f2f-4281-9344-286b" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="2d17-2f49-3619-e2a7" name="Caballo de Guerra con barda" hidden="false" collective="false" import="true" targetId="6d9c-6159-156b-e21c" type="selectionEntry"/>
@@ -3970,8 +3938,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
         <infoLink id="05b3-2a22-907d-af53" name="Voto del Grial" hidden="false" targetId="3634-f177-bf91-ee8f" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="e60e-03cf-9af2-90df" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
+        <categoryLink id="e60e-03cf-9af2-90df" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
         <categoryLink id="a1f2-77b0-3549-1cca" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="4c0a-aaaf-02ed-e3de" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="abef-bb3f-2764-8b39" name="Caballo de Guerra con barda" hidden="false" collective="false" import="true" targetId="6d9c-6159-156b-e21c" type="selectionEntry"/>
@@ -4023,8 +3992,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
         <infoLink id="0e76-8cb4-dd36-e390" name="Voto del Grial" hidden="false" targetId="3634-f177-bf91-ee8f" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="bbc2-4570-1916-7b07" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
+        <categoryLink id="bbc2-4570-1916-7b07" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
         <categoryLink id="5b49-3934-02b7-02fe" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="2bae-ff9a-b644-74bf" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="c855-b673-0087-7444" name="Caballo de Guerra con barda" hidden="false" collective="false" import="true" targetId="6d9c-6159-156b-e21c" type="selectionEntry"/>
@@ -4123,8 +4093,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
         <infoLink id="05a6-2b99-a121-ddc4" name="Voto del Grial" hidden="false" targetId="3634-f177-bf91-ee8f" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="8c33-fba9-da31-f1a5" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="true"/>
+        <categoryLink id="8c33-fba9-da31-f1a5" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
         <categoryLink id="150c-1cab-481a-f0a7" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="13b2-872f-ffb7-4fea" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="932a-2ff9-97f7-50a6" name="Equipo Mágico: Arma Mágica" hidden="false" collective="false" import="true">
@@ -4217,6 +4188,129 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="240.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cd89-c667-e828-87cb" name="Guardianes del Grial" publicationId="95b0-9aeb-pubN66253" page="31" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="ac81-10dc-8c97-c67f" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0eaa-a66c-6af1-3c9c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0eaa-a66c-6af1-3c9c" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac81-10dc-8c97-c67f" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6fe6-8847-08bd-90c3" name="Caballero del Grial" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería, Humano, Caballero</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="5e05-2aeb-a76e-8eda" name="Santos en Vida" hidden="false">
+          <description>Todas las miniaturas de la unidad se consideran Campeón a efectos de lanzar y aceptar desafíos (pero recuerda que, estando en formación de lanza, sólo los Caballeros en contacto con miniaturas enemigas pueden lanzar y aceptar desafíos).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="4a63-ae1a-5ad4-ebad" name="Voto del Grial" hidden="false" targetId="3634-f177-bf91-ee8f" type="rule"/>
+        <infoLink id="e053-9bd5-0cdf-a426" name="Formación en lanza" hidden="false" targetId="6658-16af-75bc-2de4" type="rule"/>
+        <infoLink id="a599-b6ad-7204-79f7" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="6460-cfbf-b783-7337" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+        <infoLink id="568b-dab3-74b4-02c0" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
+        <infoLink id="a613-28bd-2603-5576" name="Lanza de caballería" hidden="false" targetId="5bcd-ff0b-d571-38d0" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="10a9-a590-9176-a182" name="New CategoryLink" hidden="false" targetId="0cfc-02a1-ad30-fb33" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="7133-f87d-b1a2-b40a" name="Caballeros del Grial" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c8c-b96b-a594-b5d4" type="min"/>
+            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="61ff-ebdc-362e-060a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2f1e-f887-6518-c527" name="Caballero del Grial" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería, Humano, Caballero</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="38.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="6249-6dd9-158c-8632" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="2bcd-df4e-5cc8-2b3e" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec1f-0a75-032c-d1c8" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6b49-1eed-505f-fa0b" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b64-858b-6e12-5fc1" type="max"/>
+              </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="df42-69ef-8f85-a596" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2fd3-2cb3-d25a-e44e" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e28f-4a4b-8d3d-5c6f" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="4154-e69b-b54e-4254" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="2753-52a1-1d48-0427" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="bd11-3edb-c9e0-c23b" name="Caballo de Guerra con barda" hidden="false" collective="false" import="true" targetId="6d9c-6159-156b-e21c" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

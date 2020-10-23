@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="fd97-5cfe-d46c-03c6" name="Warhammer Fantasy - MDNR" revision="3" battleScribeVersion="2.03" authorName="Leyendas en miniatura" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="fd97-5cfe-d46c-03c6" name="Warhammer Fantasy - MDNR" revision="5" battleScribeVersion="2.03" authorName="Leyendas en miniatura" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="53ea-00f4-9046-81ff" name="puntos" defaultCostLimit="-1.0"/>
   </costTypes>
@@ -59,6 +59,7 @@
     <categoryEntry id="9769-7233-6405-675e" name="Comandante" hidden="false"/>
     <categoryEntry id="0cfc-02a1-ad30-fb33" name="Unidad básica (no cuenta para el mínimo)" hidden="false"/>
     <categoryEntry id="e679-542e-c187-1362" name="Personaje" hidden="false"/>
+    <categoryEntry id="9374-09df-04a6-d8fe" name="Personaje Especial" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="44cf-39eb-d3e6-45a2" name="Warhammer Fantasy" hidden="false">
@@ -210,6 +211,7 @@
             <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e7c-3ca9-1e12-941e" type="max"/>
           </constraints>
         </categoryLink>
+        <categoryLink id="428a-5121-e145-71d7" name="Personaje Especial" hidden="false" targetId="9374-09df-04a6-d8fe" primary="false"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
