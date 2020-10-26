@@ -2503,6 +2503,477 @@ siempre impacten a un valor fijo.</description>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="75.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="1237-1e3a-87c1-176a" name="Jinetes de Rinobuey" publicationId="926b-6555-9b25-6de2" page="24" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="6a5c-ae00-72d0-44d1" name="Pellejo duro" hidden="false">
+          <description>Los Dientemartirio proporcionan una tirada de salvación por armadura de 5+ en vez de 6+ por ir montados.</description>
+        </rule>
+        <rule id="03a9-6e86-a08b-63a8" name="De mente simple" hidden="false">
+          <description>Las unidades de Jinetes de Rinobuey no pueden Cambiar de formación (p48-49 del reglamento) mientras mueven; si quieren Cambiar de formación no pueden mover ni antes ni después (gastan todo su movimiento). Además, tampoco pueden pivotar más de una vez durante la fase de movimiento (el “pivotaje gratuito” del final se mantiene).</description>
+        </rule>
+        <rule id="d80d-9ba3-b956-b060" name="Carga atronadora" hidden="false">
+          <description>Si todas las miniaturas de una unidad de Jinetes de Rinobuey cargan o arrasan 18cm o más, cada miniatura causa 1D3 impactos por carga.</description>
+        </rule>
+        <rule id="d8c3-e91e-2fd3-f42f" name="Inmune a golpe letal" hidden="false">
+          <description>Pese a ser Caballería, el jinete no es de tamaño humano así que no se ven afectados por el Golpe Letal (a no ser que sea un Golpe Letal que se aplica también a infantería monstruosa, como puede ser Tullaris).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="1a62-93aa-f946-3c9a" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+        <infoLink id="5b06-3359-2d4f-bc33" name="Rinobuey" hidden="false" targetId="bbb7-4e4c-c8c0-f90e" type="profile"/>
+        <infoLink id="0ddd-13a0-9600-e973" name="Mal genio" hidden="false" targetId="be59-b753-6259-1a17" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="aaff-c8e3-1a4a-e975" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
+        <categoryLink id="c894-cc02-170c-2d5e" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="7c93-c3bc-c62a-6a0f" name="Grupo de mando" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01b7-e805-2f74-7db2" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="cfc6-27f4-4428-8d25" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72e6-cfc9-f26a-35a4" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9755-90fc-20e0-acbd" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2733-7299-7c91-a9fb" type="max"/>
+              </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="8c85-4386-21ee-e08f" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3e78-d25b-2d5e-d2f9" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abb6-5c26-3f14-4cf5" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="5d7e-c433-4484-5bc2" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="2753-52a1-1d48-0427" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="24.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3556-6ffd-26e5-1fa7" name="Señor del trueno" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="daf3-4af5-c4f3-de56" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="23fa-7776-926c-3c89" name="Señor del trueno" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="24.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9682-fb08-45cc-ca55" name="Jinete de Rinobuey" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c62e-b039-f6ca-9a32" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09c2-fc18-9574-4955" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1d39-c743-d07f-b39c" name="Jinete de Rinobuey" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a9cc-84e1-feab-19fc" name="Maza Ogra" hidden="false" targetId="68e1-1063-6fa9-2d8f" type="profile"/>
+          </infoLinks>
+          <selectionEntries>
+            <selectionEntry id="e5b9-891e-e4e3-d60e" name="Rinobuey Toro" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="404e-72ca-6e7c-4dd1" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="1237-1e3a-87c1-176a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9682-fb08-45cc-ca55" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="404e-72ca-6e7c-4dd1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="b514-a418-5dec-0745" name="Rinobuey Toro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">18</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039"/>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab"/>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">+2</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería monstruosa</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="4c2a-c6b4-5079-59f1" name="Mejora" hidden="false">
+                  <description>La unidad puede sustituir sus Rhinox por Rhinox Toro; si no quieres que sea toda la unidad, el primer Rhinox que debe mejorarse es el del Señor de Trueno (si has incluido uno). Los Rhinox Toro son Objetivo grande y causan Terror. En caso de que la unidad tenga algún Rhinox toro y algún Rhinox normal, si el oponente está disparando armas de proyectiles (lanzavirotes, ballestas, etc) debe indicar a cuál de ellos dispara.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="3a3e-7554-542c-cbd8" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
+                <infoLink id="5342-e035-7dcd-04db" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="45.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="44de-f77c-f267-be27" name="Armadura" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bcb-159d-f35b-585e" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a32-1f05-5f8b-2bc0" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="21dd-b825-f17a-6b34" name="Armadura ligera" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a0d-ee3f-f606-c2f3" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="2e4b-f659-45c3-26ce" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="1a87-f0c6-a6f8-5cf7" name="Armadura pesada" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d699-aaf7-0f36-6ee1" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="1141-6529-5caf-24d9" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="6.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="9de7-02e8-185d-69c2" name="Puño de hierro" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c150-cc3c-793d-cb94" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="fc24-1380-26b3-01e0" name="Puño de hierro" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1972-d8b9-67f7-1ef2" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="886d-7d31-5f67-eb57" name="Puño de Hierro Ogro" hidden="false" targetId="695d-43bd-6cb2-7ff8" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="100.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0e00-8e5b-6dbf-fb59" name="Colmillos de trueno" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="9bca-0c7e-8994-0ccc" name="Colmillos de trueno" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="02ad-6c8f-3968-6223" name="Frío entumecedor" hidden="false">
+          <description>Las miniaturas amigas o enemigas que estén en contacto peana con peana con uno o más Colmillos de Trueno (a excepción del propio Colmillos de trueno y sus jinetes) tienen la regla Siempre ataca último.
+</description>
+        </rule>
+        <rule id="4d85-e038-3f69-40aa" name="Aliento gélido" hidden="false">
+          <description>En la fase de disparo, si no está trabado en combate cuerpo a cuerpo, el Colmillos de Trueno puede usar su aliento gélido. Se trata de un arma de aliento (usa la plantilla de lágrima); todas las miniaturas bajo la plantilla (parciales a 4+) reciben un impacto de F3 con Poder de penetración. Las miniaturas Inmune a frío son inmunes a este ataque.</description>
+        </rule>
+        <rule id="f20f-87bc-0e0d-b427" name="Monstruo montado" hidden="false">
+          <description>El Colmillos de Trueno va montado por dos Jinetes Ogros, pero trátalo como una miniatura individual (como si fuera un carro); por eso tienen un perfil combinado. En caso de que un personaje monte un Colmillos de Trueno, sustituye a uno de los dos Jinetes Ogro y sigue ocupando una opción de unidad singular.</description>
+        </rule>
+        <rule id="4499-8f20-152e-3fbf" name="Inmune a frío" hidden="false"/>
+      </rules>
+      <infoLinks>
+        <infoLink id="97ca-47f0-f44a-c0fc" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
+        <infoLink id="e8c3-7c4c-a2ce-9fab" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="d832-8821-ea64-a87c" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="0ca8-7534-1d91-88b0" name="Jinetes ogros" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0e6a-5a3b-45e3-7ccb" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ea6d-8ca3-4b3d-b5c7" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f68e-0c93-f976-755e" name="Jinete ogro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039"/>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab"/>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="8577-b2ff-a518-4594" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+          </infoLinks>
+          <selectionEntries>
+            <selectionEntry id="226c-96a1-531e-b756" name="Lanzaarpones" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d75-5eee-357e-2299" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="7c97-9f47-7e01-3d98" name="Lanzaarpones" hidden="false" targetId="a7a8-bc3c-374b-f937" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="255.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8807-29b5-a5e7-7355" name="Cuernospétreos" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="5aab-a308-7257-797f" name="Cuernospétros" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">18</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">6</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="979d-9ada-0695-351d" name="Impactos por carga 1D3" hidden="false"/>
+        <rule id="0519-5cef-054d-db13" name="Monstruo montado" hidden="false">
+          <description>El Colmillos de Trueno va montado por un Jinete Ogro, pero trátalo como una miniatura individual (como si fuera un carro); por eso tiene un perfil combinado. En caso de que un personaje monte un Cuernospétreos, sustituye al Jinete Ogro y sigue ocupando una opción de unidad singular. El Ogro montado en un Cuernospétreos puede Mover y disparar (pero no marchar y disparar) y, además, no tiene el penalizador de -1 habitual por mover y disparar. Esto se aplica también en caso de un Cazador montado en Cuernospétreos.</description>
+        </rule>
+        <rule id="af70-7edf-1449-dee3" name="Esqueleto de piedra" hidden="false">
+          <description>En caso de sufrir una herida de un ataque con la regla especial Heridas Múltiples, el resultado final de heridas recibidas se dividirá entre 2 (redondeando hacia arriba). Así, en caso de 2 impactos con Heridas Múltiples (1D6) que resultaran en 1 y 5 heridas respectivamente, acabarían haciéndole solamente 1+3=4 Heridas.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="67f0-7906-79dd-8e16" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
+        <infoLink id="659a-0d2d-23b0-ab4c" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
+        <infoLink id="d54b-c39f-4ae8-5f5f" name="Furia asesina" hidden="false" targetId="000a-cfde-6e79-aecb" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ddc9-d17a-6573-f3a3" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="5f78-7cdd-e620-ec4c" name="Jinete ogro" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7800-c536-e90a-d7a6" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5600-3427-b688-f44d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0862-45e9-9fc8-4842" name="Jinete ogro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039"/>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab"/>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="de0b-9383-2c93-e2c4" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+          </infoLinks>
+          <selectionEntries>
+            <selectionEntry id="5e09-9d73-a4c6-6d95" name="Lanzaarpones" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="73ea-cf00-6930-6dc0" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="c852-a1a0-398e-4af3" name="Lanzaarpones" hidden="false" targetId="a7a8-bc3c-374b-f937" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="320.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="60a8-00a9-d048-7454" name="Gigante sometido" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="1b2d-8885-3ac0-75b5" name="Gigante" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">6</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">*</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="d3f0-95b0-0e7f-1d91" name="Ignora el pánico de los pequeñajos" hidden="false">
+          <description>Es inmune al pánico provocado por unidades de tipo Infantería, Caballería o Enjambre. (Los carros, monstruos e infantería monstruosa le siguen causando pánico).</description>
+        </rule>
+        <rule id="6c59-6f96-4b0f-ae08" name="Piernas largas" hidden="false">
+          <description>El Gigante tiene Cruzar( obstáculos ), por lo que puede tratar obstáculos lineales como muros y vallas como terreno abierto. Sin embargo, por cada elemento de este tipo que cruce, debe hacer un chequeo de Caída.</description>
+        </rule>
+        <rule id="5fc1-15c3-0d3b-975b" name="Caídas" hidden="false">
+          <description>Un Gigante debe hacer un chequeo de Caída cuando pierde un combate; al inicio de la fase de movimiento si está huyendo; cuando cruza un obstáculo; o si empieza a Saltar Arriba y Abajo. Lanza 1D6; con un 1 el Gigante cae, determina la dirección aleatoriamente y usa la plantilla de Gigante caído; las miniaturas bajo ella reciben un impacto de F6 con Heridas Múltiples 1D3; trátalo como Proyectiles (parciales a 4+, ¡Cuidado Señor!, etc). Cuando cae, el Gigante recibe 1 herida. Un Gigante en el suelo no puede atacar (pero no es impactado automáticamente) ni mover; en la fase propia de Resto de movimientos puede levantarse. Un Gigante en el suelo que se vea obligado a huir es aniquilado automáticamente. Si no tienes plantilla de Gigante Caído puedes usar la plantilla circular pequeña.</description>
+        </rule>
+        <rule id="6491-3b65-9647-2b0b" name="Ataques del gigante" hidden="false">
+          <description>Cuando sea el turno de atacar del Gigante (iniciativa, carga, etc) di contra quién lucha este turno el Gigante y determina qué ataque hace de forma aleatoria (lanza 1D6).
+Contra miniaturas de tipo Monstruo, Carro, Infantería monstruosa o con la regla Objetivo grande, el Gigante hace los siguientes ataques:
+-1: Gritar y vocear. El Gigante no hace ninguna baja pero gana el combate por 2 puntos automáticamente (el enemigo pierde el combate automáticamente por -2). Si el enemigo no ha luchado antes de que el gigante haga Gritar y Vocear, las miniaturas en contacto peana con peana con el Gigante no podrán luchar (sí las armadas con lanza o pica por ejemplo). Se aplica de la misma forma contra No Muertos y Demonios (pierden de 2 el combate).
+-2-4: Estrangular con las cadenas. Elige una única miniatura de la unidad objetivo (o una miniatura individual); dicha miniatura debe hacer una tirada de Resistencia (igual o menos que su Resistencia en 1D6). Si lo supera, no pasa nada. Si no lo supera, la miniatura recibe 2D6 heridas (sin posibilidad de tirada de salvación por armadura). En caso de miniaturas compuestas por diversas partes (personaje en carro, por ejemplo) debes indicar a qué parte atacas.
+-5-6: Kabezazo. El Gigante causa 1 herida directa a una miniatura enemiga en contacto (sin posibilidad de tirada de salvación por armadura); si la miniatura enemiga sigue viva (y ha sido herida por el Kabezazo), pierde sus ataques hasta final de turno. 
+
+Contra el resto de miniaturas (infantería, caballería, enjambres, etc) el Gigante hace los siguientes ataques:
+-1: Gritar y vocear (ver arriba).
+-2: Saltar arriba y abajo. El Gigante debe hacer un chequeo de Caída. Si no lo supera, las heridas causadas en la caída (si hay) cuentan para la Resolución del Combate. Si lo supera, el Gigante causa 2D6 impactos de F6 en la unidad (distribuye como disparos si es necesario). Una vez el Gigante ha empezado a saltar arriba y abajo no hay quien lo pare, así que si el combate sigue el siguiente turno, automáticamente hará un Saltar arriba y abajo (¡y así hasta que se caiga o uno de los bandos huya!).
+-3: Agarrar y... El Gigante agarra una de las miniaturas y... lanza 1D6.
+---1: Pa’ la saca. La miniatura se guarda en la bolsa para un tentempié por la noche. Se considera baja (retírala del juego), pero si el Gigante muere, las miniaturas “guardadas en la bolsa” conseguirán escapar así que NO contarán como baja para calcular puntos de victoria (pero no vuelven a la batalla, ni siquiera si es un personaje individual; por ejemplo, si es un hechicero, no genera dados de energía ni dispersión ni puede usar objetos ni lanzar hechizos, etc). En caso de que el General esté en la saca y salga, el oponente tampoco gana los +100PV por muerte del General (aunque, de nuevo, el General sale del campo de batalla).
+---2: ¡Toma! El Gigante lanza la miniatura contra su unidad como si fuera una piedra. La minia tura agarrada recibe una herida sin posibilidad de salvación por armadura ni especial. La unidad que ha recibido el “golpe” recibe 1D6 impactos de F3.
+---3: ¡Pa’llá que va! El Gigante lanza la miniatura contra una unidad lejana. Comprueba qué unidades enemigas hay a 30cm o menos del Gigante; el Gigante hace un ¡Toma! contra una de esas unidades, determina cuál aleatoriamente.
+---4: ¡Choof! El Gigante aplasta la miniatura. No hace falta explicar nada más. Retírala como baja directamente (sin importar tiradas de salvación ni nada por el estilo).
+---5: ¡Ñam! El Gigante se come la miniatura. Ehum... lo mismo que en el caso anterior.
+---6: Pa’ la saca y... La miniatura se considera “en la saca” (ver resultado de 1). Además, elige una segunda miniatura de la unidad; dicha miniatura puede hacer un único ataque (sin importar
+su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Gigante la suelta y no hace más ataques. Si no consigue herir al Gigante, lanza en esta tabla a ver qué hace con la miniatura.
+-4-6: Barrido con las cadenas. El Gigante hace un barrido con las cadenas. La unidad recibe 1D6 impactos de F6.</description>
+        </rule>
+        <rule id="0895-f9bb-e73a-baa4" name="Muerte del gigante" hidden="false">
+          <description>Cuando el Gigante muere, también cae; determina la dirección aleatoriamente y usa la plantilla de Gigante caído; las miniaturas bajo ella reciben un impacto de F6 con Heridas Múltiples 1D3; trátalo como Proyectiles (parciales a 4+, ¡Cuidado Señor!, etc). 
+</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="891b-667e-d93b-75f5" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
+        <infoLink id="fa14-fb1b-2f51-48cb" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="5343-0dd8-4ed9-c211" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="175.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="8b80-3260-c0b5-9502" name="Armaduras mágicas" hidden="false" collective="false" import="true">
