@@ -48,7 +48,7 @@
                 <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Ogro.</characteristic>
-                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"></characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -66,13 +66,13 @@
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
-            <selectionEntryGroup id="cdb3-9d51-3561-788c" name="Armas" hidden="false" collective="true" import="true" defaultSelectionEntryId="f499-df24-cb30-4960">
+            <selectionEntryGroup id="cdb3-9d51-3561-788c" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="f499-df24-cb30-4960">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="831a-d405-8c48-ee21" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b318-1b1d-4e81-69fc" type="min"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="a0ca-6330-d1b9-ff55" name="Arma de mano adicional" hidden="true" collective="false" import="true" type="upgrade">
+                <selectionEntry id="a0ca-6330-d1b9-ff55" name="Arma de mano adicional" hidden="true" collective="true" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3e3-66b5-0f51-b060" type="max"/>
                   </constraints>
@@ -83,7 +83,7 @@
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="4.0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="0ea0-4f9a-7bf2-184c" name="Arma de Mano y Puño de hierro Ogro" hidden="true" collective="false" import="true" type="upgrade">
+                <selectionEntry id="0ea0-4f9a-7bf2-184c" name="Arma de Mano y Puño de hierro Ogro" hidden="true" collective="true" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7b5-ba90-30a9-b1a6" type="max"/>
                   </constraints>
@@ -95,7 +95,7 @@
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="5.0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="f499-df24-cb30-4960" name="Maza Ogra" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="f499-df24-cb30-4960" name="Maza Ogra" hidden="false" collective="true" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5587-74f4-c7f2-42e7" type="max"/>
                   </constraints>
@@ -166,7 +166,7 @@
                     <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Ogro.</characteristic>
-                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"></characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -553,7 +553,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d516-7b17-16c5-9940" name="Saber Mágico" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="d516-7b17-16c5-9940" name="Saber Mágico" hidden="false" collective="false" import="true" defaultSelectionEntryId="615c-d1b5-6226-f7e0">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7bd9-f763-b1ab-19f4" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ac3a-0168-0feb-3427" type="max"/>
@@ -562,6 +562,7 @@
             <selectionEntry id="615c-d1b5-6226-f7e0" name="Panzamagia" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4fa1-e671-0ef1-f7f1" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b75-45de-caad-2093" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -569,7 +570,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="1d50-51d6-f28b-c0e0" name="Nivel de Hechicera" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="1d50-51d6-f28b-c0e0" name="Nivel de Hechicera" hidden="false" collective="false" import="true" defaultSelectionEntryId="da7e-5c59-b966-dffe">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df95-6e61-5e1c-94ab" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2e1-2c24-786a-44b6" type="min"/>
@@ -578,6 +579,7 @@
             <selectionEntry id="da7e-5c59-b966-dffe" name="Nivel 4" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c7a-91e5-cf43-d7f2" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="378d-2959-9f62-e7db" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -1077,7 +1079,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="6b18-1397-0a6d-f76e" name="Saber Mágico" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="6b18-1397-0a6d-f76e" name="Saber Mágico" hidden="false" collective="false" import="true" defaultSelectionEntryId="38c2-a84f-c1c4-0c42">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bb83-7211-ba86-a81d" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7946-c38d-16f0-8c2a" type="max"/>
@@ -1086,6 +1088,7 @@
             <selectionEntry id="38c2-a84f-c1c4-0c42" name="Panzamagia" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="53c5-671c-d88f-8591" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01f8-5218-941a-41a6" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -1093,7 +1096,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="41c2-a9e8-8438-530b" name="Nivel de Hechicera" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="41c2-a9e8-8438-530b" name="Nivel de Hechicera" hidden="false" collective="false" import="true" defaultSelectionEntryId="a371-dfea-344c-5fcd">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2b0-a0d5-6fd1-88f5" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbbb-fac6-d1fc-61bb" type="min"/>
@@ -1102,6 +1105,7 @@
             <selectionEntry id="a371-dfea-344c-5fcd" name="Nivel 2" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5c2-3411-9fed-46b7" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45f7-9a75-fc7d-a4c0" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -1207,7 +1211,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="51b3-5d99-1a02-0b66" name="Saber Mágico" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="51b3-5d99-1a02-0b66" name="Saber Mágico" hidden="false" collective="false" import="true" defaultSelectionEntryId="73b0-27fe-0f99-cec6">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8145-0447-9e93-1ab1" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="72f3-3304-431a-b7a2" type="max"/>
@@ -1216,6 +1220,7 @@
             <selectionEntry id="73b0-27fe-0f99-cec6" name="Saber fel Fuego" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="01ee-48d2-dead-410b" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3db-272e-b1e0-2ba5" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -1233,6 +1238,9 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6048-d5a1-0e2d-3cf4" type="max"/>
               </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="3b73-b3ed-4186-a480" name="Nivel 2" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -1490,7 +1498,7 @@
                 <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Ogro.</characteristic>
-                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"></characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1566,7 +1574,7 @@
                     <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Ogro.</characteristic>
-                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"></characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1708,7 +1716,7 @@
                 <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Ogro.</characteristic>
-                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"></characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
               </characteristics>
             </profile>
             <profile id="d789-6939-c46c-4446" name="Cañon Sueltafuegos" publicationId="926b-6555-9b25-6de2" page="20" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
@@ -1759,7 +1767,7 @@
                     <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Ogro.</characteristic>
-                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"></characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2341,7 +2349,7 @@ siempre impacten a un valor fijo.</description>
             </profile>
           </profiles>
           <selectionEntryGroups>
-            <selectionEntryGroup id="3254-e003-c5ca-9391" name="Armadura" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="3254-e003-c5ca-9391" name="Armadura" hidden="false" collective="false" import="true" defaultSelectionEntryId="6b49-f36b-fd2b-3d2d">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="471f-a7e3-ac05-1b44" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3912-1a92-6931-214c" type="min"/>
@@ -2371,7 +2379,7 @@ siempre impacten a un valor fijo.</description>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
-            <selectionEntryGroup id="020d-c7a0-d858-d367" name="Armas (pueden llevar armas diferentes)" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="020d-c7a0-d858-d367" name="Armas (pueden llevar armas diferentes)" hidden="false" collective="false" import="true" defaultSelectionEntryId="fc7c-fffc-8b97-97dc">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8008-782b-3dd3-51b7" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc4a-2773-b0de-bd0a" type="min"/>
@@ -2668,7 +2676,7 @@ siempre impacten a un valor fijo.</description>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
-            <selectionEntryGroup id="44de-f77c-f267-be27" name="Armadura" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="44de-f77c-f267-be27" name="Armadura" hidden="false" collective="false" import="true" defaultSelectionEntryId="21dd-b825-f17a-6b34">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bcb-159d-f35b-585e" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a32-1f05-5f8b-2bc0" type="min"/>
