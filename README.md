@@ -14,7 +14,8 @@ Hace unos años trasteé con BattleScribe para poder hacerme las listas de Breto
 * [Warhammer Fantasy MNDR](./files/Warhammer_Fantasy_MDNR.gst)
 
 ### Ficheros de ejércitos
-* [Bretonia](./files/MNDR_Bretonia_2020.cat)
+* [Bretonia](./files/Bretonia_MDN_2020.cat)
+* [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)
 
 ## Importar los ficheros
 ### Usando el repositorio
