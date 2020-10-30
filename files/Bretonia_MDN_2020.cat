@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN v2020" revision="2" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="paradell.aleix@gmail.com" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN v2020" revision="2" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="paradell.aleix@gmail.com" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="95b0-9aeb-pubN66253" name="PDF Bretonia MDN 2020"/>
   </publications>
@@ -1205,7 +1205,7 @@ No se benefician de un Estandarte de Batalla</description>
         <categoryLink id="a16d-ad5c-1606-1763" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="09bd-a4f3-d5e9-cba3" name="Tipo de Balista" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="09bd-a4f3-d5e9-cba3" name="Tipo de Balista" hidden="false" collective="false" import="true" defaultSelectionEntryId="b893-a021-41a1-b5dd">
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae86-470a-3621-b67b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fe7-d581-b1f6-e11f" type="min"/>
@@ -1224,6 +1224,13 @@ No se benefician de un Estandarte de Batalla</description>
               </costs>
             </selectionEntry>
             <selectionEntry id="138b-db48-60d8-0273" name="Pot-de-Feu" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="382c-f817-2c4b-e3c3" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03a4-8e9c-753b-5498" type="min"/>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4605-c523-c73c-3919" type="max"/>
@@ -3073,50 +3080,51 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="1.0"/>
               </costs>
             </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="26ec-47c6-bc59-7313" name="Armas" hidden="false" collective="false" import="true">
+            <selectionEntry id="e85d-7732-3630-c845" name="Armas" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2333-e1db-6a80-bb51" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="086b-718c-8051-c364" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a3f-feff-7c51-4193" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8553-c01d-3f48-33a1" type="min"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="e1b2-4f47-9216-6fba" name="Alabarda" hidden="false" collective="true" import="true" type="upgrade">
+                <selectionEntry id="d099-7596-37f5-07e1" name="Alabarda" hidden="false" collective="true" import="true" type="upgrade">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8330-fd68-9747-85be" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4359-be64-1054-efaa" type="max"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="0da7-9eee-91c0-6bad" name="Alabarda" hidden="false" targetId="ee3a-8a10-edff-cefe" type="profile"/>
+                    <infoLink id="b30c-f44c-4be7-0909" name="Alabarda" hidden="false" targetId="ee3a-8a10-edff-cefe" type="profile"/>
                   </infoLinks>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="d8ac-9ad0-a494-74d6" name="Lanza" hidden="false" collective="true" import="true" type="upgrade">
+                <selectionEntry id="abc7-2c4c-98a3-3a5c" name="Arma a Dos Manos" publicationId="95b0-9aeb-pubN66253" page="10" hidden="false" collective="true" import="true" type="upgrade">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="389a-5c65-e9b4-0168" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a25a-1bea-04c8-e0ea" type="max"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="55f1-d18f-e914-0b2a" name="Lanza (infantería)" hidden="false" targetId="b34b-3f52-e95c-d5f3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="3dec-d9b8-91e6-ff04" name="Arma a Dos Manos" publicationId="95b0-9aeb-pubN66253" page="10" hidden="false" collective="true" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f8b-4283-58c4-7e6c" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="e785-4b64-5118-176e" name="Arma a dos manos " hidden="false" targetId="bc8b-5380-77a9-7fe7" type="profile"/>
+                    <infoLink id="6f21-52fc-5cb4-6095" name="Arma a dos manos " hidden="false" targetId="bc8b-5380-77a9-7fe7" type="profile"/>
                   </infoLinks>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="2.0"/>
                   </costs>
                 </selectionEntry>
+                <selectionEntry id="a0f8-c72b-1fe6-6616" name="Lanza" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9391-1209-6234-a0d6" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="698c-8e24-e648-f0d6" name="Lanza (infantería)" hidden="false" targetId="b34b-3f52-e95c-d5f3" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
               </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <costs>
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="4.0"/>
           </costs>
@@ -3276,10 +3284,9 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96fb-e4a5-6a80-8208" type="max"/>
               </constraints>
               <selectionEntryGroups>
-                <selectionEntryGroup id="014e-a8de-a4c9-c559" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
+                <selectionEntryGroup id="014e-a8de-a4c9-c559" name="Estandarte mágico" hidden="false" collective="false" import="true">
                   <constraints>
                     <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="fa96-76a0-0b3e-c457" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1939-6c23-f8ce-ac62" type="max"/>
                   </constraints>
                   <entryLinks>
                     <entryLink id="bf09-92be-8e62-7b21" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="2753-52a1-1d48-0427" type="selectionEntryGroup"/>
@@ -4007,6 +4014,11 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
         <modifier type="set" field="75ee-72df-0905-79cd" value="-1.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8bf4-a2c3-3c33-365d" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="382c-f817-2c4b-e3c3" type="instanceOf"/>
           </conditions>
         </modifier>
       </modifiers>
