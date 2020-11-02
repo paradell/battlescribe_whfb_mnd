@@ -62,7 +62,10 @@
     <categoryEntry id="9374-09df-04a6-d8fe" name="Personaje Especial" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="44cf-39eb-d3e6-45a2" name="Warhammer Fantasy" hidden="false">
+    <forceEntry id="44cf-39eb-d3e6-45a2" name="Warhammer Fantasy - Manuscritos de Nuth" hidden="false">
+      <comment>Lista para jugar a Warhammer Fantasy Sexta Edición con los Manuscritos de Nuth.
+
+Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Erratas de los Manuscritos de Nuth</comment>
       <categoryLinks>
         <categoryLink id="f9f3-963a-ec75-b074" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false">
           <modifierGroups>
@@ -215,6 +218,7 @@
       </categoryLinks>
     </forceEntry>
     <forceEntry id="382c-f817-2c4b-e3c3" name="Leyendas 1" hidden="false">
+      <comment>Lista para jugar a Warhammer Fantasy Sexta Edición con los Manuscritos de Nuth, con las modificaciones de Leyendas en Miniatura.</comment>
       <categoryLinks>
         <categoryLink id="475c-1e29-6da6-3297" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false">
           <modifierGroups>
@@ -365,6 +369,159 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
+    <forceEntry id="97d8-18f7-1c75-42b1" name="Warhammer Fantasy 6a" hidden="false">
+      <comment>Listas para jugar a Warhammer Fantasy 6a Edición. </comment>
+      <categoryLinks>
+        <categoryLink id="0134-b04c-ef92-4cb4" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false">
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="1ca6-956d-e767-87e7" value="0.0">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="1ca6-956d-e767-87e7" value="1.0">
+                  <repeats>
+                    <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ca6-956d-e767-87e7" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="a336-fd1b-2457-4324" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="825f-713a-5554-07a5" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false">
+          <modifiers>
+            <modifier type="set" field="9924-3a64-3128-3453" value="3.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9924-3a64-3128-3453" value="4.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="9924-3a64-3128-3453" value="0.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="9924-3a64-3128-3453" value="2.0">
+              <repeats>
+                <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9924-3a64-3128-3453" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="7432-f743-7d4f-83b0" name="Personaje Especial" hidden="false" targetId="9374-09df-04a6-d8fe" primary="false"/>
+        <categoryLink id="f531-5feb-5768-debb" name="Unidad básica" hidden="false" targetId="ba68-224b-3224-a908" primary="false">
+          <modifiers>
+            <modifier type="increment" field="bf47-769f-9df3-d3a1" value="1.0">
+              <repeats>
+                <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" field="bf47-769f-9df3-d3a1" value="1.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf47-769f-9df3-d3a1" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="716d-dbd4-c0cd-5ee8" name="Unidad básica (no cuenta para el mínimo)" hidden="false" targetId="0cfc-02a1-ad30-fb33" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d12c-5495-ddd4-20cc" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="5d9f-cc7d-b08a-c1c8" name="Unidad especial" hidden="false" targetId="102e-012c-5785-3354" primary="false">
+          <modifiers>
+            <modifier type="set" field="089e-9484-982a-83df" value="3.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="089e-9484-982a-83df" value="2.0">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="089e-9484-982a-83df" value="1.0">
+                  <repeats>
+                    <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="089e-9484-982a-83df" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="8c97-9d0f-7ecb-9244" name="Unidad singular" hidden="false" targetId="184a-30ec-bf7c-b603" primary="false">
+          <modifiers>
+            <modifier type="set" field="82a9-f230-5f69-8099" value="1.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="82a9-f230-5f69-8099" value="0.0">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="82a9-f230-5f69-8099" value="1.0">
+                  <repeats>
+                    <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82a9-f230-5f69-8099" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
   </forceEntries>
   <sharedRules>
     <rule id="2cde-101a-0b0b-5556" name="Ataca en primer lugar" hidden="false"/>
@@ -406,6 +563,10 @@
 Para impactar, debe tirarse 1d6 empleando la HP de la dotación.
 Si impacta, la miniatura recibe un impacto de F6, que anula Salvación por Armaduras y causa 1d3 Heridas.
 Si impacta a una unidad, una miniatura de la primera fila es la que recibe el impacto. Si esa miniatura MUERE, una miniatura de la segunda fila recibe un impacto igual que el de la primera, pero de F5. Y así sucesivamente, con un -1F por cada fila que atraviese.</description>
+    </rule>
+    <rule id="89b2-105c-35db-51c3" name="General" hidden="false"/>
+    <rule id="16f9-a928-9d5e-2b4f" name="Estandarte de Batalla" hidden="false">
+      <description>El Portaestandarte de Batalla no puede ser el General del ejército. El Portaestandarte de Batalla no puede elegir Armas ni Escudo de las opciones habituales. Sin embargo, puede elegir arma mágica siempre que no Requiera ambas manos. No puede elegir escudos mágicos, ni armaduras mágicas que lleven escudo incorporado. El Portaestandarte de Batalla podrá llevar un Estandarte Mágico sin límite de puntos (en ese caso no podrá llevar Objetos mágicos ni elegir Poderes); o bien cualquier combinación de objetos mágicos y poderes hasta 50 puntos en total. No puede haber dos Portaestandartes de Batalla.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
