@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN v2020" revision="2" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="paradell.aleix@gmail.com" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN v2020" revision="3" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="paradell.aleix@gmail.com" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="95b0-9aeb-pubN66253" name="PDF Bretonia MDN 2020"/>
   </publications>
@@ -10,8 +10,174 @@
       </characteristicTypes>
     </profileType>
   </profileTypes>
+  <forceEntries>
+    <forceEntry id="6194-2037-cc95-58f1" name="Guerra de Caballeros Noveles" publicationId="95b0-9aeb-pubN66253" page="54" hidden="false">
+      <comment>Lista Alternativa aparecida en el suplemento La Tormenta del Caos</comment>
+      <categoryLinks>
+        <categoryLink id="1060-4ab0-0dc6-30d3" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false">
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="2b7b-4ae5-8d89-8bcd" value="0.0">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="2b7b-4ae5-8d89-8bcd" value="1.0">
+                  <repeats>
+                    <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b7b-4ae5-8d89-8bcd" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="5231-d4df-ca2f-5a44" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="9d8b-9c93-1247-dceb" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false">
+          <modifiers>
+            <modifier type="set" field="0d25-2e8a-21d4-3e62" value="3.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="0d25-2e8a-21d4-3e62" value="4.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="0d25-2e8a-21d4-3e62" value="0.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0d25-2e8a-21d4-3e62" value="2.0">
+              <repeats>
+                <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d25-2e8a-21d4-3e62" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="60ce-c808-7c99-8806" name="Unidad básica" hidden="false" targetId="ba68-224b-3224-a908" primary="false">
+          <modifiers>
+            <modifier type="increment" field="459f-160e-e32f-bad6" value="1.0">
+              <repeats>
+                <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" field="459f-160e-e32f-bad6" value="1.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="459f-160e-e32f-bad6" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="2e17-326e-298d-f7a2" name="Unidad básica (no cuenta para el mínimo)" hidden="false" targetId="0cfc-02a1-ad30-fb33" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afda-50b2-d117-dc55" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="6417-f5b6-84f3-6d0e" name="Unidad especial" hidden="false" targetId="102e-012c-5785-3354" primary="false">
+          <modifiers>
+            <modifier type="set" field="2a7b-f517-18e8-894d" value="3.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="2a7b-f517-18e8-894d" value="2.0">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="2a7b-f517-18e8-894d" value="1.0">
+                  <repeats>
+                    <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a7b-f517-18e8-894d" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="4767-b30f-0857-75ff" name="Unidad singular" hidden="false" targetId="184a-30ec-bf7c-b603" primary="false">
+          <modifiers>
+            <modifier type="set" field="2df2-c066-f79a-f6b8" value="1.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="2df2-c066-f79a-f6b8" value="0.0">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="2df2-c066-f79a-f6b8" value="1.0">
+                  <repeats>
+                    <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2df2-c066-f79a-f6b8" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+  </forceEntries>
   <selectionEntries>
     <selectionEntry id="3811-91e8-22ac-4528" name="Caballeros del Reino" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="3f5f-aecc-37e0-532c" value="0.0"/>
+            <modifier type="set-primary" field="category" value="0cfc-02a1-ad30-fb33"/>
+            <modifier type="remove" field="category" value="ba68-224b-3224-a908"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f5f-aecc-37e0-532c" type="min"/>
       </constraints>
@@ -131,6 +297,16 @@
         <rule id="61e2-c4d0-c66c-c844" name="Impetuosos" publicationId="95b0-9aeb-pubN66253" page="25" hidden="false">
           <description>Tras declarar cargas, si la unidad está a distancia de carga de un enemigo debe hacer un chequeo de Liderazgo; si lo falla, carga. Además, siempre que cargan, ellos y cualquier personaje que se les haya unido son inmunes a psicología hasta el final de turno. Ten en cuenta que los Caballeros Noveles son inmunes a psicología nada más declarar la carga (incluso aunque sea una carga fallida) y les dura hasta el final de su turno. No deberían, por tanto, efectuar un chequeo de miedo para cargar (y también serán inmunes a la psicología si fallan el chequeo de impetuosos y declaran carga obligada). En caso de que los Noveles carguen y arrasen en un combate, trabándose de nuevo con otro enemigo (combate que se resolvería en el turno del oponente), tal y como explica la regla de arrasamiento se considera una nueva carga que se resuelve en el turno del oponente pero la carga ha sido en el turno propio, por lo que los caballeros noveles seguirán siendo inmunes a la psicología durante el turno del oponente.</description>
         </rule>
+        <rule id="d085-aea9-65a1-7802" name="Guerra de los Caballeros Noveles" hidden="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <description>Todas las unidades deben Perseguir. Cuando persiguen, lanza 2D6 adicionales en la tirada para perseguir y quédate los 8 dados más altos.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="ffa4-b942-2098-a94e" name="Voto del Caballero" hidden="false" targetId="fb8b-353f-ce50-d6af" type="rule"/>
@@ -178,6 +354,17 @@
         <selectionEntryGroup id="1c31-5598-5abe-6dac" name="Grupo de Mando" hidden="false" collective="false" import="true">
           <selectionEntries>
             <selectionEntry id="76b1-3401-f0a9-e7cc" name="Paladín Novel" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true"/>
+                    <modifier type="set" field="082e-6cd7-7bc4-6c50" value="0.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbe3-6d3d-0516-fefc" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="082e-6cd7-7bc4-6c50" type="min"/>
@@ -215,11 +402,40 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="8cc3-a089-df6d-ea8b" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="5326-26d2-58fc-0ee7" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ac0-a9c2-97a5-9f51" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5326-26d2-58fc-0ee7" type="min"/>
               </constraints>
+              <profiles>
+                <profile id="fb9a-a927-2c40-f502" name="Estandarte de los Caballeros Noveles" publicationId="95b0-9aeb-pubN66253" page="18" hidden="true" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <characteristics>
+                    <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Sólo Caballeros Noveles. Todos los Caballeros Noveles de la unidad obtienen F+1 en el turno en que cargan (no tiene efecto sobre monturas ni personajes). Además, la unidad que porte este estandarte tiene un modificador de -2 a su atributo de Liderazgo a la hora de efectuar chequeos de Liderazgo debido a la regla impetuosos.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <selectionEntryGroups>
                 <selectionEntryGroup id="8464-34b5-016d-b40c" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="53ea-00f4-9046-81ff" scope="parent" value="25.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8786-5a45-13e6-5fe5" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6c7-4c0c-9d87-dad8" type="max"/>
@@ -234,6 +450,79 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="1970-49de-6e62-e00a" name="Campeón" hidden="true" collective="false" import="true" defaultSelectionEntryId="b83e-0948-c87c-52a2">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="840e-08be-5cfc-16c9" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7abc-bdbc-9e54-93ee" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="b83e-0948-c87c-52a2" name="Paladín Novel" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d7d-c68e-55b2-b11c" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="28a7-3962-d40f-785b" name="Paladín Novel" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                      <characteristics>
+                        <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+                        <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                        <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                        <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                        <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                        <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                        <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                        <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                        <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                        <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                        <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                        <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                        <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería, Humano, Caballero</characteristic>
+                        <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="cd1d-abd3-8ba9-6aa8" name="Caballero del Grial" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c819-f56e-4818-f49a" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="423a-490a-3d34-3cff" name="Caballero del Grial" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                      <characteristics>
+                        <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+                        <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+                        <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                        <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                        <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                        <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                        <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+                        <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                        <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+                        <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                        <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                        <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                        <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería, Humano, Caballero</characteristic>
+                        <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="22.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -256,6 +545,17 @@
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="0cfc-02a1-ad30-fb33"/>
+            <modifier type="remove" field="category" value="ba68-224b-3224-a908"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <infoLinks>
         <infoLink id="e83c-665f-c60a-9971" name="Manteletes" hidden="false" targetId="4fca-f66e-61e9-2719" type="rule"/>
         <infoLink id="473e-6f92-fa11-b46c" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
@@ -426,9 +726,14 @@
           </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <rules>
@@ -513,6 +818,17 @@ No se benefician de un Estandarte de Batalla</description>
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="0cfc-02a1-ad30-fb33"/>
+            <modifier type="remove" field="category" value="ba68-224b-3224-a908"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <infoLinks>
         <infoLink id="9eff-5260-d238-8598" name="Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
         <infoLink id="da46-d09a-0e0d-c526" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
@@ -681,6 +997,17 @@ No se benefician de un Estandarte de Batalla</description>
           </conditionGroups>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
+            <modifier type="set-primary" field="category" value="184a-30ec-bf7c-b603"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8545-36ba-ed62-83ee" type="max"/>
       </constraints>
@@ -763,6 +1090,17 @@ No se benefician de un Estandarte de Batalla</description>
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
+            <modifier type="set-primary" field="category" value="184a-30ec-bf7c-b603"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <infoLinks>
         <infoLink id="95a2-b6fa-d8fb-45d8" name="Voto de la Búsqueda" hidden="false" targetId="a134-9ec0-1ae3-19c9" type="rule"/>
         <infoLink id="d6f5-f254-c400-1886" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
@@ -1193,9 +1531,14 @@ No se benefician de un Estandarte de Batalla</description>
     <selectionEntry id="51b9-6e0b-f67b-67f4" name="Balistas de Asedio" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -1294,6 +1637,11 @@ No se benefician de un Estandarte de Batalla</description>
         <modifier type="set" field="6a6e-68ff-d238-df92" value="-1.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="6a6e-68ff-d238-df92" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1408,6 +1756,16 @@ No se benefician de un Estandarte de Batalla</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="de8e-c8be-d31c-660a" name="Trebuchet" publicationId="95b0-9aeb-pubN66253" page="31" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="2430-8ad3-7bd5-0b01" value="1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2430-8ad3-7bd5-0b01" type="max"/>
+      </constraints>
       <profiles>
         <profile id="eb65-a6d5-d05b-0d4f" name="Trebuchet" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -2039,9 +2397,14 @@ No se benefician de un Estandarte de Batalla</description>
     <selectionEntry id="c7f0-2b9d-d90b-3c8e" name="Arqueros de Bergerac" publicationId="95b0-9aeb-pubN66253" page="27" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2774,6 +3137,17 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="0cfc-02a1-ad30-fb33"/>
+            <modifier type="remove" field="category" value="ba68-224b-3224-a908"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c945-ec10-0e51-8539" type="max"/>
       </constraints>
@@ -2905,9 +3279,14 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
           </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <infoLinks>
@@ -3082,6 +3461,17 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="0cfc-02a1-ad30-fb33"/>
+            <modifier type="remove" field="category" value="ba68-224b-3224-a908"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <infoLinks>
         <infoLink id="9219-2b45-5e5e-b086" name="el Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
         <infoLink id="3b38-a228-ce09-a3bf" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
@@ -3371,7 +3761,15 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="3a7a-04cf-250e-b97a" value="1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a7a-04cf-250e-b97a" type="max"/>
+      </constraints>
       <profiles>
         <profile id="de1e-8145-3de3-8594" name="Ordonnance" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3443,6 +3841,13 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
       </costs>
     </selectionEntry>
     <selectionEntry id="8bf4-a2c3-3c33-365d" name="Profetisa de la Dama" publicationId="95b0-9aeb-pubN66253" page="22" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="b909-74d6-2a6e-8c6e" name="Profetisa de la Dama" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
