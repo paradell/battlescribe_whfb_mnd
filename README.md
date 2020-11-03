@@ -17,6 +17,23 @@ Hace unos años trasteé con BattleScribe para poder hacerme las listas de Breto
 * [Bretonia](./files/Bretonia_MDN_2020.cat)
 * [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)
 
+### Ficheros de ejércitos sin modificar de Leyendas
+* Altos Elfos
+* Condes Vampiro
+* Elfos Silvanos
+* Enanos
+* Enanos del Caos
+* Hombres Lagarto
+* Imperio
+* Mercenarios
+* Orcos y Goblins
+* Reinos del Caos: Bestias
+* Reinos del Caos: Demonios
+* Reinos del Caos: Mortales
+* Reyes Funerarios
+* Skaven
+* Regimientos de Renombre
+
 ## Importar los ficheros
 ### Usando el repositorio
 1. Tener instalado [BattleScribe](https://battlescribe.net/?tab=downloads) en tu ordenador, smartphone o tablet.
