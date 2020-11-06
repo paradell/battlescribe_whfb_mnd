@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="fd97-5cfe-d46c-03c6" name="Warhammer Fantasy - MDN" revision="3" battleScribeVersion="2.03" authorName="Leyendas en miniatura" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="fd97-5cfe-d46c-03c6" name="Warhammer Fantasy - MDN" revision="4" battleScribeVersion="2.03" authorName="Leyendas en miniatura" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="53ea-00f4-9046-81ff" name="puntos" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -523,6 +523,169 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
       </categoryLinks>
     </forceEntry>
   </forceEntries>
+  <sharedSelectionEntries>
+    <selectionEntry id="fc1c-34ec-bb3f-6638" name="Pergamino de dispersión" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="3b89-9ebe-9f93-f0df" name="Pergamino de dispersión" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Un solo uso. Dispersa el hechizo objetivo. Este objeto puede repetirse en el mismo personaje o en otros.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="328b-ddd6-f3b1-db14" name="Escudo hechizado" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="261b-a779-3114-9581" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2de-3bb3-773c-6b16" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="4484-b640-50c3-f3a3" name="Escudo hechizado" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+          <characteristics>
+            <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">-2</characteristic>
+            <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="69bd-241b-6410-b24b" name="Espada de batalla" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d1df-af14-6f1b-5d31" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa60-79de-e50f-ad64" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="4cdb-0659-3022-7370" name="Espada de batalla" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">+1A</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a821-079a-d95c-ae79" name="Espada del poder" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cded-7da1-37a7-1fa5" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6ce-eaac-cb54-ec83" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d10f-d39f-befa-ccb2" name="Espada del poder" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario + 1</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e0dd-a28e-f483-4cbd" name="Mordisco de acero" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c3c0-c75e-7c88-5e6a" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c401-9801-f161-db87" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="2395-6042-86b8-aa91" name="Mordisco de acero" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">-1 a la TSA del enemigo</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d882-b4a2-c25e-b2fe" name="Estandarte de guerra" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5514-6ba5-e5da-43d3" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2f9-9144-d237-d72d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="081d-cdc6-2f22-d9a7" name="Estandarte de guerra" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">+1 a la resolución de combate</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f236-62d7-dea6-1d1c" name="Talismán de protección" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef02-0e49-c832-2802" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1263-5fe3-8d8f-4f69" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="a284-8c88-0b56-55dd" name="Talismán de protección" hidden="false" typeId="7e35-c20a-e9e9-6dad" typeName="Talismán">
+          <characteristics>
+            <characteristic name="Protección" typeId="9f41-c15e-1f5f-9d01">TSE 6+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="15.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b07b-6153-f204-abb9" name="Espada veloz" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="35a5-4eb3-0a16-d69a" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="468c-4ce4-791e-6cd0" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9ac2-f76e-c1c0-fc1e" name="Espada veloz" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">+1 a impactar</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5328-047a-575d-012f" name="Báculo del hechicero" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ee6b-b7df-1f61-6eba" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e23-f340-4b3f-1207" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="111f-f6fe-d85a-50fa" name="Báculo del hechicero" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">El portador tiene un +1 a las tiradas para dispersar hechizos.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b857-09e0-e462-74f7" name="Piedra de energía" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="7af5-10e4-5dc4-874c" name="Piedra de energía" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Un solo uso. +2 dados para lanzar un hechizo. Este objeto puede repetirse en el mismo personaje o en otros.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+      </costs>
+    </selectionEntry>
+  </sharedSelectionEntries>
   <sharedRules>
     <rule id="2cde-101a-0b0b-5556" name="Ataca en primer lugar" hidden="false"/>
     <rule id="5914-4089-52e4-33ec" name="Ataca en último lugar" hidden="false"/>
