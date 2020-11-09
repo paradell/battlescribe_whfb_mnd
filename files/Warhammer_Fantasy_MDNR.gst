@@ -60,6 +60,7 @@
     <categoryEntry id="0cfc-02a1-ad30-fb33" name="Unidad básica (no cuenta para el mínimo)" hidden="false"/>
     <categoryEntry id="e679-542e-c187-1362" name="Personaje" hidden="false"/>
     <categoryEntry id="9374-09df-04a6-d8fe" name="Personaje Especial" hidden="false"/>
+    <categoryEntry id="6edd-99c1-7d49-468f" name="Monstruos Arcanos" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="44cf-39eb-d3e6-45a2" name="Warhammer Fantasy - Manuscritos de Nuth" hidden="false">
@@ -215,6 +216,30 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
           </constraints>
         </categoryLink>
         <categoryLink id="428a-5121-e145-71d7" name="Personaje Especial" hidden="false" targetId="9374-09df-04a6-d8fe" primary="false"/>
+        <categoryLink id="9530-5b7b-a6cf-b600" name="Monstruos Arcanos" hidden="false" targetId="6edd-99c1-7d49-468f" primary="false">
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="d99e-e95c-ef6e-bb7d" value="0.0">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="d99e-e95c-ef6e-bb7d" value="1.0">
+                  <repeats>
+                    <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d99e-e95c-ef6e-bb7d" type="max"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="382c-f817-2c4b-e3c3" name="Leyendas 1" hidden="false">

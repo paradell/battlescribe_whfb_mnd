@@ -16,6 +16,7 @@ Hace unos años trasteé con BattleScribe para poder hacerme las listas de Breto
 ### Ficheros de ejércitos
 * [Bretonia](./files/Bretonia_MDN_2020.cat)
 * [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)
+* [Mercenarios](./files/Mercenarios_MDN.cat)
 
 ### Ficheros de ejércitos sin modificar de Leyendas
 * Altos Elfos
@@ -25,7 +26,6 @@ Hace unos años trasteé con BattleScribe para poder hacerme las listas de Breto
 * Enanos del Caos
 * Hombres Lagarto
 * Imperio
-* Mercenarios
 * Orcos y Goblins
 * Reinos del Caos: Bestias
 * Reinos del Caos: Demonios
