@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="af58-4303-e5f7-6815" name="Condes Vampiro MND" revision="6" battleScribeVersion="2.03" authorName="Cordo" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="af58-4303-e5f7-6815" name="Condes Vampiro MND" revision="7" battleScribeVersion="2.03" authorName="Cordo" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="1cc3-3716-0725-e49c" name="Condes Vampiro MDN" publicationDate="Octubre 2020" publisherUrl="https://www.cargad.com/index.php/manuscritos-de-nuth/"/>
   </publications>
@@ -154,21 +154,15 @@
       <modifiers>
         <modifier type="add" field="category" value="102e-012c-5785-3354">
           <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c36-8a20-18ad-4aca" type="equalTo"/>
+            <condition field="selections" scope="92e8-3112-6546-6321" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c2c7-bc70-7ba2-bf7b" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="c647-4209-4e6c-206a">
+          <conditions>
+            <condition field="selections" scope="92e8-3112-6546-6321" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="477d-ec73-4e99-6b5b" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
-      <modifierGroups>
-        <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f650-20a3-2cbe-ed1e" type="equalTo"/>
-          </conditions>
-          <modifiers>
-            <modifier type="add" field="category" value="c647-4209-4e6c-206a"/>
-            <modifier type="add" field="category" value="e679-542e-c187-1362"/>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
       <profiles>
         <profile id="9a72-303b-4976-3d51" name="Maestro nigromante" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -358,7 +352,7 @@
       <modifiers>
         <modifier type="add" field="category" value="102e-012c-5785-3354">
           <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0de-6dc4-e77a-e05f" type="equalTo"/>
+            <condition field="selections" scope="abd2-7d77-e5a0-837e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c2c7-bc70-7ba2-bf7b" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -989,6 +983,35 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="232b-6f88-a827-40f9" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3236-243a-e916-0f0b" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="1cba-e3ec-e5f7-4e6e" name="Pesadilla" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ce1-ef48-1659-7091" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="c0f9-a109-05a9-7eed" name="Pesadilla" hidden="false" collective="false" import="true" targetId="5b55-45e8-9c36-98f6" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="8.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5273-c542-7611-edca" name="Pesadilla con barda" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3543-2193-6a02-5e48" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="5f69-af45-3bc4-6c71" name="Pesadilla con barda" hidden="false" collective="false" import="true" targetId="7d74-e72a-493d-76a9" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="60.0"/>
@@ -1318,6 +1341,11 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="c647-4209-4e6c-206a">
+          <conditions>
+            <condition field="selections" scope="5416-0daf-b79e-ab7f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="477d-ec73-4e99-6b5b" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -1956,6 +1984,35 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="99ce-257f-ddf9-2722" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4e8-e5f5-6aa4-4445" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="7fdc-9e40-7ae0-5f86" name="Pesadilla" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3f9-908c-99f6-ee86" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="b4ef-700c-8349-69e9" name="Pesadilla" hidden="false" collective="false" import="true" targetId="5b55-45e8-9c36-98f6" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="8.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="14e9-58fb-f222-da9b" name="Pesadilla con barda" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50e5-d842-7208-c6c7" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="5410-f278-586a-9799" name="Pesadilla con barda" hidden="false" collective="false" import="true" targetId="7d74-e72a-493d-76a9" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
@@ -1982,6 +2039,11 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="184a-30ec-bf7c-b603">
+          <conditions>
+            <condition field="selections" scope="1abe-4373-664c-114e" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="03d3-acdf-9857-bd65" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2209,6 +2271,16 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="c647-4209-4e6c-206a">
+          <conditions>
+            <condition field="selections" scope="f586-1098-d813-1690" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="477d-ec73-4e99-6b5b" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="184a-30ec-bf7c-b603">
+          <conditions>
+            <condition field="selections" scope="f586-1098-d813-1690" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="03d3-acdf-9857-bd65" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2661,6 +2733,35 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="a685-c2f7-65a7-390d" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a9c-3293-f2c8-c884" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c3ed-a7f9-8ecf-b1da" name="Pesadilla" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f24-108e-de06-26bc" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="6d40-c4ea-48aa-d03d" name="Pesadilla" hidden="false" collective="false" import="true" targetId="5b55-45e8-9c36-98f6" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="8.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="dc4d-1696-ceaf-351b" name="Pesadilla con barda" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="059d-fe15-2d6a-55e3" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="a4ef-c556-313c-8ff4" name="Pesadilla con barda" hidden="false" collective="false" import="true" targetId="7d74-e72a-493d-76a9" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
@@ -2900,6 +3001,11 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="c647-4209-4e6c-206a">
+          <conditions>
+            <condition field="selections" scope="1cb2-9446-e70c-c2ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="477d-ec73-4e99-6b5b" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3338,6 +3444,35 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="382e-fe13-c3da-1da2" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd5f-769d-3b66-4871" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="edcb-cf91-8d38-309c" name="Pesadilla" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f78-a0e1-857c-58bd" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="088f-35b7-6979-4bb3" name="Pesadilla" hidden="false" collective="false" import="true" targetId="5b55-45e8-9c36-98f6" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="8.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8690-bba5-2538-2326" name="Pesadilla con barda" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57ee-bdc5-581d-d32d" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="b6fa-b05b-e4fe-8537" name="Pesadilla con barda" hidden="false" collective="false" import="true" targetId="7d74-e72a-493d-76a9" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
@@ -3546,6 +3681,11 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="c647-4209-4e6c-206a">
+          <conditions>
+            <condition field="selections" scope="4948-ff7d-7b0f-c78f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2445-3df4-5712-b4d0" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -4070,6 +4210,11 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="c647-4209-4e6c-206a">
+          <conditions>
+            <condition field="selections" scope="d2e3-4a84-adf9-7b76" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="477d-ec73-4e99-6b5b" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -4648,6 +4793,35 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
               </selectionEntryGroups>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="360c-8e72-1074-a72c" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74bd-a862-32e0-5295" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="ddc7-ffd6-6f0b-2c79" name="Pesadilla" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e28d-f09c-08a8-17df" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="dcf2-7513-e383-ecfa" name="Pesadilla" hidden="false" collective="false" import="true" targetId="5b55-45e8-9c36-98f6" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="8.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="57f1-5de2-5b59-a3b5" name="Pesadilla con barda" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e408-2717-30c3-ec62" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="0b94-44d4-58ba-5ab1" name="Pesadilla con barda" hidden="false" collective="false" import="true" targetId="7d74-e72a-493d-76a9" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
