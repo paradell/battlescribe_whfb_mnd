@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="fd97-5cfe-d46c-03c6" name="Warhammer Fantasy - MDN" revision="5" battleScribeVersion="2.03" authorName="Leyendas en miniatura" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="fd97-5cfe-d46c-03c6" name="Warhammer Fantasy - MDN" revision="6" battleScribeVersion="2.03" authorName="Leyendas en miniatura" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="53ea-00f4-9046-81ff" name="puntos" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -276,7 +276,7 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="382c-f817-2c4b-e3c3" name="Leyendas 1" hidden="false">
+    <forceEntry id="382c-f817-2c4b-e3c3" name="Warhammer Fantasy - Leyendas en Miniatura" hidden="true">
       <comment>Lista para jugar a Warhammer Fantasy Sexta Edición con los Manuscritos de Nuth, con las modificaciones de Leyendas en Miniatura.</comment>
       <categoryLinks>
         <categoryLink id="475c-1e29-6da6-3297" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false">
@@ -462,7 +462,7 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="97d8-18f7-1c75-42b1" name="Warhammer Fantasy 6a" hidden="false">
+    <forceEntry id="97d8-18f7-1c75-42b1" name="Warhammer Fantasy - 6a Edición" hidden="false">
       <comment>Listas para jugar a Warhammer Fantasy 6a Edición. </comment>
       <categoryLinks>
         <categoryLink id="0134-b04c-ef92-4cb4" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false">
