@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a841-7b20-89a8-91ac" name="Skaven MDN" revision="1" battleScribeVersion="2.03" authorName="Cordo" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a841-7b20-89a8-91ac" name="Skaven MDN" revision="2" battleScribeVersion="2.03" authorName="Cordo" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <publications>
+    <publication id="c220-b30e-7003-9bc3" name="Skaven MDN"/>
+  </publications>
   <selectionEntries>
     <selectionEntry id="3f3c-4723-ea57-a396" name="Señor de las alimañas" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -68,28 +71,114 @@ Ejemplo: el Señor de las Alimañas tiene L9. Supongamos que pierden un combate 
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="84ec-2928-7015-e582" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="e7b2-b7d3-5798-74cb">
+        <selectionEntryGroup id="84ec-2928-7015-e582" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="af69-7e4d-79df-f2ef">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5bb-4e52-4d08-c214" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49c3-f238-4c1e-a338" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3680-4b78-0569-f093" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="e7b2-b7d3-5798-74cb" name="Alabarda de muerte" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="e268-94af-6c0d-a4d1" name="Segadora de Plata" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a274-0eeb-1d88-81d0" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb00-6638-8426-861a" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="140d-a81c-fad4-8319" type="max"/>
               </constraints>
               <profiles>
-                <profile id="0a2a-c1d0-1c1f-4503" name="Alabarda de muerte" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                <profile id="f727-09d4-a2f9-1f70" name="Segadora de Plata" publicationId="c220-b30e-7003-9bc3" page="20" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                  <characteristics>
+                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a Cuerpo</characteristic>
+                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Siempre Ataca Primero
+Arma Mágica.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="311f-70df-7e8b-838d" name="Estilete de Disformidad" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a02d-8343-be5d-e52f" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="7691-8241-5a5a-30b1" name="Estilete de Disformidad" publicationId="c220-b30e-7003-9bc3" page="20" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                  <characteristics>
+                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a Cuerpo</characteristic>
+                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Arma mágica.
+Ataques Envenenados.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="af69-7e4d-79df-f2ef" name="Guja Mortal" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1461-9dbf-592c-7bf5" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="287f-a41f-f807-7fdd" name="Guja Mortal" publicationId="c220-b30e-7003-9bc3" page="20" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
                   <characteristics>
                     <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
-                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La el usuario + 1</characteristic>
-                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Alabarda (F+1). Es un arma mágica que, además, Anula armaduras.</characteristic>
+                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Anula armaduras.
+Arma Mágica</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="30bc-c6a5-ef9c-c6d6" name="Estrellas Mortíferas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="935c-e572-39ff-ea4d" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="1b73-a2a5-f099-d293" name="Estrellas Mortíferas" publicationId="c220-b30e-7003-9bc3" page="20" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                  <characteristics>
+                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma arrojadiza (15cm)</characteristic>
+                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F6, ataques mágicos</characteristic>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Disparos múltiples x3</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ce01-6dfe-08b5-89da" name="Daga perforante" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="799e-1212-e1a0-a7bc" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="3072-d043-31ef-8360" name="Daga perforante" publicationId="c220-b30e-7003-9bc3" page="20" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                  <characteristics>
+                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a Cuerpo</characteristic>
+                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Arma mágica.
+Golpe letal.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bc7e-6703-53c3-d3eb" name="Orbe del Destino" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b21-7d05-902d-dbf4" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="7db1-c1f0-614f-9d2d" name="Orbe del Destino" publicationId="c220-b30e-7003-9bc3" page="20" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+                  <characteristics>
+                    <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Mientras el Señor de las Alimañas tenga el Orbe, puede efectuar su tirada de salvación por Aura demoníaca incluso contra ataques mágicos. Una vez por partida, sólo durante su fase de Disparo, puede lanzar el Orbe (y, a partir de ese momento, ya no lo tiene, así que deja de poder efectuar el Aura Demoníaca contra ataques mágicos). El Orbe sigue todas las reglas de una Catapulta; sin embargo, en vez de realizar la tirada para herir, las miniaturas bajo la plantilla deben efectuar un chequeo de Iniciativa; las miniaturas que fallen el chequeo de Iniciativa sufren una herida que Anula armaduras. En caso de Problemas, no efectúes la tirada ni el desvío; el Señor de las Alimañas sufre 1d3 heridas sin salvación alguna.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
