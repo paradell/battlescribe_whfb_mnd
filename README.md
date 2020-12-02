@@ -18,6 +18,7 @@ Hace unos años trasteé con BattleScribe para poder hacerme las listas de Breto
 * [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)
 * [Mercenarios](./files/Mercenarios_MDN.cat)
 * [Condes Vampiro](.files/Condes_Vampiro_MND.cat)
+* [Reyes Funerarios](.files/Reyes\ Funerarios\ MDN.cat)
 
 ### Ficheros de ejércitos sin modificar de Leyendas
 * Altos Elfos
@@ -30,7 +31,6 @@ Hace unos años trasteé con BattleScribe para poder hacerme las listas de Breto
 * Reinos del Caos: Bestias
 * Reinos del Caos: Demonios
 * Reinos del Caos: Mortales
-* Reyes Funerarios
 * Skaven
 * Regimientos de Renombre
 
