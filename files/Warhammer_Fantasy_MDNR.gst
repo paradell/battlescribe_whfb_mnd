@@ -814,7 +814,9 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
-    <rule id="2cde-101a-0b0b-5556" name="Ataca en primer lugar" hidden="false"/>
+    <rule id="2cde-101a-0b0b-5556" name="Ataca en primer lugar" hidden="false">
+      <description>Atacarán en primer lugar en combate cuerpo a cuerpo independientemente del atributo de Iniciativa o de quién ha cargado (recuerda que el combate es después de los impactos por carga). Si dos miniaturas o unidades enfrentadas tienen Siempre Ataca Primero, la miniatura o unidad con mayor Iniciativa atacará primero independientemente de otros factores. Si una miniatura tiene Siempre Ataca Primero y Ataca en último lugar (por ejemplo, por usar arma a dos manos), prevalece la regla Siempre Ataca Primero y se ignora Ataca en último lugar. En definitiva, el orden en combate es: Impactos por carga, Siempre ataca primero, Unidades que cargan, Resto de unidades, Ataca en último lugar, Zombis (y demás Descerebrados). En cualquier caso, en cada categoría se “desempata” por orden de iniciativa (p.e. dos unidades que atacan primero, de mayor a menor Iniciativa), y en caso de nuevamente empate, la unidad que pertenezca al bando que ganó la ronda de combate anterior. Si también hay empate así, se resuelve al azar (1D6). Por ejemplo, Esto implica que si una unidad que Siempre Ataca Primero con Iniciativa 5 carga a una unidad que Siempre Ataca Primero con Iniciativa 8, atacará primero la de Iniciativa 8.</description>
+    </rule>
     <rule id="5914-4089-52e4-33ec" name="Ataca en último lugar" hidden="false"/>
     <rule id="be66-a095-abdc-bc2e" name="Exploradores" hidden="false"/>
     <rule id="06ad-f944-9b01-04d1" name="Poder de penetración" hidden="false"/>
@@ -823,7 +825,9 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
     <rule id="f6f9-0701-05a1-df5a" name="Caballería rápida" hidden="false"/>
     <rule id="42bd-162f-4bb2-c783" name="Miedo" hidden="false"/>
     <rule id="31ab-3ff3-e34f-baac" name="Terror" hidden="false"/>
-    <rule id="b586-6dd5-cfa2-4287" name="Ataques flamígeros" hidden="false"/>
+    <rule id="b586-6dd5-cfa2-4287" name="Ataques flamígeros" hidden="false">
+      <description>Se consideran ataques de fuego; las miniaturas con Regeneración no pueden Regenerar las heridas causadas por Ataques de fuego, las miniaturas Inflamables reciben el doble de heridas, etc.</description>
+    </rule>
     <rule id="3dc8-db11-d7b7-cc90" name="Inflamable" hidden="false"/>
     <rule id="90d6-fe4d-a823-314b" name="Volar" hidden="false"/>
     <rule id="000a-cfde-6e79-aecb" name="Furia asesina" hidden="false"/>
@@ -837,16 +841,22 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
     <rule id="10ae-f386-2057-289d" name="Resistencia mágica" hidden="false"/>
     <rule id="cb75-6be5-9ffd-0b1e" name="Mover o disparar" hidden="false"/>
     <rule id="ce6a-d9c6-fbdb-1edc" name="Disparos múltiples" hidden="false"/>
-    <rule id="5faa-a777-c727-a827" name="Heridas múltiples" hidden="false"/>
+    <rule id="5faa-a777-c727-a827" name="Heridas múltiples" hidden="false">
+      <description>Las heridas no salvadas se transforman en X heridas. Así, una miniatura con Heridas múltiples (1D3) que haga dos heridas a un enemigo (tras aplicar Tiradas de salvación por armadura y Tiradas de salvación especial, pero antes de Regeneración), en realidad causa 2D3 heridas.</description>
+    </rule>
     <rule id="d77c-34cb-f94c-aee1" name="Ataques envenenados" hidden="false"/>
     <rule id="d43f-f8c6-de44-18d0" name="Regeneración" hidden="false"/>
     <rule id="9cbf-c668-b4f4-8f92" name="Requiere ambas manos" hidden="false"/>
     <rule id="123c-5ab5-d266-d57d" name="Piel escamosa" hidden="false"/>
     <rule id="4717-34b5-7e01-9c40" name="Hostigadores" hidden="false"/>
-    <rule id="0184-7230-0c11-a68a" name="Cruzar" hidden="false"/>
+    <rule id="0184-7230-0c11-a68a" name="Cruzar" hidden="false">
+      <description>Las miniaturas con Cruzar (X) tratan los elementos de escenografía de tipo X como terreno abierto a efectos de movimiento (pero no a efectos de línea de visión, etc.).</description>
+    </rule>
     <rule id="ad33-61eb-3490-bb38" name="Tozudez" hidden="false"/>
     <rule id="71f4-a00d-7d0a-2728" name="Estupidez" hidden="false"/>
-    <rule id="e1e7-a7dd-415e-a2a4" name="Inestable" hidden="false"/>
+    <rule id="e1e7-a7dd-415e-a2a4" name="Inestable" hidden="false">
+      <description>Las unidades y miniaturas Inestables que pierdan un combate no tienen que hacer chequeo de desmoralización ni huirán. En vez de eso, la miniatura o unidad sufrirá una herida sin posibilidad de salvación (ni por armadura, ni especial, ni regeneración) por cada punto por el que haya perdido el combate (por ejemplo, si pierde un combate por 3 puntos, sufre 3 heridas).En caso de personaje Inestable sobre montura Inestable, el jugador puede decidir cuál de los dos recibe las heridas.En casos de combate múltiple, cada unidad implicada en el combate sufrirá dichas heridas, y las podrá repartir entre personajes, monstruos y tropa.Si una miniatura o unidad Inestable resulta destruida debido a la resolución de un combate durante la primera ronda de un combate, el enemigo podrá efectuar un arrasamiento de la forma habitual.</description>
+    </rule>
     <rule id="6e5c-a8a4-78d0-032b" name="Ataques mágicos" hidden="false"/>
     <rule id="a4bf-9023-0381-9f3a" name="Lanzavirotes" page="124" hidden="false">
       <description>Los lanzavirotes tienen un alcance de 120cm.
@@ -857,6 +867,20 @@ Si impacta a una unidad, una miniatura de la primera fila es la que recibe el im
     <rule id="89b2-105c-35db-51c3" name="General" hidden="false"/>
     <rule id="16f9-a928-9d5e-2b4f" name="Estandarte de Batalla" hidden="false">
       <description>El Portaestandarte de Batalla no puede ser el General del ejército. El Portaestandarte de Batalla no puede elegir Armas ni Escudo de las opciones habituales. Sin embargo, puede elegir arma mágica siempre que no Requiera ambas manos. No puede elegir escudos mágicos, ni armaduras mágicas que lleven escudo incorporado. El Portaestandarte de Batalla podrá llevar un Estandarte Mágico sin límite de puntos (en ese caso no podrá llevar Objetos mágicos ni elegir Poderes); o bien cualquier combinación de objetos mágicos y poderes hasta 50 puntos en total. No puede haber dos Portaestandartes de Batalla.</description>
+    </rule>
+    <rule id="c868-f5c5-5601-085a" name="Anula Armadura" hidden="false">
+      <description>No se pueden efectuar tiradas de salvación por armadura por los impactos que Anulan armadura.</description>
+    </rule>
+    <rule id="4a56-2f32-2b83-a4f6" name="Caballería monstruosa." hidden="false">
+      <description>Se consideran a la vez de tipo Infantería Monstruosa y Caballería, por lo que los hechizos y reglas que
+afecten a Infantería Monstruosa o a Caballería, les afectan a ellos (incluyendo el Golpe Letal).</description>
+    </rule>
+    <rule id="8ca9-9d02-9e2d-0edd" name="Monstruosidad de Piedra" hidden="false">
+      <description>Cuando se efectúe una tirada para herir a una miniatura con Monstruosidad de Piedra, la tirada para
+herir falla con un resultado de 1-2 en el dado (en vez del habitual 1).</description>
+    </rule>
+    <rule id="b6cc-4892-f34e-1e8d" name="Objetivo pequeño." hidden="false">
+      <description>No bloquean línea de visión, salvo a otras miniaturas Objetivo Pequeño.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
