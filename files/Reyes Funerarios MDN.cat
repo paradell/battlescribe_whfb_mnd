@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="93c4-b6ad-9da5-4afc" name="Reyes Funerarios MDN" revision="5" battleScribeVersion="2.03" authorName="Cordo" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="93c4-b6ad-9da5-4afc" name="Reyes Funerarios MDN" revision="6" battleScribeVersion="2.03" authorName="Cordo" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="9806-8ad8-97a2-86b5" name="Reyes Funerarios MDN - 2020" publisher="" publicationDate="Noviembre 2020" publisherUrl="https://www.cargad.com/index.php/manuscritos-de-nuth/"/>
   </publications>
@@ -7,12 +7,18 @@
     <selectionEntry id="91c8-b537-62f8-c450" name="Carros ligeros" hidden="false" collective="false" import="true" type="upgrade">
       <modifierGroups>
         <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8271-bcd3-66a0-821d" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c585-c17a-4b94-9f64" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8271-bcd3-66a0-821d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="107c-be9a-65f9-080d" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
             <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
-            <modifier type="add" field="category" value="ba68-224b-3224-a908"/>
+            <modifier type="set-primary" field="category" value="ba68-224b-3224-a908"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>

@@ -22,6 +22,7 @@ Hace unos años trasteé con BattleScribe para poder hacerme las listas de Breto
 
 ### Ficheros de ejércitos sin modificar de Leyendas
 * Altos Elfos
+* Elfos Oscuros
 * Elfos Silvanos
 * Enanos
 * Enanos del Caos
