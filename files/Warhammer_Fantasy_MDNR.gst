@@ -858,6 +858,20 @@ Si impacta a una unidad, una miniatura de la primera fila es la que recibe el im
     <rule id="16f9-a928-9d5e-2b4f" name="Estandarte de Batalla" hidden="false">
       <description>El Portaestandarte de Batalla no puede ser el General del ejército. El Portaestandarte de Batalla no puede elegir Armas ni Escudo de las opciones habituales. Sin embargo, puede elegir arma mágica siempre que no Requiera ambas manos. No puede elegir escudos mágicos, ni armaduras mágicas que lleven escudo incorporado. El Portaestandarte de Batalla podrá llevar un Estandarte Mágico sin límite de puntos (en ese caso no podrá llevar Objetos mágicos ni elegir Poderes); o bien cualquier combinación de objetos mágicos y poderes hasta 50 puntos en total. No puede haber dos Portaestandartes de Batalla.</description>
     </rule>
+    <rule id="c868-f5c5-5601-085a" name="Anula Armadura" hidden="false">
+      <description>No se pueden efectuar tiradas de salvación por armadura por los impactos que Anulan armadura.</description>
+    </rule>
+    <rule id="4a56-2f32-2b83-a4f6" name="Caballería monstruosa." hidden="false">
+      <description>Se consideran a la vez de tipo Infantería Monstruosa y Caballería, por lo que los hechizos y reglas que
+afecten a Infantería Monstruosa o a Caballería, les afectan a ellos (incluyendo el Golpe Letal).</description>
+    </rule>
+    <rule id="8ca9-9d02-9e2d-0edd" name="Monstruosidad de Piedra" hidden="false">
+      <description>Cuando se efectúe una tirada para herir a una miniatura con Monstruosidad de Piedra, la tirada para
+herir falla con un resultado de 1-2 en el dado (en vez del habitual 1).</description>
+    </rule>
+    <rule id="b6cc-4892-f34e-1e8d" name="Objetivo pequeño." hidden="false">
+      <description>No bloquean línea de visión, salvo a otras miniaturas Objetivo Pequeño.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="ee3a-8a10-edff-cefe" name="Alabarda" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
