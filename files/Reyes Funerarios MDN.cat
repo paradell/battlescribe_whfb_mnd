@@ -229,6 +229,33 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="97ce-b98e-8ed9-54da" name="La bendición del áspid" hidden="true" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c585-c17a-4b94-9f64" type="atLeast"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="hidden" value="false"/>
+                <modifier type="set" field="a278-6a76-efc0-1037" value="1.0"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a278-6a76-efc0-1037" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6924-3905-ca23-f194" name="La bendición del áspid" hidden="false" collective="true" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="07bb-a06d-4d57-2b96" name="La bendición del áspid" hidden="false" targetId="1be3-a1cb-7c3f-0a37" type="rule"/>
+                <infoLink id="00ef-d11e-a0a6-b629" name="Ataques envenenados" hidden="false" targetId="d77c-34cb-f94c-aee1" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="2.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -582,6 +609,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="936d-c1b2-f40f-7862" name="Sumo sacerdote funerario" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="790b-77b3-e452-bf92" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="107c-be9a-65f9-080d" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="790b-77b3-e452-bf92" type="max"/>
+      </constraints>
       <profiles>
         <profile id="5b66-9680-0523-726a" name="Sumo sacerdote funerario" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -1111,6 +1148,16 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
       </costs>
     </selectionEntry>
     <selectionEntry id="6434-1782-542e-3d35" name="Sacerdote funerario" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="aeb0-e273-f3ea-4ae1" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="107c-be9a-65f9-080d" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aeb0-e273-f3ea-4ae1" type="max"/>
+      </constraints>
       <profiles>
         <profile id="645d-161f-56ee-c351" name="Sacerdote funerario" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -1677,8 +1724,16 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
               </constraints>
               <selectionEntries>
                 <selectionEntry id="117e-42c4-86b7-33da" name="Arco" hidden="false" collective="true" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="b625-8322-856a-2a88" value="1.0">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c585-c17a-4b94-9f64" type="atLeast"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a47-d58b-3b70-4e1e" type="max"/>
+                    <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b625-8322-856a-2a88" type="min"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="58ca-ad99-d41c-0578" name="Arco" hidden="false" targetId="dfc2-1321-c679-1bc0" type="profile"/>
@@ -1710,6 +1765,38 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
                   </infoLinks>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="1.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="ff02-6038-8805-581b" name="La bendición del áspid" hidden="true" collective="false" import="true">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c585-c17a-4b94-9f64" type="atLeast"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="117e-42c4-86b7-33da" type="atLeast"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false"/>
+                    <modifier type="set" field="4ac6-fbe6-9029-fed0" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ac6-fbe6-9029-fed0" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="94b4-9519-1222-978f" name="La bendición del áspid" hidden="false" collective="true" import="true" type="upgrade">
+                  <infoLinks>
+                    <infoLink id="aa7b-1eb8-b972-7ad3" name="La bendición del áspid" hidden="false" targetId="1be3-a1cb-7c3f-0a37" type="rule"/>
+                    <infoLink id="d2a7-56c8-0405-4642" name="Ataques envenenados" hidden="false" targetId="d77c-34cb-f94c-aee1" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="2.0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
@@ -1877,7 +1964,7 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a4a-cb36-c8d8-4ed9" type="min"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="ce35-1a38-41f9-f0a1" name="Arco" hidden="false" collective="true" import="true" type="upgrade">
+                <selectionEntry id="ce35-1a38-41f9-f0a1" name="Arco" hidden="true" collective="true" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a88-719d-ef00-db40" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64f1-d402-f606-11b6" type="min"/>
@@ -1887,6 +1974,33 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
                   </infoLinks>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="39b4-2e4e-5679-e566" name="La bendición del áspid" hidden="true" collective="false" import="true">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c585-c17a-4b94-9f64" type="atLeast"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false"/>
+                    <modifier type="set" field="1fd4-b395-4eaa-a68f" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fd4-b395-4eaa-a68f" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="3ac4-a7f7-7071-97b9" name="La bendición del áspid" hidden="false" collective="true" import="true" type="upgrade">
+                  <infoLinks>
+                    <infoLink id="9b8a-c347-5cd5-3c93" name="La bendición del áspid" hidden="false" targetId="1be3-a1cb-7c3f-0a37" type="rule"/>
+                    <infoLink id="ae95-9293-a08c-fd2c" name="Ataques envenenados" hidden="false" targetId="d77c-34cb-f94c-aee1" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="2.0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
@@ -3285,7 +3399,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ff5-da9b-6d23-dbdf" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="097c-a10f-3090-a8bd" type="max"/>
       </constraints>
       <profiles>
         <profile id="f5fa-63f7-eb98-b9c3" name="Ramhotep el Visionario" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -3346,9 +3460,14 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="c421-a379-7672-8d76" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="107c-be9a-65f9-080d" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2ad-631c-be26-d78d" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c421-a379-7672-8d76" type="max"/>
       </constraints>
       <profiles>
         <profile id="4923-86be-8461-152c" name="Arkhan el Negro" publicationId="9806-8ad8-97a2-86b5" page="30" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -3602,6 +3721,9 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9214-060b-4071-62f6" type="max"/>
+      </constraints>
       <profiles>
         <profile id="7612-7127-8e4e-6a19" name="Apophas" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3668,6 +3790,9 @@ Parciales a 4+</characteristic>
     </selectionEntry>
     <selectionEntry id="c585-c17a-4b94-9f64" name="Khalida Neferher" publicationId="9806-8ad8-97a2-86b5" page="33" hidden="true" collective="false" import="true" type="unit">
       <comment>Reina Guerrera de Lybaras y amada de Asaph</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7043-84b6-547f-a98e" type="max"/>
+      </constraints>
       <profiles>
         <profile id="bc3e-ce8e-736f-42f3" name="Khalida Neferher" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3750,7 +3875,15 @@ Parciales a 4+</characteristic>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="2702-e021-6344-9b1f" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="107c-be9a-65f9-080d" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2702-e021-6344-9b1f" type="max"/>
+      </constraints>
       <profiles>
         <profile id="3334-8ad7-af27-5cc3" name="Khatep" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3810,6 +3943,9 @@ Parciales a 4+</characteristic>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0969-2db4-b7a8-a457" type="max"/>
+      </constraints>
       <profiles>
         <profile id="6c59-7ccf-ed75-9ad0" name="Nekaph" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3890,6 +4026,57 @@ Parciales a 4+</characteristic>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f014-69bc-b3bf-0e85" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3d13-afd2-5a53-2456" name="Sehenesmet" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">6</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1">2</characteristic>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo, Constructo, Hechicero, No Muerto, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="009a-48e8-a6c6-7f21" name="Gran Báculo de Shapesh" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">60cm</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">4</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Ccoloca un marcador al lado de Sehenesmet por cada baja causada con el Gran Báculo de Shapesh en combate cuerpo a cuerpo. En cada fase de magia propia, se puede desatar el poder del Báculo; debes declararlo antes de hacer los cánticos de Sehenesmet. Se trata de un Proyectil mágico con alcance 60cm; la unidad objetivo enemiga sufre tantos impactos de F4 como contadores tenga Sehenesmet. Ten en cuenta que este proyectil mágico no se considera objeto portahechizos ni tiene nivel; se lanza automáticamente y no puede ser dispersado. Una vez desatado el poder del Báculo, retira los marcadores (será necesario hacer más bajas para poder volver a lanzar el proyectil mágico). Además, todos los Cánticos de Sehenesmet tienen el doble de alcance.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="c603-2999-faf1-8526" name="Liche Gigante." hidden="false">
+          <description>Sehenesmet combina el poder físico de un Gigante de Hueso con las artes místicas de un Sacerdote Funerario. Se considera Sumo Sacerdote Funerario a todos los efectos (genera 2 dados de dispersión, puede lanzar 2 cánticos por turno con nivel 3D6, etc). Ten en cuenta que puede entonar cánticos pese a la armadura pesada (y el hecho de ser constructo).</description>
+        </rule>
+        <rule id="f8c3-92ba-1933-bfe6" name="Protección mágica" hidden="false">
+          <description>Todas las unidades amigas de Reyes Funerarios a 30cm o menos de Sehenesmet tienen Resistencia mágica (2). Esto incluye al propio Sehenesmet.</description>
+        </rule>
+        <rule id="dfcf-403a-f6d3-149e" name="Ejército de Quatar" hidden="false">
+          <description>El ejército de Quatar es muy distinto a las demás ciudades de los Reyes Funerarios (y, por supuesto, sólo puede usarse si Sehenesmet está presente).- Personajes. Debes incluir a Sehenesmet. Adicionalmente, puedes incluir un Necrotecto por cada 1000 puntos (así, un ejército de 3000 puntos podría incluir a Sehenesmet y hasta 3 Necrotectos, incluyendo a Ramhotep el Visionario).- Unidades básicas. Gólem escorpión, Ushabtis, 0-2 Enjambre Funerario, 0-2 Guerreros esqueleto, Acechadores Sepulcrales.- Unidades especiales: Gigante de hueso, Caballería ligera esquelética, Caballería pesada esquelética, Hierotitán, Necroesfinge (ocupa una opción de unidad Especial más una opción de Héroe).- Unidades singulares. Carros ligeros, Buitres de Nehekara, Lanzacráneos, Esfinge de Guerra, Titán de Khemri (ocupa una opción de unidad Singular más una opción de Héroe), Caballeros de la Necrópolis.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="89c3-2b03-86fe-6888" name="Arma a dos manos " hidden="false" targetId="bc8b-5380-77a9-7fe7" type="profile"/>
+        <infoLink id="d09f-0e2c-6f03-5eb4" name="No muertos" hidden="false" targetId="39a2-3557-c70f-a611" type="rule"/>
+        <infoLink id="b835-60b3-8e5d-44b3" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
+        <infoLink id="734c-9719-2403-982c" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
+        <infoLink id="e20f-774c-3deb-99e7" name="Criatura artefacto" hidden="false" targetId="45ba-5cd4-72d7-7286" type="rule"/>
+        <infoLink id="4e20-2340-9608-40aa" name="Hierofante" hidden="false" targetId="670c-a920-30f1-170c" type="rule"/>
+        <infoLink id="fa3f-c69d-1545-777b" name="Asalto imparable" hidden="false" targetId="a02e-038f-2b66-38ad" type="rule"/>
+        <infoLink id="0983-9d18-ce4a-2015" name="General" hidden="false" targetId="89b2-105c-35db-51c3" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="5932-016c-e7a6-88a7" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
         <categoryLink id="b08d-9077-da4e-9e9a" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
@@ -3902,6 +4089,68 @@ Parciales a 4+</characteristic>
     </selectionEntry>
     <selectionEntry id="107c-be9a-65f9-080d" name="Settra" publicationId="9806-8ad8-97a2-86b5" page="40" hidden="true" collective="false" import="true" type="unit">
       <comment>El Imperecedero</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77a7-0573-e7a0-3f24" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="beff-ea69-b963-ea4d" name="Settra" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">7</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">4</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">2+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">4+</characteristic>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Momia, No Muerto, Hechicero, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="6e07-d744-f93f-20b2" name="Jepesch bendecido de Ptra" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del portador</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Al final de cada ronda de combate, todas las unidades enemigas implicadas en el combate donde esté Settra (estén o no en contacto con Settra) deben chequear Liderazgo con un penalizador equivalente a los impactos hechos por Settra ese turno. Si fallan ese chequeo de Liderazgo, se considera a todos los efectos que tienen HA 1 hasta el final del combate (no del turno). Además, si el chequeo supera el doble del atributo modificado, la unidad sufre 1D6 impactos de F4.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9ab9-30b1-0d9a-d3f9" name="Armadura del Esplendor Áureo" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+          <characteristics>
+            <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">2+</characteristic>
+            <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Settra lleva una armadura que, según algunas leyendas, fue forjada para Djal, el mismísimo Dios Chacal, y no puede ser dañada. Armadura ligera (Tirada de salvación por armadura de 6+). Sin embargo, esta armadura proporciona una Tirada de salvación por armadura de 2+ (que no puede verse mejorada, por ejemplo por montar en carro). Los impactos que modifiquen la tirada de salvación por armadura (por la fuerza del ataque, poder de penetración, etc) no podrán modificar la tirada a un resultado peor de 4+; esto significa que Settra siempre puede hacer una tirada de salvación por armadura de 4+. Esta tirada se efectuará incluso contra ataques que Anulen armadura (incluidas aquellas con Golpe Letal). Tan potente es la Armadura del Esplendor Áureo que es un objeto que NUNCA puede anularse (ni siquiera por objetos, hechizos o reglas que anulen objetos mágicos como la Anulación de Vaul).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="eb82-efe6-e19c-46f2" name="Corona de Nehekhara" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Combinando varias coronas en una, este regio tocado le permite a Settra imponer su voluntad sobre aquellos cerca de él. Portando está corona, Settra evidencia que es el supremo gobernante de la tierra. Esta corona está bendecida por todos los dioses y diosas de Nehekhara y está adornada con una cobra de oro que ataca a los enemigos de Settra. Settra (y el Carro de los Dioses, si va montado en él) tienen una Tirada de salvación especial de 4+. Además, Settra causa Terror.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="b5a1-a2e1-4f78-fb81" name="Settra el Magno" hidden="false">
+          <description>Settra es el más grande de los Reyes de Nehekhara, fundador del Culto Mortuorio y poderoso Rey Sacerdote. Es el Hierofante. Conoce todos los Cánticos y los puede lanzar como un Sumo Sacerdote Funerario (además de ser Rey a todos los efectos, p.e. los Carros ligeros son básicos). No genera dados de dispersión.</description>
+        </rule>
+        <rule id="c0ac-c976-f49f-9ab9" name="Legiones de Settra" hidden="false">
+          <description>El ejército de Settra se compone, en gran parte, de su guardia personal. La mitad de los puntos del ejército debes gastarlos en Settra, carros de guerra, caballería pesada y guardia del sepulcro (respetando igualmente los límites de básicas, especiales y singulares por tamaño de ejército). No puede incluir sacerdotes ni sumo sacerdotes en el ejército liderado por Settra.</description>
+        </rule>
+        <rule id="6a3f-e88b-252d-c43b" name="La voluntad de Settra" hidden="false">
+          <description>En vida, Settra fue el mejor estratega, por eso pudo conquistar todas las ciudades de Nehekhara. Después de muerto, su genio y voluntad siguen movilizando a su ejército. Antes de entonar cánticos puede usar ¡Hágase mi voluntad! una vez en cada una de las unidades de carros de guerra, caballería pesada y guardia del sepulcro del ejército, independientemente de cuántas haya y de la distancia a la que estén (las demás reglas para entonar cánticos funcionan de la forma habitual, por ejemplo una misma unidad no puede ser objetivo del Cántico del Embate con éxito dos veces en un mismo turno). Debes lanzar para ver el nivel de energía en cada unidad por separado.</description>
+        </rule>
+        <rule id="6dd6-77f8-bddc-2199" name="La maldición de Settra" hidden="false">
+          <description>Si el cuerpo de Settra es destruido, estalla en un gigantesco enjambre de escarabajos khepra, que devorarán al enemigo antes de volar a la Gran Pirámide para que Settra vuelva a recuperar su aspecto físico e inmortal. Además de la maldición normal de los reyes funerarios, si Settra muere toda unidad enemiga a 5D6 cm sufrirá 2D6 impactos de F2.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="0626-a8e6-5947-87dc" name="General" hidden="false" targetId="89b2-105c-35db-51c3" type="rule"/>
+        <infoLink id="f02a-d747-a51f-a4df" name="Hierofante" hidden="false" targetId="670c-a920-30f1-170c" type="rule"/>
+        <infoLink id="7d1b-46cf-7e41-0b13" name="No muertos" hidden="false" targetId="39a2-3557-c70f-a611" type="rule"/>
+        <infoLink id="e930-0083-b453-155f" name="Inflamable" hidden="false" targetId="3dc8-db11-d7b7-cc90" type="rule"/>
+        <infoLink id="025f-1b81-f5fe-6ed5" name="Cánticos de Nehekara" hidden="false" targetId="95a9-ecda-da00-c2fb" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="849e-b558-af1e-d60e" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="true"/>
       </categoryLinks>
@@ -5068,6 +5317,9 @@ generan dados de dispersión), así que no les afectarán los efectos que actúe
     </rule>
     <rule id="e355-6ff4-079f-2351" name="Pesado" publicationId="9806-8ad8-97a2-86b5" page="8" hidden="false">
       <description>Cuando una miniatura con la regla Pesado recibe el Cántico del Apremio de Mankara, no puede usar su movimiento volador (usa su atributo de Movimiento, no puede pasar por encima de otras unidades, etc).</description>
+    </rule>
+    <rule id="1be3-a1cb-7c3f-0a37" name="La bendición del áspid" publicationId="9806-8ad8-97a2-86b5" page="33" hidden="false">
+      <description>Cualquier unidad con arco normal (guerreros esqueleto, caballería ligera, carros, etc.) pueden tener la Bendición del áspid (+2/m). Dichas unidades resuelven sus disparos con Ataques envenenados. (No afecta al arco Arco compuesto de los Ushabti ni al Arco gigante del Gigante, sólo a miniaturas con arco).</description>
     </rule>
   </sharedRules>
 </catalogue>
