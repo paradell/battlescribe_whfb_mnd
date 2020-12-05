@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="93c4-b6ad-9da5-4afc" name="Reyes Funerarios MDN" revision="6" battleScribeVersion="2.03" authorName="Cordo" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="93c4-b6ad-9da5-4afc" name="Reyes Funerarios MDN" revision="7" battleScribeVersion="2.03" authorName="Cordo" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="9806-8ad8-97a2-86b5" name="Reyes Funerarios MDN - 2020" publisher="" publicationDate="Noviembre 2020" publisherUrl="https://www.cargad.com/index.php/manuscritos-de-nuth/"/>
   </publications>
@@ -19,6 +19,15 @@
           <modifiers>
             <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
             <modifier type="set-primary" field="category" value="ba68-224b-3224-a908"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="184a-30ec-bf7c-b603"/>
+            <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -398,7 +407,15 @@
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="64ce-0c02-1cde-4c1e" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="2c7a-7cde-b4c1-b078" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c7a-7cde-b4c1-b078" type="max"/>
+      </constraints>
       <profiles>
         <profile id="95c6-f2fd-1b7a-9139" name="Rey funerario" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -611,9 +628,14 @@
     <selectionEntry id="936d-c1b2-f40f-7862" name="Sumo sacerdote funerario" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="790b-77b3-e452-bf92" value="0.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="107c-be9a-65f9-080d" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="107c-be9a-65f9-080d" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -779,6 +801,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cae1-2e0f-6283-e4f2" type="max"/>
@@ -927,7 +954,15 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8974-d971-9986-fa76" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="1437-348f-32db-e317" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1437-348f-32db-e317" type="max"/>
+      </constraints>
       <profiles>
         <profile id="c309-89dc-2382-4846" name="Príncipe funerario" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -1150,9 +1185,14 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
     <selectionEntry id="6434-1782-542e-3d35" name="Sacerdote funerario" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="aeb0-e273-f3ea-4ae1" value="0.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="107c-be9a-65f9-080d" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="107c-be9a-65f9-080d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1306,6 +1346,13 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
       </costs>
     </selectionEntry>
     <selectionEntry id="a08f-d8b1-1c70-c95c" name="Portador del Icono Funerario" publicationId="9806-8ad8-97a2-86b5" page="17" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="1a02-bc0f-9ae4-ce3a" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a02-bc0f-9ae4-ce3a" type="max"/>
       </constraints>
@@ -1472,7 +1519,20 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="1b91-4fb4-8acc-9f16" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="1b91-4fb4-8acc-9f16" value="1.0">
+          <repeats>
+            <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b91-4fb4-8acc-9f16" type="max"/>
+      </constraints>
       <profiles>
         <profile id="8056-f29b-dae2-be32" name="Necrotecto" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -1629,6 +1689,16 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
       </costs>
     </selectionEntry>
     <selectionEntry id="fc43-f01a-ed40-a3bf" name="Guerreros esqueleto" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="bb20-d431-e03d-3020" value="2.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb20-d431-e03d-3020" type="max"/>
+      </constraints>
       <profiles>
         <profile id="ec1f-5c62-746f-dc14" name="Esqueleto" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -1885,6 +1955,17 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
       </costs>
     </selectionEntry>
     <selectionEntry id="149e-5d2d-d725-c46b" name="Caballería ligera de Khemri" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
+            <modifier type="remove" field="category" value="ba68-224b-3224-a908"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="d8ea-aba0-f9e9-f852" name="Esqueleto" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -2066,6 +2147,17 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
       </costs>
     </selectionEntry>
     <selectionEntry id="655f-15e5-fd8f-1735" name="Caballería pesada de Khemri" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
+            <modifier type="remove" field="category" value="ba68-224b-3224-a908"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="15d7-d560-ae1a-cc21" name="Esqueleto" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -2261,6 +2353,13 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
       </costs>
     </selectionEntry>
     <selectionEntry id="d3df-deee-9919-7c24" name="Enjambre funerario" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="d812-0d03-f64e-6b13" value="2.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d812-0d03-f64e-6b13" type="max"/>
       </constraints>
@@ -2334,6 +2433,13 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
       </costs>
     </selectionEntry>
     <selectionEntry id="80d0-92cb-ec75-991d" name="Guardia del sepulcro" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="b822-3fcd-0b33-68f2" name="Guardia del sepulcro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -2511,10 +2617,16 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
     <selectionEntry id="b680-bcf5-ec67-033c" name="Momias" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true"/>
       </modifiers>
       <profiles>
         <profile id="29e4-b447-fe11-b017" name="Momia" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -2652,6 +2764,17 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
       </costs>
     </selectionEntry>
     <selectionEntry id="4a37-4ae4-0970-f3c4" name="Ushabti" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="ba68-224b-3224-a908"/>
+            <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="14bd-99a3-b447-c091" name="Ushabti" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -2744,6 +2867,17 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
       </costs>
     </selectionEntry>
     <selectionEntry id="9fbf-5551-a49d-67bf" name="Buitres de Nehekara" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="184a-30ec-bf7c-b603"/>
+            <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="0bfe-590a-f290-8c86" name="Buitre de Nehekara" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -2808,6 +2942,17 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
       </costs>
     </selectionEntry>
     <selectionEntry id="6ac3-6955-0f4a-e804" name="Gólem escorpión" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="ba68-224b-3224-a908"/>
+            <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="d776-b9ae-6856-90a4" name="Gólem escorpión" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -2852,6 +2997,17 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="ba68-224b-3224-a908"/>
+            <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="324b-a85a-29c5-3e03" name="Acechador sepulcral" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3036,6 +3192,17 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="184a-30ec-bf7c-b603"/>
+            <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="f184-b338-c374-6d14" name="Necrosierpe" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3178,6 +3345,17 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
+            <modifier type="remove" field="category" value="184a-30ec-bf7c-b603"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="be1d-781a-986c-2299" name="Necroesfinge" publicationId="9806-8ad8-97a2-86b5" page="25" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3224,6 +3402,17 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
       </costs>
     </selectionEntry>
     <selectionEntry id="a0fb-ceb5-018d-87a4" name="Gigante de hueso" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
+            <modifier type="remove" field="category" value="184a-30ec-bf7c-b603"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="c8b1-2218-5f57-0619" name="Gigante de hueso" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3348,6 +3537,17 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
+            <modifier type="remove" field="category" value="184a-30ec-bf7c-b603"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="f96b-12de-773f-ac02" name="Hierotitán" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3389,7 +3589,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="245.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3a7a-7fa7-9e85-6fd3" name="Ramhotep el Visionario" publicationId="9806-8ad8-97a2-86b5" page="36" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="3a7a-7fa7-9e85-6fd3" name="Ramhotep el Visionario" publicationId="9806-8ad8-97a2-86b5" page="36" hidden="false" collective="false" import="true" type="unit">
       <comment>Necrotecto de Quatar</comment>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -3452,7 +3652,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="110.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ac5f-6d70-5220-6626" name="Arkhan el Negro" publicationId="9806-8ad8-97a2-86b5" page="30" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="ac5f-6d70-5220-6626" name="Arkhan el Negro" publicationId="9806-8ad8-97a2-86b5" page="30" hidden="false" collective="false" import="true" type="unit">
       <comment>El Rey Exánime</comment>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -3461,9 +3661,14 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
           </conditions>
         </modifier>
         <modifier type="set" field="c421-a379-7672-8d76" value="0.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="107c-be9a-65f9-080d" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="107c-be9a-65f9-080d" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3712,12 +3917,17 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="340.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e4ea-24cd-7211-203f" name="Apophas" publicationId="9806-8ad8-97a2-86b5" page="31" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="e4ea-24cd-7211-203f" name="Apophas" publicationId="9806-8ad8-97a2-86b5" page="31" hidden="false" collective="false" import="true" type="unit">
       <comment>Señor Maldito de los Escarabajos</comment>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9214-060b-4071-62f6" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3788,8 +3998,15 @@ Parciales a 4+</characteristic>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="150.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c585-c17a-4b94-9f64" name="Khalida Neferher" publicationId="9806-8ad8-97a2-86b5" page="33" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="c585-c17a-4b94-9f64" name="Khalida Neferher" publicationId="9806-8ad8-97a2-86b5" page="33" hidden="false" collective="false" import="true" type="unit">
       <comment>Reina Guerrera de Lybaras y amada de Asaph</comment>
+      <modifiers>
+        <modifier type="set" field="7043-84b6-547f-a98e" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7043-84b6-547f-a98e" type="max"/>
       </constraints>
@@ -3867,7 +4084,7 @@ Parciales a 4+</characteristic>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="420.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="940c-da1a-dd84-a738" name="Khatep" publicationId="9806-8ad8-97a2-86b5" page="34" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="940c-da1a-dd84-a738" name="Khatep" publicationId="9806-8ad8-97a2-86b5" page="34" hidden="false" collective="false" import="true" type="unit">
       <comment>Gran Hierofante de Khemri</comment>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -3876,9 +4093,14 @@ Parciales a 4+</characteristic>
           </conditions>
         </modifier>
         <modifier type="set" field="2702-e021-6344-9b1f" value="0.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="107c-be9a-65f9-080d" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="107c-be9a-65f9-080d" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3934,12 +4156,17 @@ Parciales a 4+</characteristic>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="500.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e7b7-a65d-6d34-5e7b" name="Nekaph" publicationId="9806-8ad8-97a2-86b5" page="35" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="e7b7-a65d-6d34-5e7b" name="Nekaph" publicationId="9806-8ad8-97a2-86b5" page="35" hidden="false" collective="false" import="true" type="unit">
       <comment>Campeón de Settra</comment>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="0969-2db4-b7a8-a457" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4017,7 +4244,7 @@ Parciales a 4+</characteristic>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="160.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="cdaa-880b-9b1c-cc00" name="Sehenesmet" publicationId="9806-8ad8-97a2-86b5" page="37" hidden="true" collective="false" import="true" type="model">
+    <selectionEntry id="cdaa-880b-9b1c-cc00" name="Sehenesmet" publicationId="9806-8ad8-97a2-86b5" page="37" hidden="false" collective="false" import="true" type="model">
       <comment>Visir de Quatar</comment>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -4087,8 +4314,15 @@ Parciales a 4+</characteristic>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="595.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="107c-be9a-65f9-080d" name="Settra" publicationId="9806-8ad8-97a2-86b5" page="40" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="107c-be9a-65f9-080d" name="Settra" publicationId="9806-8ad8-97a2-86b5" page="40" hidden="false" collective="false" import="true" type="unit">
       <comment>El Imperecedero</comment>
+      <modifiers>
+        <modifier type="set" field="77a7-0573-e7a0-3f24" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77a7-0573-e7a0-3f24" type="max"/>
       </constraints>
@@ -4152,7 +4386,9 @@ Parciales a 4+</characteristic>
         <infoLink id="025f-1b81-f5fe-6ed5" name="Cánticos de Nehekara" hidden="false" targetId="95a9-ecda-da00-c2fb" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="849e-b558-af1e-d60e" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="true"/>
+        <categoryLink id="849e-b558-af1e-d60e" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="5531-1a4a-9269-2d84" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="52b3-fe29-d126-1763" name="Personaje Especial" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="565.0"/>
