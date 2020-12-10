@@ -1794,16 +1794,8 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
               </constraints>
               <selectionEntries>
                 <selectionEntry id="117e-42c4-86b7-33da" name="Arco" hidden="false" collective="true" import="true" type="upgrade">
-                  <modifiers>
-                    <modifier type="set" field="b625-8322-856a-2a88" value="1.0">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c585-c17a-4b94-9f64" type="atLeast"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a47-d58b-3b70-4e1e" type="max"/>
-                    <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b625-8322-856a-2a88" type="min"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="58ca-ad99-d41c-0578" name="Arco" hidden="false" targetId="dfc2-1321-c679-1bc0" type="profile"/>
@@ -1840,13 +1832,13 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
               </selectionEntries>
             </selectionEntryGroup>
             <selectionEntryGroup id="ff02-6038-8805-581b" name="La bendición del áspid" hidden="true" collective="false" import="true">
+              <comment>Sólo para Guerreros equipados con Arco</comment>
               <modifierGroups>
                 <modifierGroup>
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
                         <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c585-c17a-4b94-9f64" type="atLeast"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="117e-42c4-86b7-33da" type="atLeast"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
