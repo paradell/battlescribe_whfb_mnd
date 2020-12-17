@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="15a1-cfbb-b04d-ff3c" name="Reinos Ogros MDN v2020" revision="2" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="paradell.aleix@gmail.com" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="15a1-cfbb-b04d-ff3c" name="Reinos Ogros MDN v2020" revision="2" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="paradell.aleix@gmail.com" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="926b-6555-9b25-6de2" name="Reinos Ogros MDN 2020"/>
   </publications>
@@ -858,26 +858,16 @@
         <categoryLink id="967b-13ba-7fe7-9dde" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="87af-13ba-da7b-e1cb" name="Equipo Mágico y Sobrenombres" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8fc1-3606-d9e4-7d01" name="Portaestandarte de Batalla" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f595-4a86-748a-3ce3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb74-0ef2-3add-2bea" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="91ca-8c17-90af-6536" type="max"/>
           </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="2bba-f2e6-4b95-7de5" name="Equipo Mágico y Sobrenombres" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1673-cbcd-b1c5-249c" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="66d3-530d-faf4-e48f" name="Armas mágicas" hidden="false" collective="false" import="true" targetId="27d8-2ee2-1efc-150f" type="selectionEntryGroup"/>
-                <entryLink id="7315-9730-5276-66e1" name="Armaduras mágicas" hidden="false" collective="false" import="true" targetId="8b80-3260-c0b5-9502" type="selectionEntryGroup"/>
-                <entryLink id="9679-4a7b-669c-bc3d" name="Objetos hechizados" hidden="false" collective="false" import="true" targetId="b8aa-2049-5b59-f9bb" type="selectionEntryGroup"/>
-                <entryLink id="c46f-9aab-d975-1cb4" name="Talismanes" hidden="false" collective="false" import="true" targetId="e06f-b447-0302-d139" type="selectionEntryGroup"/>
-                <entryLink id="3c8b-a032-f870-5cf9" name="Virtudes" hidden="false" collective="false" import="true" targetId="77b3-a6a6-9cb0-0ded" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+          <infoLinks>
+            <infoLink id="4174-4d96-bfed-e972" name="Estandarte de Batalla" hidden="false" targetId="16f9-a928-9d5e-2b4f" type="rule"/>
+          </infoLinks>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -889,6 +879,17 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="c638-f40f-6770-86d9" name="Arma de mano adicional" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="e889-bb66-36ee-af00" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8fc1-3606-d9e4-7d01" type="atLeast"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="8bdf-c27d-e4fc-6e7a" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8bdf-c27d-e4fc-6e7a" type="max"/>
               </constraints>
@@ -900,6 +901,17 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="fe8b-7762-a46f-f970" name="Espada Larga Catayana" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="e889-bb66-36ee-af00" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8fc1-3606-d9e4-7d01" type="atLeast"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="983f-c44b-4e66-4f1a" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="983f-c44b-4e66-4f1a" type="max"/>
               </constraints>
@@ -911,6 +923,17 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="c801-cca8-c77f-ff12" name="Puño de hierro Ogro" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="e889-bb66-36ee-af00" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8fc1-3606-d9e4-7d01" type="atLeast"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="8852-f974-17f2-d8d1" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8852-f974-17f2-d8d1" type="max"/>
               </constraints>
@@ -922,6 +945,17 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="e2fb-0bca-35f4-719d" name="Arma a Dos manos" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="e889-bb66-36ee-af00" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8fc1-3606-d9e4-7d01" type="atLeast"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="0261-c392-14bc-c6a6" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0261-c392-14bc-c6a6" type="max"/>
               </constraints>
@@ -946,6 +980,20 @@
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="9cbb-bfbd-a052-794b" name="Armas de Proyectiles" hidden="false" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="e889-bb66-36ee-af00" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8fc1-3606-d9e4-7d01" type="atLeast"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="eb3b-05af-4f1c-1dd5" value="0.0"/>
+                <modifier type="set" field="hidden" value="true"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb3b-05af-4f1c-1dd5" type="max"/>
+          </constraints>
           <selectionEntries>
             <selectionEntry id="997d-cae9-5f3c-1d30" name="Ristra de Escopetas" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -1015,6 +1063,49 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b6ac-1e48-ba60-919b" name="Equipo Mágico y Sobrenombres" hidden="false" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="e889-bb66-36ee-af00" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2b09-698a-a6f8-ced8" type="atLeast"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true"/>
+                <modifier type="set" field="41dd-9140-73f6-c5ae" value="0.0"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41dd-9140-73f6-c5ae" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="e419-08f6-b728-0f22" name="Armas mágicas" hidden="false" collective="false" import="true" targetId="27d8-2ee2-1efc-150f" type="selectionEntryGroup"/>
+            <entryLink id="5ca2-bc15-1680-c49e" name="Armaduras mágicas" hidden="false" collective="false" import="true" targetId="8b80-3260-c0b5-9502" type="selectionEntryGroup"/>
+            <entryLink id="e585-4fd2-3107-95b9" name="Objetos hechizados" hidden="false" collective="false" import="true" targetId="b8aa-2049-5b59-f9bb" type="selectionEntryGroup"/>
+            <entryLink id="90bd-957d-dcb3-83e2" name="Talismanes" hidden="false" collective="false" import="true" targetId="e06f-b447-0302-d139" type="selectionEntryGroup"/>
+            <entryLink id="7e8b-d4cd-7450-fb31" name="Sobrenombres" hidden="false" collective="false" import="true" targetId="77b3-a6a6-9cb0-0ded" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="2b09-698a-a6f8-ced8" name="Estandarte Mágico" hidden="false" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="e889-bb66-36ee-af00" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8fc1-3606-d9e4-7d01" type="lessThan"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true"/>
+                <modifier type="set" field="911a-f90f-778b-1dfc" value="0.0"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a06c-3436-0b60-9286" type="max"/>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="911a-f90f-778b-1dfc" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="d8da-02e2-ef93-4706" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="2753-52a1-1d48-0427" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
