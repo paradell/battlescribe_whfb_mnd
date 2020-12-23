@@ -4984,6 +4984,7 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
         <infoLink id="166d-18a9-d2f1-d964" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
         <infoLink id="1940-b6a0-99b4-2048" name="Lanza de caballería" hidden="false" targetId="5bcd-ff0b-d571-38d0" type="profile"/>
         <infoLink id="24e4-4682-2fee-3e09" name="Virtud del Ardor Caballeresco" hidden="false" targetId="ff81-0e4b-1513-b5bc" type="profile"/>
+        <infoLink id="c0a0-6a63-40b8-cd01" name="Virtud de la Justa" hidden="false" targetId="104e-367f-1f3d-6dae" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5e33-786a-9c14-493a" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
@@ -5122,6 +5123,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           <entryLinks>
             <entryLink id="1072-34c8-8f4d-f627" name="Caballo de Guerra con barda" hidden="false" collective="false" import="true" targetId="6d9c-6159-156b-e21c" type="selectionEntry"/>
           </entryLinks>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="9b3c-8b4c-237a-b5fd" name="Sulimán el Sarraceno" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
@@ -5157,10 +5161,268 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           <entryLinks>
             <entryLink id="ac19-2c83-816e-ad27" name="Caballo de Guerra" hidden="false" collective="false" import="true" targetId="f78f-27bd-c24f-4b1b" type="selectionEntry"/>
           </entryLinks>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="115.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="045d-6238-6a48-e746" name="Bohemond Matabestias" hidden="false" collective="false" import="true" type="unit">
+      <comment>Duque de Bastonne</comment>
+      <profiles>
+        <profile id="aef6-3b61-0496-b172" name="Bohemond Matabestias" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">1+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1">1</characteristic>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="b4ba-8950-b817-5273" name="Escudo de Bohemond" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+          <comment>Cuando Bohemond encontró finalmente el Grial, la Dama del Lago le pidió que limpiase la sangre del Dragón de su Escudo. Las aguas del lago sagrado limpiaron el Escudo y lo imbuyeron de poder mágico.</comment>
+          <characteristics>
+            <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">6+</characteristic>
+            <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Además, si Bohemond es impactado y herido por un arma mágica y supera con éxito su tirada de salvación por armadura el arma del enemigo será destruida con un resultado de 6+ en 1D6 (si no tenía armas, se considera que va con arma de mano). Se debe efectuar una tirada por cada herida que salve Bohemond.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0c40-87c6-14c0-40db" name="Piel de Smearghus" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Cuando el duque se coloca la Piel de Smearghus recibe un modificador de +1 a su tirada de salvación por armadura y es Inmune a ataques flamígeros. Adicionalmente, la Piel de Smearghus confiere al Duque Bohemond Resistencia a la magia (1).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="9fb8-8767-12be-f828" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="e2c7-eef3-ea2d-aeee" name="Lanza de caballería" hidden="false" targetId="5bcd-ff0b-d571-38d0" type="profile"/>
+        <infoLink id="762d-d564-3cc7-91eb" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+        <infoLink id="14bc-644b-cc65-255a" name="Voto del Grial" hidden="false" targetId="3634-f177-bf91-ee8f" type="rule"/>
+        <infoLink id="f2af-a4b1-44b9-6224" name="Virtud del Ardor Caballeresco" hidden="false" targetId="ff81-0e4b-1513-b5bc" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="72ff-24e9-a474-d280" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="67d4-5947-a58f-b93d" name="Personaje Especial" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="476b-ae37-4bcf-0219" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="37fe-c968-2dc5-a068" name="Caballo de Guerra con barda" hidden="false" collective="false" import="true" targetId="6d9c-6159-156b-e21c" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="240.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="50e7-0d86-b58f-b313" name="El Caballero de la Lanza Invencible" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="351e-56bd-a7ce-4e74" name="El Caballero de la Lanza Invencible" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">2+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="7449-53e8-6d8d-3074" name="Lanza Invencible" hidden="false">
+          <comment>El Caballero de la Lanza Invencible se ha ganado su nombre a causa de su excepcional habilidad para la justa.</comment>
+          <description>El Caballero de la Lanza Invencible puede repetir las tiradas para herir cuando carga con la lanza. Ten en cuenta que esto es una regla especial del Caballero, la Lanza no es ninguna arma mágica.</description>
+        </rule>
+        <rule id="eaf4-0c3e-4921-5ef9" name="Interponer Escudo" hidden="false">
+          <comment>El Caballero de la Lanza Invencible también posee una habilidad sin igual empleando su escudo</comment>
+          <description>Es especialmente hábil bloqueando el arma del adversario en combate cuerpo a cuerpo, lo cual le permite repetir cualquier tirada de salvación fallida en combate cuerpo a cuerpo.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="b460-fe77-d7a9-3e36" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="77e9-16ae-f415-1e4b" name="Lanza de caballería" hidden="false" targetId="5bcd-ff0b-d571-38d0" type="profile"/>
+        <infoLink id="00cb-6efe-f44a-7be5" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+        <infoLink id="f99c-000c-834f-5598" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
+        <infoLink id="a208-c0ea-52db-8281" name="Voto del Caballero" hidden="false" targetId="fb8b-353f-ce50-d6af" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="8440-590e-27b3-584e" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="67b4-cef7-570f-4105" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="d3a5-ef82-b77a-f0e7" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="aba7-6611-bc75-8d2f" name="Caballo de Guerra con barda" hidden="false" collective="false" import="true" targetId="6d9c-6159-156b-e21c" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="170.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8ac3-9c79-3e19-5440" name="Caballero Ermitaño de Malmont" publicationId="95b0-9aeb-pubN66253" page="36" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="5704-bc17-5d55-402e" name="Caballero Ermitaño de Malmont" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Caballero, Personaje especial</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8f4d-89d6-b74d-dc8e" name="Frasco de Sangdragon." hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>El Sangredragón es un vino extremadamente revigorizante que producen los paisanos del Cerro del Orco. El Caballero Ermitaño siempre lleva consigo un frasco cada vez que emprende una aventura. </comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d"> Es un excepcional y mágico vino que puede beber una única vez por batalla; le permite ignorar la primera herida que sufra en batalla (después de salvaciones, pero antes de heridas múltiples o Golpe Letal).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="401a-b9a4-323e-9609" name="Espada de Malmont" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>Esta enorme espada a dos manos, patrimonio de la capilla del grial de Malmont, parece haber sido creada para combatir a los dragones y otros grandes monstruos</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma a dos manos</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F+2, ataca en último lugar</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Además, cada herida no salvada causa 1D3 heridas.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="0f61-15c7-3403-0130" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="1c82-86e7-5d41-1f4a" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+        <infoLink id="fde2-6c98-1c89-3312" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
+        <infoLink id="5017-4152-76b6-f43d" name="Voto del Grial" hidden="false" targetId="3634-f177-bf91-ee8f" type="rule"/>
+        <infoLink id="da7b-c5d5-358e-8abe" name="Virtud de la Empatía" hidden="false" targetId="b5de-3866-0666-4833" type="profile"/>
+        <infoLink id="cbf7-75b0-0812-4476" name="Virtud de la Audacia" hidden="false" targetId="3048-c1a0-c287-1cb9" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="f3ba-0236-0aae-1fdb" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="6807-041b-1648-42e7" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="d34d-bbe8-8429-a6ca" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="165.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="94da-8a36-e48a-175e" name="El Caballero Santo" publicationId="95b0-9aeb-pubN66253" page="37" hidden="false" collective="false" import="true" type="unit">
+      <comment>Guardián de la Capilla</comment>
+      <profiles>
+        <profile id="798b-06c6-2958-244a" name="El Caballero Santo" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="be84-c3de-c408-b101" name="Martillo Furia Virtuosa" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>El Caballero Santo está equipado con un martillo mágico llamado Furia Virtuosa, que está imbuido de poder divino</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de Mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F+2</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="3fcd-98e0-23c9-4b6b" name="Serenidad Absoluta" hidden="false">
+          <comment>Sólo un Caballero de la Santa Orden puede poseer este poder, y dado que el Caballero Santo es el último de ellos, sólo lo posee él</comment>
+          <description>El jugador que controla al Caballero Santo tiene un +4 a todas las tiradas para dispersar hechizos cuyo objetivo sea cualquier miniatura o unidad (amiga o enemiga), o punto o elemento de escenografía, a 15 cm o menos del Caballero Santo.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="04e9-3ed0-2891-7c29" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+        <infoLink id="1d90-e68d-f0f6-b89c" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
+        <infoLink id="4709-39fb-8aac-54f6" name="Voto del Grial" hidden="false" targetId="3634-f177-bf91-ee8f" type="rule"/>
+        <infoLink id="d336-53f3-bc0b-c176" name="Virtud de la Empatía" hidden="false" targetId="b5de-3866-0666-4833" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="54cc-3a4b-197c-29e5" name="Personaje Especial" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="6b98-4f7f-6662-a4d2" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="3779-191b-bc0b-4dd0" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="115.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c181-e2aa-0dda-b176" name="Gillaume de Grenouille" publicationId="95b0-9aeb-pubN66253" page="41" hidden="false" collective="false" import="true" type="unit">
+      <comment>Castellano de Quenelles</comment>
+      <profiles>
+        <profile id="f10d-b52d-527f-41be" name="Gillaume de Grenouille" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">2+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="1020-17ef-fe77-0b34" name="Mangual de Grenouille" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>El Castellano está armado con un Mangual mágico, compuesto por tres pesadas bolas de hierro con pinchos que cuelgan de tres cadenas de poca longitud, unidas a un mango. Tal es el encantamiento sobre esta arma que le permite a Guillaume usarlo como si fuera una espada común pero con unos devastadores efectos.</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de Mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">Todos sus ataques se resuelven con Fuerza 6.</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="2352-7d80-39c3-7ff7" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="5130-317c-0b07-0701" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
+        <infoLink id="f38d-8e4f-0f97-f08e" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+        <infoLink id="25a4-08aa-8ab1-27da" name="Voto del Caballero" hidden="false" targetId="fb8b-353f-ce50-d6af" type="rule"/>
+        <infoLink id="573a-2715-7e72-af1b" name="Virtud del Caballero Impetuoso" hidden="false" targetId="d3dc-c4b8-4da3-9508" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7d64-3394-39de-c679" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="686d-f292-0db7-a0de" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="508a-39cc-2b6f-f84a" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="1c7b-b877-c207-a19b" name="Caballo de Guerra con barda" hidden="false" collective="false" import="true" targetId="6d9c-6159-156b-e21c" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="110.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
