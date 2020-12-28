@@ -2234,6 +2234,18 @@ No se benefician de un Estandarte de Batalla</description>
           </costs>
         </selectionEntry>
         <selectionEntry id="7879-0ecc-ffde-fdfb" name="Portaestandarte de Batalla" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="1af2-2cad-eda8-7b27" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e98a-4766-191c-5e77" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d285-2cfb-5fba-7e88" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9d6-e4de-8b75-80fe" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0981-7bf2-077c-1d1b" type="max"/>
@@ -2674,7 +2686,7 @@ La unidad queda de repente en un estado de euforia, y es inmune al pánico. Desg
     </selectionEntry>
     <selectionEntry id="b349-eec1-a353-4b90" name="Caballero Verde" publicationId="95b0-9aeb-pubN66253" page="37" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a36-20fb-dbdb-96d2" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6077-69fa-9491-a1b3" type="max"/>
       </constraints>
       <profiles>
         <profile id="dd34-fc79-a77b-945b" name="Caballero Verde" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -4471,6 +4483,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33c5-be2c-e41e-f845" type="max"/>
+      </constraints>
       <profiles>
         <profile id="5cad-b206-1a32-9a8c" name="Agravain" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -4526,6 +4541,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0cc-9006-2333-f9af" type="max"/>
+      </constraints>
       <profiles>
         <profile id="1fd5-355a-d2e4-3a82" name="Aloys de Montjoie" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -4580,6 +4598,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1462-5662-118b-8bfa" type="max"/>
+      </constraints>
       <profiles>
         <profile id="421c-1dbc-6cf6-d716" name="Amalric du Gaudaron" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -4709,7 +4730,7 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40fb-a9af-b0a8-248f" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fd4-24a7-ccdc-9864" type="max"/>
       </constraints>
       <profiles>
         <profile id="92f7-3b79-f011-62d8" name="Gilon, Duque de Aquitaine" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -4967,7 +4988,15 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="d649-ca2d-f44b-99af" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d285-2cfb-5fba-7e88" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d649-ca2d-f44b-99af" type="max"/>
+      </constraints>
       <profiles>
         <profile id="36b2-c4a0-842b-0bc5" name="Armand de Aquitaine" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -5024,6 +5053,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37a9-fea5-31fe-c9a8" type="max"/>
+      </constraints>
       <profiles>
         <profile id="fcb2-9d7b-be74-f208" name="Bagrian" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -5117,6 +5149,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c60-db43-1250-eb42" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="c1ee-6c6c-1613-98cb" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
         <categoryLink id="e53f-e725-8735-24ae" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
@@ -5210,6 +5245,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3935-8763-5f9c-88a3" type="max"/>
+      </constraints>
       <profiles>
         <profile id="aef6-3b61-0496-b172" name="Bohemond Matabestias" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -5269,6 +5307,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6222-c992-98a0-6b97" type="max"/>
+      </constraints>
       <profiles>
         <profile id="351e-56bd-a7ce-4e74" name="El Caballero de la Lanza Invencible" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -5326,6 +5367,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="426d-c813-fc65-ed91" type="max"/>
+      </constraints>
       <profiles>
         <profile id="5704-bc17-5d55-402e" name="Caballero Ermitaño de Malmont" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -5386,6 +5430,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec46-f106-b901-465c" type="max"/>
+      </constraints>
       <profiles>
         <profile id="798b-06c6-2958-244a" name="El Caballero Santo" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -5444,6 +5491,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2169-bf2b-9ea5-1b08" type="max"/>
+      </constraints>
       <profiles>
         <profile id="f10d-b52d-527f-41be" name="Gillaume de Grenouille" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -5500,6 +5550,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74da-dd75-8532-bd22" type="max"/>
+      </constraints>
       <profiles>
         <profile id="6fac-51bf-4d38-c3fd" name="Iselda, Guardiana de la Torre" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -5604,6 +5657,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7063-a40b-7104-d7f1" type="max"/>
+      </constraints>
       <profiles>
         <profile id="7faa-de1d-c336-3382" name="Jasperre el Hermoso" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -5664,7 +5720,15 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="53b8-c3a4-35e0-5add" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e98a-4766-191c-5e77" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53b8-c3a4-35e0-5add" type="max"/>
+      </constraints>
       <profiles>
         <profile id="574b-0496-dc66-15d6" name="Repanse de Lyonesse" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -5732,6 +5796,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5282-63a4-646c-9705" type="max"/>
+      </constraints>
       <profiles>
         <profile id="0db4-c3c5-741c-b6da" name="Reynard le Chasseur" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -5798,6 +5865,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
       <entryLinks>
         <entryLink id="4259-0b39-bfc5-0236" name="Caballo de Guerra con barda" hidden="false" collective="false" import="true" targetId="6d9c-6159-156b-e21c" type="selectionEntry"/>
       </entryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="b2a8-3b9e-c021-ce10" name="Tranced" publicationId="95b0-9aeb-pubN66253" page="51" hidden="false" collective="false" import="true" type="unit">
       <comment>Duque de Quenelles</comment>
@@ -5808,6 +5878,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e704-ca86-6bab-2cf2" type="max"/>
+      </constraints>
       <profiles>
         <profile id="340b-3729-68b5-b4c9" name="Tranced" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
