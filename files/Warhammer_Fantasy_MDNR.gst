@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="fd97-5cfe-d46c-03c6" name="Warhammer Fantasy - MDN" revision="6" battleScribeVersion="2.03" authorName="Leyendas en miniatura" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="fd97-5cfe-d46c-03c6" name="Warhammer Fantasy - MDN" revision="7" battleScribeVersion="2.03" authorName="Leyendas en miniatura" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="53ea-00f4-9046-81ff" name="puntos" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -882,6 +882,45 @@ herir falla con un resultado de 1-2 en el dado (en vez del habitual 1).</descrip
     <rule id="b6cc-4892-f34e-1e8d" name="Objetivo pequeño." hidden="false">
       <description>No bloquean línea de visión, salvo a otras miniaturas Objetivo Pequeño.</description>
     </rule>
+    <rule id="b73c-3589-bbb8-a6e5" name="Carro" hidden="false"/>
+    <rule id="b0ad-9c0b-9165-3772" name="Catapulta" hidden="false"/>
+    <rule id="0525-da82-46c3-ea36" name="No Muerto" hidden="false">
+      <description>Todas las miniaturas con la regla No Muerto siguen estas reglas especiales.
+
+1. Son inmunes a psicología. Ten en cuenta que hay muchos chequeos de Liderazgo que no son de psicología, los No Muertos siguen todas las reglas habituales para esos chequeos. Ejemplo: el chequeo de Liderazgo para intentar no perseguir a tropas desmoralizadas.
+
+2. Causan miedo.
+
+3. Nunca pueden efectuar movimientos de marcha, a excepción de los Personajes, el Varghulf y la Doncella Espectral, que pueden marchar según las reglas habituales.
+
+4. Si reciben una carga, sólo pueden mantener la posición como reacción a la carga.
+
+5. No son Inmunes a ataques envenenados (a menos que así lo indique en alguna descripción de unidad o personaje), así que les afectan como a los vivos.
+
+6. Inestables.
+
+7. Estandarte de Batalla No Muerto.</description>
+    </rule>
+    <rule id="bf98-3374-e754-f250" name="Criatura Artefacto" hidden="false">
+      <description>Tirada de salvación por armadura 5+ (esta tirada puede mejorarse con equipo, hechizos, etc).
+
+Sufren una herida menos por los chequeos de Inestabilidad. Esto es adicional al Portaestandarte de Batalla, así que una Criatura Artefacto a 30cm o menos del Portaestandarte de Batalla sufrirá dos heridas menos por chequeos de Inestabilidad. Ten en cuenta que este efecto es por la Inestabilidad, no por la pérdida del Hierofante.</description>
+    </rule>
+    <rule id="9ac7-cb60-cd5b-8c07" name="Estandarte de Batalla No Muerto" hidden="false">
+      <description>Una unidad de tipo No Muerto que tenga el Portaestandarte de Batalla a 30cm o menos y pierda un combate, sufrirá una herida menos por Inestabilidad. Por ejemplo, si unos Esqueletos pierden el combate de 3 puntos y están a 30cm o menos del Portaestandarte de Batalla, sufrirán 2 heridas. Ten en cuenta que este efecto del Estandarte de Batalla es por la Inestabilidad, no por la pérdida del General.</description>
+    </rule>
+    <rule id="3f27-1837-9a2e-4456" name="General No Muerto" hidden="false">
+      <description>Además de las reglas habituales para el General, las miniaturas de tipo No Muerto del ejército de Condes Vampiro debe seguir las siguientes reglas.Hechicero. El General debe ser de tipo Hechicero. Si hay varios personajes de tipo Hechicero, aquél con mayor atributo de Liderazgo será el General. Si hay varios personajes de tipo Hechicero con mayor atributo de Liderazgo, elige cuál de ellos será el General.Desintegración. Al final de la fase en que el General muera, así como al principio de cada turno del jugador de Condes Vampiro posterior a la muerte del General, cada unidad (pero no Personajes) debe hacer un chequeo de Liderazgo; por cada punto de diferencia con su Liderazgo, recibe una herida (sin posibilidad de salvación por armadura, especial ni Regeneración). Las unidades pueden usar el Liderazgo de personajes dentro de la unidad. En caso de personajes montados en algún tipo de montura individual (un Monstruo, un Carro), el Personaje no debe hacer el chequeo, pero sí la montura (puede usar el Liderazgo del Personaje). La Desintegración sólo se aplica cuando el General muere definitivamente y es retirado como baja; si el General llega a 0 heridas pero consigue Regenerar suficientes heridas como para volver al juego, no ocurre la Desintegración.Marcha. Las unidades que estén a 30cm o menos del General al inicio de la fase de Movimiento pueden efectuar movimientos de Marcha (son excepción al punto 3 de la regla No Muertos), así como los personajes independientes (a pie o montados). Se aplican las restricciones habituales a los movimientos de Marcha (teniendo en cuenta terreno, presencia de enemigos cercanos, efectos de hechizos, etc).</description>
+    </rule>
+    <rule id="4c92-bc58-1b38-9074" name="Descerebrados" hidden="false">
+      <description>Siempre atacan últimos, aunque hayan cargado, incluso después de las armas a dos manos. Siempre fallan todos los Chequeos de Iniciativa. En caso de dos unidades de Zombis luchando entre sí, lanza un dado para ver cual pega primero.</description>
+    </rule>
+    <rule id="8868-40ff-26bd-e9a9" name="Salir desde Abajo" hidden="false">
+      <description>Esta unidad (o miniatura individual) puede elegir no desplegar al inicio de la partida. En ese caso, una vez desplegados ambos bandos (incluidos los exploradores) el controlador coloca un Marcador en cualquier punto del campo de batalla. Al inicio de cada turno propio excepto el primero lanza 1D6 para determinar si la unidad sale a la superficie. La dificultad será de 4+ en el segundo turno, 3+ en el tercero 2+ en el cuarto. En caso de no haber conseguido salir antes, en el quinto turno saldrán automáticamente (sin lanzar el dado). En el momento que la unidad regrese a la superficie, el controlador lanzará un dado de artillería y otro de dispersión, y moverá el Marcador exactamente igual que haría con un disparo de catapulta. Una vez colocado el marcador en su posición final, cámbialo por una de las miniaturas de la unidad (o por la miniatura individual, si es sólo una) y sitúa el resto a menos de 5 cm de esta. Como ha salido a la superficie al inicio del turno, la unidad puede actuar normalmente (incluso cargar). Si el Marcador se mueve hasta situarse bajo una unidad enemiga, la unidad entrará automáticamente en combate cuerpo a cuerpo con dicha unidad por el lado que quedara más cerca del Marcador. Si el Marcador se sitúa bajo una unidad propia o bajo terreno impasable, despliega la unidad en el borde más próximo de la unidad u obstáculo. Si el Marcador sale de la mesa, la unidad no tomará parte en la batalla aunque el enemigo no ganará puntos por ella. En caso que el dado de artillería muestre un signo de problemas (!), lanza 1D6: 1-2- La unidad es aniquilada y el enemigo gana sus puntos de victoria. 3-4: La unidad no participará en la batalla pero el enemigo no gana puntos de victoria por ella. 5-6: El enemigo puede recolocar el Marcador en cualquier punto del campo de batalla y desplegar a la unidad cuando emerja, que no podrá mover más ese turno.</description>
+    </rule>
+    <rule id="c4fe-b574-87dd-e2e7" name="Petrificar (1d3)" hidden="false">
+      <description>La mirada de esta criatura convierte a sus enemigos en piedra. Se considera un ataque de disparo a todos los efectos. Alcance 20 cm. Cada miniatura de la unidad hace 1D3 impactos automáticos, de F4, Ataques Mágicos y que Anulan armadura. En lugar de comparar con la Resistencia de la miniatura, compárala con su Iniciativa al hacer las tiradas para herir, contando que un resultado de 6 natural siempre se considera un éxito. Las miniaturas o partes de miniatura sin valor de Iniciativa serán inmunes a este ataque. Si una parte de la miniatura a la que se distribuyen impactos tiene más de un valor de Iniciativa, los impactos distribuidos se resolverán contra el valor más alto (por ejemplo, en los impactos distribuidos a un Carro, escoge el valor más alto entre la tripulación y las bestias de tiro).Por ejemplo, en la fase de disparo una unidad compuesta por dos Acechadores Sepulcrales declara que utiliza “Petrificar” contra un Príncipe élfico montado en dragón que está en su ángulo de visión. El jugador de Reyes Funerarios mide la distancia entre ambas unidades y resultan estar a 18 cm, por lo cual pasa a determinar el número de impactos. Lanza 2D3 (uno por cada Acechador en la unidad) y obtiene un total de 5 impactos, los cuales deben de ser distribuidos aleatoriamente entre el jinete y la montura. Tras tirar los dados (1, 3, 3, 5, 6) la montura recibe tres impactos y el jinete dos. El dragón tiene I3, asi que un 3+ bastará para causarle una herida, mientras que el Príncipe tiene I8, por lo cual se necesitará un 6+. El jugador de Reyes Funerarios efectúa las tiradas para herir y el dragón recibe dos heridas que no podrá salvar utilizando su piel escamosa, mientras que el príncipe recibe sólamente una... ¿tendrá el elfo algún objeto que proporcione tirada de Salvación Especial?</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="ee3a-8a10-edff-cefe" name="Alabarda" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
@@ -1046,6 +1085,13 @@ herir falla con un resultado de 1-2 en el dado (en vez del habitual 1).</descrip
         <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">20</characteristic>
         <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">4</characteristic>
         <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Poder de penetración</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="89bd-a528-e998-af99" name="Cuchillas de carro" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+      <characteristics>
+        <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">cuerpo a cuerpo</characteristic>
+        <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">-</characteristic>
+        <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Añade +1 impacto a los Impactos por Carga de un Carro</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
