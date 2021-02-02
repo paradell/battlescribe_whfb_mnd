@@ -44,6 +44,9 @@ Hace unos años trasteé con BattleScribe para poder hacerme las listas de Breto
 ![alt text][import_data]
 ![alt text][import_data_url]
 4. Copiar [este enlance](./repo/index.bsi) en el campo **Import From URL**, y click a OK.
+```
+https://paradell.github.io/battlescribe_whfb_mnd/repo/index.bsi
+```
 ![alt text][import_from_url]
 5. Para que se nos bajen todos los archivos y se sincronicen con nuestra aplicación, hay que hacer click en "Update Data".
 ![alt text][update_data]
