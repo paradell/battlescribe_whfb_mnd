@@ -1777,6 +1777,7 @@ Tzeentch y gana el tipo de unidad Tzeentch y el tipo de unidad Hechicero. Puede 
     <selectionEntry id="1045-865b-ce19-5c0f" name="Cañón infernal (dos huecos de singular)" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a428-6df5-b54d-ffa2" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd86-c1d4-6a3f-0825" type="max"/>
       </constraints>
       <profiles>
         <profile id="9de7-f7a2-458b-a33f" name="Cañón infernal" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -2199,24 +2200,6 @@ unidad recibe 1D6 heridas.</description>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
           </characteristics>
         </profile>
-        <profile id="d649-7a1f-ead0-786c" name="Caudillo" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoLinks>
         <infoLink id="067e-0ddd-d146-032c" name="Dios del Caos" hidden="false" targetId="c76c-2a0c-4f80-027c" type="rule"/>
@@ -2286,40 +2269,6 @@ unidad recibe 1D6 heridas.</description>
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="22.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bd85-a5a8-0ee9-9c7b" name="Grupo de mando" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6b0-34c2-05a2-21e3" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="d958-d2b5-df47-a2a8" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94d7-9b6b-6828-8891" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8813-d2aa-73af-50db" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11dc-cfb4-f490-4de4" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="15ea-f09b-d236-5664" name="Caudillo" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5345-4435-33c6-199f" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="2d4d-f1af-1860-4cb6" name="Marca del Caos" hidden="false" collective="false" import="true" defaultSelectionEntryId="4694-d0b3-e64f-792c">
@@ -2339,6 +2288,54 @@ unidad recibe 1D6 heridas.</description>
               </rules>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="f054-25e6-1cf2-6513" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="8fe9-1ee2-af1c-1809" name="Caudillo" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8068-5d3e-a651-6f08" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="394c-12d6-5b24-b3db" name="Caudillo" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4abb-060d-5b5d-ebc3" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6f6-5b2f-8f09-c65a" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="74ab-cf5b-62ba-b2c2" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4b2-e2a8-e747-cc3e" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2368,24 +2365,6 @@ unidad recibe 1D6 heridas.</description>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
           </characteristics>
         </profile>
-        <profile id="c0e9-2256-1c34-5763" name="Trepamuros" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule id="7806-1b0d-6a5c-5fc1" name="Cadenas humanas" hidden="false">
@@ -2403,24 +2382,6 @@ unidad recibe 1D6 heridas.</description>
         <categoryLink id="8406-8f5b-380a-0f53" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="966d-6847-7978-0b96" name="Grupo de mando" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="890d-3f74-302f-8892" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="f89d-d970-f8b0-f4c4" name="Trepamuros" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07f9-750f-bd79-35d6" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="921b-2987-fa6f-20a3" name="Despellejadores" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e24-95ff-8d38-7524" type="min"/>
@@ -2472,6 +2433,38 @@ unidad recibe 1D6 heridas.</description>
               </rules>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="5a20-f910-02bf-3ffe" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="f85a-f155-e38c-8d94" name="Trepamuros" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b2e-98e2-4048-b254" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="234b-fad8-d232-0d1e" name="Trepamuros" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -5122,24 +5115,6 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
           </characteristics>
         </profile>
-        <profile id="307d-5910-92e6-caa5" name="Rey absoluto" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule id="4123-3801-8d12-ce43" name="Impactos por carga 1D3" hidden="false"/>
@@ -5157,40 +5132,6 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
         <categoryLink id="62df-93b6-2f55-1179" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="a45e-460a-fccd-9b07" name="Grupo de mando" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7df9-3ff6-6539-853c" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="2741-cfb0-78a0-2850" name="Rey absoluto" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="044b-9daf-e5c4-dc0a" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3ed5-b2c6-843c-366d" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39a0-ffba-c4fc-605e" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6204-0a41-eb90-6fcd" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a89-7e08-c22d-18f1" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="d547-77f2-0419-ffd5" name="Portadores de la ira de Khorne" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfbf-b403-9115-1f4c" type="min"/>
@@ -5261,6 +5202,54 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
               </rules>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="dd3b-6000-6487-adb4" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="772c-7192-45f1-1ac5" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ce1-0497-6f01-09a8" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="034c-7f41-b7f7-ef50" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4433-bbba-5657-6bf8" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="87d7-54ac-a17b-90db" name="Rey absoluto" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2a8-fec5-3ad8-1508" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="3bf4-ad99-de50-3cfc" name="Rey absoluto" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -5523,7 +5512,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
     </selectionEntry>
     <selectionEntry id="8514-f4e2-1bc5-1df7" name="Reyes de plaga pútridos" hidden="false" collective="false" import="true" type="unit">
       <profiles>
-        <profile id="e8b2-f434-bacf-7273" name="Rey de plaga" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+        <profile id="7f91-3a99-7394-6558" name="Rey de plaga" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
             <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
             <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
@@ -5533,24 +5522,6 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="0ad4-c2b3-07d1-0e9d" name="Campeón" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
@@ -5570,40 +5541,6 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
         <categoryLink id="d396-5259-877c-770a" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="eab0-9210-34dd-775f" name="Grupo de mando" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="864f-1618-9462-54ea" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="549c-1dcc-226d-5eab" name="Campeón" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b439-936d-2a38-ceed" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6edc-7eae-85e5-0141" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1166-dc1d-0fd9-7b34" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="e17f-978e-d51a-2f92" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e27c-c1c1-bd39-ddee" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="3a81-155f-fbca-2c91" name="Reyes de plaga pútridos" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="109c-0ae3-ddac-88a2" type="min"/>
@@ -5713,6 +5650,54 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
               </rules>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="c8ca-bc48-e3a3-cf9e" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="8172-4ac5-a136-ba5e" name="Campeón" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1cf7-090d-fbaf-e2c7" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="2286-fe1f-bbbf-ce28" name="Campeón" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="93c1-012f-5462-46a6" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38c9-3255-2eb8-641c" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9722-d0f6-51c9-b7f5" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6726-8b9e-54a9-f2ac" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -6271,24 +6256,6 @@ saber de Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica)
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
           </characteristics>
         </profile>
-        <profile id="686f-f9ea-3422-4cfd" name="Rey absoluto" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoLinks>
         <infoLink id="cb77-e597-6349-e068" name="Dios del Caos" hidden="false" targetId="c76c-2a0c-4f80-027c" type="rule"/>
@@ -6301,40 +6268,6 @@ saber de Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica)
         <categoryLink id="0c02-5459-362e-6615" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="48c0-25a4-85a6-9b71" name="Grupo de mando" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f099-6721-b333-3e8a" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="d584-e1dc-9981-922d" name="Rey absoluto" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c855-61ec-0bd6-715f" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="e9ba-5a06-a764-1b87" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35e7-d3ae-c290-131c" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c54e-5d25-3419-74c3" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28b2-28e0-8fbb-4376" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="c8bc-be9d-bba0-c711" name="Siegacráneos de Khorne" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4369-8246-8ecc-34ed" type="min"/>
@@ -6409,6 +6342,54 @@ saber de Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica)
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="d7ed-3b28-532f-6f82" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="63c8-bb44-a28e-98aa" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aaae-5dbe-f3c7-49c4" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3e3d-c87a-3a6d-eb07" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39dc-b34b-fe54-9e97" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="538e-2992-1588-3196" name="Rey absoluto" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6e4-31a1-158b-3a4e" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="b827-0068-3c51-5a9c" name="Rey absoluto" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -6417,6 +6398,7 @@ saber de Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica)
     <selectionEntry id="17a4-0a2a-e9ac-188e" name="Templete del Caos" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="660f-0496-9e16-548a" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c23e-c24b-f9a2-6bde" type="max"/>
       </constraints>
       <profiles>
         <profile id="5225-c809-7404-cf07" name="Templete del Caos" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
