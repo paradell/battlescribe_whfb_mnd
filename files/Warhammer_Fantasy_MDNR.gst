@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="fd97-5cfe-d46c-03c6" name="Warhammer Fantasy - MDN" revision="8" battleScribeVersion="2.03" authorName="Leyendas en miniatura" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="fd97-5cfe-d46c-03c6" name="Warhammer Fantasy - MDN" revision="9" battleScribeVersion="2.03" authorName="Leyendas en miniatura" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="53ea-00f4-9046-81ff" name="puntos" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -920,6 +920,48 @@ Sufren una herida menos por los chequeos de Inestabilidad. Esto es adicional al 
     </rule>
     <rule id="c4fe-b574-87dd-e2e7" name="Petrificar (1d3)" hidden="false">
       <description>La mirada de esta criatura convierte a sus enemigos en piedra. Se considera un ataque de disparo a todos los efectos. Alcance 20 cm. Cada miniatura de la unidad hace 1D3 impactos automáticos, de F4, Ataques Mágicos y que Anulan armadura. En lugar de comparar con la Resistencia de la miniatura, compárala con su Iniciativa al hacer las tiradas para herir, contando que un resultado de 6 natural siempre se considera un éxito. Las miniaturas o partes de miniatura sin valor de Iniciativa serán inmunes a este ataque. Si una parte de la miniatura a la que se distribuyen impactos tiene más de un valor de Iniciativa, los impactos distribuidos se resolverán contra el valor más alto (por ejemplo, en los impactos distribuidos a un Carro, escoge el valor más alto entre la tripulación y las bestias de tiro).Por ejemplo, en la fase de disparo una unidad compuesta por dos Acechadores Sepulcrales declara que utiliza “Petrificar” contra un Príncipe élfico montado en dragón que está en su ángulo de visión. El jugador de Reyes Funerarios mide la distancia entre ambas unidades y resultan estar a 18 cm, por lo cual pasa a determinar el número de impactos. Lanza 2D3 (uno por cada Acechador en la unidad) y obtiene un total de 5 impactos, los cuales deben de ser distribuidos aleatoriamente entre el jinete y la montura. Tras tirar los dados (1, 3, 3, 5, 6) la montura recibe tres impactos y el jinete dos. El dragón tiene I3, asi que un 3+ bastará para causarle una herida, mientras que el Príncipe tiene I8, por lo cual se necesitará un 6+. El jugador de Reyes Funerarios efectúa las tiradas para herir y el dragón recibe dos heridas que no podrá salvar utilizando su piel escamosa, mientras que el príncipe recibe sólamente una... ¿tendrá el elfo algún objeto que proporcione tirada de Salvación Especial?</description>
+    </rule>
+    <rule id="8a1a-d015-7dea-240b" name="Dos Personajes en una Montura" hidden="false">
+      <description>Se trata de un caso especial, hay dos personajes que comparten montura.
+
+Magia. En caso de hechizos que permiten elegir entre jinete y montura, puedes elegir a cuál de los dos jinetes afecta (pero no ambos). Los hechizos que afecten a “la miniatura” (es decir, aquellos que normalmente afectan a jinete y montura) afectarán a todas las partes de la miniatura.
+
+Disparo. Si se dispara a dos jinetes en un monstruo, estos impactan en los personajes con un 5-6, y luego se reparten al azar. Si la montura muere y ambos personajes viven, formarán una unidad de hostigadores. Si ambos personajes mueren, la montura debe hacer un chequeo en la Tabla de Reacción de Monstruos.
+
+Combate. Como en el caso de combate contra personajes en montura, puedes elegir si atacas al personaje o a la montura; puedes decidir a cuál de los dos personajes.
+
+Desafíos. En caso de desafío, uno de los dos personajes acepta el desafío, pero luchan ambos (de la misma forma que si se desafía a un jinete, la montura también ataca). Así, por ejemplo, si hay algún objeto, regla o efecto que se active en desafíos y afecte a la miniatura desafiada (como el Espejo de Van Horstmann), actúa contra uno de las dos personajes, no contra ambos.</description>
+    </rule>
+    <rule id="bbb0-da59-f1cf-1521" name="Inmune a Ataques envenenados" hidden="false">
+      <description>Se ignora la regla Ataques envenenados de las armas (o miniaturas, o hechizos) que impacten a la miniatura con esta regla. Es decir, un Ataque envenenado que obtenga un 6 en la tirada para impactar no hiere automáticamente sino que es necesario efectuar la tirada para Herir. Los objetos mágicos “venenosos” o los Venenos de los Elfos Oscuros afectan de la forma habitual.</description>
+    </rule>
+    <rule id="e11f-3d14-0853-cbf0" name="Sangre Fría" hidden="false">
+      <description>Para todos los chequeos de Liderazgo (incluyendo Chequeos de Psicología y Chequeos de Desmoralización), lanza 3 dados y descartan el dado mayor.</description>
+    </rule>
+    <rule id="6036-eb25-4a80-5b19" name="Siempre Ataca Primero" hidden="false">
+      <description> Atacarán en primer lugar en combate cuerpo a cuerpo independientemente del atributo de Iniciativa o de quién ha cargado (recuerda que el combate es después de los impactos por carga). Si dos miniaturas o unidades enfrentadas tienen Siempre Ataca Primero, la miniatura o unidad con mayor Iniciativa atacará primero independientemente de otros factores. Si una miniatura tiene Siempre Ataca Primero y Ataca en último lugar (por ejemplo, por usar arma a dos manos), se anulan mutuamente (atacará en orden de iniciativa como si llevara arma de mano). En definitiva, el orden en combate es: Impactos por carga, Siempre ataca primero, Unidades que cargan, Resto de unidades, Ataca en último lugar, Zombis (y demás Descerebrados). En cualquier caso, en cada categoría se “desempata” por orden de iniciativa (p.e. dos unidades que atacan primero, de mayor a menor Iniciativa), y en caso de nuevamente empate, se resuelve al azar (1D6). Esto implica que una unidad con Siempre Ataca Primero con Iniciativa 5 que cargue a una unidad con Siempre Ataca Primero con Iniciativa 8, atacará primero la de Iniciativa 8.</description>
+    </rule>
+    <rule id="ef91-d75b-9ff5-b611" name="Unidad Mágica (X)" hidden="false">
+      <description>En la fase de magia, si la unidad no está huyendo, a unidad puede lanzar el hechizo indicado entre paréntesis, como si fuera un objeto portahechizos de nivel igual al número de miniaturas de la unidad en el momento de lanzar el hechizo (así, una unidad formada por 5 miniaturas lanzaría el hechizo con un nivel de energía 5). Ten en cuenta que, pese a ser de tipo Hechicero, la unidad no genera dados de energía ni dispersión, ni puede dispersar hechizos. Es la propia unidad la que lanza el hechizo, así que no puede ser anulado por objetos o efectos que anulen objetos mágicos (como Anulación de Vaul de los Altos Elfos). A todos los demás efectos, se considera un hechizo igual que cualquier otro objeto portahechizos (así que puede usarse Resistencia a la Magia, bonificadores para dispersar, etc.). Deben seguirse siempre todas las restricciones del propio hechizo (línea de visión, hechizos en combate cuerpo a cuerpo, etc.)</description>
+    </rule>
+    <rule id="1d65-c007-d47b-fc26" name="Aura Demoníaca" hidden="false">
+      <description>Todas las miniaturas de tipo Demonio disponen de una tirada de salvación especial de 5+, pero no puede efectuarse contra ataques mágicos (de un hechizo, de un arma mágica, etc).Si una miniatura con Aura demoníaca gana una tirada de salvación especial, ésta reemplaza a la Aura Demoníaca (por lo que esta tirada de salvación especial ganada se puede efectuar contra ataques mágicos y no mágicos). Los venenos no mágicos no anulan la tirada de salvación especial.</description>
+    </rule>
+    <rule id="8771-9ead-1d0b-8557" name="Demonio" hidden="false">
+      <description>Todas las miniaturas de tipo Demonio tienen las siguientes reglas: Inestabilidad demoníaca, Aura demoníaca, Miedo, Inmune a psicología, Ataques mágicos (tanto combate cuerpo a cuerpo como disparos).</description>
+    </rule>
+    <rule id="ae13-eac6-89ef-ee78" name="Inestabilidad Demoníaca" hidden="false">
+      <description>Esta regla es distinta a la regla común Inestable de otros ejércitos (como los No Muertos).
+
+Cuando una unidad con la regla especial Inestabilidad demoníaca pierde un combate, en vez del habitual chequeo de desmoralización deben realizar un chequeo de inestabilidad demoníaca. En caso de combates múltiples, cada unidad involucrada en el combate debe hacer su chequeo de forma separada.
+
+Para efectuar el chequeo de inestabilidad, lanza 2D6:
+
+- Si el resultado es SUPERIOR al atributo de Liderazgo (sin modificar) de la unidad, la unidad entera es retirada como baja.
+- Si el resultado es INFERIOR O IGUAL al atributo de Liderazgo (sin modificar) de la unidad, pero es SUPERIOR al atributo de Liderazgo modificado por el Resultado del Combate, la unidad sufre una herida por cada punto en el que supere el atributo de Liderazgo modificado. En caso de personajes dentro de unidades, se pueden repartir heridas entre los Personajes y la Unidad.
+- Si el resultado es INFERIOR O IGUAL al atributo de Liderazgo modificado por el Resultado del Combate, la unidad sigue y no sufre ninguna herida.
+
+Ejemplo: los Desangradores tienen un atributo de Liderazgo de 8. Supongamos que pierden un combate por 3 puntos; pasa a tener un Liderazgo “modificado” de 5. Si se obtiene 5 o menos en la tirada, no pasa nada; si se obtiene un 6, 7, 8 la unidad sufrirá 1, 2 o 3 heridas adicionales; si se obtiene un 9 (superior al Liderazgo “natural” de 8 de los Desangradores) la unidad entera desaparece.Si una unidad de Demonios es eliminada en la primera ronda de combate, ya sea por heridas o por resultado de la Inestabilidad, el enemigo puede efectuar un Arrasamiento de la forma habitual.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
