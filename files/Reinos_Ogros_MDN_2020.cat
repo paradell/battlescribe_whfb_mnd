@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="15a1-cfbb-b04d-ff3c" name="Reinos Ogros MDN v2020" revision="2" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="paradell.aleix@gmail.com" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="15a1-cfbb-b04d-ff3c" name="Reinos Ogros MDN v2020" revision="2" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="paradell.aleix@gmail.com" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="926b-6555-9b25-6de2" name="Reinos Ogros MDN 2020"/>
   </publications>
@@ -182,6 +182,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="d32c-f210-a223-8a08" name="Gnoblars" publicationId="926b-6555-9b25-6de2" page="19" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="0449-6771-f242-2c8a" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e07-93aa-8221-9fc7" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0449-6771-f242-2c8a" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="7459-5e13-f465-d541" name="Riñas" hidden="false" targetId="8977-58be-ca23-d008" type="rule"/>
         <infoLink id="4911-7c2f-fc64-45ff" name="Altamente Insignificantes" hidden="false" targetId="f3e2-593d-0acc-a560" type="rule"/>
