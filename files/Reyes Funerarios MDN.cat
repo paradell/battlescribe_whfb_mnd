@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="93c4-b6ad-9da5-4afc" name="Reyes Funerarios MDN" revision="8" battleScribeVersion="2.03" authorName="Cordo" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="93c4-b6ad-9da5-4afc" name="Reyes Funerarios MDN" revision="9" battleScribeVersion="2.03" authorName="Cordo" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" library="false" gameSystemId="fd97-5cfe-d46c-03c6" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="9806-8ad8-97a2-86b5" name="Reyes Funerarios MDN - 2020" publisher="" publicationDate="Noviembre 2020" publisherUrl="https://www.cargad.com/index.php/manuscritos-de-nuth/"/>
   </publications>
@@ -1916,9 +1916,14 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
                 <selectionEntryGroup id="8bec-b033-1f56-34e1" name="Portaestandarte mágico" hidden="true" collective="false" import="true">
                   <modifierGroups>
                     <modifierGroup>
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a075-4756-1bc1-386c" type="atLeast"/>
-                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8271-bcd3-66a0-821d" type="atLeast"/>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a075-4756-1bc1-386c" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                       <modifiers>
                         <modifier type="set" field="hidden" value="false"/>
                         <modifier type="set" field="c231-b8f0-ebcb-2333" value="1.0"/>
@@ -5102,6 +5107,13 @@ La Resistencia mágica funciona contra el Fulgor de los Muertos del Arca, mientr
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="7733-5f3b-e80d-a3a4" name="Objetos arcanos" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="increment" field="e747-3dea-198b-7e1a" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc1c-34ec-bb3f-6638" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e747-3dea-198b-7e1a" type="max"/>
       </constraints>
