@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="fd97-5cfe-d46c-03c6" name="Warhammer Fantasy - MDN" revision="9" battleScribeVersion="2.03" authorName="Leyendas en miniatura" authorContact="leyendasenminiatura@gmail.com" authorUrl="http://www.leyendasenminiatura.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="5e75-a17b-a3f4-ab3b" name="Warhammer Fantasy - MDN" revision="10" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="53ea-00f4-9046-81ff" name="puntos" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
