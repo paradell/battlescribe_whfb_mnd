@@ -4229,6 +4229,7 @@ Efectos en las Gargantúas amigas- Las gargantúas ganan Regeneración (4+).
       <infoLinks>
         <infoLink id="656d-c0cc-bd9a-93e7" name="Riñas" hidden="false" targetId="8977-58be-ca23-d008" type="rule"/>
         <infoLink id="fbcc-221b-2b0f-3556" name="Altamente Insignificantes" hidden="false" targetId="f3e2-593d-0acc-a560" type="rule"/>
+        <infoLink id="529e-b17f-d230-c74e" name="Líder Gnoblar" hidden="false" targetId="87d0-beca-0df9-4a43" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b1de-58c0-334e-5aa2" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="true"/>
@@ -4411,6 +4412,7 @@ Efectos en las Gargantúas amigas- Las gargantúas ganan Regeneración (4+).
       <infoLinks>
         <infoLink id="3af7-fb59-f300-6ce1" name="Altamente Insignificantes" hidden="false" targetId="f3e2-593d-0acc-a560" type="rule"/>
         <infoLink id="1db8-71de-031e-dc22" name="Riñas" hidden="false" targetId="8977-58be-ca23-d008" type="rule"/>
+        <infoLink id="6b67-9ec5-3afb-f826" name="Líder Gnoblar" hidden="false" targetId="87d0-beca-0df9-4a43" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ba0a-91e8-30e4-ba13" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="true"/>
@@ -4665,7 +4667,7 @@ Efectos en las Gargantúas amigas- Las gargantúas ganan Regeneración (4+).
           </conditions>
           <modifiers>
             <modifier type="set" field="hidden" value="false"/>
-            <modifier type="set" field="0ed2-c79f-eadd-443a" value="-1.0"/>
+            <modifier type="set" field="0ed2-c79f-eadd-443a" value="2.0"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -4706,7 +4708,7 @@ Efectos en las Gargantúas amigas- Las gargantúas ganan Regeneración (4+).
           </profiles>
           <infoLinks>
             <infoLink id="230a-4f78-efeb-140a" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
-            <infoLink id="461f-2e3f-c607-0ef6" name="Mayal" hidden="false" targetId="8d08-4e9d-35c7-8005" type="profile"/>
+            <infoLink id="461f-2e3f-c607-0ef6" name="Mangual" hidden="false" targetId="255f-0ce9-efe2-463d" type="profile"/>
             <infoLink id="80c6-798b-2fc2-c3d7" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
           </infoLinks>
           <selectionEntries>
@@ -4762,6 +4764,16 @@ Efectos en las Gargantúas amigas- Las gargantúas ganan Regeneración (4+).
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e577-2629-14d9-5f9d" type="max"/>
               </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="1de3-5584-0c38-e6ad" name="Estandarte mágico" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4c46-b2ef-05d5-dba7" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="4fc3-b767-4862-538a" name="Objetos Hechizados - Gnoblars" hidden="false" collective="false" import="true" targetId="dd9e-7965-3659-89a8" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
               </costs>
@@ -5046,20 +5058,22 @@ Además, los Zuertudoz tienen una Tirada de salvación especial de 6+; el Zuperz
       <rules>
         <rule id="d6fd-1344-606e-0464" name="Trampas malignas" publicationId="926b-6555-9b25-6de2" page="43" hidden="false">
           <comment></comment>
-          <description>Cualquier una unidad de 5 o más Gnoblars zangrientoz que se encuentre completamente dentro de una zona de terreno difícil al inicio de un turno propio, puede renunciar a todas sus acciones del turno para poner trampas. Hasta final de turno, toda miniatura enemiga que entre en dicho elemento de terreno sufrirá un impacto automático de F3.</description>
+          <description>Cualquier una unidad de 5 o más Gnoblars zangrientoz que se encuentre completamente dentro de una zona de terreno difícil al inicio de un turno propio, puede dedicarse a poner trampas. Si lo hacen, no pueden salir de ese elemento de terreno en ese turno. Hasta final de partida, toda miniatura que no sea un Gnoblar Zangriento y que entre en dicho elemento de terreno sufrirá un impacto automático de F3.
+</description>
         </rule>
       </rules>
       <infoLinks>
         <infoLink id="91a8-2253-219b-dd69" name="Riñas" hidden="false" targetId="8977-58be-ca23-d008" type="rule"/>
         <infoLink id="87e3-391b-f6d6-a3ad" name="Altamente Insignificantes" hidden="false" targetId="f3e2-593d-0acc-a560" type="rule"/>
+        <infoLink id="14f0-ef04-0351-f264" name="Hostigadores" hidden="false" targetId="4717-34b5-7e01-9c40" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="6480-1536-aef9-2362" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
+        <categoryLink id="96c0-3d5a-fe8c-3f77" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d8a1-4035-c0b2-6d54" name="Gnoblars Zangrientoz" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5b3-a61d-dd53-ba37" type="min"/>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5b3-a61d-dd53-ba37" type="min"/>
           </constraints>
           <profiles>
             <profile id="1834-dc77-26f5-12ba" name="Gnoblar Zangriento" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -5188,7 +5202,7 @@ Además, los Zuertudoz tienen una Tirada de salvación especial de 6+; el Zuperz
               </constraints>
               <rules>
                 <rule id="dd47-04d6-225d-d184" name="Multiplicarse" hidden="false">
-                  <description>Si la unidad pasa ,al menos, una parte de su turno dentro de un elemento acuático, su controlador podrá añadir 1D6 miniaturas a la unidad al final de ese turno.</description>
+                  <description>Si la unidad pasa ,al menos, una parte de su turno dentro de un elemento acuático, podrás añadir 1D6 miniaturas a la unidad al final de ese turno.</description>
                 </rule>
               </rules>
               <costs>
@@ -6411,7 +6425,7 @@ que pudiera recibir el portador ese turno.</characteristic>
           <profiles>
             <profile id="c3cc-2fcc-5291-e280" name="Piedraladrona Gnoblar" hidden="false" typeId="7e35-c20a-e9e9-6dad" typeName="Talismán">
               <characteristics>
-                <characteristic name="Protección" typeId="9f41-c15e-1f5f-9d01">Resistencia a la magia (1). Se pueden combinar hasta un máximo de 3 como un único talismán, pero ten en cuenta que dos personajes distintos no pueden tener Piedraladronas, sólo uno.</characteristic>
+                <characteristic name="Protección" typeId="9f41-c15e-1f5f-9d01">Resistencia a la magia (1). Hasta tres personajes del ejército pueden llevar Piedraladrona. Esto es una excepción a no poder repetir objetos en el ejército.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6538,6 +6552,9 @@ que pudiera recibir el portador ese turno.</characteristic>
     </rule>
     <rule id="c216-e72d-cdba-32ed" name="Tipejos con suerte" publicationId="926b-6555-9b25-6de2" page="40" hidden="false">
       <description>Al inicio de la batalla el jugador que lleve la Horda Gnoblar lanzará 1D6. El resultado serán el número de dados que dicho jugador podrá repetir durante la batalla.</description>
+    </rule>
+    <rule id="87d0-beca-0df9-4a43" name="Líder Gnoblar" hidden="false">
+      <description>Puede unirse a unidades de tipo Gnoblar pese a ser Altamente insignificantes</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
