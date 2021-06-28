@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="15a1-cfbb-b04d-ff3c" name="Reinos Ogros MDN v2020" revision="4" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="15a1-cfbb-b04d-ff3c" name="Reinos Ogros MDN v2020" revision="5" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="926b-6555-9b25-6de2" name="Reinos Ogros MDN 2020"/>
   </publications>
@@ -17,6 +17,13 @@
   </profileTypes>
   <selectionEntries>
     <selectionEntry id="0e07-93aa-8221-9fc7" name="Ogros Toro" publicationId="926b-6555-9b25-6de2" page="18" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="6947-a2be-863f-a345" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c84c-5662-0a56-7c2a" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6947-a2be-863f-a345" type="min"/>
       </constraints>
@@ -189,6 +196,17 @@
           </repeats>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c84c-5662-0a56-7c2a" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="remove" field="category" value="ba68-224b-3224-a908"/>
+            <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0449-6771-f242-2c8a" type="max"/>
       </constraints>
@@ -280,6 +298,17 @@
           </repeats>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c84c-5662-0a56-7c2a" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
+            <modifier type="set-primary" field="category" value="184a-30ec-bf7c-b603"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09dd-5e0e-9c12-03fb" type="max"/>
       </constraints>
@@ -367,9 +396,17 @@
     <selectionEntry id="8bf4-a2c3-3c33-365d" name="Maestro Carnicero" publicationId="926b-6555-9b25-6de2" page="15" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="8206-3ae4-ead1-c2e7" value="-1.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f5ea-b96b-6ae9-c87b" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc01-13fe-77d4-4fbe" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f5ea-b96b-6ae9-c87b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c84c-5662-0a56-7c2a" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2fff-0373-bdd7-386e" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db2f-c7c9-c089-da4e" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -629,6 +666,19 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="f5ea-b96b-6ae9-c87b" name="Déspota" publicationId="926b-6555-9b25-6de2" page="15" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a487-5829-a9d4-b1d2" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2fff-0373-bdd7-386e" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db2f-c7c9-c089-da4e" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c84c-5662-0a56-7c2a" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a487-5829-a9d4-b1d2" type="max"/>
       </constraints>
@@ -831,6 +881,10 @@
         <modifier type="set" field="b3db-f097-303e-57b8" value="0.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f5ea-b96b-6ae9-c87b" type="atLeast"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc01-13fe-77d4-4fbe" type="atLeast"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db2f-c7c9-c089-da4e" type="atLeast"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2fff-0373-bdd7-386e" type="atLeast"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c84c-5662-0a56-7c2a" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1570,6 +1624,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="4443-eb38-a8a7-8b02" name="Tripasduras" publicationId="926b-6555-9b25-6de2" page="18" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="ba60-f5e3-d43e-92c0" value="2.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2fff-0373-bdd7-386e" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba60-f5e3-d43e-92c0" type="min"/>
+      </constraints>
       <infoLinks>
         <infoLink id="04e5-cf89-c9fc-27f8" name="Arremetida" hidden="false" targetId="3ba1-bc25-a6e4-c6ad" type="rule"/>
         <infoLink id="985a-9fb3-9950-8c0b" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
@@ -1698,6 +1762,18 @@
           </repeats>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c84c-5662-0a56-7c2a" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="remove" field="category" value="0cfc-02a1-ad30-fb33"/>
+            <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
+            <modifier type="set" field="df36-f7dd-f68d-8d38" value="-1.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df36-f7dd-f68d-8d38" type="max"/>
       </constraints>
@@ -1788,6 +1864,17 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="0e45-0e2b-3e49-0e07" name="Sueltafuegos" publicationId="926b-6555-9b25-6de2" page="20" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c84c-5662-0a56-7c2a" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
+            <modifier type="set-primary" field="category" value="ba68-224b-3224-a908"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <infoLinks>
         <infoLink id="5b16-932f-a7de-d4da" name="Arremetida" hidden="false" targetId="3ba1-bc25-a6e4-c6ad" type="rule"/>
         <infoLink id="b044-032f-bb64-8d47" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
@@ -2410,6 +2497,17 @@ siempre impacten a un valor fijo.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="cde7-84a6-443a-0fbc" name="Comehombres" publicationId="926b-6555-9b25-6de2" page="23" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0b5c-ab22-ab6f-cc1a" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="remove" field="category" value="184a-30ec-bf7c-b603"/>
+            <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <rules>
         <rule id="f724-2998-5db3-e76d" name="Heridas y bajas" hidden="false">
           <description>Puesto que son ogros con combinaciones de equipo distintas dentro de una misma unidad, pero no son personajes ni campeones ni miniaturas individuales, los disparos impactan normalmente (todos tienen la misma R y armadura). Cuando haya que retirar un Comehombre como baja, el jugador Ogro elige cuál de ellos muere. De igual forma, en combate cuerpo a cuerpo las heridas van hacia la unidad (todos con la misma Resistencia y armadura) y si hay que retirar uno, el jugador Ogro elige cuál. El oponente no va “haciendo heridas” a cada Ogro; si hace 3 heridas, se retira un Ogro.</description>
@@ -2571,26 +2669,17 @@ siempre impacten a un valor fijo.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="af28-26e4-57e1-37ab" name="Gargantúa" hidden="false" collective="false" import="true" type="unit">
-      <profiles>
-        <profile id="a23b-0e55-0788-83c7" name="Gargantúa" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">4</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc01-13fe-77d4-4fbe" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="remove" field="category" value="184a-30ec-bf7c-b603"/>
+            <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <rules>
         <rule id="01ec-c6f9-62fb-0d74" name="Olor a sangre" hidden="false">
           <description>Las Gargantúas no despliegan al inicio. A partir del segundo turno pueden entrar por cualquier borde del campo de batalla en la fase de resto de movimientos con un resultado de 4+ en 1D6, que se reducirá en 1 en cada turno posterior. Al inicio del turno 5, todas las Gargantúas que no hubieran entrado en juego lo hacen automáticamente sin lanzar dados.</description>
@@ -2608,11 +2697,56 @@ siempre impacten a un valor fijo.</description>
       <categoryLinks>
         <categoryLink id="aa24-605c-0f87-778c" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="ade3-99ed-e12c-f2cd" name="Gargantúa" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="75b2-9903-2ffa-7fc4" value="2.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc01-13fe-77d4-4fbe" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75b2-9903-2ffa-7fc4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7138-77b7-29da-0648" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="8365-e1d7-fdfb-2214" name="Gargantúa" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">4</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1237-1e3a-87c1-176a" name="Jinetes de Rinobuey" publicationId="926b-6555-9b25-6de2" page="24" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c84c-5662-0a56-7c2a" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="remove" field="category" value="184a-30ec-bf7c-b603"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <rules>
         <rule id="6a5c-ae00-72d0-44d1" name="Pellejo duro" hidden="false">
           <description>Los Dientemartirio proporcionan una tirada de salvación por armadura de 5+ en vez de 6+ por ir montados.</description>
@@ -3081,6 +3215,487 @@ su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Giga
       </categoryLinks>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="175.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="40c3-23c1-2dde-213a" name="Bragg" publicationId="926b-6555-9b25-6de2" page="29" hidden="false" collective="false" import="true" type="unit">
+      <comment>el Desollador</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7460-f062-1247-9023" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3b0e-7760-5e36-41c3" name="Bragg" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">4</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Ogro, PJ Especial</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="5d8f-fdf7-e2cd-2708" name="El Gran Desollador" publicationId="926b-6555-9b25-6de2" page="29" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>Esta enorme hacha fue creada por Bragg a partir de un arma mágica que llevaba un Kaudillo Orco Negro. Su poder parece estar bloqueado por una emoción visceral hacia el combate, y se manifiesta cuando Bragg se enfrenta a los mejores guerreros que el enemigo puede ofrecer. Aceptar un duelo contra El Desollador conlleva su poste- rior arrepentimiento debido a los muchos golpes que el Gran Desollador puede asestar.</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo. Albarda</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F+1, Requiere ambas
+Armaduramanos</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Los ataques de Bragg se resuelven con Golpe letal.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="c519-f305-5085-668a" name="Presencia apabulladora" publicationId="926b-6555-9b25-6de2" page="29" hidden="false">
+          <description>Las unidades enemigas en contacto peana con peana con Bragg se considera que no tienen bonificador al combate por filas, así que no pueden aplicar bonificador por filas a la Resolución de combate (y, si son Skaven, no pueden sumar las filas a su Liderazgo) en caso de que Bragg consiga eliminar a una miniatura enemiga durante un desafío en ese mismo combate. En caso de combates múltiples, TODAS las unidades participantes perderán el bono por filas en caso de que Bragg elimine a un enemigo durante un desafío en dicho combate. Los desafíos que lance Bragg no se pueden rechazar (aunque su rival sigue pudiendo escoger con qué miniatura los acepta en caso de que haya más de una posibilidad, simplemente pierde la opción de rechazarlo y enviará una de ellas a la última fila).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="f5f2-b069-aab7-48e8" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+        <infoLink id="f15c-a309-e70b-654c" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+        <infoLink id="ac92-31e0-8db4-d2dc" name="Arremetida" hidden="false" targetId="3ba1-bc25-a6e4-c6ad" type="rule"/>
+        <infoLink id="3f16-696d-e76c-e27f" name="Disparo a personajes" hidden="false" targetId="0267-9a88-f0af-21bf" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="87ef-05f5-42be-7207" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="c36a-7866-7be6-7b91" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="edd5-948c-fb1a-bbe9" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="215.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="db2f-c7c9-c089-da4e" name="Braugh Señordescalvos" publicationId="926b-6555-9b25-6de2" page="31" hidden="false" collective="false" import="true" type="unit">
+      <comment>El esclavizador de cadáveres</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74c7-df33-6285-5381" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0b7b-a6dc-c3b8-5b51" name="Braugh Señordesclavos" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Ogro, PJ Especial</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f5e0-3f59-c5db-1de1" name="Cadena Ataalmas" publicationId="926b-6555-9b25-6de2" page="31" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment></comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Dos armas de mano (así que Braugh tiene 6 ataques).</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"></characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Ataques mágicos. 
+
+Al inicio de cada fase de combate, Braugh Anula tres ataques (es como Anula un ataque, pero resta 3 ataques) de una única miniatura en contacto peana con peana.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="760b-8c70-aacd-1d42" name="El Gran Cubrepanzas." publicationId="926b-6555-9b25-6de2" page="31" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+          <characteristics>
+            <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">Armadura ligera</characteristic>
+            <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">El Gran Cubrepanzas permite a los esclavos que van con Braugh cargar 30cm (aunque muevan 10). Ten en cuenta que esto es sólo en cargas, así que si no declaran cargas Braugh mueve 10cm. Ade- más, Braugh siempre hace 1 impacto por carga cuando carga.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="4944-6628-66ae-b4c7" name="Señor de los Esclavos" publicationId="926b-6555-9b25-6de2" page="31" hidden="false">
+          <description>Braugh forma una unidad con miniaturas de distinto tamaño, por una parte el propio Braugh y por otra varias miniaturas de peana 20x20mm (infantería). Considera que Braugh “forma filas” como si fuera seis mi- niaturas (así, si está rodeado de seis Esclavos, es como si tuviera 3 filas). Mientras haya cinco o más Esclavos en la unidad, Braugh se beneficia de la regla ¡Cuidado, Señor! (aunque sean de un tamaño inferior). Braugh no puede abandonar a los Esclavos durante la partida (de hecho, ¡no puede! Los esclavos zombis le siguen allá por donde va...).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="a878-73f3-bf53-964b" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+        <infoLink id="74ce-4fe5-125e-de7c" name="Tozudez" hidden="false" targetId="ad33-61eb-3490-bb38" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1384-4a96-f139-3285" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="f8a6-e1d9-b0b1-f781" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="727e-7bcd-c661-fbe2" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="682e-9ecb-d427-be37" name="Esclavos" publicationId="926b-6555-9b25-6de2" page="31" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4a8-1d5d-8601-deef" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="74ae-bfe0-3bb1-9e79" name="Esclavo" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="e2e7-1cee-3f6d-a452" name="Vivos" publicationId="926b-6555-9b25-6de2" page="31" hidden="false">
+              <description>Aunque sean de tipo No Muertos, no siguen las reglas habituales para los No Muertos; no son inmunes a psicolo- gía, pueden marchar, no son Inestables... Eso sí, son de tipo No Muerto, tenlo en cuenta para objetos mágicos, hechizos y reglas especiales.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="e64e-26a4-2214-57d3" name="Tozudez" hidden="false" targetId="ad33-61eb-3490-bb38" type="rule"/>
+            <infoLink id="fec6-ae2d-3218-77c4" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="2.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="421.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c84c-5662-0a56-7c2a" name="Ghark" publicationId="926b-6555-9b25-6de2" page="33" hidden="false" collective="false" import="true" type="unit">
+      <comment>Déspota de la Tribu Pielférrea</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9727-3932-78ad-23e0" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f510-0b58-8fc5-8681" name="Ghark" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">4</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Ogro, PJ Especial</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3b32-4c4b-2fd3-28a6" name="Armadura Pielhierro" publicationId="926b-6555-9b25-6de2" page="33" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+          <characteristics>
+            <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">3+</characteristic>
+            <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Armadura pesada, pero proporciona una tirada de salvación por armadura de 3+ en vez del 5+ habitaual.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="6fa5-def2-fbd9-4d6c" name="Solitario" publicationId="926b-6555-9b25-6de2" page="33" hidden="false">
+          <description>Ghark nunca puede unirse a unidades (ni siquiera de Jinetes de Rinobuey, y ni siquiera si va a pie).</description>
+        </rule>
+        <rule id="893d-7888-17b4-7e16" name="Ejército de Ghark." publicationId="926b-6555-9b25-6de2" page="33" hidden="false">
+          <description> Un ejército de Ghark tiene una distribución algo distinta:
+
+- Personajes: Pueden incluirse Maestros Carniceros, Matones, Matarifes y Cazadores siguiendo las reglas habituales.
+
+ - Unidades básicas: Ogros Toro, Tripasduras, Sueltafuegos. No es obligatorio incluir al menos una unidad de Ogros
+Toro.
+
+- Unidades especiales: Tramperos Gnoblar (desaparecen las restricciones habituales), Guerreros Gnoblar, Yehtis, Jinetes de Rinobuey (ocupan opción de Especial, no Especial + Singular como habitualmente). 
+
+- Unidades singulares: Tirasobras, Comehombres, Gigante, Gargantúa.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="eb8b-7d29-a002-1d65" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+        <infoLink id="bfbe-02f2-2b65-0960" name="Arremetida" hidden="false" targetId="3ba1-bc25-a6e4-c6ad" type="rule"/>
+        <infoLink id="7fb0-6a5f-8a26-1054" name="Disparo a personajes" hidden="false" targetId="0267-9a88-f0af-21bf" type="rule"/>
+        <infoLink id="00f7-99bc-0044-85b6" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="37a2-3301-5194-34b5" name="Puño de Hierro Ogro" hidden="false" targetId="695d-43bd-6cb2-7ff8" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7018-3a52-1dd6-8ae9" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="01d5-123d-d59f-dc8d" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="4a89-07ef-2c7e-78dc" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="2f68-666d-0e5a-c8ec" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="7bcc-b80d-5c70-72ed" name="Rinobuey de Hierro" publicationId="926b-6555-9b25-6de2" page="33" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d0a-e37d-a579-4b0d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7878-ef19-e40c-3ce5" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="f458-7722-0b10-78ad" name="Rinobuey de Hierro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">18</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">5</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="099c-c830-83e4-7cf7" name="Vapores sulfurosos" publicationId="926b-6555-9b25-6de2" page="33" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+              <characteristics>
+                <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Plantilla de Lágrima, las miniaturas impactadas (parciales a 4+)</characteristic>
+                <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F3</characteristic>
+                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">-2 a la TSA</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="a1ad-a98c-f008-a052" name="Carga Atronadora" publicationId="926b-6555-9b25-6de2" page="33" hidden="false">
+              <description>Si el Rinobuey de Hierro carga 18cm o más, causa 1D3 impactos por carga</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="881e-ab4c-2fe3-9bca" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+            <infoLink id="8a4c-4f8a-74ea-d571" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
+            <infoLink id="4d40-ee83-1abf-6fcd" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
+            <infoLink id="5d0f-0ca3-b6e1-e5e8" name="Ataques mágicos" hidden="false" targetId="6e5c-a8a4-78d0-032b" type="rule"/>
+            <infoLink id="84bf-f455-8497-b44e" name="Mal genio" hidden="false" targetId="be59-b753-6259-1a17" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="135.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="350.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0b5c-ab22-ab6f-cc1a" name="Golfag" publicationId="926b-6555-9b25-6de2" page="35" hidden="false" collective="false" import="true" type="unit">
+      <comment>El primero de los Comehombres</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8335-983a-0428-5479" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6c5b-0f91-70fb-8154" name="Golfag" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">4</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Ogro, PJ Especial</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="5984-833f-cf81-bafa" name="Colección de armas" publicationId="926b-6555-9b25-6de2" page="35" hidden="false">
+          <description>Con los años, Golgfag ha adquirido y ha perdido infinidad de objetos mágicos, y siempre lleva parte de su colección a la batalla. Se considera que va armado con arma de mano adicional, y sus ataques se consideran ataques mágicos. En caso de que se anulen los ataques mágicos (con el hechizo Anulación de Vaul, por ejemplo) Golgfag simplemente elegirá otra arma, por lo que no puede perder la habilidad de ataques mágicos.</description>
+        </rule>
+        <rule id="7bbc-ca5b-32dd-d7fd" name="Comehombres de Golfag" publicationId="926b-6555-9b25-6de2" page="35" hidden="false">
+          <description>Golgfag suele ir al combate a la cabeza de su unidad de veteranos Comehombres. En un ejército en el que se incluya a Golgfag, los Comehombres contarán como unidades Especiales y no como Singulares.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="c6e7-aa12-3944-8939" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+        <infoLink id="b034-cd6d-942d-fbcf" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+        <infoLink id="b9c9-0faa-adf8-67a7" name="Arremetida" hidden="false" targetId="3ba1-bc25-a6e4-c6ad" type="rule"/>
+        <infoLink id="4419-8a89-d785-9698" name="Disparo a personajes" hidden="false" targetId="0267-9a88-f0af-21bf" type="rule"/>
+        <infoLink id="6676-9a76-c25f-5754" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="e61f-c63c-21f7-d53c" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
+        <infoLink id="313b-0ba8-14d7-0c47" name="Ristra de Escopetas" hidden="false" targetId="eeb7-d58c-d32d-fd8d" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0008-4322-0cc1-df0a" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="9092-f5b8-f67f-a14b" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="e395-2df2-9ccf-a2ed" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="230.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2fff-0373-bdd7-386e" name="Grasientus Dientedoro" publicationId="926b-6555-9b25-6de2" page="37" hidden="false" collective="false" import="true" type="unit">
+      <comment>Soberano de los Reinos Ogros</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b67-3220-0fb0-8baf" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="42fc-b678-81b0-92ad" name="Grasientus Dientedoro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">6</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">9</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Ogro, PJ Especial</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bc0a-6731-f03f-3263" name="Cetro de los Titanes" publicationId="926b-6555-9b25-6de2" page="37" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>Este gran cetro, más alto que un hombre adulto, está cubierto con cadenas de oro y tachonado de diamantes. Al estar cargado con hechizos de mando, Grasientus solo tiene que apuntar a sus sirvientes con su enorme símbolo de poder para infundirles una férrea determinación. ¡Ah! También es útil para hacer papilla a los enemigos, ya que está lleno de conjuros de poder que le confieren a Grasientus la fuerza de un Titán y lo convierte en el Ogro vivo más poderoso. </comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de Mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F110, Heridas Múltiples (1D3)</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Además, al inicio de turno, toda unidad amiga que esté huyendo y esté en línea de visión de Grasientus se reagrupa automáticamente.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="acf2-67ac-a4b0-b240" name="Corona del Soberano" publicationId="926b-6555-9b25-6de2" page="37" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Esta corona mágica con el tamaño de una pileta fue creada especialmente por los mejores artesa- nos del Emperador para un rey. Forjada en oro, esta corona está cubierta de gemas y claveteada directamente a la cabeza de Grasientus, que está llena de bultos. Aumenta su intelecto casi al nivel de los humanos y es lo más parecido a un sím- bolo de nobleza que se puede encontrar en los Reinos Ogros.</comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Grasientus tiene una Tirada de salvación especial 4+ contra proyectiles no mágicos. 
+
+Además él y su unidad son inmunes a la psicología</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="8d38-8998-93dc-75d2" name="Demasiado rico para ir caminando. " publicationId="926b-6555-9b25-6de2" page="37" hidden="false">
+          <comment>La forma de viajar preferida de Grasientus es ir reclinado sobre un trono viviente de gnoblars, que tienen más miedo de ser aplastados que del enemigo.</comment>
+          <description>Siempre puede marchar. 
+Su arremetida causa 1D6 impactos en vez de uno solo.</description>
+        </rule>
+        <rule id="24b6-627d-a362-3a83" name="Atesorador supremo" publicationId="926b-6555-9b25-6de2" page="37" hidden="false">
+          <comment> El soberano es famoso por su generosidad con aquellos que luchan bien y, tras cada batalla, otorga grandes riquezas a todos los que le han impresionado, lo que anima a sus seguidores a luchar con ferocidad renovada cuando los está mirando. </comment>
+          <description>Las unidades amigas a la vista de Grasientus obtienen un +1 a la resolución de sus combates.</description>
+        </rule>
+        <rule id="3894-40a0-7f89-cbfd" name="Tribu de los Dientedoro" publicationId="926b-6555-9b25-6de2" page="37" hidden="false">
+          <comment>Los combatientes más fuertes y experimentados se sienten atraídos por la forma de ser del soberano, que los emplea bajo la promesa de conseguir indecibles riquezas y gloria desmedida. </comment>
+          <description>El ejército de Grasientus debe incluir dos o más unidades de tripasduras.</description>
+        </rule>
+        <rule id="b2f8-774a-0906-06c2" name="Todo el mundo tiene un precio. " publicationId="926b-6555-9b25-6de2" page="37" hidden="false">
+          <comment>Grasientus es un maestro del soborno y del cohecho, por lo que utiliza sus riquezas para fomentar la avaricia del enemigo y sembrar el caos entre sus filas. Hasta las tropas más disciplinadas tienen un precio cuando son tentadas con sus más ocultos deseos, ya sean riquezas, artilugios antiguos o la seguridad de sus casas y de sus familias.</comment>
+          <description>Al inicio de cada turno de tu oponente elige 1D3 unidades enemigas a la vista de Grasientus sufrirán estupidez hasta final de turno. No tiene efectos en unidades que sean inmunes a psicología.</description>
+        </rule>
+        <rule id="fb60-c475-cd12-4a8d" name="Ocupa dos opciones de Comandante" hidden="false"/>
+      </rules>
+      <infoLinks>
+        <infoLink id="fb08-5141-8412-8396" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+        <infoLink id="922a-ff94-a4ff-ab8d" name="Arremetida" hidden="false" targetId="3ba1-bc25-a6e4-c6ad" type="rule"/>
+        <infoLink id="c1a1-d38d-1993-e30c" name="Estandarte de Batalla" hidden="false" targetId="16f9-a928-9d5e-2b4f" type="rule"/>
+        <infoLink id="6b12-743c-675d-3c15" name="General" hidden="false" targetId="89b2-105c-35db-51c3" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="3a8e-008b-30c7-330e" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="e16d-35e7-5fc6-2b18" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="8646-eebe-83d6-6870" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="2447-66ed-f5fa-046d" name="Gnoblars de Apoyo" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="658a-63ec-a7ad-8d23" name="Gnoblars Pinchadores" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec97-b3fd-0ce8-c5ac" type="min"/>
+                <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d33-610f-9291-9f2e" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="7e17-1d01-7800-e829" name="Gnoblar Pinchador" hidden="false" targetId="6b25-8061-ceb6-541a" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="565.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dc01-13fe-77d4-4fbe" name="Skragg" publicationId="926b-6555-9b25-6de2" page="39" hidden="false" collective="false" import="true" type="unit">
+      <comment>el Carnicerp</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1d3-5500-df59-e60e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="2ed1-a897-e09e-3635" name="Skragg" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Hechicero, Ogro, PJ Especial</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="6d22-abba-178f-8116" name="Ejército del carnicero" publicationId="926b-6555-9b25-6de2" page="39" hidden="false">
+          <description>Las Gargantúas pasan a ser unidades especiales, pudiendo elegir 1-2 Gargantúas como una única opción de unidad Especial (así, 5-6 Gargantuas serían 3 opciones de unidad Especial). Si incluyes a Skrag, el ejército debe tener al menos 2 Gargantúas (pagando su coste y ocupando una opción de unidad Especial).</description>
+        </rule>
+        <rule id="66d0-c170-9951-a8f3" name="Bendiciones de las Grandes Fauces." publicationId="926b-6555-9b25-6de2" page="39" hidden="false">
+          <comment>Estas bendiciones surten efecto cuando los miembros de los enemigos descuartiza- dos por Skrag van siendo puestos con devoción en su caldero. Las Granes Fauces conferirán más y más poderes a Skrag y a sus gargantúas a medida que se alimente el Caldero.</comment>
+          <description> Las miniaturas que Skrag mate en combate (no con hechizos, ni arrasando,...) le concederán bonificaciones acumulativas.
+
+Miniaturas matadas
+
+1-4
+Efectos en Skrag - Skrag recupera todas las Heridas (hasta las 5 heridas iniciales) y gana la regla especial Regeneración (4+). Ten en cuenta que recupera las heridas la primera vez que mate alguna miniatura, pero no puede recuperar heridas en otros turnos.
+Efectos en las Gargantúas amigas - Las gargantúas que falten por entrar en juego lo harán en el siguiente turno propio
+
+5-9
+Efectos en Skrag - Skrag gana A+1 (para un total de 6)
+Efectos en las Gargantúas amigas  - Las gargantúas propias ganan A+1
+
+
+10-14
+Efectos en Skrag - Skrag puede repetir las tiradas para impactar fallidas en combate
+Efectos en las Gargantúas amigas- Las gargantúas propias pueden repetir las tiradas para impactar fallidas en combate.
+
+15+
+Efectos en Skrag - Skrag pasa a ser Inmune a Desmoralización
+Efectos en las Gargantúas amigas- Las gargantúas ganan Regeneración (4+).
+
+</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="61a3-5361-65b8-7025" name="Arremetida" hidden="false" targetId="3ba1-bc25-a6e4-c6ad" type="rule"/>
+        <infoLink id="4373-dcba-c2a9-72ce" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="0c5d-f690-7d7e-568b" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
+        <infoLink id="a81d-3743-eb6e-c0cd" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
+        <infoLink id="c154-a347-97ef-ad53" name="Furia asesina" hidden="false" targetId="000a-cfde-6e79-aecb" type="rule"/>
+        <infoLink id="8c85-4ae7-4491-5289" name="Golpe letal" hidden="false" targetId="917d-4fe5-c45b-ca64" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="eb1e-23d7-e5b2-926c" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="4b5f-da89-f5c9-8500" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="7504-a36a-6e80-5f47" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="400.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
