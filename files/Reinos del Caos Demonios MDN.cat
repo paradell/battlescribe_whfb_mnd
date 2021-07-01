@@ -731,6 +731,7 @@
       <categoryLinks>
         <categoryLink id="bc33-9160-b758-fc8a" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="true"/>
         <categoryLink id="61b6-262d-2979-102d" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="b223-e578-e05c-4df1" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="131a-f5f0-1f57-e319" name="Volar" hidden="false" collective="false" import="true" type="upgrade">
@@ -957,13 +958,28 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96b4-2994-a0a7-91e0" type="min"/>
               </constraints>
               <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="150.0"/>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="160.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="3ff3-db7f-181f-55b1" name="Saber Mágico" hidden="false" collective="false" import="true">
           <modifierGroups>
+            <modifierGroup>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0593-8870-274a-ae3f" type="atLeast"/>
+                    <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c45-27fb-d81e-016f" type="atLeast"/>
+                    <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a704-b72d-99ef-055e" type="atLeast"/>
+                    <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ff0-893f-bb16-03f8" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifiers>
+                <modifier type="set" field="2f98-c0b1-d321-a617" value="1.0"/>
+              </modifiers>
+            </modifierGroup>
             <modifierGroup>
               <conditions>
                 <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c54-70e4-c1c0-3afb" type="atLeast"/>
@@ -982,9 +998,23 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
             <selectionEntry id="5570-83e4-166b-8de5" name="Saber de Tzeench" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9112-e77b-6205-5586" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9112-e77b-6205-5586" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0593-8870-274a-ae3f" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c45-27fb-d81e-016f" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a704-b72d-99ef-055e" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ff0-893f-bb16-03f8" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="bed2-e6a1-6b87-b92f" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
@@ -1003,9 +1033,23 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
             <selectionEntry id="a550-6733-4dd6-6892" name="Saber de Slaneesh" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112f-c5c9-d7e5-9d84" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112f-c5c9-d7e5-9d84" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0593-8870-274a-ae3f" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c45-27fb-d81e-016f" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a704-b72d-99ef-055e" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ff0-893f-bb16-03f8" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="007e-fe5e-fc88-4dd1" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
@@ -1024,9 +1068,23 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
             <selectionEntry id="255e-bd5b-3d4e-da48" name="Saber de Nurgle" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0217-689a-2607-0454" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0217-689a-2607-0454" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0593-8870-274a-ae3f" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c45-27fb-d81e-016f" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a704-b72d-99ef-055e" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ff0-893f-bb16-03f8" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="aec0-4c0b-8be3-1505" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
@@ -1045,11 +1103,24 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
             <selectionEntry id="088b-8e55-35a5-2f4a" name="Saber de las Sombras" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f4fe-8a35-e074-c95f" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f4fe-8a35-e074-c95f" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0593-8870-274a-ae3f" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c45-27fb-d81e-016f" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a704-b72d-99ef-055e" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ff0-893f-bb16-03f8" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
-                    <modifier type="set" field="f996-b11e-25e1-9e0c" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
                     <modifier type="set" field="c78b-7eac-a90f-ca31" value="1.0"/>
                   </modifiers>
@@ -1057,7 +1128,6 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
               </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c78b-7eac-a90f-ca31" type="max"/>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f996-b11e-25e1-9e0c" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -1066,19 +1136,31 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
             <selectionEntry id="0bfb-cfb3-4052-7957" name="Saber del Fuego" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f4fe-8a35-e074-c95f" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f4fe-8a35-e074-c95f" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0593-8870-274a-ae3f" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c45-27fb-d81e-016f" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a704-b72d-99ef-055e" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ff0-893f-bb16-03f8" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="3bc9-8a40-abb9-fc44" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
-                    <modifier type="set" field="71ea-7b51-f031-176a" value="1.0"/>
                   </modifiers>
                 </modifierGroup>
               </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bc9-8a40-abb9-fc44" type="max"/>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71ea-7b51-f031-176a" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -1087,19 +1169,31 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
             <selectionEntry id="905e-1193-50a2-c0d2" name="Saber de  la Muerte" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f4fe-8a35-e074-c95f" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f4fe-8a35-e074-c95f" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0593-8870-274a-ae3f" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c45-27fb-d81e-016f" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a704-b72d-99ef-055e" type="atLeast"/>
+                            <condition field="selections" scope="3c61-882b-b109-b52f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ff0-893f-bb16-03f8" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="1f53-8e82-dd61-7f03" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
-                    <modifier type="set" field="9427-075c-fc9d-1ed4" value="1.0"/>
                   </modifiers>
                 </modifierGroup>
               </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f53-8e82-dd61-7f03" type="max"/>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9427-075c-fc9d-1ed4" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -13793,6 +13887,15 @@ saber de Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica)
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="45.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="a41b-9343-8cdb-45f8" name="Ocupa dos opciones de Héroe" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0745-c40d-2c38-d63d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38db-e36e-4ecd-ecba" type="min"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="a9ad-29b3-4f02-fb62" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="df80-21ab-5afc-c0a6" name="Armas" hidden="false" collective="false" import="true">
@@ -14013,9 +14116,21 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
             <selectionEntry id="d7ea-2d4e-bd60-9cbb" name="Saber de Tzeench" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="32d3-332c-fe71-a67f" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="32d3-332c-fe71-a67f" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c68-9c67-384e-a5ab" type="atLeast"/>
+                            <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdb8-82b4-e950-6c32" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="4dd7-30a2-288b-3bb6" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
@@ -14034,9 +14149,21 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
             <selectionEntry id="a775-47b3-e5d9-5f3c" name="Saber de Slaneesh" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d655-360d-8514-c922" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d655-360d-8514-c922" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c68-9c67-384e-a5ab" type="atLeast"/>
+                            <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdb8-82b4-e950-6c32" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="823b-4243-01af-1518" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
@@ -14055,9 +14182,21 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
             <selectionEntry id="30d3-e26e-d048-76ef" name="Saber de Nurgle" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a529-cad6-7f95-4090" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a529-cad6-7f95-4090" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c68-9c67-384e-a5ab" type="atLeast"/>
+                            <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdb8-82b4-e950-6c32" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="14ba-138b-69e0-1065" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
@@ -14076,11 +14215,22 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
             <selectionEntry id="8ab2-dc86-c678-4a16" name="Saber de las Sombras" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1161-4108-c3d3-69c9" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1161-4108-c3d3-69c9" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c68-9c67-384e-a5ab" type="atLeast"/>
+                            <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdb8-82b4-e950-6c32" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
-                    <modifier type="set" field="0847-042a-5a22-3d0a" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
                     <modifier type="set" field="41c5-9f2c-ecd7-c710" value="1.0"/>
                   </modifiers>
@@ -14088,7 +14238,6 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
               </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41c5-9f2c-ecd7-c710" type="max"/>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0847-042a-5a22-3d0a" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -14097,19 +14246,29 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
             <selectionEntry id="ff6d-6b64-b39e-c0d9" name="Saber del Fuego" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1161-4108-c3d3-69c9" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1161-4108-c3d3-69c9" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c68-9c67-384e-a5ab" type="atLeast"/>
+                            <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdb8-82b4-e950-6c32" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="bceb-6acc-aced-de0d" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
-                    <modifier type="set" field="0724-0b87-8624-b03f" value="1.0"/>
                   </modifiers>
                 </modifierGroup>
               </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bceb-6acc-aced-de0d" type="max"/>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0724-0b87-8624-b03f" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -14118,19 +14277,29 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
             <selectionEntry id="ec83-f7af-8d8f-6f0e" name="Saber de  la Muerte" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1161-4108-c3d3-69c9" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1161-4108-c3d3-69c9" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c68-9c67-384e-a5ab" type="atLeast"/>
+                            <condition field="selections" scope="52bb-6781-9655-edf2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdb8-82b4-e950-6c32" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="0543-0c54-fa83-f21b" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
-                    <modifier type="set" field="d2e3-36f9-775c-3e00" value="1.0"/>
                   </modifiers>
                 </modifierGroup>
               </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0543-0c54-fa83-f21b" type="max"/>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2e3-36f9-775c-3e00" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -14408,19 +14577,35 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="2f12-4918-afb9-b476" name="Nivel de hechicero" hidden="true" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c9d1-6d4e-71b5-c9ad" type="atLeast"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="5265-c68f-1202-bf90" value="1.0"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5265-c68f-1202-bf90" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8886-98f5-cc93-3867" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5265-c68f-1202-bf90" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="04c5-5368-79c7-8933" name="Nivel 2" hidden="false" collective="false" import="true" type="upgrade">
               <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="set" field="3a75-f7ed-bc73-76a1" value="1.0"/>
+                    <modifier type="set" field="1b98-edab-9965-b4d2" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
                 <modifierGroup>
                   <conditions>
                     <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="25c7-e456-5548-468f" type="atLeast"/>
                   </conditions>
                   <modifiers>
                     <modifier type="set" field="1b98-edab-9965-b4d2" value="1.0"/>
+                    <modifier type="set" field="53ea-00f4-9046-81ff" value="0.0"/>
                   </modifiers>
                 </modifierGroup>
               </modifierGroups>
@@ -14429,7 +14614,22 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b98-edab-9965-b4d2" type="min"/>
               </constraints>
               <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="627b-2428-8adf-7d9a" name="Nivel 1" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="a539-d722-4a3d-5eaf" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c9d1-6d4e-71b5-c9ad" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a539-d722-4a3d-5eaf" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -14437,9 +14637,15 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
         <selectionEntryGroup id="243c-0815-5305-d6af" name="Saber" hidden="true" collective="false" import="true">
           <modifierGroups>
             <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="25c7-e456-5548-468f" type="atLeast"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="25c7-e456-5548-468f" type="atLeast"/>
+                    <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="627b-2428-8adf-7d9a" type="atLeast"/>
+                    <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="04c5-5368-79c7-8933" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
               <modifiers>
                 <modifier type="set" field="a52e-022a-1c0b-6d84" value="1.0"/>
                 <modifier type="set" field="hidden" value="false"/>
@@ -14451,7 +14657,7 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a52e-022a-1c0b-6d84" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="1f36-4609-b4e4-3ab8" name="Saber de Tzeench" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="1f36-4609-b4e4-3ab8" name="Saber de Tzeench" hidden="false" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
                   <conditions>
@@ -14459,7 +14665,6 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
                   </conditions>
                   <modifiers>
                     <modifier type="set" field="44dd-c6b9-a4a4-307e" value="1.0"/>
-                    <modifier type="set" field="hidden" value="false"/>
                     <modifier type="set" field="2bf5-cad0-cc04-2ebc" value="1.0"/>
                   </modifiers>
                 </modifierGroup>
@@ -14472,7 +14677,173 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="e2e0-421f-ce32-50b1" name="Saber de Slaneesh" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e64f-7ac5-1f1e-46a8" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="627b-2428-8adf-7d9a" type="atLeast"/>
+                            <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="04c5-5368-79c7-8933" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="230f-173a-c8ed-c9d9" value="1.0"/>
+                    <modifier type="set" field="62bf-9d29-6aec-97a9" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62bf-9d29-6aec-97a9" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="230f-173a-c8ed-c9d9" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ce93-3abe-ed67-2e87" name="Saber de Nurgle" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bf2f-0cb4-ad78-06b0" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="627b-2428-8adf-7d9a" type="atLeast"/>
+                            <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="04c5-5368-79c7-8933" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="9993-089a-55ea-4abf" value="1.0"/>
+                    <modifier type="set" field="ceb5-7b6e-54de-78e4" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9993-089a-55ea-4abf" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ceb5-7b6e-54de-78e4" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="728e-0d58-944e-92f4" name="Saber de Sombras" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc5a-1090-c650-48c9" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="627b-2428-8adf-7d9a" type="atLeast"/>
+                            <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="04c5-5368-79c7-8933" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="a0c1-0756-b9e3-7e15" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0c1-0756-b9e3-7e15" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ee1e-c3ec-8266-b323" name="Saber de la Muerte" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc5a-1090-c650-48c9" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="627b-2428-8adf-7d9a" type="atLeast"/>
+                            <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="04c5-5368-79c7-8933" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="dd5b-b3ec-5932-022a" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd5b-b3ec-5932-022a" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2824-44ac-63e0-aed4" name="Saber del Fuego" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc5a-1090-c650-48c9" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="627b-2428-8adf-7d9a" type="atLeast"/>
+                            <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="04c5-5368-79c7-8933" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="9f0b-10f2-0b2c-5328" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f0b-10f2-0b2c-5328" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="cb71-ffde-ef37-ac1a" name="Objetos mágicos" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="25.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="554f-db89-aa92-8294" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="1ddb-7b14-9415-6283" name="Recompensas demoníacas Caos Absoluto (Demonios)" hidden="false" collective="false" import="true" targetId="86aa-d003-ebfe-8fec" type="selectionEntryGroup"/>
+            <entryLink id="d3ee-9468-3073-0d7e" name="Recompensas demoníacas Tzeentch (Demonios)" hidden="false" collective="false" import="true" targetId="0904-0a9f-dfe8-a197" type="selectionEntryGroup"/>
+            <entryLink id="36ac-ca11-3fab-5586" name="Recompensas demoníacas Slaanesh (Demonios)" hidden="false" collective="false" import="true" targetId="f628-2da8-6b9c-ec07" type="selectionEntryGroup"/>
+            <entryLink id="aefc-8e0c-8f6a-0d1b" name="Recompensas demoníacas Nurgle (Demonios)" hidden="false" collective="false" import="true" targetId="6d85-05c5-c30f-0122" type="selectionEntryGroup"/>
+            <entryLink id="a52c-8a3d-793f-3cc4" name="Recompensas demoníacas Khorne (Demonios)" hidden="false" collective="false" import="true" targetId="5cc2-6ac8-794d-697c" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
