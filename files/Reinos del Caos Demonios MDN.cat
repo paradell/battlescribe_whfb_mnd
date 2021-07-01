@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b0a7-8bc8-db26-e347" name="Reinos del Caos: Demonios MDN" revision="5" battleScribeVersion="2.03" authorName="Aleix Paradell" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b0a7-8bc8-db26-e347" name="Reinos del Caos: Demonios MDN" revision="6" battleScribeVersion="2.03" authorName="Aleix Paradell" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e15e-b204-e5a8-3b53" name="Devorador de almas" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -13895,6 +13895,9 @@ saber de Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica)
           <categoryLinks>
             <categoryLink id="a9ad-29b3-4f02-fb62" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
           </categoryLinks>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -14634,13 +14637,12 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="243c-0815-5305-d6af" name="Saber" hidden="true" collective="false" import="true">
+        <selectionEntryGroup id="243c-0815-5305-d6af" name="Saber" hidden="false" collective="false" import="true">
           <modifierGroups>
             <modifierGroup>
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="25c7-e456-5548-468f" type="atLeast"/>
                     <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="627b-2428-8adf-7d9a" type="atLeast"/>
                     <condition field="selections" scope="9df6-4534-a75c-0cac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="04c5-5368-79c7-8933" type="atLeast"/>
                   </conditions>
@@ -14648,7 +14650,6 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
               </conditionGroups>
               <modifiers>
                 <modifier type="set" field="a52e-022a-1c0b-6d84" value="1.0"/>
-                <modifier type="set" field="hidden" value="false"/>
               </modifiers>
             </modifierGroup>
           </modifierGroups>

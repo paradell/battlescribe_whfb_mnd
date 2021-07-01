@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7020-46e5-3849-599f" name="Reinos del Caos: Mortales MDN" revision="5" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7020-46e5-3849-599f" name="Reinos del Caos: Mortales MDN" revision="6" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="b96c-fdf3-1312-f55f" name="Arqueros bárbaros" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -10322,47 +10322,6 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
       <categoryLinks>
         <categoryLink id="1cec-000a-268b-e30f" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="d279-79a5-39dd-d68e" name="Objetos mágicos" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2155-a49f-2f3c-113d" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="cdf8-2b16-a1ac-c675" name="Objetos mágicos" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="53ea-00f4-9046-81ff" scope="parent" value="100.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="737e-df5c-3c8f-fd11" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="5ac4-6dee-aba3-d821" name="Armadura del Caos" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="55bc-138c-bdc7-1723" type="max"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="ea01-9055-40c6-621b" name="Armadura del Caos" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
-                      <characteristics>
-                        <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">4+</characteristic>
-                        <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Cualquier personaje puede elegir esta Armadura del Caos, incluso Chamanes y Grandes Chamanes. La miniatura gana una tirada de salvación por armadura de 4+ que puede mejorarse con otro equipo (salvo armaduras ligeras o pesadas). Los personajes con esta armadura pueden lanzar magia de la forma habitual.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <entryLinks>
-                <entryLink id="87a3-0579-33da-8764" name="Objetos arcanos, requiere ser hechicero (Bestias)" hidden="false" collective="false" import="true" targetId="ea17-ca62-0a09-5989" type="selectionEntryGroup"/>
-                <entryLink id="202d-322a-2309-e2ad" name="Talismanes (Bestias)" hidden="false" collective="false" import="true" targetId="c719-006c-71a3-9e7e" type="selectionEntryGroup"/>
-                <entryLink id="742b-4023-6202-243c" name="Objetos hechizados (Bestias)" hidden="false" collective="false" import="true" targetId="470d-6a47-81f7-a272" type="selectionEntryGroup"/>
-                <entryLink id="7b51-75f9-0ea9-7462" name="Armas mágicas (Bestias)" hidden="false" collective="false" import="true" targetId="ad61-d603-7b4e-2029" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="6671-60ad-9588-1ddb" name="Nivel" hidden="false" collective="false" import="true" defaultSelectionEntryId="bd8c-27fa-e2ef-d5d6">
           <constraints>
@@ -10591,6 +10550,17 @@ de Slaanesh, Bestias, Sombras o Muerte. Gana el tipo de unidad Slaanesh.</descri
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="87cb-fa2d-6b50-21db" name="Objetos mágicos" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="100.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4395-2d14-cb0e-1102" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="0459-c022-ec43-db77" name="Objetos arcanos, requiere ser hechicero (Bestias)" hidden="false" collective="false" import="true" targetId="ea17-ca62-0a09-5989" type="selectionEntryGroup"/>
+            <entryLink id="1cdb-b444-7813-14f1" name="Talismanes (Bestias)" hidden="false" collective="false" import="true" targetId="c719-006c-71a3-9e7e" type="selectionEntryGroup"/>
+            <entryLink id="aaa6-017d-feec-e30a" name="Objetos hechizados (Bestias)" hidden="false" collective="false" import="true" targetId="470d-6a47-81f7-a272" type="selectionEntryGroup"/>
+            <entryLink id="1469-38ba-2599-95fa" name="Armas mágicas (Bestias)" hidden="false" collective="false" import="true" targetId="ad61-d603-7b4e-2029" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -13498,7 +13468,7 @@ primero. Puede ser hechicero de nivel 1 o 2, a coste de 40 puntos por nivel (p.e
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8cf4-4df7-5200-606e" type="atLeast"/>
+                        <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3e5-93d0-86b4-47e7" type="atLeast"/>
                       </conditions>
                       <conditionGroups>
                         <conditionGroup type="or">
