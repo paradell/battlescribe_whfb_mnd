@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7020-46e5-3849-599f" name="Reinos del Caos: Mortales MDN" revision="4" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7020-46e5-3849-599f" name="Reinos del Caos: Mortales MDN" revision="5" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="b96c-fdf3-1312-f55f" name="Arqueros bárbaros" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -2768,31 +2768,6 @@ su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Giga
       <categoryLinks>
         <categoryLink id="9a39-bbc0-d80a-61cb" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="0271-1264-af6e-79b6" name="Objetos mágicos" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7939-c638-283d-9f2e" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="82fd-d739-9850-a387" name="Objetos mágicos" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="53ea-00f4-9046-81ff" scope="parent" value="100.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="62d6-d355-831a-13e2" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="71af-d7db-7b8d-43c8" name="Armas mágicas (Mortales)" hidden="false" collective="false" import="true" targetId="6927-005d-ecb9-f0dd" type="selectionEntryGroup"/>
-                <entryLink id="b5af-c638-75f1-7734" name="Objetos arcanos, requiere ser hechicero (Mortales)" hidden="false" collective="false" import="true" targetId="f4c0-5c3e-c96d-de04" type="selectionEntryGroup"/>
-                <entryLink id="c3a1-d069-2ee8-2ea3" name="Talismanes (Mortales)" hidden="false" collective="false" import="true" targetId="a5cc-fb44-358f-1d04" type="selectionEntryGroup"/>
-                <entryLink id="e6dd-6297-d482-b7cb" name="Objetos hechizados (Mortales)" hidden="false" collective="false" import="true" targetId="775d-99ff-b08c-b77c" type="selectionEntryGroup"/>
-                <entryLink id="e5ff-2e3e-f629-ef47" name="Mutaciones del caos" hidden="false" collective="false" import="true" targetId="0e1c-bef6-ff0d-5feb" type="selectionEntryGroup"/>
-                <entryLink id="0e8c-7ca6-641d-fa62" name="Armaduras mágicas (Mortales)" hidden="false" collective="false" import="true" targetId="f462-dff7-549c-2db6" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="f515-cc53-17de-46f0" name="Nivel de Hechicero" hidden="false" collective="false" import="true" defaultSelectionEntryId="1854-e63c-5c3f-347d">
           <constraints>
@@ -2821,27 +2796,49 @@ su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Giga
         <selectionEntryGroup id="1412-2b87-d729-53b8" name="Saber" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ac5-e94a-1930-22ef" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fdce-32bb-7150-f3aa" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="82c8-42ba-3dad-1ade" name="Saber de las Sombras" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="e7d5-b855-f1e2-13fc" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="8818-2548-b363-640d" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdab-8695-4815-2427" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7d5-b855-f1e2-13fc" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7d5-b855-f1e2-13fc" type="max"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4e0f-f9cf-0972-42b5" name="Saber de la Muerte" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="7b77-916d-b6cf-206c" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="8818-2548-b363-640d" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdab-8695-4815-2427" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b77-916d-b6cf-206c" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b77-916d-b6cf-206c" type="max"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="1426-4df8-0ecb-41ba" name="Saber del Fuego" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="38bf-9e43-b6aa-7609" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="8818-2548-b363-640d" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdab-8695-4815-2427" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38bf-9e43-b6aa-7609" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38bf-9e43-b6aa-7609" type="max"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -3139,6 +3136,19 @@ Muerte o Fuego. Puede ir montado en Diablo de Slaanesh (+40). Gana el tipo de un
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="53c2-3704-83d2-53a4" name="Objetos mágicos" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="100.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="de5e-bb6e-b0d2-4516" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="77fa-f3d0-7671-4bb3" name="Armas mágicas (Mortales)" hidden="false" collective="false" import="true" targetId="6927-005d-ecb9-f0dd" type="selectionEntryGroup"/>
+            <entryLink id="283d-749d-6a0a-21ad" name="Objetos arcanos, requiere ser hechicero (Mortales)" hidden="false" collective="false" import="true" targetId="f4c0-5c3e-c96d-de04" type="selectionEntryGroup"/>
+            <entryLink id="91b3-8ef6-6c35-ac43" name="Talismanes (Mortales)" hidden="false" collective="false" import="true" targetId="a5cc-fb44-358f-1d04" type="selectionEntryGroup"/>
+            <entryLink id="22b4-e51f-2780-7ef2" name="Objetos hechizados (Mortales)" hidden="false" collective="false" import="true" targetId="775d-99ff-b08c-b77c" type="selectionEntryGroup"/>
+            <entryLink id="f938-eac3-f37f-23ac" name="Mutaciones del caos" hidden="false" collective="false" import="true" targetId="0e1c-bef6-ff0d-5feb" type="selectionEntryGroup"/>
+            <entryLink id="7c80-7e0d-8a62-db75" name="Armaduras mágicas (Mortales)" hidden="false" collective="false" import="true" targetId="f462-dff7-549c-2db6" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -9746,17 +9756,17 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
     </selectionEntry>
     <selectionEntry id="90cb-fb5a-c43d-cc54" name="Chamán del rebaño (Bestias)" hidden="false" collective="false" import="true" type="model">
       <profiles>
-        <profile id="e8a8-c510-5071-0555" name="Gran chamán del rebaño" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+        <profile id="aee4-2fed-a371-cec0" name="Chamán del rebaño" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
             <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
             <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
             <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
@@ -9776,47 +9786,6 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
       <categoryLinks>
         <categoryLink id="5957-36af-28f4-db40" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="b1ab-6d9d-9b89-7e9b" name="Objetos mágicos" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9996-7c5e-ee1f-cfb5" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="22d2-71a6-9e3c-510b" name="Objetos mágicos" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="7e42-909c-32d7-0623" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="1c31-e506-5197-0bf3" name="Armadura del Caos" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aaca-d4f5-7549-412b" type="max"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="4c21-c8e7-0919-6892" name="Armadura del Caos" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
-                      <characteristics>
-                        <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">4+</characteristic>
-                        <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Cualquier personaje puede elegir esta Armadura del Caos, incluso Chamanes y Grandes Chamanes. La miniatura gana una tirada de salvación por armadura de 4+ que puede mejorarse con otro equipo (salvo armaduras ligeras o pesadas). Los personajes con esta armadura pueden lanzar magia de la forma habitual.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <entryLinks>
-                <entryLink id="7b03-46c2-2bb0-4fc4" name="Armas mágicas (Bestias)" hidden="false" collective="false" import="true" targetId="ad61-d603-7b4e-2029" type="selectionEntryGroup"/>
-                <entryLink id="1dfb-83aa-e686-0e13" name="Objetos hechizados (Bestias)" hidden="false" collective="false" import="true" targetId="470d-6a47-81f7-a272" type="selectionEntryGroup"/>
-                <entryLink id="1b2d-5517-81f2-0a21" name="Objetos arcanos, requiere ser hechicero (Bestias)" hidden="false" collective="false" import="true" targetId="ea17-ca62-0a09-5989" type="selectionEntryGroup"/>
-                <entryLink id="ae62-0990-a8d2-3e8e" name="Talismanes (Bestias)" hidden="false" collective="false" import="true" targetId="c719-006c-71a3-9e7e" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="368f-c183-e567-f44e" name="Nivel" hidden="false" collective="false" import="true" defaultSelectionEntryId="1d4e-fc9e-786e-09f8">
           <constraints>
@@ -9845,43 +9814,89 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
         <selectionEntryGroup id="886c-591d-6533-4114" name="Saber" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c3b-fa6c-748b-d2fb" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b96-db27-3509-7229" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="1129-1145-eabd-26fe" name="Saber de las Sombras" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="f952-da97-a830-8a5d" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="90cb-fb5a-c43d-cc54" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5aa9-2f87-09a5-0428" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f952-da97-a830-8a5d" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f952-da97-a830-8a5d" type="max"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="8224-8162-e1d1-a457" name="Saber de la Muerte" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="33e1-563c-751c-fd2e" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="90cb-fb5a-c43d-cc54" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5aa9-2f87-09a5-0428" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33e1-563c-751c-fd2e" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33e1-563c-751c-fd2e" type="max"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="0a5d-9427-577d-7b85" name="Saber de las Bestias" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="5f60-68c6-cfdc-c2bf" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="90cb-fb5a-c43d-cc54" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5aa9-2f87-09a5-0428" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f60-68c6-cfdc-c2bf" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f60-68c6-cfdc-c2bf" type="max"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="3089-89dd-cbde-e188" name="Saber de Nurgle (requiere Marca de Nurgle)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="90cb-fb5a-c43d-cc54" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a475-911f-5685-b69b" type="atLeast"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="bed7-0e89-7cb9-e771" value="1.0"/>
+                    <modifier type="set" field="b1ab-8013-c98d-af0a" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1ab-8013-c98d-af0a" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1ab-8013-c98d-af0a" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bed7-0e89-7cb9-e771" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="1c38-b9e2-af13-bc24" name="Saber de Slaanesh (requiere Marca de Slaanesh)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="90cb-fb5a-c43d-cc54" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a6dc-cee0-4e24-0d47" type="atLeast"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="0ab3-e765-7817-52bb" value="1.0"/>
+                    <modifier type="set" field="2c02-1747-ce6b-8c41" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c02-1747-ce6b-8c41" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c02-1747-ce6b-8c41" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ab3-e765-7817-52bb" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -9939,6 +9954,9 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e72d-6789-124a-3b70" type="max"/>
               </constraints>
+              <categoryLinks>
+                <categoryLink id="21ee-47d7-f381-a8a6" name="Unidad especial" hidden="false" targetId="102e-012c-5785-3354" primary="false"/>
+              </categoryLinks>
               <entryLinks>
                 <entryLink id="810b-c227-16ac-482b" name="Carro de tuskgors (Bestias)" hidden="false" collective="false" import="true" targetId="7183-6316-c27a-fa1a" type="selectionEntry"/>
               </entryLinks>
@@ -9997,6 +10015,17 @@ Slaanesh, Bestias, Sombras o Muerte. Gana el tipo de unidad Slaanesh.</descripti
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="f1bd-24f1-50e5-0897" name="Objetos mágicos" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="5013-11bb-f3f4-060b" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="5349-095e-f9d4-99f6" name="Armas mágicas (Bestias)" hidden="false" collective="false" import="true" targetId="ad61-d603-7b4e-2029" type="selectionEntryGroup"/>
+            <entryLink id="8167-41c8-02a5-70d6" name="Objetos hechizados (Bestias)" hidden="false" collective="false" import="true" targetId="470d-6a47-81f7-a272" type="selectionEntryGroup"/>
+            <entryLink id="a9e7-b7ef-3908-58f1" name="Objetos arcanos, requiere ser hechicero (Bestias)" hidden="false" collective="false" import="true" targetId="ea17-ca62-0a09-5989" type="selectionEntryGroup"/>
+            <entryLink id="f45e-1dd2-453f-1f31" name="Talismanes (Bestias)" hidden="false" collective="false" import="true" targetId="c719-006c-71a3-9e7e" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -10362,43 +10391,89 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
         <selectionEntryGroup id="e15a-ff0c-96d5-1d09" name="Saber" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="16e3-dc52-c982-8704" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1558-3546-9cbe-7f39" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="5fc6-23fa-5588-2c26" name="Saber de las Sombras" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="d128-dca9-994a-04de" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="0516-e6cf-1363-0fad" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d8b1-a0d1-6854-1ce5" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d128-dca9-994a-04de" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d128-dca9-994a-04de" type="max"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="c8a6-569d-f79b-2a52" name="Saber de la Muerte" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="062c-3a97-40c2-3c1a" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="0516-e6cf-1363-0fad" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d8b1-a0d1-6854-1ce5" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="062c-3a97-40c2-3c1a" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="062c-3a97-40c2-3c1a" type="max"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="e333-e095-21a2-1c8f" name="Saber de las Bestias" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="5c67-d820-f6e2-647e" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="0516-e6cf-1363-0fad" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d8b1-a0d1-6854-1ce5" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c67-d820-f6e2-647e" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c67-d820-f6e2-647e" type="max"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="9fd5-31eb-48c4-cf34" name="Saber de Nurgle (requiere Marca de Nurgle)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="0516-e6cf-1363-0fad" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d07b-6741-6c86-fa33" type="atLeast"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="b220-7822-5b42-c1a5" value="1.0"/>
+                    <modifier type="set" field="d3a2-142a-ab5d-10c8" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3a2-142a-ab5d-10c8" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3a2-142a-ab5d-10c8" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b220-7822-5b42-c1a5" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="ab86-4b07-32e3-0e13" name="Saber de Slaanesh (requiere Marca de Slaanesh)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="0516-e6cf-1363-0fad" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c6ed-4ca5-767f-0a32" type="atLeast"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="5f28-b9b1-2e31-ccf9" value="1.0"/>
+                    <modifier type="set" field="74dd-1ae4-1ee9-5050" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74dd-1ae4-1ee9-5050" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74dd-1ae4-1ee9-5050" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f28-b9b1-2e31-ccf9" type="min"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -10456,6 +10531,9 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a053-3d6a-25ac-5a40" type="max"/>
               </constraints>
+              <categoryLinks>
+                <categoryLink id="5a65-4aaa-2bc1-07c4" name="Unidad especial" hidden="false" targetId="102e-012c-5785-3354" primary="false"/>
+              </categoryLinks>
               <entryLinks>
                 <entryLink id="4a2a-4cac-c79c-31d3" name="Carro de tuskgors (Bestias)" hidden="false" collective="false" import="true" targetId="7183-6316-c27a-fa1a" type="selectionEntry"/>
               </entryLinks>
@@ -13221,28 +13299,6 @@ Tzeentch (en la selección de ejército cuentan como parte de la unidad, así qu
         <categoryLink id="27fe-8432-5832-1056" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="bc7e-76cd-09d5-e0f7" name="Objetos mágicos (requieren marca apropiada)" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39b7-2026-5538-1e07" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="3d25-e04b-face-8e57" name="Objetos mágicos" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e35a-618e-e412-7847" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="18ae-7a12-a228-1bf1" name="Recompensas demoníacas Khorne (Demonios)" hidden="false" collective="false" import="true" targetId="57cf-a7a4-f9b4-3fec" type="selectionEntryGroup"/>
-                <entryLink id="f194-9438-d3b9-22ff" name="Recompensas demoníacas Tzeentch (Demonios)" hidden="false" collective="false" import="true" targetId="b351-a676-a601-0d88" type="selectionEntryGroup"/>
-                <entryLink id="bfb6-dbc4-003d-60a2" name="Recompensas demoníacas Slaanesh (Demonios)" hidden="false" collective="false" import="true" targetId="144d-075f-eadb-39a2" type="selectionEntryGroup"/>
-                <entryLink id="7294-f652-9ec2-60fe" name="Recompensas demoníacas Nurgle (Demonios)" hidden="false" collective="false" import="true" targetId="ad74-9613-a14a-4d85" type="selectionEntryGroup"/>
-                <entryLink id="664d-96d5-8cd3-e31e" name="Recompensas demoníacas Caos Absoluto (Demonios)" hidden="false" collective="false" import="true" targetId="ea5a-6adb-352d-f161" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="0041-2336-d1cf-9336" name="Ocupa dos opciones de héroe" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="036d-eb50-a016-a0fd" type="max"/>
@@ -13298,42 +13354,6 @@ Tzeentch (en la selección de ejército cuentan como parte de la unidad, así qu
 Mayor pasa a ser un hechicero de nivel 2 que debe usar el saber de Tzeentch.</description>
                 </rule>
               </rules>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="f069-ef34-e060-3083" name="Nivel" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d119-ea89-a2c5-7cfa" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="06ec-8d85-da32-9bfc" type="min"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="8cf9-3848-395b-a36d" name="Nivel 2" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58d6-fcc8-782d-02b7" type="max"/>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fecc-cc8f-2ed8-c947" type="min"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-                <selectionEntryGroup id="bd11-a7d7-cb9b-fc24" name="Saber" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8384-212d-71b5-7bc1" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3937-b007-cd2c-7bf3" type="min"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="d9fd-eb29-3686-56c5" name="Saber de Tzeentch" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2bbe-a7b0-34d0-a751" type="max"/>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="905c-94fc-a83e-78ec" type="min"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="75.0"/>
               </costs>
@@ -13362,56 +13382,6 @@ a ser inmune a psicología). Mientras siga vivo, el ejército tiene +1 dado de d
 hechicero de nivel 1 o 2, a coste de 40 puntos por nivel (p.e. nivel 2 serían +80 puntos). En caso de darle algún nivel, gana el tipo Hechicero. Si es hechicero, debe usar el Saber de Nurgle. </description>
                 </rule>
               </rules>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="9af0-c3e9-050a-e5ce" name="Saber (si es hechicero)" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b234-b882-f00f-3c8d" type="max"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="b166-23d9-4ff1-120e" name="Saber de Nurgle" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9a5-fb22-466a-7236" type="max"/>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5581-98c5-2d61-f351" type="min"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-                <selectionEntryGroup id="676c-a7e0-90be-98b9" name="Nivel" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b02-632f-5a53-fc43" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2b5-2efe-4c7d-1d5d" type="min"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="122e-21ef-be87-dbda" name="Nivel 0" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6004-9822-e104-6978" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="eec6-05fa-19a9-00f4" name="Nivel 1" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="18ed-a56e-12c0-d7d8" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="4c3f-6919-4b86-71c2" name="Nivel 2" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9acf-9d08-81d9-6490" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
               </costs>
@@ -13426,56 +13396,6 @@ hechicero de nivel 1 o 2, a coste de 40 puntos por nivel (p.e. nivel 2 serían +
 primero. Puede ser hechicero de nivel 1 o 2, a coste de 40 puntos por nivel (p.e. nivel 2 serían +80 puntos). En caso de darle algún nivel, gana el tipo Hechicero. Si es hechicero, debe usar el Saber de Slaanesh. </description>
                 </rule>
               </rules>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="6608-2c56-f0ef-6ea4" name="Saber (si es hechicero)" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="514f-4e6a-e857-5ed0" type="max"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="d502-42f7-9d2b-542f" name="Saber de Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6954-32ad-fd40-953a" type="max"/>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22fa-4aca-6641-b325" type="min"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-                <selectionEntryGroup id="6768-217c-d617-3c70" name="Nivel" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6109-d6be-59ff-9868" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6867-c080-6820-6e1d" type="min"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="86a2-24f6-79ba-e4cd" name="Nivel 0" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b460-4fb4-10aa-d9b8" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="010c-286b-5ee3-fbe3" name="Nivel 1" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5082-ba63-aacd-c247" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="7c39-d503-bdea-cf9f" name="Nivel 2" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7ef-fd96-b452-81bc" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
               </costs>
@@ -13489,71 +13409,277 @@ primero. Puede ser hechicero de nivel 1 o 2, a coste de 40 puntos por nivel (p.e
                   <description>Puede ser hechicero de nivel 1 o 2, a coste de 40 puntos por nivel (p.e. nivel 2 serían +80 puntos). En caso de darle algún nivel, gana el tipo Hechicero. Si es hechicero, puede elegir Saber de las Sombras, Muerte o Fuego.</description>
                 </rule>
               </rules>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="0b99-7b68-178a-6008" name="Saber (si es hechicero)" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0266-3e25-a355-a436" type="max"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="7d1c-45db-4b37-e767" name="Saber de las Sombras" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe7b-e7fe-03f0-adb5" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="946c-af1a-2138-0165" name="Saber de la Muerte" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd44-2e06-0af0-0ebc" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="dd5f-cd11-8aad-e773" name="Saber del Fuego" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e752-5f53-2bd7-4281" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-                <selectionEntryGroup id="e0ef-0854-c830-e573" name="Nivel" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d546-888c-a5df-a735" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b752-07ee-63a7-125b" type="min"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="1d3e-2b12-0998-421d" name="Nivel 0" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="684d-cfa4-b908-d9ff" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="acc9-8240-c39f-e09c" name="Nivel 1" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f3d-4888-17b7-caa3" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="a39d-08a9-75b1-5fd5" name="Nivel 2" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fac-e1d0-5f45-1918" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3a0b-c2b2-361b-da99" name="Recompensas Demoníacas" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="6b22-07a7-f3c7-eec4" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="48f8-dc63-059c-1565" name="Recompensas demoníacas Khorne (Demonios)" hidden="false" collective="false" import="true" targetId="57cf-a7a4-f9b4-3fec" type="selectionEntryGroup"/>
+            <entryLink id="b5c1-5abf-2ac7-0fd6" name="Recompensas demoníacas Tzeentch (Demonios)" hidden="false" collective="false" import="true" targetId="b351-a676-a601-0d88" type="selectionEntryGroup"/>
+            <entryLink id="d18d-a300-4fe8-7a81" name="Recompensas demoníacas Slaanesh (Demonios)" hidden="false" collective="false" import="true" targetId="144d-075f-eadb-39a2" type="selectionEntryGroup"/>
+            <entryLink id="0251-2595-8379-9cc1" name="Recompensas demoníacas Nurgle (Demonios)" hidden="false" collective="false" import="true" targetId="ad74-9613-a14a-4d85" type="selectionEntryGroup"/>
+            <entryLink id="2ac4-b124-c04c-fa27" name="Recompensas demoníacas Caos Absoluto (Demonios)" hidden="false" collective="false" import="true" targetId="ea5a-6adb-352d-f161" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="e68a-6ea1-01a0-1173" name="Nivel de hechicero" hidden="false" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a511-9739-e5a1-d03a" type="atLeast"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="1774-bba7-930a-33cb" value="0.0"/>
+                <modifier type="set" field="hidden" value="true"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba51-1ab0-467e-ba24" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1774-bba7-930a-33cb" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="15c7-add8-99d8-b4ff" name="Nivel 1" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6880-c919-f40e-f89d" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7632-4293-d084-719c" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="948d-b18f-df8a-d647" name="Nivel 2" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3e5-93d0-86b4-47e7" type="atLeast"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="53ea-00f4-9046-81ff" value="0.0"/>
+                    <modifier type="set" field="1edb-54b1-49ea-0ea2" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4069-b4c8-458d-2515" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1edb-54b1-49ea-0ea2" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="95cf-9dcf-bbf7-629b" name="Saber Mágico" hidden="false" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a511-9739-e5a1-d03a" type="atLeast"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="fa49-220c-884d-578c" value="0.0"/>
+                <modifier type="set" field="hidden" value="true"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f2a-895d-0e0f-3041" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa49-220c-884d-578c" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="396f-aae3-c20b-4d4d" name="Saber de Tzeench" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8cf4-4df7-5200-606e" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="948d-b18f-df8a-d647" type="atLeast"/>
+                            <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="15c7-add8-99d8-b4ff" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="1d8b-2fc6-8d47-7413" value="1.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                    <modifier type="set" field="d6ec-5da1-6114-2c7a" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d8b-2fc6-8d47-7413" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6ec-5da1-6114-2c7a" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bf13-5c79-0383-4b02" name="Saber de Slaneesh" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="119e-6cf6-7b8a-ed2a" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="948d-b18f-df8a-d647" type="atLeast"/>
+                            <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="15c7-add8-99d8-b4ff" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="756c-264b-5762-65c0" value="1.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                    <modifier type="set" field="f397-fb5e-171f-06dc" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f397-fb5e-171f-06dc" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="756c-264b-5762-65c0" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7815-f41a-c208-3b93" name="Saber de Nurgle" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="653e-d63b-3834-f594" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="948d-b18f-df8a-d647" type="atLeast"/>
+                            <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="15c7-add8-99d8-b4ff" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="da9b-bf59-e38d-c36a" value="1.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                    <modifier type="set" field="25b5-9454-ab36-c0a0" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da9b-bf59-e38d-c36a" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25b5-9454-ab36-c0a0" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="40c1-b115-f1b6-bc97" name="Saber de las Sombras" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bd5-5ba6-4169-d473" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="948d-b18f-df8a-d647" type="atLeast"/>
+                            <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="15c7-add8-99d8-b4ff" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false"/>
+                    <modifier type="set" field="8f37-0dde-9419-fe59" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f37-0dde-9419-fe59" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9b59-95db-3692-0f4c" name="Saber del Fuego" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bd5-5ba6-4169-d473" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="948d-b18f-df8a-d647" type="atLeast"/>
+                            <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="15c7-add8-99d8-b4ff" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="7646-54ca-6f03-313f" value="1.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7646-54ca-6f03-313f" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="baa6-df76-f125-e91a" name="Saber de  la Muerte" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bd5-5ba6-4169-d473" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="948d-b18f-df8a-d647" type="atLeast"/>
+                            <condition field="selections" scope="2362-b1a6-1f66-12b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="15c7-add8-99d8-b4ff" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="aaf0-5e10-0528-643e" value="1.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aaf0-5e10-0528-643e" type="max"/>
+              </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
@@ -13606,28 +13732,6 @@ primero. Puede ser hechicero de nivel 1 o 2, a coste de 40 puntos por nivel (p.e
         <categoryLink id="3045-8781-4701-c40d" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="9c87-e319-bb07-0664" name="Objetos mágicos (requieren marca apropiada)" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed1f-4884-fa81-7e57" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="8df7-a170-9655-d926" name="Objetos mágicos" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="53ea-00f4-9046-81ff" scope="parent" value="25.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="eee2-05c1-95eb-69c1" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="f2a6-5de7-bcde-19a6" name="Recompensas demoníacas Khorne (Demonios)" hidden="false" collective="false" import="true" targetId="57cf-a7a4-f9b4-3fec" type="selectionEntryGroup"/>
-                <entryLink id="77f5-e549-0ae0-f016" name="Recompensas demoníacas Slaanesh (Demonios)" hidden="false" collective="false" import="true" targetId="144d-075f-eadb-39a2" type="selectionEntryGroup"/>
-                <entryLink id="feb3-523a-f364-37d1" name="Recompensas demoníacas Tzeentch (Demonios)" hidden="false" collective="false" import="true" targetId="b351-a676-a601-0d88" type="selectionEntryGroup"/>
-                <entryLink id="6045-09be-fe69-f0c2" name="Recompensas demoníacas Nurgle (Demonios)" hidden="false" collective="false" import="true" targetId="ad74-9613-a14a-4d85" type="selectionEntryGroup"/>
-                <entryLink id="beef-f6dc-513f-bf20" name="Recompensas demoníacas Caos Absoluto (Demonios)" hidden="false" collective="false" import="true" targetId="ea5a-6adb-352d-f161" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="bfb6-1dc2-12e6-44a5" name="Portaestandarte de Batalla" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8879-caac-cb43-dde2" type="max"/>
@@ -13871,11 +13975,6 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
                 <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0aea-9db3-726a-bfdc" type="atLeast"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="2c8f-39b8-b1bd-5a1f" value="1.0">
-              <conditions>
-                <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d1cf-6b29-499f-f827" type="atLeast"/>
-              </conditions>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b37-893b-01a6-5d19" type="max"/>
@@ -13943,9 +14042,21 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
             <selectionEntry id="2bff-563c-61d1-9bb8" name="Saber de las Sombras" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe9b-7adb-935a-f230" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe9b-7adb-935a-f230" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c1c1-f4c6-02e4-f55d" type="atLeast"/>
+                            <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-b9cc-214e-165d" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="0ffc-dc1f-0286-4d32" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
@@ -13962,9 +14073,21 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
             <selectionEntry id="bf2a-0c37-c986-24d2" name="Saber de la Muerte" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe9b-7adb-935a-f230" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe9b-7adb-935a-f230" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c1c1-f4c6-02e4-f55d" type="atLeast"/>
+                            <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-b9cc-214e-165d" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="1398-b964-4eb5-5492" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
@@ -13981,9 +14104,21 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
             <selectionEntry id="dab0-8bbf-40a7-4766" name="Saber del Fuego" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe9b-7adb-935a-f230" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe9b-7adb-935a-f230" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c1c1-f4c6-02e4-f55d" type="atLeast"/>
+                            <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-b9cc-214e-165d" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="1f0e-f082-7a2f-c1f5" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
@@ -14000,9 +14135,21 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
             <selectionEntry id="dbff-8db2-8393-8c10" name="Saber de Tzeench" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d1cf-6b29-499f-f827" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d1cf-6b29-499f-f827" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c1c1-f4c6-02e4-f55d" type="atLeast"/>
+                            <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-b9cc-214e-165d" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="f630-8cab-ab30-a937" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
@@ -14021,9 +14168,21 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
             <selectionEntry id="507c-f7a2-a6d7-b383" name="Saber de Slaanesh" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="94e1-f887-6d95-6235" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="94e1-f887-6d95-6235" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c1c1-f4c6-02e4-f55d" type="atLeast"/>
+                            <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-b9cc-214e-165d" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="a46d-ae9a-6ee3-9505" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
@@ -14042,9 +14201,21 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
             <selectionEntry id="dc14-0190-eec0-1ec0" name="Saber de Nurgle" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="352c-5cad-b57b-867e" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="352c-5cad-b57b-867e" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c1c1-f4c6-02e4-f55d" type="atLeast"/>
+                            <condition field="selections" scope="be67-8976-1488-a8ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-b9cc-214e-165d" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="293f-9456-f130-4c51" value="1.0"/>
                     <modifier type="set" field="hidden" value="false"/>
@@ -14061,6 +14232,18 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="a5d9-46ea-e26d-2898" name="Objetos mágicos" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="25.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="786b-e773-4e73-2f4f" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="3d91-c2d6-1597-1f3b" name="Recompensas demoníacas Khorne (Demonios)" hidden="false" collective="false" import="true" targetId="57cf-a7a4-f9b4-3fec" type="selectionEntryGroup"/>
+            <entryLink id="4d03-d6da-2485-68ed" name="Recompensas demoníacas Slaanesh (Demonios)" hidden="false" collective="false" import="true" targetId="144d-075f-eadb-39a2" type="selectionEntryGroup"/>
+            <entryLink id="bcad-6f29-c31f-1287" name="Recompensas demoníacas Tzeentch (Demonios)" hidden="false" collective="false" import="true" targetId="b351-a676-a601-0d88" type="selectionEntryGroup"/>
+            <entryLink id="825d-879d-841c-f110" name="Recompensas demoníacas Nurgle (Demonios)" hidden="false" collective="false" import="true" targetId="ad74-9613-a14a-4d85" type="selectionEntryGroup"/>
+            <entryLink id="277c-a09c-ad13-e535" name="Recompensas demoníacas Caos Absoluto (Demonios)" hidden="false" collective="false" import="true" targetId="ea5a-6adb-352d-f161" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -14836,28 +15019,6 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
         <categoryLink id="cd67-397a-5d07-0319" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="224e-d44d-24b2-fb21" name="Objetos mágicos (requieren marca apropiada)" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8696-555e-3804-ba46" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="5f6a-8a52-f653-2d7a" name="Objetos mágicos" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="53ea-00f4-9046-81ff" scope="parent" value="100.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="be13-c5a1-a851-59ac" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="5352-5f8a-25c6-298b" name="Recompensas demoníacas Khorne (Demonios)" hidden="false" collective="false" import="true" targetId="57cf-a7a4-f9b4-3fec" type="selectionEntryGroup"/>
-                <entryLink id="4929-baa3-ba28-b81d" name="Recompensas demoníacas Slaanesh (Demonios)" hidden="false" collective="false" import="true" targetId="144d-075f-eadb-39a2" type="selectionEntryGroup"/>
-                <entryLink id="4937-9f84-f2c4-39db" name="Recompensas demoníacas Tzeentch (Demonios)" hidden="false" collective="false" import="true" targetId="b351-a676-a601-0d88" type="selectionEntryGroup"/>
-                <entryLink id="6ead-9b38-9a33-1f8d" name="Recompensas demoníacas Nurgle (Demonios)" hidden="false" collective="false" import="true" targetId="ad74-9613-a14a-4d85" type="selectionEntryGroup"/>
-                <entryLink id="a48c-90f4-97ff-bed2" name="Recompensas demoníacas Caos Absoluto (Demonios)" hidden="false" collective="false" import="true" targetId="ea5a-6adb-352d-f161" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="4db1-0cd8-7c32-1117" name="Volar" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4444-eb82-84c7-34c2" type="max"/>
@@ -14904,42 +15065,6 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
 saber de Tzeentch. Gana el tipo de unidad Tzeentch y el tipo de unidad Hechicero.</description>
                 </rule>
               </rules>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="1209-e827-427b-a51c" name="Nivel" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e276-d52f-b932-48db" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afa6-88db-ec40-f45a" type="min"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="e08b-8d48-ea5b-fbc6" name="Nivel 4" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7008-f4f7-2b8f-d37b" type="max"/>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dba5-526f-5bbc-f81f" type="min"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-                <selectionEntryGroup id="1615-2ce4-76f7-c885" name="Saber" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc43-1ba0-01bf-f5b9" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cd7-5671-6c06-e0de" type="min"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="2f0f-31c7-d7aa-d83d" name="Saber de Tzeentch" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="457c-bf25-82c6-451f" type="max"/>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9770-e0fd-4969-e6df" type="min"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="150.0"/>
               </costs>
@@ -14968,72 +15093,6 @@ Asesina (pese a ser inmune a psicología). Mientras siga vivo, el ejército tien
 hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e. nivel 2 serían +80 puntos). En caso de darle algún nivel, gana el tipo Hechicero. Si es hechicero, debe usar el Saber de Nurgle.</description>
                 </rule>
               </rules>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="9e2d-b495-776a-e639" name="Saber (si es hechicero)" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="111d-4555-edfa-bae1" type="max"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="9bab-487d-34b8-3bc2" name="Saber de Nurgle" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f99f-e29f-9fe2-0c6d" type="max"/>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dde-9784-47f8-0848" type="min"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-                <selectionEntryGroup id="656d-73cd-801f-0b7c" name="Nivel" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73a6-7490-127d-ca09" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c634-52d7-332a-3141" type="min"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="08a7-cb3f-2d5f-3a63" name="Nivel 0" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a8c-847f-80d1-ce3a" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="87e9-b888-982b-09e0" name="Nivel 3" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c548-3d9a-6a62-c844" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="120.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="edf3-e4f3-405e-3b0b" name="Nivel 1" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7a5-e68a-dcc1-cc30" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="c9f4-2a24-553f-b08b" name="Nivel 2" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc82-40bc-d19c-fe7b" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="94c5-43c3-f4fb-c363" name="Nivel 4" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e0b-2c5f-204c-3b36" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="160.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
               </costs>
@@ -15048,72 +15107,6 @@ hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e. nivel 2 serían +
 primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e. nivel 2 serían +80 puntos). En caso de darle algún nivel, gana el tipo Hechicero. Si es hechicero, debe usar el Saber de Slaanesh. </description>
                 </rule>
               </rules>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="082b-c337-1a6a-b928" name="Saber (si es hechicero)" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70ef-1f33-4e93-7cf3" type="max"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="7b13-75ce-828c-e4d7" name="Saber de Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="055b-4788-b5cd-eb20" type="max"/>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bf0-baee-5225-e837" type="min"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-                <selectionEntryGroup id="cdb7-c6a3-6833-aa8c" name="Nivel" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50e6-0146-ab6c-08cc" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1164-f9a9-b36b-e31f" type="min"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="05a3-7f4b-1bb5-f534" name="Nivel 0" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2bf-2492-f027-abde" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="32ce-52f0-7008-2271" name="Nivel 3" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f3e-3c05-adbb-bdb3" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="120.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="b03a-a39d-5a25-90e5" name="Nivel 1" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0c5-2be0-22dc-dd06" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="d885-58c6-45b0-d72f" name="Nivel 2" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="276e-b0ee-44e3-4965" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="f016-21c9-3a8c-255f" name="Nivel 4" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2259-6a80-f81b-5acd" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="160.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
               </costs>
@@ -15128,87 +15121,322 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
 (p.e. nivel 2 serían +80 puntos). En caso de darle algún nivel, gana el tipo Hechicero. Si es hechicero, puede elegir Saber de las Sombras, Muerte o Fuego.</description>
                 </rule>
               </rules>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="a835-cca7-6003-dd26" name="Saber (si es hechicero)" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7815-b8bf-3779-69c7" type="max"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="c4ab-45f9-1864-bd5f" name="Saber de las Sombras" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a16-fe19-e660-eba9" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="e551-c7a0-f8db-7bfe" name="Saber de la Muerte" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d96-969e-0857-7bdf" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="1185-abcb-f7c1-b21d" name="Saber del Fuego" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7360-2bb7-7d79-2c6e" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-                <selectionEntryGroup id="ffa4-1d41-1ab8-7743" name="Nivel" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fb6-46c9-52e8-8294" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f13-f2b3-d889-9740" type="min"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="46ee-87f2-e767-a2b2" name="Nivel 0" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a9e-a904-55f4-5b38" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="40e1-6502-ee2a-71d2" name="Nivel 3" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9af6-0992-5337-cfbe" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="120.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="cd9a-8bc9-6948-21b7" name="Nivel 1" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4056-e7c5-c17d-1a08" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="c8ea-851b-aa96-88aa" name="Nivel 2" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c19f-c757-007f-de8a" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="a5c6-c03a-c6d5-da6f" name="Nivel 4" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e68-2b27-b5f5-f39f" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="160.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="db8a-29bb-cf68-643e" name="Objetos mágicos" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="100.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9185-0a0c-90c6-9da5" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="8d0a-fc63-5f5c-abce" name="Recompensas demoníacas Khorne (Demonios)" hidden="false" collective="false" import="true" targetId="57cf-a7a4-f9b4-3fec" type="selectionEntryGroup"/>
+            <entryLink id="43f8-62d6-3c01-e615" name="Recompensas demoníacas Slaanesh (Demonios)" hidden="false" collective="false" import="true" targetId="144d-075f-eadb-39a2" type="selectionEntryGroup"/>
+            <entryLink id="5306-a417-5e65-033a" name="Recompensas demoníacas Tzeentch (Demonios)" hidden="false" collective="false" import="true" targetId="b351-a676-a601-0d88" type="selectionEntryGroup"/>
+            <entryLink id="ed2a-f13a-3e07-dffa" name="Recompensas demoníacas Nurgle (Demonios)" hidden="false" collective="false" import="true" targetId="ad74-9613-a14a-4d85" type="selectionEntryGroup"/>
+            <entryLink id="4186-a727-41f0-7e1b" name="Recompensas demoníacas Caos Absoluto (Demonios)" hidden="false" collective="false" import="true" targetId="ea5a-6adb-352d-f161" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="5030-214f-f0d6-df6f" name="Nivel de hechicero" hidden="false" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="173f-299d-f1e4-95cc" type="atLeast"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="745c-9d5c-08f1-e890" value="0.0"/>
+                <modifier type="set" field="hidden" value="true"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3789-91e9-59d1-9397" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="745c-9d5c-08f1-e890" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="b8bd-d012-d200-8eef" name="Nivel 1" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e91-e32a-e37d-91da" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ebe-3859-072a-bf4d" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="926b-288b-b899-e21d" name="Nivel 2" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9dd-0642-b2af-0c0e" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7dea-a3c0-2ac0-914a" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="41f0-3299-4f35-b7f8" name="Nivel 3" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5a5-9727-6ba7-80c3" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d50-3a36-e423-3616" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="120.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="256f-eed1-d898-a9fb" name="Nivel 4" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ee2d-8d07-2ac7-3a52" type="atLeast"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="53ea-00f4-9046-81ff" value="0.0"/>
+                    <modifier type="set" field="7cf3-487b-7078-0b44" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8960-5d60-eec5-a3f3" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7cf3-487b-7078-0b44" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="160.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="cbdf-e77c-83f1-cd5d" name="Saber Mágico" hidden="false" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41f0-3299-4f35-b7f8" type="atLeast"/>
+                    <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="926b-288b-b899-e21d" type="atLeast"/>
+                    <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b8bd-d012-d200-8eef" type="atLeast"/>
+                    <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="256f-eed1-d898-a9fb" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifiers>
+                <modifier type="set" field="f934-fed1-e0e0-74e5" value="1.0"/>
+              </modifiers>
+            </modifierGroup>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="173f-299d-f1e4-95cc" type="atLeast"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="0176-9301-941e-5bd4" value="0.0"/>
+                <modifier type="set" field="hidden" value="true"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f934-fed1-e0e0-74e5" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0176-9301-941e-5bd4" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="8cfc-5903-6af6-7aec" name="Saber de Tzeench" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ee2d-8d07-2ac7-3a52" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41f0-3299-4f35-b7f8" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="926b-288b-b899-e21d" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b8bd-d012-d200-8eef" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="256f-eed1-d898-a9fb" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="b341-e9e1-b355-1a3b" value="1.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                    <modifier type="set" field="239d-4ff9-8be8-3a4d" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b341-e9e1-b355-1a3b" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="239d-4ff9-8be8-3a4d" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="fa50-96d4-e56b-0385" name="Saber de Slaneesh" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="53d0-89ee-c10c-be61" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41f0-3299-4f35-b7f8" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="926b-288b-b899-e21d" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b8bd-d012-d200-8eef" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="256f-eed1-d898-a9fb" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="5d51-f83d-b663-295a" value="1.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                    <modifier type="set" field="ca9c-72c3-2843-1238" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca9c-72c3-2843-1238" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d51-f83d-b663-295a" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="481d-5414-f47a-ecc8" name="Saber de Nurgle" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9017-652e-2002-1ccc" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41f0-3299-4f35-b7f8" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="926b-288b-b899-e21d" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b8bd-d012-d200-8eef" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="256f-eed1-d898-a9fb" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="21e4-e99d-55ef-5e05" value="1.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                    <modifier type="set" field="9531-92d2-f85c-3469" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21e4-e99d-55ef-5e05" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9531-92d2-f85c-3469" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a056-a4bb-846e-f320" name="Saber de las Sombras" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d491-bdee-8e85-0f38" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41f0-3299-4f35-b7f8" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="926b-288b-b899-e21d" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b8bd-d012-d200-8eef" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="256f-eed1-d898-a9fb" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false"/>
+                    <modifier type="set" field="bc53-001b-5657-1d9a" value="1.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc53-001b-5657-1d9a" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="85af-d000-dee1-ccc6" name="Saber del Fuego" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d491-bdee-8e85-0f38" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41f0-3299-4f35-b7f8" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="926b-288b-b899-e21d" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b8bd-d012-d200-8eef" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="256f-eed1-d898-a9fb" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="8dbf-9d3d-f2af-7ef2" value="1.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8dbf-9d3d-f2af-7ef2" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b562-4bb0-7ea4-7f49" name="Saber de  la Muerte" hidden="true" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d491-bdee-8e85-0f38" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41f0-3299-4f35-b7f8" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="926b-288b-b899-e21d" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b8bd-d012-d200-8eef" type="atLeast"/>
+                            <condition field="selections" scope="be27-824d-0c88-f52e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="256f-eed1-d898-a9fb" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="7470-2c8e-3225-0b7a" value="1.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7470-2c8e-3225-0b7a" type="max"/>
+              </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
@@ -15263,31 +15491,6 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
       <categoryLinks>
         <categoryLink id="98a0-b874-e5a8-3fb4" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="84e8-fc0f-d467-75ee" name="Objetos mágicos" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aea7-bc9c-e705-b3cf" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="bb5b-e750-1323-f614" name="Objetos mágicos" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="95cc-8599-0268-d6b4" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="06fa-cbce-64bb-3f97" name="Armas mágicas (Mortales)" hidden="false" collective="false" import="true" targetId="6927-005d-ecb9-f0dd" type="selectionEntryGroup"/>
-                <entryLink id="dd0d-bf58-f56a-032b" name="Objetos arcanos, requiere ser hechicero (Mortales)" hidden="false" collective="false" import="true" targetId="f4c0-5c3e-c96d-de04" type="selectionEntryGroup"/>
-                <entryLink id="2662-efd4-4c5d-e6d7" name="Talismanes (Mortales)" hidden="false" collective="false" import="true" targetId="a5cc-fb44-358f-1d04" type="selectionEntryGroup"/>
-                <entryLink id="9e48-1681-4f89-b870" name="Objetos hechizados (Mortales)" hidden="false" collective="false" import="true" targetId="775d-99ff-b08c-b77c" type="selectionEntryGroup"/>
-                <entryLink id="090d-63ca-eda0-56fa" name="Mutaciones del caos" hidden="false" collective="false" import="true" targetId="0e1c-bef6-ff0d-5feb" type="selectionEntryGroup"/>
-                <entryLink id="028b-5fa8-4378-b900" name="Armaduras mágicas (Mortales)" hidden="false" collective="false" import="true" targetId="f462-dff7-549c-2db6" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="5b02-3834-6232-2240" name="Nivel de Hechicero" hidden="false" collective="false" import="true">
           <constraints>
@@ -15316,27 +15519,49 @@ primero. Puede ser hechicero de nivel 1 a 4, a coste de 40 puntos por nivel (p.e
         <selectionEntryGroup id="df11-c920-1519-43d1" name="Saber" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82d5-e88d-baab-1f26" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72f5-c38f-1356-9bde" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="1679-3801-16e7-d73e" name="Saber de las Sombras" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="a879-00bb-a9e5-794a" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="3755-4600-355e-6fcf" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="512d-9b4c-1962-63fa" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a879-00bb-a9e5-794a" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a879-00bb-a9e5-794a" type="max"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="576f-95bb-93a4-dee0" name="Saber de la Muerte" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="abd3-7193-8f9e-2d7a" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="3755-4600-355e-6fcf" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="512d-9b4c-1962-63fa" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abd3-7193-8f9e-2d7a" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abd3-7193-8f9e-2d7a" type="max"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="eb35-cdf7-7dee-855e" name="Saber del Fuego" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="6b21-f50d-0913-1d93" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="3755-4600-355e-6fcf" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="512d-9b4c-1962-63fa" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b21-f50d-0913-1d93" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b21-f50d-0913-1d93" type="max"/>
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -15558,6 +15783,19 @@ Muerte o Fuego. Puede ir montado en Diablo de Slaanesh (+40). Gana el tipo de un
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ecd0-fdc4-71d7-7c27" name="Objetos mágicos" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="939b-0ff7-3473-9c51" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="3eb6-9df2-0d4d-cf3b" name="Armas mágicas (Mortales)" hidden="false" collective="false" import="true" targetId="6927-005d-ecb9-f0dd" type="selectionEntryGroup"/>
+            <entryLink id="4d10-0008-27f5-9b5c" name="Objetos arcanos, requiere ser hechicero (Mortales)" hidden="false" collective="false" import="true" targetId="f4c0-5c3e-c96d-de04" type="selectionEntryGroup"/>
+            <entryLink id="54ff-ebc2-6e5f-c143" name="Talismanes (Mortales)" hidden="false" collective="false" import="true" targetId="a5cc-fb44-358f-1d04" type="selectionEntryGroup"/>
+            <entryLink id="b504-7f6e-888f-bb88" name="Objetos hechizados (Mortales)" hidden="false" collective="false" import="true" targetId="775d-99ff-b08c-b77c" type="selectionEntryGroup"/>
+            <entryLink id="82a4-ec54-66a1-c7cd" name="Mutaciones del caos" hidden="false" collective="false" import="true" targetId="0e1c-bef6-ff0d-5feb" type="selectionEntryGroup"/>
+            <entryLink id="46cc-86a5-22a0-3b4e" name="Armaduras mágicas (Mortales)" hidden="false" collective="false" import="true" targetId="f462-dff7-549c-2db6" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>

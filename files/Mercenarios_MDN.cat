@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7ab5-64c7-4c6f-e0e1" name="Mercenarios MDN" revision="4" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7ab5-64c7-4c6f-e0e1" name="Mercenarios MDN" revision="5" battleScribeVersion="2.03" authorName="Aleix Paradell" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="4e39-0109-f7ec-5785" name="Mercenarios MDN 2020"/>
   </publications>
@@ -741,6 +741,17 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
       </costs>
     </selectionEntry>
     <selectionEntry id="94c7-ec6f-b870-c3b0" name="Pagador" publicationId="4e39-0109-f7ec-5785" page="14" hidden="false" collective="false" import="true" type="model">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4d44-5df3-016c-425a" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="24f4-4c94-922d-699c" value="0.0"/>
+            <modifier type="set" field="426b-72c0-47cc-0f58" value="0.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24f4-4c94-922d-699c" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="426b-72c0-47cc-0f58" type="min"/>
@@ -2093,16 +2104,6 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
       <categoryLinks>
         <categoryLink id="a9f1-1b5b-a309-b954" name="New CategoryLink" hidden="false" targetId="ba68-224b-3224-a908" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="7211-6362-c7de-dbfb" name="Grupo de mando" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec6a-df28-f6d8-a4b2" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="e14d-1a5f-08ed-a1f3" name="Grupo de Mando" hidden="false" collective="false" import="true">
           <selectionEntries>
@@ -2130,9 +2131,15 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
                 <selectionEntryGroup id="fee1-f7bc-a98d-dccd" name="Portaestandarte mágico" hidden="true" collective="false" import="true">
                   <modifierGroups>
                     <modifierGroup>
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5540-dc89-8d06-ed09" type="atLeast"/>
-                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5540-dc89-8d06-ed09" type="atLeast"/>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5aa4-e114-997f-2750" type="atLeast"/>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b551-cdfd-c6cc-df91" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                       <modifiers>
                         <modifier type="set" field="hidden" value="false"/>
                         <modifier type="set" field="ad75-d33c-936f-2312" value="1.0"/>
@@ -2710,9 +2717,15 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
                 <selectionEntryGroup id="7795-4428-9da8-b3d0" name="Portaestandarte mágico" hidden="true" collective="false" import="true">
                   <modifierGroups>
                     <modifierGroup>
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5540-dc89-8d06-ed09" type="atLeast"/>
-                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5aa4-e114-997f-2750" type="atLeast"/>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b551-cdfd-c6cc-df91" type="atLeast"/>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5540-dc89-8d06-ed09" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                       <modifiers>
                         <modifier type="set" field="hidden" value="false"/>
                         <modifier type="set" field="29a8-f980-24d3-7033" value="1.0"/>
@@ -6560,6 +6573,1232 @@ su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Giga
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="325.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="925b-404b-baf7-7d9e" name="Bertha Bestraufrung" publicationId="4e39-0109-f7ec-5785" page="33" hidden="false" collective="false" import="true" type="unit">
+      <comment>Gran Matriarca de las Hermanas de Sigmar</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1de-1357-62f0-73b8" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9800-971a-eabf-b02d" name="Bertha Bestraufrung" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"> Infantería, Humano, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="c127-0f21-51cc-1592" name="Martillos de Sigmar" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Dos Armas de Mano.  (para un total de 3 ataques)</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del portador</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Además, cuando carga obtiene un +1 a las tiradas para impactar y golpea con F5.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="8820-d783-500e-4f3b" name="Matriarca" hidden="false">
+          <description> Bertha sólo se puede unir a una unidad de Hermanas de Sigmar. Si hay una unidad de Hermanas de Sigmar en el ejército, Bertha debe desplegar en dicha unidad y no puede abandonarla de forma voluntaria.</description>
+        </rule>
+        <rule id="b9ae-28f8-9a64-61d7" name="Bendición" hidden="false">
+          <description>Mientras Bertha siga viva, el ejército tiene un dado extra de Dispersión.</description>
+        </rule>
+        <rule id="ead7-963d-1a56-ce59" name="Furia Justiciera" hidden="false">
+          <description>Bertha odia a las miniaturas de tipo Caos, Skaven y No Muertos (incluso aunque sea Inmune a psicología por algún hechizo, efecto o regla).</description>
+        </rule>
+        <rule id="eb99-eed0-3858-12ca" name="Plegarias a Sigmar" hidden="false">
+          <description>En cada fase de magia, si Bertha no está huyendo puede elegir una única de las siguientes Plegarias y recitarla. Debes declarar qué plegaria y sobre qué objetivo; la Plegaria se considera un objeto portahechizos de nivel de energía 3, que el oponente puede intentar dispersar. Si no la dispersa, tiene efecto automáticamente. Ten en cuenta que se trata como cualquier otro objeto portahechizos (así que puede usarse Resistencia a la Magia si se designa como objetivo una unidad enemiga con dicha regla, etc). Aunque se lancen en la fase de magia, Bertha nunca se considera de tipo Hechicero ni mago (y no pueden “olvidar” las Plegarias). Estas son las Plegarias a Sigmar disponibles:
+
+- Martillo de Sigmar. Bertha repite las tiradas para Herir hasta que la Plegaria se disperse o Bertha lance otra Plegaria. - Armadura de Fe. Bertha obtiene tirada de salvación especial de 5+ hasta que la Plegaria se disperse o Bertha lance otra Plegaria.
+- Manos Sanadoras. Bertha se cura una herida.
+- Alma de fuego. Coloca la plantilla grande (12cm) centrada en Bertha. Todas las miniaturas enemigas de tipo Demonio o No Muerto reciben un impacto de F4 sin tirada de salvación por armadura posible.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="33f1-3b6b-743a-d23d" name="Armadura de Gromril" hidden="false" targetId="34cf-32b5-8116-5e1d" type="profile"/>
+        <infoLink id="e141-d4ea-0a0e-3d73" name="Tozudez" hidden="false" targetId="ad33-61eb-3490-bb38" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2825-0469-b9d1-4e7d" name="Personaje Especial" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="08b7-489c-5921-bea4" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="81b6-97d3-2672-0442" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="150.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b551-cdfd-c6cc-df91" name="Borgio el Sitiador" publicationId="4e39-0109-f7ec-5785" page="35" hidden="false" collective="false" import="true" type="unit">
+      <comment>Príncipe de Miragliano</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9413-16f9-8d6a-9e96" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="5dd0-c643-8456-6b9d" name="Borgio el Sitiador" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">5</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">2+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">5+</characteristic>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería, Humano, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="c8c7-7891-5dbc-f092" name="Maza del Poder" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>Borgio blande una pesada maza construida con la bala de cañón que no logró matarle en el asedio a Re- mas y que acabó incrustada en la placa pectoral de su armadura. Borgio consideró que la bala era un talismán de buena suerte, e hizo que le fabricaran la maza.</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Todas las tiradas para impactar que Borgio haga con la Maza y saquen un 6 deberán resolverse con fuerza 10. Borgio puede elegir cada turno si lucha con Lanza de caballería o con la Maza de Poder</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="522b-16e1-ba0c-99c6" name="Armadura de bronce bruñido" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+          <comment>Ésta es la armadura que llevaba Borgio cuando fue impactado por la bala de cañón durante el asedio a Remas. La armadura fue forjada en Miragliano utilizando estatuas procedentes de las Marismas Enfermizas. Nadie sabe a qué dioses representaban o qué magia contenía el metal, pero es evidente que la armadura es formidable. </comment>
+          <characteristics>
+            <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20"> Armadura pesada (Tirada de salvación por armadura de 5+). </characteristic>
+            <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Además, proporciona a Borgio una tirada de salvación especial de 5+.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2da2-d750-1809-aed7" name="Yelmo de la Máscara Monstruosa. " hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Borgio posee un yelmo grotesco con una feroz cara esculpida en él. </comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Causa Miedo</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="8a6f-5718-19a9-30c9" name="Difícil de matar" hidden="false">
+          <description>En muchas ocasiones pareció caer en combate. Sin embargo, parecía desafiar a la muerte en su cita con ella una y otra vez, aumentando su impresionante reputación. Si Borgio muere, al final de la fase donde haya muerto lanza 1D6; con 4+ vuelve en pie con una herida. Esto sólo tiene efecto si se le ha hecho una (o más) heridas; si se ve eliminado del juego por algún efecto o regla (p.e. el Gigante se lo guarda), o si es atrapado en una persecución, o si muere por un Golpe Letal, o es retirado directamente como baja, no tiene efecto (no puede hacer la tirada).</description>
+        </rule>
+        <rule id="10e6-cc24-28c5-2454" name="General muy apreciado" hidden="false">
+          <description>La distancia a la que las tropas amigas pueden usar el Liderazgo de Borgio esde 45cm en  vez de los 30cm habituales.</description>
+        </rule>
+        <rule id="25c7-3871-c42f-5e07" name="Príncipe Mercader" hidden="false">
+          <description> Borgio es el Príncipe Mercader de Miragliano, por lo que una única unidad de Condottieri o de Piqueros del ejército puede llevar un Estandarte Mágico de hasta 50 puntos. Dicha unidad no puede ser un Regimiento de Renombre.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="caf3-71b7-42a0-d6ae" name="Lanza de caballería" hidden="false" targetId="5bcd-ff0b-d571-38d0" type="profile"/>
+        <infoLink id="8884-4d24-757e-65a2" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="8c7a-2502-3984-020e" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="e57b-3031-7a07-bec1" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="712f-d9b9-2582-5d37" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="ab65-e7bb-4712-ae84" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="069f-9ced-5053-d16b" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b2c-c344-196d-994f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="955f-3d7c-c2a5-6cba" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="40af-b29d-356f-098c" name="Caballo de guerra con barda" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51cd-996a-050c-db8f" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab84-8760-77ef-6243" type="min"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="352f-6c24-9942-a284" name="Caballo de guerra con barda" hidden="false" collective="false" import="true" targetId="7297-9292-6712-53c1" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="350.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="72ac-eaa5-e058-53ea" name="El Cazador de Bestias" publicationId="4e39-0109-f7ec-5785" page="36" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3493-72da-2600-9907" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="b588-eef4-e427-2a78" name="El Cazador de Bestias" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">5</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="3f88-e801-3ee5-e4b9" name="Soporte con Cráneos" hidden="false">
+          <description>El cazador de bestias lleva un horrible adorno con cráneos de hombres bestia, por lo que causa miedo a todas las miniaturas de tipo Bestia.</description>
+        </rule>
+        <rule id="067a-1a28-5c50-9a1d" name="Solitario" hidden="false">
+          <description>El Cazador de Bestias no puede ser el General ni unirse a unidades.</description>
+        </rule>
+        <rule id="34a8-911f-3ad5-4b99" name="Depredador" hidden="false">
+          <description>El Cazador de Bestias es Explorador. Además, si despliega como Explorador, el Cazador de Bestias no puede ser designado como objetivo (de cargas, disparo ni hechizos) hasta que el Cazador se mueva o dispare, o una unidad amiga “pase por encima”; en caso de unidades que se topen con el Cazador (por ejemplo debido a un arrasamiento o a un movimiento obligatorio) se trabarán con él.</description>
+        </rule>
+        <rule id="24df-95cf-92f4-0076" name="Cazabestias" hidden="false">
+          <description>El Cazador puede repetir todas las tiradas para impactar y para herir contra todas las miniaturas de tipo Bestia o de tipo Monstruo.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="4767-ed2c-beec-25e1" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="cbac-debb-518d-2ed3" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
+        <infoLink id="ee0e-c318-fff8-00de" name="Hacha arrojadiza" hidden="false" targetId="d0b8-838e-926b-380a" type="profile"/>
+        <infoLink id="f8b8-bdcb-fab9-ed5e" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+        <infoLink id="f5bb-8b9c-e1b0-636f" name="Inmune a psicología" hidden="false" targetId="3970-3b01-1734-d642" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="43e9-6b98-04c9-8abf" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="6e3b-2f49-bd8e-8474" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="0613-1a4f-e56e-d6ba" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="110.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b390-c9a2-70cb-2356" name="Cuchillo Johann" publicationId="4e39-0109-f7ec-5785" page="37" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2f7-e701-8b71-1bbe" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="cb02-5e3b-19af-c802" name="Cuchillo Johann" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">6</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="83ea-dbc9-ed5d-ef85" name="Experto lanzador" hidden="false">
+          <description>Johann puede lanzar hasta tres cuchillos en cada fase de disparo, por lo que tiene Disparos múltiples (x3).</description>
+        </rule>
+        <rule id="bcea-9f93-6a6e-c628" name="Venenos" hidden="false">
+          <description>Todos los ataques de Johann son envenenados, tanto en combate como por proyectiles.</description>
+        </rule>
+        <rule id="f53a-b612-b0e4-3960" name="Despliegue oculto" hidden="false">
+          <description>Johann puede estar escondido en cualquier unidad o regimiento de renombre de tipo Humano (de- bes anotar en la lista de ejército en qué unidad está escondido) siguiendo las reglas de Despliegue Oculto.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="7a16-70c4-9f25-d1db" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="1d61-594a-c7d9-3f0a" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
+        <infoLink id="94ba-8d7b-1928-4d52" name="Cuchillo/estrella arrojadiza" hidden="false" targetId="9055-a738-c3cf-c13a" type="profile"/>
+        <infoLink id="3ebf-abe2-8bd8-5331" name="Ataques envenenados" hidden="false" targetId="d77c-34cb-f94c-aee1" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="58f6-f5f3-a526-a171" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="a256-83d1-cae7-acea" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="c9e4-86f4-2add-583b" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="90.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="274f-c357-bd40-bd82" name="Ghazak Khan" publicationId="4e39-0109-f7ec-5785" page="39" hidden="false" collective="false" import="true" type="unit">
+      <comment>Príncipe de Miragliano</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e937-4471-7504-9963" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="cc0d-4f52-8e88-57c6" name="Ghazak Khan" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">7</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">6</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">5+</characteristic>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería, Humano, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="bbf6-57e0-07a8-9f64" name="Cimitarra Roja" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>En su mano blande una enorme cimitarra que promete una roja destrucción a sus oponentes</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Las tiradas de salvación por armadura a causa de heridas de la Cimitarra Roja se resuelven con un -3 (en vez del -1 habitual por la F4 de Ghazak Khan) y, además, tienen la regla Heridas múltiples (1D3).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7857-bacf-058b-67a4" name="Yelmo Cabeza Demoníaca" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Ghazak lleva sobre su cabeza llena de cicatrices un yelmo monstruoso</comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Después de que Ghazak sufra su primera herida, y si sigue vivo (no ha sido con Golpe Letal ni un Heridas múltiples) obtiene una Tirada de salvación especial de 4+ y Resistencia a la magia (1) hasta el final de la batalla.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="0452-0a7f-d259-bc73" name="Grito de Guerra de las estepas" hidden="false">
+          <comment>Su ululante grito de guerra es famoso, muy sonoro y justamente temido</comment>
+          <description>Si Ghazak o su unidad declaran carga a una unidad y dicha unidad no es inmune a psicología, sólo puede Mantener la posición como reacción a la carga (no puede huir ni aguantar y disparar).</description>
+        </rule>
+        <rule id="f630-c7f9-ede7-9306" name="Repetir animosidad" hidden="false">
+          <description>Cualquier unidad amiga de tipo Pielverde a 15cm o menos de Ghazak puede repetir los chequeo de animosidad falla- dos.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="b0ab-7bcd-5588-4dfe" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+        <infoLink id="03cb-bf09-a0a4-3816" name="Arco" hidden="false" targetId="dfc2-1321-c679-1bc0" type="profile"/>
+        <infoLink id="6f2f-3908-805d-d449" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
+        <infoLink id="79bf-8d33-fd1b-d330" name="Animosidad" hidden="false" targetId="3814-196c-6df8-a17f" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0902-be18-c41e-5de5" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="1c28-97af-6bde-f4ab" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="139e-664d-4d38-3f0f" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="1a5a-1940-6596-9ec1" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="2c77-3df5-3eb3-1ef6" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1fd-80e5-a3f4-4415" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7b0-ff2c-d679-54e4" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="ae1e-9ee6-faa1-6700" name="Warghan" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1b1-6e34-998f-1ebb" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edee-344b-508d-206b" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="0e19-d221-5532-85fc" name="Warghan" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">22</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Bestia monstruosa, Animal.</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="2372-3132-444f-68bb" name="Lobo enorme" hidden="false">
+                  <description>Pese a ser de un tamaño algo mayor, Warghan se considera de tipo caballería a efectos de designar como objetivo a su jinete. Esto quiere decir que si Ghazak está en una unidad de caballería, no se le puede designar como objetivo, forma parte de la unidad.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="2483-24ca-1835-2b1c" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+                <infoLink id="609b-1383-2ee9-b152" name="Caballería rápida" hidden="false" targetId="f6f9-0701-05a1-df5a" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="45.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="305.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="24fa-931c-555a-c086" name="Leonardo da Miragliano" publicationId="4e39-0109-f7ec-5785" page="41" hidden="false" collective="false" import="true" type="unit">
+      <comment>El Genio de Tilea</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b122-b184-6328-e6df" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="8f68-8640-c663-7b5e" name="Leonardo da Miragliano" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="64b2-f6c9-d0ba-32e3" name="Esfera alquímica" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Leonardo efectúa experimentos alquímicos y ha fabricado un polvo que ha guardado en un orbe de bronce. Cuando lo lanza, el orbe se parte y el polvo se inflama en contacto con el aire, lo que crea una pequeña explosión.</comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Arma arrojadiza. 
+Un sólo uso.
+ Se trata de un arma de proyectiles a todos los efectos. Elige una dirección (en línea de visión) y una distancia, con un máximo de 20cm. Coloca la plantilla circular pequeña centrada en el punto de impacto (no se desvía). Las miniaturas bajo la plantilla sufren un impacto de F3 con Poder de Penetración y Ataques flamígeros (no son Ataques mágicos).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7746-d96e-3718-9add" name="Prisma del Poder" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Leonardo posee un prisma de cristal tallado con una forma especial y que utiliza las propiedades físi- cas de la refracción para difuminar cualquier tipo de energía que flote en el campo de batalla. De este modo logra robar los vientos de la magia del bando oponente y disipar la energía, como si fueran rayos de luz del sol. </comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">En cada fase de magia del enemigo, tu oponente tiene un dado menos de energía y tú un dado más de dispersión.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3c6b-31e4-3598-2fee" name="Compás de Plata Meteórica" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Leonardo posee un compás especial con una flecha de dirección fabricada con plata meteó- rica. Ésta apuntará hacia la mayor concentración de magia en el campo de batalla. </comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Al inicio de turno, puedes designar cualquier personaje enemigo en línea de visión de Leonardo. El oponente debe decirte cuántos objetos mágicos lleva (no cuáles).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="ef4c-086d-7d1b-8b20" name="Genio" hidden="false">
+          <comment>Leonardo es un genio con la habilidad de aplicar su intelecto a cualquier problema, y tiene en su haber muchas formas de aplicar su talento. Por supuesto, muchos generales mercenarios encuentran sus talentos especialmente va- liosos, ya sea trazando planes de batalla, construyendo defensas, planificando el orden de marcha o inspeccionando las armas. </comment>
+          <description>Por ello, al inicio de la batalla (tras el despliegue, tras saber qué jugador irá primero pero antes de que empiece el primer turno del primer jugador) puedes declarar qué ha hecho Leonardo.
+
+- Inspección de máquinas. Leonardo inspecciona una máquina, observa disparos de pruebas, calcula ángulos y trayecto- rias y corrige algún engranaje. Elige una máquina de guerra del ejército. Dicha máquina puede repetir todas las tiradas de dado de artillería y/o dispersión (recuerda que no puedes repetir dos veces una misma tirada).
+
+- Inspección de ballestas. Leonardo inspecciona una unidad de ballesteros durante las prue bas, comprueba la tensión de los arcos y considera la velocidad del viento. Elige una unidad armada con ballestas del ejército. La unidad puede repetir las tiradas para impactar falladas con las ballestas.
+
+- Estrategia de batalla. Leonardo inspecciona el mapa y cabalga antes de la batalla, discutiendo las opciones con el general en el concilio de batalla, explicando sus cálculos y probabilidades para sorprender al enemigo. Puedes recolocar una de tus unidades (con los personajes que tenga) en cualquier punto de tu zona de despliegue (el despliegue debe ser legal).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="e496-e314-5088-d444" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="21c8-8f0d-1569-e711" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7494-96bb-aa9d-9077" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="1b1d-0578-5154-67f7" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="afc0-d399-0bcf-7893" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="58de-04c8-1994-2457" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e452-fc7b-6c84-c32d" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6ad1-cdea-cd92-1197" name="Caballo de guerra" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5093-7082-b48c-345d" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="bea5-4c33-bb4e-7ea2" name="Caballo de guerra" hidden="false" collective="false" import="true" targetId="c7b7-3b43-dd5a-e171" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="130.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5aa4-e114-997f-2750" name="Lorenzo Lupo" publicationId="4e39-0109-f7ec-5785" page="42" hidden="false" collective="false" import="true" type="unit">
+      <comment>Príncipe Mercader de Luccini</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e36d-7244-1e6d-305e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="a127-3c4f-ff1e-06df" name="Lorenzo Lupo" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">5</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"></characteristic>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="0c58-0437-3dda-a134" name="Espada de Lucan" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>Lorenzo está armado con una espada corta que se cree que es la misma arma utilizada por su remoto
+Armaduraantepasado, Lucan, el fundador de Luccini.</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Anula Armaduras</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="dbce-9762-9af0-dc4b" name="Escudo de Myrmidia" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+          <comment>Este antiguo escudo fue encontrado durante la reconstrucción del templo de Myrmidia en la acró- polis de Luccini. Es originario de los tiempos de la fundación de la ciudad, o quizás incluso anterior. El escudo muestra el símbolo de la diosa de la guerra y tiene la habilidad mágica de deslumbrar a los oponentes</comment>
+          <characteristics>
+            <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">Escudo (Tirada de salvación por armadura de 6+)</characteristic>
+            <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Anula un ataque a todas las miniaturas enemigas en contacto peana con peana con Lorenzo.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a1bd-4820-a408-ec1f" name="Anillo de Luccina" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Se dice que Luccina, la hermana de Lucan, era una hechicera. Lorenzo posee un anillo que incluye un camafeo con una gema con su imagen, y que puede incluso que haya sido suyo. La gema contiene un
+hechizo conocido como el Encanto de Luccina: del anillo sale un grito de batalla inspirador que exhorta
+a los guerreros para que defiendan su antiguo honor, algo a lo que ningún guerrero de la ciudad se
+puede resistir.</comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Objeto portahechizos de nivel de energía 5. Todas las unidades amigas a 20cm o menos de Lorenzo que estén huyendo se reagrupan automáticamente.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="4185-d9f5-9ee4-a649" name="Combate a pie" hidden="false">
+          <comment>Una de las excentricidades de Lorenzo es que prefiere combatir a pie, al estilo de sus antepasados. Habitualmente se sitúa en la primera fila de los piqueros, y a veces combate a bordo de las galeras de Luccini. Esto es muy inspirador para los soldados a los que acompaña, quienes no sólo se benefician de su excelente liderazgo, sino que estarán más que dispuestos a defender en combate cuerpo a cuerpo a su Príncipe.</comment>
+          <description>Lorenzo suma un +1 a la Resolución del combate, siempre que esté en la primera fila de cualquier unidad de infantería (por ejemplo, no suma si ha rechazado un Desafío).</description>
+        </rule>
+        <rule id="42bf-bb6d-fe95-6812" name="Atleta formidable" hidden="false">
+          <comment>Lorenzo es un hombre fornido y musculoso, muy parecido a las colosales estatus de bronce que representan a su antepasado Lucan. Practica los antiguos deportes clásicos de Tilea como se hacía en la antigua Luccini en los días de sus antepasados. Esto significa que regularmente lanza el disco, practica la lucha libre o combate cuerpo a cuerpo con los oponentes más fuertes, rema en el mar de Tilea en las carreras de galeras, se entrena con pesas de bronce, y corre la gran carrera desde un extremo de su principado hasta el otro, como hacían los mensajeros en un pasado remoto. Cuando entrena intensamente en uno de estos deportes, mejora su fuerza, su resistencia o su agilidad. </comment>
+          <description>Lanza 1D6 para ver qué deporte ha estado practicando antes de unirse al ejército, lo que modificará su perfil (esto es como si realmente tuviera ese atributo, no es un objeto mágico que pueda anularse):
+1-2: Atletismo. Lorenzo tiene R5.
+3-4: Lucha libre o combate de gladiadores. Lorenzo tiene A5.
+5-6: Remo. Lorenzo tiene F5.</description>
+        </rule>
+        <rule id="da74-2423-12b1-3109" name="Príncipe Mercader" hidden="false">
+          <description>Lorenzo Lupo es el Príncipe Mercader de Luccini, por lo que una única unidad de Condottieri o de Piqueros del ejército puede llevar un Estandarte Mágico de hasta 50 puntos. Dicha unidad no puede ser un Regimiento de Renombre.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="1d9c-4e25-fa1f-ff0a" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="068a-2385-7ef8-62c3" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="f2f9-6930-43ba-e08f" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="4cc0-2276-6149-8eea" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="cf51-2575-465a-d793" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="350.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="769a-5b16-c7c7-305c" name="Lucrezzia Belladona" publicationId="4e39-0109-f7ec-5785" page="44" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="929a-adea-bb0f-9d1b" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f402-db2e-1b27-b8a5" name="Lucrezzia Belladona" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería, Humano, Hechicera, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="57d0-f650-12f7-bb24" name="Estiletes envenenados" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>Lucrezzia siempre tiene un estilete guardado en su jarretera, no sólo como autodefensa, sino también porque nunca sabe cuándo querrá asesinar a alguien, ¡y siempre es recomendable tener preparada y a mano un arma envenenada! ¡Evidentemente, el estilete de Lucrezzia ha sido untado con veneno de sapo y lo utiliza para cortar setas venenosas! </comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Dos armas de mano (A+1)</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Los ataques de Lucrezzia son Ataques mágicos y Ataques envenenados.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="045e-c16e-0966-1b5e" name="Poción de Pavona" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Esta es una poción que Lucrezzia puede entregar a cualquier miembro de su ejército antes de la bata- lla, o puede beberlo ella misma, para mejorar alguna característica específica. Lucrezzia preparará la poción teniendo es- tas modificaciones en cuenta, eligiendo en cada caso los ingredientes necesarios. Sin embargo, existe un riesgo: la poción puede ser ligeramente venenosa.</comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Al inicio de la batalla, Lucrezzia puede entregar esta poción a cualquier personaje o campeón de unidad (incluso ella misma) o a un Líder de un Regimiento de Renombre. Tira 1D6, y si obtienes un 2+, el nú- mero obtenido será el número total de atributos diferentes de la miniatura que podrás incrementar en +1 (así, si tienes un 4, puedes subir un +1 en cuatro atributos, como podrían ser H, R, F y HA). Este aumento no puede aplicarse al Lideraz- go ni al Movimiento. No se puede subir un mismo atributo más de una vez. Si tienes un 1 en la tirada, no sube ningún atributo y además la miniatura sufre una herida (que no puede evitar con tirada de salvación por armadura, aunque sí especial). Si ello provoca la muerte de la miniatura (p.e. era un Campeón) se considera como baja a todos los efectos</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4159-237c-2d98-3e4c" name="Vial de Veneno" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Mucho antes de la batalla, los asesinos a sueldo de Lucrezzia se infiltran en el campamento enemigo, equipados con un vial de veneno especialmente preparado por su Señora. Éste puede verterse en la bebida o comida de uno de los comandantes y heroes enemigos durante los festejos que tienen lugar la noche anterior a la batalla. No hay forma de saber quién ha sido envenenado; el asesino simplemente aprovechará la primera oportunidad que se le presen- te antes de escabullirse fuera del campamento. El veneno es de acción muy lenta y sus efectos no se notarán hasta el día siguiente, cuando los ejércitos se preparen para la batalla. </comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Al inicio de la batalla, tira 1D6 por cada personaje enemigo; con un resultado de 4+, el personaje ha sido envenenado, y debido a ello, empezará la batalla con una herida menos de lo normal. Sólo funciona con personajes que se desplieguen en la fase de despliegue (incluidos Exploradores); no es necesario tirar (ni el oponente tiene que decirte si están) personajes con Despliegue oculto como los Asesinos o perso- najes con un despliegue especial como Tiktaq’to o un personaje Enano con la Runa de la Camaradería que se use en una unidad de Mineros).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="3263-7b32-7ba7-bc4e" name="Belleza sin par" hidden="false">
+          <comment>Un efecto increíble de la incomparable belleza de Lucrezzia es que los hombres encuentran valor de deba- jo de las piedras para impresionarla, al sentirse avergonzados por haber huido del enemigo ante esta bella y encantadora dama.</comment>
+          <description>Para representar este hecho, todas las unidades amigas de tipo Humano que se encuentren a 20cm o menos de Lucrezzia se reagruparán automáticamente; es decir, dejarán de huir y se reagruparán tan pronto como se encuentren a 20cm o menos de ella. Esto también afecta a las tropas que estén huyendo en el turno del oponente. No influye a las tropas inmunes a psicología (como aquellas que se encuentren bajo los efectos de la Furia Asesina).</description>
+        </rule>
+        <rule id="936f-a174-74be-1240" name="El beso de Lucrezzia" hidden="false">
+          <comment>Se rumorea que Lucrezzia es una experta en la preparación de venenos y pociones. Nadie sabe si esto es verdad o no, o al menos nadie ha vivido lo suficiente para contarlo. Los enemigos que se enfrentan a su campeón predilecto siempre mueren en circunstancias extrañas. </comment>
+          <description>Designa un personaje o campeón (o Líder de Regimiento de Renombre) amigo al inicio de la batalla (que no sea Lucrezzia); Lucrezzia besará su arma. Dicho personaje o paladín adquiere la habilidad de Golpe letal.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="c383-e3d4-798c-1606" name="Ataques envenenados" hidden="false" targetId="d77c-34cb-f94c-aee1" type="rule"/>
+        <infoLink id="8ed9-2456-affc-633d" name="Ataques mágicos" hidden="false" targetId="6e5c-a8a4-78d0-032b" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="9fb8-c73d-c310-c351" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="ca05-8953-86c9-8973" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="16fc-ccf2-d26b-c58b" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="35fe-ffcd-5cd7-54f7" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="a9fe-2ccd-7904-1ab5" name="Nivel" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b71d-8bf0-a8bf-f0d0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5277-9208-cb6c-e75a" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="866a-8ad0-675a-4ff9" name="Nivel 4" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f201-f4ee-8bca-6a57" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c916-74bc-915d-0652" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="35.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="df49-4935-4ed7-d99f" name="Saber" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8a7-538c-4be0-dabe" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="0a99-d97a-d994-0ca0" name="Saber de la Muerte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d878-5b58-d4c3-f47b" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8644-f8ec-7604-91d2" name="Saber de las Sombras" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d692-8440-d1e0-e464" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="220c-6832-20eb-0512" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="deb5-87c1-8765-97e1" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c90-2085-7d53-5866" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="5c86-a060-59de-4628" name="Caballo de guerra con barda" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c8e-c9ac-2fd8-5b5c" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b224-b6c8-4556-8b0c" type="min"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="2522-0772-0007-771e" name="Caballo de guerra con barda" hidden="false" collective="false" import="true" targetId="7297-9292-6712-53c1" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="380.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6bda-1337-9c80-b89f" name="Marianna Chevaux" publicationId="4e39-0109-f7ec-5785" page="45" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9fe-ddab-e2e3-62c8" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="50f1-51d3-28e3-2333" name="Marianna Chevaux" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">5</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">5+</characteristic>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, No Muerto, Vampiro, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="18c4-6a93-a591-37a5" name="Es de los nuestros" hidden="false">
+          <description>Pese a tener algunas dudas por esos colmillos tan largos y esa piel tan pálida, Marianna es considera- da de los suyos en las fuerzas mercenarias, no un vampiro, así que puede unirse a unidades de vivos (¡o de un Regimien- to de Renombre No Muerto!).</description>
+        </rule>
+        <rule id="42ec-ca32-dae2-1a23" name="Inestable" hidden="false">
+          <description>Sin embargo, si Marianna está incluida en una unidad que no sea Inestable, no deberá efectuar chequeos de Inestabilidad (se moverá con la unidad si ésta huye). Si está incluida en una unidad Inestable, o si no está incluida en ninguna unidad, se realizan chequeos de Inestabilidad de la forma que indica la regla.</description>
+        </rule>
+        <rule id="7ab6-12da-9010-79bc" name="Reflejos sobrenaturales" hidden="false">
+          <description> Marianna tiene una Tirada de salvación especial de 5+.</description>
+        </rule>
+        <rule id="6098-8790-303e-0e5a" name="Cazavampiros" hidden="false">
+          <description> Marianna odia a todas las miniaturas de tipo Vampiro (pese a ser inmune a psicología).</description>
+        </rule>
+        <rule id="bdd4-947b-833f-27d6" name="Hipnotismo" hidden="false">
+          <description>Al inicio de la fase de combate cuerpo a cuerpo (tras resolver impactos por carga), puedes elegir una mi- niatura enemiga en contacto peana con peana con Marianna. Si la miniatura no es inmune a psicología, la miniatura debe hacer un chequeo de Liderazgo. Si lo supera, no pasa nada. Si lo falla, la miniatura no podrá atacar en esa fase de combate cuerpo a cuerpo. Si se designa como objetivo una miniatura con varias partes separadas (personaje montado en monstruo o carro), deberá hacerse contra la parte con el mayor atributo de Liderazgo; si falla, afecta a la miniatura entera. Si Marianna está en un Desafío, sólo podrá usar Hipnotismo contra el personaje al que esté Desafiando.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="98b8-1cd8-860a-57c0" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="31a9-7cad-a894-ba68" name="Cuchillo/estrella arrojadiza" hidden="false" targetId="9055-a738-c3cf-c13a" type="profile"/>
+        <infoLink id="1333-71fb-9bf7-8614" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+        <infoLink id="50b0-0961-bf6c-90af" name="Inmune a psicología" hidden="false" targetId="3970-3b01-1734-d642" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="3022-35cb-fd65-f971" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="a6d9-eaf8-a7ea-e693" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="355c-7103-02f0-ee87" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="125.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4d44-5df3-016c-425a" name="Mydas el Mezquino" publicationId="4e39-0109-f7ec-5785" page="46" hidden="false" collective="false" import="true" type="unit">
+      <comment>Pagador Tileano</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="36e6-489b-e046-7430" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="a3bf-ba38-9bc1-2fbb" name="Mydas el Mezquino" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="116b-c451-5753-33b9" name="Mapa del Tesoro" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Mydas posee un mapa del tesoro en el que ha marcado los lugares donde ha escondido numeroso cofres de la paga que ha rescatado heroicamente de la confusión del combate cuando la batalla parecía irremediablemente perdida. Mantiene el mapa escondido en el interior de sus medias. El mapa esta dibujado sobre un antiguo pergamino que encontró en los cofres del tesoro de Gridi. En el reverso del manuscrito hay unos extraños jeroglíficos de los Hombres Lagarto. Mydas no sabe ni le importa lo que significa, y cree que son los garabatos sin sentido de algún hechicero loco. En realidad, el pergamino es un “sello de confianza” llevado por los intérpretes Eslizones para darles un aura de credibilidad
+cuando negocien o traten de engañar a los extraños. Algún aventurero debió adquirirlo hace tiempo en Lustria, pensan- do que sería algo valioso para un hechicero, y terminó en los cofres del tesoro del Enano Pirata. El efecto del manuscrito es que cualquier mercenario, incluido el general, se creerá lo que Mydas prometa. Tendrán una confianza absoluta enMydas, tanto Mydas como los generales que lo reclutan atribuyen este  milagroso efecto a las inspiradoras cualidades de liderazgo de Mydas.</comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">El mapa tiene unos efectos diferentes en cada batalla; tira 1D6 al inicio de la batalla para determinar el efecto:
+
+1-2: “Una bonificación para mis fiables y leales escoltas”. Esta es una promesa que Mydas le hace a menudo a los escoltas del cofre de la paga, por lo que luchan con más ímpetu. La escolta de Mydas añade +1 a la resolución del combate
+
+3-4: “¡El cofre de la paga está seguro conmigo, muchachos!”. Los mercenarios confían en que Mydas cuidará de su paga más allá del deber, lo que les da más ánimos. Toda unidad amiga puede utilizar la habilidad de Pagador (repetir los chequeos de desmoralización fallados) hasta a 45cm en vez de los 30cm habituales. 
+
+5-6: “¡Si ganamos la batalla, recibiréis una bonificación!”. Esto anima a todos los regimientos mercenarios para que luchen aún más y con más decisión. Designa una unidad amiga al principio de la batalla: esa uni- dad tendrá un +1 a todas las tiradas para impactar durante el resto de la batalla.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9092-28a5-d364-9f77" name="Copete de Mydas" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Todos los ataques de las armas de Mydas, Yadosh y los Escoltas de Mydas (pero no una escolta normal, si se incluye en el ejército) se consideran de tipo mágico.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="cfe4-1940-f795-b37b" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="003d-87d9-034a-c516" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+        <infoLink id="29a6-a5f1-f077-d1b8" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
+        <infoLink id="7c66-1c00-5500-ba67" name="Pagador" hidden="false" targetId="7930-8236-e9f8-282f" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="338e-6003-1f70-7864" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="2c4d-ba73-c6a2-808a" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="b603-c03c-f9fe-9217" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="4db2-8acc-a55a-80a3" name="Jeque Yadosh y Cofre de la Paga" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3cd-94bc-0108-c8fe" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bea2-c0e8-8903-665f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="7c66-06d4-c728-f4b7" name="Jeque Yadosh" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">-</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">-</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+              </characteristics>
+            </profile>
+            <profile id="1e1a-e0a2-e57c-9124" name="Cofre de la Paga" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">-</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">-</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">-</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">-</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">-</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Carro, Humano, Personaje especial.</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="5e7c-d88e-88bf-f8da" name="Carro y Cofre de la Paga" hidden="false">
+              <description>El cofre de la paga cuenta como un carro a todos los efectos pero es algo más débil: cuando el cofre de la paga efectúa una carga, sólo inflinge 1D3 impactos; tiene un solo caballo y un solo jinete (Yadosh) y tiene una tirada de salvación por armadura de 5+. Además de los efectos del Cofre de la Paga (repetir chequeos de desmoraliza- ción como si fuera un Portaestandarte de Batalla), toda unidad amiga que se encuentre a 15cm o menos del Cofre puede repetir los chequeos de psicología fallados. El Cofre de la Paga es una unidad independiente de Mydas y su escolta en el campo de batalla.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="3c5f-8d33-34d9-f5df" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink id="8f16-0496-954c-cb02" name="Caballo de guerra" hidden="false" collective="false" import="true" targetId="c7b7-3b43-dd5a-e171" type="selectionEntry"/>
+          </entryLinks>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="100.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c1d0-e0b5-86b2-b838" name="Escolta de Mydas" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d14-1740-58ec-6678" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="d45d-647b-60b7-9334" name="Escolta de Mydas" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="39a6-0fe0-4750-8e33" name="Escolta de Mydas" hidden="false">
+              <comment>Los escoltas de Mydas son elegidos cuidadosamente de entre los esclavos de las galeras de piratas de Sartosa. Todos y cada uno de ellos han sido personalmente liberados de su cautivad por Mydas mediante un generoso pago en oro, por lo que le están profundamente agradecidos y son completamente leales a su patrón. Además de ello, todos son grandes hombres musculosos, morenos y endurecidos por años de estar amarrados a los remos.</comment>
+              <description>Toda la unidad de escoltas es tozuda mientras Mydas siga vivo. Ningún personaje aparte de Mydas puede añadirse a la unidad. Durante el despliegue, Mydas y su escolta deben ser desplegados al mismo tiempo que el resto de personajes del ejército.</description>
+            </rule>
+            <rule id="1c0d-1c96-4755-91b2" name="Inclusión" hidden="false">
+              <description>9 Escoltas de Mydas, incluyendo un Portaestandarte y un Músico</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="565d-14ce-3856-6f1d" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+            <infoLink id="14b8-ad3d-357b-f947" name="Alabarda" hidden="false" targetId="ee3a-8a10-edff-cefe" type="profile"/>
+            <infoLink id="60d8-baaf-c30d-c91c" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+          </infoLinks>
+          <selectionEntries>
+            <selectionEntry id="9286-076f-5670-7181" name="Escoltas adicionales" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5454-3e1d-5556-ad23" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="288e-d4fc-6951-e945" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="11.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="120.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="100.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="74b4-d260-9c71-8216" name="Nicodemus" publicationId="4e39-0109-f7ec-5785" page="48" hidden="false" collective="false" import="true" type="unit">
+      <comment>El Peregrino Maldito</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ed5-40f0-e08c-a0dd" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="01b1-0f4b-f15c-32f7" name="Nicodemus" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Hechicera, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="03a6-9eaf-e0f2-b707" name="Poción reguladora" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Nicodemus está obligado a tomar una poción reguladora para evitar “agigantarse” que toma antes de la batalla. Sin embargo, dispone de un antídoto que desata su mente... a todos los efectos</comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Una vez por batalla, en cualquier momento, Nicodemus puede tomar el antídoto; Nicodemus pasa a tener A+3, F+2 y R+1, pero, hasta el final de batalla, está sujeto a Estupidez y no puede lanzar hechizos. No puede volver a “ser normal”. La poción no es un objeto mágico, así que no puede ser anulada.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="aa62-f125-6c0a-4ed7" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="839b-2922-130d-5984" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="8e27-0900-667c-1453" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="99c3-7c87-0197-3d29" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="91aa-b00d-f26f-43c0" name="Nivel" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f13-1514-ce8a-81f8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b244-b375-0c2e-7fa9" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="33bd-6f07-e504-5bd2" name="Nivel 2" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f881-dac4-434f-d8a4" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9ea-c4eb-9394-d818" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="35.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="565a-b85e-efa4-e1cd" name="Saber" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e44-a6bb-ad91-b02d" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="5e63-9308-cc6c-1864" name="Saber de la Vida" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8514-200b-a911-dc41" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6aff-5af0-a130-406c" name="Saber de la Muerte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b27-bfae-d2ac-49a8" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="06ff-9405-ac9a-3fe2" name="Saber del Metal" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="60fc-1204-7eb1-ed2d" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="345a-c1da-7b6c-b732" name="Saber del Fuego" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75df-cadd-d56c-135e" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="219c-69ca-9757-d061" name="Saber de las Bestias" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7359-3045-659c-d540" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9481-1c4d-a063-cf50" name="Saber de la Luz" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91a5-ef19-f8f2-8f45" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c4ea-bef8-e5ed-ba2b" name="Saber de los Cielos" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="805e-7080-dcb1-d82a" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e590-45d9-8058-884a" name="Saber de las Sombras" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4f8-d08d-40af-c09c" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="160.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4452-fbab-7400-818d" name="Simius Gantt" publicationId="4e39-0109-f7ec-5785" page="49" hidden="false" collective="false" import="true" type="unit">
+      <comment>El Maestro Cuervo</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3be-11d4-2386-b9a0" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="032e-336e-b017-baeb" name="Simius Gantt" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Hechicera, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="f059-d53d-ef47-72e4" name="Manto de los Cuervos" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment> El manto parece una sencilla capa raída, pero entraña un maligno poder. Atrae a una bandada de cuervos que revolotean alrededor de Simius y distraen a sus ad- versarios.</comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Las unidades y miniaturas enemigas en contacto peana con peana con Simius
+tienen un -1 a las tiradas para impactar.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="6682-926d-40fc-c872" name="Maldición de los Años." hidden="false">
+          <description>Dificultad 10+. 
+
+Elige una unidad enemiga a 60cm o menos de Simius, no trabada (esté o no en LDV). Tira 1D6 por cada miniatura de la unidad, con un 6+ la miniatura muere (Anula armaduras, pero pueden hacerse tiradas de Salvación Especial y Regeneración).
+
+Al siguiente turno, si no ha sido dispersado, ocurre lo mismo con 5+. Siguiente con 4+, etc. hasta un mínimo de 2+. Si se lanza sobre una unidad y contiene un personaje, sólo afectará al personaje mientras permanezca en la unidad (si abandona, deja de envejecer).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="ccb4-16da-6b0d-f18f" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="645d-99d7-1343-aa95" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+        <infoLink id="20b6-eb24-a292-b435" name="Inmune a psicología" hidden="false" targetId="3970-3b01-1734-d642" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="3359-fa19-fdba-4555" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="a804-7651-5594-8407" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="1a09-7234-76d3-0b91" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="c73c-fbb5-ebb2-e84e" name="Nivel" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b055-cd92-b19a-89ef" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="676d-2e23-5693-0308" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="e2ff-2992-bfdb-7cd9" name="Nivel 2" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fdf7-b647-0381-ade8" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b74c-47de-cd4f-873c" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="35.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="9869-8a67-7ad9-26cc" name="Saber" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f32-1e1d-03bb-5a40" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="49b3-15f8-6c0d-815e" name="Saber de la Muerte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4208-499a-96de-f19d" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="150.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9881-cfd1-e5f4-cc70" name="Ulli y Marquand" publicationId="4e39-0109-f7ec-5785" page="51" hidden="false" collective="false" import="true" type="unit">
+      <comment>Los Bandidos de Mordheim</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e15-bde7-63bf-cd5a" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="28a5-ad22-e68b-95c4" name="Errantes" hidden="false">
+          <description>Ulli y Marquand no pueden unirse a unidades. Forman una única unidad de dos Hostigadores. Si uno de los dos muere, el otro seguirá siendo una única unidad de una miniatura.</description>
+        </rule>
+        <rule id="81a3-739d-7c64-fa1d" name="Por un puñado de coronas" hidden="false">
+          <description>Los generales mercenarios están acostumbrados a pagar a tropas cuya lealtad es dudable, pero dudan más aún de esta pareja. Ulli y Marquand no pueden efectuar ningún movimiento voluntario que les aleje
+a más de 60cm del General. Si el General se aleja más allá de los 60cm, Ulli y Marquand no podrán declarar ningún movimiento voluntario que les aleje más del General (y, si pueden mover, deberían mover en dirección al General hasta volver a estar a 60cm o menos de él). Si el General muere y Ulli y Marquand no están trabados en combate cuerpo a cuerpo, se retiran de la mesa (se van directamente y cuentan como baja).</description>
+        </rule>
+        <rule id="f7ac-5280-7164-0717" name="Inseparables" hidden="false">
+          <description>Ulli y Marquand son absolutamente inseparables. Si uno de los dos muere, el otro deberá hacer un che- queo de pánico.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="6615-4877-cac5-ba58" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="9417-7327-328f-1928" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="e3bd-74b0-6113-9b26" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="c44d-a6d2-f040-feac" name="Ulli Leitpold" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45f2-0896-1288-382e" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b512-3efd-0273-6c24" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="43ed-286f-f56a-2586" name="Ulli Leitpold" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Personaje especial.</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="b79b-acb9-5346-fffd" name="Forzudo" hidden="false">
+              <description>Ulli es muy fuerte y está acostumbrado a levantar grandes pesos fácilmente. Ulli ignora la regla Siempre ataca último de su arma a dos manos (aunque si se ve forzado a atacar último debido a algún hechizo o regla especial, atacará último).</description>
+            </rule>
+            <rule id="dd14-dad2-dff6-7b5a" name="Carga imparable" hidden="false">
+              <description>En carga, por cada herida causada en combate cuerpo a cuerpo (tras salvaciones, pero antes de regene- rar) Ulli puede hacer un ataque adicional. Los ataques adicionales pueden causar a su vez más ataques adicionales.</description>
+            </rule>
+            <rule id="b969-52dd-769f-df10" name="Maestro del combate" hidden="false">
+              <description>Ulli es un gran guerrero, e inspira a los demás. Proporciona un +1 a la resolución de combate.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="b602-e434-c821-98fe" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+            <infoLink id="6c32-2f18-f085-18c4" name="Arma a dos manos " hidden="false" targetId="bc8b-5380-77a9-7fe7" type="profile"/>
+            <infoLink id="ead5-2eaa-bb5f-faf3" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="100.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="719f-459c-990a-fe4f" name="Marquand Volker" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba09-efd9-0c13-64a3" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b580-ad95-e3e7-52d7" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b9b4-1f93-f1c0-8dda" name="Marquand Volker" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">5+</characteristic>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Personaje especial.</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="948d-959c-673d-be0e" name="Lanzador de cuchillos" hidden="false">
+              <description>Marquand es un experto lanzador de cuchillos, por lo que puede lanzarlos a 22cm en vez de los habituales 15cm.</description>
+            </rule>
+            <rule id="f9df-3354-2979-ab9c" name="Reflejos asombrosos" hidden="false">
+              <description>Marquand es tremendamente rápido y capaz de esquivar cualquier cosa. Marquand tiene una Tirada de salvación especial de 5+.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="01a3-520d-47ee-ea4f" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+            <infoLink id="cd86-f76c-a0c6-14ff" name="Cuchillo/estrella arrojadiza" hidden="false" targetId="9055-a738-c3cf-c13a" type="profile"/>
+            <infoLink id="c7a9-427d-49a8-7bcf" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="100.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
