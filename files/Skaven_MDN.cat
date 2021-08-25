@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a841-7b20-89a8-91ac" name="Skaven MDN" revision="3" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a841-7b20-89a8-91ac" name="Skaven MDN" revision="4" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c220-b30e-7003-9bc3" name="Skaven MDN"/>
   </publications>
@@ -1848,13 +1848,9 @@ Golpe letal.</characteristic>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b0c-ca23-e97b-08d3" type="max"/>
               </constraints>
-              <profiles>
-                <profile id="35b6-c742-9a27-2dd9" name="Condensador mejorado de energía de piedra bruja" hidden="false" typeId="7e35-c20a-e9e9-6dad" typeName="Talismán">
-                  <characteristics>
-                    <characteristic name="Protección" typeId="9f41-c15e-1f5f-9d01">Si el portador puede lanzar el hechizo Rayo de disformidad, podrá hacerlo con un dado más de los que tiene permitidos.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
+              <infoLinks>
+                <infoLink id="1f93-c714-4210-d2b0" name="Condensador mejorado de energía de piedra bruja" hidden="false" targetId="9f2f-4196-417d-5f76" type="profile"/>
+              </infoLinks>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
               </costs>
@@ -1863,13 +1859,9 @@ Golpe letal.</characteristic>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d7d-4938-ba1e-d6c7" type="max"/>
               </constraints>
-              <profiles>
-                <profile id="8c33-bea4-6dd9-6c48" name="Acumulador sobrealimentado de energía de piedra bruja" hidden="false" typeId="7e35-c20a-e9e9-6dad" typeName="Talismán">
-                  <characteristics>
-                    <characteristic name="Protección" typeId="9f41-c15e-1f5f-9d01">Genera un dado de energía adicional para su portador en cada fase de magia propia.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
+              <infoLinks>
+                <infoLink id="924a-d949-bf01-223f" name="Acumulador sobrealimentado de energía de piedra bruja" hidden="false" targetId="72d1-27bf-56f4-23b6" type="profile"/>
+              </infoLinks>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="15.0"/>
               </costs>
@@ -4791,6 +4783,1065 @@ mover libremente. Por supuesto, los puntos de victoria son por separado.</descri
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="3b61-d1fd-ee4a-f51c" name="Ghoritch" publicationId="c220-b30e-7003-9bc3" page="34" hidden="false" collective="false" import="true" type="unit">
+      <comment>Castellano del Pozo Infernal</comment>
+      <profiles>
+        <profile id="4dc4-d61f-368c-94cd" name="Ghoritch" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">4</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa, Skaven, Constructo, Moulder, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="fe6f-442f-5fb9-7902" name="Garras mecánicas" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>Al cuerpo anfitrión de Ghoritch se le han cambiado las garras por unas enormes cuchillas cortantes im- pulsadas por un artilugio mecánico de piedra bruja que hace que sus ataques sean mortales. Arma de mano. </comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124"> Arma de mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Anula armaduras. Las garras mecánicas de Ghoritch NO son un arma mágica; ten en cuenta que esto es una regla especial de Ghoritch, no puede atacar con algo que no sean las garras; no se tratan de armas mágicas y no pueden anularse de ninguna forma (por ejemplo mediante Piedra de la anulación). Los hechizos, reglas y efectos que hagan que Ghoritch ataque “con arma de mano” (como por ejemplo gracias a la habilidad de Vardek Crom) se resuelven igualmente con Anula armadura.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="0e9e-0e68-885e-ceac" name="Maestro de las Bestias" hidden="false">
+          <description>Toda unidad amiga de tipo Moulder a 15cm o menos de Ghoritch puede repetir los chequeos de psi- cología fallados (no de Desmoralización).</description>
+        </rule>
+        <rule id="6c12-38ba-fe4e-d0ef" name="Trasplante cerebral" hidden="false">
+          <comment>Ghoritch sigue teniendo la mente de un bersérker y en combate entra siempre en un estado de cólera matadora. </comment>
+          <description>Ghoritch tiene Furia Asesina. Si no tiene Furia Asesina (por ejemplo, por perder un combate) pasa a sufrir Estupidez. Si recupera la Furia Asesina (por ejemplo, si se ve sujeto al hechizo Tormento Lujurioso del Saber de Slaanesh), deja de tener Estupidez (hasta que vuelva a perder la Furia Asesina).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="85b9-e1b9-7b89-c1cf" name="¡El que corre hoy, vive para luchar mañana!" hidden="false" targetId="10cf-482d-0498-a47e" type="rule"/>
+        <infoLink id="ba89-31cf-c214-bc2b" name="La fuerza radica en el número" hidden="false" targetId="1030-47e7-af2d-e7da" type="rule"/>
+        <infoLink id="3b5f-12b0-4d6a-9df6" name="Dirigiendo desde la retaguardia" hidden="false" targetId="0a2e-011d-38a9-9fa6" type="rule"/>
+        <infoLink id="92b9-6f6b-958e-cf3f" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="b3ba-81bf-8c5c-3c2f" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="598c-8ec5-160d-12e8" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="4b4a-dd46-4471-7239" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="255.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e153-b8f9-d81d-d8be" name="Ikit Claw" publicationId="c220-b30e-7003-9bc3" page="37" hidden="false" collective="false" import="true" type="unit">
+      <comment>Ingeniero Jefe del Clan Skryre</comment>
+      <profiles>
+        <profile id="db41-e864-a4f4-a3f3" name="Ikit Claw" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"> Infantería, Skaven, Skryre, Hechicero, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6ca0-6643-2b6e-5dbd" name="Cuchilla de Piedra Bruja" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Alabarda, requiere ambas manos</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">+1</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Realiza ataques mágicos. Su portador puede lanzar el hechizo Rayo de Disformidad. Además, cuando lanza dicho hechizo puede declarar que va a intentar hacerlo con dificultad 11+; si lo consigue, causa 3D6 impactos de F5. La Cuchilla de Piedra Bruja no es un objeto mágico, así que no puede anularse (por ejemplo con Anulación de Vaul).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7492-2ae4-288b-9e4b" name="Minilanzallamas de disformidad" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de Aliento</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">4</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Toda unidad que sufra una o más bajas debido al Minilanzallamas de Disformidad deberá hacer un chequeo de pánico. Después de cada disparo con el Minilanzallamas, lanza 1D6; con 1-2 se habrá terminado el combustible, e Ikit no podrá usarlo en lo que quede de partida.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="ffe8-e3fb-383e-99e6" name="Fragmentos de piedra bruja (5)" hidden="false">
+          <description>Inicia la partida con 5 Fragmentos de Piedra Bruja.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="a61d-4b38-4ee6-b8a4" name="¡El que corre hoy, vive para luchar mañana!" hidden="false" targetId="10cf-482d-0498-a47e" type="rule"/>
+        <infoLink id="a240-7088-cda6-f15d" name="La fuerza radica en el número" hidden="false" targetId="1030-47e7-af2d-e7da" type="rule"/>
+        <infoLink id="a42a-d0c8-4363-ce59" name="Dirigiendo desde la retaguardia" hidden="false" targetId="0a2e-011d-38a9-9fa6" type="rule"/>
+        <infoLink id="8fe8-3c71-31c4-f512" name="Inmune a psicología" hidden="false" targetId="3970-3b01-1734-d642" type="rule"/>
+        <infoLink id="84a8-91a7-0d2e-6355" name="Pistola de piedra bruja" hidden="false" targetId="5194-abbb-2fa8-ad7e" type="profile"/>
+        <infoLink id="0eab-2509-8213-9a4f" name="Acumulador sobrealimentado de energía de piedra bruja" hidden="false" targetId="72d1-27bf-56f4-23b6" type="profile"/>
+        <infoLink id="21ec-53d1-9c1a-c1e3" name="Condensador mejorado de energía de piedra bruja" hidden="false" targetId="9f2f-4196-417d-5f76" type="profile"/>
+        <infoLink id="5ce9-f312-44ed-c3c6" name="La vida no tiene ningún valor" hidden="false" targetId="83fc-d023-f97e-004d" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="69e6-81aa-fa90-9b02" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="964a-f062-fb7e-51e4" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="9017-2892-979a-4232" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="9c1a-9dfa-ae46-ce61" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="4579-2973-06ea-9a88" name="Nivel de hechicería" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffe3-7e4a-ce92-0d61" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44c8-33e7-9a8d-9bcc" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="2f25-65c6-6c93-0edd" name="Nivel 4" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab56-675c-ea8c-a910" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17b9-33d4-99d0-c08b" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="e61f-b3f8-3421-6e31" name="Saber Mágico" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c792-9c5f-9f92-224a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9ab-0438-3ac9-cb5f" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3139-3f43-d852-39af" name="Saber de las Bestias" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f39-64b8-3e8f-34a8" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="fff8-f0ab-f316-fe9e" name="Saber de las Sombras" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6c5-e90d-8038-f6b5" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2d4c-c2ef-8349-4c88" name="Saber de la Muerte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae4c-df28-5819-94c9" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7363-8cc8-95a9-b7cf" name="Saber de los Cielos" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ad5-4673-ff09-6855" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e9a2-bca2-f59f-5382" name="Magia Oscura" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>ver MDNR: Elfos Oscuros</comment>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a47-c651-1dc1-60d1" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="12a3-507d-fe61-6230" name="Saber del Emisario Oscuro" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>(ver MDNR:Mercenarios)</comment>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="befd-0632-4890-af80" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="da9f-b1e1-00f8-8197" name="Saber del Metal" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51cf-0440-a143-ca04" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7cc2-2368-19fb-444d" name="Saber del Fuego" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb48-4b03-972d-bb27" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="9a62-9d6c-8c61-be9b" name="Esferas de muerte" hidden="false" collective="false" import="true" targetId="7db6-42ff-d0ba-7d90" type="selectionEntry"/>
+        <entryLink id="5ab2-1bc5-5377-1382" name="Armadura de disformidad" hidden="false" collective="false" import="true" targetId="5bf1-ea9d-4c5a-ad62" type="selectionEntry"/>
+        <entryLink id="32ad-03d3-67e6-6917" name="Espíritu de las tormentas" hidden="false" collective="false" import="true" targetId="b8dd-4b1c-ffef-4fc8" type="selectionEntry"/>
+        <entryLink id="4fe2-2b8d-8ddd-6eea" name="Colgante de la putridez" hidden="false" collective="false" import="true" targetId="b9b2-ff11-86e4-0445" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="410.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8afd-2849-5ae9-9154" name="Nurglitch" publicationId="c220-b30e-7003-9bc3" page="39" hidden="false" collective="false" import="true" type="unit">
+      <comment>Archiseñor de la plaga</comment>
+      <profiles>
+        <profile id="90c0-dc3c-b5ca-8756" name="Nurglitch" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">6</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">5+</characteristic>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa, Skaven, Hechicero, Pestilens, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d059-6182-6c6a-4ea1" name="Cetro bubónico" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Objeto portahechizos, nivel de energía 5. Elige una unidad enemiga en línea de visión de Nurglitch; si la unidad está a 45cm o menos de Nurglitch, lanza 1D6 por cada miniatura en la unidad; cada resultado de 6 en los dados hace que la unidad sufra una herida que Anula armaduras.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="6fa9-fca0-ff9c-60ec" name="Fragmentos de piedra bruja (3)" hidden="false">
+          <description>Inicia la partida con 3 Fragmentos de Piedra Bruja.</description>
+        </rule>
+        <rule id="1743-2a97-75f3-d653" name="Hechizos" hidden="false">
+          <description>Siempre conoce los hechizos:
+- Aliento pestilente
+- Locura asesina
+- Plaga</description>
+        </rule>
+        <rule id="ef7a-f2ee-b599-98a5" name="Pasión por la putrefacción" hidden="false">
+          <description>Nurglitch tiene Furia asesina y Odio. Si Nurglitch es el General del ejército, todas las miniaturas
+que tengan Furia Asesina nunca la perderán mientras Nurglitch siga con vida. (Ten en cuenta que las unidades que huyen no pueden tener Furia Asesina, pero tan pronto se reagrupen recuperarán la Furia Asesina).</description>
+        </rule>
+        <rule id="6df2-cd1d-5586-6ece" name="Vástago de la Corrupción" hidden="false">
+          <description>El Señor de la Plaga es de un inmenso agrado de su dios. Nurglitch tiene una Tirada de salvación especial de 5+. Además, los hechizos lanzados por miniaturas de tipo Skaven (excepto el Rayo de Disformidad) o tipo Nurgle nunca causarán heridas a Nurglitch ni a la unidad que se haya unido. Además, Nurglitch y la unidad en la que esté superan automáticamente todos los chequeos provocados por Incensarios de Plaga.</description>
+        </rule>
+        <rule id="db93-b79f-cf16-30cc" name="La Fiebre Sombría" hidden="false">
+          <description>Nurglitch está afectado por la Fiebre Sombría, uan terrible enfermedad que impregna hasta el aire
+que expira. Toda miniatura a 15cm o menos de Nurglitch tiene HA-1. Toda miniatura en contacto peana con peana con Nurglitch a final de cualquier turno sufre automáticamente un impacto de F4 (no es necesario efectuar chequeos de pánico). La Fiebre Sombría no afecta a miniaturas de tipo Pestilens ni a las miniaturas con la regla especial Cresta Roja de los Hombres Lagarto.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="53d0-27a8-debb-4a19" name="¡El que corre hoy, vive para luchar mañana!" hidden="false" targetId="10cf-482d-0498-a47e" type="rule"/>
+        <infoLink id="75c5-f1ad-598c-e7bc" name="La fuerza radica en el número" hidden="false" targetId="1030-47e7-af2d-e7da" type="rule"/>
+        <infoLink id="1095-8e77-126b-32e0" name="Dirigiendo desde la retaguardia" hidden="false" targetId="0a2e-011d-38a9-9fa6" type="rule"/>
+        <infoLink id="2c3e-afd5-20de-1d37" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
+        <infoLink id="a5d1-a6d9-fce6-cedf" name="La vida no tiene ningún valor" hidden="false" targetId="83fc-d023-f97e-004d" type="rule"/>
+        <infoLink id="9c7f-d310-52b8-bb3c" name="Incensario de plaga" hidden="false" targetId="b40e-eb02-7774-15e9" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2c70-a7b8-0276-fb12" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="9f48-e713-f733-8808" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="8413-7c02-3c42-9f60" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="8751-3ac4-3955-7b44" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="ea93-bce4-20f7-b777" name="Nivel de hechicería" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40ba-f2f0-2ded-86da" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc7d-2470-630b-6656" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9596-f8a0-584a-ae9f" name="Nivel 3" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f35f-6634-4bab-400a" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="efa6-2a34-fe83-dbd8" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="7ea8-b974-7121-21e6" name="Espada de Nurglitch" hidden="false" collective="false" import="true" targetId="8826-197c-dc72-548e" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="575.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b0d4-aad2-6185-027c" name="Queek" publicationId="c220-b30e-7003-9bc3" page="41" hidden="false" collective="false" import="true" type="unit">
+      <comment>El coleccionista de cabezas</comment>
+      <profiles>
+        <profile id="7b94-b9ae-68cb-8ed2" name="Queek" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">7</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">8</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Skaven, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="c9ce-58ca-5b94-6e3d" name="Torbellino de ataques. " hidden="false">
+          <description>Queek no se ve sujeto a la regla Combate con dos armas mágicas. En su lugar, hace un torbellino de ataques; Queek hace siempre 5 ataques; si Arrancaojos no se anula, todos sus ataques (los 5) Anulan armadura; si la Degolladora de Enanos no es anulada, todos sus ataques hieren a 2+ contra miniaturas de tipo Enano y los impactos se resolverán con un -3 a la tirada de salvación por armadura. (Si no se anula ninguna de las dos, Anula armadura y hiere a 2+ contra miniaturas de tipo Enano).</description>
+        </rule>
+        <rule id="1813-3b7a-327b-9847" name="Odio a Orcos, Goblins, y Enanos." hidden="false">
+          <description>Queek odia a todas las miniaturas de tipo Orco, Goblin, y Enano.</description>
+        </rule>
+        <rule id="bcbe-c242-123b-710d" name="¡Retar-retar!" hidden="false">
+          <description>Queek siempre debe Lanzar y Aceptar desafíos. En desafíos, puede
+repetir todas las tiradas para impactar y herir</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="38d3-7a78-705a-48bc" name="¡El que corre hoy, vive para luchar mañana!" hidden="false" targetId="10cf-482d-0498-a47e" type="rule"/>
+        <infoLink id="2126-60a6-3da3-d62d" name="La fuerza radica en el número" hidden="false" targetId="1030-47e7-af2d-e7da" type="rule"/>
+        <infoLink id="96b0-a8e0-f411-f5d6" name="Dirigiendo desde la retaguardia" hidden="false" targetId="0a2e-011d-38a9-9fa6" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="dfb9-b3e5-75e1-826d" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="4d04-f73e-6143-96bc" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="2538-81f6-cd60-f3e0" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="d326-76e9-3cdc-6ae2" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="05d9-e7d1-5448-fea7" name="Arrancaojos" hidden="false" collective="false" import="true" targetId="87e9-0b8d-da8a-b2a6" type="selectionEntry"/>
+        <entryLink id="5840-f8d8-d484-c082" name="Degolladora de enanos" hidden="false" collective="false" import="true" targetId="d4d8-2263-f492-0a2d" type="selectionEntry"/>
+        <entryLink id="d855-d543-26b2-ad11" name="Armadura de disformidad" hidden="false" collective="false" import="true" targetId="5bf1-ea9d-4c5a-ad62" type="selectionEntry"/>
+        <entryLink id="673b-6204-b003-e367" name="Colgante de la putridez" hidden="false" collective="false" import="true" targetId="b9b2-ff11-86e4-0445" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="300.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fac8-7eb7-b8aa-fa58" name="Skrolk" publicationId="c220-b30e-7003-9bc3" page="43" hidden="false" collective="false" import="true" type="unit">
+      <comment>Señor de la plaga del clan Pestilens</comment>
+      <profiles>
+        <profile id="afa0-3a11-55ac-1e20" name="Skrolk" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">7</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">8</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Skaven, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="003d-1254-879c-f5db" name="Báculo de la Corrupción" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>El Báculo de Corrupción se encuentra en continua y perfecta armonía con las repugnantes energías de la pestilencia y la corrupción. Cualquier criatura que no sea un Monje de Plaga morirá sin remedio si entra en contacto con él. </comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Se trata de un Incensario de Plaga a todos los efectos (mayal, arma mágica, etc) pero, además, todas las miniaturas que sufran una o más herida del Báculo de la Corrupción y no mueran, al inicio de cada uno de sus turnos deberán lanzar 1D6; con un 4+ no pasa nada, con 1-3 la miniatura herida sufrirá otra herida que Anula armaduras</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f58e-c15c-6e10-6809" name="Campana de las Mil Viruelas" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">A partir del momento que Skrolk sufra su primera herida, al final de todos los turnos (ami- gos o enemigos) toda miniatura (amiga o enemiga) en contacto peana con peana con Skrolk deberá hacer un chequeo de Resistencia (obtener igual o menos que su Resistencia en 1D6; un 6 siempre es un fallo); si lo falla, la miniatura sufre una herida que Anula armaduras y Skrolk recupera una herida que haya perdido con anterioridad. Ten en cuenta que una vez la Campana empieza a funcionar, aunque Skrolk tenga 4 heridas seguirá funcionando. En caso de miniaturas formadas por varios elementos, como un personaje montado en monstruo, tanto el monstruo como la montura deben hacer el
+chequeo de Resistencia. Skrolk nunca puede tener más de 4 Heridas.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="ae3a-87c9-2bee-c260" name="Afinidad Pútrida" hidden="false">
+          <description>Skrolk es inmune a todos los hechizos del Saber de Nurgle.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="8e7a-1f2a-952b-811d" name="¡El que corre hoy, vive para luchar mañana!" hidden="false" targetId="10cf-482d-0498-a47e" type="rule"/>
+        <infoLink id="c46d-3cdf-1405-de9a" name="La fuerza radica en el número" hidden="false" targetId="1030-47e7-af2d-e7da" type="rule"/>
+        <infoLink id="16d4-139f-b0cf-d5f7" name="Dirigiendo desde la retaguardia" hidden="false" targetId="0a2e-011d-38a9-9fa6" type="rule"/>
+        <infoLink id="f961-20b7-c561-79c4" name="La vida no tiene ningún valor" hidden="false" targetId="83fc-d023-f97e-004d" type="rule"/>
+        <infoLink id="6159-266a-6cac-826d" name="Furia asesina" hidden="false" targetId="000a-cfde-6e79-aecb" type="rule"/>
+        <infoLink id="9649-661e-8167-9323" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
+        <infoLink id="ed40-140e-1234-2318" name="Nube de moscas" hidden="false" targetId="f833-f9eb-4d84-0973" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="9de5-c4ba-a06a-e993" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="b0d8-b806-9735-ea51" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="1665-1373-4ce1-22bf" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="a7d4-6f1b-a974-f1d9" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="9428-7be5-042c-1918" name="Liber Bubonicus" hidden="false" collective="false" import="true" targetId="807c-39e1-c86b-dc83" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="400.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bb92-640f-eba1-d354" name="Skweel Piñatarroída" publicationId="c220-b30e-7003-9bc3" page="44" hidden="false" collective="false" import="true" type="unit">
+      <comment>MAESTRO DE LAS BESTIAS DEL POZO INFERNAL</comment>
+      <profiles>
+        <profile id="d6df-1aa5-650f-83df" name="Skweel Piñatarroída" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Skaven, Moulder, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="06c5-af9e-4d9e-9b78" name="Látigo de Disformidad. " hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>Skweel blande un pernicioso látigo de varias puntas de piedra bruja. </comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Látigo (arma de mano, ataca desde segunda fila de Ratas Ogro o desde última de Ratas Gigantes). </characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Anula armaduras. Heridas múltiples (2). Ten en cuenta que Skweel ataca únicamente con el Látigo, así que no se considera arma de mano adicional si tiene enemigos en contacto peana con peana.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="cb9d-ff90-8ee9-9ea4" name="Maestro de las bestias" hidden="false">
+          <description>Todas las unidades de tipo Moulder a 15 cm o menos de Skweel Piñatarroída pueden repetir los che- queos de psicología no superados.</description>
+        </rule>
+        <rule id="70ce-8d11-18fb-d237" name="Manada excepcional" hidden="false">
+          <description>Sólo puede unirse a unidades de tipo Moulder. Si despliega en una unidad de Ratas Ogro o Ratas Gigantes, lanza 1D6 tras el despliegue para ver qué mutación ha introducido en la unidad (se aplica a la unidad, no a los personajes ni Señores de las Bestias que haya en ella):
+- 1-2: Parece como si las extremidades de estas asquerosas criaturas crecieran de nuevo tan pronto como se las cortan. Las criaturas de la manada tienen la regla especial Regeneración
+- 3-4: A los del Clan Moulder les encanta añadir glándulas venenosas. Ataques envenenados
+- 5-6: Brazos adicionales, implantes mecánicos o sencillamente un poco más de mala sombra convierten a una manada en algo más peligroso. Cada criatura gana +1 ataque.</description>
+        </rule>
+        <rule id="f7de-5712-5c7a-3c4c" name="Guardaespaldas enfermizos." hidden="false">
+          <comment>A Skweel siempre le acompañan un pequeño grupo de ratas y su fiel Rata Lobo Roetripas</comment>
+          <description>Toda unidad enemiga en contacto peana con peana con Skweel o su unidad, al inicio de cada fase de combate cuerpo a cuerpo, recibe 1D6+2 impactos de F2.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="25c4-5a1d-aa5a-9207" name="¡El que corre hoy, vive para luchar mañana!" hidden="false" targetId="10cf-482d-0498-a47e" type="rule"/>
+        <infoLink id="bbb7-97df-6769-835b" name="La fuerza radica en el número" hidden="false" targetId="1030-47e7-af2d-e7da" type="rule"/>
+        <infoLink id="7650-a7b6-91b1-c87e" name="Dirigiendo desde la retaguardia" hidden="false" targetId="0a2e-011d-38a9-9fa6" type="rule"/>
+        <infoLink id="da96-0095-717e-269f" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="9381-b240-187b-06e1" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="c3af-97a8-73a9-8926" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="fa06-3f77-9328-3a36" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="210.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5d5e-5127-0e95-93fb" name="Snikch" publicationId="c220-b30e-7003-9bc3" page="47" hidden="false" collective="false" import="true" type="unit">
+      <comment>Jefe de los asesinos del clan Eshin</comment>
+      <profiles>
+        <profile id="f471-d9f3-de5c-9007" name="Snikch" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">18</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">9</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">6</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">10</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">4+</characteristic>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Skaven, Eshin, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="53e1-5eec-c507-2fe8" name="Espadas supurantes" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124"> Dos armas de mano (A+1)</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">+1</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Sin embargo, Snikch luchando con las Espadas Supurantes obtiene un total de 6 ataques. Todos esos ataques se resuelven con F+1 y Heridas múltiples (1D3).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="dd1d-8bcc-07df-7c3b" name="Despliegue oculto" hidden="false">
+          <description>Sin embargo, Snikch sólo puede estar oculto en unidades de Guerreros de Clan, Alimañas, Corredores de Sombras o Acechantes Nocturnos.</description>
+        </rule>
+        <rule id="ab99-2da8-aa6e-3cae" name="Golpe Letal de Snikch" hidden="false">
+          <description>Ten en cuenta que esto es una regla de Snikch, no de sus armas. El Golpe Letal sólo se aplica en combate cuerpo a cuerpo.</description>
+        </rule>
+        <rule id="47d0-b509-d95f-7d37" name="Sensei" hidden="false">
+          <description>Snikch nunca puede ser el General del ejército, excepto si estás usando la lista de Clan Eshin; en ese caso, debe ser el General, y las demás miniaturas podrán usar su Liderazgo una vez aparezca (si está oculto gracias a la regla Despliegue Oculto, obviamente no).</description>
+        </rule>
+        <rule id="21eb-4332-32d7-225e" name="Esquivar. " hidden="false">
+          <description>La agilidad de Snikch le permite esquivar balas o hechizos mágicos. Snikch tiene una Tirada de salvación especial de 4+</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="5265-8bad-b5a7-f264" name="¡El que corre hoy, vive para luchar mañana!" hidden="false" targetId="10cf-482d-0498-a47e" type="rule"/>
+        <infoLink id="753b-0b2a-481b-8d4a" name="La fuerza radica en el número" hidden="false" targetId="1030-47e7-af2d-e7da" type="rule"/>
+        <infoLink id="2dc7-f272-f827-8188" name="La vida no tiene ningún valor" hidden="false" targetId="83fc-d023-f97e-004d" type="rule"/>
+        <infoLink id="ebb1-6c0f-eb74-3979" name="Bombas de humo" hidden="false" targetId="c664-bbf6-a459-bbce" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="178f-1fcd-5b6a-f02a" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="1857-0f5b-65cc-0904" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="ed5b-6cd9-6b43-ed8f" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="7202-5248-7b82-b79c" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="317c-b38f-a7c8-8c30" name="Estrellas de piedra bruja" hidden="false" collective="false" import="true" targetId="8de1-2f53-5fce-71e9" type="selectionEntry"/>
+        <entryLink id="6e6a-eb63-f4f7-c21f" name="Capa de sombras" hidden="false" collective="false" import="true" targetId="4b0b-7601-2f42-5c50" type="selectionEntry"/>
+        <entryLink id="3f50-3315-1474-2af2" name="Brazaletes de poder" hidden="false" collective="false" import="true" targetId="8425-4166-8728-8e59" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="515.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4fde-8d30-0080-c62e" name="Thanquol" publicationId="c220-b30e-7003-9bc3" page="51" hidden="false" collective="false" import="true" type="unit">
+      <comment>El Vidente Gris</comment>
+      <profiles>
+        <profile id="901a-3b98-6108-2b4e" name="Thanquol" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">4+</characteristic>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Skaven, Hechicero, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="85fe-4468-39b2-edd6" name="Báculo de la Rata Cornuda" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Thanquol habla en nombre de la Rata Cornuda. </comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Thanquol conoce un hechizo adicional, hasta un total de 5 hechizos.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8940-8030-f412-c195" name="Amuleto de la Rata Cornuda" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>El talismán de piedra bruja pura que lleva Thanquol es un potente objeto de defensa, así como una señal de su oficio. </comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Al inicio de cada turno propio, Thanquol lanza 1D6 y con un resultado de 2-6 recupera una herida que haya perdido anteriormente. Con un 1, no pasa nada.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="6425-cd6a-226e-e7ba" name="Fragmentos de piedra bruja (13)" hidden="false">
+          <description>Inicia la partida con 13 Fragmentos de Piedra Bruja.</description>
+        </rule>
+        <rule id="d888-f12d-e7d9-1b86" name="Elegido de la Rata Cornuda" hidden="false">
+          <comment>Ya sea por sus habilidades precognitivas o la intervención divina, Thanquol ha sido bendecido por una suerte extraordinaria. </comment>
+          <description>Thanquol tiene una Tirada de salvación especial 4+. Si Thanquol está incluido en una unidad, por cada salvación especial que supere Thanquol, una miniatura amiga en contacto peana con peana sufrirá la herida que haya salvado. Si va a lomos de Destripahueos Monstruoso, éste sufrirá las heridas que supere Thanquol con su tirada de salvación especial. La miniatura que sufre esta herida “desviada” puede efectuar sus tiradas de salvación normalmente.</description>
+        </rule>
+        <rule id="7fe7-4733-e591-02df" name="Adicción a la Piedra Bruja" hidden="false">
+          <comment>Thanquol está enganchado a la Piedra Bruja, y se conoce su consumo más bien alegre del mate- rial en su estado puro. A pesar de los efectos adversos sobre su cordura, también tiene sus ventajas. Thanquol puede asimilar cantidades absurdas de este material sin apenas inmutarse, más allá de algún parpadeo involuntario o la paranoia que sus bigotes no dejan de seguirle a todas partes. </comment>
+          <description>Puede repetir los chequeos para evitar dañarse ingiriendo Piedra Bruja.</description>
+        </rule>
+        <rule id="22ca-812d-fd8a-584b" name="Archienemigos" hidden="false">
+          <comment>Thanquol ha vivido muchas desventuras, pero sus enemigos acérrimos son cierto matador y cierto poeta. </comment>
+          <description>Sufre Odio y Miedo hacia el regimiento de renombre Gotrek y Félix.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="4b81-c208-a5fa-f7ba" name="¡El que corre hoy, vive para luchar mañana!" hidden="false" targetId="10cf-482d-0498-a47e" type="rule"/>
+        <infoLink id="3faf-e744-0c91-4327" name="La fuerza radica en el número" hidden="false" targetId="1030-47e7-af2d-e7da" type="rule"/>
+        <infoLink id="535b-f923-9ecc-17ae" name="Dirigiendo desde la retaguardia" hidden="false" targetId="0a2e-011d-38a9-9fa6" type="rule"/>
+        <infoLink id="bbfc-a1c1-6d18-63e6" name="Inmune a psicología" hidden="false" targetId="3970-3b01-1734-d642" type="rule"/>
+        <infoLink id="8d10-59b4-7345-c24f" name="La vida no tiene ningún valor" hidden="false" targetId="83fc-d023-f97e-004d" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c94a-a49c-4e41-4ce1" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="459b-b0c6-3966-23b9" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="491d-8892-8c4c-f204" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="3415-96bc-3fba-ea33" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8274-98a3-e9e9-31f5" name="Nivel de hechicería" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85e5-3d72-ee70-b5ac" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3016-653f-215e-c0ac" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="b9e1-5e09-98b9-542f" name="Nivel 4" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb61-15f0-14da-1c41" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d171-12d0-1fa1-a2a4" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="f975-fd1e-e025-8399" name="Saber Mágico" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f26b-a7b1-44a7-aa8a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c79-0547-f391-2bf6" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3b71-d1b9-6e48-a52d" name="Hechizos Skaven" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70b4-5da7-c2f3-2a92" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2447-3c3f-fe09-3637" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="12be-765c-c0d2-afaa" name="Destripahuesos" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b954-ae00-711d-0747" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e23-e8a3-2588-4fd8" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="889a-b201-0e26-4814" name="Destripahuesos IV" hidden="false" collective="false" import="true" type="model">
+              <profiles>
+                <profile id="7f97-7f66-1852-131e" name="Destripahuesos IV" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">-</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"> Infantería Monstruosa, Skaven, Moulder, Personaje especial.</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                  </characteristics>
+                </profile>
+                <profile id="02a1-4262-8398-2bc5" name="Tres Garras" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                  <characteristics>
+                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de mano</characteristic>
+                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Ya reflejado en su atributo de Ataques</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="a3b3-d648-4806-ed66" name="Estupidez" hidden="false">
+                  <description>Si Destripahuesos IV está a más de 15cm de Thanquol al inicio de turno, estará sujeto a Estupidez.</description>
+                </rule>
+                <rule id="9dfa-287f-8fe1-1df4" name="Rata Ogro" hidden="false">
+                  <description>Destripahuesos IV es una Rata Ogro a todos los efectos y puede incluirse dentro de una unidad de Ratas Ogro.</description>
+                </rule>
+                <rule id="8702-2fe7-f4f5-277b" name="Empalar" hidden="false">
+                  <description>Destripahuesos IV tiene F+2 en carga.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="d537-eee8-fc1b-4c64" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+                <infoLink id="5e9e-db2e-0097-9385" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+                <infoLink id="65c2-48c8-2efe-4b62" name="La vida no tiene ningún valor" hidden="false" targetId="83fc-d023-f97e-004d" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="110.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="852f-fc11-6265-ab1a" name="Destripahuesos VII" hidden="false" collective="false" import="true" type="model">
+              <profiles>
+                <profile id="f9f2-ce0e-f63c-58e6" name="Destripahuesos VII" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">-</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Skaven, Constructo, Personaje especial.</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                  </characteristics>
+                </profile>
+                <profile id="2cb0-1e92-8bf8-183a" name="Lanzallamas de disformidad" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                  <comment>Durante el proceso de reconstrucción de Destripahuesos, los Ingenieros Brujos le implantaron un Lanzallamas de Disformidad en vez de un brazo adiciona</comment>
+                  <characteristics>
+                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124"/>
+                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">unciona igual que el del grupo de apoyo solo que sus ataques son de F4 y no causan heridas múltiples (pero siguen provocando pánico en las unidades a las que causen bajas). El Lanzallamas de Disformidad no puede ser anulado por reglas, hechizos y efectos que anulen objetos mágicos, ya que no es un arma mágica (aunque, al ser de Disformidad, realice impactos mágicos).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="bf46-a69c-5400-21f3" name="Guardaespaldas de Thanquol" hidden="false">
+                  <description>Destripahuesos debe desplegar a menos de 15 cm de Thanquol al inicio de la batalla. No puede formar parte de ninguna unidad. Si Thanquol es destruido Destripahuesos debe retirarse del juego inmediatamente (y contará también como destruido). Al inicio de cada turno propio hay que chequear con 1D6: 2-6 nada ocurre. Con un 1, Destripahuesos no funciona correctamente. En ese caso hay que volver a tirar 1D6:
+1-3 Destripahuesos no puede hacer nada durante este turno y es impactado automáticamente en combate. Además, el oponente puede controlarlo en su siguiente turno como si fuese de su propio ejército. Al inicio del siguiente turno, vuelve al control de Thanquol.
+4-6: Destripahuesos no puede hacer nada durante este turno y es impactado automáticamente en combate.</description>
+                </rule>
+                <rule id="5bc4-af07-5215-6f21" name="Válvula de seguridad" hidden="false">
+                  <comment>Antes de ofrecer a Destripahuesos como regalo a Thanquol, los Ingenieros Brujos se aseguraron de que su creación no se volviese contra ellos en el futuro. </comment>
+                  <description>Destripahuesos no puede dañar de ninguna forma voluntaria a ninguna miniatura tipo Skryre. Destripahuesos no puede cargar ni arrasar si la carga o arrasamiento se produce contra miniaturas de tipo Skryre. Tampoco puede perseguir a unidades que contengan una o más miniaturas de tipo Skryre. Todos los ataques cuerpo a cuerpo de Destripahuesos contra miniaturas de tipo Skryre fallan automáticamente. La plantilla de su lanzallamas de disformidad no puede impactar sobre un skaven del clan Skryre cuando se enfoca (o si hay alguno en la dirección en que apunta); si no es posible colocar el lanzallamas de forma que no impacte a ninguna miniatura Skryre, no puede dispararlo.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="6fd6-6ce8-0f96-e24d" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+                <infoLink id="053b-31c0-9cf0-ffe6" name="La vida no tiene ningún valor" hidden="false" targetId="83fc-d023-f97e-004d" type="rule"/>
+                <infoLink id="2052-0216-6ac9-0ef9" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+                <infoLink id="56cb-3f78-29a8-13b1" name="Inmune a desmoralización" hidden="false" targetId="3ea2-7beb-2798-15a0" type="rule"/>
+                <infoLink id="7497-c2cf-d680-0e96" name="Inmune a Ataques envenenados" hidden="false" targetId="bbb0-da59-f1cf-1521" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="75.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bb87-6f4c-a801-ef9d" name="Destripahuesos XIV" hidden="false" collective="false" import="true" type="model">
+              <profiles>
+                <profile id="549b-c441-6a3b-37a4" name="Destripahuesos XIV" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo, Skaven, Personaje especial.</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="35e1-18a7-d742-091f" name="Guardaespaldas de Thanquol" hidden="false">
+                  <description>Destripahuesos XIV es a todos los efectos la montura de Thanquol (proporciona puntos de victoria de forma independiente, efectúa tirada de reacción de monstruos si muere su jinete, etc).</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="a08c-a1fc-c329-179f" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
+                <infoLink id="e5db-3cf1-0e9c-d5f8" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+                <infoLink id="f75b-d2b3-540d-ff0f" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
+              </infoLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="172f-472c-a18c-4ba4" name="Armas" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a73-9025-9c1c-0958" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="1b1d-503e-6a25-73ac" name="Braseros de Piedra Bruja" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8996-8f88-e171-c673" type="max"/>
+                      </constraints>
+                      <profiles>
+                        <profile id="c709-de5b-e7d6-73d6" name="Braseros de Piedra Bruja" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                          <characteristics>
+                            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Los Braseros de Piedra Bruja son a todos los efectos un Incensario de Plaga, con la regla Heridas múltiples (1D3). </characteristic>
+                            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+                            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">No pueden ser anulados por reglas, hechizos y efectos que anulen objetos mágicos. Estos Braseros son una pequeña te, creada expresamente para que no pueda afectar ni a Thanquol ni a Destripahuesos, así que no deben hacer el chequeo de Resistencia.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="d319-c06c-4c52-4618" name="Armas de Pryectiles" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e8fb-6f89-8b73-3f32" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="5da9-e886-fb95-cc55" name="Lanzallamas de disformidad" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2ed-fe06-6006-ae7f" type="max"/>
+                      </constraints>
+                      <profiles>
+                        <profile id="1c5d-ded6-ff37-8b77" name="Lanzallamas de disformidad" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                          <characteristics>
+                            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Se trata de dos Lanzallamas de Disformidad a todos los efectos</characteristic>
+                            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+                            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Sin embargo, Destripahuesos XIV puede disparar ambos Lanzallamas en la fase de disparo, incluso contra objetivos distintos (debe declarar ambos disparos antes de resolverlos). En caso de obtener Problemas, sencillamente
+Destripahuesos sufre un impacto de F5 con Heridas múltiples (1d3).). El  Lanzallamas de Disformidad no puede ser anulado por reglas, hechizos y efectos que anulen objetos mágicos, ya que no es un arma de proyectiles mágica (aunque, al ser de Disformidad, realice impactos mágicos)</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="120.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="225.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="8ad6-5177-ef7c-6ec8" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5299-69ef-0404-0806" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a609-d2d7-4109-4e37" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="2da9-dc71-ee9c-7684" name="Destripahuesos XIV" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="8365-6d5d-b57a-2a03" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="4fde-8d30-0080-c62e" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb87-6f4c-a801-ef9d" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8365-6d5d-b57a-2a03" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4dd6-05b0-dd24-5a7a" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="e620-380b-fe20-73ac" name="Campana Gritona" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cac2-11bc-c37a-559b" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="200.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="485.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1934-6153-d9b9-6509" name="Throt el Inmundo" publicationId="c220-b30e-7003-9bc3" page="59" hidden="false" collective="false" import="true" type="unit">
+      <comment>Maestro de Pozo Infernal</comment>
+      <profiles>
+        <profile id="c127-b2b8-d605-ccf3" name="Throt el Inmundo" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">7</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Skaven, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f38e-da9b-f900-60aa" name="Coge-mata-mata" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>El Coge-Mata-Mata es una herramienta especial diseñada por el propio Throt con la que captura y mata de muchas formas a innumerables criaturas que luego utiliza en sus retorcidos experimentos. </comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma. Requiere ambas manos. </characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Los ataques resueltos con el Coge-Mata-Mata se resuelven con la regla Golpe letal; sin embargo, puede efectuar el Golpe Letal también a miniaturas de tipo Infantería Monstruosa. Ten en cuenta que, aunque sea un arma que requiere ambas manos, Throt tiene tres brazos así que puede usar el Pega-lejos y el Coge-mata-mata.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="76ea-ead5-e898-dea2" name="Pega-lejos" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>El látigo de Thor el Inmundo es temido por todos los de su clan, ya que su habilidad con él es inigualable. </comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124"/>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">(Ataque adicional si está en contacto peana con peana con el enemigo; si no, puede atacar desde segunda fila de Ratas Ogro o desde retaguardia de Ratas Gigantes). Si Throt usa el Pega-lejos desde la retaguardia de una unidad de ratas gigantes o ratas ogro, tendrá F4 (obviamente, no tendrá Golpe letal).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e33f-2872-8a6b-5fef" name="Fetiche Skaven" hidden="false" typeId="7e35-c20a-e9e9-6dad" typeName="Talismán">
+          <characteristics>
+            <characteristic name="Protección" typeId="9f41-c15e-1f5f-9d01"> Un solo uso. Permite a Throt repetir una tirada de dados de cualquier tipo (una tirada para herir, una tirada de liderazgo, una tirada para perseguir...). Debe repetir la tirada, no parte de ella.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="5211-82a8-86a4-aad4" name="Líder temido" hidden="false">
+          <comment>Throt cuenta con una posición de autoridad dentro del Clan Moulder gracias a una mezcla de miedo, respeto y fuerza bruta. Los skaven se encogen bajo su mirada enloquecida y el terror que inspira con su látigo. </comment>
+          <description>Toda unidad amiga de tipo Moulder a 15cm o menos de Throt puede repetir los chequeos de psicología fallados (no de Desmoralización). Además, todas las unidades amigas de tipo Moulder a 15cm o menos de Throt pueden usar su Liderazgo.</description>
+        </rule>
+        <rule id="d725-9594-6569-803a" name="Apetito insaciable" hidden="false">
+          <comment>Throt está consumido por un apetito insaciable y, si no se alimenta con frecuencia, su sistema hiperactivo acabará por salir de su cuerpo y lo devorará desde el interior. </comment>
+          <description>Throt y la unidad en la que se encuentre no puede perseguir.</description>
+        </rule>
+        <rule id="d260-f097-fa04-8689" name="Fuerza de la disformidad. " hidden="false">
+          <comment>Throt ha realizado un gran número de experimentos en su propio cuerpo que le han hecho robus- tecerse y gozar de habilidades recuperativas. </comment>
+          <description>Throt tiene Regeneración (4+).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="dc7c-07e1-c65f-1dd9" name="¡El que corre hoy, vive para luchar mañana!" hidden="false" targetId="10cf-482d-0498-a47e" type="rule"/>
+        <infoLink id="e69b-5318-9647-1dc8" name="La fuerza radica en el número" hidden="false" targetId="1030-47e7-af2d-e7da" type="rule"/>
+        <infoLink id="3473-2e6a-99ce-b494" name="Dirigiendo desde la retaguardia" hidden="false" targetId="0a2e-011d-38a9-9fa6" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0651-5a0d-d64d-c72a" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="a6c4-ca6a-7c76-b625" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="614e-c57e-d822-6ab5" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="2bf7-abbb-9ed1-a4a1" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="285.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6802-3e4c-589e-089c" name="Tretch Colacobarde" publicationId="c220-b30e-7003-9bc3" page="60" hidden="false" collective="false" import="true" type="unit">
+      <comment>Caudilo del clan Rictus</comment>
+      <profiles>
+        <profile id="4d63-ee8c-549f-ca3d" name="Tretch Colacobarde" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">4+</characteristic>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Skaven, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2b88-7faf-713c-98a2" name="Cascocráneo de la Suerte" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Tretch lleva como talismán de la suerte la calavera de un rival al que venció.</comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Tretch tiene una Tirada de salvación especial de 4+. Además, puede repetir una tirada (tirada, no dado) por turno.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="c874-2637-8511-cf41" name="Estaré aquí mismo" hidden="false">
+          <comment>Tretch tiene una increíble habilidad para dejar tirada a su unidad en el momento más oportuno.</comment>
+          <description>En la fase de movimiento, si Tretch no ha movido ni se ve sujeto a un movimiento obligatorio (p.e. huida), puede moverse en la subfase de Resto de Movimientos; elige una dirección y mueve 8D6cm (si choca contra una unidad enemiga se considera carga, si choca con una unidad amiga se une a dicha unidad). Tretch puede usar este “movimiento especial” incluso si está trabado en combate cuerpo a cuerpo.</description>
+        </rule>
+        <rule id="08b6-4ef7-dd42-0097" name="Salteadores de Tretch" hidden="false">
+          <comment>Tretch es todo un especialista en atacar a enemigos en posiciones desventajosas, un auténtico crack apuñalando a rivales que no están mirando. </comment>
+          <description>Si Tretch está atacando a una unidad por la retaguardia o flanco, tanto él como la unidad a la que se haya unido pueden repetir las tiradas para impactar.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="ffc4-e706-d7bd-8f8b" name="¡El que corre hoy, vive para luchar mañana!" hidden="false" targetId="10cf-482d-0498-a47e" type="rule"/>
+        <infoLink id="fdd1-bd34-c582-14bc" name="La fuerza radica en el número" hidden="false" targetId="1030-47e7-af2d-e7da" type="rule"/>
+        <infoLink id="4ad7-c016-2309-5141" name="Dirigiendo desde la retaguardia" hidden="false" targetId="0a2e-011d-38a9-9fa6" type="rule"/>
+        <infoLink id="f619-347d-6cde-89f4" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+        <infoLink id="d696-eacf-e09c-b963" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="30f5-9386-b37d-9613" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="3757-d20c-55b8-66c2" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="49ef-c087-1d0e-0820" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="4778-614d-a0fc-aae6" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="150.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="76e9-dbd4-7973-fcba" name="Veskit" publicationId="c220-b30e-7003-9bc3" page="61" hidden="false" collective="false" import="true" type="unit">
+      <comment>Gran Verdugo del clan Eshin</comment>
+      <profiles>
+        <profile id="62d2-0904-3dd4-90f8" name="Veskit" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"></characteristic>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Skaven, Eshin, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0f3e-3e5e-687e-39a3" name="Dos pistolas de piedra bruja" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124"/>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Veskit tiene dos Pistolas de piedra bruja incorporadas a sus Garras, por lo que cada turno podrá hacer dos disparos de Pistola
+de piedra bruja (aunque las miniaturas habitualmente no puedan hacer más de un disparo). Ambos disparos se harán contra el mismo objetivo y no tendrán penalizador por Disparos Múltiples (ya que son dos disparos de distintas armas).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="513e-db7f-445b-b624" name="Cuerpo metálico" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+          <characteristics>
+            <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">3+</characteristic>
+            <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Veskit tiene un cuerpo medio metálico, lo que se traduce en una Tirada de salvación por Armadura de 3+.
+Esto no es un objeto mágico, así que no puede anularse (mediante Piedra de la Anulación por ejemplo).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3ec3-e676-9b96-4dac" name="Ojo sin Párpado" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Al inicio de cada turno, Veskit puede usar su Ojo sin párpado; elige una unidad enemiga en línea de visión de Veskit, si la unidad está a 45cm o menos, el oponente debe revelar las miniaturas ocultas en dicha unidad (como Asesinos y demás miniaturas con Despliegue Oculto, o Fanáticos Goblin Nocturno).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="e06b-fd63-45c4-7898" name="¡El que corre hoy, vive para luchar mañana!" hidden="false" targetId="10cf-482d-0498-a47e" type="rule"/>
+        <infoLink id="ed7a-45f5-05d4-1afc" name="La fuerza radica en el número" hidden="false" targetId="1030-47e7-af2d-e7da" type="rule"/>
+        <infoLink id="4e98-a82a-2391-6557" name="Dirigiendo desde la retaguardia" hidden="false" targetId="0a2e-011d-38a9-9fa6" type="rule"/>
+        <infoLink id="dc79-d67a-c8eb-81b3" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+        <infoLink id="a553-8b2c-207a-7a59" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="350d-6bd9-9eb0-2138" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
+        <infoLink id="aebb-bc50-2d13-2186" name="Golpe letal" hidden="false" targetId="917d-4fe5-c45b-ca64" type="rule"/>
+        <infoLink id="4543-8582-dfb4-44c8" name="Inmune a psicología" hidden="false" targetId="3970-3b01-1734-d642" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="109d-3816-61be-1b03" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="f6cd-98c8-57dd-3597" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="d105-6695-1c0a-7a8c" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="195.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
     <selectionEntry id="d06a-83e4-bf8a-5095" name="Gran rata pestilente" hidden="false" collective="false" import="true" type="upgrade">
@@ -5995,6 +7046,16 @@ Se pueden lanzar hechizos solo con dados proporcionados por fragmentos consumido
         <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">25</characteristic>
         <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">5</characteristic>
         <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Sigue las reglas habituales para las Pistolas, salvo que tiene Alcance 25cm y sus impactos se resuelven con F5 y son Ataques mágicos. Además gana la regla Fiable. </characteristic>
+      </characteristics>
+    </profile>
+    <profile id="72d1-27bf-56f4-23b6" name="Acumulador sobrealimentado de energía de piedra bruja" hidden="false" typeId="7e35-c20a-e9e9-6dad" typeName="Talismán">
+      <characteristics>
+        <characteristic name="Protección" typeId="9f41-c15e-1f5f-9d01">Genera un dado de energía adicional para su portador en cada fase de magia propia.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="9f2f-4196-417d-5f76" name="Condensador mejorado de energía de piedra bruja" hidden="false" typeId="7e35-c20a-e9e9-6dad" typeName="Talismán">
+      <characteristics>
+        <characteristic name="Protección" typeId="9f41-c15e-1f5f-9d01">Si el portador puede lanzar el hechizo Rayo de disformidad, podrá hacerlo con un dado más de los que tiene permitidos.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
