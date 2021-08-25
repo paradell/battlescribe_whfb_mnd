@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN v2020" revision="8" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN v2020" revision="9" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="95b0-9aeb-pubN66253" name="PDF Bretonia MDN 2020"/>
   </publications>
@@ -2064,29 +2064,6 @@ No se benefician de un Estandarte de Batalla</description>
         <categoryLink id="0298-2736-9812-8ed9" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
         <categoryLink id="e0d4-184d-84ee-e00b" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="30fc-0571-8686-23e9" name="Equipo Mágico" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a86e-fffe-fa2a-214f" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="1e98-6573-d119-f9c4" name="Equipo Mágico" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15ef-1bac-5d0e-be60" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="521b-0123-3383-39a2" name="Armas mágicas" hidden="false" collective="false" import="true" targetId="27d8-2ee2-1efc-150f" type="selectionEntryGroup"/>
-                <entryLink id="6cb3-c93f-79fe-3801" name="Objetos arcanos" hidden="false" collective="false" import="true" targetId="302f-e833-c306-bb84" type="selectionEntryGroup"/>
-                <entryLink id="a139-29f0-d0d7-c1f4" name="Objetos hechizados" hidden="false" collective="false" import="true" targetId="b8aa-2049-5b59-f9bb" type="selectionEntryGroup"/>
-                <entryLink id="e31f-1311-e04b-ae1a" name="Talismanes" hidden="false" collective="false" import="true" targetId="e06f-b447-0302-d139" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="2169-fa2a-8fd6-c655" name="Saber Mágico" hidden="false" collective="false" import="true">
           <constraints>
@@ -2175,6 +2152,17 @@ No se benefician de un Estandarte de Batalla</description>
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="eac0-3c24-fc06-5820" name="Equipo Mágico" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59d7-c905-30a5-401b" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="78b1-3818-f0c7-831c" name="Armas mágicas" hidden="false" collective="false" import="true" targetId="27d8-2ee2-1efc-150f" type="selectionEntryGroup"/>
+            <entryLink id="f814-4ad6-5568-2aae" name="Objetos arcanos" hidden="false" collective="false" import="true" targetId="302f-e833-c306-bb84" type="selectionEntryGroup"/>
+            <entryLink id="467f-8354-c96a-4815" name="Objetos hechizados" hidden="false" collective="false" import="true" targetId="b8aa-2049-5b59-f9bb" type="selectionEntryGroup"/>
+            <entryLink id="6afd-b47d-47ef-3b15" name="Talismanes" hidden="false" collective="false" import="true" targetId="e06f-b447-0302-d139" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -2289,19 +2277,23 @@ No se benefician de un Estandarte de Batalla</description>
               </costs>
             </selectionEntry>
             <selectionEntry id="9788-fe91-9300-00c4" name="A pie" hidden="true" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
+              <modifierGroups>
+                <modifierGroup>
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cad1-192e-d3e9-18d9" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7831-7e7d-a1ad-3857" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="01fe-d1f3-11e8-12f2" type="instanceOf"/>
+                        <condition field="selections" scope="6ce2-c01e-9c65-3af0" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="01fe-d1f3-11e8-12f2" type="atLeast"/>
+                        <condition field="selections" scope="6ce2-c01e-9c65-3af0" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cad1-192e-d3e9-18d9" type="atLeast"/>
+                        <condition field="selections" scope="6ce2-c01e-9c65-3af0" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7831-7e7d-a1ad-3857" type="atLeast"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
-                </modifier>
-              </modifiers>
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false"/>
+                    <modifier type="set" field="534a-fdbf-2b8e-8dd0" value="0.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="534a-fdbf-2b8e-8dd0" type="max"/>
               </constraints>
@@ -3998,29 +3990,6 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
         <categoryLink id="b409-32eb-2585-e8e8" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="true"/>
         <categoryLink id="f0f1-bb6c-5be2-831f" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="7a7f-39d1-c3ca-d26f" name="Equipo Mágico" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="506a-b61d-b3bd-0d7c" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="65b4-1cdc-9395-d369" name="Equipo Mágico" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="53ea-00f4-9046-81ff" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="228b-e79a-834b-2fc2" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="933a-0dd8-12a2-d7b9" name="Armas mágicas" hidden="false" collective="false" import="true" targetId="27d8-2ee2-1efc-150f" type="selectionEntryGroup"/>
-                <entryLink id="4b20-d23e-ce7c-c810" name="Objetos arcanos" hidden="false" collective="false" import="true" targetId="302f-e833-c306-bb84" type="selectionEntryGroup"/>
-                <entryLink id="f817-ed29-2224-ffb5" name="Objetos hechizados" hidden="false" collective="false" import="true" targetId="b8aa-2049-5b59-f9bb" type="selectionEntryGroup"/>
-                <entryLink id="44fd-707f-4c2d-0166" name="Talismanes" hidden="false" collective="false" import="true" targetId="e06f-b447-0302-d139" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="d516-7b17-16c5-9940" name="Saber Mágico" hidden="false" collective="false" import="true">
           <constraints>
@@ -4118,6 +4087,17 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="448c-fa7c-f556-bf13" name="Equipo Mágico" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7ed-db68-266a-b139" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="3a0e-cc52-645a-7d66" name="Armas mágicas" hidden="false" collective="false" import="true" targetId="27d8-2ee2-1efc-150f" type="selectionEntryGroup"/>
+            <entryLink id="d6b2-23d1-2955-4759" name="Objetos arcanos" hidden="false" collective="false" import="true" targetId="302f-e833-c306-bb84" type="selectionEntryGroup"/>
+            <entryLink id="5583-69f1-9601-ca75" name="Objetos hechizados" hidden="false" collective="false" import="true" targetId="b8aa-2049-5b59-f9bb" type="selectionEntryGroup"/>
+            <entryLink id="81da-ec76-8b5c-69a9" name="Talismanes" hidden="false" collective="false" import="true" targetId="e06f-b447-0302-d139" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="190.0"/>
@@ -4164,28 +4144,6 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="3.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cdee-dbda-f187-b0fd" name="Equipo Mágico y Virtudes" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d17-2fb8-8bb7-c4c7" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="06eb-a09c-537a-3857" name="Equipo Mágico y Virtudes" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="53ea-00f4-9046-81ff" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2165-ebad-e0d9-3891" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="aa57-0d10-c20f-931e" name="Armas mágicas" hidden="false" collective="false" import="true" targetId="27d8-2ee2-1efc-150f" type="selectionEntryGroup"/>
-                <entryLink id="b8d0-2b4d-839f-27ad" name="Armaduras mágicas" hidden="false" collective="false" import="true" targetId="8b80-3260-c0b5-9502" type="selectionEntryGroup"/>
-                <entryLink id="5618-f549-f847-fcdf" name="Objetos hechizados" hidden="false" collective="false" import="true" targetId="b8aa-2049-5b59-f9bb" type="selectionEntryGroup"/>
-                <entryLink id="cd8f-b775-54cf-3cdc" name="Talismanes" hidden="false" collective="false" import="true" targetId="e06f-b447-0302-d139" type="selectionEntryGroup"/>
-                <entryLink id="4a28-e5e6-bef4-e22a" name="Virtudes" hidden="false" collective="false" import="true" targetId="77b3-a6a6-9cb0-0ded" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="7887-dc77-f310-0048" name="Montura" hidden="false" collective="false" import="true" defaultSelectionEntryId="aaa9-257b-2615-474b">
@@ -4228,19 +4186,23 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
               </costs>
             </selectionEntry>
             <selectionEntry id="cf05-8be9-4da1-9411" name="A pie" hidden="true" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
+              <modifierGroups>
+                <modifierGroup>
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cad1-192e-d3e9-18d9" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7831-7e7d-a1ad-3857" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="01fe-d1f3-11e8-12f2" type="instanceOf"/>
+                        <condition field="selections" scope="f5ea-b96b-6ae9-c87b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cad1-192e-d3e9-18d9" type="atLeast"/>
+                        <condition field="selections" scope="f5ea-b96b-6ae9-c87b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7831-7e7d-a1ad-3857" type="atLeast"/>
+                        <condition field="selections" scope="f5ea-b96b-6ae9-c87b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="01fe-d1f3-11e8-12f2" type="atLeast"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
-                </modifier>
-              </modifiers>
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false"/>
+                    <modifier type="set" field="e947-399d-9840-59f4" value="0.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e947-399d-9840-59f4" type="max"/>
               </constraints>
@@ -4351,6 +4313,18 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b98d-744e-ee96-2bbd" name="Equipo Mágico y Virtudes" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e86-b671-bc7e-78d0" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="ec51-7d21-a453-09e9" name="Armas mágicas" hidden="false" collective="false" import="true" targetId="27d8-2ee2-1efc-150f" type="selectionEntryGroup"/>
+            <entryLink id="cee8-c0c6-d917-0c70" name="Armaduras mágicas" hidden="false" collective="false" import="true" targetId="8b80-3260-c0b5-9502" type="selectionEntryGroup"/>
+            <entryLink id="adef-0e40-441a-ccea" name="Objetos hechizados" hidden="false" collective="false" import="true" targetId="b8aa-2049-5b59-f9bb" type="selectionEntryGroup"/>
+            <entryLink id="aa0d-4e2e-7526-f292" name="Talismanes" hidden="false" collective="false" import="true" targetId="e06f-b447-0302-d139" type="selectionEntryGroup"/>
+            <entryLink id="5efc-c3a5-f02f-cd94" name="Virtudes" hidden="false" collective="false" import="true" targetId="77b3-a6a6-9cb0-0ded" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
