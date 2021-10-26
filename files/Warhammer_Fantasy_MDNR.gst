@@ -834,26 +834,33 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
       <infoLinks>
         <infoLink id="798f-96e0-5e46-1076" name="General No Muerto" hidden="false" targetId="3f27-1837-9a2e-4456" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="f361-111c-b61e-9b4a" name="Portaestandarte de Batalla" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6a68-4f3e-3be2-a4a3" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f691-0f6d-0393-f539" type="min"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ff4f-d74f-cdd5-34c2" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="f2e9-508e-c6b9-674a" name="Estandarte de Batalla" hidden="false" targetId="16f9-a928-9d5e-2b4f" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="ac11-64b3-f33e-c229" name="Portaestandarte de Batalla no Muerto" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3b9c-0243-a1d1-cee9" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3fa8-758c-ed9f-e212" type="min"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4394-312b-2692-8b6f" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="7d90-e8e1-3a3c-cb6e" name="Estandarte de Batalla No Muerto" hidden="false" targetId="9ac7-cb60-cd5b-8c07" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
