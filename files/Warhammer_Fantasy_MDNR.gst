@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5e75-a17b-a3f4-ab3b" name="Warhammer Fantasy - MDN" revision="10" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="5e75-a17b-a3f4-ab3b" name="Warhammer Fantasy - MDN" revision="11" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="53ea-00f4-9046-81ff" name="puntos" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -810,6 +810,56 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
       </profiles>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="24d2-e2a1-e4a2-012b" name="General" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4b50-e670-43e7-1e6d" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c725-7b19-e107-d060" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6ab1-07e2-14d0-a213" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="9762-da45-c4d9-8756" name="General" hidden="false" targetId="89b2-105c-35db-51c3" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="554d-6f86-5987-66c9" name="General No Muerto" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="025c-1810-cd44-cb09" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b78-81dd-73b5-2e2a" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aeb1-e09b-fbf3-9e42" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="798f-96e0-5e46-1076" name="General No Muerto" hidden="false" targetId="3f27-1837-9a2e-4456" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f361-111c-b61e-9b4a" name="Portaestandarte de Batalla" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6a68-4f3e-3be2-a4a3" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ff4f-d74f-cdd5-34c2" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="f2e9-508e-c6b9-674a" name="Estandarte de Batalla" hidden="false" targetId="16f9-a928-9d5e-2b4f" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ac11-64b3-f33e-c229" name="Portaestandarte de Batalla no Muerto" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3b9c-0243-a1d1-cee9" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4394-312b-2692-8b6f" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="7d90-e8e1-3a3c-cb6e" name="Estandarte de Batalla No Muerto" hidden="false" targetId="9ac7-cb60-cd5b-8c07" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
