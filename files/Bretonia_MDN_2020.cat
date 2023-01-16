@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN v2020" revision="9" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN v2020" revision="10" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="95b0-9aeb-pubN66253" name="PDF Bretonia MDN 2020"/>
   </publications>
@@ -4061,6 +4061,17 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="a264-4f53-8733-80fb" name="Unicornio" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a54d-a081-aaba-1518" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="a770-8f11-a7d7-5da9" name="Unicornio" hidden="false" collective="false" import="true" targetId="a520-8d3d-ba02-c784" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="65.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="1d50-51d6-f28b-c0e0" name="Nivel de Hechicera" hidden="false" collective="false" import="true" defaultSelectionEntryId="a5be-43df-d8dc-82c8">
@@ -5374,7 +5385,7 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           <characteristics>
             <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma a dos manos</characteristic>
             <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F+2, ataca en último lugar</characteristic>
-            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Además, cada herida no salvada causa 1D3 heridas.</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Heridas múltiples (1D3)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5823,7 +5834,7 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
       <rules>
         <rule id="76ad-68cf-2764-f0ce" name="Groffe y Griffe" hidden="false">
           <comment>Los dos perros lobo de Reynard, Groffe y Griffe, permanecen siempre junto a su amo, defendiéndolo ferozmente en combate cuerpo a cuerpo</comment>
-          <description>Estos dos mastines se sitúan siempre al lado del Caballo de su Señor (eso explica los tres ataques del Caballo). No es necesario que tengas miniaturas para representar a Groffe y Griffe (aunque si lo haces, la miniatura ganará mucho. Groffe y Griffe no se pueden dañar de ninguna forma, ni atacar (como tampoco podrías atacar a un Caballo de Guerra). Además, Groffe y Griffe hostigan a las tropas que se baten en retirada, permitiendo a Reynard y a la unidad a la que se ha unido tirar dos dados adicionales en una persecución y elegir los ocho mejores del total de diez.</description>
+          <description>Estos dos mastines se sitúan siempre al lado del Caballo de su Señor. No es necesario que tengas miniaturas para representar a Groffe y Griffe (aunque si lo haces, la miniatura ganará mucho. Groffe y Griffe no se pueden dañar de ninguna forma, ni atacar (como tampoco podrías atacar a un Caballo de Guerra). Además, Groffe y Griffe hostigan a las tropas que se baten en retirada, permitiendo a Reynard y a la unidad a la que se ha unido tirar dos dados adicionales en una persecución y elegir los ocho mejores del total de diez.</description>
         </rule>
         <rule id="df16-a30c-8266-3eee" name="Partida de caza" hidden="false">
           <comment>Reynard prefiere con frecuencia estar al mando de sus escuderos en vez de unirse a otros caballeros. De hecho, es bien sabido que considera la batalla como si fuera una expedición de caza más.</comment>
@@ -6108,6 +6119,41 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="a520-8d3d-ba02-c784" name="Unicornio" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="98e9-b332-aa94-ae67" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e022-5f91-967c-fc6e" type="min"/>
+      </constraints>
+      <profiles>
+        <profile id="8f1b-35ec-c73f-ced8" name="Unicornio" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">25</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1">2</characteristic>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo, Animal</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="05ae-9a6d-ddc9-8394" name="Empalar" hidden="false">
+          <description>Obtiene un bonificador de F+2 en el turno en que carga.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="90ed-147e-33de-7d29" name="Ataques mágicos" hidden="false" targetId="6e5c-a8a4-78d0-032b" type="rule"/>
+        <infoLink id="bafa-63f1-ed03-3839" name="Resistencia mágica" hidden="false" targetId="10ae-f386-2057-289d" type="rule"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
