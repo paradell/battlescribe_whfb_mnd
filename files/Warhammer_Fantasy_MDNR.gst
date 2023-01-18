@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5e75-a17b-a3f4-ab3b" name="Warhammer Fantasy - MDN" revision="11" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="5e75-a17b-a3f4-ab3b" name="Warhammer Fantasy - MDN" revision="12" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="53ea-00f4-9046-81ff" name="puntos" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -1012,6 +1012,15 @@ Para efectuar el chequeo de inestabilidad, lanza 2D6:
 - Si el resultado es INFERIOR O IGUAL al atributo de Liderazgo modificado por el Resultado del Combate, la unidad sigue y no sufre ninguna herida.
 
 Ejemplo: los Desangradores tienen un atributo de Liderazgo de 8. Supongamos que pierden un combate por 3 puntos; pasa a tener un Liderazgo “modificado” de 5. Si se obtiene 5 o menos en la tirada, no pasa nada; si se obtiene un 6, 7, 8 la unidad sufrirá 1, 2 o 3 heridas adicionales; si se obtiene un 9 (superior al Liderazgo “natural” de 8 de los Desangradores) la unidad entera desaparece.Si una unidad de Demonios es eliminada en la primera ronda de combate, ya sea por heridas o por resultado de la Inestabilidad, el enemigo puede efectuar un Arrasamiento de la forma habitual.</description>
+    </rule>
+    <rule id="52f8-5736-d697-aab1" name="Ataque Relámpago" hidden="false">
+      <description>En el turno en que esta miniatura o unidad haya cargado, y tras calcular la resolución de combate pero antes de efectuar chequeos de desmoralización o aplicar efectos de Miedo, pueden decidir huir de forma voluntaria. Si decide huir habiendo perdido o empa- tado el combate, el enemigo no puede perseguir; si deciden huir habiendo ganado, el enemigo debe hacer igualmente chequeo de desmoralización. En todos esos casos (no por huida por pánico por ejemplo), la unidad no causará pánico en unidades amigas por huir; y la unidad se reagrupará automáticamente al final del movimiento.</description>
+    </rule>
+    <rule id="bcff-b88d-1bcc-1b03" name="Caballería Voladora" hidden="false">
+      <description>Se consideran Caballería a todos los efectos (PU2, TSA+1, afectan hechizos de caballería) con la excepción de que son Unidad Voladora (hostigadores, volar).</description>
+    </rule>
+    <rule id="2b46-65d9-da0f-1117" name="Empalar" hidden="false">
+      <description>Obtiene un bonificador de F+2 en el turno en que carga.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
