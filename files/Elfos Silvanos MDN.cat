@@ -4573,6 +4573,10 @@ Hombre Árbol, es un objeto portahechizos a todos los efectos).</description>
         <infoLink id="e165-71d9-bfee-a122" name="Arquería de los Asrai" hidden="false" targetId="65be-1cbe-df9a-0d5e" type="rule"/>
         <infoLink id="42cc-7b9e-a6e4-9389" name="Caminantes" hidden="false" targetId="3ff4-3023-c46f-5c71" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="8522-13e3-97e6-a374" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="82d5-34c3-eb34-190b" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5639-4224-6ce0-687e" name="General" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5341,7 +5345,6 @@ Poder de Penetración.</characteristic>
       </profiles>
       <rules>
         <rule id="53fe-c717-eb29-8743" name="Magia" hidden="false">
-          <comment></comment>
           <description>Drycha es una hechicera de nivel 2 que elige sus hechizos del Saber de Athel Loren. Además, en cada fase de magia propia, Drycha puede lanzar dos veces por turno el hechizo Cántico de los árboles como si fuera un objeto portahechizos de nivel de ener- gía 3 (adicionalmente a si lo ha lanzado como hechicera).</description>
         </rule>
         <rule id="cd0e-1b3b-ac07-3ee6" name="Furia eterna" hidden="false">
@@ -5373,21 +5376,16 @@ Poder de Penetración.</characteristic>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="b045-a76d-2416-9587" name="General" hidden="false" collective="false" import="true" type="upgrade">
-          <modifierGroups>
-            <modifierGroup>
+          <modifiers>
+            <modifier type="set" field="0369-c16d-d3e8-1c5f" value="0.0">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c223-5e7b-7c1b-7fb8" type="atLeast"/>
               </conditions>
-              <modifiers>
-                <modifier type="set" field="0369-c16d-d3e8-1c5f" value="0.0"/>
-                <modifier type="set" field="f4c7-de91-3edf-20b0" value="0.0"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b331-ef2f-25a9-eb76" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0369-c16d-d3e8-1c5f" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4c7-de91-3edf-20b0" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="e535-fd92-f018-b6a1" name="General" hidden="false" targetId="89b2-105c-35db-51c3" type="rule"/>
@@ -5472,6 +5470,12 @@ de sus propias unidades como causante de la ira de Durthu. Al inicio de la subfa
         <infoLink id="ba49-8b02-58d3-25d6" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
         <infoLink id="e10f-9398-be4d-7096" name="Estrangulamiento" hidden="false" targetId="e90b-fc6e-3f5b-d81e" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="177f-9987-ab32-9872" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="5f07-83f5-281a-bbba" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="a123-2813-5b22-fef0" name="Personaje Especial" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="b594-6c78-1234-f3ad" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0b82-c80d-5a47-254d" name="General" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5517,7 +5521,7 @@ de sus propias unidades como causante de la ira de Durthu. Al inicio de la subfa
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">7</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"> Infantería, Elfo, Personaje especial. Elfo Silvano.</characteristic>
@@ -5535,7 +5539,7 @@ de sus propias unidades como causante de la ira de Durthu. Al inicio de la subfa
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">7</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"> Infantería, Elfo, Personaje especial. Elfo Silvano.</characteristic>
@@ -5661,7 +5665,6 @@ de sus propias unidades como causante de la ira de Durthu. Al inicio de la subfa
       </profiles>
       <rules>
         <rule id="db86-25ba-e628-ee21" name="Magia" hidden="false">
-          <comment></comment>
           <description>Es una hechicera de nivel 2 que usa el Saber de Athel Loren</description>
         </rule>
         <rule id="1d68-5c5a-60fc-26b5" name="Othu el Búho" hidden="false">
