@@ -1738,17 +1738,6 @@ de Tzeentch, y puede lanzar hechizos pese a llevar armadura. Gana el tipo de uni
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e34a-1d07-a696-28e6" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="99a6-7bab-9d42-1f04" name="Armadura del Caos" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e85c-7b2e-9633-66e6" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="3925-b5ca-1556-845a" name="Armadura del Caos" hidden="false" targetId="3981-b341-6465-6d3e" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="beed-7c51-c7d3-8627" name="Armadura ligera" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="7df9-1aca-bd7d-e0b3" value="0.0">
@@ -2236,17 +2225,6 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6aa0-1d95-fb34-69dd" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="e0c3-c678-3942-b625" name="Armadura del Caos" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d7e-50bc-afbb-8dde" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="ddad-72df-5d9e-2217" name="Armadura del Caos" hidden="false" targetId="3981-b341-6465-6d3e" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="11c9-a87e-801d-6422" name="Armadura ligera" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c327-cb83-b3fe-b2bf" type="max"/>
@@ -3344,17 +3322,6 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef89-1bd4-4a49-4332" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="9032-a481-ac38-0474" name="Armadura del Caos" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e7e-62c4-13b2-57a1" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="c7da-0cfc-ebb2-4665" name="Armadura del Caos" hidden="false" targetId="3981-b341-6465-6d3e" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="8.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="513a-1b4a-d4ca-20bc" name="Armadura ligera" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa58-1730-8365-9b13" type="max"/>
@@ -3710,6 +3677,37 @@ ni el cuerno o tambor.</description>
                   </infoLinks>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="1.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="7c4d-bef3-8e32-5ce8" name="Armas de proyectiles" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="609d-1931-0c3e-c588" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dbd5-ffcf-a892-5ab1" type="lessThan"/>
+                        <condition field="selections" scope="609d-1931-0c3e-c588" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffe8-7951-7e6d-06ce" type="atLeast"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa0c-b49d-d571-2030" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="4319-10aa-5013-a145" name="Arco Corto" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4355-3fa7-ae6e-0bdb" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="a13b-b885-c833-6c42" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
+                    <infoLink id="4b6d-8df6-cf43-ecc8" name="Hacha arrojadiza" hidden="false" targetId="d0b8-838e-926b-380a" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="2.0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
@@ -17700,17 +17698,6 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f7d-5839-b35b-1194" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="aa51-e604-66ab-b40b" name="Armadura del Caos" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="238f-f04e-f2cd-586b" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="61cf-23cf-bddd-5246" name="Armadura del Caos" hidden="false" targetId="3981-b341-6465-6d3e" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="8.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="1a47-5bb1-c262-0a60" name="Armadura ligera" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4bd-6fac-12a9-9379" type="max"/>
