@@ -2226,18 +2226,11 @@
     <selectionEntry id="a8d9-3a03-f013-e321" name="Guardia del mar de Lothern" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="bd98-8e67-5ce6-a5de" value="-1.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f26-df00-f0dd-157d" type="greaterThan">
-                  <comment>Príncipe con Honor Yelmo del Mar de Lothern</comment>
-                </condition>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="657f-7c6d-d66a-cc9c" type="greaterThan">
-                  <comment>Noble con Honor Yelmo del Mar de Lothern</comment>
-                </condition>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a9ed-0a45-03eb-6e2e" type="greaterThan">
+              <comment>PJ conHonor Yelmo del Mar de Lothern</comment>
+            </condition>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3152,8 +3145,15 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="086e-867c-dc5f-7001" name="Leones de guerra" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="0333-ec4c-cb83-df7b" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9ae9-541d-32ee-77b8" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0333-ec4c-cb83-df7b" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0333-ec4c-cb83-df7b" type="max"/>
       </constraints>
       <profiles>
         <profile id="6711-2904-3ed3-4350" name="León" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -3652,18 +3652,11 @@
     <selectionEntry id="af78-6b06-fd73-eda6" name="Guardia del fénix" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5f8c-c740-5b44-7e0e" type="greaterThan">
-                  <comment>Príncipe con Honor Yelmo del Mar de Lothern</comment>
-                </condition>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e79-f5a5-5459-bbc1" type="greaterThan">
-                  <comment>Noble con Honor Yelmo del Mar de Lothern  </comment>
-                </condition>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4312-3351-bda1-2711" type="greaterThan">
+              <comment>PJ con Honor Ungido de Asuryan</comment>
+            </condition>
+          </conditions>
           <modifiers>
             <modifier type="remove" field="category" value="184a-30ec-bf7c-b603"/>
             <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
@@ -3855,18 +3848,11 @@
     <selectionEntry id="20da-f977-1710-df44" name="Leones blancos de Cracia" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1641-0161-ed36-fdc4" type="greaterThan">
-                  <comment>Príncipe con Honor Guardia del Leon</comment>
-                </condition>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a802-4729-6a83-c915" type="greaterThan">
-                  <comment>Noble con Honor Guardia del Leon</comment>
-                </condition>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9ae9-541d-32ee-77b8" type="greaterThan">
+              <comment>PJ con Honor Guardia del León</comment>
+            </condition>
+          </conditions>
           <modifiers>
             <modifier type="remove" field="category" value="184a-30ec-bf7c-b603"/>
             <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
@@ -3925,7 +3911,6 @@
                 <selectionEntry id="e9ec-df92-d9c3-9ece" name="Armadura ligera" hidden="false" collective="true" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f21-d98a-0320-af51" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c556-fa56-406d-1af3" type="min"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="2a4d-a5be-666d-f2b5" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
@@ -3937,7 +3922,6 @@
                 <selectionEntry id="88a1-9d3f-a609-0dbb" name="Armadura pesada" hidden="false" collective="true" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ee9-6d23-9d54-136e" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7faf-0995-c6c4-ceb0" type="min"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="6df7-6eed-5ba1-c80b" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
@@ -4097,18 +4081,11 @@
     <selectionEntry id="89e7-2c67-d8bc-f5cc" name="Guardia de Doncellas" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5a40-c80e-b53c-ee60" type="greaterThan">
-                  <comment>Príncipe con Honor Yelmo del Mar de Lothern</comment>
-                </condition>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5a40-c80e-b53c-ee60" type="greaterThan">
-                  <comment>Noble con Honor Yelmo del Mar de Lothern</comment>
-                </condition>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="177c-8c93-1cd9-2d08" type="greaterThan">
+              <comment>PJ con Honor Doncella de la Reina Eterna</comment>
+            </condition>
+          </conditions>
           <modifiers>
             <modifier type="remove" field="category" value="184a-30ec-bf7c-b603"/>
             <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
@@ -4549,6 +4526,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="df19-6f1b-c49f-f2b8" name="Merwyrm" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="increment" field="8315-1e51-156a-52f4" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a9ed-0a45-03eb-6e2e" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8315-1e51-156a-52f4" type="max"/>
+      </constraints>
       <profiles>
         <profile id="abeb-1481-87fc-0ae4" name="Merwyrm" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
