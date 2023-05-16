@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN v2020" revision="10" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN v2023" revision="11" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="95b0-9aeb-pubN66253" name="PDF Bretonia MDN 2020"/>
   </publications>
@@ -697,6 +697,11 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="increment" field="6ae5-56e6-3ca7-3eed" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3811-91e8-22ac-4528" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
       </modifiers>
       <modifierGroups>
         <modifierGroup>
@@ -709,10 +714,14 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ae5-56e6-3ca7-3eed" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="e83c-665f-c60a-9971" name="Manteletes" hidden="false" targetId="4fca-f66e-61e9-2719" type="rule"/>
         <infoLink id="473e-6f92-fa11-b46c" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
         <infoLink id="afb9-0db3-b944-c8b7" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+        <infoLink id="ebbd-1753-2ea3-d26d" name="Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="98a3-cea4-2b5b-1d74" name="New CategoryLink" hidden="false" targetId="ba68-224b-3224-a908" primary="true"/>
@@ -889,6 +898,9 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d87c-bd35-9ddb-8145" type="max"/>
+      </constraints>
       <rules>
         <rule id="f28d-7829-1181-690e" name="Escoria" hidden="false">
           <description>Los Brigands nunca causan pánico en unidades amigas (ni siquiera a los Campesinos)
@@ -948,6 +960,7 @@ No se benefician de un Estandarte de Batalla</description>
               </constraints>
               <infoLinks>
                 <infoLink id="0e0d-3aec-c7db-c93f" name="Arcabuz" hidden="false" targetId="ac56-d4c3-7d2b-aed3" type="profile"/>
+                <infoLink id="b41f-0ddb-f92b-5fae" name="Desdén por la pólvora" hidden="false" targetId="71ea-a591-4b9c-c342" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="3.0"/>
@@ -1264,7 +1277,7 @@ No se benefician de un Estandarte de Batalla</description>
         </modifierGroup>
       </modifierGroups>
       <infoLinks>
-        <infoLink id="95a2-b6fa-d8fb-45d8" name="Voto de la Búsqueda" hidden="false" targetId="a134-9ec0-1ae3-19c9" type="rule"/>
+        <infoLink id="95a2-b6fa-d8fb-45d8" name="Voto del Caballero" hidden="false" targetId="fb8b-353f-ce50-d6af" type="rule"/>
         <infoLink id="d6f5-f254-c400-1886" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
         <infoLink id="6e7e-ebc3-18d7-95dd" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
       </infoLinks>
@@ -1274,8 +1287,7 @@ No se benefician de un Estandarte de Batalla</description>
       <selectionEntries>
         <selectionEntry id="bb6e-dbe7-5935-d27b" name="Caballeros a pie" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5724-6c8f-7d82-974d" type="min"/>
-            <constraint field="selections" scope="parent" value="24.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbd3-63dc-e414-448a" type="max"/>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5724-6c8f-7d82-974d" type="min"/>
           </constraints>
           <profiles>
             <profile id="4979-6248-bc06-81c5" name="Caballero a pie" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -1298,17 +1310,6 @@ No se benefician de un Estandarte de Batalla</description>
             </profile>
           </profiles>
           <selectionEntries>
-            <selectionEntry id="9fb1-aff2-6089-cb0c" name="Arma a dos manos" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0826-06d9-11c9-017a" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="ed4a-81cc-2faf-c550" name="Arma a dos manos " hidden="false" targetId="bc8b-5380-77a9-7fe7" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="2.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="f094-dc09-9bf1-5d68" name="Escudo" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="758f-0f1b-ef23-6285" type="max"/>
@@ -1320,7 +1321,55 @@ No se benefician de un Estandarte de Batalla</description>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="1.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="66e6-b0dd-412b-574b" name="Andantes a pie" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="091d-76d9-a92c-d567" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="8247-d3d6-753a-d04f" name="Andantes a pie" hidden="false">
+                  <description>Opciones: Andantes a Pie. Cualquier unidad de Caballeros a Pie del ejército puede ser de Ca-
+balleros Andantes a pie (+3/m). Los Caballeros Andantes a pie tienen F4, y cambian su Voto de
+
+Caballero por Voto de la Búsqueda.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="3.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="0f64-510c-dbdc-db1e" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="f05a-9752-12df-a615">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d16-a4aa-9259-4bd6" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="723a-9959-5a63-3acd" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="f05a-9752-12df-a615" name="Arma de mano" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92ec-7dac-80b2-7e2e" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="d5ff-d95b-2c27-62c9" name="Alabarda" hidden="false" targetId="ee3a-8a10-edff-cefe" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="b9c2-285f-be89-6135" name="Arma a dos manos" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f332-5fde-6904-1b6c" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="3c5f-8279-d4c3-d40e" name="Arma a dos manos " hidden="false" targetId="bc8b-5380-77a9-7fe7" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="2.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
           <costs>
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="9.0"/>
           </costs>
@@ -1706,24 +1755,6 @@ No se benefician de un Estandarte de Batalla</description>
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="035b-5cb2-22d5-4b56" name="Campesino" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Campesino</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
-          </characteristics>
-        </profile>
         <profile id="7c8e-60ae-2838-04da" name="Balista de Asedio" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
             <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
@@ -1749,49 +1780,87 @@ No se benefician de un Estandarte de Batalla</description>
       <categoryLinks>
         <categoryLink id="a16d-ad5c-1606-1763" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="09bd-a4f3-d5e9-cba3" name="Tipo de Balista" hidden="false" collective="false" import="true" defaultSelectionEntryId="b893-a021-41a1-b5dd">
+      <selectionEntries>
+        <selectionEntry id="d421-4870-122e-c780" name="Balista de Asedio" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae86-470a-3621-b67b" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fe7-d581-b1f6-e11f" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3436-3807-a3bf-e43c" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="599f-4769-9280-bce3" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="b893-a021-41a1-b5dd" name="Balista de Asedio" hidden="false" collective="false" import="true" type="model">
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5279-5371-70ff-1076" type="min"/>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59f0-11f5-6d0e-de23" type="max"/>
-              </constraints>
+          <infoLinks>
+            <infoLink id="1d36-5212-d1e4-6c32" name="Lanzavirotes" hidden="false" targetId="a4bf-9023-0381-9f3a" type="rule"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="27f9-5696-a077-42b3" name="Dotación" hidden="false" collective="false" import="true">
               <infoLinks>
-                <infoLink id="2889-89c1-d558-93bf" name="Lanzavirotes" hidden="false" targetId="a4bf-9023-0381-9f3a" type="rule"/>
+                <infoLink id="7d6b-962c-c8f2-d6be" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
               </infoLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="30.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="138b-db48-60d8-0273" name="Pot-de-Feu" hidden="false" collective="false" import="true" type="model">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="382c-f817-2c4b-e3c3" type="instanceOf"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03a4-8e9c-753b-5498" type="min"/>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4605-c523-c73c-3919" type="max"/>
-              </constraints>
-              <rules>
-                <rule id="1abc-5895-151b-a1eb" name="Pot-de-Feu" publicationId="95b0-9aeb-pubN66253" page="23" hidden="false">
-                  <description>Los Pot-de-Feu son balistas que disparan con F7 (en vez de la F6 habitual). Su alcance máximo es de 60cm (en vez de los 120cm habituales), pero NO tiene penalizador por disparar a largo alcance. Además, los bretonianos no son diestros en el uso de la pólvora; si se obtiene un 1 en la tirada para Impactar, el Pot-de-Feu explota (retíralo cómo baja).</description>
-                </rule>
-              </rules>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="30.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+              <selectionEntries>
+                <selectionEntry id="5118-a55c-c9e3-bd5d" name="Campesino" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e10-e65e-5c8b-0be6" type="max"/>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="36a6-6406-4842-63c5" type="min"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="5482-5b15-b8c8-d57d" name="Campesino" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                      <characteristics>
+                        <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                        <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
+                        <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
+                        <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                        <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                        <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                        <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                        <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                        <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
+                        <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"> </characteristic>
+                        <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                        <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                        <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Campesino</characteristic>
+                        <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="53f1-f294-3a27-18e0" name="Capataz" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bf25-2529-6c31-fc06" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9e1-b413-81ca-48cd" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="3f86-eafa-6029-b980" name="Captaz" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                      <characteristics>
+                        <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                        <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                        <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                        <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                        <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                        <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                        <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                        <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                        <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
+                        <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"> </characteristic>
+                        <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                        <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                        <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Campesino</characteristic>
+                        <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="35.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
@@ -3404,6 +3473,9 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bec9-09ef-9b19-bb80" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="c6b5-ad47-f613-7ee9" name="Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
         <infoLink id="beaa-adba-5c1e-62b2" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
@@ -3588,7 +3660,7 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
         </modifierGroup>
       </modifierGroups>
       <infoLinks>
-        <infoLink id="9219-2b45-5e5e-b086" name="el Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
+        <infoLink id="9219-2b45-5e5e-b086" name="Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
         <infoLink id="3b38-a228-ce09-a3bf" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
         <infoLink id="925e-3002-6811-7c13" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
       </infoLinks>
@@ -3652,24 +3724,6 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
                   </infoLinks>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="0130-4bfd-5d2f-696a" name="Arma a Dos Manos" publicationId="95b0-9aeb-pubN66253" page="10" hidden="false" collective="true" import="true" type="upgrade">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8706-2b3c-c91c-ff54" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="67ac-ce97-66af-fab2" name="Arma a dos manos " hidden="false" targetId="bc8b-5380-77a9-7fe7" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="2.0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="d1b5-5e93-0f11-a127" name="Lanza" hidden="false" collective="true" import="true" type="upgrade">
@@ -3868,7 +3922,7 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e9bc-e8e4-da9a-39a4" name="L&apos;Ordonnance" publicationId="95b0-9aeb-pubN66253" page="31" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="e9bc-e8e4-da9a-39a4" name="Cañon Bretoniano" publicationId="95b0-9aeb-pubN66253" page="31" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -3912,6 +3966,7 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
       </rules>
       <infoLinks>
         <infoLink id="7e96-5313-0cbc-2a31" name="Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
+        <infoLink id="0902-288e-4c1a-57f0" name="Desdén por la pólvora" hidden="false" targetId="71ea-a591-4b9c-c342" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f99c-0acc-4755-fe94" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
@@ -5924,6 +5979,142 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="275.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="d212-2d6f-b10e-9bd6" name="Pot-de-feu" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="9431-4a54-b4c6-565d" name="Balista de Asedio" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">-</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">-</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">-</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">7</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">-</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">-</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">-</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Máquina de Guerra</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="805f-3f98-be9e-b1c0" name="Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="5b95-da19-4921-960e" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="4f16-a428-fe26-31da" name="Pot-de-feu" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a46-2295-8a3b-922c" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b3b-0031-a5ea-8c4d" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="616a-4b3c-188a-9b99" name="Pot-de-feu" hidden="false">
+              <description>El Pot-de-Feu es una máquina bretoniana basada en pólvora que dispara
+
+flechas enormes. Sigue todas las reglas de los Lanzavirotes, con las siguientes excepciones. Dis-
+para con F7 (en vez de F6), reduciéndose la fuerza por cada fila que atraviesa como es habitual.
+
+Su alcance es de 60cm, pero no tiene penalizador por disparar a largo alcance. Además, los
+bretonianos no son diestros en el uso de la pólvora; si se obtiene un 1 en la tirada para impactar,
+el Pot-de-Feu directamente explota (retira la máquina y su dotación como baja).</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="4bad-1786-68dc-a53c" name="Desdén por la pólvora" hidden="false" targetId="71ea-a591-4b9c-c342" type="rule"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="1e99-ba46-f711-39d3" name="Dotación" hidden="false" collective="false" import="true">
+              <infoLinks>
+                <infoLink id="bc5c-38c1-4c76-9dde" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+              </infoLinks>
+              <selectionEntries>
+                <selectionEntry id="cb87-3f12-79bb-a46f" name="Campesino" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e1a-b749-64c8-d5de" type="max"/>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7be-3e26-e755-02cf" type="min"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="e35d-97b0-554b-1cbe" name="Campesino" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                      <characteristics>
+                        <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                        <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
+                        <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
+                        <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                        <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                        <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                        <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                        <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                        <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
+                        <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"> </characteristic>
+                        <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                        <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                        <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Campesino</characteristic>
+                        <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="7236-0106-3d60-8053" name="Capataz" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="58ca-1020-378f-03a2" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ec2f-75bd-b939-7533" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="6dec-0288-8dd0-c242" name="Captaz" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                      <characteristics>
+                        <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                        <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                        <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                        <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                        <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                        <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                        <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                        <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                        <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
+                        <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"> </characteristic>
+                        <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                        <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                        <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Campesino</characteristic>
+                        <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
     <selectionEntry id="6d9c-6159-156b-e21c" name="Caballo de Guerra con barda" hidden="false" collective="false" import="true" type="upgrade">
@@ -6154,6 +6345,9 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
         <infoLink id="90ed-147e-33de-7d29" name="Ataques mágicos" hidden="false" targetId="6e5c-a8a4-78d0-032b" type="rule"/>
         <infoLink id="bafa-63f1-ed03-3839" name="Resistencia mágica" hidden="false" targetId="10ae-f386-2057-289d" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -7596,6 +7790,9 @@ Con las excpepciones:
  - Son Unidad Voladora (Hostigadores, Volar)
  - No llevan Barda
  - Los Personajes no puede unirse a unidades voladoras (incluso si van en Pegaso REal)</description>
+    </rule>
+    <rule id="71ea-a591-4b9c-c342" name="Desdén por la pólvora" hidden="false">
+      <description>Si incluyes algún Pot-de-Feu en tu ejército, no puedes incluir personajes con Voto del Grial, ni Relicario y Peregrinos de Batalla, ni Caballeros del Grial.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

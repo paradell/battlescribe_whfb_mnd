@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="15a1-cfbb-b04d-ff3c" name="Reinos Ogros MDN v2020" revision="6" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="15a1-cfbb-b04d-ff3c" name="Reinos Ogros MDN v2023" revision="7" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
-    <publication id="926b-6555-9b25-6de2" name="Reinos Ogros MDN 2020"/>
+    <publication id="926b-6555-9b25-6de2" name="Reinos Ogros MDN 2023"/>
   </publications>
   <profileTypes>
     <profileType id="60b0-f035-8102-937e" name="Sobrenombres">
@@ -1103,6 +1103,42 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="2a63-79b6-ff2a-2120" name="Montura" hidden="false" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="0612-ec45-1a4c-c4b8" value="0.0"/>
+                <modifier type="set" field="hidden" value="true"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0612-ec45-1a4c-c4b8" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="553d-16e5-9c06-6d9c" name="Palanquín de Gnoblars" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="659d-f200-9567-9b72" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="bbd9-4aa1-6e55-18b7" name="Palanquín de Gnoblars" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+                  <characteristics>
+                    <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">El Déspota no va caminando sino encima de un palan-
+quín de Gnoblars. Usa la peana de Carro (50x100). El portador mueve 10, siempre puede marchar,
+
+su arremetida causa 1D6 impactos en vez de 1 y gana +5 ataques de F2.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="200.0"/>
@@ -1312,7 +1348,7 @@
                 <infoLink id="573c-5cee-066c-17d8" name="Ristra de Escopetas" hidden="false" targetId="eeb7-d58c-d32d-fd8d" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="8.0"/>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1569,6 +1605,15 @@
             <modifier type="set" field="820e-5b24-3fd0-5475" value="0.0"/>
           </modifiers>
         </modifierGroup>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+            <modifier type="set" field="820e-5b24-3fd0-5475" value="0.0"/>
+          </modifiers>
+        </modifierGroup>
       </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="820e-5b24-3fd0-5475" type="max"/>
@@ -1603,7 +1648,7 @@
       <rules>
         <rule id="4424-c90a-3d5f-e93c" name="Inmune a ataques envenenados" hidden="false"/>
         <rule id="eb5b-c88a-bd5d-3b21" name="Afín al Fuego" publicationId="926b-6555-9b25-6de2" page="16" hidden="false">
-          <description>El Panzafuego tiene Ataques flamígeros y es Inmune a ataques flamígeros</description>
+          <description>El Panzafuego tiene Ataques flamígeros y es Inmune a ataques flamígeros. Puede sustituir cualquier hechizo por Espada Ígnea (en vez de Bola de Fuego).</description>
         </rule>
       </rules>
       <infoLinks>
@@ -1616,7 +1661,7 @@
         <categoryLink id="e1b9-1c11-b432-d0fa" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="48ab-e8e1-b3d8-fcf8" name="Equipo Mágico" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="48ab-e8e1-b3d8-fcf8" name="Equipo Mágico y Sobrenombres" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bde-656a-3475-9022" type="max"/>
           </constraints>
@@ -1630,6 +1675,7 @@
                 <entryLink id="9e3e-c561-ceff-c40f" name="Objetos arcanos" hidden="false" collective="false" import="true" targetId="302f-e833-c306-bb84" type="selectionEntryGroup"/>
                 <entryLink id="1a90-40ff-22fd-b111" name="Objetos hechizados" hidden="false" collective="false" import="true" targetId="b8aa-2049-5b59-f9bb" type="selectionEntryGroup"/>
                 <entryLink id="5b86-f7fd-c3d8-6e4b" name="Talismanes" hidden="false" collective="false" import="true" targetId="e06f-b447-0302-d139" type="selectionEntryGroup"/>
+                <entryLink id="9203-5211-8021-c8f6" name="Sobrenombres" hidden="false" collective="false" import="true" targetId="77b3-a6a6-9cb0-0ded" type="selectionEntryGroup"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -2388,9 +2434,14 @@ siempre impacten a un valor fijo.</description>
     <selectionEntry id="9a33-19ac-1a46-eb83" name="Caballería dientemartirio" publicationId="926b-6555-9b25-6de2" page="21" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d98d-02fc-7e68-cab6" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d98d-02fc-7e68-cab6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
             <modifier type="set" field="hidden" value="true"/>
             <modifier type="set" field="1a91-4e38-d1d9-53ed" value="0.0"/>
@@ -2638,9 +2689,14 @@ siempre impacten a un valor fijo.</description>
       </modifiers>
       <modifierGroups>
         <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d98d-02fc-7e68-cab6" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d98d-02fc-7e68-cab6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
             <modifier type="set" field="hidden" value="true"/>
             <modifier type="set" field="2335-5854-3e19-c4fb" value="0.0"/>
@@ -2648,7 +2704,7 @@ siempre impacten a un valor fijo.</description>
         </modifierGroup>
       </modifierGroups>
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2335-5854-3e19-c4fb" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2335-5854-3e19-c4fb" type="max"/>
       </constraints>
       <rules>
         <rule id="9a40-8b5a-f42b-46c2" name="Bestias" hidden="false">
@@ -2665,7 +2721,7 @@ siempre impacten a un valor fijo.</description>
       <selectionEntries>
         <selectionEntry id="87bb-2b12-3c67-b024" name="Colmillos de sable" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d370-b5c8-8110-a33e" type="min"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d370-b5c8-8110-a33e" type="min"/>
           </constraints>
           <profiles>
             <profile id="3329-c9e0-3489-a46d" name="Colmillos de sable" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -2691,7 +2747,7 @@ siempre impacten a un valor fijo.</description>
             <infoLink id="e249-a47a-9a43-ea9c" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="29.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2707,6 +2763,17 @@ siempre impacten a un valor fijo.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+            <modifier type="set" field="1dd5-cd29-b48c-65b3" value="0.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dd5-cd29-b48c-65b3" type="max"/>
       </constraints>
@@ -2759,9 +2826,14 @@ siempre impacten a un valor fijo.</description>
     <selectionEntry id="3c13-7dce-7158-e6f9" name="Escupehierro" hidden="false" collective="false" import="true" type="model">
       <modifierGroups>
         <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d98d-02fc-7e68-cab6" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d98d-02fc-7e68-cab6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
             <modifier type="set" field="hidden" value="true"/>
             <modifier type="set" field="a6e7-740f-fab3-deda" value="0.0"/>
@@ -2851,7 +2923,7 @@ siempre impacten a un valor fijo.</description>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="175.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="205.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cde7-84a6-443a-0fbc" name="Comehombres" publicationId="926b-6555-9b25-6de2" page="23" hidden="false" collective="false" import="true" type="unit">
@@ -3369,9 +3441,14 @@ siempre impacten a un valor fijo.</description>
     <selectionEntry id="0e00-8e5b-6dbf-fb59" name="Colmillos de trueno" hidden="false" collective="false" import="true" type="model">
       <modifierGroups>
         <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d98d-02fc-7e68-cab6" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d98d-02fc-7e68-cab6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
             <modifier type="set" field="hidden" value="true"/>
             <modifier type="set" field="68d4-3298-2891-1eba" value="0.0"/>
@@ -3475,9 +3552,14 @@ siempre impacten a un valor fijo.</description>
     <selectionEntry id="8807-29b5-a5e7-7355" name="Cuernospétreos" hidden="false" collective="false" import="true" type="model">
       <modifierGroups>
         <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d98d-02fc-7e68-cab6" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d98d-02fc-7e68-cab6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
             <modifier type="set" field="hidden" value="true"/>
             <modifier type="set" field="8dc8-43f6-6d5e-702c" value="0.0"/>
@@ -3646,9 +3728,14 @@ su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Giga
       <comment>el Desollador</comment>
       <modifierGroups>
         <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d98d-02fc-7e68-cab6" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d98d-02fc-7e68-cab6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
             <modifier type="set" field="hidden" value="true"/>
             <modifier type="set" field="7460-f062-1247-9023" value="0.0"/>
@@ -3945,9 +4032,14 @@ Toro.
       <comment>El primero de los Comehombres</comment>
       <modifierGroups>
         <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d98d-02fc-7e68-cab6" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d98d-02fc-7e68-cab6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
             <modifier type="set" field="hidden" value="true"/>
             <modifier type="set" field="8335-983a-0428-5479" value="0.0"/>
@@ -4029,7 +4121,7 @@ Toro.
             <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
             <characteristic name="H" typeId="a41f-60f6-2336-73ab">6</characteristic>
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">9</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
@@ -4301,6 +4393,9 @@ Efectos en las Gargantúas amigas- Las gargantúas ganan Regeneración (4+).
               <infoLinks>
                 <infoLink id="4871-3a55-922a-1901" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="cb17-ec63-38a2-6bbe" name="Arma de mano adicional" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -4328,6 +4423,9 @@ Efectos en las Gargantúas amigas- Las gargantúas ganan Regeneración (4+).
               <infoLinks>
                 <infoLink id="d92b-88b1-4c40-d081" name="Cozaz Pinchantez" hidden="false" targetId="b629-24ea-b929-5f0d" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="ad2b-5b0b-1611-4a2c" name="Honda" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -4365,6 +4463,9 @@ Efectos en las Gargantúas amigas- Las gargantúas ganan Regeneración (4+).
               <infoLinks>
                 <infoLink id="a772-39c7-6618-1ce9" name="Rinobuey" hidden="false" targetId="bbb7-4e4c-c8c0-f90e" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4488,6 +4589,9 @@ Efectos en las Gargantúas amigas- Las gargantúas ganan Regeneración (4+).
               <infoLinks>
                 <infoLink id="87b5-6ed0-f53b-1816" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="6154-b604-fcd2-c426" name="Arma de mano adicional" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -4515,6 +4619,9 @@ Efectos en las Gargantúas amigas- Las gargantúas ganan Regeneración (4+).
               <infoLinks>
                 <infoLink id="1a8e-9cda-3364-c87d" name="Cozaz Pinchantez" hidden="false" targetId="b629-24ea-b929-5f0d" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="602c-8ff7-deb8-55fa" name="Honda" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -4925,7 +5032,6 @@ Efectos en las Gargantúas amigas- Las gargantúas ganan Regeneración (4+).
       </constraints>
       <rules>
         <rule id="d333-0714-f096-e3bf" name="Afortunados" publicationId="926b-6555-9b25-6de2" page="43" hidden="false">
-          <comment></comment>
           <description> Los Zuertudoz pueden repetir cualquier tirada. Ten en cuenta que pueden ser tiradas fallidas o exitosas, y cualquier número de ellas (aunque, como es habitual, las tiradas repetidas no se pueden repetir). En caso de tiradas múltiples (como un chequeo de Liderazgo) se repite toda la tirada, no sólo un dado. 
 
 Además, los Zuertudoz tienen una Tirada de salvación especial de 6+; el Zuperzuertudo la tiene de 5+.</description>
@@ -5057,7 +5163,6 @@ Además, los Zuertudoz tienen una Tirada de salvación especial de 6+; el Zuperz
       </constraints>
       <rules>
         <rule id="d6fd-1344-606e-0464" name="Trampas malignas" publicationId="926b-6555-9b25-6de2" page="43" hidden="false">
-          <comment></comment>
           <description>Cualquier una unidad de 5 o más Gnoblars zangrientoz que se encuentre completamente dentro de una zona de terreno difícil al inicio de un turno propio, puede dedicarse a poner trampas. Si lo hacen, no pueden salir de ese elemento de terreno en ese turno. Hasta final de partida, toda miniatura que no sea un Gnoblar Zangriento y que entre en dicho elemento de terreno sufrirá un impacto automático de F3.
 </description>
         </rule>
@@ -5087,8 +5192,8 @@ Además, los Zuertudoz tienen una Tirada de salvación especial de 6+; el Zuperz
                 <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
                 <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
                 <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
-                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
-                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"></characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Gnoblar, Pielverde</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
@@ -5123,8 +5228,8 @@ Además, los Zuertudoz tienen una Tirada de salvación especial de 6+; el Zuperz
                     <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
                     <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
                     <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
-                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
-                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"></characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Gnoblar, Pielverde</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
@@ -5183,8 +5288,8 @@ Además, los Zuertudoz tienen una Tirada de salvación especial de 6+; el Zuperz
                 <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
                 <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
                 <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
-                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
-                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"></characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Gnoblar, Pielverde</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
@@ -5234,8 +5339,8 @@ Además, los Zuertudoz tienen una Tirada de salvación especial de 6+; el Zuperz
                     <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
                     <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
                     <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
-                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
-                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"></characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Gnoblar, Pielverde</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
@@ -6429,6 +6534,9 @@ que pudiera recibir el portador ese turno.</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="2e8d-47df-5feb-3554" name="Yelmo del Jefecillo" publicationId="926b-6555-9b25-6de2" page="40" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -6576,7 +6684,8 @@ que pudiera recibir el portador ese turno.</characteristic>
       <characteristics>
         <characteristic name="Alcance" typeId="cafc-207a-b76d-8124"/>
         <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
-        <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">En combate, cuenta como si el portador tuviera dos armas de mano. Además, los ataques en combate cuerpo a cuerpo del primer turno de cada combate son de Fuerza 4 con Poder de penetración (en vez de la Fuerza habitual).En disparo, puede usarse como un arma de proyectiles con el siguiente perfil. Pistola. Alcance 60 cm. Fuerza 4. Disparos múltiples x2. Poder de penetración. La primera vez que se usen aumenta el alcance en 3D6 cm.</characteristic>
+        <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">En combate, cuenta como si el portador tuviera dos armas de mano. Además, los ataques en combate cuerpo a cuerpo del primer turno de cada combate son de Fuerza 4 con Poder de penetración (en vez de la Fuerza habitual).
+En disparo, puede usarse como un arma de proyectiles con el siguiente perfil. Pistola. Alcance 60 cm. Fuerza 4. Disparos múltiples x2. Poder de penetración. La primera vez que se usen aumenta el alcance en 3D6 cm (pero no modifica el alcance corto, que sigue siendo 30cm).</characteristic>
       </characteristics>
     </profile>
     <profile id="762f-f7a9-b783-2223" name="Espada Larga Catayana" publicationId="926b-6555-9b25-6de2" page="7" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
