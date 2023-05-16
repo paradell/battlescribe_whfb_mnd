@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7ab5-64c7-4c6f-e0e1" name="Mercenarios MDN" revision="5" battleScribeVersion="2.03" authorName="Aleix Paradell" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7ab5-64c7-4c6f-e0e1" name="Mercenarios MDN" revision="6" battleScribeVersion="2.03" authorName="Aleix Paradell" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
-    <publication id="4e39-0109-f7ec-5785" name="Mercenarios MDN 2020"/>
+    <publication id="4e39-0109-f7ec-5785" name="Mercenarios MDN 2023"/>
   </publications>
   <forceEntries>
     <forceEntry id="4756-2348-c229-ddf3" name="Mercenarios - Manuscritos de Nuth" hidden="false">
@@ -2423,6 +2423,24 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
                   </constraints>
                   <infoLinks>
                     <infoLink id="ad2e-050d-b75f-fe3f" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="1.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="9210-462b-0c6b-6e7e" name="Armadura" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79b3-da92-7479-97a6" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="e034-4004-5e90-9616" name="Armadura ligera" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b919-e8e3-d705-e5c8" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="91e6-e6eb-8f52-55f2" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
                   </infoLinks>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="1.0"/>
@@ -6527,6 +6545,40 @@ su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Giga
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="2b3a-4c88-b83d-4088" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="24a5-5ef1-ce30-5039" name="Tirador" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c77-066a-3459-2411" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="ff28-cf35-c6a2-0011" name="Tirador" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="5.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
@@ -6719,6 +6771,9 @@ su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Giga
               <entryLinks>
                 <entryLink id="352f-6c24-9942-a284" name="Caballo de guerra con barda" hidden="false" collective="false" import="true" targetId="7297-9292-6712-53c1" type="selectionEntry"/>
               </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -7051,7 +7106,7 @@ Un sólo uso.
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"></characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Personaje especial.</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
@@ -7231,6 +7286,9 @@ puede resistir.</comment>
               <entryLinks>
                 <entryLink id="2522-0772-0007-771e" name="Caballo de guerra con barda" hidden="false" collective="false" import="true" targetId="7297-9292-6712-53c1" type="selectionEntry"/>
               </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -7483,7 +7541,7 @@ cuando negocien o traten de engañar a los extraños. Algún aventurero debió a
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Hechicera, Personaje especial.</characteristic>
@@ -7616,7 +7674,7 @@ cuando negocien o traten de engañar a los extraños. Algún aventurero debió a
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Hechicera, Personaje especial.</characteristic>
@@ -7799,6 +7857,9 @@ a más de 60cm del General. Si el General se aleja más allá de los 60cm, Ulli 
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
