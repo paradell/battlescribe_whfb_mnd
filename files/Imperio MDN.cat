@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d7c5-1d65-c35a-2131" name="Imperio MDN" revision="3" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d7c5-1d65-c35a-2131" name="Imperio MDN" revision="4" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="becf-a2d3-2ca0-14ba" name="Conde elector" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -14085,75 +14085,10 @@ Ten en cuenta que los Ingenieros no son inmunes al veneno, así que por cada ata
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="0abc-2e88-fbd4-2f9a" name="Armas mágicas" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9684-17a7-6fe9-8b6b" type="max"/>
+      </constraints>
       <selectionEntries>
-        <selectionEntry id="71ba-d202-614b-f0e3" name="Espada de batalla" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="773f-5f15-05b6-c4f1" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="528f-08cb-56f9-2d81" name="Espada de batalla" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
-              <characteristics>
-                <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
-                <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario</characteristic>
-                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">+1A</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ba64-d445-de1c-eb40" name="Espada del poder" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6200-152c-5448-03b9" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e5b3-46e1-60be-7054" name="Espada del poder" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
-              <characteristics>
-                <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
-                <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario + 1</characteristic>
-                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9473-101e-32fd-76c8" name="Espada veloz" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="93b7-4ac8-9a08-4190" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4a24-228a-e02d-db21" name="Espada veloz" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
-              <characteristics>
-                <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
-                <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario</characteristic>
-                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">+1 a impactar</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="30.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1a61-1204-42f9-1666" name="Mordisco de acero" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="de7e-6d7e-2506-7e4b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f6f0-1425-518a-41e5" name="Mordisco de acero" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
-              <characteristics>
-                <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
-                <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario</characteristic>
-                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">-1 a la TSA del enemigo</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="d656-1f76-5b83-48c8" name="Colmillo rúnico" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7fbe-4489-8ec5-73f1" type="max"/>
@@ -14325,25 +14260,18 @@ Ten en cuenta que los Ingenieros no son inmunes al veneno, así que por cada ata
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="ffd3-5bca-49da-973e" name="Espada de batalla" hidden="false" collective="false" import="true" targetId="69bd-241b-6410-b24b" type="selectionEntry"/>
+        <entryLink id="45ef-174b-8bf0-5155" name="Espada del poder" hidden="false" collective="false" import="true" targetId="a821-079a-d95c-ae79" type="selectionEntry"/>
+        <entryLink id="7733-2d43-c749-f3af" name="Espada veloz" hidden="false" collective="false" import="true" targetId="b07b-6153-f204-abb9" type="selectionEntry"/>
+        <entryLink id="f2e8-f6c8-2961-1b2d" name="Mordisco de acero" hidden="false" collective="false" import="true" targetId="e0dd-a28e-f483-4cbd" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="d506-e576-208a-8b73" name="Armaduras mágicas" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b510-44e4-fc55-3f3f" type="max"/>
+      </constraints>
       <selectionEntries>
-        <selectionEntry id="512b-2a8f-af06-aaea" name="Escudo hechizado" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c533-d378-9932-6995" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c335-7aeb-0cc4-b8d0" name="Escudo hechizado" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
-              <characteristics>
-                <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">-2</characteristic>
-                <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="a274-1c80-f58d-2c2d" name="Armadura de oro élfico" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8927-d1aa-95f7-9d2b" type="max"/>
@@ -14457,24 +14385,15 @@ Ten en cuenta que los Ingenieros no son inmunes al veneno, así que por cada ata
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="b660-4840-1131-b4eb" name="Escudo hechizado" hidden="false" collective="false" import="true" targetId="328b-ddd6-f3b1-db14" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="5cf3-b9ce-449c-749e" name="Talismanes" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="832b-f131-3bf5-36fb" type="max"/>
+      </constraints>
       <selectionEntries>
-        <selectionEntry id="7dcf-2d5e-5fae-ac30" name="Talismán de protección" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9684-7e02-ad59-73fc" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="bcf7-f836-731f-5866" name="Talismán de protección" hidden="false" typeId="7e35-c20a-e9e9-6dad" typeName="Talismán">
-              <characteristics>
-                <characteristic name="Protección" typeId="9f41-c15e-1f5f-9d01">TSE 6+</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="15.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="70b4-0e94-9358-2d24" name="Sudario de Magnus" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="295e-96e5-e358-e755" type="max"/>
@@ -14566,48 +14485,28 @@ Ten en cuenta que los Ingenieros no son inmunes al veneno, así que por cada ata
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="091a-3f37-affd-4ae2" name="Talismán de protección" hidden="false" collective="false" import="true" targetId="f236-62d7-dea6-1d1c" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="36d1-ce09-e0a7-dcb0" name="Objetos arcanos" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="increment" field="4a8c-bdd3-26a5-6939" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc1c-34ec-bb3f-6638" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b857-09e0-e462-74f7" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="decrement" field="4a8c-bdd3-26a5-6939" value="1.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b857-09e0-e462-74f7" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a8c-bdd3-26a5-6939" type="max"/>
+      </constraints>
       <selectionEntries>
-        <selectionEntry id="6bf3-3785-5de2-5513" name="Báculo del hechicero" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a754-36d6-fd79-d276" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="b209-7f84-48eb-f477" name="Báculo del hechicero" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
-              <characteristics>
-                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">El portador tiene un +1 a las tiradas para dispersar hechizos.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2968-e3ee-02e7-12f2" name="Pergamino de dispersión" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="97f5-c38e-247a-e1b9" name="Pergamino de dispersión" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
-              <characteristics>
-                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Un solo uso. Dispersa el hechizo objetivo. Este objeto puede repetirse en el mismo personaje o en otros.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3350-4731-b6c5-7ae0" name="Piedra de energía" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="7335-93c7-9a9f-b5ce" name="Piedra de energía" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
-              <characteristics>
-                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Un solo uso. +2 dados para lanzar un hechizo. Este objeto puede repetirse en el mismo personaje o en otros.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="5896-dea4-7fad-de89" name="Bastón de la bruja" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6282-f1d4-d468-c23c" type="max"/>
@@ -14714,8 +14613,16 @@ Ten en cuenta que los Ingenieros no son inmunes al veneno, así que por cada ata
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="76a7-ddc0-9854-9306" name="Báculo del hechicero" hidden="false" collective="false" import="true" targetId="5328-047a-575d-012f" type="selectionEntry"/>
+        <entryLink id="2351-6348-5e8b-162e" name="Pergamino de dispersión" hidden="false" collective="false" import="true" targetId="fc1c-34ec-bb3f-6638" type="selectionEntry"/>
+        <entryLink id="a009-4d94-342c-21ad" name="Piedra de energía" hidden="false" collective="false" import="true" targetId="b857-09e0-e462-74f7" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="a609-47e0-519c-06d0" name="Objetos hechizados" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8468-63e7-c8ec-e77c" type="max"/>
+      </constraints>
       <selectionEntries>
         <selectionEntry id="9f8a-bb78-f9fe-843b" name="Laurel de la victoria" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -14855,22 +14762,10 @@ Ten en cuenta que los Ingenieros no son inmunes al veneno, así que por cada ata
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="5b62-dfc4-c1b8-9642" name="Estandartes mágicos" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf93-583e-d045-b5f7" type="max"/>
+      </constraints>
       <selectionEntries>
-        <selectionEntry id="9e94-85bd-fa60-8121" name="Estandarte de guerra" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2e69-9de1-c120-4c40" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c645-dc64-26f9-8a40" name="Estandarte de guerra" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
-              <characteristics>
-                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">+1 a la resolución de combate</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="01f3-19d5-c04a-4bd1" name="Estandarte imperial" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab7d-9070-cf9c-87db" type="max"/>
@@ -14992,6 +14887,9 @@ Ten en cuenta que los Ingenieros no son inmunes al veneno, así que por cada ata
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="06e0-06df-6fa6-4ea4" name="Estandarte de guerra" hidden="false" collective="false" import="true" targetId="d882-b4a2-c25e-b2fe" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>

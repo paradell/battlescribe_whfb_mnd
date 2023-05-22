@@ -19,21 +19,20 @@ Hace unos años trasteé con BattleScribe para poder hacerme las listas de Breto
 * [Mercenarios](./files/Mercenarios_MDN.cat)
 * [Condes Vampiro](.files/Condes_Vampiro_MND.cat)
 * [Reyes Funerarios](.files/Reyes\ Funerarios\ MDN.cat)
-
-### Ficheros de ejércitos sin modificar de Leyendas
 * Altos Elfos
 * Elfos Oscuros
 * Elfos Silvanos
+* Reinos del Caos: Bestias, Demonios y Mortales
+* Skaven
+* Regimientos de Renombre
+
+### Ficheros de ejércitos sin modificar de Leyendas
 * Enanos
 * Enanos del Caos
 * Hombres Lagarto
 * Imperio
 * Orcos y Goblins
-* Reinos del Caos: Bestias
-* Reinos del Caos: Demonios
-* Reinos del Caos: Mortales
-* Skaven
-* Regimientos de Renombre
+
 
 ## Importar los ficheros
 ### Usando el repositorio
