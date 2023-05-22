@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b1c2-2288-abba-9142" name="Enanos MDN" revision="3" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b1c2-2288-abba-9142" name="Enanos MDN" revision="4" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="7a7d-0d8b-93d0-45c4" name="Señor de los enanos" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -6814,47 +6814,27 @@ Duración: Instantáneo (efecto del movimiento hasta final de turno enemigo).</d
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="ab56-47eb-bfb3-ead7" name="Objetos arcanos" hidden="false" collective="false" import="true">
-      <selectionEntries>
-        <selectionEntry id="0dd8-518c-1fe7-99e2" name="Báculo del hechicero" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7674-7fed-6b22-3d8c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0a07-74e7-2805-5e70" name="Báculo del hechicero" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
-              <characteristics>
-                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">El portador tiene un +1 a las tiradas para dispersar hechizos.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9c3a-faab-37a1-a353" name="Pergamino de dispersión" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="e502-b81f-52b3-695b" name="Pergamino de dispersión" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
-              <characteristics>
-                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Un solo uso. Dispersa el hechizo objetivo. Este objeto puede repetirse en el mismo personaje o en otros.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="cc4e-0744-ba42-4007" name="Piedra de energía" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="4f87-eaf6-7475-315c" name="Piedra de energía" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
-              <characteristics>
-                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Un solo uso. +2 dados para lanzar un hechizo. Este objeto puede repetirse en el mismo personaje o en otros.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <modifiers>
+        <modifier type="increment" field="7b38-d8ab-9ecc-2b4a" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc1c-34ec-bb3f-6638" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b857-09e0-e462-74f7" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="decrement" field="7b38-d8ab-9ecc-2b4a" value="1.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b857-09e0-e462-74f7" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b38-d8ab-9ecc-2b4a" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="9f37-28e8-cfd5-b015" name="Báculo del hechicero" hidden="false" collective="false" import="true" targetId="5328-047a-575d-012f" type="selectionEntry"/>
+        <entryLink id="bd35-3d66-2171-5eb4" name="Pergamino de dispersión" hidden="false" collective="false" import="true" targetId="fc1c-34ec-bb3f-6638" type="selectionEntry"/>
+        <entryLink id="69f2-002a-f18c-88dd" name="Piedra de energía" hidden="false" collective="false" import="true" targetId="b857-09e0-e462-74f7" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>

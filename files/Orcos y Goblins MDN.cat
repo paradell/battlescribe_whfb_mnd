@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f551-0992-682c-c960" name="Orcos y Goblins MDN" revision="5" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f551-0992-682c-c960" name="Orcos y Goblins MDN" revision="6" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="c76f-cc67-773f-41b7" name="Kaudillo orco negro" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -12163,23 +12163,10 @@ aleatoriamente entre los hechizos que sepa) y deja de generar el dado extra de e
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="8b80-3260-c0b5-9502" name="Armaduras mágicas" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d070-065f-78fd-7c06" type="max"/>
+      </constraints>
       <selectionEntries>
-        <selectionEntry id="89ab-b676-aa6e-e367" name="Escudo hechizado" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2c9e-aa3a-2c35-91be" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="eca2-3022-ddf3-774c" name="Escudo hechizado" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
-              <characteristics>
-                <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">-2</characteristic>
-                <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="5404-9d84-507d-37c4" name="Koraza de protekzión" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9fd5-d0e1-f347-6d8a" type="max"/>
@@ -12293,77 +12280,15 @@ aleatoriamente entre los hechizos que sepa) y deja de generar el dado extra de e
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="9164-ebbb-88a3-95b2" name="Escudo hechizado" hidden="false" collective="false" import="true" targetId="328b-ddd6-f3b1-db14" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="27d8-2ee2-1efc-150f" name="Armas mágicas" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa08-edc0-c042-3cd0" type="max"/>
+      </constraints>
       <selectionEntries>
-        <selectionEntry id="ee82-ffd2-15a9-1c09" name="Espada de batalla" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1a64-4baa-7365-1138" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4417-9c86-589a-5ce7" name="Espada de batalla" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
-              <characteristics>
-                <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
-                <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario</characteristic>
-                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">+1A</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4bb7-9dc5-5748-1b23" name="Espada del poder" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="06a2-c7ed-e4a7-3e62" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="10ba-50a6-a1d6-15f2" name="Espada del poder" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
-              <characteristics>
-                <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
-                <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario + 1</characteristic>
-                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7325-050e-8321-0064" name="Espada veloz" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2ee7-9d8c-857e-a83d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="dff4-5b06-10c1-16ea" name="Espada veloz" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
-              <characteristics>
-                <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
-                <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario</characteristic>
-                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">+1 a impactar</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="30.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2573-fb64-ec90-89aa" name="Mordisco de acero" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="728f-ec1e-588c-9c13" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d12a-2d93-c501-c0e0" name="Mordisco de acero" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
-              <characteristics>
-                <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
-                <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario</characteristic>
-                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">-1 a la TSA del enemigo</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="54a6-df8a-59ce-2190" name="Hacha de batalla del último Whaaagh" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f579-4131-1773-b62b" type="max"/>
@@ -12569,24 +12494,18 @@ aleatoriamente entre los hechizos que sepa) y deja de generar el dado extra de e
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="e3cd-351b-b49a-1bbd" name="Espada de batalla" hidden="false" collective="false" import="true" targetId="69bd-241b-6410-b24b" type="selectionEntry"/>
+        <entryLink id="88a4-6d13-2ae3-3627" name="Espada del poder" hidden="false" collective="false" import="true" targetId="a821-079a-d95c-ae79" type="selectionEntry"/>
+        <entryLink id="191b-8653-a290-a52f" name="Espada veloz" hidden="false" collective="false" import="true" targetId="b07b-6153-f204-abb9" type="selectionEntry"/>
+        <entryLink id="a0de-84c0-1b74-d60f" name="Mordisco de acero" hidden="false" collective="false" import="true" targetId="e0dd-a28e-f483-4cbd" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="2753-52a1-1d48-0427" name="Estandartes mágicos" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba45-aebd-c2c7-53b7" type="max"/>
+      </constraints>
       <selectionEntries>
-        <selectionEntry id="e3cf-d5f1-6733-7247" name="Estandarte de guerra" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a2df-3892-18c8-d540" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6cf5-ce2c-708b-ac40" name="Estandarte de guerra" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
-              <characteristics>
-                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">+1 a la resolución de combate</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="84bb-ca74-29f3-e5ee" name="Tótem de Morko" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2703-df27-9bc4-503d" type="max"/>
@@ -12708,48 +12627,28 @@ aleatoriamente entre los hechizos que sepa) y deja de generar el dado extra de e
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="0f27-d18d-a3ff-199c" name="Estandarte de guerra" hidden="false" collective="false" import="true" targetId="d882-b4a2-c25e-b2fe" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="302f-e833-c306-bb84" name="Objetos arcanos" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="increment" field="3209-cd73-ddbd-3f4f" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc1c-34ec-bb3f-6638" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b857-09e0-e462-74f7" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="decrement" field="3209-cd73-ddbd-3f4f" value="1.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b857-09e0-e462-74f7" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3209-cd73-ddbd-3f4f" type="max"/>
+      </constraints>
       <selectionEntries>
-        <selectionEntry id="7698-be73-e2c0-9af0" name="Báculo del hechicero" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="45bf-cd6e-8a9e-d67f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a473-f2b7-0ac0-d948" name="Báculo del hechicero" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
-              <characteristics>
-                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">El portador tiene un +1 a las tiradas para dispersar hechizos.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="530b-4c9f-bd12-9b06" name="Pergamino de dispersión" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="e656-d8f3-5930-8b22" name="Pergamino de dispersión" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
-              <characteristics>
-                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Un solo uso. Dispersa el hechizo objetivo. Este objeto puede repetirse en el mismo personaje o en otros.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f7e6-d0c8-348a-e970" name="Piedra de energía" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="26ad-2c9c-9069-b83e" name="Piedra de energía" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
-              <characteristics>
-                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Un solo uso. +2 dados para lanzar un hechizo. Este objeto puede repetirse en el mismo personaje o en otros.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="95ec-ff5d-3fcf-3a4c" name="Báculo de Badumm" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9e1c-ff77-96e4-3f1e" type="max"/>
@@ -12826,24 +12725,17 @@ aleatoriamente entre los hechizos que sepa) y deja de generar el dado extra de e
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="8e47-8962-1419-2c5d" name="Báculo del hechicero" hidden="false" collective="false" import="true" targetId="5328-047a-575d-012f" type="selectionEntry"/>
+        <entryLink id="b69a-e597-e174-4fcd" name="Pergamino de dispersión" hidden="false" collective="false" import="true" targetId="fc1c-34ec-bb3f-6638" type="selectionEntry"/>
+        <entryLink id="ba11-38eb-e6a0-5b80" name="Piedra de energía" hidden="false" collective="false" import="true" targetId="b857-09e0-e462-74f7" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="e06f-b447-0302-d139" name="Talismanes" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ead1-7eb6-4894-c137" type="max"/>
+      </constraints>
       <selectionEntries>
-        <selectionEntry id="5181-7516-24fa-77a8" name="Talismán de protección" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="50b9-a0b8-d4ae-1b4c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8ad8-e925-24ee-a3cf" name="Talismán de protección" hidden="false" typeId="7e35-c20a-e9e9-6dad" typeName="Talismán">
-              <characteristics>
-                <characteristic name="Protección" typeId="9f41-c15e-1f5f-9d01">TSE 6+</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="15.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="c654-6bfe-bd2a-92f5" name="Traztoz brillantes de Sizzla" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="95db-651c-5329-9102" type="max"/>
@@ -12920,8 +12812,14 @@ aleatoriamente entre los hechizos que sepa) y deja de generar el dado extra de e
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="bda1-5cd1-2605-3c93" name="Talismán de protección" hidden="false" collective="false" import="true" targetId="f236-62d7-dea6-1d1c" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="b8aa-2049-5b59-f9bb" name="Objetos hechizados" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad8a-2f91-faf5-589b" type="max"/>
+      </constraints>
       <selectionEntries>
         <selectionEntry id="ecd4-c5bf-ce56-97c2" name="Mandíbula de hierro de Imbad" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
