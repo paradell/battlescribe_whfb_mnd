@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="88fd-bc7b-a990-f36e" name="Elfos Oscuros MDN" revision="3" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="88fd-bc7b-a990-f36e" name="Elfos Oscuros MDN" revision="4" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="a7c6-766e-bec9-a27e" name="Elfos Oscuros MdN 2023"/>
   </publications>
@@ -295,6 +295,9 @@
                   </characteristics>
                 </profile>
               </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <costs>
@@ -967,7 +970,7 @@
             <infoLink id="cb4d-6573-dd35-9c32" name="Estandarte de Batalla" hidden="false" targetId="16f9-a928-9d5e-2b4f" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="15.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2194,6 +2197,9 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
                   <infoLinks>
                     <infoLink id="a786-75f4-c04b-d7f2" name="Lanza (infantería)" hidden="false" targetId="b34b-3f52-e95c-d5f3" type="profile"/>
                   </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -2867,9 +2873,7 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
       <modifierGroups>
         <modifierGroup>
           <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe19-890c-5a04-d9e1" type="greaterThan">
-              <comment></comment>
-            </condition>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe19-890c-5a04-d9e1" type="greaterThan"/>
           </conditions>
           <modifiers>
             <modifier type="set-primary" field="category" value="0cfc-02a1-ad30-fb33"/>
@@ -3297,9 +3301,7 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
       <modifierGroups>
         <modifierGroup>
           <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2e18-ec4f-3a8c-2d59" type="greaterThan">
-              <comment></comment>
-            </condition>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2e18-ec4f-3a8c-2d59" type="greaterThan"/>
           </conditions>
           <modifiers>
             <modifier type="set-primary" field="category" value="ba68-224b-3224-a908"/>
@@ -4048,6 +4050,9 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
                   <infoLinks>
                     <infoLink id="380c-814b-2610-b8b3" name="Arco" hidden="false" targetId="dfc2-1321-c679-1bc0" type="profile"/>
                   </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -4057,141 +4062,6 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="10dd-27dc-e300-9aaa" name="Montura" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0bf-8578-dec7-2025" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="393e-07c5-c75f-14c3" name="Altar drenasangre" hidden="false" collective="false" import="true" type="unit">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcd7-719a-b945-16c5" type="max"/>
-              </constraints>
-              <rules>
-                <rule id="257d-3e37-18ac-5d52" name="Resistencia a la magia 1" hidden="false"/>
-                <rule id="46c8-e522-3777-1c2a" name="Aura de agonía" hidden="false">
-                  <description>Todos los personajes y unidades amigos a 15cm o menos de uno o más Altares Drenasangre se considera que tienen L+1 (hasta un máximo de L10). Todos los personajes y unidades enemigas a 15cm o menos de uno o más Altares Drenasangre se considera que tienen L-1 (hasta un mínimo de 2).</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink id="79b0-8895-6558-4875" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
-                <infoLink id="a473-98a0-abe3-76fa" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
-                <infoLink id="bf38-6c74-e787-862f" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
-                <infoLink id="0316-bba8-3a9b-64e7" name="Inmune a desmoralización" hidden="false" targetId="3ea2-7beb-2798-15a0" type="rule"/>
-              </infoLinks>
-              <selectionEntries>
-                <selectionEntry id="1bf4-b5fc-ea79-dc9f" name="Elfas brujas" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee87-6a6c-f06b-8cba" type="min"/>
-                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57a8-347b-b475-5b6b" type="max"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="05a5-b8e1-54bd-8ee1" name="Elfa bruja" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-                      <characteristics>
-                        <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
-                        <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
-                        <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
-                        <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
-                        <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
-                        <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-                        <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
-                        <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
-                        <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
-                        <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
-                        <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-                        <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-                        <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
-                        <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink id="8d47-2dce-c0a3-d5b2" name="Ataques envenenados" hidden="false" targetId="d77c-34cb-f94c-aee1" type="rule"/>
-                    <infoLink id="1ec0-f804-a458-ecfc" name="Furia asesina" hidden="false" targetId="000a-cfde-6e79-aecb" type="rule"/>
-                    <infoLink id="6e9a-8c24-b2bf-ce66" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
-                  </infoLinks>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup id="cd99-b6f6-bfe5-85b3" name="Armas" hidden="false" collective="false" import="true">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f26d-123f-32dc-27c8" type="max"/>
-                      </constraints>
-                      <selectionEntries>
-                        <selectionEntry id="25f9-fc27-6d88-583d" name="Dos armas de mano" hidden="false" collective="true" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="012c-ec06-eba5-5201" type="max"/>
-                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae1c-347d-5e95-201f" type="min"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="3433-1067-8052-5e50" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                          </costs>
-                        </selectionEntry>
-                      </selectionEntries>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="c772-2769-d60f-95da" name="Altar drenasangre" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62b8-4e75-35d7-7931" type="min"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be41-a007-7cce-3ab0" type="max"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="67b5-0384-6a1c-f53c" name="Altar drenasangre" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-                      <characteristics>
-                        <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
-                        <characteristic name="HA" typeId="c87b-b820-6a47-1354"/>
-                        <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
-                        <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
-                        <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
-                        <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
-                        <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f"/>
-                        <characteristic name="A" typeId="6b2b-37c4-6774-748b"/>
-                        <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3"/>
-                        <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
-                        <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-                        <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-                        <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Máquina de guerra</characteristic>
-                        <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">5 más la medusa (las elfas no cuentan)</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <rules>
-                    <rule id="0577-3192-f5f7-d252" name="Carro" hidden="false">
-                      <description>1D6 impactos por carga, destruido por heridas de F7, terreno...</description>
-                    </rule>
-                    <rule id="6f19-4774-144e-194f" name="Altar de la medusa" hidden="false">
-                      <description>Trata a todos los efectos una Medusa montada en Altar Drenasangre como tratarías un personaje montado en carro (pueden ser atacados de forma separada, dan puntos de victoria de forma individual, etc). La Medusa no puede abandonar el Altar de forma voluntaria (no puede “desmontarse”). Si el Altar es destruido y la Medusa sobrevive, automáticamente se separará de la unidad que estuviera empujando el Altar y se tratará a la Medusa como un Monstruo individual.</description>
-                    </rule>
-                    <rule id="a079-be9d-4769-98e9" name="Empujada" hidden="false">
-                      <description>Un Altar Drenasangre no mueve por sí solo. Sin embargo, puede incluirse dentro de una unidad de tipo Infantería (situándose en primera fila) como si fuera un personaje montado en Monstruo a todos los efectos (incluso aunque las reglas de la Medusa diga que no pueden unirse a unidades). Si está en una unidad de 10 o más miniaturas (excluyendo el Altar) tendrá el mismo movimiento que la unidad que lo empuja. Por cada miniatura por debajo de 10 en la unidad, resta 2 al Movimiento; una unidad de 5 o menos miniaturas no puede empujar el Altar. Las miniaturas se sitúan alrededor del Altar (primero a sus lados y luego detrás); a efectos de calcular el bonificador por filas, cuenta las miniaturas que ocuparía el Altar (normalmente, 15). Debes hacer que una unidad empuje el Altar a principio de la partida; el Altar no puede “irse” a otra unidad, la unidad no puede abandonar el Altar. Si la unidad que empuja el Altar huye o es destruida, el Altar es destruido junto a las Elfas brujas de “dotación”; si en ese momento la Medusa seguía viva pasa a ser una miniatura independiente (fuera de la unidad).</description>
-                    </rule>
-                  </rules>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="93c4-425b-603c-211d" name="Ocupa un hueco de unidad singular" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb70-c982-1daf-e117" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75f0-0645-2f67-70fb" type="min"/>
-                  </constraints>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="160.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
       </costs>
@@ -4364,9 +4234,6 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
               </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
-          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -4569,7 +4436,7 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
       <selectionEntries>
         <selectionEntry id="fbbc-852b-e9d7-43ca" name="Hermanas de la matanza" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21de-7d75-0000-7df7" type="min"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21de-7d75-0000-7df7" type="min"/>
           </constraints>
           <selectionEntryGroups>
             <selectionEntryGroup id="bd9d-0033-821d-d65f" name="Escudo" hidden="false" collective="false" import="true" defaultSelectionEntryId="99f6-941c-84d9-3f56">
@@ -4699,7 +4566,7 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"></characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
@@ -4790,7 +4657,7 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
                     <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
                     <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
                     <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
-                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"></characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
@@ -5252,7 +5119,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="275.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="200.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="02cd-03ec-e6b4-a745" name="Hidra de guerra" hidden="false" collective="false" import="true" type="unit">
@@ -5626,6 +5493,9 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
                   <infoLinks>
                     <infoLink id="cffa-e228-aef1-e7ce" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
                   </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -5693,9 +5563,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
       <modifierGroups>
         <modifierGroup>
           <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe19-890c-5a04-d9e1" type="greaterThan">
-              <comment></comment>
-            </condition>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe19-890c-5a04-d9e1" type="greaterThan"/>
           </conditions>
           <modifiers>
             <modifier type="set-primary" field="category" value="ba68-224b-3224-a908"/>
@@ -5765,7 +5633,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="6.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
