@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="88fd-bc7b-a990-f36e" name="Elfos Oscuros MDN" revision="3" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="88fd-bc7b-a990-f36e" name="Elfos Oscuros MDN" revision="3" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="a7c6-766e-bec9-a27e" name="Elfos Oscuros MdN 2023"/>
   </publications>
@@ -295,6 +295,9 @@
                   </characteristics>
                 </profile>
               </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <costs>
@@ -2194,6 +2197,9 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
                   <infoLinks>
                     <infoLink id="a786-75f4-c04b-d7f2" name="Lanza (infantería)" hidden="false" targetId="b34b-3f52-e95c-d5f3" type="profile"/>
                   </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -2867,9 +2873,7 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
       <modifierGroups>
         <modifierGroup>
           <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe19-890c-5a04-d9e1" type="greaterThan">
-              <comment></comment>
-            </condition>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe19-890c-5a04-d9e1" type="greaterThan"/>
           </conditions>
           <modifiers>
             <modifier type="set-primary" field="category" value="0cfc-02a1-ad30-fb33"/>
@@ -3138,6 +3142,16 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
       </costs>
     </selectionEntry>
     <selectionEntry id="548d-8a8f-e0ad-5c5a" name="Verdugos" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="2823-1a36-4172-f47e" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="70ca-02b5-a37f-3a4f" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2823-1a36-4172-f47e" type="min"/>
+      </constraints>
       <profiles>
         <profile id="3446-1023-edd2-5ad7" name="Verdugo" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3296,11 +3310,14 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
     <selectionEntry id="3e0e-4ebf-ae3b-8444" name="Elfas brujas de Khaine" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2e18-ec4f-3a8c-2d59" type="greaterThan">
-              <comment></comment>
-            </condition>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eac4-052b-a370-5ccf" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2e18-ec4f-3a8c-2d59" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
             <modifier type="set-primary" field="category" value="ba68-224b-3224-a908"/>
             <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
@@ -3428,6 +3445,13 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
               </profiles>
               <selectionEntryGroups>
                 <selectionEntryGroup id="f593-79e6-f1cb-a23b" name="Venenos, artefactos y habilidades" hidden="false" collective="false" import="true">
+                  <modifiers>
+                    <modifier type="increment" field="ae18-2529-5097-e730" value="25.0">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eac4-052b-a370-5ccf" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="53ea-00f4-9046-81ff" scope="parent" value="25.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ae18-2529-5097-e730" type="max"/>
                   </constraints>
@@ -4048,6 +4072,9 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
                   <infoLinks>
                     <infoLink id="380c-814b-2610-b8b3" name="Arco" hidden="false" targetId="dfc2-1321-c679-1bc0" type="profile"/>
                   </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -4374,8 +4401,28 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
       </costs>
     </selectionEntry>
     <selectionEntry id="7d17-b8fe-650b-36c8" name="Guardia negra" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="90d2-bebb-7c58-5050" value="-1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1159-bcfa-b74f-4f3c" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0f7-5999-f98b-8139" type="equalTo"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="9f40-60c0-b53d-c014" value="1.0"/>
+            <modifier type="remove" field="category" value="184a-30ec-bf7c-b603"/>
+            <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="90d2-bebb-7c58-5050" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f40-60c0-b53d-c014" type="min"/>
       </constraints>
       <profiles>
         <profile id="c3e7-858a-ceb2-63d3" name="Guardián negro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -4699,7 +4746,7 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"></characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
@@ -4790,7 +4837,7 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
                     <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
                     <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
                     <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
-                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"></characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
@@ -5626,6 +5673,9 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
                   <infoLinks>
                     <infoLink id="cffa-e228-aef1-e7ce" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
                   </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -5693,9 +5743,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
       <modifierGroups>
         <modifierGroup>
           <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe19-890c-5a04-d9e1" type="greaterThan">
-              <comment></comment>
-            </condition>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe19-890c-5a04-d9e1" type="greaterThan"/>
           </conditions>
           <modifiers>
             <modifier type="set-primary" field="category" value="ba68-224b-3224-a908"/>
@@ -5771,6 +5819,917 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
       </selectionEntries>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="eac4-052b-a370-5ccf" name="Anciana Helleborn" publicationId="a7c6-766e-bec9-a27e" page="29" hidden="false" collective="false" import="true" type="model">
+      <comment>La Reina Bruja</comment>
+      <modifiers>
+        <modifier type="set" field="8374-c6f2-2bf2-4ee2" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2032-3662-1f6a-4cde" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8374-c6f2-2bf2-4ee2" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="29f3-ba17-54dc-9721" name="Espada mortal" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>El filo de esta larga y negra espada brilla por el poder de la
+magia oscura. Cuando es empuñada en combate, su afilada punta describe
+una brillante estela roja en el aire.</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F10</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91"/>
+          </characteristics>
+        </profile>
+        <profile id="5919-d315-7296-ac01" name="Anciana Helleborn" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">7</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">5</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">7</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Personaje Especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="794b-804b-3b89-fd3e" name="Amuleto Ígneo" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Este amuleto envuelve a su portador en una llama mística que desvía la energía mágica. </comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Hellebron, así como su montura (si va montada) o la unidad donde esté (si está en una unidad) ganan Resistencia a la magia (2).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1e3f-8961-238a-ca09" name="Espada bloqueadora" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>Al moverse con su propia fuerza, la Espada Bloqueadora desvía los ataques de los enemigos.</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"></characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Los ataques realizados con esta arma Anulan un ataque (en vez de impactar, herir, etc); así que si, por ejemplo, decides hacer dos ataques con esta espada, anulas dos ataques.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="c956-7153-eb23-f65c" name="Reina de Khaine" hidden="false">
+          <description>Hellebron no puede unirse a ninguna unidad, salvo a unidades de Elfas Brujas. Todos los Asesinos y Grandes Elfas Brujas del ejército pueden gastar 25 puntos adicionales en venenos y objetos del Templo de Khaine.</description>
+        </rule>
+        <rule id="c675-5e8d-78f2-cb73" name="Devota de Khaine" hidden="false">
+          <description>Solamente puede unirse a unidades de Elfas Brujas o un Caldero. A diferencia de las demás Sacerdotisas, Hellebron puede
+ser el General.</description>
+        </rule>
+        <rule id="b0a3-4688-6ed9-728d" name="Inspiración" hidden="false">
+          <description>Cualquier unidad de Elfas Brujas a menos de 30cm puede usar su liderazgo (en vez del del General, en caso de estar también cerca).</description>
+        </rule>
+        <rule id="3bbd-4310-4f5f-293b" name="Elegidas de la Sacerdotisa" hidden="false">
+          <description>Puedes incluir Elfas Brujas como unidad básica en vez de Especial.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="1a77-ab84-f459-8de9" name="Furia asesina" hidden="false" targetId="000a-cfde-6e79-aecb" type="rule"/>
+        <infoLink id="ed9e-410a-3f5d-2a8e" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+        <infoLink id="32f8-568e-507f-1e3e" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
+        <infoLink id="fce2-92c6-4175-4605" name="Combate con dos armas mágicas" hidden="false" targetId="df18-bc95-9f82-7c5e" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="d1ba-b078-3885-854a" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="6708-579c-ba64-5f25" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5591-ba7d-b606-1dfe" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed80-574c-4dea-795a" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9d2d-15ef-76ee-927c" name="Mantícora" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf74-797f-43c9-8198" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="700b-fae3-3144-4e06" name="Mantícora" hidden="false" collective="false" import="true" targetId="d17b-37d1-5417-6f89" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="190.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="300.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a0f7-5999-f98b-8139" name="Kouran Manoscura" publicationId="a7c6-766e-bec9-a27e" page="31" hidden="false" collective="false" import="true" type="model">
+      <comment>Capitán de la Guardia Negra</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a99-04cc-4cfa-5e9c" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="741a-1057-503d-5c10" name="Espada de Hierro" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">El portador Siempre ataca primero. Además, tiene un +1 a sus tiradas para impactar.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="885a-2dc5-5504-2da7" name="Kouran Manoscura" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">8</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">6</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">8</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">1+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Personaje Especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cc4f-d8fd-1a1d-d2b9" name="Armadura de Hierro" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+          <comment>Esta armadura encantada fue llevada por primera vez por Arnaethron, uno de los primeros lugartenientes del Rey Brujo durante la Secesión. Los que intentan atacar al portador deben superar primero un aura de dolor paralizante.</comment>
+          <characteristics>
+            <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">Armadura pesada (Tirada de salvación por armadura de 5+).</characteristic>
+            <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Toda miniatura que quiera dirigir sus ataques contra Kouran debe superar primero un chequeo de Resistencia (obtener su R o menos en 1D6; un 6 siempre es fallo). Si no lo supera, la miniatura no podrá efectuar ataques hasta final de turno. Si la miniatura supera el chequeo, podrá atacar a Kouran normalmente. El chequeo se efectúa justo antes de que las miniaturas atacantes hagan las tiradas para impactar. El oponente debe declarar todos los objetivos de los ataques de golpe (no puede asignar a Kouran con uno, chequeo de R, si falla ataco con otro... debe designar los objetivos antes de cualquier tirada para impactar)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="3862-90f8-16b3-ef2b" name="Odio eterno" hidden="false">
+          <description>Siempre puede repetir las tiradas para impactar falladas (no sólo el primer turno y no sólo contra Altos Elfos).</description>
+        </rule>
+        <rule id="24f0-7776-8a88-0ead" name="Capitán de la Guardia Negra" hidden="false">
+          <description>Debes incluir al menos una unidad de Guardia Negra en el ejército. La Guardia Negra es unidad Especial en vez de Singular (pero sigue siendo 0-1 a menos que Malekith también esté en juego).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="7aba-a1b2-ff72-e9a7" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
+        <infoLink id="74de-ff80-8c26-03c9" name="Tozudez" hidden="false" targetId="ad33-61eb-3490-bb38" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="b8e5-bb54-ecc8-b076" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="e474-f068-ef6a-86f2" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="255.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5b0c-c833-c5e9-a8bc" name="Lokhir Fellheart" publicationId="a7c6-766e-bec9-a27e" page="33" hidden="false" collective="false" import="true" type="model">
+      <comment>Señor Kraken de Karond-Kar</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d705-8c87-8ed6-711f" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9852-04a8-839e-2e92" name="Lokhir Fellheart" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">6</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">7</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7bca-cab8-cbdb-f32c" name="Espadas Rojas" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>Cuando Lokhir Fellheart saqueó el Templo de Gilgadresh, robó una estatua de acero de sangre de Ind. A su regreso a Naggaroth, había forjado el metal y lo había convertido en las dos espadas más letales de los mares.</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Dos armas de mano (A+1).</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Lokhir siempre puede repetir las tiradas para herir.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="97f1-c1fe-878c-7dfc" name="Yelmo del Kraken" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Este yelmo dorado es anterior a la civilización élfica y fue recuperado por Lokhir de las ruinas de Chupayotl en la costa sur de Lustria. Se asemeja a una bestia marina terrible y hace que el portador sea más resistente e inspire más terror</comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Lokhir tiene Regeneración y causa Terror.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="40be-ebc1-2281-42b4" name="No muestra debilidad" hidden="false">
+          <description>En la fase de combate cuerpo a cuerpo, si un Capitán de Arca Negra está en un desafío con un personaje enemigo o mata a un personaje enemigo en esa fase y el Capitán de Arca Negra sobrevive, hasta final de turno él y su unidad son Inmunes a desmoralización.</description>
+        </rule>
+        <rule id="cd97-b1a7-ef37-9e75" name="Señor de Corsarios" hidden="false">
+          <description>Si Lokhir está en una unidad de Corsarios, la unidad (y él) son Inmunes a psicología. Además, todos los Corsarios a 30cm o menos de Lokhir pueden usar su Liderazgo.</description>
+        </rule>
+        <rule id="5ee5-bb8c-e23f-187e" name="Esclavista" hidden="false">
+          <description>Cuando una unidad enemiga en contacto peana con Lokhir pierda un combate y efectúe tirada para huir, debe repetir los dos dados más altos.</description>
+        </rule>
+        <rule id="0d46-b58f-2d9d-62cd" name="Esclavista cruel" hidden="false">
+          <description>Si Lokhir o la unidad donde esté atrapan a una unidad enemiga que esté huyendo, dicha unidad proporcionará el doble de puntos de victoria al final de la batalla (incluyendo personajes en dicha unidad).</description>
+        </rule>
+        <rule id="674a-f781-72a1-f2ec" name="Salto audaz" hidden="false">
+          <description>Al inicio de la fase de combate cuerpo a cuerpo, antes de asignar impactos por carga y de lanzar o aceptar desafíos, si Lokhir no está en un desafío (lanzado en un turno anterior) puedes intercambiar a Lokhir por cualquier otra miniatura de la unidad (“salta” a cualquier posición).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="5321-02c6-08f8-0a19" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
+        <infoLink id="3387-4038-7ec4-c877" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+        <infoLink id="8a7c-36b5-c431-1c4a" name="Capa de dragón marino" hidden="false" targetId="a224-4f0f-11b3-bce0" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2aa1-bbd3-a40a-721d" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="ca65-f71c-a799-4e86" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="220.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1159-bcfa-b74f-4f3c" name="Malekith" publicationId="a7c6-766e-bec9-a27e" page="37" hidden="false" collective="false" import="true" type="model">
+      <comment>El Rey Brujo de Nagarroth</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="170d-ce71-1948-eacc" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f324-c372-0867-ecee" name="Guantelete de Khaine" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>La armadura de Malekith incluye el Guantelete de Khaine, un guantelete mágico capaz de arrancarles los miembros a sus enemigos y aplastarles el cráneo.</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F6</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Anula armaduras.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c767-0e80-ea6a-0e1a" name="Malekith" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">8</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">5</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">8</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="f9f6-d517-f889-ff96" name="Destructora" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>La espada de Malekith fue forjada en el ancestral reino de Ulthuan y encantada para destruir otros objetos mágicos.</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"></characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Si impacta a un enemigo, puedes anunciar que vas a destruir objetos mágicos en vez de a herir; en ese caso, en vez de tirar los dados para herir con Destructora, el oponente debe decir si la miniatura impactada tiene algún objeto mágico; el oponente declara qué objeto es, y este resulta destruido (no sólo pierde las habilidades mágicas que tenía, sino que esa arma mágica es completamente destruida y el enemigo pasa a estar armado con arma de mano). Sólo se puede destruir un objeto por ronda de combate.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7212-ec38-746d-2d78" name="Armadura de la Medianoche" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+          <comment>Esta armadura se forjó con el más duro hierro meteórico extraído de las montañas de Naggaroth. Por esta razón, la armadura de Malekith resulta casi impenetrable para las armas mortales.</comment>
+          <characteristics>
+            <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">Armadura pesada (Tirada de salvación por armadura de 5+).</characteristic>
+            <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Además, Malekith gana una tirada de salvación especial de 2+; esta salvación no puede usarse contra magia (armas mágicas, hechizos, etc). Además, cualquier arma, hechizo o regla que cause
+Heridas múltiples contra Malekith se considera que siempre causa 1 única herida (incluso si es de tipo Heridas múltiples 1D6+2, causaría una única Herida); ten en cuenta que un Golpe Letal no “hace heridas múltiples” sino que mata directamente (si hiere y falla la especial), por lo que en ese caso moriría igual. Además, Malekith puede lanzar hechizos pese a llevar armadura.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="78f8-2cdf-b6ce-994d" name="Guardia personal" hidden="false">
+          <description>La unidad de Guardia Negra deja de ser 0-1 si Malekith está en el ejército.</description>
+        </rule>
+        <rule id="2423-03ff-dd39-959d" name="Odio acérrimo" hidden="false">
+          <description>Malekith puede repetir todas las tiradas para impactar cuando lucha contra miniaturas de tipo Alto Elfo, no sólo en el primer turno de combate.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="18a0-b288-08bf-93f5" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
+        <infoLink id="5973-8cba-bb1f-2b67" name="Artes oscuras" hidden="false" targetId="0f1c-ccf5-d1bd-3eca" type="rule"/>
+        <infoLink id="6164-f965-1533-75fc" name="Combate con dos armas mágicas" hidden="false" targetId="df18-bc95-9f82-7c5e" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="5fc6-5fc4-8e39-c2d7" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="d71b-14cf-af12-f3e4" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="fe0e-0d6d-0ec7-98a7" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="c69a-5e25-4414-b177" name="Ocupa dos opciones extra de Héroe" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2d8-a9ac-f6c6-2dd3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f174-0949-03fc-6dad" type="min"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="6786-dd05-5b52-0847" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="be6f-97a1-c18e-d8ce" name="Nivel" hidden="false" collective="false" import="true" defaultSelectionEntryId="bb74-5d25-602c-de0e">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc55-1919-ff30-26af" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3837-8297-014e-62d0" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="bb74-5d25-602c-de0e" name="Nivel 4" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27b5-6cc8-cc2c-8932" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="60cc-9dfd-da16-2d33" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="2ad6-54d8-5b31-1d16" name="Saber" hidden="false" collective="false" import="true" defaultSelectionEntryId="cd1e-a631-c067-36cf">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7e8-f3db-9fdd-7444" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6769-7012-0167-3140" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="cd1e-a631-c067-36cf" name="Magia oscura" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9a5-1c1c-cb6e-7133" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65e2-d6aa-08dd-53d0" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="35f4-a988-d6c2-32c4" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad96-9480-e36a-e0ad" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a19b-4b83-e78e-ca82" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="2070-9e14-28ea-e494" name="Carro de Gélidos" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebb4-0ad6-a31f-69cc" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="a004-9b4a-794b-84bd" name="Carro de gélidos" hidden="false" collective="false" import="true" targetId="73f3-e58f-5dfa-8ddd" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="95.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0251-20a2-dc3f-bed8" name="Seraphon, Dragón Negro" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99d8-2f4f-7fe9-c712" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="af24-c9f4-00ec-e07e" name="Seraphon" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">6</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">7 (6+1 del jinete)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="cc29-5178-7263-b9be" name="Aliento corrosivo" hidden="false">
+                  <description>Se trata de un Ataque de Aliento que usa la plantilla de lágrima; causa impactos de F4 (no tiene la regla Ataques flamígeros). Toda unidad enemiga que desee declarar una carga, que no sea inmune a psicología, y que haya sufrido una o más bajas por este Ataque de Aliento en el turno anterior, deberá superar un chequeo de Liderazgo; si no, no podrá mover. Las unidades inmunes a psicología superan este chequeo de forma automática. Este chequeo es necesario sólo en declaración de carga, así que para los demás movimientos (incluyendo movimientos aleatorios o movimientos mágicos, como puede ser el Tótem Sagrado de Huanchi de los Hombres Lagarto) no será necesario.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="2ef8-fefe-d1b6-39e2" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
+                <infoLink id="5911-c05a-5ea3-5766" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
+                <infoLink id="372b-5eae-6c51-52da" name="Volar" hidden="false" targetId="90d6-fe4d-a823-314b" type="rule"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="e845-2195-5d31-23a1" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="330.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="615.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cb59-9f2c-8b7d-7170" name="Malus Darkblade" publicationId="a7c6-766e-bec9-a27e" page="29" hidden="false" collective="false" import="true" type="model">
+      <comment>Portador de Tz’arkan</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f81-2871-0feb-57c8" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="94fa-f207-619b-092b" name="Espada Disforme de Khaine" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>Se trata de uno de los cinco fabulosos tesoros que Malus debía conseguir en su búsqueda para liberarse del demonio que le poseía.</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de mano</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Anula armaduras. Además, puede repetir todas las tiradas para
+herir fallidas.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8771-50f2-4b1c-322f" name="Malus Darkblade (Tz’arkan desatado)" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">8</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">5</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">10</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="4327-64f5-ef91-0731" name="Malus Darkblade" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">7</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">5</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">8</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="54b8-a56d-9f98-770a" name="Tz’arkan." hidden="false">
+          <comment>Malus sucumbre a la posesión diabólica de Tz’arkan cuando cae dormido, por lo que bebe constantemente una poción mágica que lo mantiene despierto. No obstante, cuando necesita el poder que le proporciona el demonio, bebe un elixir oscuro que, inmediatamente, le hac perder la conciencia para que Tz’arkan pueda tomar el control de su cuerpo.</comment>
+          <description>Malus Darkblade empieza la partida en estado normal (elprimero). Al inicio de cualquier turno del jugador Elfo Oscuro, puedes declarar que Malus beba su poción y permita que Tz’arkan tome el control de su cuerpo. Mientras esté bajo el control de Tz’arkan, Malus tiene Furia asesina (y no puede perderla aunque sea derrotado en combate), su perfil se ve alterado de la forma que se detalla en la segunda línea (Tz’arkan desatado), y puede repetir cualquier chequeo de Liderazgo fallado, incluyendo chequeos de psicología y desmoralización. Además, mientras esté bajo el control de Tz’arkan, al inicio de cada fase de combate cuerpo a cuerpo en la que no tenga miniaturas enemigas en contacto peana con peana (y sí miniaturas amigas) debe lanzar 1D6; con 4+ no pasa nada, con 1-3 debe atacar a una única miniatura en contacto peana con peana (si hay más de una, elige el adversario)
+y el combate se resuelve como si Malus hubiera cargado; la miniatura atacada contraatacará a Malus (si sobrevive).
+En caso de que Malus ataque a una miniatura amiga, estas heridas no se tienen en cuenta para una posible resolución de combate (en caso de que la unidad esté trabada pero Malus no), y no hay que calcular resultado de combate en caso de que no estén trabados; tras ese ataque Malus vuelve a la normalidad (ya no estará bajo los efectos de Tz’arkan).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="1728-cf83-e61a-7850" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
+        <infoLink id="a226-0477-0ddd-f100" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="6cb5-a6b6-c9d1-7e57" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="3db9-18b1-13a6-9a0e" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="0feb-7f91-ed78-060b" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="8111-e423-2fc3-301f" name="Capa de Dragón marino" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a30c-7150-552b-c60f" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="b447-0508-d625-f1c0" name="Capa de dragón marino" hidden="false" targetId="a224-4f0f-11b3-bce0" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="9.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="75b2-a6bd-e010-1be6" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c92a-1a52-500d-1466" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="0420-e994-ba8a-8d59" name="Spite, Gélido" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3dcb-73f0-5adc-6305" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="fa04-9f0b-0551-6301" name="Spite" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">18</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039"/>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab"/>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">3</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">+2</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="8309-fca9-88be-5ebc" name="Pellejo duro" hidden="false">
+                  <description>Otorga a su jinete un +2 a la Tirada de salvación por armadura en lugar del +1 habitual de Caballería.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="5c50-5214-70fd-1a1f" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="6ab0-6c8b-53bf-3ec5" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="35.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="315.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2032-3662-1f6a-4cde" name="Morathi" publicationId="a7c6-766e-bec9-a27e" page="51" hidden="false" collective="false" import="true" type="model">
+      <comment>La Hechicera Bruja</comment>
+      <modifiers>
+        <modifier type="set" field="c9ec-72a5-26f8-1696" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eac4-052b-a370-5ccf" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9ec-72a5-26f8-1696" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="eedb-7490-92f4-ddfc" name="Morathi" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">4+</characteristic>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1">1</characteristic>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Hechicero, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e167-4a1b-5e59-4b83" name="Arrancacorazones" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>Tal es la habilidad de Morathi con la lanza conocida con el nombre de Arrancacorazones que puede sacar el corazón del pecho de su víctima de un solo golpe.</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Lanza de caballería (F+2 en carga si va montada).</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Además, en carga tiene la regla Golpe Letal. Si no está montada (porque su pegaso ha muerto y ahora va a pie, o porque no ha elegido montura) no proporciona la F+2 cuando carga, pero sí el Golpe Letal (en carga). (Además, siempre es Arma mágica).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="4e05-6220-3ae2-01a6" name="Magia" hidden="false">
+          <description>Morathi es una Hechicera de nivel 4 que usa Magia Oscura. En vezde determinar aleatoriamente sus hechizos, Morathi puede elegir qué cuatro Hechizos va a usar en la partida. Además, cualquier intento de lanzar hechizos por parte de Morathi tiene un +2 al lanzamiento (en vez del +1 habitual de las Hechiceras Elfas Oscuras).</description>
+        </rule>
+        <rule id="4465-81ad-2eea-43e1" name="Mil y Una Bendiciones Oscuras" hidden="false">
+          <comment>Morathi ha realizado pactos ancestrales con todo tipo de espíritus maléficos y entidades demoníacas, y esas energías antinaturales la protegen.</comment>
+          <description> Morathi tiene una tirada de salvación especial de 4+ y Resistencia a la magia (1).</description>
+        </rule>
+        <rule id="11ef-f314-47c5-dc8e" name="Protegida de Khaine" hidden="false">
+          <description>Morathi es la primera de las Reinas Brujas, por lo que todas las Elfas Brujas le guardan obediencia por encima de cualquier otra
+obligación. Toda unidad de Elfas Brujas a 30cm o menos de Morathi puede usar su Liderazgo como si fuera el General; las Elfas Brujas NO pueden usar el Liderazgo del General (a no ser que el General sea Morathi, claro).</description>
+        </rule>
+        <rule id="07ec-aee9-a12c-4c31" name="Belleza arrebatadora" hidden="false">
+          <comment>Morathi es, posiblemente, la hembra más hermosa del mundo conocido: los simples mortales quedan embelesados ante ella.</comment>
+          <description>Toda miniatura enemiga en contacto peana con peana con Morathi al inicio de la fase de combate cuerpo a cuerpo debe hacer un chequeo de Liderazgo; si lo falla, tendrá HA1 hasta final del combate. Afecta incluso a miniaturas inmunes a psicología.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="c3b7-ca95-78a0-ea53" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="cd46-2d3b-8c71-a81c" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="bc0e-509a-6425-26df" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="ee39-91d1-1ad5-3f76" name="Nivel" hidden="false" collective="false" import="true" defaultSelectionEntryId="a320-0da4-8201-d047">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f701-a98c-ce38-8159" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d633-4b24-bd74-5503" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="a320-0da4-8201-d047" name="Nivel 4" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9db9-c0e3-6050-a0e8" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a52-155b-0fac-e0da" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="aeca-621c-1ea6-a869" name="Saber" hidden="false" collective="false" import="true" defaultSelectionEntryId="02a2-ee5f-5067-2a8a">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79dc-d80e-51c2-9523" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a280-0cc3-2e2c-ac41" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="02a2-ee5f-5067-2a8a" name="Magia oscura" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c783-5cea-eb00-cc98" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfe2-90d0-7a3b-9719" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="7722-94af-eee8-41a5" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0db-9ff3-b1ac-a5b8" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="8098-ea29-7223-c860" name="Sulephet, Pegaso Negro" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="799e-9782-72e7-7d74" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="3941-3173-50cc-9e53" name="Sulephet" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">20</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"></characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="ba74-408a-bde0-7e32" name="Volar" hidden="false" targetId="90d6-fe4d-a823-314b" type="rule"/>
+                <infoLink id="f216-1ca6-8c8d-7021" name="Empalar" hidden="false" targetId="2b46-65d9-da0f-1117" type="rule"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="bae7-c738-cd90-f58f" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="55.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="415.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2b12-d8f9-497a-54b7" name="Rakarth" publicationId="a7c6-766e-bec9-a27e" page="52" hidden="false" collective="false" import="true" type="model">
+      <comment>Señor de las Bestias de Karond-Kar</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ff2-257f-2d3e-21d7" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="11e4-990f-345f-c324" name="Rakarth" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">1+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Personaje Especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b851-c79d-e54e-6dac" name="Látigo de la Agonía" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Agonía. Arma de mano (arma de mano adicional, si queda inutilizada).</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Rakarth tiene un ataque adicional que hace con esta arma con la regla Siempre ataca primero. Rakarth hace un único ataque con este látigo; tras resolver la herida (y si la miniatura enemiga sobrevive), deberá hacer un chequeo de Liderazgo (usando el propio Liderazgo; por ejemplo, en caso de un personaje montado en monstruo, si se impacta al monstruo éste usará su Liderazgo). Si falla el
+chequeo, la miniatura impactada sólo impactará con resultados de 6 en la tirada para impactar. Tras este ataque con el látigo, se resuelve el combate de la forma habitual (incluyendo los dos ataques “normales” de Rakarth, que hará con su Lanza de Caballería o con su Arma de mano).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ca96-f78e-6627-77d3" name="Armadura de las Bestias de Karond-Kar" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+          <comment>r. . Sin embargo, esta armadura mágica proporciona a Rakarth una tirada de salvación por armadura de 1+. Recuerda que un 1 siempre es un fallo.</comment>
+          <characteristics>
+            <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">1+</characteristic>
+            <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Sin embargo, esta armadura mágica proporciona a Rakarth una tirada de salvación por armadura de 1+. Recuerda que un 1 siempre es un fallo.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="fb1c-ea49-c0bc-a834" name="Señor de las Bestias" hidden="false">
+          <description>Cualquier monstruo amigo que deba hacer un chequeo en la tabla de reacción de monstruos a 30cm o menos de uno o más Señores de las Bestias podrá repetir el chequeo de Liderazgo. Si Rakarth va montado en Bracchus y Rakarth muere, Bracchus supera automáticamente el chequeo de Liderazgo por jinete muerto.</description>
+        </rule>
+        <rule id="5a2a-cc99-6542-caa3" name="Dominación" hidden="false">
+          <description>Cualquier miniatura enemiga de tipo Monstruo que fuera inicialmente Montura de un personaje, pero que ya no lo sea (su jinete ha muerto), si es impactada por Rakarth es dominada por este y pasará a estar bajo su control. El monstruo no huirá y se situará a 3cm de Rakarth. El monstruo forma parte del ejército Elfo Oscuro a todos los efectos y se trata como si hubiera superado el chequeo de Liderazgo de monstruos que han perdido su jinete. Al finalizar la partida, todos los monstruos bajo el control de Rakarth se contabilizan como puntos a favor del jugador Elfo Oscuro (como si hubieran muerto); si el oponente elimina alguno de estos monstruos bajo control de Rakarth no obtiene puntos (pero evita que los consiga su adversario). Si Rakarth muere, todos los monstruos bajo el control de Rakarth vuelve al control del jugador original.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="f184-a75e-d937-cae6" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
+        <infoLink id="fb68-5a5d-2dc5-8839" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="1c8d-1659-0744-fc84" name="Lanza de caballería" hidden="false" targetId="5bcd-ff0b-d571-38d0" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1390-4327-774b-0720" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="7c34-54d6-6ab8-2701" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="1e04-1429-274b-faff" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="ec41-6fb2-60bf-2eb8" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c52-9c60-d72d-64e7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba9e-0866-5af2-0c69" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6ef1-28df-93c3-6db2" name="Bracchus, Dragón Negro" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4080-ac62-9543-15db" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="299c-4afa-f677-22fb" type="min"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="4af9-c9c6-61d5-c2d2" name="Dragón negro" hidden="false" collective="false" import="true" targetId="f799-191e-10f5-b837" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="320.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="150.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9062-3cb6-e2a3-5c9f" name="Shadowblade" publicationId="a7c6-766e-bec9-a27e" page="55" hidden="false" collective="false" import="true" type="model">
+      <comment>Maestro Asesino</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0bb-8264-4044-0a31" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="de62-e8da-22c5-50fd" name="Shadowblade" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">10</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">10</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">10</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="08dd-6346-0aff-e005" name="Corazón del Infortunio" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment>Se trata de un enorme rubí que late igual que un corazón vivo. Si su portador resulta aniquilado, el cristal se rompe en miles de fragmentos afilados matando al responsable de la muerte de Shadowblade.</comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Shadowblade. Si Shadowblade muere, coloca la plantilla grande centrada en Shadowblade. Todas las miniaturas bajo la plantilla (parciales a 4+) reciben un impacto de F3.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="62f9-41dc-13ec-2043" name="Poción de Fuerza" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+          <comment> Una poción mágica creada con sangre de Troll y el corazón de un grifo.</comment>
+          <characteristics>
+            <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Un solo uso. Declara su uso al inicio de cualquier turno. Hasta final de turno, Shadowblade tiene F+3.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="9f3a-6df5-b684-83b5" name="Enemistad entre sectas" hidden="false">
+          <description>Una Hechicera no puede incluirse en una unidad donde esté escondido Shadowblade.</description>
+        </rule>
+        <rule id="c2e8-3825-a8d6-b96c" name="Maestro de los Asesinos" hidden="false">
+          <description>Adicionalmente a los lugares de Despliegue oculto, Shadowblade puede desplegar incluido en una unidad enemiga. En tal caso,
+tras desplegar escribe en una nota (secreta) en qué unidad enemiga de infantería (no infantería monstruosa ni caballería, pero puede ser la dotación de una máquina de guerra) está Shadowblade. Al inicio de cada turno enemigo lanza 1d6; con 2+ sigue disfrazado, con un 1 el enemigo lo ha descubierto. Shadowblade también puede descubrirse voluntariamente al inicio de su turno. Cuando Shadowblade es descubierto, reemplaza una de las miniaturas en la unidad enemiga (a la que mató antes de empezar la batalla), siempre soldado común (ni grupo de mando ni personaje). Si revela voluntariamente su identidad, se considera que Shadowblade ha cargado; si es el enemigo quien lo ha descubierto se considerará que el enemigo ha cargado.
+
+Shadowblade puede beberse su Poción de fuerza en el momento en que el enemigo lo descubre. En caso que Shadowblade esté incluido en una unidad que está huyendo, puede igualmente revelarse; en ese momento Shadowblade deja de huir, se queda quieto y la unidad huye (puesto que se considera que ha sido cargada mientras huía). En caso de que no se revele la posición de Shadowblade en toda la partida, el enemigo no gana los puntos de victoria.</description>
+        </rule>
+        <rule id="499e-2c8c-55b7-1ca8" name="Despliegue oculto" hidden="false">
+          <description>En el caso de los Asesinos Elfos Oscuros, sólo pueden estar (oculto o no) en las siguientes unidades: Guerreros Elfos Oscuros, Corsarios, Sombras, Elfas Brujas de Khaine, Verdugos o Guardia Negra.</description>
+        </rule>
+        <rule id="1da4-a25f-e3c2-5c6a" name="Liderazgo" hidden="false">
+          <description>Shadowblade nunca puede ser el General del ejército. Si está incluido en una unidad, la unidad no puede usar el Liderazgo de Shadowblade.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="de78-6362-4c92-a2cb" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
+        <infoLink id="7e00-c46e-5e19-ff7f" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="9424-1875-0074-f5ea" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
+        <infoLink id="d71e-0618-285c-90dd" name="Caricia mortal" hidden="false" targetId="5ed3-b26a-779e-763e" type="profile"/>
+        <infoLink id="5547-fd55-1d73-ff71" name="Danza de la fascinación de Morathi" hidden="false" targetId="2b28-f7e4-1813-5b4b" type="profile"/>
+        <infoLink id="091c-2422-e9b7-f790" name="Grito de Khaine" hidden="false" targetId="13a3-d6e0-7172-3500" type="profile"/>
+        <infoLink id="7662-2a49-dea4-f21d" name="Mano de Khaine" hidden="false" targetId="e141-0cb5-0966-2526" type="profile"/>
+        <infoLink id="b805-c508-df50-295c" name="Veneno negro" hidden="false" targetId="ed6d-84f5-ab8d-50a8" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0f39-50d7-2845-5230" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="be87-c7a6-18f6-c26f" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="360.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="70ca-02b5-a37f-3a4f" name="Tullaris de Har Ganeth" publicationId="a7c6-766e-bec9-a27e" page="57" hidden="false" collective="false" import="true" type="model">
+      <comment>Portador del Terror</comment>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d77-67d5-9fb3-7153" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="ed04-6b0f-c3aa-f2e1" name="Tullaris de Har Ganeth" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">5</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Personaje especial.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="954a-b37d-5780-4328" name="Hacha de los Verdugos" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>Se dice que esta arma reclamó su primera víctima durante el gran sacrificio que condujo a la creación de los verdugos y que se alimenta con la sangre de sus víctimas decapitadas, imbuyendo a su portador de una precisión mágica. Con ella, Tullaris ha matado a miles de enemigos al servicio de Khaine y se ha convertido en una figura temible en Naggaroth, Ulthuan e incluso en tierras más lejanas.</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma a dos manos (F+2, Ataca en último lugar).</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">En vez de F+2, los ataques con esta arma se resuelven como si el portador tuviera una Fuerza igual al doble de la Resistencia de la miniatura a la que está atacando (hasta un máximo de 10). Se trata de la misma Hacha de los Verdugos de objetos mágicos, así que ningún otro personaje puede usarla.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="b838-78ce-25c1-0edd" name="Verdugo sagrado" hidden="false">
+          <comment>Cada ejecución ritual en la que Tullaris interviene sirve de ofrenda gloriosa a Khaine, conduciendo al resto de elfos a los que
+lidera a que superen su habilidad y devoción con una mayor fuerza.</comment>
+          <description>Tullaris tiene la regla Golpe Letal. Sin embargo, ésta funcionará contra cualquier miniatura independientemente de su tamaño
+(también funcionará contra ogros, demonios o dragones).</description>
+        </rule>
+        <rule id="a458-d7dd-b4ae-4570" name="Líder de Verdugos" hidden="false">
+          <comment>Debes desplegar al menos una unidad de Verdugos en el ejército. Tullaris debe desplegar en una unidad de Verdugos. Tullaris no
+puede abandonar de forma voluntaria la unidad de Verdugos en la que estaba inicialmente (podría si se ve sujeto a algún hechizo o regla que le obligue a salir de la unidad; en tal caso se comporta como un personaje individual).</comment>
+        </rule>
+        <rule id="0aeb-fca9-a7ed-4ee6" name="Portador del Terror" hidden="false">
+          <description>Tullaris causa Miedo. Si Tullaris se ha unido a una unidad de Verdugos, la unidad a la que se haya unido también causa Miedo.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="93fb-bcfd-0c28-8c15" name="Golpe letal" hidden="false" targetId="917d-4fe5-c45b-ca64" type="rule"/>
+        <infoLink id="ac64-98d1-681f-ebd8" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+        <infoLink id="8a40-0f73-7354-9666" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
+        <infoLink id="fce9-b6fb-1f08-a388" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+        <infoLink id="81f9-5857-1ff8-c10c" name="Hacha de los verdugos" hidden="false" targetId="fe01-94cb-3c00-91b4" type="profile"/>
+        <infoLink id="86d1-c8f3-17ca-c386" name="Amuleto negro" hidden="false" targetId="59ab-ac68-e26e-ac3d" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ba6b-5476-9cd4-5de3" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="704c-5fe3-0170-8bc6" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="245.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -6286,7 +7245,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4f7a-8c3d-6d88-6e9c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="69f3-bd30-ae68-90f4" name="Hacha de los verdugos" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+            <profile id="fe01-94cb-3c00-91b4" name="Hacha de los verdugos" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
               <characteristics>
                 <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
                 <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">Ver reglas especiales</characteristic>
@@ -7155,6 +8114,13 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
       <description>Todos los Elfos OScuros de tipo Hechicero tienen un +1 a todas sus tiradas para intentar lanzar un hechizo de Magia Oscura (no del resto de saberes).
 Este bonificador puede combinarse con objetos mágicos o con reglas especiales de la forma habitual.
 Este bonificador es para todos los Personajes Elfos Oscuros de tipo Hechicero, incluyendo Personajes especiales.</description>
+    </rule>
+    <rule id="df18-bc95-9f82-7c5e" name="Combate con dos armas mágicas" hidden="false">
+      <description>Esta miniatura lucha con dos armas mágicas, una en cada mano. A todos los efectos lucha con arma de mano adicional (así que lucha con un ataque más de los indicados en su perfil, incluso si se anulan ambas armas mágicas). Cada vez que la miniatura haga sus ataques, debes declarar cuántos ataques hace con cada una de las dos armas mágicas,
+teniendo en cuenta que debe hacer al menos uno con cada arma (por ejemplo, si tiene 5 ataques puede hacer 3 con una y 2 con
+la otra). Recuerda que debes declarar también a qué miniatura en contacto peana con peana hace cada ataque (así que de sus
+ataques debe decir qué ataques van a qué miniatura y con qué arma). La miniatura puede repartir los ataques de forma distinta
+en cada fase de combate cuerpo a cuerpo. Ten en cuenta que puedes usar una misma arma más de una vez contra una misma miniatura enemiga. Ten en cuenta que los efectos que anulen un arma mágica (y no “todas las armas mágicas”) anularán los efectos mágicos de una de las dos armas mágicas, que pasará a ser un arma adicional (por lo que igualmente podrás hacer un ataque con el arma anulada, y el resto con el arma mágica no anulada).</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
