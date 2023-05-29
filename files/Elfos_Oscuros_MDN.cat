@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="88fd-bc7b-a990-f36e" name="Elfos Oscuros MDN" revision="3" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="88fd-bc7b-a990-f36e" name="Elfos Oscuros MDN" revision="4" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="a7c6-766e-bec9-a27e" name="Elfos Oscuros MdN 2023"/>
   </publications>
@@ -1067,7 +1067,7 @@
         </modifierGroup>
         <modifierGroup>
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="05a2-9e69-82b4-0e73" type="instanceOf"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60a4-ef56-972d-0e2b" type="instanceOf"/>
           </conditions>
           <modifiers>
             <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
@@ -1769,30 +1769,6 @@
       <categoryLinks>
         <categoryLink id="b534-e253-0d3d-05a3" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="8c3d-fa58-1b37-ebcf" name="Marca de Slaneesh" hidden="true" collective="false" import="true" type="upgrade">
-          <modifierGroups>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
-              </conditions>
-              <modifiers>
-                <modifier type="set" field="hidden" value="false"/>
-                <modifier type="set" field="beba-5d86-b2d6-3643" value="1.0"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="beba-5d86-b2d6-3643" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="b7b5-9953-1335-e6cf" name="Marca de Slaneesh" hidden="false" targetId="8776-ba2a-46bf-1621" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="d5ec-b19d-0006-ea77" name="Nivel" hidden="false" collective="false" import="true" defaultSelectionEntryId="6d8d-8399-7c79-7ae3">
           <constraints>
@@ -1850,11 +1826,12 @@
             <selectionEntry id="ea09-5c36-a837-8441" name="Saber de Slaneesh" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="9e5c-c874-b7fc-d6b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c3d-fa58-1b37-ebcf" type="atLeast"/>
-                  </conditions>
                   <modifiers>
-                    <modifier type="set" field="hidden" value="false"/>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="9e5c-c874-b7fc-d6b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="59aa-fb0c-1e66-ffc2" type="atLeast"/>
+                      </conditions>
+                    </modifier>
                     <modifier type="set" field="8adf-43d8-1edc-4b33" value="1.0"/>
                   </modifiers>
                 </modifierGroup>
@@ -1976,7 +1953,7 @@
               <modifierGroups>
                 <modifierGroup>
                   <conditions>
-                    <condition field="selections" scope="9e5c-c874-b7fc-d6b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c3d-fa58-1b37-ebcf" type="atLeast"/>
+                    <condition field="selections" scope="9e5c-c874-b7fc-d6b5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="59aa-fb0c-1e66-ffc2" type="atLeast"/>
                   </conditions>
                   <modifiers>
                     <modifier type="set" field="hidden" value="false"/>
@@ -2006,6 +1983,39 @@
             <entryLink id="1c6c-8841-a26d-20e2" name="Talismanes" hidden="false" collective="false" import="true" targetId="a433-3063-81f2-eba9" type="selectionEntryGroup"/>
             <entryLink id="0188-3548-f68e-258c" name="Objetos arcanos" hidden="false" collective="false" import="true" targetId="353b-075a-2cc8-07db" type="selectionEntryGroup"/>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="5cf3-d997-a533-c1cd" name="Marca del Caos" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="71df-6bf2-a313-b160" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71df-6bf2-a313-b160" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="59aa-fb0c-1e66-ffc2" name="Marca de Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12fd-d802-011d-a27f" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="0f14-657e-5323-b921" name="Marca de Slaanesh" hidden="false">
+                  <description>El Paladín del Caos es inmune a psicología. Puede ir montado en un
+Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -2052,28 +2062,6 @@
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="15.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7b8a-f765-68e3-237b" name="Marca de Slaneesh" hidden="true" collective="false" import="true" type="upgrade">
-          <modifierGroups>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
-              </conditions>
-              <modifiers>
-                <modifier type="set" field="hidden" value="false"/>
-                <modifier type="set" field="123f-4ff8-ca09-04a0" value="1.0"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="123f-4ff8-ca09-04a0" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="9c27-1669-838c-a061" name="Marca de Slaneesh" hidden="false" targetId="8776-ba2a-46bf-1621" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="9efa-1ced-b0d1-b3b1" name="Armadura" hidden="false" collective="false" import="true">
@@ -2107,7 +2095,7 @@
               <modifierGroups>
                 <modifierGroup>
                   <conditions>
-                    <condition field="selections" scope="1ee8-77c4-2be8-7898" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7b8a-f765-68e3-237b" type="atLeast"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
                   </conditions>
                   <modifiers>
                     <modifier type="set" field="hidden" value="false"/>
@@ -2128,7 +2116,7 @@
           <modifierGroups>
             <modifierGroup>
               <conditions>
-                <condition field="selections" scope="1ee8-77c4-2be8-7898" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7b8a-f765-68e3-237b" type="atLeast"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
               </conditions>
               <modifiers>
                 <modifier type="set" field="hidden" value="true"/>
@@ -2588,7 +2576,7 @@
               <modifierGroups>
                 <modifierGroup>
                   <conditions>
-                    <condition field="selections" scope="1ee8-77c4-2be8-7898" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7b8a-f765-68e3-237b" type="atLeast"/>
+                    <condition field="selections" scope="1ee8-77c4-2be8-7898" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8453-5cc9-7f3b-c8d9" type="atLeast"/>
                   </conditions>
                   <modifiers>
                     <modifier type="set" field="hidden" value="false"/>
@@ -2650,6 +2638,39 @@
             <entryLink id="67fd-0dcc-54c8-714f" name="Talismanes" hidden="false" collective="false" import="true" targetId="a433-3063-81f2-eba9" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
+        <selectionEntryGroup id="51d9-bd9e-44f6-c55d" name="Marca del Caos" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="4008-365d-0e2a-4b02" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4008-365d-0e2a-4b02" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="8453-5cc9-7f3b-c8d9" name="Marca de Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="162d-da98-0905-6cbb" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="9bea-9a81-4d72-d766" name="Marca de Slaanesh" hidden="false">
+                  <description>El Paladín del Caos es inmune a psicología. Puede ir montado en un
+Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="70.0"/>
@@ -2710,30 +2731,6 @@
       <categoryLinks>
         <categoryLink id="ebf9-dcf7-812c-2ce6" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="551a-fb52-0828-1d8e" name="Marca de Slaneesh" hidden="true" collective="false" import="true" type="upgrade">
-          <modifierGroups>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
-              </conditions>
-              <modifiers>
-                <modifier type="set" field="hidden" value="false"/>
-                <modifier type="set" field="2e67-85c9-5f92-0825" value="1.0"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e67-85c9-5f92-0825" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="850d-6bd5-b644-1523" name="Marca de Slaneesh" hidden="false" targetId="8776-ba2a-46bf-1621" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="6371-dca4-5c58-9933" name="Nivel" hidden="false" collective="false" import="true" defaultSelectionEntryId="3966-f642-2dde-2399">
           <constraints>
@@ -2825,7 +2822,7 @@
               <modifierGroups>
                 <modifierGroup>
                   <conditions>
-                    <condition field="selections" scope="ad93-09bb-a6fd-dadf" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="551a-fb52-0828-1d8e" type="atLeast"/>
+                    <condition field="selections" scope="ad93-09bb-a6fd-dadf" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0245-9dd3-f8f8-502a" type="atLeast"/>
                   </conditions>
                   <modifiers>
                     <modifier type="set" field="hidden" value="false"/>
@@ -2924,7 +2921,7 @@
               <modifierGroups>
                 <modifierGroup>
                   <conditions>
-                    <condition field="selections" scope="ad93-09bb-a6fd-dadf" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="551a-fb52-0828-1d8e" type="atLeast"/>
+                    <condition field="selections" scope="ad93-09bb-a6fd-dadf" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0245-9dd3-f8f8-502a" type="atLeast"/>
                   </conditions>
                   <modifiers>
                     <modifier type="set" field="hidden" value="false"/>
@@ -2954,6 +2951,39 @@
             <entryLink id="3054-9e1d-fbc0-eec5" name="Talismanes" hidden="false" collective="false" import="true" targetId="a433-3063-81f2-eba9" type="selectionEntryGroup"/>
             <entryLink id="ad84-eb9b-ce19-57cb" name="Objetos arcanos" hidden="false" collective="false" import="true" targetId="353b-075a-2cc8-07db" type="selectionEntryGroup"/>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="f8f6-2812-5607-f6e8" name="Marca del Caos" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="9e7a-7ad2-e815-a7eb" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e7a-7ad2-e815-a7eb" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="0245-9dd3-f8f8-502a" name="Marca de Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75a6-f264-c03a-af97" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="0b7a-97d0-3b81-cb90" name="Marca de Slaanesh" hidden="false">
+                  <description>El Paladín del Caos es inmune a psicología. Puede ir montado en un
+Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -3264,6 +3294,25 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="fe19-890c-5a04-d9e1" name="Señor de las bestias" hidden="false" collective="false" import="true" type="model">
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="05a2-9e69-82b4-0e73" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set" field="eb30-71bb-1755-49b1" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb30-71bb-1755-49b1" type="max"/>
+      </constraints>
       <profiles>
         <profile id="06cc-0f07-0df5-1101" name="Señor de las bestias" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3647,28 +3696,6 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3627-4b5b-c4c1-57b1" name="Marca de Slaneesh" hidden="true" collective="false" import="true" type="upgrade">
-          <modifierGroups>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
-              </conditions>
-              <modifiers>
-                <modifier type="set" field="hidden" value="false"/>
-                <modifier type="set" field="5a07-042f-c09c-9b00" value="1.0"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a07-042f-c09c-9b00" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="2a5b-d6aa-3f4e-ddeb" name="Marca de Slaneesh" hidden="false" targetId="8776-ba2a-46bf-1621" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="68ae-6889-bc1e-078a" name="Grupo de Mando" hidden="false" collective="false" import="true">
@@ -3715,6 +3742,39 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
               </profiles>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="e172-e74b-c42e-4666" name="Marca del Caos" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="90a4-4019-2fd0-dbb3" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="90a4-4019-2fd0-dbb3" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c29e-25e3-91f7-d51c" name="Marca de Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3831-1e93-e692-20f4" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="8086-e7e6-0aa1-9ad5" name="Marca de Slaanesh" hidden="false">
+                  <description>El Paladín del Caos es inmune a psicología. Puede ir montado en un
+Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -3858,28 +3918,6 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="11.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="06f0-05d3-214e-8247" name="Marca de Slaneesh" hidden="true" collective="false" import="true" type="upgrade">
-          <modifierGroups>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
-              </conditions>
-              <modifiers>
-                <modifier type="set" field="hidden" value="false"/>
-                <modifier type="set" field="f448-1c01-18b4-1876" value="1.0"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f448-1c01-18b4-1876" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="39a1-49b8-a80e-41e1" name="Marca de Slaneesh" hidden="false" targetId="8776-ba2a-46bf-1621" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="c04c-9e7a-dcc6-3e29" name="Grupo de Mando" hidden="false" collective="false" import="true">
@@ -3926,6 +3964,39 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
               </profiles>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="f0ff-3e4d-73f4-433d" name="Marca del Caos" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="d0d9-0799-79d2-e2fc" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0d9-0799-79d2-e2fc" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9621-7d5e-a884-ca75" name="Marca de Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be42-5adb-e025-f8d3" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="c301-eef9-d4d2-17fa" name="Marca de Slaanesh" hidden="false">
+                  <description>El Paladín del Caos es inmune a psicología. Puede ir montado en un
+Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -4361,28 +4432,6 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="16.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e435-4e98-3de2-c27e" name="Marca de Slaneesh" hidden="true" collective="false" import="true" type="upgrade">
-          <modifierGroups>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
-              </conditions>
-              <modifiers>
-                <modifier type="set" field="hidden" value="false"/>
-                <modifier type="set" field="b66b-849e-3395-7d52" value="1.0"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b66b-849e-3395-7d52" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="21c7-4bb9-6ab7-6abd" name="Marca de Slaneesh" hidden="false" targetId="8776-ba2a-46bf-1621" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="49bc-9be7-57a9-49b3" name="Grupo de Mando" hidden="false" collective="false" import="true">
@@ -4429,6 +4478,39 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="109d-8cea-613a-9e23" name="Marca del Caos" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="be27-fd3d-4fe4-a003" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be27-fd3d-4fe4-a003" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="4f02-7bfb-037a-8a5a" name="Marca de Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d485-f928-f71e-9e16" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="116c-8f21-cbfe-86d1" name="Marca de Slaanesh" hidden="false">
+                  <description>El Paladín del Caos es inmune a psicología. Puede ir montado en un
+Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -4738,28 +4820,6 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="dfa8-9286-0805-5882" name="Marca de Slaneesh" hidden="true" collective="false" import="true" type="upgrade">
-          <modifierGroups>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
-              </conditions>
-              <modifiers>
-                <modifier type="set" field="hidden" value="false"/>
-                <modifier type="set" field="07f1-2e6b-9db6-75cf" value="1.0"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07f1-2e6b-9db6-75cf" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="9a55-f9f9-9b4a-8c50" name="Marca de Slaneesh" hidden="false" targetId="8776-ba2a-46bf-1621" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="6f61-a2b7-8df7-95f3" name="Grupo de Mando" hidden="false" collective="false" import="true">
@@ -4790,6 +4850,39 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
               </profiles>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="4bf1-1aff-c596-f6b4" name="Marca del Caos" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="d9a0-4f67-e86b-5918" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9a0-4f67-e86b-5918" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6c9a-1a88-3229-5b99" name="Marca de Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1bcd-3fc6-4cd1-b430" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="c815-8e1a-5116-0400" name="Marca de Slaanesh" hidden="false">
+                  <description>El Paladín del Caos es inmune a psicología. Puede ir montado en un
+Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -5517,28 +5610,6 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="29.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d0ee-2c95-e9f0-3b3d" name="Marca de Slaneesh" hidden="true" collective="false" import="true" type="upgrade">
-          <modifierGroups>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
-              </conditions>
-              <modifiers>
-                <modifier type="set" field="hidden" value="false"/>
-                <modifier type="set" field="a792-a1d3-a5b2-5f9e" value="1.0"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a792-a1d3-a5b2-5f9e" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="2c55-5bc1-fae9-541a" name="Marca de Slaneesh" hidden="false" targetId="8776-ba2a-46bf-1621" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="c59a-4013-cdca-877a" name="Grupo de Mando" hidden="false" collective="false" import="true">
@@ -5596,6 +5667,39 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
               </selectionEntryGroups>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="18.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="d676-9c5f-7f6d-118c" name="Marca del Caos" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="88ad-0f5f-cea9-34a9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="88ad-0f5f-cea9-34a9" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c9c4-8ca7-903d-d0d1" name="Marca de Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e2d-0a17-579e-dd30" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="f19c-8a6b-c3fb-8372" name="Marca de Slaanesh" hidden="false">
+                  <description>El Paladín del Caos es inmune a psicología. Puede ir montado en un
+Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -7778,28 +7882,6 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7330-0e32-e6f6-2250" name="Marca de Slaneesh" hidden="true" collective="false" import="true" type="upgrade">
-          <modifierGroups>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
-              </conditions>
-              <modifiers>
-                <modifier type="set" field="hidden" value="false"/>
-                <modifier type="set" field="38d5-315a-9037-e4b4" value="1.0"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38d5-315a-9037-e4b4" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="6301-ac64-a39c-bd1a" name="Marca de Slaneesh" hidden="false" targetId="8776-ba2a-46bf-1621" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="3f09-1c47-a508-ab83" name="Grupo de Mando" hidden="false" collective="false" import="true">
@@ -7846,6 +7928,39 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
               </profiles>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="dca9-5986-6a0c-9ed2" name="Marca del Caos" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="763a-94d5-dd3f-e508" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="763a-94d5-dd3f-e508" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="336c-7c84-383f-9b0b" name="Marca de Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7b3-a148-0b1c-e44a" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="3b92-934f-431c-9273" name="Marca de Slaanesh" hidden="false">
+                  <description>El Paladín del Caos es inmune a psicología. Puede ir montado en un
+Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -9059,7 +9174,7 @@ puede abandonar de forma voluntaria la unidad de Verdugos en la que estaba inici
     </selectionEntry>
     <selectionEntry id="0355-acd1-f1ff-fdc0" name="Guardia de la Ciudad" publicationId="a7c6-766e-bec9-a27e" page="18" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="4d2e-be65-c1f1-94b2" value="1.0">
+        <modifier type="set" field="4d2e-be65-c1f1-94b2" value="-1.0">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="05a2-9e69-82b4-0e73" type="instanceOf"/>
           </conditions>
@@ -9072,6 +9187,8 @@ puede abandonar de forma voluntaria la unidad de Verdugos en la que estaba inici
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60a4-ef56-972d-0e2b" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c2e-f327-170f-d7a7" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -9115,6 +9232,9 @@ puede abandonar de forma voluntaria la unidad de Verdugos en la que estaba inici
       <infoLinks>
         <infoLink id="3c61-7b4d-4b5a-8040" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="d638-8855-9d56-d03d" name="New CategoryLink" hidden="false" targetId="ba68-224b-3224-a908" primary="true"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="928f-d049-9b32-44fc" name="Guardianes de la primera fila" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -9648,7 +9768,21 @@ puede abandonar de forma voluntaria la unidad de Verdugos en la que estaba inici
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="235.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1a82-c759-ecb8-e25e" name="Paladín del Caos" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="1a82-c759-ecb8-e25e" name="Paladín del Caos" hidden="true" collective="false" import="true" type="model">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false"/>
+            <modifier type="set" field="d123-d234-7177-550a" value="1.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d123-d234-7177-550a" type="max"/>
+      </constraints>
       <profiles>
         <profile id="a1c7-a7ca-e701-544c" name="Paladín del Caos" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -9840,7 +9974,21 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="205e-6eef-7ffd-4592" name="Heraldo demoníaco" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="205e-6eef-7ffd-4592" name="Heraldo demoníaco" hidden="true" collective="false" import="true" type="model">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8aef-4630-d156-a6ad" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false"/>
+            <modifier type="set" field="9e5e-0b7f-89aa-2558" value="-1.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e5e-0b7f-89aa-2558" type="max"/>
+      </constraints>
       <profiles>
         <profile id="b5a1-7154-1093-a0c7" name="Heraldo demoníaco" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -10934,7 +11082,7 @@ en Guerreros Elegidos del Caos (+6/m). Los Guerreros Elegidos del Caos sustituye
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4cc7-f05a-aa04-777f" name="Furias" publicationId="a7c6-766e-bec9-a27e" page="65" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="4cc7-f05a-aa04-777f" name="Furias" publicationId="a7c6-766e-bec9-a27e" page="65" hidden="true" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
           <conditions>
