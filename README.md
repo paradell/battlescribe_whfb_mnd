@@ -9,29 +9,30 @@
 ## Por qué este proyecto.
 Hace unos años trasteé con BattleScribe para poder hacerme las listas de Bretonia (mi ejército) aplicado a Manuscritos de Nuth. Y en paralelo, desde el blog [Leyendas en Miniatura](http://www.leyendasenminiatura.com/p/recursos.html) hicieron lo mismo para todos los ejércitos (muchas gracias, compis!). Por diversas razones, no se van a actualizar las versiones 2020 de los Manuscritos de Nuth, así que he retomado mi pequeño proyecto y le he dado un meneo para pulir y añadir cosas nuevas a cómo se generan las listas para WH-MNDR en BattleScribe.
 
-## Lista de Ficheros
+## Estado del proyecto
 ### Fichero Base
 * [Warhammer Fantasy MNDR](./files/Warhammer_Fantasy_MDNR.gst)
 
 ### Ficheros de ejércitos
-* [Bretonia](./files/Bretonia_MDN_2020.cat)
-* [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)
-* [Mercenarios](./files/Mercenarios_MDN.cat)
-* [Condes Vampiro](.files/Condes_Vampiro_MND.cat)
-* [Reyes Funerarios](.files/Reyes\ Funerarios\ MDN.cat)
-* Altos Elfos
-* Elfos Oscuros
-* Elfos Silvanos
-* Reinos del Caos: Bestias, Demonios y Mortales
-* Skaven
-* Regimientos de Renombre
+Estos ficheros permiten hacer la listas de Battlescribe tanto para Manuscritos de Nuth, como con Warhammer Fantasy Sexta Edición (sin los añadidos de MdN), así cómo sus PJEs y listas alternativas oficiales. Estos ficheros añaden también una capa de lógica ara ayudar en algunos límites y restricciones a la hora de crear las listas. Por ejemplo, te avisa si en un ejército de Reinos Ogros tienes más unidades de Gnoblars que de Ogros. **¡Alerta!** Estas ayudas pueden tener errores por mi parte, o no cubrir algunas situaciones, así que siempre es mejor hacer las listas con el libro de ejercito al lado. En casos de incongruencias entre los ficheros de este repositorio y los libros de ejército (y erratas), haced caso a estos últimos.
 
-### Ficheros de ejércitos sin modificar de Leyendas
-* Enanos
-* Enanos del Caos
-* Hombres Lagarto
-* Imperio
-* Orcos y Goblins
+| Ejército | PDF MdN | Actualizado | PJs Especiales | Lista de Sexta pura | Listas Alternativas | Límites automáticos | 
+| :---     |  :---:  |  :---:      |     :---:      |   :---:             |   :---:             |   :---:             | 
+| [Altos Elfos](./files/Altos_Elfos_MND.cat)   | Link a Cargad     | v2022    | Sí | Sí | Sí | Sí|
+| [Bretonia](./files/Bretonia_MDN_2020.cat)   | Link a Cargad     | v2023    | Sí | Sí (con errores) | Sí | Sí|
+| [Condes Vampiro](.files/Condes_Vampiro_MND.cat) | Link a Cargad     | v2020    | Sí | No | No | Sí|
+| [Elfos Oscuros](./files/Elfos_Oscuros_MDN.cat)   | Link a Cargad     | v2023    | Sí | Sí | Sí | Sí|
+| Elfos Silvanos  | Link a Cargad     | v2022    | Sí | No | No hay | Sí|
+| Enanos   | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
+| Enanos del Caos  | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
+| Hombres Lagarto   | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
+| Imperio   | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
+| [Mercenarios](./files/Mercenarios_MDN.cat)   | Link a Cargad     | v2023    | Sí | No | No hay | Sí|
+| Orcos y Goblins   | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
+| [Reinos del Caos](./files/Reinos_del_Caos_MDN.cat)   | Link a Cargad     | v2021    | Sí | No | No | Sí|
+| [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)   | Link a Cargad     | v2023    | Sí | Sí | Sí | Sí|
+| Reyes Funerarios  | Link a Cargad     | v2020    | Sí | No | No hay | Sí|
+| [Skaven](./files/Skaven_MDN.cat)   | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
 
 
 ## Importar los ficheros
