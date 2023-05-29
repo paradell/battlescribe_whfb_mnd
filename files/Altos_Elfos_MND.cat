@@ -1,8 +1,197 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d3b3-94b1-5e8a-2250" name="Altos Elfos MDN" revision="4" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d3b3-94b1-5e8a-2250" name="Altos Elfos MDN" revision="4" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="010e-3751-f396-5afc" name="Altos Elfos MDN"/>
   </publications>
+  <forceEntries>
+    <forceEntry id="5c3b-a2f9-a9e4-f2af" name="Patrulla Marina" publicationId="010e-3751-f396-5afc" hidden="false">
+      <comment>Listas para jugar a Warhammer Fantasy 6a Edición. </comment>
+      <categoryLinks>
+        <categoryLink id="169b-fc0f-2c00-554c" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false">
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="b2cd-5a61-4cc0-4a59" value="0.0">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="b2cd-5a61-4cc0-4a59" value="1.0">
+                  <repeats>
+                    <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2cd-5a61-4cc0-4a59" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="3961-0b3e-9d2f-95d6" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false">
+          <modifiers>
+            <modifier type="set" field="892c-1e7a-8e99-4ce7" value="3.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="892c-1e7a-8e99-4ce7" value="2.0">
+              <repeats>
+                <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="892c-1e7a-8e99-4ce7" value="4.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="892c-1e7a-8e99-4ce7" value="0.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="892c-1e7a-8e99-4ce7" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="c611-aa77-f08b-3171" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false">
+          <modifiers>
+            <modifier type="set" field="bfa9-4d8a-e8c8-3066" value="3.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bfa9-4d8a-e8c8-3066" value="4.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="bfa9-4d8a-e8c8-3066" value="0.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="bfa9-4d8a-e8c8-3066" value="2.0">
+              <repeats>
+                <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfa9-4d8a-e8c8-3066" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="2597-a103-0dd2-9ca3" name="Personaje Especial" hidden="false" targetId="9374-09df-04a6-d8fe" primary="false"/>
+        <categoryLink id="5341-0761-e42b-e0a7" name="Unidad básica" hidden="false" targetId="ba68-224b-3224-a908" primary="false">
+          <modifiers>
+            <modifier type="increment" field="d888-3e94-4e9c-e072" value="1.0">
+              <repeats>
+                <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" field="d888-3e94-4e9c-e072" value="1.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d888-3e94-4e9c-e072" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="4bdb-feaf-9787-d9e1" name="Unidad básica (no cuenta para el mínimo)" hidden="false" targetId="0cfc-02a1-ad30-fb33" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e99e-55e7-2465-282f" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="b785-6175-f971-45c9" name="Unidad especial" hidden="false" targetId="102e-012c-5785-3354" primary="false">
+          <modifiers>
+            <modifier type="set" field="5ec2-096f-4a68-d231" value="3.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="5ec2-096f-4a68-d231" value="2.0">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="5ec2-096f-4a68-d231" value="1.0">
+                  <repeats>
+                    <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ec2-096f-4a68-d231" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="6779-e8c4-0a76-46e7" name="Unidad singular" hidden="false" targetId="184a-30ec-bf7c-b603" primary="false">
+          <modifiers>
+            <modifier type="set" field="89bf-03e4-e122-a1e6" value="1.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="89bf-03e4-e122-a1e6" value="0.0">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="89bf-03e4-e122-a1e6" value="1.0">
+                  <repeats>
+                    <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="89bf-03e4-e122-a1e6" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+  </forceEntries>
   <selectionEntries>
     <selectionEntry id="f902-4833-3290-5b60" name="Fénix Corazón Gélido" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -151,6 +340,10 @@
           </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="f313-cdf3-aea3-2a6a" name="Tripulantes" hidden="false" collective="false" import="true" defaultSelectionEntryId="1c73-f7e3-30e1-7d48">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df76-d325-07ea-e665" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a588-ca62-069b-a844" type="min"/>
+              </constraints>
               <profiles>
                 <profile id="e920-322d-e053-90b6" name="Elfo" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
                   <characteristics>
@@ -178,11 +371,17 @@
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="6928-5bc4-a5ee-64b2" name="1 tripulantes" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f57-fdd9-e624-bb00" type="max"/>
+                  </constraints>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="1c73-f7e3-30e1-7d48" name="2 tripulantes" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b01-bf66-62c0-cd1f" type="max"/>
+                  </constraints>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
                   </costs>
@@ -200,6 +399,20 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="8f72-0e49-3df0-2b25" name="Carro de leones blancos de Cracia" hidden="false" collective="false" import="true" type="upgrade">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="77cd-57cd-f997-54f5" value="0.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77cd-57cd-f997-54f5" type="max"/>
+      </constraints>
       <profiles>
         <profile id="f883-50b8-3360-d1d8" name="Carro de leones blancos de Cracia" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -628,6 +841,17 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="2583-a639-2a22-a944" value="0.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2583-a639-2a22-a944" type="max"/>
               </constraints>
@@ -642,6 +866,17 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="0093-50cc-d0ce-7032" name="Carro de Tiranoc (sustituye a uno de los tripulantes, ocupa hueco de unidad especial)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="f570-0cc5-586d-bf21" value="0.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f570-0cc5-586d-bf21" type="max"/>
               </constraints>
@@ -674,6 +909,17 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="18be-c542-49bd-aed8" value="0.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="18be-c542-49bd-aed8" type="max"/>
               </constraints>
@@ -695,6 +941,17 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="83ff-d8dd-ab34-9220" value="0.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83ff-d8dd-ab34-9220" type="max"/>
               </constraints>
@@ -882,6 +1139,7 @@
                       <conditions>
                         <condition field="selections" scope="dad0-cc64-0907-bcd1" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d3ff-18c9-966d-b802" type="atLeast"/>
                         <condition field="selections" scope="dad0-cc64-0907-bcd1" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4312-3351-bda1-2711" type="atLeast"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c3b-a2f9-a9e4-f2af" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1183,6 +1441,17 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="4c56-2dfd-2cec-0b08" name="Dragón (ocupa hueco de Héroe)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="89a6-8e41-c388-7091" value="0.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="89a6-8e41-c388-7091" type="max"/>
               </constraints>
@@ -1197,6 +1466,17 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="8720-1c8b-e64a-8890" name="Carro de Tiranoc (sustituye a uno de los tripulantes, ocupa hueco de unidad especial)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="3037-6e7e-cf9b-4de4" value="0.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3037-6e7e-cf9b-4de4" type="max"/>
               </constraints>
@@ -1222,6 +1502,17 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="0f06-cc53-4d9d-7402" name="Unicornio" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="e81e-8602-aa97-6ecf" value="0.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e81e-8602-aa97-6ecf" type="max"/>
               </constraints>
@@ -1747,6 +2038,17 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="2ea9-7e81-598e-ecbc" name="Pegaso " hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="47c6-17ab-d692-8b2c" value="0.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47c6-17ab-d692-8b2c" type="max"/>
               </constraints>
@@ -1776,6 +2078,17 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="c760-8885-e528-ea7b" value="0.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c760-8885-e528-ea7b" type="max"/>
               </constraints>
@@ -1790,6 +2103,17 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="bd67-d2c3-09f0-06b0" name="Carro de Tiranoc (sustituye a uno de los tripulantes, ocupa hueco de unidad especial)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="febf-22cd-5f74-7b69" value="0.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="febf-22cd-5f74-7b69" type="max"/>
               </constraints>
@@ -2026,6 +2350,17 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="5b65-d8b6-7d75-2e6d" value="0.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b65-d8b6-7d75-2e6d" type="max"/>
               </constraints>
@@ -2037,6 +2372,17 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="df31-0699-6c96-e0a0" name="Carro de Tiranoc (sustituye a uno de los tripulantes, ocupa hueco de unidad especial)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="beb8-5977-ea61-5fba" value="0.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="beb8-5977-ea61-5fba" type="max"/>
               </constraints>
@@ -2149,6 +2495,17 @@
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="8278-a167-fb4b-3af6" name="Armadura pesada" hidden="false" collective="true" import="true" type="upgrade">
+                  <modifierGroups>
+                    <modifierGroup>
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                      </conditions>
+                      <modifiers>
+                        <modifier type="set" field="7b38-a182-ef59-7d94" value="0.0"/>
+                        <modifier type="set" field="hidden" value="false"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b38-a182-ef59-7d94" type="max"/>
                   </constraints>
@@ -2322,6 +2679,17 @@
           </constraints>
           <selectionEntryGroups>
             <selectionEntryGroup id="e78a-7bc0-2c63-2455" name="Armadura" hidden="false" collective="false" import="true">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="a7f7-a650-5e3f-3976" value="0.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7f7-a650-5e3f-3976" type="max"/>
               </constraints>
@@ -2636,6 +3004,20 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="a2b3-caf8-d5d1-de6e" name="Espadachines" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="1e21-2d3e-0062-4d3a" value="0.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e21-2d3e-0062-4d3a" type="max"/>
+      </constraints>
       <profiles>
         <profile id="5db4-55e7-28e6-8cb4" name="Espadachín" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3383,6 +3765,17 @@
           </repeats>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="0333-ec4c-cb83-df7b" value="0.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0333-ec4c-cb83-df7b" type="max"/>
       </constraints>
@@ -5372,6 +5765,9 @@ Si el hechicero al que estaba atado muere, debes comunicar a tu oponente qué Me
               <infoLinks>
                 <infoLink id="f8e9-ec08-cf73-5f5e" name="General" hidden="false" targetId="89b2-105c-35db-51c3" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5480,6 +5876,9 @@ Si el hechicero al que estaba atado muere, debes comunicar a tu oponente qué Me
               <infoLinks>
                 <infoLink id="642e-0fee-cd6a-1f0b" name="General" hidden="false" targetId="89b2-105c-35db-51c3" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5971,6 +6370,9 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
               <infoLinks>
                 <infoLink id="214e-c59a-2502-75be" name="General" hidden="false" targetId="89b2-105c-35db-51c3" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -6761,6 +7163,9 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
               <infoLinks>
                 <infoLink id="9f9d-9e1d-f58f-7402" name="General" hidden="false" targetId="89b2-105c-35db-51c3" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -8508,6 +8913,17 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
           </costs>
         </selectionEntry>
         <selectionEntry id="4312-3351-bda1-2711" name="Honor Ungido de Asuryan" hidden="false" collective="false" import="true" type="upgrade">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="ec02-793b-eec8-22df" value="0.0"/>
+                <modifier type="set" field="hidden" value="false"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec02-793b-eec8-22df" type="max"/>
           </constraints>
@@ -8531,6 +8947,17 @@ El personaje, así como la Guardia del Fénix, ganan una tirada de salvación es
           </costs>
         </selectionEntry>
         <selectionEntry id="177c-8c93-1cd9-2d08" name="Honor Doncella de la Reina eterna" hidden="false" collective="false" import="true" type="upgrade">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="940d-202c-d6e0-4dbf" value="0.0"/>
+                <modifier type="set" field="hidden" value="false"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="940d-202c-d6e0-4dbf" type="max"/>
           </constraints>
@@ -8571,6 +8998,17 @@ Si la Doncella está en una unidad de Guardia de Doncellas, la unidad puede disp
           </costs>
         </selectionEntry>
         <selectionEntry id="a9ed-0a45-03eb-6e2e" name="Honor Yelmo del mar de Lothern" hidden="false" collective="false" import="true" type="upgrade">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="bcb7-9ed9-7fff-c03b" value="0.0"/>
+                <modifier type="set" field="hidden" value="false"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bcb7-9ed9-7fff-c03b" type="max"/>
           </constraints>
@@ -8593,6 +9031,17 @@ Las unidades de Guardia del Mar cercanas, además de ser inmunes a pánico, pued
           </costs>
         </selectionEntry>
         <selectionEntry id="1f66-2a0d-9716-6acd" name="Honor Mago Dragón de Caledor" hidden="false" collective="false" import="true" type="upgrade">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="4ecb-c8cf-c77c-7c2a" value="0.0"/>
+                <modifier type="set" field="hidden" value="false"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ecb-c8cf-c77c-7c2a" type="max"/>
           </constraints>
