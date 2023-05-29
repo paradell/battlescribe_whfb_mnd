@@ -3003,6 +3003,13 @@
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="611c-8b32-8e85-6e66" type="atLeast"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="ce42-2227-5a86-81be" value="-1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3ea-7139-5c13-8ec0" type="atLeast">
+              <comment>Eltharion (Señor de la Espada) es General del Ejército</comment>
+            </condition>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce42-2227-5a86-81be" type="max"/>
@@ -5235,6 +5242,13 @@ Si el hechicero al que estaba atado muere, debes comunicar a tu oponente qué Me
     </selectionEntry>
     <selectionEntry id="c7c6-42f4-2472-4b46" name="Eltharion el Implacable" publicationId="010e-3751-f396-5afc" page="42" hidden="false" collective="false" import="true" type="model">
       <comment>Guardián de Tor Ivresse</comment>
+      <modifiers>
+        <modifier type="set" field="c470-4cbd-df33-4497" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3ea-7139-5c13-8ec0" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c470-4cbd-df33-4497" type="max"/>
       </constraints>
@@ -5339,6 +5353,28 @@ Si el hechicero al que estaba atado muere, debes comunicar a tu oponente qué Me
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="1790-ecc5-aae7-9d63" name="General" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="eb31-c129-148c-af2d" value="0.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eaa3-e1ca-312f-098f" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb31-c129-148c-af2d" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="98ca-3a84-7e2c-1301" name="General" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2493-005a-a684-ad2a" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="f8e9-ec08-cf73-5f5e" name="General" hidden="false" targetId="89b2-105c-35db-51c3" type="rule"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="280.0"/>
@@ -5346,6 +5382,13 @@ Si el hechicero al que estaba atado muere, debes comunicar a tu oponente qué Me
     </selectionEntry>
     <selectionEntry id="b3ea-7139-5c13-8ec0" name="Eltharion" publicationId="010e-3751-f396-5afc" page="44" hidden="false" collective="false" import="true" type="model">
       <comment>Señor de la Espada</comment>
+      <modifiers>
+        <modifier type="set" field="6f25-048e-ef33-6d8b" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7c6-42f4-2472-4b46" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f25-048e-ef33-6d8b" type="max"/>
       </constraints>
@@ -5417,6 +5460,30 @@ Si el hechicero al que estaba atado muere, debes comunicar a tu oponente qué Me
         <categoryLink id="c18e-f49c-99a5-fb14" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
         <categoryLink id="a867-f50d-d184-9d4b" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b2b5-85c6-7f1d-be06" name="General" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="3e4e-1616-05c1-f645" value="0.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eaa3-e1ca-312f-098f" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e4e-1616-05c1-f645" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="0400-43bc-b973-fe21" name="General" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1684-a486-9406-1b20" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="642e-0fee-cd6a-1f0b" name="General" hidden="false" targetId="89b2-105c-35db-51c3" type="rule"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="255.0"/>
       </costs>
@@ -5785,6 +5852,19 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
     </selectionEntry>
     <selectionEntry id="c46d-ec1f-1b95-18b6" name="Salendor" publicationId="010e-3751-f396-5afc" page="53" hidden="false" collective="false" import="true" type="model">
       <comment>Príncipe de Tor Achare</comment>
+      <modifiers>
+        <modifier type="set" field="d966-25c4-ed5a-d6dc" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eaa3-e1ca-312f-098f" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3ea-7139-5c13-8ec0" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7c6-42f4-2472-4b46" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d966-25c4-ed5a-d6dc" type="max"/>
       </constraints>
@@ -5865,6 +5945,35 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="a182-fc0a-5be8-9f5b" name="General" hidden="false" collective="false" import="true" defaultSelectionEntryId="9e6c-ab59-5afb-60e5">
+          <modifiers>
+            <modifier type="set" field="f6ee-7ee0-a916-9a31" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eaa3-e1ca-312f-098f" type="atLeast"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3ea-7139-5c13-8ec0" type="atLeast"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7c6-42f4-2472-4b46" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6ee-7ee0-a916-9a31" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1de3-3641-68de-88e7" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9e6c-ab59-5afb-60e5" name="General" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6e5-479d-cc4d-24f0" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="214e-c59a-2502-75be" name="General" hidden="false" targetId="89b2-105c-35db-51c3" type="rule"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="305.0"/>
@@ -5902,7 +6011,6 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
           </characteristics>
         </profile>
         <profile id="a0bd-8d4f-4b28-290e" name="Armadura Sombría" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
-          <comment></comment>
           <characteristics>
             <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">5+</characteristic>
             <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Armadura pesada (Tirada de salvación por armadura de 5+. Selafynn es Explorador, y puede desplegar como Explorador o en una unidad de Sombríos. Se trata del mismo objeto Armadura Sombría que hay en la lista básica, así que ningún otro personaje puede elegir Armadura Sombría</characteristic>
@@ -6314,7 +6422,6 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
       </costs>
     </selectionEntry>
     <selectionEntry id="4ee6-65c5-c513-91cf" name="Tielindrion" publicationId="010e-3751-f396-5afc" page="60" hidden="false" collective="false" import="true" type="model">
-      <comment></comment>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e080-b046-861e-3ca4" type="max"/>
       </constraints>
@@ -6521,6 +6628,9 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="eaa3-e1ca-312f-098f" name="Tyrion" publicationId="010e-3751-f396-5afc" page="62" hidden="false" collective="false" import="true" type="model">
       <comment>Defensor de Ulthuan</comment>
@@ -6591,7 +6701,7 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
         <categoryLink id="cdc6-86e1-2904-73a7" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7c86-845c-f96d-83fa" name="Malhandir" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="7c86-845c-f96d-83fa" name="Malhandir" hidden="false" collective="false" import="true" defaultSelectionEntryId="5d96-174e-8e03-a819">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e240-6a29-8521-5130" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a4b-9aae-8f9c-5d82" type="min"/>
@@ -6638,6 +6748,22 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="506a-b00f-fa41-5cd9" name="General" hidden="false" collective="false" import="true" defaultSelectionEntryId="a4ac-b13b-65a8-73af">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9816-1700-68c3-f96f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27e4-b1f9-0423-29cc" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="a4ac-b13b-65a8-73af" name="General" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0df1-f35c-b3f4-e934" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="9f9d-9e1d-f58f-7402" name="General" hidden="false" targetId="89b2-105c-35db-51c3" type="rule"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="ac3f-f9d9-f93f-c5d9" name="Honor Puro de corazón" hidden="false" collective="false" import="true" targetId="345e-6373-3fe4-f378" type="selectionEntry"/>
@@ -6664,7 +6790,7 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"></characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Alto Elfo, Personaje Especial</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
