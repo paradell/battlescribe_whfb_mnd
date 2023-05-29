@@ -32,7 +32,7 @@ Estos ficheros permiten hacer la listas de Battlescribe tanto para Manuscritos d
 | [Reinos del Caos](./files/Reinos_del_Caos_MDN.cat)   | Link a Cargad     | v2021    | Sí | No | No | Sí|
 | [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)   | Link a Cargad     | v2023    | Sí | Sí | Sí | Sí|
 | Reyes Funerarios  | Link a Cargad     | v2020    | Sí | No | No hay | Sí|
-| [Skaven](./files/Skaven_MDN.cat)   | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
+| [Skaven](./files/Skaven_MDN.cat)   | Link a Cargad     | Faltan Erratas y Propuestas    | Sí | No | No | No|
 
 
 ## Importar los ficheros
