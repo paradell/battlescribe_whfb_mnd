@@ -22,16 +22,16 @@ Estos ficheros permiten hacer la listas de Battlescribe tanto para Manuscritos d
 | [Bretonia](./files/Bretonia_MDN_2020.cat)   | Link a Cargad     | v2023    | Sí | Sí (con errores) | Sí | Sí|
 | [Condes Vampiro](.files/Condes_Vampiro_MND.cat) | Link a Cargad     | v2020    | Sí | No | No | Sí|
 | [Elfos Oscuros](./files/Elfos_Oscuros_MDN.cat)   | Link a Cargad     | v2023    | Sí | Sí | Sí | Sí|
-| Elfos Silvanos  | Link a Cargad     | v2022    | Sí | No | No hay | Sí|
-| Enanos   | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
-| Enanos del Caos  | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
-| Hombres Lagarto   | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
-| Imperio   | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
+| [Elfos Silvanos](./files/Elfos_Silvanos_MDN.cat)  | Link a Cargad     | v2022    | Sí | No | No hay | Sí|
+| [Enanos](./files/Enanos_MDN.cat)   | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
+| [Enanos del Caos](./files/Enanos_del_Caos_MDN.cat)   | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
+| [Hombres Lagarto](./files/Hombres_Lagarto_MDN.cat)    | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
+| [Imperio](./files/Imperio_MDN.cat)    | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
 | [Mercenarios](./files/Mercenarios_MDN.cat)   | Link a Cargad     | v2023    | Sí | No | No hay | Sí|
-| Orcos y Goblins   | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
+| [Orcos y Goblins](./files/Orcos_Goblins_MDN.cat)    | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
 | [Reinos del Caos](./files/Reinos_del_Caos_MDN.cat)   | Link a Cargad     | v2021    | Sí | No | No | Sí|
 | [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)   | Link a Cargad     | v2023    | Sí | Sí | Sí | Sí|
-| Reyes Funerarios  | Link a Cargad     | v2020    | Sí | No | No hay | Sí|
+| [Reyes Funerarios](./files/Reyes_Funerarios_MDN.cat)   | Link a Cargad     | v2020    | Sí | No | No hay | Sí|
 | [Skaven](./files/Skaven_MDN.cat)   | Link a Cargad     | Faltan Erratas y Propuestas    | Sí | No | No | No|
 
 
