@@ -18,21 +18,21 @@ Estos ficheros permiten hacer la listas de Battlescribe tanto para Manuscritos d
 
 | Ejército | PDF MdN | Actualizado | PJs Especiales | Lista de Sexta pura | Listas Alternativas | Límites automáticos | 
 | :---     |  :---:  |  :---:      |     :---:      |   :---:             |   :---:             |   :---:             | 
-| [Altos Elfos](./files/Altos_Elfos_MND.cat)   | Link a Cargad     | v2022    | Sí | Sí | Sí | Sí|
-| [Bretonia](./files/Bretonia_MDN_2020.cat)   | Link a Cargad     | v2023    | Sí | Sí (con errores) | Sí | Sí|
-| [Condes Vampiro](.files/Condes_Vampiro_MND.cat) | Link a Cargad     | v2020    | Sí | No | No | Sí|
-| [Elfos Oscuros](./files/Elfos_Oscuros_MDN.cat)   | Link a Cargad     | v2023    | Sí | Sí | Sí | Sí|
-| [Elfos Silvanos](./files/Elfos_Silvanos_MDN.cat)  | Link a Cargad     | v2022    | Sí | No | No hay | Sí|
-| [Enanos](./files/Enanos_MDN.cat)   | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
-| [Enanos del Caos](./files/Enanos_del_Caos_MDN.cat)   | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
-| [Hombres Lagarto](./files/Hombres_Lagarto_MDN.cat)    | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
-| [Imperio](./files/Imperio_MDN.cat)    | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
-| [Mercenarios](./files/Mercenarios_MDN.cat)   | Link a Cargad     | v2023    | Sí | No | No hay | Sí|
-| [Orcos y Goblins](./files/Orcos_Goblins_MDN.cat)    | Link a Cargad     | Faltan Erratas y Propuestas    | No | No | No | No|
-| [Reinos del Caos](./files/Reinos_del_Caos_MDN.cat)   | Link a Cargad     | v2021    | Sí | No | No | Sí|
-| [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)   | Link a Cargad     | v2023    | Sí | Sí | Sí | Sí|
-| [Reyes Funerarios](./files/Reyes_Funerarios_MDN.cat)   | Link a Cargad     | v2020    | Sí | No | No hay | Sí|
-| [Skaven](./files/Skaven_MDN.cat)   | Link a Cargad     | Faltan Erratas y Propuestas    | Sí | No | No | No|
+| [Altos Elfos](./files/Altos_Elfos_MND.cat)   | Link a Cargad     | v2022 :green_circle:   | Sí :green_circle: | Sí :green_circle: | Sí :green_circle: | Sí :green_circle:|
+| [Bretonia](./files/Bretonia_MDN_2020.cat)   | Link a Cargad     | v2023 :green_circle:   | Sí :green_circle: | Sí (con errores) 🟡 | Sí :green_circle: | Sí :green_circle: |
+| [Condes Vampiro](.files/Condes_Vampiro_MND.cat) | Link a Cargad     | v2020 :green_circle: | Sí :green_circle: | No :red_circle: | No :red_circle: | Sí :green_circle: |
+| [Elfos Oscuros](./files/Elfos_Oscuros_MDN.cat)   | Link a Cargad     | v2023 :green_circle:   | Sí :green_circle: | Sí :green_circle: | Sí :green_circle: | Sí :green_circle:|
+| [Elfos Silvanos](./files/Elfos_Silvanos_MDN.cat)  | Link a Cargad     | v2022 :green_circle:   | Sí :green_circle: | No :red_circle: | No hay :green_circle: | Sí :green_circle: |
+| [Enanos](./files/Enanos_MDN.cat)   | Link a Cargad     | Faltan Erratas y Propuestas :yellow_circle:  | No :red_circle: | No :red_circle: | No :red_circle: | No :red_circle:|
+| [Enanos del Caos](./files/Enanos_del_Caos_MDN.cat)   | Link a Cargad     | Faltan Erratas y Propuestas :yellow_circle:   | No :red_circle: | No :red_circle:| No :red_circle: | No:red_circle: |
+| [Hombres Lagarto](./files/Hombres_Lagarto_MDN.cat)    | Link a Cargad     | Faltan Erratas y Propuestas :yellow_circle:   | No :red_circle: | No :red_circle: | No :red_circle: | No:red_circle: |
+| [Imperio](./files/Imperio_MDN.cat)    | Link a Cargad     | Faltan Erratas y Propuestas :yellow_circle:    | No :red_circle: | No :red_circle: | No :red_circle: | No :red_circle: |
+| [Mercenarios](./files/Mercenarios_MDN.cat)   | Link a Cargad     | v2023 :green_circle:   | Sí :green_circle:  | No :red_circle: | No hay :green_circle:  | Sí :green_circle:|
+| [Orcos y Goblins](./files/Orcos_Goblins_MDN.cat)    | Link a Cargad     | Faltan Erratas y Propuestas :yellow_circle:    | No :red_circle: | No :red_circle: | No :red_circle: | No :red_circle: |
+| [Reinos del Caos](./files/Reinos_del_Caos_MDN.cat)   | Link a Cargad     | v2021 :green_circle:    | Sí :green_circle: | No :red_circle: | No :red_circle: | Sí :green_circle:|
+| [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)   | Link a Cargad     | v2023 :green_circle:    | Sí :green_circle: | Sí :green_circle: | Sí :green_circle: | Sí :green_circle:|
+| [Reyes Funerarios](./files/Reyes_Funerarios_MDN.cat)   | Link a Cargad     | v2020 :green_circle:    | Sí :green_circle: | No :red_circle: | No hay :green_circle: | Sí :green_circle:|
+| [Skaven](./files/Skaven_MDN.cat)   | Link a Cargad     | Faltan Erratas y Propuestas :yellow_circle:    | Sí :green_circle: | No :red_circle: | No :red_circle: | No :red_circle:|
 
 
 ## Importar los ficheros
