@@ -3,11 +3,8 @@
 ## Qué es BattleScribe.
 [BattleScribe](https://www.battlescribe.net) es un programa para ordenador, y app para móbil y tablet que permite crear listas de ejército para varios juegos. 
 
-## Que son los Manuscritos de Nuth.
+## Qué son los Manuscritos de Nuth.
 [Manuscritos de Nuth](https://www.cargad.com/index.php/manuscritos-de-nuth/) es una iniciativa de un grupo de jugadores de Warhammer Fantasy 6a edición para poder seguir jugando a ella añadiendo a cada ejército opciones de tropas que tuviesen miniatura y/o reglas en las ediciones de Warhammer de 3a a 8a. 
-
-## Por qué este proyecto.
-Hace unos años trasteé con BattleScribe para poder hacerme las listas de Bretonia (mi ejército) aplicado a Manuscritos de Nuth. Y en paralelo, desde el blog [Leyendas en Miniatura](http://www.leyendasenminiatura.com/p/recursos.html) hicieron lo mismo para todos los ejércitos (muchas gracias, compis!). Por diversas razones, no se van a actualizar las versiones 2020 de los Manuscritos de Nuth, así que he retomado mi pequeño proyecto y le he dado un meneo para pulir y añadir cosas nuevas a cómo se generan las listas para WH-MNDR en BattleScribe.
 
 ## Estado del proyecto
 ### Fichero Base
