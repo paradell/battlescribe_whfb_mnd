@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN v2023" revision="11" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN v2023" revision="12" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="95b0-9aeb-pubN66253" name="PDF Bretonia MDN 2020"/>
   </publications>
@@ -361,6 +361,70 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
         </categoryLink>
       </categoryLinks>
     </forceEntry>
+    <forceEntry id="334c-36c1-c3ba-8e1a" name="Partida de Caza" publicationId="95b0-9aeb-pubN66253" page="54" hidden="false">
+      <comment>Lista Alternativa aparecida en una White Dwarf limitada a listas de 1000 puntos o menos</comment>
+      <categoryLinks>
+        <categoryLink id="6920-e94d-e599-874c" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false">
+          <modifiers>
+            <modifier type="set" field="dec6-0682-0299-4b08" value="0.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dec6-0682-0299-4b08" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="ebe5-0cae-4c55-372d" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="a426-b37f-ef41-cbcf" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false">
+          <modifiers>
+            <modifier type="set" field="196b-7305-9159-bfd9" value="0.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="196b-7305-9159-bfd9" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="1ab8-b967-d8a8-3dd5" name="Unidad básica" hidden="false" targetId="ba68-224b-3224-a908" primary="false">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="bbb5-1ff6-db55-e066" value="0.0"/>
+                <modifier type="set" field="1ed6-f264-8f7d-7fc7" value="0.0"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbb5-1ff6-db55-e066" type="max"/>
+            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ed6-f264-8f7d-7fc7" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="c264-3533-8d46-15fc" name="Unidad especial" hidden="false" targetId="102e-012c-5785-3354" primary="false">
+          <modifiers>
+            <modifier type="set" field="05ed-3054-2b73-6630" value="0.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05ed-3054-2b73-6630" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="9e33-e5d6-7af0-49a1" name="Unidad singular" hidden="true" targetId="184a-30ec-bf7c-b603" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e6c-72c5-0b8e-a0ed" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
   </forceEntries>
   <selectionEntries>
     <selectionEntry id="3811-91e8-22ac-4528" name="Caballeros del Reino" hidden="false" collective="false" import="true" type="unit">
@@ -375,9 +439,21 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
             <modifier type="remove" field="category" value="ba68-224b-3224-a908"/>
           </modifiers>
         </modifierGroup>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="3f5f-aecc-37e0-532c" value="0.0"/>
+            <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
+            <modifier type="remove" field="category" value="ba68-224b-3224-a908"/>
+            <modifier type="set" field="0c0f-7f9e-aa9f-f770" value="1.0"/>
+          </modifiers>
+        </modifierGroup>
       </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f5f-aecc-37e0-532c" type="min"/>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c0f-7f9e-aa9f-f770" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="f157-1243-bf54-ed9d" name="Voto del Caballero" hidden="false" targetId="fb8b-353f-ce50-d6af" type="rule"/>
@@ -392,6 +468,17 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8dc2-b167-87b2-aba0" name="Caballeros del Reino" hidden="false" collective="false" import="true" type="upgrade">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="1de0-b5bb-2c39-f0f5" value="6.0"/>
+                <modifier type="set" field="f0d2-d501-16a8-fdcf" value="3.0"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0d2-d501-16a8-fdcf" type="min"/>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1de0-b5bb-2c39-f0f5" type="max"/>
@@ -467,6 +554,17 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
               </constraints>
               <selectionEntryGroups>
                 <selectionEntryGroup id="b72c-305f-57f2-2905" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
+                  <modifierGroups>
+                    <modifierGroup>
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+                      </conditions>
+                      <modifiers>
+                        <modifier type="set" field="92ea-60ae-9bdb-5848" value="0.0"/>
+                        <modifier type="set" field="hidden" value="true"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
                   <constraints>
                     <constraint field="53ea-00f4-9046-81ff" scope="parent" value="25.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="a23c-e70c-37c7-e912" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92ea-60ae-9bdb-5848" type="max"/>
@@ -491,6 +589,16 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
       </costs>
     </selectionEntry>
     <selectionEntry id="fe84-7b0b-8e68-fba6" name="Caballeros Noveles" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="2116-fd7a-9b11-a4f0" value="1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2116-fd7a-9b11-a4f0" type="max"/>
+      </constraints>
       <rules>
         <rule id="61e2-c4d0-c66c-c844" name="Impetuosos" publicationId="95b0-9aeb-pubN66253" page="25" hidden="false">
           <description>Tras declarar cargas, si la unidad está a distancia de carga de un enemigo debe hacer un chequeo de Liderazgo; si lo falla, carga. Además, siempre que cargan, ellos y cualquier personaje que se les haya unido son inmunes a psicología hasta el final de turno. Ten en cuenta que los Caballeros Noveles son inmunes a psicología nada más declarar la carga (incluso aunque sea una carga fallida) y les dura hasta el final de su turno. No deberían, por tanto, efectuar un chequeo de miedo para cargar (y también serán inmunes a la psicología si fallan el chequeo de impetuosos y declaran carga obligada). En caso de que los Noveles carguen y arrasen en un combate, trabándose de nuevo con otro enemigo (combate que se resolvería en el turno del oponente), tal y como explica la regla de arrasamiento se considera una nueva carga que se resuelve en el turno del oponente pero la carga ha sido en el turno propio, por lo que los caballeros noveles seguirán siendo inmunes a la psicología durante el turno del oponente.</description>
@@ -519,6 +627,17 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="34cf-84b1-4033-3535" name="Caballeros Noveles" hidden="false" collective="false" import="true" type="upgrade">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="d000-f7d9-0b0b-e7a5" value="6.0"/>
+                <modifier type="set" field="f357-9805-e9dc-d959" value="3.0"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f357-9805-e9dc-d959" type="min"/>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d000-f7d9-0b0b-e7a5" type="max"/>
@@ -561,6 +680,11 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
             </selectionEntry>
             <selectionEntry id="8cc3-a089-df6d-ea8b" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
+                <modifier type="set" field="0ac0-a9c2-97a5-9f51" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+                  </conditions>
+                </modifier>
                 <modifier type="set" field="5326-26d2-58fc-0ee7" value="1.0">
                   <conditions>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
@@ -693,9 +817,14 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
           </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="increment" field="6ae5-56e6-3ca7-3eed" value="1.0">
           <repeats>
@@ -892,6 +1021,7 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
               </conditions>
             </conditionGroup>
@@ -954,6 +1084,33 @@ No se benefician de un Estandarte de Batalla</description>
               </costs>
             </selectionEntry>
             <selectionEntry id="da26-0817-3199-e260" name="Arcabuz" hidden="false" collective="true" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d87c-e681-7563-587a" type="atLeast"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0da0-39ff-e291-58ba" type="atLeast"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="94a3-e71d-fd82-ff86" type="atLeast"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41ad-4fc8-77ec-20cf" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3866-2cca-8622-72ed" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e98a-4766-191c-5e77" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac3-9c79-3e19-5440" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="94da-8a36-e48a-175e" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="045d-6238-6a48-e746" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d3a4-e8fc-8772-8614" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b2a8-3b9e-c021-ce10" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cd89-c667-e828-87cb" type="atLeast"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" field="23bb-17a7-c25e-f30e" value="0.0"/>
+                    <modifier type="set" field="0103-0b36-9825-b96e" value="0.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0103-0b36-9825-b96e" type="max"/>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23bb-17a7-c25e-f30e" type="max"/>
@@ -994,7 +1151,19 @@ No se benefician de un Estandarte de Batalla</description>
             <modifier type="remove" field="category" value="ba68-224b-3224-a908"/>
           </modifiers>
         </modifierGroup>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+            <modifier type="set" field="bc70-c73d-f49c-0ea5" value="0.0"/>
+          </modifiers>
+        </modifierGroup>
       </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc70-c73d-f49c-0ea5" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="9eff-5260-d238-8598" name="Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
         <infoLink id="da46-d09a-0e0d-c526" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
@@ -1124,13 +1293,17 @@ No se benefician de un Estandarte de Batalla</description>
               </costs>
             </selectionEntry>
             <selectionEntry id="2c2f-3669-c03a-cd8a" name="Manteletes" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+              <modifierGroups>
+                <modifierGroup>
                   <conditions>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
                   </conditions>
-                </modifier>
-              </modifiers>
+                  <modifiers>
+                    <modifier type="set" field="d857-a287-4fae-3375" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d857-a287-4fae-3375" type="max"/>
               </constraints>
@@ -1180,6 +1353,15 @@ No se benefician de un Estandarte de Batalla</description>
           <modifiers>
             <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
             <modifier type="set-primary" field="category" value="184a-30ec-bf7c-b603"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+            <modifier type="set" field="8545-36ba-ed62-83ee" value="0.0"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -1258,13 +1440,6 @@ No se benefician de un Estandarte de Batalla</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="d32c-f210-a223-8a08" name="Caballeros a pie" publicationId="95b0-9aeb-pubN66253" page="28" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -1275,7 +1450,24 @@ No se benefician de un Estandarte de Batalla</description>
             <modifier type="set-primary" field="category" value="184a-30ec-bf7c-b603"/>
           </modifiers>
         </modifierGroup>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+            <modifier type="set" field="3994-49f1-f211-e85d" value="0.0"/>
+          </modifiers>
+        </modifierGroup>
       </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3994-49f1-f211-e85d" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="95a2-b6fa-d8fb-45d8" name="Voto del Caballero" hidden="false" targetId="fb8b-353f-ce50-d6af" type="rule"/>
         <infoLink id="d6f5-f254-c400-1886" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
@@ -1431,6 +1623,17 @@ Caballero por Voto de la Búsqueda.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="c4e5-741e-85e3-a9a7" name="Hombres de Armas a Caballo" publicationId="95b0-9aeb-pubN66253" page="29" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
+            <modifier type="set-primary" field="category" value="ba68-224b-3224-a908"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <infoLinks>
         <infoLink id="683f-126c-2ddd-9d5a" name="Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
         <infoLink id="db04-d9ec-3022-9066" name="Caballería rápida" hidden="false" targetId="f6f9-0701-05a1-df5a" type="rule">
@@ -1503,8 +1706,16 @@ Caballero por Voto de la Búsqueda.</description>
               </constraints>
               <selectionEntries>
                 <selectionEntry id="c68f-4eba-594f-c283" name="Lanza" hidden="false" collective="true" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="a515-c456-6a62-57ee" value="1.0">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="269f-69c6-df5c-d05c" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a515-c456-6a62-57ee" type="min"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="6124-a811-efb4-98b7" name="Lanza (caballería)" hidden="false" targetId="0115-9609-e617-662d" type="profile"/>
@@ -1521,8 +1732,16 @@ Caballero por Voto de la Búsqueda.</description>
               </constraints>
               <selectionEntries>
                 <selectionEntry id="5761-75d4-3b52-45f5" name="Arco" hidden="false" collective="true" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="0d0f-e32c-693f-85d9" value="1.0">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0032-60dd-1022-2fb9" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d0f-e32c-693f-85d9" type="min"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="97b8-0a82-d3b4-bb10" name="Arco" hidden="false" targetId="dfc2-1321-c679-1bc0" type="profile"/>
@@ -1532,13 +1751,17 @@ Caballero por Voto de la Búsqueda.</description>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="3526-25df-e6c9-4601" name="Ballesta" hidden="false" collective="true" import="true" type="upgrade">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
+                  <modifierGroups>
+                    <modifierGroup>
                       <conditions>
                         <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
                       </conditions>
-                    </modifier>
-                  </modifiers>
+                      <modifiers>
+                        <modifier type="set" field="e1d1-4b20-0c6a-654b" value="0.0"/>
+                        <modifier type="set" field="hidden" value="true"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1d1-4b20-0c6a-654b" type="max"/>
                   </constraints>
@@ -1627,6 +1850,17 @@ Caballero por Voto de la Búsqueda.</description>
           </conditionGroups>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+            <modifier type="set" field="2621-98be-b055-8c3d" value="0.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2621-98be-b055-8c3d" type="max"/>
       </constraints>
@@ -1754,6 +1988,20 @@ Caballero por Voto de la Búsqueda.</description>
           </conditionGroups>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+            <modifier type="set" field="b436-5384-2154-8bec" value="0.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b436-5384-2154-8bec" type="max"/>
+      </constraints>
       <profiles>
         <profile id="7c8e-60ae-2838-04da" name="Balista de Asedio" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -1872,12 +2120,23 @@ Caballero por Voto de la Búsqueda.</description>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="6a6e-68ff-d238-df92" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
-          </conditions>
-        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+            <modifier type="set" field="6a6e-68ff-d238-df92" value="0.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a6e-68ff-d238-df92" type="max"/>
       </constraints>
@@ -1996,6 +2255,17 @@ Caballero por Voto de la Búsqueda.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+            <modifier type="set" field="2430-8ad3-7bd5-0b01" value="0.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2430-8ad3-7bd5-0b01" type="max"/>
       </constraints>
@@ -2105,6 +2375,20 @@ Caballero por Voto de la Búsqueda.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="7659-11c0-7a51-3428" name="Damisela de la Dama" publicationId="95b0-9aeb-pubN66253" page="22" hidden="false" collective="false" import="true" type="model">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+            <modifier type="set" field="1f08-9d66-c8e7-f7ec" value="0.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f08-9d66-c8e7-f7ec" type="max"/>
+      </constraints>
       <profiles>
         <profile id="9201-b5f1-0be0-61a8" name="Damisela de la Dama" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -2269,6 +2553,13 @@ Caballero por Voto de la Búsqueda.</description>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0cea-40d4-82a6-b0e6" name="Escudo" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="896a-8c64-106d-0ac0" value="0.0">
+              <conditions>
+                <condition field="selections" scope="6ce2-c01e-9c65-3af0" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d29c-8c13-1e77-aef6" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <modifierGroups>
             <modifierGroup>
               <conditions>
@@ -2298,6 +2589,7 @@ Caballero por Voto de la Búsqueda.</description>
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e98a-4766-191c-5e77" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d285-2cfb-5fba-7e88" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2311,6 +2603,58 @@ Caballero por Voto de la Búsqueda.</description>
           <infoLinks>
             <infoLink id="6d89-139e-d7e3-8985" name="Estandarte de Batalla" hidden="false" targetId="16f9-a928-9d5e-2b4f" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d29c-8c13-1e77-aef6" name="Ave de Presa" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="bfbb-09e2-fe84-88b0" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfbb-09e2-fe84-88b0" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="e4c2-09a3-7e36-865f" name="Ave de Presa" hidden="false" targetId="ddad-c9d1-51dd-bde0" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="6.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="35d6-cd67-4c86-fd56" name="Cuerno de Caza" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="8623-5f74-c249-31f9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8623-5f74-c249-31f9" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="662e-88cc-7dd7-dc75" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9d05-ce69-609e-956e" name="Cuerno de Caza" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+              <comment>Cuando se encuentran de caza, los caballeros suelen prescindir de sus estandartes, por no decir que ningún un noble sería tan estúpido como para arriesgarse a perder su estandarte de batalla durante una simple cacería. Durante la cacería, las distintas unidades se comunican entre si mediante el uso de cuernos o cornetas. El sonido de cada cuerno es diferente al de los demás, pudiendo identificarse fácilmente. El noble que organiza y dirige la cacería posee su propio cuerno de caza (aunque no tiene por que usarlo él necesariamente). Al ser usado, el cuerno emite un profundo y sonoro bramido y todos identificarán inmediatamente el cuerno de caza de su señor.</comment>
+              <characteristics>
+                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Un Paladín equipado con el cuerno de caza puede soplarlo al inicio de la fase de magia bretoniana. Al hacerlo, cualquier unidad bretoniana que estuviese huyendo tendrá una oportunidad de reagruparse, por lo que hará un chequeo para reagruparse inmediatamente.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
           </costs>
@@ -2335,6 +2679,17 @@ Caballero por Voto de la Búsqueda.</description>
               </costs>
             </selectionEntry>
             <selectionEntry id="2f9d-6d7c-d008-8bba" name="Pegaso Real" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="4b0a-6769-0f49-5396" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b0a-6769-0f49-5396" type="max"/>
               </constraints>
@@ -2382,6 +2737,15 @@ Caballero por Voto de la Búsqueda.</description>
                   </conditions>
                   <modifiers>
                     <modifier type="decrement" field="9a14-361d-dbeb-ef68" value="1.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="9a14-361d-dbeb-ef68" value="0.0"/>
                     <modifier type="set" field="hidden" value="true"/>
                   </modifiers>
                 </modifierGroup>
@@ -2514,9 +2878,14 @@ Caballero por Voto de la Búsqueda.</description>
         <selectionEntryGroup id="1a59-a45c-16c2-d0db" name="Equipo Mágico y Virtudes" hidden="false" collective="false" import="true">
           <modifierGroups>
             <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="6ce2-c01e-9c65-3af0" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fdd7-9444-644b-f74e" type="atLeast"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="6ce2-c01e-9c65-3af0" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fdd7-9444-644b-f74e" type="atLeast"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
               <modifiers>
                 <modifier type="set" field="hidden" value="true"/>
                 <modifier type="set" field="a5d4-ae05-ef5b-ffc1" value="0.0"/>
@@ -2537,9 +2906,14 @@ Caballero por Voto de la Búsqueda.</description>
         <selectionEntryGroup id="fdd7-9444-644b-f74e" name="Estandarte Mágico" hidden="false" collective="false" import="true">
           <modifierGroups>
             <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="6ce2-c01e-9c65-3af0" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7879-0ecc-ffde-fdfb" type="lessThan"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="6ce2-c01e-9c65-3af0" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7879-0ecc-ffde-fdfb" type="lessThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
               <modifiers>
                 <modifier type="set" field="hidden" value="true"/>
                 <modifier type="set" field="778a-59c7-e389-ce78" value="0.0"/>
@@ -2558,6 +2932,15 @@ Caballero por Voto de la Búsqueda.</description>
           <modifierGroups>
             <modifierGroup>
               <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="hidden" value="false"/>
+                <modifier type="set" field="b42f-f48e-8db2-d3e5" value="-1.0"/>
+              </modifiers>
+            </modifierGroup>
+            <modifierGroup>
+              <conditions>
                 <condition field="selections" scope="6ce2-c01e-9c65-3af0" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fdd7-9444-644b-f74e" type="atLeast"/>
               </conditions>
               <modifiers>
@@ -2573,6 +2956,29 @@ Caballero por Voto de la Búsqueda.</description>
             <entryLink id="8f90-3aed-a44f-270e" name="Virtudes" hidden="false" collective="false" import="true" targetId="77b3-a6a6-9cb0-0ded" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
+        <selectionEntryGroup id="bb15-6df5-765b-be71" name="Equipo Mágico" hidden="true" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="ae5d-ea13-1a84-1ae4" value="25.0"/>
+                <modifier type="set" field="hidden" value="false"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae5d-ea13-1a84-1ae4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70eb-0354-3766-8b0e" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="33d1-c028-9638-1882" name="Armaduras mágicas" hidden="false" collective="false" import="true" targetId="8b80-3260-c0b5-9502" type="selectionEntryGroup"/>
+            <entryLink id="ecd8-90c1-64de-a390" name="Objetos hechizados" hidden="false" collective="false" import="true" targetId="b8aa-2049-5b59-f9bb" type="selectionEntryGroup"/>
+            <entryLink id="3910-b950-562c-3125" name="Talismanes" hidden="false" collective="false" import="true" targetId="e06f-b447-0302-d139" type="selectionEntryGroup"/>
+            <entryLink id="4080-02dd-b0d6-330b" name="Virtudes" hidden="false" collective="false" import="true" targetId="77b3-a6a6-9cb0-0ded" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="60.0"/>
@@ -2586,6 +2992,7 @@ Caballero por Voto de la Búsqueda.</description>
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3320,6 +3727,11 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="c945-ec10-0e51-8539" value="-1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <modifierGroups>
         <modifierGroup>
@@ -3346,8 +3758,20 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8a9f-f50b-2834-0045" name="Arqueros Campesinos" hidden="false" collective="false" import="true" type="upgrade">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="3d0a-8398-dacf-77ca" value="15.0"/>
+                <modifier type="set" field="e738-9bab-accc-8793" value="5.0"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e738-9bab-accc-8793" type="min"/>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d0a-8398-dacf-77ca" type="max"/>
           </constraints>
           <profiles>
             <profile id="45e4-1b1e-b0e2-afb6" name="Arquero Campesino" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -3462,17 +3886,24 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set" field="bec9-09ef-9b19-bb80" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bec9-09ef-9b19-bb80" type="max"/>
       </constraints>
@@ -3641,14 +4072,21 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
       </costs>
     </selectionEntry>
     <selectionEntry id="d47c-018e-c9f6-ef7a" name="Hombres de Armas" publicationId="95b0-9aeb-pubN66253" page="23" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="102e-012c-5785-3354">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="102e-012c-5785-3354"/>
+            <modifier type="remove" field="category" value="ba68-224b-3224-a908"/>
+          </modifiers>
+        </modifierGroup>
         <modifierGroup>
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
@@ -3800,6 +4238,20 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
       </costs>
     </selectionEntry>
     <selectionEntry id="ce9d-acba-eac6-108d" name="Caballeros Andantes" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+            <modifier type="set" field="bba4-4c06-9853-5917" value="0.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bba4-4c06-9853-5917" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="ca25-d3fd-1222-13f8" name="Voto de la Búsqueda" hidden="false" targetId="a134-9ec0-1ae3-19c9" type="rule"/>
         <infoLink id="563f-debc-db76-d165" name="Formación en lanza" hidden="false" targetId="6658-16af-75bc-2de4" type="rule"/>
@@ -3924,17 +4376,44 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
     </selectionEntry>
     <selectionEntry id="e9bc-e8e4-da9a-39a4" name="Cañon Bretoniano" publicationId="95b0-9aeb-pubN66253" page="31" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="3a7a-04cf-250e-b97a" value="1.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
-          </conditions>
+        <modifier type="set" field="3a7a-04cf-250e-b97a" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d87c-e681-7563-587a" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0da0-39ff-e291-58ba" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="94a3-e71d-fd82-ff86" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41ad-4fc8-77ec-20cf" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3866-2cca-8622-72ed" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e98a-4766-191c-5e77" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac3-9c79-3e19-5440" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="94da-8a36-e48a-175e" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="045d-6238-6a48-e746" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d3a4-e8fc-8772-8614" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b2a8-3b9e-c021-ce10" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cd89-c667-e828-87cb" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+            <modifier type="set" field="3a7a-04cf-250e-b97a" value="0.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a7a-04cf-250e-b97a" type="max"/>
       </constraints>
@@ -4010,13 +4489,25 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
       </costs>
     </selectionEntry>
     <selectionEntry id="8bf4-a2c3-3c33-365d" name="Profetisa de la Dama" publicationId="95b0-9aeb-pubN66253" page="22" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+            <modifier type="set" field="4520-5607-0961-9049" value="0.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4520-5607-0961-9049" type="max"/>
+      </constraints>
       <profiles>
         <profile id="b909-74d6-2a6e-8c6e" name="Profetisa de la Dama" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -4117,6 +4608,17 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
               </costs>
             </selectionEntry>
             <selectionEntry id="a264-4f53-8733-80fb" name="Unicornio" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="a54d-a081-aaba-1518" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a54d-a081-aaba-1518" type="max"/>
               </constraints>
@@ -4200,6 +4702,13 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="47b3-0dc1-6335-b5bd" name="Escudo" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="6fdd-1906-616f-07e8" value="0.0">
+              <conditions>
+                <condition field="selections" scope="f5ea-b96b-6ae9-c87b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82cd-df94-b81c-4e69" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fdd-1906-616f-07e8" type="max"/>
           </constraints>
@@ -4208,6 +4717,29 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
           </infoLinks>
           <costs>
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="3.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="82cd-df94-b81c-4e69" name="Ave de Presa" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="7f8c-5994-006f-2105" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f8c-5994-006f-2105" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="8818-28b9-229a-92af" name="Ave de Presa" hidden="false" targetId="ddad-c9d1-51dd-bde0" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="6.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4230,6 +4762,17 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
               </costs>
             </selectionEntry>
             <selectionEntry id="05ff-1790-1bb1-af72" name="Pegaso Real" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="e2cb-9e12-f541-b878" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e2cb-9e12-f541-b878" type="max"/>
               </constraints>
@@ -4241,6 +4784,17 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
               </costs>
             </selectionEntry>
             <selectionEntry id="a385-1ced-2f15-c4f6" name="Hipogrifo" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="fc82-ed36-2ed0-6f17" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fc82-ed36-2ed0-6f17" type="max"/>
               </constraints>
@@ -4281,6 +4835,17 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
         <selectionEntryGroup id="ddf4-9bd7-499a-5ea6" name="Armas" hidden="false" collective="false" import="true">
           <selectionEntries>
             <selectionEntry id="6cfd-fac3-3b00-90c4" name="Mangual" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="98b8-5d59-d544-0740" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="98b8-5d59-d544-0740" type="max"/>
               </constraints>
@@ -4381,6 +4946,17 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="b98d-744e-ee96-2bbd" name="Equipo Mágico y Virtudes" hidden="false" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="7e86-b671-bc7e-78d0" value="0.0"/>
+                <modifier type="set" field="hidden" value="true"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <constraints>
             <constraint field="53ea-00f4-9046-81ff" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e86-b671-bc7e-78d0" type="max"/>
           </constraints>
@@ -4390,6 +4966,48 @@ Sin embargo, los Campesions no son tan expertos en su uso como los Imperiales. A
             <entryLink id="adef-0e40-441a-ccea" name="Objetos hechizados" hidden="false" collective="false" import="true" targetId="b8aa-2049-5b59-f9bb" type="selectionEntryGroup"/>
             <entryLink id="aa0d-4e2e-7526-f292" name="Talismanes" hidden="false" collective="false" import="true" targetId="e06f-b447-0302-d139" type="selectionEntryGroup"/>
             <entryLink id="5efc-c3a5-f02f-cd94" name="Virtudes" hidden="false" collective="false" import="true" targetId="77b3-a6a6-9cb0-0ded" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="db24-21cf-8234-9166" name="Virtudes" hidden="true" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="hidden" value="false"/>
+                <modifier type="set" field="fd79-6881-912d-e336" value="-1.0"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd79-6881-912d-e336" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="0b5a-fccc-e4f8-a6f1" name="Virtudes" hidden="false" collective="false" import="true" targetId="77b3-a6a6-9cb0-0ded" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="fbd9-090b-a8d8-8933" name="Equipo Mágico" hidden="true" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="038d-9993-6dbf-914d" value="25.0"/>
+                <modifier type="set" field="hidden" value="false"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="038d-9993-6dbf-914d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a681-80e4-f352-064e" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="340e-2372-a0e5-85be" name="Armaduras mágicas" hidden="false" collective="false" import="true" targetId="8b80-3260-c0b5-9502" type="selectionEntryGroup"/>
+            <entryLink id="fed7-1cda-1473-e807" name="Objetos hechizados" hidden="false" collective="false" import="true" targetId="b8aa-2049-5b59-f9bb" type="selectionEntryGroup"/>
+            <entryLink id="f79b-d089-cd37-a44c" name="Talismanes" hidden="false" collective="false" import="true" targetId="e06f-b447-0302-d139" type="selectionEntryGroup"/>
+            <entryLink id="4b09-5814-35d8-9eae" name="Virtudes" hidden="false" collective="false" import="true" targetId="77b3-a6a6-9cb0-0ded" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -4702,14 +5320,15 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
           </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="382c-f817-2c4b-e3c3" type="instanceOf"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -5981,17 +6600,48 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
     </selectionEntry>
     <selectionEntry id="d212-2d6f-b10e-9bd6" name="Pot-de-feu" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="4ae7-4bca-83a9-4f47" value="0.0">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d87c-e681-7563-587a" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0da0-39ff-e291-58ba" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="94a3-e71d-fd82-ff86" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44c2-6cf7-e33f-0478" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41ad-4fc8-77ec-20cf" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3866-2cca-8622-72ed" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e98a-4766-191c-5e77" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac3-9c79-3e19-5440" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="94da-8a36-e48a-175e" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="045d-6238-6a48-e746" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d3a4-e8fc-8772-8614" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b2a8-3b9e-c021-ce10" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cd89-c667-e828-87cb" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-2037-cc95-58f1" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+            <modifier type="set" field="4ae7-4bca-83a9-4f47" value="0.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ae7-4bca-83a9-4f47" type="max"/>
+      </constraints>
       <profiles>
         <profile id="9431-4a54-b4c6-565d" name="Balista de Asedio" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -6014,6 +6664,7 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
       </profiles>
       <infoLinks>
         <infoLink id="805f-3f98-be9e-b1c0" name="Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
+        <infoLink id="d109-aaa9-1840-7ad9" name="Desdén por la pólvora" hidden="false" targetId="71ea-a591-4b9c-c342" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5b95-da19-4921-960e" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
@@ -6036,9 +6687,6 @@ bretonianos no son diestros en el uso de la pólvora; si se obtiene un 1 en la t
 el Pot-de-Feu directamente explota (retira la máquina y su dotación como baja).</description>
             </rule>
           </rules>
-          <infoLinks>
-            <infoLink id="4bad-1786-68dc-a53c" name="Desdén por la pólvora" hidden="false" targetId="71ea-a591-4b9c-c342" type="rule"/>
-          </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup id="1e99-ba46-f711-39d3" name="Dotación" hidden="false" collective="false" import="true">
               <infoLinks>
@@ -6111,6 +6759,252 @@ el Pot-de-Feu directamente explota (retira la máquina y su dotación como baja)
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c2ae-efe6-1f7f-9c3f" name="Rasreadores" publicationId="95b0-9aeb-pubN66253" page="59" hidden="true" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="37af-5b9e-64b7-d28b" value="1.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37af-5b9e-64b7-d28b" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="a5d0-4b85-1ce9-847e" name="Deber del Campesino" hidden="false" targetId="a863-ed75-633f-b1aa" type="rule"/>
+        <infoLink id="ef49-c51e-8b86-f166" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+        <infoLink id="e1d1-1f2d-ce7b-ab6d" name="Arco largo" hidden="false" targetId="79c6-6515-726b-e865" type="profile"/>
+        <infoLink id="4d0f-fe5a-df82-4462" name="Hostigadores" hidden="false" targetId="4717-34b5-7e01-9c40" type="rule"/>
+        <infoLink id="b809-b83b-b22f-4380" name="Exploradores" hidden="false" targetId="be66-a095-abdc-bc2e" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="3357-145e-a65a-6ad7" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="ce1b-9ae2-d0c2-2d6c" name="Rastreadores" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="32be-b1c2-8d7e-e7a3" type="min"/>
+            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1827-0517-7e6d-ede4" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9448-e2e1-0c5d-44a4" name="Rastreador" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Campesino</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="87d9-1050-5b9e-91a8" name="New CategoryLink" hidden="false" targetId="ba68-224b-3224-a908" primary="false"/>
+          </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="c0b0-7b7e-6c25-ecb0" name="Armadura Ligera" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fcd-2b48-c4c5-bb88" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="3b4f-3b45-39d9-2437" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="1.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="8.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2ce9-46d1-6f85-f582" name="Braseros" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7883-4bcd-9e77-5e46" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="49a4-5100-165e-6d29" name="Braseros" hidden="false" targetId="68e1-1063-6fa9-2d8f" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="5.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="da2e-0c88-6737-4665" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="2745-3932-e0ab-d316" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b25-15fc-c898-96ae" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a950-cdba-cec3-6a50" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f5a-ddf3-96b2-553b" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6c9c-680d-e13a-32f4" name="Villano" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfe9-0ed4-d064-9650" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="c8c7-48aa-c99e-81a6" name="Villano" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Campesino</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="5.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e3a6-986d-9a07-352a" name="Perros de Caza" publicationId="95b0-9aeb-pubN66253" page="59" hidden="true" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false"/>
+            <modifier type="set" field="dd18-aa85-ec06-382b" value="2.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd18-aa85-ec06-382b" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="31e0-6576-b54a-dfa7" name="Persecución imparable" hidden="false">
+          <description>Los perros de caza se usan para hostigar a las presas en las profundos bosques de Bretonia, y así obligarlas a salir a los claros. Los perros de caza no sufren penalización al movimiento por mover a través de bosques.</description>
+        </rule>
+        <rule id="00ea-d28e-36b2-3981" name="Perros de Caza" hidden="false">
+          <description>Ningún personaje puede unirse a una unidad de perros de caza. Las unidades de una partida de caza son inmunes al pánico causado por unidades de perros de caza, sólo otras unidades de perros de caza se verán afectadas. Aún así, los perros de caza se benefician del liderazgo del general (aunque no de El Deber del Campesino) y del estandarte de batalla.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="d936-b02c-7768-a360" name="Caballería rápida" hidden="false" targetId="f6f9-0701-05a1-df5a" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="56a4-7f89-1155-a489" name="New CategoryLink" hidden="false" targetId="ba68-224b-3224-a908" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d856-0c49-8cf4-ccf8" name="Perro de Caza" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="67a3-a4ed-a8d2-efbf" type="min"/>
+            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6c3-f52b-ebb4-a723" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="41ab-154c-5486-d728" name="Perro de Caza" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">18</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería, Animal</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5fdb-61eb-5aa4-f321" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="3385-fbc5-3b3e-245a" name="Perrero" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b822-3f25-a58b-9259" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="4fc6-ebfa-ad67-9939" name="Perrero" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería, Humano</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="e6c5-7ffc-dc11-6a03" name="Perrero" hidden="false">
+                  <description>Se considera el campeón de la unidad. Reduce su movimiento a 18 cm mientras quede algún perro de caza con vida, pero se beneficia de la regla persecución imparable.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="42ed-7c7a-0e09-f592" name="Lanza (caballería)" hidden="false" targetId="0115-9609-e617-662d" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="15.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="9ab8-b093-0eb6-63ae" name="Caballo de Guerra" hidden="false" collective="false" import="true" targetId="f78f-27bd-c24f-4b1b" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
@@ -6473,6 +7367,64 @@ el Pot-de-Feu directamente explota (retira la máquina y su dotación como baja)
           </profiles>
           <costs>
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="15.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e4d2-d5a2-f9f6-727c" name="Armadura de Escamas de Dragón" hidden="true" collective="false" import="true" type="upgrade">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="85ea-8c81-f8eb-0830" value="1.0"/>
+                <modifier type="set" field="hidden" value="false"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="85ea-8c81-f8eb-0830" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4cf4-f4da-2ec4-c7a1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="cb61-8b41-dc5f-4f99" name="Armadura de Escamas de Dragón" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+              <comment>Sir William de Chanterelle obtuvo su rango de caballero derrotando al gran dragón Grakos. Durante su primer encuentro con la bestia fue sorprendido por el dragón, que despedazó a su montura de un zarpazo, y después escupió al caballero su ardiente aliento. Sir William se protegió con su escudo pero éste no tardó en consumirse, dejando al caballero a merced de las llamas del dragón, quedando seriamente herido y perdiendo el conocimiento. Afortunadamente, Grakos le dio por muerto y se contentó con devorar a su montura. Durante el tiempo que permaneció inconsciente, el caballero de Chanterelle tuvo una visión de la Dama del Lago, que le indicó la manera para acabar con la vida de la terrible bestia. Cuando recuperó el conocimiento, Sir William recolectó algunas escamas del dragón que encontró a la entrada de su guarida y creo con ellas un gran escudo. Un escudo resistente al aliento del dragón. El valiente caballero se enfrentó de nuevo a la bestia y cada vez que el dragón escupía sus llamas, él se parapetaba detrás del escudo, y cuando el dragón recuperaba el aliento, él ganaba terreno. Cuando finalmente estuvo lo suficientemente cerca, el caballero acabó con la bestia de una certera estocada que le atravesó el corazón. Después de la victoria, Sir William arrancó un montón de escamas del cuerpo muerto de Grakos, con las que hizo forjar una armadura completa y un fabuloso escudo.</comment>
+              <characteristics>
+                <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">3+ . Armadura pesada más escudo (Tirada de salvación por armadura de 4+). Sin embargo, proporciona un +1 adicional a la tirada de salvación por armadura, dejándolo en un 3+.</characteristic>
+                <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Ten en cuenta que, como lleva escudo incorporado, el portador no puede llevar armas que requieran ambas manos, ni otro escudo, ni ser el Portaestandarte de Batalla. Además, hace inmune al portador y a su montura a cualquier arma de aliento, ya sea de un Dragón, una Quimera, una Hidra o incluso el cañón de vapor un Girocóptero.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d5bd-99b5-a594-adb2" name="Manto de Lobo" hidden="true" collective="false" import="true" type="upgrade">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="27e8-e8f7-4981-36b2" value="1.0"/>
+                <modifier type="set" field="hidden" value="false"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="27e8-e8f7-4981-36b2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3b95-ff4c-ef22-3399" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="c5b0-be6b-4366-e31b" name="Manto de Lobo" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+              <comment>Durante 5 años, el lobo Aumont-lupé asoló con su manada las tierras de Brionne. Se trataba de un enorme lobo blanco tan grande como un jabalí, pero mucho más fiero e inteligente Según los campesinos, era capaz de arrancar la cabeza a un hombre de un sólo bocado y mataba por simple placer, pues muchos campesinos habían visto (desde la seguridad de la copa de un árbol) cómo él y su manada acababan con rebaños de al menos un centenar de ovejas y después se retiraban sin haber probado un bocado siquiera. Fue finalmente el propio Duque quien le dio caza durante una larga batida. Una vez muerto, el Duque ordenó que colocasen su piel sobre su armadura, a modo de capa. La piel es extremadamente dura y grande, recubriendo todo el torso del caballero.</comment>
+              <characteristics>
+                <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">+2 contra proyectiles</characteristic>
+                <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">El Manto de Lobo puede combinarse con otro tipo de armaduras (incluyendo escudos y armadura pesada) y proporciona un bonificador de +2 a la tirada de salvación contra los ataques de proyectiles.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -6983,6 +7935,34 @@ el Pot-de-Feu directamente explota (retira la máquina y su dotación como baja)
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="74ae-3bc8-efac-aa52" name="Trofeo de Caza" hidden="true" collective="false" import="true" type="upgrade">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="0f08-d3ce-1277-8587" value="1.0"/>
+                <modifier type="set" field="hidden" value="false"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0f08-d3ce-1277-8587" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="22a4-eb2f-c178-555a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4209-2d2d-e75e-e1e0" name="Trofeo de Caza" hidden="false" typeId="7e35-c20a-e9e9-6dad" typeName="Talismán">
+              <comment>Cuando un caballero derrota a una bestia especialmente impresionante, suele guardar un colmillo o una garra a modo de trofeo y, generalmente, lo engarzará en un collar que llevará siempre consigo, de manera que todo el mundo sepa de lo que es capaz, a la vez que le animará a superarse a si mismo.</comment>
+              <characteristics>
+                <characteristic name="Protección" typeId="9f41-c15e-1f5f-9d01">El trofeo de Caza permite a su dueño repetir las tiradas para herir falladas.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="0d45-3860-ded6-254e" name="Talismán de protección" hidden="false" collective="false" import="true" targetId="f236-62d7-dea6-1d1c" type="selectionEntry"/>
@@ -7103,6 +8083,34 @@ el Pot-de-Feu directamente explota (retira la máquina y su dotación como baja)
           </profiles>
           <costs>
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="562c-2a36-0e41-01d6" name="Cuerno de Guerra" hidden="true" collective="false" import="true" type="upgrade">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="334c-36c1-c3ba-8e1a" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="1af5-985e-50a7-225a" value="1.0"/>
+                <modifier type="set" field="hidden" value="false"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1af5-985e-50a7-225a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4b7c-f68b-cf74-e977" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ea38-aabd-ba8e-76ff" name="Cuerno de Guerra" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+              <comment>El Cuerno de Guerra es una obra de artesanía, labrado con gran detalle sobre un enorme cuerno de buey, de más de un metro de longitud. A simple vista puede parecer un objeto carente de valor, pues no posee gemas engarzadas ni metales preciosos, sin embargo, su poder es inmenso. Bendecido en un lago sagrado en el Ducado de Quenelles, aquellos que lo han oído dicen que el sonido que emite al ser soplado es la voz de la propia Dama del Lago, que renueva de valor los corazones de aquellos que tienen fe y saben que Ella no les va a abandonar.</comment>
+              <characteristics>
+                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Objeto portahechizo, nivel de energía 5. El Cuerno de Guerra puede lanzar su hechizo una vez por fase de magia de Bretonia. El hechizo no requiere dados de energía para ser lanzado, ya que toda la energía para hacerlo la proporciona el propio cuerno. Todas las unidades amigas que estén huyendo en cualquier punto del campo de batalla se reagruparán automáticamente. El Cuerno de Guerra sustituirá al Cuerno de Caza (en este caso, el cuerno no cuenta para el límite de 25 puntos y el caballero podrá escoger una virtud como en el caso de el portaestandarte de batalla).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -7801,6 +8809,14 @@ Con las excpepciones:
         <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">-</characteristic>
         <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">-</characteristic>
         <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Los disparos se consideran Ataques Flamígeros</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="ddad-c9d1-51dd-bde0" name="Ave de Presa" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+      <comment>La nobleza bretoniana es muy aficionada a practicar la cetrería, compitiendo continuamente por ver quién posee los mejores halcones u otro tipo de aves de presa, como azores o pequeñas águilas. La rapaz se lleva posada sobre la mano izquierda (generalmente), sujetado mediante unas correas de piel de perro que se denominan pihuelas. Cuando se encuentra en combate cuerpo a cuerpo, el bretoniano puede lanzar su halcón contra el enemigo para que ataque. El daño que pueda causar un ave de presa de este tipo no es realmente importante, pero supone un momento de distracción por parte del enemigo mientras intenta evitar que la rapaz le saque los ojos. Momento que el caballero sabrá aprovechar.</comment>
+      <characteristics>
+        <characteristic name="Alcance" typeId="cafc-207a-b76d-8124"/>
+        <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+        <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Un personaje equipado con un ave de presa podrá realizar un ataque adicional. El ave de presa no cuenta como un arma de mano adicional, por lo que el ataque se realizará con el arma que el caballero esté utilizando con la otra mano. Un caballero equipado con un ave de presa no podrá utilizar un escudo, ya que está empleando el brazo en aguantar una rapaz que puede llegar a pesar varios kilos.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
