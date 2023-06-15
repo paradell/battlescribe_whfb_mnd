@@ -22,7 +22,7 @@ Estos ficheros permiten hacer la listas de Battlescribe tanto para Manuscritos d
 | 🍃 [Elfos Silvanos](./files/Elfos_Silvanos_MDN.cat)  | Link a Cargad     | v2022  🟢   | Sí  🟢 | No 🔴 | No hay  🟢 | Sí 🟢 |
 | ⚒️ [Enanos](./files/Enanos_MDN.cat)   | Link a Cargad     | v2017 🟢  | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 |
 | 🔥 [Enanos del Caos](./files/Enanos_del_Caos_MDN.cat)   | Link a Cargad     | v2017 🟢  | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 |
-| 🦎 [Hombres Lagarto](./files/Hombres_Lagarto_MDN.cat)    | Link a Cargad     | Faltan Erratas y Propuestas 🟡  | No 🔴 | No 🔴 | No 🔴 | No 🔴|
+| 🦎 [Hombres Lagarto](./files/Hombres_Lagarto_MDN.cat)    | Link a Cargad     | v2017 🟢  | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 |
 | 👑 [Imperio](./files/Imperio_MDN.cat)    | Link a Cargad     | Faltan Erratas y Propuestas 🟡  | No 🔴 | No 🔴 | No 🔴 | No 🔴|
 | 💰 [Mercenarios](./files/Mercenarios_MDN.cat)   | Link a Cargad     | v2023 🟢   | Sí 🟢  | No No 🔴  | No hay 🟢  | Sí 🟢|
 | 💚 [Orcos y Goblins](./files/Orcos_Goblins_MDN.cat)    | Link a Cargad     | Faltan Erratas y Propuestas 🟡  | No 🔴 | No 🔴 | No 🔴 | No 🔴|
