@@ -880,7 +880,7 @@
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1430-980f-0c3e-e330" name="Karro de jabalíes orco" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="1430-980f-0c3e-e330" name="Karro de jabalíes orco" publicationId="1961-98cd-e2f9-7572" page="35" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="e474-143b-ca02-f129" name="Karro de jabalíes orco" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -971,7 +971,7 @@
           </profiles>
           <infoLinks>
             <infoLink id="db95-ad95-f498-1dad" name="Lanza (caballería)" hidden="false" targetId="0115-9609-e617-662d" type="profile"/>
-            <infoLink id="e0cb-9b01-f915-c629" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
+            <infoLink id="e0cb-9b01-f915-c629" name="Inmune al pánico de Snotlings y Goblins amigos. " hidden="false" targetId="c445-a8cb-517c-620a" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="6.0"/>
@@ -1014,7 +1014,7 @@
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="639c-fab9-141d-8a2d" name="Aracnarok" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="639c-fab9-141d-8a2d" name="Aracnarok" publicationId="1961-98cd-e2f9-7572" page="43" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="1a60-3e1d-2f57-23c7" name="Aracnarok" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -1023,22 +1023,15 @@
             <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
             <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
             <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">8</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">8</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">7</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">8</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1568-1bc8-0aaa-761e" name="Lanzarredes" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
-          <characteristics>
-            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">150</characteristic>
-            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F4/F8</characteristic>
-            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">El Aracnarok dispone de una gigantesca catapulta conocida como Lanzarredes. Se trata de una catapulta a todos los efectos, salvo que puede Mover y disparar. Dado que el Aracnarok es un Objetivo Grande, puede ver por encima de miniaturas no Objetivo Grande (y disparar). Se necesitan dos Goblins para disparar el Lanzarredes, así que si queda sólo uno con vida, no puede disparar. No se puede Aguantar y disparar con el Lanzarredes. En caso de obtener Problemas, usa la tabla de problemas de la Catapulta; si resulta destruida, elimina dos Goblins de dotación y el disparo no tiene efecto. No puede disparar si está trabada en combate.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1048,42 +1041,7 @@
           <description>Todo salvo impasables y acuáticos</description>
         </rule>
         <rule id="c713-bad9-a1f5-26ed" name="Ataque de mordisco" hidden="false">
-          <description>Uno de los ataques del Aracnarok debe realizarse con un dado de otro color. Si
-ese ataque impacta y hiere, se resuelve con Heridas múltiples (1D6).</description>
-        </rule>
-        <rule id="b934-24e1-53c8-bd4f" name="Disparos a un monstruo montado" hidden="false">
-          <description>Los disparos hechos a un Monstruo montado se reparten de
-forma aleatoria entre el Aracnarok y su jinete (los goblins) de la misma forma que un monstruo
-montado por un personaje.</description>
-        </rule>
-        <rule id="7440-760d-3205-c428" name="Muerte de la tripulación" hidden="false">
-          <description>Si los Goblins mueren y el Aracnarok sobrevive, haz un chequeo en la tabla
-de reacción de monstruos.</description>
-        </rule>
-        <rule id="fb08-b6f2-79ba-22d0" name="Muerte del monstruo" hidden="false">
-          <description>Si el monstruo muere y los Goblins sobreviven, los Goblins formarán donde
-estaba el Aracnarok.Si, por ejemplo, se acaba con el Aracnarok en un combate, los Goblins restantes
-formarán trabados en combate con la unidad con la que estaba trabado el Aracnarok (y lucharán si
-no lo habían hecho, hay que calcular resolución de combate, etc). Ten en cuenta que si son cinco o
-más Goblins aún podrían capturar cuadrantes.Si el Aracnarok muere y formas una unidad de Goblins, esta
-es de tipo Infantería, Pielverde, Goblin, Goblin silvano y tiene las reglas especiales Animosidad, El
-tamaño zí importa, Cruzar(bosques) y Miedo a Orejotaz; llevan Arma de mano y Pinturas de guerra.</description>
-        </rule>
-        <rule id="e271-fe9a-987d-c468" name="Puntos de victoria" hidden="false">
-          <description>El oponente gana todos los puntos de victoria si y sólo si acaba con el Aracnarok
-(los Goblins dan igual).</description>
-        </rule>
-        <rule id="90a9-401b-8b18-366e" name="Personaje montado" hidden="false">
-          <description>Un personaje que monte en un Aracnarok se trata igual que cualquier personaje
-con montura monstruosa, salvo que el Aracnarok proporciona al personaje una tirada de salvación
-por armadura de 2+ que no puede ser mejorada. </description>
-        </rule>
-        <rule id="8269-330f-955e-2453" name="Templo de la araña" hidden="false">
-          <description>Si un Gran Chamán Goblin Silvano monta el Aracnarok, sustituye el Lanzarredes
-por el Templo de la Araña de forma gratuita. Si despliega encima del Aracnarok, el Chamán tiene
-+1 dado de energía y conoce un hechizo adicional (así, un Gran Chamán de nivel 4 conocería 5 hechizos).
-Si el Aracnarok muere y el Chamán tiene que ser personaje a pie, pierde un hechizo (decídelo
-aleatoriamente entre los hechizos que sepa) y deja de generar el dado extra de energía.</description>
+          <description>Uno de los ataques del Aracnarok debe realizarse con un dado de otro color. Si ese ataque impacta y hiere, se resuelve con Heridas múltiples (1D6). Como el resto de ataques, se trata de un ataque envenenado</description>
         </rule>
         <rule id="8125-8819-f346-044b" name="Unidad singular y personaje" hidden="false">
           <description>Un aracnarok como montura de personaje sigue ocupando dos huecos de unidad singular.</description>
@@ -1099,55 +1057,103 @@ aleatoriamente entre los hechizos que sepa) y deja de generar el dado extra de e
       <categoryLinks>
         <categoryLink id="7c42-43bc-3daf-9052" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="efdd-93bd-aa8a-d702" name="Howdah" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="96c2-1131-c7d0-9640" name="Equipo Adicional" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="db15-74e4-6fcf-c0a5" type="min"/>
-            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9af9-d83d-ec24-1dd5" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99bb-756a-69c8-c405" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="8276-9894-7d2a-2686" name="Goblins silvanos" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-              <characteristics>
-                <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
-                <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
-                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-                <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
-                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
-                <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
-                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
-                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
-                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">2+</characteristic>
-                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">6+</characteristic>
-                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
-                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1 (si muere el Aracnarok)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="86b2-9a48-5e2e-0165" name="Arco corto" hidden="false" targetId="ce15-0fea-7ee7-1333" type="profile"/>
-            <infoLink id="f077-6896-b9d5-e191" name="Pinturas de guerra" hidden="false" targetId="85bb-372e-7aff-59dc" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e043-09fc-04e9-2597" name="Ocupa un hueco extra de unidad singular" hidden="false" collective="false" import="true" type="upgrade">
+          <selectionEntries>
+            <selectionEntry id="d672-60cd-2d8e-25ac" name="Lanzarredes" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c34-cf45-8594-235f" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="4f3e-145c-c438-56ce" name="Lanzarredes" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                  <characteristics>
+                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">150</characteristic>
+                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F4/F8</characteristic>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">El Aracnarok dispone de una gigantesca catapulta conocida como Lanzarredes. Se trata de una catapulta a todos los efectos, salvo que puede Mover y disparar. Dado que el Aracnarok es un Objetivo Grande, puede ver por encima de miniaturas no Objetivo Grande (y disparar). Se necesitan dos Goblins para disparar el Lanzarredes, así que si queda sólo uno con vida, no puede disparar. No se puede Aguantar y disparar con el Lanzarredes. En caso de obtener Problemas, usa la tabla de problemas de la Catapulta; si resulta destruida, elimina dos Goblins de dotación y el disparo no tiene efecto. No puede disparar si está trabada en combate.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="Templo de la Araña" name="Templo de la Araña" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0162-850d-e920-8a43" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="50df-f6e6-3f6a-6496" name="Templo de la Araña" hidden="false">
+                  <description>Si un Gran Chamán Goblin Silvano monta el Aracnarok, puede adquirir un Templo de la Araña. El Chamán tiene +1 dado de energía y conoce un hechizo adicional (así, un Gran Chamán de nivel 4 conocería 5 hechizos). Si el Aracnarok muere y el Chamán tiene que ser personaje a pie, pierde un hechizo (decídelo aleatoriamente entre los hechizos que sepa) y deja de generar el dado extra de energía.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="1d31-493b-572e-5d20" name="Howdah" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="4b41-cdbc-fbcc-f93f" name="Goblins Silvanos" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ed1c-e5fe-0a6d-836c" type="min"/>
+                <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="da38-2e03-2ee0-f50f" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="7330-f7eb-de2b-b630" name="Goblins silvanos" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">2+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">6+</characteristic>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1 (si muere el Aracnarok)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="3b12-f6b2-fa14-fd48" name="Arco corto" hidden="false" targetId="ce15-0fea-7ee7-1333" type="profile"/>
+                <infoLink id="e1fe-14e5-70fd-a46c" name="Lanza (caballería)" hidden="false" targetId="0115-9609-e617-662d" type="profile"/>
+                <infoLink id="f976-6717-7640-9216" name="Pinturas de guerra" hidden="false" targetId="85bb-372e-7aff-59dc" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="1bdf-55d5-755c-0d3a" name="Pinturas de Guerra" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9798-2882-e45f-20de" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6532-e06c-f5c8-dee8" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0410-531c-0b1a-adf3" type="max"/>
           </constraints>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+          <selectionEntries>
+            <selectionEntry id="9ebe-4285-52c7-416a" name="Pinturas de Guerra" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a44a-4b44-5bb0-6480" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="60dc-da57-312b-8c33" name="Pinturas de guerra" hidden="false" targetId="85bb-372e-7aff-59dc" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="500.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="350.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3fac-8c31-78ae-404f" name="Karro de lobos goblin" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="3fac-8c31-78ae-404f" name="Karro de lobos goblin" publicationId="1961-98cd-e2f9-7572" page="35" hidden="false" collective="false" import="true" type="model">
       <rules>
         <rule id="3efd-8149-8a13-a742" name="Unidad especial y personaje" hidden="false">
           <description>Si un personaje monta el carro, sustituye un tripulante y sigue contando como unidad especial</description>
@@ -1536,7 +1542,7 @@ aleatoriamente entre los hechizos que sepa) y deja de generar el dado extra de e
     </selectionEntry>
     <selectionEntry id="bdd7-64a3-76d2-655b" name="Orcos negros" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5002-50df-94af-50c0" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5002-50df-94af-50c0" type="max"/>
       </constraints>
       <profiles>
         <profile id="ac87-edff-aef8-89ea" name="Orco negro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -1557,79 +1563,16 @@ aleatoriamente entre los hechizos que sepa) y deja de generar el dado extra de e
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
           </characteristics>
         </profile>
-        <profile id="fce9-1c12-6ee0-0684" name="Jefe orco negro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="56b8-ebb8-d628-2aa8" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
+        <infoLink id="56b8-ebb8-d628-2aa8" name="Inmune al pánico de Snotlings, Goblins y Orcos amigos" hidden="false" targetId="8054-0b55-8b76-0c80" type="rule"/>
         <infoLink id="d150-747e-6a45-6926" name="Evita animosidad" hidden="false" targetId="27c2-80e2-2305-4e4b" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="db8d-5216-7047-0433" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="dd63-926a-5949-2e3c" name="Grupo de mando" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aee1-7cdd-8385-0fb3" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="021f-b04e-0d8c-adda" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e06f-f698-118e-ad90" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="6.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f01b-5075-1f99-bcb0" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f8ba-869b-8796-68a6" type="max"/>
-              </constraints>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="ea68-9e41-20e2-8f19" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="984a-64d7-baa0-efc1" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b08-d226-0b35-2f9e" type="max"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink id="7ecc-d840-ee14-3352" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="2753-52a1-1d48-0427" type="selectionEntryGroup"/>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a4cd-1c7e-997a-d8e6" name="Jefe orco negro" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff10-e41d-4d9c-03ee" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="15.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="152d-cee7-b944-45f8" name="Orcos negros" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="152d-cee7-b944-45f8" name="Orcos negros" publicationId="1961-98cd-e2f9-7572" page="32" hidden="false" collective="false" import="true" type="unit">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eca6-f505-4059-68df" type="min"/>
           </constraints>
@@ -1748,7 +1691,65 @@ aleatoriamente entre los hechizos que sepa) y deja de generar el dado extra de e
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="c55a-cb3e-996b-051f" name="Grupo de Mando" hidden="false" collective="false" import="true"/>
+        <selectionEntryGroup id="c55a-cb3e-996b-051f" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="9e51-b656-6b23-c9a8" name="Jefe orco negro" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a26-c67a-5e26-4b5f" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="7e40-f700-1d8b-7e78" name="Jefe orco negro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="15.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="337d-a984-7d50-56b4" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d6f-f611-2164-80c7" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="6.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="13ca-f111-4f6f-0509" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95a9-650b-6533-d1f0" type="max"/>
+              </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="4826-08f8-7b13-bf27" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="cc19-a318-3537-b1dc" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5821-fa83-bff0-8438" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="e9c1-ac28-ac6c-9a35" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="2753-52a1-1d48-0427" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -3276,6 +3277,9 @@ aleatoriamente entre los hechizos que sepa) y deja de generar el dado extra de e
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="8eb6-4674-133b-1e8b" name="Gran chamán goblin nocturno" publicationId="1961-98cd-e2f9-7572" page="21" hidden="true" collective="false" import="true" type="model">
       <infoLinks>
@@ -9063,9 +9067,9 @@ que podría ser cargada, la unidad con Furia Asesina se verá obligada a cargar 
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="195.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b8fc-2294-43db-94a8" name="Jinetez de garrapato" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="b8fc-2294-43db-94a8" name="Jinetez de garrapato" publicationId="1961-98cd-e2f9-7572" page="32" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ec0-6a1d-e98d-d47e" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ec0-6a1d-e98d-d47e" type="max"/>
       </constraints>
       <profiles>
         <profile id="16c3-bb94-5803-6e07" name="Jinete de garrapato" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -9089,8 +9093,8 @@ que podría ser cargada, la unidad con Furia Asesina se verá obligada a cargar 
       </profiles>
       <rules>
         <rule id="5c5f-7b4a-ccfb-e717" name="Movimiento aleatorio (5D6)" hidden="false">
-          <description>Sin embargo, por cada 6 que obtengas en los dados para determinar el movimiento aleatorio, retira un Jinete como baja (esos dados con 6 se tienen en cuenta para el
-movimiento aleatorio igualmente.</description>
+          <description>Uno de los dados debe ser de otro color. Si en ese dado sale un resultado de “6” retira un Jinete como baja (ese resultado se tiene en cuenta para el movimiento aleatorio igualmente). Ten en cuenta que esto solo ocurre en el movimiento “normal” que hacen, no en los demás movimientos (por ejemplo, esta regla de retirar jinete en cada 6 no se aplicaría al huir o perseguir, o si se le lanza La Mano de Gorko).
+</description>
         </rule>
         <rule id="441f-022d-96b5-5ae9" name="Peligrosos" hidden="false">
           <description>Los personajes no pueden unirse a la unidad de Jinetez de Garrapatos.</description>
@@ -9133,7 +9137,7 @@ movimiento aleatorio igualmente.</description>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="15.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="18.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -9141,7 +9145,7 @@ movimiento aleatorio igualmente.</description>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ca6d-bc9c-d42c-0273" name="Rebaño de garrapatos" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="ca6d-bc9c-d42c-0273" name="Rebaño de garrapatos" publicationId="1961-98cd-e2f9-7572" page="33" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="807f-13b0-e0b1-1f9e" type="max"/>
       </constraints>
@@ -9153,7 +9157,8 @@ movimiento aleatorio igualmente.</description>
           <description>Si al inicio de turno hay más de 3 Garrapatos por cada Goblin, los garrapatos (no Garrapatos Saltarines) sobrantes pasan a ser Garrapatos perdidos. Si la unidad de Garrapatos se ve obligada a huir (por pánico o por desmoralización), elimina todos los Goblins de la unidad y transforma todos los Garrapatos en Garrapatos perdidos.</description>
         </rule>
         <rule id="1f89-6d5b-eeb1-1458" name="Garrapatos perdidos" hidden="false">
-          <description>Sigue todas las reglas de los Garrapatos Saltarines (incluyendo el dado de otro color y que puede eliminar al Saltarín), salvo que en vez de elegir la dirección en la que salta, se hace de forma aleatoria (usa el dado de dispersión para determinar la dirección).</description>
+          <description>Sigue todas las reglas de los Garrapatos Saltarines (incluyendo el dado de otro color y que puede eliminar al Saltarín), salvo que en vez de elegir la dirección en la que salta, se hace de forma aleatoria (usa el dado de dispersión para determinar la dirección).
+</description>
         </rule>
         <rule id="d0c9-a474-baeb-d5fa" name="Puntos de victoria" hidden="false">
           <description>Todos los puntos de victoria están en la unidad. Si acabas con la unidad te llevas
@@ -9307,7 +9312,7 @@ no forman unidad).</description>
 a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no puede atacar) y vuelve a mover. Si el Garrapato termina su movimiento aleatorio en Terreno impasable, muere. En la tirada de movimiento aleatorio, uno de los dados debe ser de otro color; si sale un 1, sustituye el Garrapato Saltarín por un Garrapato Perdido.</description>
             </rule>
             <rule id="0e06-01f4-9a57-8aaa" name="Disparos a garrapatos saltarines" hidden="false">
-              <description>Resuelvelo de forma habitual (hay un -1 a disparar a los Garrapatos Saltarines por ser miniatura de infantería individual). Las tropas amigas PUEDEN disparar a Garrapatos Saltarines si lo desean.</description>
+              <description>Resuelvelo de forma habitual (hay un -1 a disparar a los Garrapatos Saltarines por ser miniatura de infantería individual). Las tropas amigas PUEDEN disparar a Garrapatos Saltarines si lo desean.En el caso de los Garrapatos Saltarines, la primera herida hecha con proyectiles (arma de proyectiles, máquina de guerra, proyectiles mágicos) siempre elimina al jinete, lo que convierte a su montura en un garrapato perdido; la segunda herida acaba con el Garrapato. Un Garrapato Saltarín que se convierta en un Garrapato Perdido a causa de los proyectiles no saltará en dirección aleatoria hasta su siguiente turno.</description>
             </rule>
             <rule id="bd75-71cc-b5eb-3ef9" name="Combate contra garrapatos saltarines" hidden="false">
               <description>Si un enemigo se traba en combate cuerpo a cuerpo con un Garrapato Saltarín, éste resulta automáticamente destruido en la fase de combate cuerpo a cuerpo (no puede responder al ataque); ten en cuenta que esto implica que la unidad que ha cargado estará trabada, aunque podría hacer un Arrasamiento de la forma habitual.</description>
@@ -9362,9 +9367,9 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="764a-faa9-4212-97ee" name="Jinetez de jabalí grandotez" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="764a-faa9-4212-97ee" name="Jinetez de jabalí grandotez" publicationId="1961-98cd-e2f9-7572" page="34" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a39e-bd4e-3f85-8186" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a39e-bd4e-3f85-8186" type="max"/>
       </constraints>
       <profiles>
         <profile id="3add-d3cd-ad90-48bd" name="Jinete de jabalí grandote" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -9385,78 +9390,15 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
           </characteristics>
         </profile>
-        <profile id="5d2a-c3a3-6f3f-72ef" name="Jefe jinete de jabalí" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería </characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="f99a-4570-6b14-65a1" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
+        <infoLink id="f99a-4570-6b14-65a1" name="Inmune al pánico de Snotlings y Goblins amigos. " hidden="false" targetId="c445-a8cb-517c-620a" type="rule"/>
         <infoLink id="8759-8653-8cb6-814c" name="Animosidad" hidden="false" targetId="3d0c-b78e-4f24-c8ef" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c92b-2099-f054-5733" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="acc2-a67a-419d-052f" name="Grupo de mando" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1222-f35f-9e90-16b7" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="93f2-32e0-05bf-cb04" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fb4-a0e3-9cc9-37ee" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3b19-f6eb-478a-fac8" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2618-b2e6-c287-7e1b" type="max"/>
-              </constraints>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="4434-b571-f371-13a7" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="1391-5337-883c-3e4a" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2106-0829-ce96-5966" type="max"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink id="3e64-9ebc-6a74-17a4" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="2753-52a1-1d48-0427" type="selectionEntryGroup"/>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f131-025e-b38b-ccf5" name="Jefe jinete de jabalí" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f32-2025-c2c8-c6ad" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="17.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="40b3-44a6-dabf-f3c0" name="Jinetez de jabalí grandotes" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a18b-bf16-dc74-1db8" type="min"/>
@@ -9564,7 +9506,65 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="68aa-c145-984a-13df" name="Grupo de Mando" hidden="false" collective="false" import="true"/>
+        <selectionEntryGroup id="68aa-c145-984a-13df" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="9451-f9d8-4280-2a3f" name="Jefe jinete de jabalí" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54c0-6b90-548a-f034" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="f4af-b678-4de7-efc7" name="Jefe jinete de jabalí" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería </characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="17.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="cbda-2ca2-a859-1f0d" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="381a-223e-a0c8-5b68" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4300-f663-0caa-d7df" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbca-1cb4-f3a5-d583" type="max"/>
+              </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="9469-6b00-5589-ad0b" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="54e7-5f54-10b9-2099" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="acc7-5989-4f3c-fd24" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="37a3-6f79-23cb-eec9" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="2753-52a1-1d48-0427" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="9423-4309-0bd3-8d8f" name="Jabalí" hidden="false" collective="false" import="true" targetId="0e11-d17c-6429-4802" type="selectionEntry"/>
@@ -9573,7 +9573,7 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fe2a-c489-fa3f-2452" name="Jinetez de jabalí" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="fe2a-c489-fa3f-2452" name="Jinetez de jabalí" publicationId="1961-98cd-e2f9-7572" page="34" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="19c4-be29-aebe-ca7a" name="Jinete de jabalí " hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -9593,78 +9593,15 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
           </characteristics>
         </profile>
-        <profile id="7ddf-67d8-4b26-d0e7" name="Jefe jinete de jabalí" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="26cf-78c0-a75d-e616" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
+        <infoLink id="26cf-78c0-a75d-e616" name="Inmune al pánico de Snotlings y Goblins amigos. " hidden="false" targetId="c445-a8cb-517c-620a" type="rule"/>
         <infoLink id="aea2-e8f2-8959-8615" name="Animosidad" hidden="false" targetId="3d0c-b78e-4f24-c8ef" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b600-0247-3b2b-b45c" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="9805-b0ae-f150-c227" name="Grupo de mando" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28cc-df91-7d3f-8cf5" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="db74-961d-1eaf-3787" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2798-31be-8366-be7e" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="fc5c-06aa-d515-9be0" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7804-22dd-4e5c-29aa" type="max"/>
-              </constraints>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="8d42-db1d-914e-9e5a" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="268a-2a05-2fd3-4f97" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a9c2-db0f-0031-362d" type="max"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink id="4ea7-0477-b27e-2288" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="2753-52a1-1d48-0427" type="selectionEntryGroup"/>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3dff-8baf-e657-8507" name="Jefe jinete de jabalí" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c186-c667-c00c-710e" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="17.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="2afd-bee7-b8c9-982f" name="Jinetez de jabalí" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6586-0b3b-6b4d-5aee" type="min"/>
@@ -9763,7 +9700,65 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="c3af-c74a-9037-b268" name="Grupo de Mando" hidden="false" collective="false" import="true"/>
+        <selectionEntryGroup id="c3af-c74a-9037-b268" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="fe4b-ae45-460c-bdf5" name="Jefe jinete de jabalí" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f729-3b25-f7e7-6bb6" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="7fac-ee83-d1c0-aa90" name="Jefe jinete de jabalí" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="17.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="14b3-83b7-5aad-6ce0" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7591-0ab6-541a-7fef" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bca9-7b4a-a66f-7eb1" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="386b-3c22-f0e1-747c" type="max"/>
+              </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="9450-7a05-6b11-75b1" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e26f-eb70-c03d-6674" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2949-074d-b6fe-3253" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="cbc7-6eb7-455d-b88e" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="2753-52a1-1d48-0427" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="e35e-6749-04ab-18cf" name="Jabalí" hidden="false" collective="false" import="true" targetId="0e11-d17c-6429-4802" type="selectionEntry"/>
@@ -9772,9 +9767,9 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="20a7-2509-9441-d6ca" name="Jinetez zalvajes de jabalí grandotez" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="20a7-2509-9441-d6ca" name="Jinetez zalvajes de jabalí grandotez" publicationId="1961-98cd-e2f9-7572" page="34" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aaac-000c-0619-2121" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aaac-000c-0619-2121" type="max"/>
       </constraints>
       <profiles>
         <profile id="997a-61f6-8c51-ce2f" name="Jinete zalvaje de jabalí grandote" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -9795,24 +9790,6 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
           </characteristics>
         </profile>
-        <profile id="5f28-f3dc-dd07-61bf" name="Jefe jinete zalvaje de jabalí" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoLinks>
         <infoLink id="92ee-bf0f-aed4-d5e6" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
@@ -9823,51 +9800,6 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
         <categoryLink id="410e-87cd-1186-96b4" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="e375-52d1-68db-e823" name="Grupo de mando" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d16-02f6-d899-f09d" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="1e67-b9c8-85a0-a17b" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e62-754b-7b91-ad61" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b434-9a70-29ad-36bb" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ee0-eb41-9082-8431" type="max"/>
-              </constraints>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="a4ea-5581-cfaf-ad93" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4aa0-8109-0cb3-1f77" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec6a-f945-15f9-cb47" type="max"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink id="7151-fbb3-78b0-9f7a" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="2753-52a1-1d48-0427" type="selectionEntryGroup"/>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6bf2-f3b7-08a5-2fcd" name="Jefe jinete zalvaje de jabalí" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d25c-237c-a769-327a" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="17.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="c353-e788-bff4-0524" name="Jinetez zalvajes de jabalí grandotes" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e65a-f7e8-c5e4-dd93" type="min"/>
@@ -9975,7 +9907,65 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2daf-e143-14d8-4a1a" name="Grupo de Mando" hidden="false" collective="false" import="true"/>
+        <selectionEntryGroup id="2daf-e143-14d8-4a1a" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="5383-060b-079d-5ff6" name="Jefe jinete zalvaje de jabalí" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d37-6f9a-26bd-f59a" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="55c2-b3d9-ec13-9f23" name="Jefe jinete zalvaje de jabalí" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="17.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d54a-9284-475c-14ed" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0332-b445-0bcf-fefc" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4c1c-3b99-6e64-dafc" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee0e-5b37-dcab-ab5d" type="max"/>
+              </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="d739-3013-6624-d2d0" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3d74-dbef-17c8-3272" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8542-b332-98a6-5266" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="a8be-655d-b287-0eb2" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="2753-52a1-1d48-0427" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="f13f-cf2f-5ab3-2670" name="Jabalí" hidden="false" collective="false" import="true" targetId="0e11-d17c-6429-4802" type="selectionEntry"/>
@@ -9984,7 +9974,7 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8819-1ef4-392c-4fdb" name="Jinetez zalvajes de jabalí " hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="8819-1ef4-392c-4fdb" name="Jinetez zalvajes de jabalí " publicationId="1961-98cd-e2f9-7572" page="34" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="8643-8d20-39a2-e25f" name="Jinete zalvaje de jabalí" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -10004,24 +9994,6 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
           </characteristics>
         </profile>
-        <profile id="fd9e-76a8-1534-cd79" name="Jefe jinete zalvaje de jabalí" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoLinks>
         <infoLink id="af7e-ffb3-47bf-debd" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
@@ -10032,51 +10004,6 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
         <categoryLink id="39d3-5eaf-311a-effa" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="f2c7-b58b-36d5-4551" name="Grupo de mando" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74b6-9b0f-098a-1959" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="73a6-d6e3-3cf4-5cbe" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c4a-dbd3-0bdb-a031" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b672-b7a0-5efc-e951" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4aba-f167-3c26-94c4" type="max"/>
-              </constraints>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="dd0f-879a-a26d-ff53" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="b324-c9ff-5e50-c4e9" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="939c-73e0-d34d-c4f5" type="max"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink id="8a27-5b96-dbb1-d83e" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="2753-52a1-1d48-0427" type="selectionEntryGroup"/>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8524-0822-7bba-ff47" name="Jefe jinete zalvaje de jabalí" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33b7-18f8-46d4-813f" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="17.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="6f2b-5088-8cca-e5fa" name="Jinetez zalvajes de jabalí " hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58f0-3cf1-05b4-47d7" type="min"/>
@@ -10175,7 +10102,65 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="ef4d-705a-1bdf-701e" name="Grupo de Mando" hidden="false" collective="false" import="true"/>
+        <selectionEntryGroup id="ef4d-705a-1bdf-701e" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="6dd3-e8f7-7406-205e" name="Jefe jinete zalvaje de jabalí" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05a0-e875-0431-7f59" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="2163-eb9a-7b64-dfe1" name="Jefe jinete zalvaje de jabalí" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="17.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="057c-c381-bf6f-7b7f" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="828b-4bfe-c5dc-7e3c" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="268e-6bb2-4e1e-4bb9" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d77f-f05d-3f94-7e75" type="max"/>
+              </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="fd4b-5c3b-2801-2970" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="7431-262f-934c-c584" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55d2-bf87-5f73-42a7" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="42e5-a370-6e82-a830" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="2753-52a1-1d48-0427" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="14.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="8eba-47f5-10d3-201f" name="Jabalí" hidden="false" collective="false" import="true" targetId="0e11-d17c-6429-4802" type="selectionEntry"/>
@@ -10184,7 +10169,7 @@ a una unidad (amiga o enemiga), el Garrapato ataca a dicha unidad (la unidad no 
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a074-7de5-dd84-ce9b" name="Lanzapiedroz" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="a074-7de5-dd84-ce9b" name="Lanzapiedroz" publicationId="1961-98cd-e2f9-7572" page="36" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="efcb-27cf-0a64-f09a" name="Lanzapiedroz" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -10431,7 +10416,7 @@ puedes sustituir los 3 Goblin por Orcos (mismo perfil y equipo que el Ezpabilago
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="70.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a402-f4bd-c724-6959" name="Lanzapinchoz" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="a402-f4bd-c724-6959" name="Lanzapinchoz" publicationId="1961-98cd-e2f9-7572" page="36" hidden="false" collective="false" import="true" type="unit">
       <rules>
         <rule id="4c4f-c82f-07ac-6364" name="Inclusión" hidden="false">
           <description>Puedes incluir 1-2 lanzapinchoz independientes como una única unidad especial.</description>
@@ -10694,9 +10679,9 @@ puedes sustituir los 3 Goblin por Orcos (mismo perfil y equipo que el Ezpabilago
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4eed-92d3-fcc2-2e90" name="Troglagobs" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="4eed-92d3-fcc2-2e90" name="Troglagobs" publicationId="1961-98cd-e2f9-7572" page="38" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="947e-f4d3-1b82-04d2" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="947e-f4d3-1b82-04d2" type="max"/>
       </constraints>
       <profiles>
         <profile id="d782-42b2-1bcf-fac2" name="Troglagob" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -10709,24 +10694,6 @@ puedes sustituir los 3 Goblin por Orcos (mismo perfil y equipo que el Ezpabilago
             <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="29a0-de7b-b22e-40e2" name="Jefe trog" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
@@ -10752,24 +10719,6 @@ puedes sustituir los 3 Goblin por Orcos (mismo perfil y equipo que el Ezpabilago
         <categoryLink id="b7e8-05e3-d23b-dc81" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="ff16-0c51-a7eb-1fc2" name="Grupo de mando" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="146e-6e59-8c11-1223" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="cbb0-a076-7be0-5da2" name="Jefe trog" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a243-ee39-a330-5056" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="8.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="67f8-77ba-4c4f-46fe" name="Troglagobs" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c449-1c4a-e681-84a7" type="min"/>
@@ -10833,7 +10782,38 @@ puedes sustituir los 3 Goblin por Orcos (mismo perfil y equipo que el Ezpabilago
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d0de-b00c-f093-b1cd" name="Grupo de Mando" hidden="false" collective="false" import="true"/>
+        <selectionEntryGroup id="d0de-b00c-f093-b1cd" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="860c-c7a0-d14e-db21" name="Jefe trog" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db3d-444c-b309-3b18" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="1848-9d71-c020-f3ac" name="Jefe trog" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="8.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -10841,7 +10821,7 @@ puedes sustituir los 3 Goblin por Orcos (mismo perfil y equipo que el Ezpabilago
     </selectionEntry>
     <selectionEntry id="79c0-efbb-8a93-f7ff" name="Goblins de polvo" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29ee-b056-e4c6-0173" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29ee-b056-e4c6-0173" type="max"/>
       </constraints>
       <profiles>
         <profile id="3e8c-7f44-6699-ea00" name="Goblin de polvo" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -10854,24 +10834,6 @@ puedes sustituir los 3 Goblin por Orcos (mismo perfil y equipo que el Ezpabilago
             <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">1</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">2</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="05a5-8982-abe0-9164" name="Truculento" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">1</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">1</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">2</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
@@ -10899,24 +10861,6 @@ puedes sustituir los 3 Goblin por Orcos (mismo perfil y equipo que el Ezpabilago
         <categoryLink id="dd62-f4d3-acfb-ed68" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="dbb7-34a6-1beb-f950" name="Grupo de mando" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5684-cd26-fe97-62bf" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="4085-3902-737f-65ef" name="Truculento" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43ef-e105-ee19-881b" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="5c63-a45b-ce15-7273" name="Goblins de polvo" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5c7-1f9a-44da-54fb" type="min"/>
@@ -10975,13 +10919,44 @@ puedes sustituir los 3 Goblin por Orcos (mismo perfil y equipo que el Ezpabilago
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="113b-d037-3953-4171" name="Grupo de Mando" hidden="false" collective="false" import="true"/>
+        <selectionEntryGroup id="113b-d037-3953-4171" name="Grupo de Mando" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="0800-6401-c254-d991" name="Truculento" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3f5-3c76-d982-df56" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="0e6d-461f-b987-4db7" name="Truculento" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">1</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">1</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">2</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ebd1-fa9d-5f23-371a" name="Trolls" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="ebd1-fa9d-5f23-371a" name="Trolls" publicationId="1961-98cd-e2f9-7572" page="38" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="6978-f557-06c2-c71b" name="Troll" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -11087,7 +11062,7 @@ impactos automáticos ni a miniaturas que impactan a un resultado fijo como los 
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fe80-04ec-06c4-c7d1" name="Vagoneta de ataque snotling" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="fe80-04ec-06c4-c7d1" name="Vagoneta de ataque snotling" publicationId="1961-98cd-e2f9-7572" page="39" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="ce99-d994-881a-3911" name="Vagoneta de ataque snotling" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -11128,7 +11103,9 @@ impactos automáticos ni a miniaturas que impactan a un resultado fijo como los 
       </profiles>
       <rules>
         <rule id="be10-1433-369b-e8f0" name="Impactos por carga 2D6" hidden="false"/>
-        <rule id="d841-c6bf-0789-6905" name="Movimiento aleatorio (5D6)" hidden="false"/>
+        <rule id="d841-c6bf-0789-6905" name="Movimiento aleatorio (5D6)" hidden="false">
+          <description>A diferencia de la mayoría de unidades con movimiento aleatorio, si una Vagoneta de Ataque es tan descuidada que choca contra una unidad amiga, deberá resolverse el combate como si se tratara de una unidad enemiga. Esto es muy difícil que suceda, pues el jugador, aunque no controla la velocidad, puede decidir la dirección. Sin embargo, si llegara a suceder, se supone que los Snotlings estarían tan excitados que no se darán cuenta del error y seguirán luchando hasta que uno de los dos bandos sea desmoralizado o destruido. Si la Vagoneta gana el combate, se resolverá huida y persecución de la forma habitual (ten en cuenta que pueden hacer chequeo para no perseguir)</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="9e23-3665-3a39-a46f" name="Inmune a desmoralización" hidden="false" targetId="3ea2-7beb-2798-15a0" type="rule"/>
@@ -11140,7 +11117,7 @@ impactos automáticos ni a miniaturas que impactan a un resultado fijo como los 
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="412d-a02c-7ce3-ca0a" name="Zueltaplomo" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="412d-a02c-7ce3-ca0a" name="Zueltaplomo" publicationId="1961-98cd-e2f9-7572" page="39" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3663-5161-3458-7661" type="max"/>
       </constraints>
@@ -11174,9 +11151,6 @@ impactos automáticos ni a miniaturas que impactan a un resultado fijo como los 
 Salvas imperial, no tiene su fiabilidad. Si en la tirada para obtener el número de impactos se obtiene un doble, tras resolver los impactos el Zueltaplomo explota en un bonito espectáculo pirotécnico; retíralo como baja.</description>
         </rule>
       </rules>
-      <infoLinks>
-        <infoLink id="c7d2-ab62-5ba7-657c" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="2f95-eb05-6586-3ddc" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
@@ -11310,7 +11284,7 @@ Salvas imperial, no tiene su fiabilidad. Si en la tirada para obtener el número
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="100.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bcec-c2a5-74de-4b0c" name="Katapulta lanzagoblinz" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="bcec-c2a5-74de-4b0c" name="Katapulta lanzagoblinz" publicationId="1961-98cd-e2f9-7572" page="40" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="699b-73eb-6fd2-8363" name="Katapulta lanzagoblinz" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -11347,9 +11321,6 @@ de Warhammer), estimando y desviando. Sin embargo no es una piedra enorme sino u
 en ese punto (ignora las unidades después de ese punto).</description>
         </rule>
       </rules>
-      <infoLinks>
-        <infoLink id="6613-450f-26ee-c42d" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="9c2d-127c-2aa2-839f" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
@@ -11483,19 +11454,19 @@ en ese punto (ignora las unidades después de ese punto).</description>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="80.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="369f-9c09-8aec-d1b9" name="Garrapato colosal" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="369f-9c09-8aec-d1b9" name="Garrapato colosal" publicationId="1961-98cd-e2f9-7572" page="41" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="0803-54c7-09df-b53b" name="Garrapato colosal" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
             <characteristic name="M" typeId="2d56-9cad-9242-37bd">8D6</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
             <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
             <characteristic name="H" typeId="a41f-60f6-2336-73ab">4</characteristic>
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">1D6+1</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
@@ -11506,7 +11477,7 @@ en ese punto (ignora las unidades después de ese punto).</description>
       </profiles>
       <rules>
         <rule id="fe1b-6306-c2c9-ec8e" name="Ataques aleatorios" hidden="false">
-          <description>Cuando el Garrapato ataque, determina el número de ataques de forma aleatoria (1D6+1).</description>
+          <description>Cuando el Garrapato ataque, determina el número de ataques de forma aleatoria (1D6+2).</description>
         </rule>
         <rule id="a3f3-cb57-9d38-0662" name="¡Boiiing!" hidden="false">
           <description>En la subfase de movimientos obligatorios, pivota el Garrapato Colosal en la dirección que quieres que salte y lanza 8D6 para saber a qué distancia “salta” el Garrapato. Si en esa distancia y dirección hay alguna unidad enemiga (y hay espacio para colocar al Garrapato Colosal), el Garrapato declara carga (el oponente debe reaccionar a la carga, hay chequeos de terror y miedo, etc); ten en
@@ -11518,7 +11489,7 @@ enemiga ha huido o bien porque ha dado la mala pata que estaba ahí), hace los 1
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="de99-11f0-e929-03df" name="Inmune a desmoralización" hidden="false" targetId="3ea2-7beb-2798-15a0" type="rule"/>
+        <infoLink id="de99-11f0-e929-03df" name="Inmune a psicología" hidden="false" targetId="3970-3b01-1734-d642" type="rule"/>
         <infoLink id="b35b-b74c-7404-ea26" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
         <infoLink id="7946-3072-33a2-0e46" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
       </infoLinks>
@@ -11526,7 +11497,7 @@ enemiga ha huido o bien porque ha dado la mala pata que estaba ahí), hace los 1
         <categoryLink id="1991-556a-9f2f-c871" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="160.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="190.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b787-57bc-85a1-1a97" name="Garrapatos dezpachurradores" hidden="false" collective="false" import="true" type="model">
@@ -11537,8 +11508,8 @@ enemiga ha huido o bien porque ha dado la mala pata que estaba ahí), hace los 1
             <characteristic name="HA" typeId="c87b-b820-6a47-1354"/>
             <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
             <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">6</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">*</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
@@ -11546,32 +11517,51 @@ enemiga ha huido o bien porque ha dado la mala pata que estaba ahí), hace los 1
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <rules>
         <rule id="80de-a5ef-cdc4-98c2" name="Movimiento aleatorio (8D6)" hidden="false"/>
-        <rule id="7ad3-eaac-fc92-cef9" name="Atravesar" hidden="false">
-          <description>Pivota los Garrapatos Despachurradores en la dirección en que quieras mover y lanza 8D6 para saber qué distancia mueven. Todas las unidades (amigas y enemigas) entre el inicio y el fin del movimiento reciben 2D6 impactos de F6. Si en esa distancia “choca” contra un elemento de escenografía impasable o un edificio, el garrapato despachurrador se espachurra (es retirado como baja). Si atraviesa unidades trabadas en combate cuerpo a cuerpo, establece el número de impactos y luego divídelos a partes iguales entre las unidades trabadas en ese combate. Si finaliza su movimiento encima de una unidad, mueve el Garrapato en esa dirección hasta que no esté en contacto con ninguna unidad (y sí, si hay varias unidades en esa misma dirección las va atravesando hasta que encuentra un “hueco”).
+        <rule id="e726-3bf2-c0a0-9f38" name="Pa-chof" hidden="false">
+          <description> Pivota los Garrapatos Despachurradores en la dirección en que quieras mover y lanza 8D6 para saber qué distancia mueven. Todas las unidades (amigas y enemigas) entre el inicio y el fin del movimiento reciben 2D6 impactos de F6 que se distribuyen como proyectiles (y pueden causar pánico como proyectiles). El daño se realiza en la misma fase de movimiento, por lo que no hay combate (ni arrasamientos). Si atraviesan unidades trabadas en combate cuerpo a cuerpo, reciben 2d6 impactos cada una de las unidades que participen en dicho combate. Si finalizan su movimiento encima de una unidad, mueve  los Garrapatos  en esa dirección hasta que no esté en contacto con ninguna unidad (si hay varias unidades en esa misma dirección las va atravesando hasta que encuentra un “hueco”) como harías con un fanático goblin nocturno.</description>
+        </rule>
+        <rule id="cf46-b2c1-9239-e9b9" name="Potencial de destrucción masiva" hidden="false">
+          <description>Si una unidad se traba en combate cuerpo a cuerpo (se les puede cargar normalmente) con los Garrapatos Despachurradores, sufre 3D6 impactos de F6 que se distribuyen como proyectiles (y pueden causar pánico como proyectiles) y luego se retiran los Garrapatos Despachurradores como baja. El daño se realiza en la misma fase de movimiento, por lo que no hay combate (ni arrasamientos).</description>
+        </rule>
+        <rule id="f429-9899-6cb8-58e3" name="Se les va la olla" hidden="false">
+          <description>A partir del primer Pa-Chof sobre una unidad enemiga, los Garrapatos Despachurradores se descontrolan. Desde ese momento, su movimiento será completamente aleatorio. Determina la dirección de su movimiento con un dado de dispersión al inicio de cada fase de movimientos obligatorios.</description>
+        </rule>
+        <rule id="4e76-fbec-acb0-b586" name="Erráticos" hidden="false">
+          <description>Los disparos a los Garrapatos Despachurradores reciben un penalizador de -1 a las tiradas para impactar con proyectiles.
 </description>
         </rule>
-        <rule id="031e-3e33-df7a-8646" name="Atacando al garrapato dezpachurrador" hidden="false">
-          <description>Si una unidad se traba en combate cuerpo a cuerpo con el Garrapato Despachurrador, la unidad que ha cargado sufre 3D6 impactos de F6. Si queda alguna miniatura enemiga después de los impactos, el Garrapato Despachurrador es retirado como baja; la unidad que ha cargado vence el combate automáticamente (y puede arrasar).
+        <rule id="f505-cc46-5cf2-592d" name="Totalmente fuera de control" hidden="false">
+          <description>los Garrapatos Despachurradores serán retirados como baja tan pronto como:
+
+1- Entren en contacto con otros Garrapatos Despachurradores o un Garrapato Colosal.
+
+2- Cuando una unidad les cargue, como se explica en &quot;Potencial de destrucción masiva&quot;.  
+
+Adicionalmente a partir del momento en que Se les vaya la Olla, en cada tirada de movimiento habrá que usar un dado de otro color. Si en ese dado sale un resultado de “1” los Dezpachurradores recibirán una Herida automáticamente.
 </description>
+        </rule>
+        <rule id="c32c-dbf2-7121-4826" name="¡Cuidaoooooo!" hidden="false">
+          <description>Unos Garrapatos Dezpachurradores cuyo movimiento les vaya a poner en contacto con cualquier elemento de escenografía que no sea terreno abierto a efectos de movimiento, se detendrán a 3cm de dicho elemento (si no hay sitio para colocarlo entre la unidad que atraviesa y la escenografía, hay que colocarlo a 3cm de ambos; nunca puede acabar su movimiento sobre ninguno de los dos elementos). En cambio, si su movimiento los lleva fuera del campo de batalla, se retirarán del juego como baja. </description>
         </rule>
       </rules>
       <infoLinks>
         <infoLink id="120e-7f0e-c65a-de02" name="Inmune a psicología" hidden="false" targetId="3970-3b01-1734-d642" type="rule"/>
+        <infoLink id="11d2-12d7-eadb-903f" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="7dbc-08fd-aafc-82aa" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
+        <categoryLink id="160a-fecf-fc74-552a" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="240.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="75.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0d60-b535-bb17-b679" name="Lanzagarrapatos" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="0d60-b535-bb17-b679" name="Lanzagarrapatos" publicationId="1961-98cd-e2f9-7572" page="52" hidden="false" collective="false" import="true" type="model">
       <categoryLinks>
         <categoryLink id="9339-263d-e153-2ebd" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
@@ -11615,7 +11605,7 @@ enemiga ha huido o bien porque ha dado la mala pata que estaba ahí), hace los 1
 los Goblins son expertos en utilizar al Lanzagarrapatos para su propia protección, con lo que el enemigo atacará al Lanzagarrapatos si le es posible en vez de a los Goblins. En la fase de declaración de cargas, es el Lanzagarrapatos quien carga (tiene que estar en su línea de visión; no se considera que tenga visión 360º).</description>
             </rule>
             <rule id="8bdc-672e-94fe-f1ad" name="Hambre" hidden="false">
-              <description>El Lanzagarrapatos no puede mover de forma voluntaria (aunque podría mover debido a algún hechizo o regla especial). Sin embargo, en la subfase de movimientos obligatorios debes comprobar si hay unidades enemigas a 20cm o menos y en línea de visión (recuerda que es un Objetivo Grande); en tal caso, lanza 1D6; con un 1, el Lanzagarrapatos rompe sus cadenas y se lanza a por la unidad enemiga (devorando sus Goblins por el camino); desaparecen los dados de Garrapatos y el Lanzagarrapatos carga a dicha unidad. Trátalo como una carga a todos los efectos (el enemigo puede reaccionar a la carga, etc). El Lanzagarrapatos hará su chequeo de Controlado si falla la carga (tras hacer el movimiento de carga fallida), o bien cuando termine el combate cuerpo a cuerpo.</description>
+              <description>El Lanzagarrapatos no puede mover de forma voluntaria (aunque podría mover debido a algún hechizo o regla especial). Sin embargo, en la subfase de movimientos obligatorios debes comprobar si hay unidades enemigas a 20cm o menos y en línea de visión (recuerda que es un Objetivo Grande); en tal caso, lanza 1D6; con un 1, el Lanzagarrapatos rompe sus cadenas y se lanza a por la unidad enemiga (devorando sus Goblins por el camino); desaparecen los dados de Garrapatos y el Lanzagarrapatos carga a dicha unidad. Trátalo como una carga a todos los efectos (el enemigo puede reaccionar a la carga, etc). El Lanzagarrapatos hará su chequeo de Controlado si falla la carga (tras hacer el movimiento de carga fallida), o bien cuando termine el combate cuerpo a cuerpo. aunque puede pivotar, como cualquier máquina de guerra</description>
             </rule>
           </rules>
           <infoLinks>
@@ -11654,7 +11644,6 @@ los Goblins son expertos en utilizar al Lanzagarrapatos para su propia protecci�
           </profiles>
           <infoLinks>
             <infoLink id="0562-94bd-3ca8-abb3" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
-            <infoLink id="5518-072d-0307-f083" name="Miedo a los orejotaz" hidden="false" targetId="aaf0-33ec-68dc-5014" type="rule"/>
             <infoLink id="1c0a-1553-1651-dcd9" name="Odio a enanos" hidden="false" targetId="c2a2-6a3b-d376-7914" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
@@ -11688,7 +11677,7 @@ los Goblins son expertos en utilizar al Lanzagarrapatos para su propia protecci�
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="145.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0dcf-ba1f-1231-8255" name="Gigante" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="0dcf-ba1f-1231-8255" name="Gigante" publicationId="1961-98cd-e2f9-7572" page="44" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="2006-68a3-93b2-a3e7" name="Gigante" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -11778,7 +11767,7 @@ su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Giga
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="205.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4056-6600-0b75-34a2" name="Ídolo de Morko" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="4056-6600-0b75-34a2" name="Ídolo de Morko" publicationId="1961-98cd-e2f9-7572" page="45" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b5bc-f430-ff40-3950" type="max"/>
       </constraints>
@@ -11788,12 +11777,12 @@ su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Giga
             <characteristic name="M" typeId="2d56-9cad-9242-37bd">18</characteristic>
             <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
             <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">8</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
             <characteristic name="R" typeId="30bd-8385-2b51-e039">7</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">8</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">2+</characteristic>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
@@ -11803,7 +11792,7 @@ su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Giga
         </profile>
       </profiles>
       <rules>
-        <rule id="b462-ecc0-61a7-f949" name="Impactos por carga 1D6+3" hidden="false"/>
+        <rule id="b462-ecc0-61a7-f949" name="Impactos por carga 1D6" hidden="false"/>
         <rule id="54e9-9404-860e-8859" name="El Gran Verde" hidden="false">
           <description>Si el Ídolo de Morko no ha declarado carga durante la subfase de declaración de carga,
 en la subfase de movimientos obligatorios debes comprobar si existe alguna unidad enemiga o amiga a distancia de carga; si es así, cargará contra ella (efectúa reacciones a la carga de forma habitual); si hay varias unidades a distancia de carga, elige a cuál carga (lo más habitual es cargar a unidades enemigas, pero quién sabe la voluntad de Morko...).</description>
@@ -11819,6 +11808,7 @@ en la subfase de movimientos obligatorios debes comprobar si existe alguna unida
         <infoLink id="3d27-deae-c078-55a3" name="Tozudez" hidden="false" targetId="ad33-61eb-3490-bb38" type="rule"/>
         <infoLink id="c42f-f8a4-873b-8ffb" name="Inmune a psicología" hidden="false" targetId="3970-3b01-1734-d642" type="rule"/>
         <infoLink id="b1e2-2c72-64b9-9be5" name="Golpe letal" hidden="false" targetId="917d-4fe5-c45b-ca64" type="rule"/>
+        <infoLink id="f01b-691b-33c4-1a16" name="Resistencia mágica" hidden="false" targetId="10ae-f386-2057-289d" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4f43-ebd2-8c31-99a9" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
@@ -11829,13 +11819,16 @@ en la subfase de movimientos obligatorios debes comprobar si existe alguna unida
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c406-1784-ccd7-4a6b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="277e-acf1-7b14-81f3" type="min"/>
           </constraints>
+          <categoryLinks>
+            <categoryLink id="a957-db67-0819-3dae" name="Unidad singular" hidden="false" targetId="184a-30ec-bf7c-b603" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0394-8600-00f7-196d" name="Armas" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="0394-8600-00f7-196d" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="ada6-47f2-e4be-20c1">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e369-6cf8-f1d6-460d" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f475-0219-478e-1160" type="min"/>
@@ -11857,8 +11850,74 @@ en la subfase de movimientos obligatorios debes comprobar si existe alguna unida
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="600.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="290.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="abb4-a207-cd2d-b85d" name="Enjambre de Arañas" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f585-0a1d-34da-b2d1" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="0e79-6dd5-2d9b-a6a1" name="Inmune a desmoralización" hidden="false" targetId="3ea2-7beb-2798-15a0" type="rule"/>
+        <infoLink id="b9fe-f877-8831-54c5" name="Hostigadores" hidden="false" targetId="4717-34b5-7e01-9c40" type="rule"/>
+        <infoLink id="a7ef-2488-e368-f5e9" name="Ataques envenenados" hidden="false" targetId="d77c-34cb-f94c-aee1" type="rule"/>
+        <infoLink id="a3f3-270b-bab7-7d75" name="Objetivo pequeño." hidden="false" targetId="b6cc-4892-f34e-1e8d" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="9ae8-5b03-396e-55d6" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="c2da-bd83-317f-ff59" name="Enjambre de Arañas" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec2c-5401-1912-9991" type="min"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08d2-ed55-3dc9-1fad" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="fbc3-4af6-3a3e-34f7" name="Enjambre de Arañas" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">2</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">2</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">1</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Enjambre, Animal</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="c825-9366-a03f-9e41" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="0847-7cb5-4064-e921">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e679-104c-5e20-54c6" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27f7-fc78-4d51-6130" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="0847-7cb5-4064-e921" name="Dientes" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7a5-c159-a0fa-1986" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="05d6-7835-1acf-6b88" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="60.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
