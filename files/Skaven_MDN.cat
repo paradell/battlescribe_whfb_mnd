@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a841-7b20-89a8-91ac" name="Skaven MDN" revision="6" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a841-7b20-89a8-91ac" name="Skaven MDN" revision="7" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c220-b30e-7003-9bc3" name="Skaven MDN"/>
   </publications>
@@ -404,7 +404,7 @@ Golpe letal.</characteristic>
                 <entryLink id="c239-ea03-0d53-80c1" name="Palanquín de guerra" hidden="false" collective="false" import="true" targetId="b5fc-ca9c-40c4-6f54" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="65.0"/>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="45.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="ae10-3e67-d7a8-727a" name="Horror de la camada" hidden="false" collective="false" import="true" type="upgrade">
@@ -1774,7 +1774,7 @@ Golpe letal.</characteristic>
                 <entryLink id="2b18-f168-af10-e1f6" name="Pebetero de la Plaga" hidden="false" collective="false" import="true" targetId="42c0-60a6-78a4-c753" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="175.0"/>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="160.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2317,7 +2317,9 @@ disparar.</description>
 disparar.</description>
                 </rule>
                 <rule id="78b7-00a3-cc88-2489" name="Picadora de condenación" hidden="false">
-                  <description>Es un Grupo de Apoyo orientado a combate. Cada fase de combate cuerpo a cuerpo, además de sus ataques habituales hace 1D6 impactos de F5 a una única unidad en su frontal con la regla Ataques mágicos.</description>
+                  <description>Es un Grupo de Apoyo orientado a combate. En lugar de los ataques de su perfil, en cuerpo a cuerpo este grupo de apoyo inflige un número de impactos (se consideran ataques mágicos) en una unidad (o a repartir entre varias si es el caso) en contacto determinado por el resultado de un dado de artillería en pulgadas*; son impactos de F4 con Poder de penetración. En caso de problemas lanza 1D6: (1-2) ¡Blablam!: Coloca la plantilla redonda pequeña en el lugar donde estaba la Picadora y resuelve impactos de F4 y -2 a la TSA contra los afectados. Retira la Picadora del juego como baja. (3-5) ¡Zzzzap! La propia picadora y todas las miniaturas en contacto con ella reciben un un impacto de F4 con -2 a la TSA. (6) Apagón. La Picadora no funciona ese turno. Cero impactos.
+
+* (Si no dispones de un dado de artillería en pulgadas, puedes usar un dado habitual de 6 caras; de 1-5 multiplica por 2 y obtendrás el número de impactos; con un 6 se consideran Problemas. No se considera un D6 a ningún efecto como repeticiones o habilidades, por ejemplo no podría repetirse debido al Fetiche Skaven).</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -2325,7 +2327,7 @@ disparar.</description>
                 <infoLink id="b3ca-16f2-7a76-1a07" name="La vida no tiene ningún valor" hidden="false" targetId="83fc-d023-f97e-004d" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="30.0"/>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="a76f-be7e-d444-3ff8" name="Mortero de viento envenenado" hidden="false" collective="false" import="true" type="upgrade">
@@ -2379,10 +2381,7 @@ disparar.</description>
 disparar.</description>
                 </rule>
                 <rule id="d8be-b538-1d50-91d0" name="Mortero de viento envenenado" hidden="false">
-                  <description>Arma de proyectiles, Mover o disparar. Dispara como una Catapulta (con alcance 0-60cm, usa la plantilla pequeña), salvo que se puede usar la línea de visión de la unidad principal además de la línea de visión del propio Mortero. Elige el punto de impacto y dispersa el impacto (lanza el dado de artillería y dispersión); si no salen problemas, determina qué miniaturas están bajo la plantilla (parciales a 4+). Lanza 1D6 por cada miniatura bajo la plantilla; con 5+, la miniatura sufre una herida que Anula armaduras. En caso de que el Mortero declare Aguantar y disparar, el punto de impacto debe ser una miniatura (en línea de visión del Mortero) de la unidad enemiga que ha declarado carga (sin medir distancia, dispérsalo, resuelve el disparo,si hace suficientes bajas puede causar pánico). Se consideran Ataques mágicos. En caso de obtener Problemas, lanza 1D6:
-- 1-2: ¡Bum! No hay disparo este turno. Retira el Mortero como baja.
-- 3-4: Desviado. El punto de impacto es el propio Mortero. Sitúa la plantilla centrada en el Mortero. Mueve la plantilla 3D6cm en dirección aleatoria (dado de dispersión) y resuelve los impactos. Retira el Mortero como baja.
-- 5-6: Sitúa la plantilla grande centrada en el Mortero y resuelve los impactos.</description>
+                  <description>Arma de proyectiles. Alcance 15-60cm. El Mortero dispara como una catapulta y usa la plantilla pequeña. Las miniaturas bajo la plantilla (tras resolver los impactos parciales normalmente) deberán tirar 1D6; por cada resultado de 5+ recibirán una herida que anula armaduras. Se consideran ataques mágicos. Puede mover y disparar, pero no aguantar y disparar. Funciona como una catapulta.Si está a 8cm o menos de su unidad madre puede usar su línea de visión para disparar. En caso de problemas lanza 1D6: (1-2) ¡Foompf!: Coloca la plantilla redonda pequeña en el lugar donde estaba el Mortero e inflige una herida que anula armaduras contra los afectados con un 4+. Retira el Mortero del juego como baja. (3-5) Muy alejado del objetivo. El contrincante elige una dirección; mueve 8D6cm la plantilla en esa dirección para determinar el punto de impacto(6) Embozado. El Mortero no dispara este turno</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -2390,7 +2389,7 @@ disparar.</description>
                 <infoLink id="6851-faec-cf08-ebf5" name="La vida no tiene ningún valor" hidden="false" targetId="83fc-d023-f97e-004d" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="75.0"/>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="60.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -3797,12 +3796,11 @@ ganan la regla Salir desde abajo. Los personajes no pueden unirse a unidades de 
           </constraints>
           <rules>
             <rule id="9213-8c84-45fd-0d04" name="Tuneladora de disformidad" hidden="false">
-              <description>Cada unidad de Acechantes Nocturnos puede ir acompañada de
-una Tuneladora de Disformidad. Se considera un Grupo de apoyo que puede disparar en cada fase de disparo como si tuvieran una Pistola de Piedra Bruja; además, si está en una unidad de Excavadores, la unidad puede repetir la tirada para ver si aparecen debido a la regla Salir desde abajo.</description>
+              <description>Cada unidad de Acechantes Nocturnos puede ir acompañada de una Tuneladora de Disformidad. Se considera un Grupo de apoyo que, si está en una unidad de Excavadores, le permite repetir la tirada para ver si aparecen debido a la regla Salir desde abajo. Adicionalmente, en combate cuerpo a cuerpo puede hacer dos ataques de F4 (ataques mágicos).</description>
             </rule>
           </rules>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="60.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4445,8 +4443,7 @@ uno o más Señores de las Bestias en la unidad, ésta no sufre Estupidez (a no 
           <description>La dotación tiene Furia Asesina (así que son inmunes a psicología y tienen un ataque adicional mientras no pierdan el combate); sin embargo, saben que su deber es permanecer junto a la máquina de guerra, así que no se ven sujetos a las cargas obligatorias de la Furia Asesina.</description>
         </rule>
         <rule id="7be4-98bf-a72c-585b" name="Garrapulta de plaga" hidden="false">
-          <description>La Garrapulta dispara como una Catapulta. Las miniaturas bajo la plantilla
-(parciales a 4+) sufren un impacto de F4 que Anula armaduras. Cualquier unidad que sufra una baja o más por la Garrapulta tendrá que hacer un chequeo de pánico.</description>
+          <description>Catapulta. Puede disparar a cualquier unidad entre 30cm y 120cm. Usa la plantilla grande (12cm). Impactos de F2 que anulan armaduras. La miniatura bajo el agujero central recibe un impacto de F5, anula armadura, heridas múltiples 1D3. Realiza Ataques mágicos</description>
         </rule>
       </rules>
       <infoLinks>
@@ -4506,10 +4503,6 @@ uno o más Señores de las Bestias en la unidad, ésta no sufre Estupidez (a no 
           <description>Las Ratas Ogro (o Ratas Ogro Mejoradas) deben colocarse en primera fila todas, mientras que los Señores de las Bestias y los personajes deben ir en segunda fila de la unidad. En caso de impactos a distancia cada uno se distribuye con 1D6; 1-4 se impacta una Rata Ogro Mejorada y 5-6 se impacta
 un Señor de las Bestias. Las Ratas Ogro Mejoradas nunca pueden aplicar bonificador por filas al calcular resultado del combate.</description>
         </rule>
-        <rule id="cea2-e998-15a0-504c" name="Control del señor de las bestias" hidden="false">
-          <description>Mientras la unidad de Ratas Ogro (o Ratas Ogro mejoradas) tenga
-uno o más Señores de las Bestias en la unidad, ésta no sufre Estupidez (a no ser que el propio Señor de las Bestias sufra de Estupidez, por ejemplo a causa de un hechizo).</description>
-        </rule>
         <rule id="a4c6-4b56-6faf-22c5" name="Proporción" hidden="false">
           <description>No puedes tener más Señores de las Bestias que Ratas Ogro mejoradas.</description>
         </rule>
@@ -4528,7 +4521,8 @@ uno o más Señores de las Bestias en la unidad, ésta no sufre Estupidez (a no 
       <selectionEntries>
         <selectionEntry id="ac1f-85c7-7985-7f3a" name="Ratas ogro mejoradas" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a117-ecf3-042a-245b" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a117-ecf3-042a-245b" type="min"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c100-e979-a2c1-957f" type="max"/>
           </constraints>
           <profiles>
             <profile id="fb87-8311-24d8-c02b" name="Rata ogro mejorada" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -4541,7 +4535,7 @@ uno o más Señores de las Bestias en la unidad, ésta no sufre Estupidez (a no 
                 <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
                 <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
                 <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
-                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
                 <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
                 <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
@@ -4551,24 +4545,13 @@ uno o más Señores de las Bestias en la unidad, ésta no sufre Estupidez (a no 
             </profile>
           </profiles>
           <selectionEntryGroups>
-            <selectionEntryGroup id="03af-a5f1-9e82-2eb0" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="2903-77f9-52ac-9e5b">
+            <selectionEntryGroup id="03af-a5f1-9e82-2eb0" name="Armas" hidden="false" collective="false" import="true">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c13b-77e6-7922-ab1b" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77cb-e9d7-c88c-26ab" type="min"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="2903-77f9-52ac-9e5b" name="Arma de mano" hidden="false" collective="true" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee24-6b84-c06a-fdff" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="706b-8db7-e397-f063" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="6d0c-6fed-9756-f016" name="Arma de piedra bruja" hidden="false" collective="true" import="true" type="upgrade">
+                <selectionEntry id="6d0c-6fed-9756-f016" name="Arma de piedra bruja" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6924-35ad-ee79-095b" type="max"/>
                   </constraints>
@@ -4605,115 +4588,138 @@ uno o más Señores de las Bestias en la unidad, ésta no sufre Estupidez (a no 
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="257f-0abe-26d7-818d" name="Señores de las bestias" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="97bc-85bc-514f-2a62" name="Señor de las bestias" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-              <characteristics>
-                <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
-                <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
-                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-                <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
-                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
-                <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
-                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
-                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
-                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
-                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
-                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="f979-6f84-c51a-f9d2" name="Armas" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a256-bc7d-c23c-ed69" type="max"/>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0011-f694-caa2-e8dc" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="1673-07ea-8ee2-785f" name="Arma de mano" hidden="false" collective="true" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0608-9598-8eb9-d909" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d540-0241-d888-d2b5" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="df38-06e6-371a-3fd9" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="2b04-22e4-262d-9994" name="Látigo" hidden="false" collective="true" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34f5-4f41-8c7c-0628" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6772-1b18-348c-07d1" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="ea58-4036-9cc3-7979" name="Látigo" hidden="false" targetId="bda2-9815-9f77-e671" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-            <selectionEntryGroup id="1d70-e31b-5452-3363" name="Armadura" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae17-c49e-b7e9-3b3d" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d5f-1b28-0676-1d51" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="b3ee-ce43-9498-80c0" name="Armadura ligera" hidden="false" collective="true" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3404-0f9b-90c1-fb27" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="98c4-462f-7278-ae9f" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="b8a7-623f-8af2-bafc" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="5.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3b23-82d5-0cc5-51b0" name="Lanzallamas de disformidad (sólo una rata ogro mejorada)" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="889d-fc09-7d20-fde5" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="077e-f1a1-8f85-a5ad" name="Lanzallamas de disformidad (ver arma en grupo de apoyo)" hidden="false">
-              <description>No es necesario tirar el dado de artillería para determinar la distancia que alcanza el chorro de líquido, simplemente coloca la plantilla de lágrima con la parte estrecha tocando la peana de la miniatura y determina los impactos de la forma habitual.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b7a0-758f-bd05-e7a4" name="Amerratadoras incorporadas (sólo una rata ogro mejorada)" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99f8-0d02-9306-ae2d" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="940c-b1a8-1d07-c448" name="Amerratadoras incorporadas (ver arma en grupo de apoyo)" hidden="false">
-              <description>Se dispara de la misma forma que una Amerratadora, con la diferencia que si se obtienen dobles, en vez de la tabla de problemas de la Amerratadora, suma los dados y la propia unidad de Ratas Ogro mejorada sufre los disparos.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="55.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="99c2-41b3-497e-9577" name="Armas" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ded-dbbd-ef94-9ea8" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d8d-9800-d9d2-0b32" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f827-0b3f-a39e-5a5f" name="Guantelete de Perdición" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca5d-917e-dd5f-1115" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="df00-5640-8b7a-19d0" name="Guantelete de Perdición" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                  <characteristics>
+                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a Cuerpo</characteristic>
+                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Heridas múltiples (1D3)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ecf5-ea67-9e2c-1162" name="Tunelapuños" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c689-3179-8361-9457" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="3568-5a38-0157-ba7b" name="Salir desde Abajo" hidden="false" targetId="8868-40ff-26bd-e9a9" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5e0d-e31d-a1f0-8e2c" name="Guanteletes Electrificados" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbf6-6451-f34a-16ff" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="b0fb-3fbd-cf42-be49" name="Guanteletes Electrificados" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                  <characteristics>
+                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a Cuerpo</characteristic>
+                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Ataques mágicos. Anulan Armadura</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6eed-e16b-6630-705a" name="Armas de proyectiles" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3494-6d51-cd26-0cae" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3fe-372a-87dc-958d" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="1229-ff22-7bf6-6b39" name="Amerratadora" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b3e-e396-59cf-8002" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="1c04-d53c-c743-4d83" name="Amerratadora" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                  <characteristics>
+                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Alcance 20cm</characteristic>
+                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F3</characteristic>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">-1 TSA. Puede mover y disparar (no marchar y disparar). No puede aguantar y disparar. En caso de problemas, resuelve los disparos contra la propia unidad</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="6f73-5bfa-d2af-2a56" name="Amerratadora" hidden="false">
+                  <description>unciona como el grupo de apoyo con los siguientes cambios. Alcance 20cm. F3. -1 TSA. Puede mover y disparar (no marchar y disparar). No puede aguantar y disparar. En caso de problemas, resuelve los disparos contra la propia unidad</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5fc2-149e-61a0-2c67" name="Lanzallamas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70f2-02d3-823a-3044" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="2640-664a-4a91-e0d2" name="Lanzallamas" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                  <characteristics>
+                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de Aliento</characteristic>
+                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F4</characteristic>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91"> Lanza 1D6. Si el resultado es 1, la unidad sufre 1 impacto de F4 con Heridas múltiples 1D3 (resolver como disparos).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="65a9-30dc-b73f-70c0" name="Mortero de Viento Envenenado" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55e4-6b08-97a3-e1d1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="1ecd-807e-915a-a9ee" name="Mortero de Viento Envenenado" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                  <characteristics>
+                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">15-30cm</characteristic>
+                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">En caso de problemas, lanza 1D6 por cada miniatura de la unidad. Por cada resultado de 6, causa 1 herida en la unidad que anula armaduras (resolver como disparos)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="8707-f60b-10da-7b9d" name="Mortero de Viento Envenenado" hidden="false">
+                  <description>Funciona como el grupo de apoyo con los siguientes cambios. Alcance: 15-30cm”. En caso de problemas, lanza 1D6 por cada miniatura de la unidad. Por cada resultado de 6, causa 1 herida en la unidad que anula armaduras (resolver como disparos)”.
+</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="c4a2-4854-66dc-3703" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="45.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
@@ -5666,7 +5672,7 @@ chequeo de Resistencia. Skrolk nunca puede tener más de 4 Heridas.</characteris
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="210.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="190.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5d5e-5127-0e95-93fb" name="Snikch" publicationId="c220-b30e-7003-9bc3" page="47" hidden="false" collective="false" import="true" type="unit">
@@ -6229,7 +6235,7 @@ Destripahuesos sufre un impacto de F5 con Heridas múltiples (1d3).). El  Lanzal
       <rules>
         <rule id="c874-2637-8511-cf41" name="Estaré aquí mismo" hidden="false">
           <comment>Tretch tiene una increíble habilidad para dejar tirada a su unidad en el momento más oportuno.</comment>
-          <description>En la fase de movimiento, si Tretch no ha movido ni se ve sujeto a un movimiento obligatorio (p.e. huida), puede moverse en la subfase de Resto de Movimientos; elige una dirección y mueve 8D6cm (si choca contra una unidad enemiga se considera carga, si choca con una unidad amiga se une a dicha unidad). Tretch puede usar este “movimiento especial” incluso si está trabado en combate cuerpo a cuerpo.</description>
+          <description>Tretch tiene una increíble habilidad para dejar tirada a su unidad en el momento más oportuno. Una vez por turno propio, al inicio de cualquier fase, puede abandonar su unidad y colocarse en la fila frontal de cualquier unidad de Guerreros de Clan o Guerreros Alimaña a menos de 8D6 cm de su actual unidad. Si intenta usar esta habilidad y al lanzar los dados no hay ninguna unidad adecuada lo suficientemente cerca, Tretch se habrá escaqueado del campo de batalla. En ese caso cuenta como baja</description>
         </rule>
         <rule id="08b6-4ef7-dd42-0097" name="Salteadores de Tretch" hidden="false">
           <comment>Tretch es todo un especialista en atacar a enemigos en posiciones desventajosas, un auténtico crack apuñalando a rivales que no están mirando. </comment>
@@ -6598,7 +6604,7 @@ magia que sólamente puede usar el Vidente Gris que va montado en ella. Si el Vi
         <profile id="8956-d3f5-3cfc-ec84" name="Pebetero de la Plaga" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
             <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">0</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
             <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
             <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
             <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
@@ -6607,7 +6613,7 @@ magia que sólamente puede usar el Vidente Gris que va montado en ella. Si el Vi
             <characteristic name="A" typeId="6b2b-37c4-6774-748b"/>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3"/>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">(5+ al jinete, no al pebetero)</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">3+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">4+</characteristic>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Carro</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">5 (4+1 del personaje)</characteristic>
@@ -6618,23 +6624,18 @@ magia que sólamente puede usar el Vidente Gris que va montado en ella. Si el Vi
         <rule id="172a-29b5-2665-1c8e" name="Carro" hidden="false">
           <description>Pese a la regla “Empujado”, el Pebetero se trata a todos los efectos como un carro (causa 1D6 impactos por carga, resulta destruido por impactos de F7+...).</description>
         </rule>
-        <rule id="c70d-6c58-468e-6a50" name="Objetivo grande (mejorado)" hidden="false">
-          <description>Ten en cuenta, además, que esto le permite al Sacerdote de Plaga lanzar hechizos, en caso de tenerlos, por encima de las unidades de menor tamaño y tener 360º de visión. </description>
-        </rule>
         <rule id="8aa4-0ef6-5f15-313a" name="Resistencia a la magia 2" hidden="false"/>
         <rule id="f0e5-38a8-35b7-a79d" name="Pebetero de la Plaga" hidden="false">
-          <description>Trata a todos los efectos un Sacerdote de Plaga montado en Pebetero de Plaga como tratarías un personaje montado en carro (pueden ser atacados de forma separada, los proyectiles se distribuyen 1-5 Pebetero 6 Sacerdote, etc.) excepto que, en combate cuerpo a cuerpo, si el Sacerdote rechaza un desafío, puede esconderse detrás del Pebetero y no podrá ser atacado. El Sacerdote no puede abandonar el Pebetero de forma voluntaria (no puede “desmontarse”). Si el Pebetero es destruido y el Sacerdote sobrevive, automáticamente se incluirá en la unidad que estuviera empujando el Pebetero. En caso de resultar desmoralizada en combate, el Pebetero resultara destruida automáticamente y el Sacerdote podrá huir junto con la unidad que la empujaba. Recuerda que como el Pebetero tiene HA 0, resultara impactado automáticamente en cuerpo a cuerpo. Si por el contrario, fuese el Sacerdote el que muriera, los acólitos podrían seguir accionando el Pebetero cada turno de forma normal.</description>
+          <description>Trata a todos los efectos un Sacerdote de Plaga montado en Pebetero de Plaga como tratarías un personaje montado en carro (pueden ser atacados de forma separada, los proyectiles se distribuyen 1-5 Pebetero 6 Sacerdote, etc.). El Sacerdote no puede abandonar el Pebetero de forma voluntaria (no puede “desmontarse”). Si el Pebetero es destruido y el Sacerdote sobrevive, automáticamente se incluirá en la unidad que estuviera empujando el Pebetero. En caso de resultar desmoralizada en combate, el Pebetero resultara destruida automáticamente y el Sacerdote podrá huir junto con la unidad que la empujaba. Si por el contrario, fuese el Sacerdote el que muriera, los acólitos podrían seguir accionando el Pebetero cada turno de forma normal.</description>
         </rule>
         <rule id="ebf2-7118-304f-2e13" name="Empujado" hidden="false">
           <description>Un Pebetero no mueve por sí solo. Sin embargo, puede incluirse dentro de una unidad de tipo Infantería (situándose en primera fila) como si fuera un personaje montado en Monstruo a todos los efectos. Si está en una unidad de 10 o más miniaturas (excluyendo el Pebetero) tendrá el mismo movimiento que la unidad que lo empuja. Por cada miniatura por debajo de 10 en la unidad, resta 2 al Movimiento; una unidad de 5 o menos miniaturas no puede empujar el Pebetero. Las miniaturas se sitúan alrededor del Pebetero (primero a sus lados y luego detrás); a efectos de calcular el bonificador por filas, cuenta las miniaturas que ocuparía el Pebetero (15 porque va en peana de 60x100). Debes designar qué unidad empujará el Pebetero a principio de la partida; el Pebetero no puede “irse” a otra unidad, la unidad no puede abandonar el Pebetero, y en el caso de un Pebetero
 cuya unidad que empujaba haya sido aniquilada, ninguna otra unidad puede empujarla de nuevo. Ten en cuenta que un Lanzavirotes debe elegir como objetivo al Pebetero o a la unidad que empuja, así que un lanzavirotes disparado contra el Pebetero no “atraviesa” a las filas de la unidad.</description>
         </rule>
         <rule id="06c9-2def-394a-13bb" name="Humos de plaga" hidden="false">
-          <description>Al inicio de cada fase de combate cuerpo a cuerpo, todas las miniaturas (amigas y enemigas) en contacto con el Pebetero deben hacer un chequeo de Resistencia. Si lo fallan, reciben una herida directa (anula tirada de salvación por armadura), esas bajas cuentan para el combate cuerpo a cuerpo. Las miniaturas de tipo Nurgle o tipo Pestilens son inmunes a este efecto (por lo que normalmente lo ideal es colocar a Monjes de Plaga empujando al Pebetero).
-La unidad que empuja el Pebetero gana al inicio de la batalla las reglas Ataques mágicos y Furia asesina. Además, la unidad nunca puede perder la Furia Asesina (por ejemplo al perder un combate). Una unidad con Furia Asesina como los Monjes de Plaga no gana “otra” Furia Asesina por empujar el Pebetero.En cualquier fase de combate cuerpo a cuerpo, los Acólitos pueden hacer oscilar el pebetero. Trata este ataque especial como un ataque con la regla Siempre ataca último e Iniciativa 1. Lanza el dado de artillería en pulgadas*; ese es el número de impactos de F5 que causa a una unidad en su frontal (si hay más de una, reparte de forma equitativa). Si salen problemas efectúa 10 impactos en la unidad que está empujando el Pebetero.
+          <description>Al inicio de cada fase de combate cuerpo a cuerpo, todas las miniaturas (amigas y enemigas) en contacto con el Pebetero deben hacer un chequeo de Resistencia. Si lo fallan, reciben una herida directa (anula tirada de salvación por armadura), esas bajas cuentan para el combate cuerpo a cuerpo. Las miniaturas de tipo Nurgle o tipo Pestilens son inmunes a este efecto (por lo que normalmente lo ideal es colocar a Monjes de Plaga empujaLa unidad que empuja el Pebetero gana Furia Asesina al inicio de la batalla, y no puede perderla mientras siga empujando el Pebetero (por ejemplo al perder un combate, aunque pueda huir como resultado del mismo). Una unidad que ya tuviera Furia Asesina no gana ningún beneficio adicional. Además, la unidad nunca puede perder la Furia Asesina (por ejemplo al perder un combate). Una unidad con Furia Asesina como los Monjes de Plaga no gana “otra” Furia Asesina por empujar el Pebetero.En cualquier fase de combate cuerpo a cuerpo, los Acólitos pueden hacer oscilar el pebetero. Trata este ataque especial como un ataque con la regla Siempre ataca último e Iniciativa 1. Lanza el dado de artillería en pulgadas*; ese es el número de impactos de F5 que causa a una unidad en su frontal (si hay más de una, reparte de forma equitativa).Si salen problemas lanza de nuevo el dado de artillería en inglés y resuelve los impactos que salgan contra la unidad que empuja el Pebetero. En caso de un nuevo resultado de problemas, el Pebetero es destruido sin tirada de salvación de ningún tipo. Resuelve inmediatamente 1D6 impactos de F5 sobre cada una de las unidades que participaban en el combate. En ambos casos, las bajas NO cuentan para el resultado de esa ronda, pero pueden provocar chequeos de pánico al final de la fase. Si lo fallan, reciben una herida directa (anula tirada de salvación por armadura, ataques mágicos
 
-* (Si no dispones de un dado de artillería en pulgadas, puedes usar un dado habitual de 6 caras; de 1-5 multiplica por 2 y obtendrás el número de impactos; con un 6 se consideran Problemas. No se
-considera un D6 a ningún efecto como repeticiones o habilidades, por ejemplo no podría repetirse debido al Fetiche Skaven).</description>
+* (Si no dispones de un dado de artillería en pulgadas, puedes usar un dado habitual de 6 caras; de 1-5 multiplica por 2 y obtendrás el número de impactos; con un 6 se consideran Problemas. No se considera un D6 a ningún efecto como repeticiones o habilidades, por ejemplo no podría repetirse debido al Fetiche Skaven).</description>
         </rule>
         <rule id="c58f-0118-eb7a-aaa0" name="Muerte del sacerdote de plaga" hidden="false">
           <description>Si muere el Sacerdote de Plaga pero el Pebetero no, el Pebetero sigue
