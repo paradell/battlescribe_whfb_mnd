@@ -4545,30 +4545,6 @@ un Señor de las Bestias. Las Ratas Ogro Mejoradas nunca pueden aplicar bonifica
             </profile>
           </profiles>
           <selectionEntryGroups>
-            <selectionEntryGroup id="03af-a5f1-9e82-2eb0" name="Armas" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c13b-77e6-7922-ab1b" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77cb-e9d7-c88c-26ab" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="6d0c-6fed-9756-f016" name="Arma de piedra bruja" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6924-35ad-ee79-095b" type="max"/>
-                  </constraints>
-                  <rules>
-                    <rule id="faed-e13f-e51d-7b5c" name="Arma de piedra bruja" hidden="false">
-                      <description>Las Ratas Ogro Mejoradas pueden equiparse con Armas de piedra bruja (Ataques mágicos, Anulan armadura) por +20 puntos por Rata Ogro Mejorada en la unidad.</description>
-                    </rule>
-                  </rules>
-                  <infoLinks>
-                    <infoLink id="5e40-77d1-6202-8a40" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
             <selectionEntryGroup id="e9d7-7c7a-e33f-9842" name="Armadura" hidden="false" collective="false" import="true" defaultSelectionEntryId="ef17-ee0d-d91b-c6a5">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ef6-e5bd-5b53-1553" type="max"/>
@@ -4594,9 +4570,31 @@ un Señor de las Bestias. Las Ratas Ogro Mejoradas nunca pueden aplicar bonifica
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="99c2-41b3-497e-9577" name="Armas" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="9ded-dbbd-ef94-9ea8" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac1f-85c7-7985-7f3a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="8d8d-9800-d9d2-0b32" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac1f-85c7-7985-7f3a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="9ded-dbbd-ef94-9ea8" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6eed-e16b-6630-705a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="8d8d-9800-d9d2-0b32" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6eed-e16b-6630-705a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ded-dbbd-ef94-9ea8" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d8d-9800-d9d2-0b32" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d8d-9800-d9d2-0b32" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="f827-0b3f-a39e-5a5f" name="Guantelete de Perdición" hidden="false" collective="false" import="true" type="upgrade">
@@ -4647,9 +4645,31 @@ un Señor de las Bestias. Las Ratas Ogro Mejoradas nunca pueden aplicar bonifica
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="6eed-e16b-6630-705a" name="Armas de proyectiles" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="decrement" field="a3fe-372a-87dc-958d" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="99c2-41b3-497e-9577" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="a3fe-372a-87dc-958d" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac1f-85c7-7985-7f3a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="3494-6d51-cd26-0cae" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac1f-85c7-7985-7f3a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="3494-6d51-cd26-0cae" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="99c2-41b3-497e-9577" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3494-6d51-cd26-0cae" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3fe-372a-87dc-958d" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3494-6d51-cd26-0cae" type="min"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3fe-372a-87dc-958d" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="1229-ff22-7bf6-6b39" name="Amerratadora" hidden="false" collective="false" import="true" type="upgrade">
