@@ -6427,57 +6427,7 @@ proyectiles a todos los efectos (incluidos hechizos que dificultan el disparo, m
       </costs>
     </selectionEntry>
     <selectionEntry id="7c4f-cf46-ef62-b476" name="Gigante" hidden="false" collective="false" import="true" type="unit">
-      <profiles>
-        <profile id="dfe8-8c20-0cff-a342" name="Gigante" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">6</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">*</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <rules>
-        <rule id="1b94-9a89-4068-4a36" name="Piernas largas" hidden="false">
-          <description>El Gigante tiene Cruzar( obstáculos ), por lo que puede tratar obstáculos lineales como muros y vallas como terreno abierto. Sin embargo, por cada elemento de este tipo que cruce, debe hacer un chequeo de Caída.</description>
-        </rule>
-        <rule id="62b6-3c5c-d2e7-b75a" name="Caídas" hidden="false">
-          <description>Un Gigante debe hacer un chequeo de Caída cuando pierde un combate; al inicio de la fase de movimiento si está huyendo; cuando cruza un obstáculo; o si empieza a Saltar Arriba y Abajo. Lanza 1D6; con un 1 el Gigante cae, determina la dirección aleatoriamente y usa la plantilla de Gigante caído; las miniaturas bajo ella reciben un impacto de F6 con Heridas Múltiples 1D3; trátalo como Proyectiles (parciales a 4+, ¡Cuidado Señor!, etc). Cuando cae, el Gigante recibe 1 herida. Un Gigante en el suelo no puede atacar (pero no es impactado automáticamente) ni mover; en la fase propia de Resto de movimientos puede levantarse. Un Gigante en el suelo que se vea obligado a huir es aniquilado automáticamente. Si no tienes plantilla de Gigante Caído puedes usar la plantilla circular pequeña.</description>
-        </rule>
-        <rule id="edd6-1db0-bdf3-971e" name="Ataques del gigante" hidden="false">
-          <description>Cuando sea el turno de atacar del Gigante (iniciativa, carga, etc) di contra quién lucha este turno el Gigante y determina qué ataque hace de forma aleatoria (lanza 1D6).
-Contra miniaturas de tipo Monstruo, Carro, Infantería monstruosa o con la regla Objetivo grande, el Gigante hace los siguientes ataques:
--1: Gritar y vocear. El Gigante no hace ninguna baja pero gana el combate por 2 puntos automáticamente (el enemigo pierde el combate automáticamente por -2). Si el enemigo no ha luchado antes de que el gigante haga Gritar y Vocear, las miniaturas en contacto peana con peana con el Gigante no podrán luchar (sí las armadas con lanza o pica por ejemplo). Se aplica de la misma forma contra No Muertos y Demonios (pierden de 2 el combate).
--2-4: Estrangular con las cadenas. Elige una única miniatura de la unidad objetivo (o una miniatura individual); dicha miniatura debe hacer una tirada de Resistencia (igual o menos que su Resistencia en 1D6). Si lo supera, no pasa nada. Si no lo supera, la miniatura recibe 2D6 heridas (sin posibilidad de tirada de salvación por armadura). En caso de miniaturas compuestas por diversas partes (personaje en carro, por ejemplo) debes indicar a qué parte atacas.
--5-6: Kabezazo. El Gigante causa 1 herida directa a una miniatura enemiga en contacto (sin posibilidad de tirada de salvación por armadura); si la miniatura enemiga sigue viva (y ha sido herida por el Kabezazo), pierde sus ataques hasta final de turno. 
-
-Contra el resto de miniaturas (infantería, caballería, enjambres, etc) el Gigante hace los siguientes ataques:
--1: Gritar y vocear (ver arriba).
--2: Saltar arriba y abajo. El Gigante debe hacer un chequeo de Caída. Si no lo supera, las heridas causadas en la caída (si hay) cuentan para la Resolución del Combate. Si lo supera, el Gigante causa 2D6 impactos de F6 en la unidad (distribuye como disparos si es necesario). Una vez el Gigante ha empezado a saltar arriba y abajo no hay quien lo pare, así que si el combate sigue el siguiente turno, automáticamente hará un Saltar arriba y abajo (¡y así hasta que se caiga o uno de los bandos huya!).
--3: Agarrar y... El Gigante agarra una de las miniaturas y... lanza 1D6.
----1: Pa’ la saca. La miniatura se guarda en la bolsa para un tentempié por la noche. Se considera baja (retírala del juego), pero si el Gigante muere, las miniaturas “guardadas en la bolsa” conseguirán escapar así que NO contarán como baja para calcular puntos de victoria (pero no vuelven a la batalla, ni siquiera si es un personaje individual; por ejemplo, si es un hechicero, no genera dados de energía ni dispersión ni puede usar objetos ni lanzar hechizos, etc). En caso de que el General esté en la saca y salga, el oponente tampoco gana los +100PV por muerte del General (aunque, de nuevo, el General sale del campo de batalla).
----2: ¡Toma! El Gigante lanza la miniatura contra su unidad como si fuera una piedra. La minia tura agarrada recibe una herida sin posibilidad de salvación por armadura ni especial. La unidad que ha recibido el “golpe” recibe 1D6 impactos de F3.
----3: ¡Pa’llá que va! El Gigante lanza la miniatura contra una unidad lejana. Comprueba qué unidades enemigas hay a 30cm o menos del Gigante; el Gigante hace un ¡Toma! contra una de esas unidades, determina cuál aleatoriamente.
----4: ¡Choof! El Gigante aplasta la miniatura. No hace falta explicar nada más. Retírala como baja directamente (sin importar tiradas de salvación ni nada por el estilo).
----5: ¡Ñam! El Gigante se come la miniatura. Ehum... lo mismo que en el caso anterior.
----6: Pa’ la saca y... La miniatura se considera “en la saca” (ver resultado de 1). Además, elige una segunda miniatura de la unidad; dicha miniatura puede hacer un único ataque (sin importar
-su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Gigante la suelta y no hace más ataques. Si no consigue herir al Gigante, lanza en esta tabla a ver qué hace con la miniatura.
--4-6: Barrido con las cadenas. El Gigante hace un barrido con las cadenas. La unidad recibe 1D6 impactos de F6.</description>
-        </rule>
-        <rule id="62c7-93d5-75b3-b810" name="Muerte del gigante" hidden="false">
-          <description>Cuando el Gigante muere, también cae; determina la dirección aleatoriamente y usa la plantilla de Gigante caído; las miniaturas bajo ella reciben un impacto de F6 con Heridas Múltiples 1D3; trátalo como Proyectiles (parciales a 4+, ¡Cuidado Señor!, etc). 
-</description>
-        </rule>
         <rule id="77b6-d125-42ad-7466" name="Inmune a pánico de pequeñajos" hidden="false">
           <description>Los gigantes son inmunes al pánico provocado por unidades de infantería, bestias de guerra o caballería que sean destruidos, huyan o se desmoralicen.</description>
         </rule>
@@ -6485,13 +6435,13 @@ su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Giga
       <infoLinks>
         <infoLink id="3866-2ed9-1fdb-b0a8" name="Dios del Caos" hidden="false" targetId="6aae-04fe-3715-466c" type="rule"/>
         <infoLink id="07a5-23d8-9195-1ffb" name="Marcas del Caos" hidden="false" targetId="7a29-db77-2ea1-6f3d" type="rule"/>
-        <infoLink id="1d07-ba87-4697-69d4" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
-        <infoLink id="ecd2-28a4-c277-680d" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
-        <infoLink id="2ab1-7668-88ae-6820" name="Tozudez" hidden="false" targetId="ad33-61eb-3490-bb38" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="00a5-1e44-f4e9-de35" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="a9f3-e386-203d-aadd" name="Gigante" hidden="false" collective="false" import="true" targetId="192e-6fa7-d246-dffe" type="selectionEntry"/>
+      </entryLinks>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="205.0"/>
       </costs>
