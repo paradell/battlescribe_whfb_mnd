@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7ab5-64c7-4c6f-e0e1" name="Mercenarios MDN" revision="6" battleScribeVersion="2.03" authorName="Aleix Paradell" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7ab5-64c7-4c6f-e0e1" name="Mercenarios MDN" revision="7" battleScribeVersion="2.03" authorName="Aleix Paradell" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="4e39-0109-f7ec-5785" name="Mercenarios MDN 2023"/>
   </publications>
@@ -8059,6 +8059,13 @@ Es decir, cuando se declara la carga, el portador de la pica debe declarar que l
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="52bd-b192-b713-3dca" name="Armaduras mágicas" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="e5c0-7f83-1fbd-1ec7" value="2.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="328b-ddd6-f3b1-db14" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5c0-7f83-1fbd-1ec7" type="max"/>
       </constraints>

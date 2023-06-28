@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d3b3-94b1-5e8a-2250" name="Altos Elfos MDN" revision="6" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d3b3-94b1-5e8a-2250" name="Altos Elfos MDN" revision="7" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="010e-3751-f396-5afc" name="Altos Elfos MDN"/>
   </publications>
@@ -9085,6 +9085,13 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="5a26-8e40-81f5-cd7e" name="Armaduras mágicas" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="29b2-1345-09bf-0738" value="2.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="328b-ddd6-f3b1-db14" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29b2-1345-09bf-0738" type="max"/>
       </constraints>

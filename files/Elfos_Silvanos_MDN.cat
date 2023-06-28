@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="712f-e863-4d8b-f9aa" name="Elfos Silvanos MDN" revision="3" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="712f-e863-4d8b-f9aa" name="Elfos Silvanos MDN" revision="4" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="807d-b1e5-9c8a-f9d8" name="Elfos Silvanos MDN 2022"/>
   </publications>
@@ -6850,6 +6850,13 @@ Por otro lado, las unidades de Guardia del bosque (incluyendo Exploradores) se c
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="d6f9-1287-470c-c775" name="Armaduras mágicas" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="fbe0-0256-8c2c-6347" value="2.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="328b-ddd6-f3b1-db14" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbe0-0256-8c2c-6347" type="max"/>
       </constraints>

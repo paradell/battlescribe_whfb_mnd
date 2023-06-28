@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d7c5-1d65-c35a-2131" name="Imperio MDN" revision="5" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d7c5-1d65-c35a-2131" name="Imperio MDN" revision="6" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="0291-b199-d026-56a7" name="MdN Imperio"/>
   </publications>
@@ -13232,6 +13232,13 @@ Ten en cuenta que los Ingenieros no son inmunes al veneno, así que por cada ata
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="d506-e576-208a-8b73" name="Armaduras mágicas" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="b510-44e4-fc55-3f3f" value="2.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="328b-ddd6-f3b1-db14" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b510-44e4-fc55-3f3f" type="max"/>
       </constraints>
