@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5e75-a17b-a3f4-ab3b" name="Warhammer Fantasy - MDN" revision="13" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="5e75-a17b-a3f4-ab3b" name="Warhammer Fantasy - MDN" revision="14" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="53ea-00f4-9046-81ff" name="puntos" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -676,6 +676,95 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="192e-6fa7-d246-dffe" name="Gigante" page="44" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="a9bc-f4cc-be3c-1e31" name="Gigante" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">6</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">*</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="ed12-bb53-ad00-71f6" name="Piernas largas" hidden="false">
+          <description>El Gigante tiene Cruzar( obstáculos ), por lo que puede tratar obstáculos lineales
+como muros y vallas como terreno abierto. Sin embargo, por cada elemento de este tipo que cruce, debe hacer un chequeo de Caída.</description>
+        </rule>
+        <rule id="a825-07e0-ba14-ebce" name="Caídas" hidden="false">
+          <description>Un Gigante debe hacer un chequeo de Caída cuando pierde un combate; al inicio de la fase de movimiento si está huyendo; cuando cruza un obstáculo; o si empieza a Saltar Arriba y Abajo. Lanza 1D6; con un 1 el Gigante cae, determina la dirección aleatoriamente y usa la plantilla de Gigante caído; las miniaturas bajo ella reciben un impacto de F6 con Heridas Múltiples 1D3; trátalo como Proyectiles (parciales a 4+, ¡Cuidado Señor!, etc). Cuando cae, el Gigante recibe 1 herida. Un Gigante en el suelo no puede atacar (pero no es impactado automáticamente) ni mover; en la fase
+propia de Resto de movimientos puede levantarse. Un Gigante en el suelo que se vea obligado a huir es aniquilado automáticamente. Si no tienes plantilla de Gigante Caído puedes usar la plantilla circular pequeña.</description>
+        </rule>
+        <rule id="4ea7-45d2-28d1-323c" name="Ataques del gigante" hidden="false">
+          <description>Cuando sea el turno de atacar del Gigante (iniciativa, carga, etc) di contra quién lucha este turno el Gigante y determina qué ataque hace de forma aleatoria (lanza 1D6).
+Contra miniaturas de tipo Monstruo, Carro, Infantería monstruosa o con la regla Objetivo grande, el Gigante hace los siguientes ataques:
+-1: Gritar y vocear. El Gigante no hace ninguna baja pero gana el combate por 2 puntos automáticamente (el enemigo pierde el combate automáticamente por -2). Si el enemigo no ha luchado antes de que el gigante haga Gritar y Vocear, las miniaturas en contacto peana con peana con el Gigante no podrán luchar (sí las armadas con lanza o pica por ejemplo). Se aplica de la misma forma contra No Muertos y Demonios (pierden de 2 el combate).
+-2-4: Estrangular con las cadenas. Elige una única miniatura de la unidad objetivo (o una miniatura individual); dicha miniatura debe hacer una tirada de Resistencia (igual o menos que su Resistencia en 1D6). Si lo supera, no pasa nada. Si no lo supera, la miniatura recibe 2D6 heridas (sin posibilidad de tirada de salvación por armadura). En caso de miniaturas compuestas por diversas partes (personaje en carro, por ejemplo) debes indicar a qué parte atacas.
+-5-6: Kabezazo. El Gigante causa 1 herida directa a una miniatura enemiga en contacto (sin posibilidad de tirada de salvación por armadura); si la miniatura enemiga sigue viva (y ha sido herida por el Kabezazo), pierde sus ataques hasta final de turno. 
+
+Contra el resto de miniaturas (infantería, caballería, enjambres, etc) el Gigante hace los siguientes ataques:
+-1: Gritar y vocear (ver arriba).
+-2: Saltar arriba y abajo. El Gigante debe hacer un chequeo de Caída. Si no lo supera, las heridas causadas en la caída (si hay) cuentan para la Resolución del Combate. Si lo supera, el Gigante causa 2D6 impactos de F6 en la unidad (distribuye como disparos si es necesario). Una vez el Gigante ha empezado a saltar arriba y abajo no hay quien lo pare, así que si el combate sigue el siguiente turno, automáticamente hará un Saltar arriba y abajo (¡y así hasta que se caiga o uno de los bandos huya!). Debe hacer chequeo de Caída cada fase de combate mientras vaya haciendo Saltar arriba y abajo.
+-3: Agarrar y... El Gigante agarra una de las miniaturas y... lanza 1D6.
+---1: Pa’ la saca. La miniatura se guarda en la bolsa para un tentempié por la noche. Se considera baja (retírala del juego), pero si el Gigante muere, las miniaturas “guardadas en la bolsa” conseguirán escapar así que NO contarán como baja para calcular puntos de victoria (pero no vuelven a la batalla, ni siquiera si es un personaje individual; por ejemplo, si es un hechicero, no genera dados de energía ni dispersión ni puede usar objetos ni lanzar hechizos, etc). En caso de que el General esté en la saca y salga, el oponente tampoco gana los +100PV por muerte del General (aunque, de nuevo, el General sale del campo de batalla).
+---2: ¡Toma! El Gigante lanza la miniatura contra su unidad como si fuera una piedra. La minia tura agarrada recibe una herida sin posibilidad de salvación por armadura ni especial. La unidad que ha recibido el “golpe” recibe 1D6 impactos de F3.
+---3: ¡Pa’llá que va! El Gigante lanza la miniatura contra una unidad lejana. Comprueba qué unidades enemigas hay a 30cm o menos del Gigante; el Gigante hace un ¡Toma! contra una de esas unidades, determina cuál aleatoriamente.
+---4: ¡Choof! El Gigante aplasta la miniatura. No hace falta explicar nada más. Retírala como baja directamente (sin importar tiradas de salvación ni nada por el estilo).
+---5: ¡Ñam! El Gigante se come la miniatura. Ehum... lo mismo que en el caso anterior.
+---6: Pa’ la saca y... La miniatura se considera “en la saca” (ver resultado de 1). Además, elige una segunda miniatura de la unidad; dicha miniatura puede hacer un único ataque (sin importar
+su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Gigante la suelta y no hace más ataques. Si no consigue herir al Gigante, lanza en esta tabla a ver qué hace con la miniatura.
+-4-6: Barrido con las cadenas. El Gigante hace un barrido con las cadenas. La unidad recibe 1D6 impactos de F6.</description>
+        </rule>
+        <rule id="3cbf-a3d7-9ade-7939" name="Muerte del gigante" hidden="false">
+          <description>Cuando el Gigante muere, también cae; determina la dirección aleatoriamente y usa la plantilla de Gigante caído; las miniaturas bajo ella reciben un impacto de F6 con Heridas Múltiples 1D3; trátalo como Proyectiles (parciales a 4+, ¡Cuidado Señor!, etc). 
+</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="0242-3613-6338-e592" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
+        <infoLink id="2d29-dace-2e80-a3d2" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
+        <infoLink id="6fd2-4c89-092e-ab3c" name="Tozudez" hidden="false" targetId="ad33-61eb-3490-bb38" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c39e-2da7-ce35-d1a2" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8e40-376c-3a12-5b43" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="4f2c-6c81-265d-4847">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db8d-6087-f0da-b1ba" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a04-3315-58b5-fd45" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="4f2c-6c81-265d-4847" name="Arma de mano" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d0b-5389-268e-6876" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ade8-6499-f692-6224" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="ed9a-25de-c564-661f" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="205.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="2cde-101a-0b0b-5556" name="Ataca en primer lugar" hidden="false">
@@ -685,12 +774,14 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
     <rule id="be66-a095-abdc-bc2e" name="Exploradores" hidden="false"/>
     <rule id="06ad-f944-9b01-04d1" name="Poder de penetración" hidden="false"/>
     <rule id="6d2d-ccf6-a3a9-f8cb" name="Arma de aliento" hidden="false"/>
-    <rule id="ef4c-a990-a191-3db5" name="Etéreos" hidden="false"/>
+    <rule id="ef4c-a990-a191-3db5" name="Etéreo" hidden="false">
+      <description>No pueden ser heridas, salvo por Ataques mágicos o de otras criaturas etéreas (ten en cuenta que los Etéreos no hacen ataques mágicos, así que no anulan la salvación especial de los demonios por ejemplo).</description>
+    </rule>
     <rule id="f6f9-0701-05a1-df5a" name="Caballería rápida" hidden="false"/>
     <rule id="42bd-162f-4bb2-c783" name="Miedo" hidden="false"/>
     <rule id="31ab-3ff3-e34f-baac" name="Terror" hidden="false"/>
     <rule id="b586-6dd5-cfa2-4287" name="Ataques flamígeros" hidden="false">
-      <description>Se consideran ataques de fuego; las miniaturas con Regeneración no pueden Regenerar las heridas causadas por Ataques de fuego, las miniaturas Inflamables reciben el doble de heridas, etc.</description>
+      <description>Se consideran ataques de fuego; anula Regeneración, las miniaturas Inflamables reciben el doble de heridas, etc. </description>
     </rule>
     <rule id="3dc8-db11-d7b7-cc90" name="Inflamable" hidden="false"/>
     <rule id="90d6-fe4d-a823-314b" name="Volar" hidden="false"/>
@@ -702,7 +793,7 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
     <rule id="3ea2-7beb-2798-15a0" name="Inmune a desmoralización" hidden="false"/>
     <rule id="944f-4d13-dd5d-baa5" name="Impactos por carga" hidden="false"/>
     <rule id="9e28-dc38-0f21-77f6" name="Objetivo grande" hidden="false"/>
-    <rule id="10ae-f386-2057-289d" name="Resistencia mágica" hidden="false"/>
+    <rule id="10ae-f386-2057-289d" name="Resistencia mágica (1)" hidden="false"/>
     <rule id="cb75-6be5-9ffd-0b1e" name="Mover o disparar" hidden="false"/>
     <rule id="ce6a-d9c6-fbdb-1edc" name="Disparos múltiples" hidden="false"/>
     <rule id="5faa-a777-c727-a827" name="Heridas múltiples" hidden="false">
@@ -780,10 +871,12 @@ Sufren una herida menos por los chequeos de Inestabilidad. Esto es adicional al 
       <description>Siempre atacan últimos, aunque hayan cargado, incluso después de las armas a dos manos. Siempre fallan todos los Chequeos de Iniciativa. En caso de dos unidades de Zombis luchando entre sí, lanza un dado para ver cual pega primero.</description>
     </rule>
     <rule id="8868-40ff-26bd-e9a9" name="Salir desde Abajo" hidden="false">
-      <description>Esta unidad (o miniatura individual) puede elegir no desplegar al inicio de la partida. En ese caso, una vez desplegados ambos bandos (incluidos los exploradores) el controlador coloca un Marcador en cualquier punto del campo de batalla. Al inicio de cada turno propio excepto el primero lanza 1D6 para determinar si la unidad sale a la superficie. La dificultad será de 4+ en el segundo turno, 3+ en el tercero 2+ en el cuarto. En caso de no haber conseguido salir antes, en el quinto turno saldrán automáticamente (sin lanzar el dado). En el momento que la unidad regrese a la superficie, el controlador lanzará un dado de artillería y otro de dispersión, y moverá el Marcador exactamente igual que haría con un disparo de catapulta. Una vez colocado el marcador en su posición final, cámbialo por una de las miniaturas de la unidad (o por la miniatura individual, si es sólo una) y sitúa el resto a menos de 5 cm de esta. Como ha salido a la superficie al inicio del turno, la unidad puede actuar normalmente (incluso cargar). Si el Marcador se mueve hasta situarse bajo una unidad enemiga, la unidad entrará automáticamente en combate cuerpo a cuerpo con dicha unidad por el lado que quedara más cerca del Marcador. Si el Marcador se sitúa bajo una unidad propia o bajo terreno impasable, despliega la unidad en el borde más próximo de la unidad u obstáculo. Si el Marcador sale de la mesa, la unidad no tomará parte en la batalla aunque el enemigo no ganará puntos por ella. En caso que el dado de artillería muestre un signo de problemas (!), lanza 1D6: 1-2- La unidad es aniquilada y el enemigo gana sus puntos de victoria. 3-4: La unidad no participará en la batalla pero el enemigo no gana puntos de victoria por ella. 5-6: El enemigo puede recolocar el Marcador en cualquier punto del campo de batalla y desplegar a la unidad cuando emerja, que no podrá mover más ese turno.</description>
+      <description>Esta unidad (o miniatura individual) puede elegir no desplegar al inicio de la partida. En ese caso, una vez desplegados ambos bandos (incluidos los exploradores) el controlador coloca un Marcador en cualquier punto del campo de batalla. Al inicio de cada turno propio excepto el primero lanza 1D6 para determinar si la unidad sale a la superficie. La dificultad será de 4+ en el segundo turno, 3+ en el tercero 2+ en el cuarto. En caso de no haber conseguido salir antes, en el quinto turno saldrán automáticamente (sin lanzar el dado). En el momento que la unidad regrese a la superficie, el controlador lanzará un dado de artillería y otro de dispersión, y moverá el Marcador exactamente igual que haría con un disparo de catapulta. Una vez colocado el marcador en su posición final, cámbialo por una de las miniaturas de la unidad (o por la miniatura individual, si es sólo una) y sitúa el resto a menos de 5 cm de esta. Como ha salido a la superficie al inicio del turno, la unidad puede actuar normalmente (incluso cargar). Si el Marcador se mueve hasta situarse bajo una unidad enemiga, la unidad entrará automáticamente en combate cuerpo a cuerpo con dicha unidad por el lado que quedara más cerca del Marcador. Si el Marcador se sitúa bajo una unidad propia o bajo terreno impasable, despliega la unidad en el borde más próximo de la unidad u obstáculo. Si el Marcador sale de la mesa, la unidad no tomará parte en la batalla aunque el enemigo no ganará puntos por ella. En caso que el dado de artillería muestre un signo de problemas (!), lanza 1D6: 1-2- La unidad es aniquilada y el enemigo gana sus puntos de victoria. 3-4: La unidad no participará en la batalla pero el enemigo no gana puntos de victoria por ella. 5-6: El enemigo puede recolocar el Marcador en cualquier punto del campo de batalla y desplegar a la unidad cuando emerja, que no podrá mover más ese turno.
+Si tienes más de un marcador y corresponde a distintas unidades (p.e. si hay un Escorpión y un Enjambre Funerario) el oponente no puede exigir saber qué hay bajo cada marcador, pero debe quedar claro cuando salga a qué correspondía cada marcador. Por ejemplo, puedes colocar peanas vacías, una con &quot;E&quot; de Escorpión y la otra con &quot;F&quot; de Enjambre Funerario boca abajo, de forma que el oponente no sepa qué hay debajo de cada marcador pero cuando salga se vea claro qué es. O si tienes dos marcadores completamente distintos (uno rojo y uno azul, por ejemplo) puedes apuntar en la lista de ejército que el rojo corresponde al Escorpión y el azul al Enjambre. En resumen: el oponente no sabe qué hay debajo de cada marcador, pero debe estar claro qué hay debajo de cada uno para evitar trampas.</description>
     </rule>
     <rule id="c4fe-b574-87dd-e2e7" name="Petrificar (1d3)" hidden="false">
-      <description>La mirada de esta criatura convierte a sus enemigos en piedra. Se considera un ataque de disparo a todos los efectos. Alcance 20 cm. Cada miniatura de la unidad hace 1D3 impactos automáticos, de F4, Ataques Mágicos y que Anulan armadura. En lugar de comparar con la Resistencia de la miniatura, compárala con su Iniciativa al hacer las tiradas para herir, contando que un resultado de 6 natural siempre se considera un éxito. Las miniaturas o partes de miniatura sin valor de Iniciativa serán inmunes a este ataque. Si una parte de la miniatura a la que se distribuyen impactos tiene más de un valor de Iniciativa, los impactos distribuidos se resolverán contra el valor más alto (por ejemplo, en los impactos distribuidos a un Carro, escoge el valor más alto entre la tripulación y las bestias de tiro).Por ejemplo, en la fase de disparo una unidad compuesta por dos Acechadores Sepulcrales declara que utiliza “Petrificar” contra un Príncipe élfico montado en dragón que está en su ángulo de visión. El jugador de Reyes Funerarios mide la distancia entre ambas unidades y resultan estar a 18 cm, por lo cual pasa a determinar el número de impactos. Lanza 2D3 (uno por cada Acechador en la unidad) y obtiene un total de 5 impactos, los cuales deben de ser distribuidos aleatoriamente entre el jinete y la montura. Tras tirar los dados (1, 3, 3, 5, 6) la montura recibe tres impactos y el jinete dos. El dragón tiene I3, asi que un 3+ bastará para causarle una herida, mientras que el Príncipe tiene I8, por lo cual se necesitará un 6+. El jugador de Reyes Funerarios efectúa las tiradas para herir y el dragón recibe dos heridas que no podrá salvar utilizando su piel escamosa, mientras que el príncipe recibe sólamente una... ¿tendrá el elfo algún objeto que proporcione tirada de Salvación Especial?</description>
+      <description>La mirada de esta criatura convierte a sus enemigos en piedra. Se considera un ataque de disparo a todos los efectos. Alcance 20 cm. Cada miniatura de la unidad hace 1D3 impactos automáticos, de F4, Ataques Mágicos y que Anulan armadura. En lugar de comparar con la Resistencia de la miniatura, compárala con su Iniciativa al hacer las tiradas para herir, contando que un resultado de 6 natural siempre se considera un éxito. Las miniaturas o partes de miniatura sin valor de Iniciativa serán inmunes a este ataque. Si una parte de la miniatura a la que se distribuyen impactos tiene más de un valor de Iniciativa, los impactos distribuidos se resolverán contra el valor más alto (por ejemplo, en los impactos distribuidos a un Carro, escoge el valor más alto entre la tripulación y las bestias de tiro).Por ejemplo, en la fase de disparo una unidad compuesta por dos Acechadores Sepulcrales declara que utiliza “Petrificar” contra un Príncipe élfico montado en dragón que está en su ángulo de visión. El jugador de Reyes Funerarios mide la distancia entre ambas unidades y resultan estar a 18 cm, por lo cual pasa a determinar el número de impactos. Lanza 2D3 (uno por cada Acechador en la unidad) y obtiene un total de 5 impactos, los cuales deben de ser distribuidos aleatoriamente entre el jinete y la montura. Tras tirar los dados (1, 3, 3, 5, 6) la montura recibe tres impactos y el jinete dos. El dragón tiene I3, asi que un 3+ bastará para causarle una herida, mientras que el Príncipe tiene I8, por lo cual se necesitará un 6+. El jugador de Reyes Funerarios efectúa las tiradas para herir y el dragón recibe dos heridas que no podrá salvar utilizando su piel escamosa, mientras que el príncipe recibe sólamente una... ¿tendrá el elfo algún objeto que proporcione tirada de Salvación Especial?
+Las miniaturas con Petrificar pueden Petrificar incluso estando trabadas en combate cuerpo a cuerpo, en su fase de disparo (y como excepción a la regla de que no se pueden efectuar ataques de disparo estando trabados), pero en ese caso siempre deben hacer el ataque a unidades que estén en contacto peana con peana.</description>
     </rule>
     <rule id="8a1a-d015-7dea-240b" name="Dos Personajes en una Montura" hidden="false">
       <description>Se trata de un caso especial, hay dos personajes que comparten montura.
@@ -803,7 +896,7 @@ Desafíos. En caso de desafío, uno de los dos personajes acepta el desafío, pe
       <description>Para todos los chequeos de Liderazgo (incluyendo Chequeos de Psicología y Chequeos de Desmoralización), lanza 3 dados y descartan el dado mayor.</description>
     </rule>
     <rule id="6036-eb25-4a80-5b19" name="Siempre Ataca Primero" hidden="false">
-      <description> Atacarán en primer lugar en combate cuerpo a cuerpo independientemente del atributo de Iniciativa o de quién ha cargado (recuerda que el combate es después de los impactos por carga). Si dos miniaturas o unidades enfrentadas tienen Siempre Ataca Primero, la miniatura o unidad con mayor Iniciativa atacará primero independientemente de otros factores. Si una miniatura tiene Siempre Ataca Primero y Ataca en último lugar (por ejemplo, por usar arma a dos manos), se anulan mutuamente (atacará en orden de iniciativa como si llevara arma de mano). En definitiva, el orden en combate es: Impactos por carga, Siempre ataca primero, Unidades que cargan, Resto de unidades, Ataca en último lugar, Zombis (y demás Descerebrados). En cualquier caso, en cada categoría se “desempata” por orden de iniciativa (p.e. dos unidades que atacan primero, de mayor a menor Iniciativa), y en caso de nuevamente empate, se resuelve al azar (1D6). Esto implica que una unidad con Siempre Ataca Primero con Iniciativa 5 que cargue a una unidad con Siempre Ataca Primero con Iniciativa 8, atacará primero la de Iniciativa 8.</description>
+      <description>Atacarán en primer lugar en combate cuerpo a cuerpo independientemente del atributo de Iniciativa o de quién ha cargado (recuerda que el combate es después de los impactos por carga). Si dos miniaturas o unidades enfrentadas tienen Siempre Ataca Primero, la miniatura o unidad con mayor Iniciativa atacará primero independientemente de otros factores. Si una miniatura tiene Siempre Ataca Primero y Ataca en último lugar (por ejemplo, por usar arma a dos manos), prevalece la regla Siempre Ataca Primero y se ignora Ataca en último lugar. En definitiva, el orden en combate es: Impactos por carga, Siempre ataca primero, Unidades que cargan, Resto de unidades, Ataca en último lugar, Zombis (y demás Descerebrados). En cualquier caso, en cada categoría se “desempata” por orden de iniciativa (p.e. dos unidades que atacan primero, de mayor a menor Iniciativa), y en caso de nuevamente empate, la unidad que pertenezca al bando que ganó la ronda de combate anterior. Si también hay empate así, se resuelve al azar (1D6). Por ejemplo, Esto implica que si una unidad que Siempre Ataca Primero con Iniciativa 5 carga a una unidad que Siempre Ataca Primero con Iniciativa 8, atacará primero la de Iniciativa 8.</description>
     </rule>
     <rule id="ef91-d75b-9ff5-b611" name="Unidad Mágica (X)" hidden="false">
       <description>En la fase de magia, si la unidad no está huyendo, a unidad puede lanzar el hechizo indicado entre paréntesis, como si fuera un objeto portahechizos de nivel igual al número de miniaturas de la unidad en el momento de lanzar el hechizo (así, una unidad formada por 5 miniaturas lanzaría el hechizo con un nivel de energía 5). Ten en cuenta que, pese a ser de tipo Hechicero, la unidad no genera dados de energía ni dispersión, ni puede dispersar hechizos. Es la propia unidad la que lanza el hechizo, así que no puede ser anulado por objetos o efectos que anulen objetos mágicos (como Anulación de Vaul de los Altos Elfos). A todos los demás efectos, se considera un hechizo igual que cualquier otro objeto portahechizos (así que puede usarse Resistencia a la Magia, bonificadores para dispersar, etc.). Deben seguirse siempre todas las restricciones del propio hechizo (línea de visión, hechizos en combate cuerpo a cuerpo, etc.)</description>
@@ -836,6 +929,36 @@ Ejemplo: los Desangradores tienen un atributo de Liderazgo de 8. Supongamos que 
     <rule id="2b46-65d9-da0f-1117" name="Empalar" hidden="false">
       <description>Obtiene un bonificador de F+2 en el turno en que carga.</description>
     </rule>
+    <rule id="4444-5bf5-e849-d729" name="Despliegue Oculto" hidden="false">
+      <description>Antes de la partida, anota en qué unidad está esta miniatura. Si la unidad es destruida (o sale del tablero) antes de ser revelado, esta miniatura se considera baja (el oponente gana sus puntos de victoria). Antes de que la miniatura sea revelada, no podrá ser dañada de ninguna forma (por ejemplo, un hechizo que daña a toda la unidad no dañaría al asesino). Al inicio de cualquier turno, o al inicio de cualquier fase de combate cuerpo a cuerpo, el jugador puede revelar las miniaturas ocultas que quiera. En ese momento las miniaturas pueden colocarse en cualquier parte de la unidad (desplazando miniaturas de tropa), incluso trabadas en combate cuerpo a cuerpo. Ten en cuenta que debe desplazar miniaturas de tropa; si, por ejemplo, en una unidad de frontal 4 hay grupo de mando y personaje, la miniatura con Despliegue Oculto se situará en segunda fila hasta que haya espacio para ella en primera fila. En el turno en que se revela, la miniatura gana la regla Siempre ataca primero. Alternativamente, puedes desplegar esta miniatura como Explorador, o de la forma habitual en una unidad.</description>
+    </rule>
+    <rule id="725c-d300-2664-b9b1" name="Animosidad" hidden="false">
+      <description>Los Pielesverdes siempre necesitan pelea. Cuando no están atacando, buscan al enemigo ¡o se pelean entre ellos!
+Las unidades con la regla especial “Animosidad”, de 5 miniaturas o más, y que no estén huyendo ni trabados en combate ni fuera de la mesa (p.e. porque han perseguido), DEBEN hacer un chequeo de Animosidad al principio de turno. Lanza 1D6 por cada unidad, con un 1 sufren de la Animosidad. Para saber qué hacen, lanza otro 1D6:
+1. ¡A por elloz! Si la unidad está armada con armas de proyectiles, disparará inmediatamente a la unidad (con regla Animosidad) más cercana, sea amiga o enemiga. Considera que tienen 360º de visión, pero sólo disparará la línea frontal (o sólo flanco si la unidad objetivo está en flanco). No necesitas moverlos. Si no hay ninguna unidad con regla Animosidad a alcance de las armas de disparo, se considera una Riña.
+Si la unidad no está armada con armas de proyectiles, comprueba si hay alguna unidad (con regla Animosidad, amiga o enemiga) a la que pudiera cargar (ten en cuenta línea de visión, etc); si no hay ninguna unidad, se considera una Riña. La unidad que ha sacado “A por elloz” cargará a la unidad más cercana a la que pueda cargar; esa unidad objetivo sólo puede Mantener la posición como reacción a la carga. Tras la carga, resuelve una ronda de combate inmediatamente pero sin resultado de combate (sólo impactar, herir, retirar bajas...); tras ese combate, separa la unidad animosa a 3cm de la unidad con quien se ha pegado y luego ambas unidades pueden girarse y encararse en cualquier dirección. Si la unidad que ha recibido la carga es una unidad amiga y no ha hecho todavía chequeo de animosidad este turno, se considera Riña.
+La unidad que ha sacado “A por elloz” no podrá declarar ninguna acción este turno (como mover, disparar o lanzar magia). Además ignora todo efecto psicológico como pánico (no tiene que chequear) o furia asesina, hasta el final del turno del jugador.
+2-5. Riña. La unidad se pelea entre ella sin consecuencias. No podrán declarar ninguna acción este turno (como mover, disparar o lanzar magia). La unidad permanece en su posición y no puede realizar ningún movimiento ni disparo. Además ignora todo efecto psicológico como pánico (no tiene que chequear) o furia asesina hasta el final del turno del jugador.
+6. Vamoz a enseñal-les. La unidad realiza un movimiento completo (no marcha) hacia la unidad enemiga más cercana (visible o no, teniendo en cuenta terreno difícil, giros, etc). A todos efectos se trata como un movimiento normal, pero que se realiza en la fase de inicio de turno. Si choca con una unidad enemiga se considerará carga a todos los efectos. Si no choca, la unidad podrá declarar acciones de la forma habitual (mover, disparar, declarar cargas...). Ten en cuenta que una unidad que saque un 6, a diferencia de los otros resultados, actuará de forma normal el resto del turno: podrían declarar cargas, disparar, las unidades con Furia Asesina se verán sujetas a las cargas obligatorias de la forma habitual, las unidades podrían huir por pánico, etc.
+</description>
+    </rule>
+    <rule id="55ec-b2da-ddc0-7d54" name="Howdah" hidden="false">
+      <description>Se trata de una plataforma montada sobre un monstruo en la que se sitúa la dotación de infantería que se encarga de controlarlo. En general, se trata como un monstruo montado. Todas las Howdahs siguen las siguientes reglas:
+1- Si el monstruo puede ser montura de un personaje, el personaje substituirá a toda la dotación de la howdah.
+2- Los proyectiles contra la unidad se distribuirán como los que recibe un monstruo montado, es decir, 1-4 el impacto afectará a la montura y 5-6 a la dotación (o personaje) en howdah.
+3- En caso de muerte de la dotación (o personaje) se considerará la montura como un monstruo que ha perdido a su jinete, y deberá chequear en la tabla de reacción de monstruos (pag 105 del manual de 6ª).
+4- La howdah permite a la dotación (o personaje) una visión de 360ª a la hora de disparar y hacer magia. Para el resto de acciones (como cargar) se requiere la línea de visión del monstruo (90º).
+5- La dotación (o el personaje) tiene una tirada de salvación por armadura dos puntos mejor (+2) que la armadura del monstruo sobre el que estén. Esta salvación es inmodificable y se aplica mientras estén en la howdah. Por ejemplo, la howdah sobre un estegadón (piel escamosa 4+) da una TSA de 2+ a la dotación (o personaje).
+6- En caso de muerte del monstruo, la dotación (o el personaje) serán desplegados a como infantería a menos de 5cm del lugar donde haya caído su montura. Actuarán como una unidad independiente el resto de la batalla.
+7- Solamente dará puntos de victoria la muerte de la montura. En caso de ir montado por un personaje, el monstruo y el personaje darán puntos de victoria por separado de la forma habitual.
+8- La Potencia de Unidad de un monstruo con una Howdah aumenta hasta NH(número de Heridas)+3.
+</description>
+    </rule>
+    <rule id="c000-e7d3-a7ea-3461" name="Solitario" hidden="false">
+      <description>No puede unirse a unidades</description>
+    </rule>
+    <rule id="d1b4-99dd-ce2e-b23c" name="Resistencia mágica (2)" hidden="false"/>
+    <rule id="fc64-1796-855b-0624" name="Resistencia mágica (3)" hidden="false"/>
   </sharedRules>
   <sharedProfiles>
     <profile id="ee3a-8a10-edff-cefe" name="Alabarda" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
