@@ -25,11 +25,11 @@ Estos ficheros permiten hacer la listas de Battlescribe tanto para Manuscritos d
 | 🦎 [Hombres Lagarto](./files/Hombres_Lagarto_MDN.cat)    | Link a Cargad     | v2017 🟢  | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 |
 | 👑 [Imperio](./files/Imperio_MDN.cat)    | Link a Cargad     | v2017 🟢 | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 |
 | 💰 [Mercenarios](./files/Mercenarios_MDN.cat)   | Link a Cargad     | v2023 🟢  | Sí 🟢  | No 🔴  | No hay 🟢  | Sí 🟢|
-| 💚 [Orcos y Goblins](./files/Orcos_Goblins_MDN.cat)    | Link a Cargad     | Faltan Erratas y Propuestas 🟡  | No 🔴 | No 🔴 | No 🔴 | No 🔴|
+| 💚 [Orcos y Goblins](./files/Orcos_Goblins_MDN.cat)    | Link a Cargad     | v2017 🟢  | No 🔴 | No 🔴 | No 🔴 | 50% 🟡 |
 | ✴️ [Reinos del Caos](./files/Reinos_del_Caos_MDN.cat)   | Link a Cargad     | v2021 🟢    | Sí 🟢 | No 🔴 | No 🔴  | Sí 🟢 |
 | 🍖 [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)   | Link a Cargad     | v2023 🟢    | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 |
 | 💀 [Reyes Funerarios](./files/Reyes_Funerarios_MDN.cat)   | Link a Cargad     | v2020 🟢    |  Sí 🟢 | No 🔴  | No hay 🟢 | Sí 🟢 |
-| 🐀 [Skaven](./files/Skaven_MDN.cat)   | Link a Cargad     | Faltan Erratas y Propuestas 🟡  |  Sí 🟢 | No 🔴 | No 🔴|  Sí 🟢 |
+| 🐀 [Skaven](./files/Skaven_MDN.cat)   | Link a Cargad     | v2018 🟢  |  Sí 🟢 | No 🔴 | No 🔴|  Sí 🟢 |
 
 
 ## Importar los ficheros
