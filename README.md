@@ -17,8 +17,8 @@ Estos ficheros permiten hacer la listas de Battlescribe tanto para Manuscritos d
 | :---     |  :---:  |  :---:      |     :---:      |   :---:             |   :---:             |   :---:             | 
 | 🧝 [Altos Elfos](./files/Altos_Elfos_MND.cat)   | Link a Cargad     | v2022 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢|
 | ⚜️ [Bretonia](./files/Bretonia_MDN_2020.cat)   | Link a Cargad     | v2023 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 |
-| 🦇 [Condes Vampiro](.files/Condes_Vampiro_MND.cat) | Link a Cargad     | v2023 🟢 | Sí 🟢 | Sí 🟢 | No 🔴 | Sí 🟢 |
-| 🧝‍♀️ [Elfos Oscuros](./files/Elfos_Oscuros_MDN.cat)   | Link a Cargad     | v2023 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 |
+| 🦇 [Condes Vampiro](.files/Condes_Vampiro_MND.cat) | Link a Cargad     | v2023 🟢 | Sí 🟢 | Sí 🟢 | 10% 🟡 | Sí 🟢 |
+| 🐍 [Elfos Oscuros](./files/Elfos_Oscuros_MDN.cat)   | Link a Cargad     | v2023 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 |
 | 🍃 [Elfos Silvanos](./files/Elfos_Silvanos_MDN.cat)  | Link a Cargad     | v2022  🟢   | Sí  🟢 | No 🔴 | No hay  🟢 | Sí 🟢 |
 | ⚒️ [Enanos](./files/Enanos_MDN.cat)   | Link a Cargad     | v2017 🟢 | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 |
 | 🔥 [Enanos del Caos](./files/Enanos_del_Caos_MDN.cat)   | Link a Cargad     | v2017 🟢  | Sí 🟢 | No 🔴 | No 🔴 | Sí 🟢 |
