@@ -13,23 +13,23 @@
 ### Ficheros de ejércitos
 Estos ficheros permiten hacer la listas de Battlescribe tanto para Manuscritos de Nuth, como con Warhammer Fantasy Sexta Edición (sin los añadidos de MdN), así cómo sus PJEs y listas alternativas oficiales. Estos ficheros añaden también una capa de lógica ara ayudar en algunos límites y restricciones a la hora de crear las listas. Por ejemplo, te avisa si en un ejército de Reinos Ogros tienes más unidades de Gnoblars que de Ogros. **¡Alerta!** Estas ayudas pueden tener errores por mi parte, o no cubrir algunas situaciones, así que siempre es mejor hacer las listas con el libro de ejercito al lado. En casos de incongruencias entre los ficheros de este repositorio y los libros de ejército (y erratas), haced caso a estos últimos.
 
-| Ejército | PDF MdN | Actualizado | PJs Especiales | Lista de Sexta pura | Listas Alternativas | Límites automáticos | 
+| Ejército | versión fichero Battlescribe | versión PDF MdN | PJs Especiales | Lista de Sexta pura | Listas Alternativas | Límites automáticos | 
 | :---     |  :---:  |  :---:      |     :---:      |   :---:             |   :---:             |   :---:             | 
-| 🧝 [Altos Elfos](./files/Altos_Elfos_MND.cat)   | Link a Cargad     | v2022 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢|
-| ⚜️ [Bretonia](./files/Bretonia_MDN_2020.cat)   | Link a Cargad     | v2023 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 |
-| 🦇 [Condes Vampiro](.files/Condes_Vampiro_MND.cat) | Link a Cargad     | v2023 🟢 | Sí 🟢 | Sí 🟢 | 10% 🟡 | Sí 🟢 |
-| 🐍 [Elfos Oscuros](./files/Elfos_Oscuros_MDN.cat)   | Link a Cargad     | v2023 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 |
-| 🍃 [Elfos Silvanos](./files/Elfos_Silvanos_MDN.cat)  | Link a Cargad     | v2022  🟢   | Sí  🟢 | No 🔴 | No hay  🟢 | Sí 🟢 |
-| ⚒️ [Enanos](./files/Enanos_MDN.cat)   | Link a Cargad     | v2017 🟢 | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 |
-| 🔥 [Enanos del Caos](./files/Enanos_del_Caos_MDN.cat)   | Link a Cargad     | v2017 🟢  | Sí 🟢 | No 🔴 | No 🔴 | Sí 🟢 |
-| 🦎 [Hombres Lagarto](./files/Hombres_Lagarto_MDN.cat)    | Link a Cargad     | v2017 🟢  | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 |
-| 👑 [Imperio](./files/Imperio_MDN.cat)    | Link a Cargad     | v2017 🟢 | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 |
-| 💰 [Mercenarios](./files/Mercenarios_MDN.cat)   | Link a Cargad     | v2023 🟢  | Sí 🟢  | No 🔴  | No hay 🟢  | Sí 🟢|
-| 💚 [Orcos y Goblins](./files/Orcos_Goblins_MDN.cat)    | Link a Cargad     | v2017 🟢  | No 🔴 | No 🔴 | No 🔴 | 50% 🟡 |
-| ✴️ [Reinos del Caos](./files/Reinos_del_Caos_MDN.cat)   | Link a Cargad     | v2021 🟢    | Sí 🟢 | No 🔴 | No 🔴  | Sí 🟢 |
-| 🍖 [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)   | Link a Cargad     | v2023 🟢    | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 |
-| 💀 [Reyes Funerarios](./files/Reyes_Funerarios_MDN.cat)   | Link a Cargad     | v2020 🟢    |  Sí 🟢 | No 🔴  | No hay 🟢 | Sí 🟢 |
-| 🐀 [Skaven](./files/Skaven_MDN.cat)   | Link a Cargad     | v2018 🟢  |  Sí 🟢 | No 🔴 | No 🔴|  Sí 🟢 |
+| 🧝 [Altos Elfos](./files/Altos_Elfos_MND.cat)   | v7     | v2022 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢|
+| ⚜️ [Bretonia](./files/Bretonia_MDN_2020.cat)   | v13     | v2023 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 |
+| 🦇 [Condes Vampiro](.files/Condes_Vampiro_MND.cat) | v14     | v2023 🟢 | Sí 🟢 | Sí 🟢 | 10% 🟡 | Sí 🟢 |
+| 🐍 [Elfos Oscuros](./files/Elfos_Oscuros_MDN.cat)   | v5     | v2023 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 |
+| 🍃 [Elfos Silvanos](./files/Elfos_Silvanos_MDN.cat)  | v4     | v2022  🟢   | Sí  🟢 | No 🔴 | No hay  🟢 | Sí 🟢 |
+| ⚒️ [Enanos](./files/Enanos_MDN.cat)   | v4     | v2017 🟢 | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 |
+| 🔥 [Enanos del Caos](./files/Enanos_del_Caos_MDN.cat)   | v7     | v2017 🟢  | Sí 🟢 | No 🔴 | No 🔴 | Sí 🟢 |
+| 🦎 [Hombres Lagarto](./files/Hombres_Lagarto_MDN.cat)    | v10     | v2017 🟢  | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 |
+| 👑 [Imperio](./files/Imperio_MDN.cat)    | v6     | v2017 🟢 | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 |
+| 💰 [Mercenarios](./files/Mercenarios_MDN.cat)   | v7     | v2023 🟢  | Sí 🟢  | No 🔴  | No hay 🟢  | Sí 🟢|
+| 💚 [Orcos y Goblins](./files/Orcos_Goblins_MDN.cat)    | v8     | v2017 🟢  | No 🔴 | No 🔴 | No 🔴 | 50% 🟡 |
+| ✴️ [Reinos del Caos](./files/Reinos_del_Caos_MDN.cat)   | v3     | v2021 🟢    | Sí 🟢 | Sí 🟢 | No 🔴  | Sí 🟢 |
+| 🍖 [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)   | v7    | v2023 🟢    | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 |
+| 💀 [Reyes Funerarios](./files/Reyes_Funerarios_MDN.cat)   | v11     | v2020 🟢    |  Sí 🟢 | No 🔴  | No hay 🟢 | Sí 🟢 |
+| 🐀 [Skaven](./files/Skaven_MDN.cat)   | v8     | v2018 🟢  |  Sí 🟢 | No 🔴 | No 🔴|  Sí 🟢 |
 
 
 ## Importar los ficheros
