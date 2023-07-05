@@ -15,9 +15,9 @@ Estos ficheros permiten hacer la listas de Battlescribe tanto para Manuscritos d
 
 | Ejército |  versión PDF MdN | PJs Especiales | Lista de Sexta pura | Listas Alternativas | Límites automáticos | versión fichero Battlescribe |
 | :---     |  :---:  |  :---:      |     :---:      |   :---:             |   :---:             |   :---:             | 
-| 🧝 [Altos Elfos](./files/Altos_Elfos_MND.cat)   | v2022 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢| v7     | 
-| ⚜️ [Bretonia](./files/Bretonia_MDN_2020.cat)   | v2023 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 | v13     |
-| 🦇 [Condes Vampiro](.files/Condes_Vampiro_MND.cat) | v2023 🟢 | Sí 🟢 | Sí 🟢 | 10% 🟡 | Sí 🟢 | v14     |
+| 🧝 [Altos Elfos](./files/Altos_Elfos_MND.cat)   | v2022 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢| v8     | 
+| ⚜️ [Bretonia](./files/Bretonia_MDN_2020.cat)   | v2023 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 | v14     |
+| 🦇 [Condes Vampiro](.files/Condes_Vampiro_MND.cat) | v2023 🟢 | Sí 🟢 | Sí 🟢 | 3/8 🟡 | Sí 🟢 | v15     |
 | 🐍 [Elfos Oscuros](./files/Elfos_Oscuros_MDN.cat)   | v2023 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 | v5     |
 | 🍃 [Elfos Silvanos](./files/Elfos_Silvanos_MDN.cat)  | v2022  🟢   | Sí  🟢 | No 🔴 | No hay  🟢 | Sí 🟢 | v4     |
 | ⚒️ [Enanos](./files/Enanos_MDN.cat)   | v2017 🟢 | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 | v4     |

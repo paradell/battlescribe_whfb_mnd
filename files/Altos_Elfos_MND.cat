@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d3b3-94b1-5e8a-2250" name="Altos Elfos MDN" revision="7" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d3b3-94b1-5e8a-2250" name="Altos Elfos MDN" revision="8" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="010e-3751-f396-5afc" name="Altos Elfos MDN"/>
   </publications>
@@ -9076,11 +9076,62 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="1173-effb-aef1-f96c" name="Espada de batalla" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e6ae-74b9-3def-4a72" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0df4-110e-6e37-bc5d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5104-eab5-ebfe-52e2" name="Espada de batalla" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+              <characteristics>
+                <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
+                <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario</characteristic>
+                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">+1A</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f47a-6e5c-cd09-7e56" name="Espada del poder" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4829-336b-82f1-c26f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b4d-b268-bfb7-62e6" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="929c-c757-b037-748a" name="Espada del poder" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+              <characteristics>
+                <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
+                <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario + 1</characteristic>
+                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="15.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="98e6-43d3-6046-35be" name="Espada veloz" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5fb3-84c1-faf2-bbd8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe07-e33f-cacc-82db" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8e9f-5082-4aa3-a5bd" name="Espada veloz" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+              <characteristics>
+                <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
+                <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario</characteristic>
+                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">+1 a impactar</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="db9e-8628-ba30-9fb0" name="Espada de batalla" hidden="false" collective="false" import="true" targetId="69bd-241b-6410-b24b" type="selectionEntry"/>
-        <entryLink id="ed2d-eb81-631a-9e8a" name="Espada del poder" hidden="false" collective="false" import="true" targetId="a821-079a-d95c-ae79" type="selectionEntry"/>
-        <entryLink id="4993-c147-8e8e-a238" name="Espada veloz" hidden="false" collective="false" import="true" targetId="b07b-6153-f204-abb9" type="selectionEntry"/>
         <entryLink id="1f8e-0394-dec1-6038" name="Mordisco de acero" hidden="false" collective="false" import="true" targetId="e0dd-a28e-f483-4cbd" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
@@ -9354,22 +9405,35 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="1eed-ae73-6ad7-ce0a" name="Talismán de protección" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7294-cbe8-1a95-cd96" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f41-f0c1-9b6e-5341" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ffd2-cd47-a0b5-f7c9" name="Talismán de protección" hidden="false" typeId="7e35-c20a-e9e9-6dad" typeName="Talismán">
+              <characteristics>
+                <characteristic name="Protección" typeId="9f41-c15e-1f5f-9d01">TSE 6+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="5692-bbae-7b76-7b6c" name="Talismán de protección" hidden="false" collective="false" import="true" targetId="f236-62d7-dea6-1d1c" type="selectionEntry"/>
-      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="72f3-9387-49db-3a7c" name="Objetos arcanos" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="decrement" field="3c84-b2b2-62e2-501e" value="1.0">
           <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b857-09e0-e462-74f7" type="atLeast"/>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7795-848d-295f-2ebc" type="atLeast"/>
           </conditions>
         </modifier>
         <modifier type="increment" field="3c84-b2b2-62e2-501e" value="1.0">
           <repeats>
-            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc1c-34ec-bb3f-6638" repeats="1" roundUp="false"/>
-            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b857-09e0-e462-74f7" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e01e-61d1-add9-236c" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7795-848d-295f-2ebc" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
       </modifiers>
@@ -9489,12 +9553,47 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="069e-6ddc-774f-a0a7" name="Báculo del hechicero" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="439e-a219-ae96-c820" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3de2-81a1-fb58-ea46" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8759-62bd-5bb4-2a0c" name="Báculo del hechicero" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+              <characteristics>
+                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">El portador tiene un +1 a las tiradas para dispersar hechizos.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="45.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7795-848d-295f-2ebc" name="Piedra de energía" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="854a-c93d-9850-6cc0" name="Piedra de energía" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+              <characteristics>
+                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Un solo uso. +2 dados para lanzar un hechizo. Este objeto puede repetirse en el mismo personaje o en otros.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e01e-61d1-add9-236c" name="Pergamino de dispersión" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="a3cc-0da6-a078-a852" name="Pergamino de dispersión" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+              <characteristics>
+                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Un solo uso. Dispersa el hechizo objetivo. Este objeto puede repetirse en el mismo personaje o en otros.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="76a8-64c4-a931-4daf" name="Báculo del hechicero" hidden="false" collective="false" import="true" targetId="5328-047a-575d-012f" type="selectionEntry"/>
-        <entryLink id="64db-4262-3b01-7539" name="Pergamino de dispersión" hidden="false" collective="false" import="true" targetId="fc1c-34ec-bb3f-6638" type="selectionEntry"/>
-        <entryLink id="bdbb-f4a9-937d-9b89" name="Piedra de energía" hidden="false" collective="false" import="true" targetId="b857-09e0-e462-74f7" type="selectionEntry"/>
-      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="a214-ca81-c7c9-96ad" name="Objetos hechizados" hidden="false" collective="false" import="true">
       <constraints>
@@ -9748,10 +9847,23 @@ flamígeros. Cualquier unidad enemiga que reciba 1 o más bajas a causa de este 
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="15.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="2496-314c-a70a-6607" name="Estandarte de guerra" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="41f3-43dc-e6fa-bc45" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5965-f4d6-90b3-a061" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="bedc-97f0-7872-1b27" name="Estandarte de guerra" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+              <characteristics>
+                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">+1 a la resolución de combate</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="8832-07fe-2e55-003b" name="Estandarte de guerra" hidden="false" collective="false" import="true" targetId="d882-b4a2-c25e-b2fe" type="selectionEntry"/>
-      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="d08a-3077-9fe2-3b1b" name="Honores" hidden="false" collective="false" import="true">
       <selectionEntries>
