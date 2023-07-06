@@ -7468,7 +7468,6 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
       </profiles>
       <infoLinks>
         <infoLink id="0108-bc51-b1bb-8cc2" name="No Muerto" hidden="false" targetId="0525-da82-46c3-ea36" type="rule"/>
-        <infoLink id="e190-d9e4-a7ae-b41f" name="Estandarte de Batalla No Muerto" hidden="false" targetId="9ac7-cb60-cd5b-8c07" type="rule"/>
         <infoLink id="df4e-ee88-7fcc-88a0" name="Volar" hidden="false" targetId="90d6-fe4d-a823-314b" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -11216,7 +11215,7 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
             <constraint field="selections" scope="parent" value="40.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0639-af26-19b3-5c0a" type="max"/>
           </constraints>
           <selectionEntryGroups>
-            <selectionEntryGroup id="dcb4-53e7-87eb-631a" name="Armas" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="dcb4-53e7-87eb-631a" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="955d-46cc-2582-0194">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27d6-078e-ccb8-054f" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f77-0e74-c070-cf49" type="min"/>
@@ -11307,6 +11306,7 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
         <infoLink id="d17c-81aa-76d5-e52f" name="Descerebrados" hidden="false" targetId="4c92-bc58-1b38-9074" type="rule"/>
         <infoLink id="04fe-7423-41c6-37fb" name="Personajes y unidades (si uno de los dos es No Muerto y el otro no)" hidden="false" targetId="a259-f8a4-4181-1bc4" type="rule"/>
         <infoLink id="cef4-a67b-af4b-a9a5" name="No Muerto" hidden="false" targetId="0525-da82-46c3-ea36" type="rule"/>
+        <infoLink id="3e8b-8aea-e0f5-ba6d" name="Artilleros Zombi. " hidden="false" targetId="2b62-dbe0-638b-068e" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4189-fc00-3516-d131" name="New CategoryLink" hidden="false" targetId="ba68-224b-3224-a908" primary="true"/>
@@ -11317,13 +11317,8 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="551f-f737-230e-7a2c" type="min"/>
             <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6dc-865c-7acd-a379" type="max"/>
           </constraints>
-          <rules>
-            <rule id="456a-6bb0-2ffc-1ac5" name="Artilleros Zombi. " hidden="false">
-              <description>Aunque tengan HP0, los Zombis impactan si obtienen un 6 en la tirada para impactar; no obstante, si sale 1 en la tirada para impactar, se resuelve contra la propia unidad que ha disparado</description>
-            </rule>
-          </rules>
           <selectionEntryGroups>
-            <selectionEntryGroup id="1583-7721-0381-1aa2" name="Armas" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="1583-7721-0381-1aa2" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="8481-0748-ca49-49df">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="529d-df34-35e2-ef83" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7633-fa4a-8d57-5a5f" type="min"/>
@@ -11455,6 +11450,727 @@ de las armas). Sin embargo, si usa arma mágica se pierde.</description>
       </categoryLinks>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="54dc-b53b-fd29-b855" name="Artilleros de Cubierta" publicationId="a7e1-2ac1-f810-c12d" page="70" hidden="true" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2790-523d-7bff-8e74" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="61a5-ecef-66fa-045f" value="-1.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="61a5-ecef-66fa-045f" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="4b2b-b7bf-ddad-0637" name="Dos por uno" hidden="false">
+          <description>Los Artilleros de Cubierta se montan en una peana de caballería y tienen Potencia de unidad 2 (aunque son Infantería). Disponen de una tirada de salvación por armadura de 6+.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="577e-d354-6c12-668d" name="No Muerto" hidden="false" targetId="0525-da82-46c3-ea36" type="rule"/>
+        <infoLink id="4b52-6354-b775-dbbc" name="Descerebrados" hidden="false" targetId="4c92-bc58-1b38-9074" type="rule"/>
+        <infoLink id="c79d-1cfa-4186-a967" name="Artilleros Zombi. " hidden="false" targetId="2b62-dbe0-638b-068e" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="3388-85a5-8656-37ae" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="9f26-a0cd-7802-d8bd" name="Artilleros de cubierta" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec74-5df6-aa78-93c8" type="min"/>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09b5-6686-737f-86ae" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="cf2a-4fe6-2db7-a41f" name="Artilleros de cubierta" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">0</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">2</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, No Muerto, Zombi</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="7e4c-55da-855b-8e82" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="8693-d9ba-75cd-acfb">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6d8-b51c-98c0-087f" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5227-fe14-1aa9-61ec" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="8693-d9ba-75cd-acfb" name="Arma de mano" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e13-c6b5-6e93-f140" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a68-5e8c-5ea0-e834" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="47ae-20cb-c35f-21df" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="a0e3-8520-4eaf-6f99" name="Armas de proyectiles" hidden="false" collective="false" import="true" defaultSelectionEntryId="3493-cc04-8375-8b9f">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a40-7833-bae0-56ca" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a1f-304e-5a54-0c87" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="3493-cc04-8375-8b9f" name="Falconete" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e632-d760-e37a-64a4" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9ff-607a-823b-11ff" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="216a-78a6-052d-eb1d" name="Falconete" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                      <characteristics>
+                        <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">90cm</characteristic>
+                        <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F6</characteristic>
+                        <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry id="367a-321d-9422-d35f" name="Carronada" publicationId="a7e1-2ac1-f810-c12d" page="71" hidden="true" collective="false" import="false" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2790-523d-7bff-8e74" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="f2ce-cf04-b5de-1425" value="-1.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2ce-cf04-b5de-1425" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="4b0c-8894-4efa-9e96" name="Carronada" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354"/>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4"/>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">7</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f"/>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b"/>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3"/>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Máquina de guerra</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="ff00-6b72-ae59-c9dd" name="Carronada" hidden="false">
+          <description>La Carronada es un Cañón (consulta las páginas 122-123 del Reglamento de Warhammer), con las siguientes excepciones: puede Moverse y disparar, tiene un alcance de 90cm, y sus impactos se resuelven con Fuerza 7 (siguen anulando armadura y causan Heridas Múltiples 1D3).</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="ed97-da45-0318-2097" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="9200-07dc-dd6e-8da3" name="Dotación" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7232-b694-a722-3493" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec96-7945-dbe4-a49b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="916a-5513-260e-4283" name="Dotación" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">0</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">2</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, No Muerto, Zombi</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="251c-3e97-4203-1908" name="No Muerto" hidden="false" targetId="0525-da82-46c3-ea36" type="rule"/>
+            <infoLink id="1613-e9fe-3630-1e0d" name="Descerebrados" hidden="false" targetId="4c92-bc58-1b38-9074" type="rule"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="6068-55a0-ef0f-bb82" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="2ba0-7790-f950-6ded">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0df2-aa65-2898-ea72" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="655d-156e-4807-90ec" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="2ba0-7790-f950-6ded" name="Arma de mano" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5370-ee3d-5069-5a23" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a484-1240-796e-2c10" type="min"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="f5b9-11fe-8cd3-3a44" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="70.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0d77-3650-5736-6bf8" name="Ogros zombi" publicationId="a7e1-2ac1-f810-c12d" page="71" hidden="true" collective="false" import="false" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2790-523d-7bff-8e74" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="b6e4-526f-5ff1-29ce" value="-1.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6e4-526f-5ff1-29ce" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="5c88-a184-467e-961a" name="Ataques aleatorios (1d6)" hidden="false"/>
+      </rules>
+      <infoLinks>
+        <infoLink id="39eb-6550-5603-793b" name="Descerebrados" hidden="false" targetId="4c92-bc58-1b38-9074" type="rule"/>
+        <infoLink id="37dd-f40b-fb2c-76e3" name="No Muerto" hidden="false" targetId="0525-da82-46c3-ea36" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="f02b-4749-b135-f055" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="eb1d-6ce1-b611-d81a" name="Ogros zombi" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="296d-c5f8-68f4-ca8c" type="min"/>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f49-ba5b-7bab-f27d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="cc07-e4fa-3a39-f144" name="Ogro zombi" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">0</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1D6</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">2</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Ogro, No Muerto, Zombi</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="f307-eb34-5f3e-b0e6" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="abfd-73b8-f13f-430f">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5cdf-db80-609b-176a" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03d2-7449-835a-7472" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="abfd-73b8-f13f-430f" name="Arma de mano" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f26b-d20d-76ed-bb61" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="af0e-2ad5-0218-2474" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="244a-fd5d-2db6-afdb" name="Murciélagos Portazombis." publicationId="a7e1-2ac1-f810-c12d" page="69" hidden="true" collective="false" import="false" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2790-523d-7bff-8e74" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="2456-06d8-7106-02af" value="-1.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2456-06d8-7106-02af" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="078e-55a0-0a20-8537" name="Murciélago vampiro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">3</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">0</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="08e9-010b-c29b-6dce" name="Descerebrados" hidden="false" targetId="4c92-bc58-1b38-9074" type="rule"/>
+        <infoLink id="d28f-1a1b-9b2c-4e29" name="Volar" hidden="false" targetId="90d6-fe4d-a823-314b" type="rule"/>
+        <infoLink id="0314-17ac-260f-670f" name="No Muerto" hidden="false" targetId="0525-da82-46c3-ea36" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="f196-4a1f-bd79-f3c7" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="ecff-154f-1994-28a0" name="Murciélagos Portazombis" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd7d-5475-773d-10b0" type="min"/>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4296-b46e-41cf-f014" type="max"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="8499-787a-ac37-fecb" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="bf69-3679-2ff7-6199">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8657-b38f-c6bd-d196" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fcc-881b-21cc-4c2a" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="bf69-3679-2ff7-6199" name="Arma de mano" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bdfd-b2c3-5228-4c40" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dae3-87d5-f051-65d8" type="min"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="d1c5-70a4-5665-9dcc" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ba86-376e-f0ef-3a43" name="Ratas cavavéricas" publicationId="a7e1-2ac1-f810-c12d" page="72" hidden="true" collective="false" import="false" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2790-523d-7bff-8e74" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="7da6-1bde-29ec-ccba" value="-1.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7da6-1bde-29ec-ccba" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9e62-8cee-be75-6bb3" name="Ratas cadavéricas" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">2</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">2</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">0</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Enjambre, Animal, No Muerto, Zombi</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="5d49-ac18-ed72-1df2" name="No Muerto" hidden="false" targetId="0525-da82-46c3-ea36" type="rule"/>
+        <infoLink id="17ee-d238-50d9-f594" name="Hostigadores" hidden="false" targetId="4717-34b5-7e01-9c40" type="rule"/>
+        <infoLink id="75d8-4de2-0515-d2d4" name="Objetivo pequeño." hidden="false" targetId="b6cc-4892-f34e-1e8d" type="rule"/>
+        <infoLink id="bfc2-4d5f-7b57-346d" name="Descerebrados" hidden="false" targetId="4c92-bc58-1b38-9074" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="6c16-6767-c387-dad0" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="9d93-77b3-7389-2b08" name="Ratas cavavéricas" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37d4-5984-1223-24be" type="min"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2cf-ce9b-e2ea-cac9" type="max"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="3f18-fe8e-d951-d15f" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="cd52-c17a-7eb3-da7e">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fcc2-78cb-d495-80f9" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4a3-6243-a197-a395" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="cd52-c17a-7eb3-da7e" name="Arma de mano" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b2d-119f-a2f3-0030" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85c9-b19d-9b30-570c" type="min"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="af27-a766-4bf6-017b" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="45.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9078-7bd6-312f-1fde" name="Leviatán Putrefacto" publicationId="a7e1-2ac1-f810-c12d" page="72" hidden="true" collective="false" import="false" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2790-523d-7bff-8e74" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="17b1-43ad-9d05-e82e" value="-1.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17b1-43ad-9d05-e82e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1dbf-b2b9-3e79-b958" name="Leviatán Putrefacto" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">0</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"></characteristic>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo, No Muerto, Zombi</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">5</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="950e-32e1-e1e3-766f" name="Piel viscosa" hidden="false">
+          <description>Toda miniatura que trate de atacar al Leviatán Putrefacto en combate cuerpo a cuerpo sufre un penalizador de -1 a la tirada para impactar.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="ec7e-a262-a8dd-a79e" name="No Muerto" hidden="false" targetId="0525-da82-46c3-ea36" type="rule"/>
+        <infoLink id="f3c5-a519-d2d4-eccc" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
+        <infoLink id="7451-72c7-de7e-3a85" name="Descerebrados" hidden="false" targetId="4c92-bc58-1b38-9074" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1245-3952-85fd-9d36" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="200.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="47e4-0929-b124-3b90" name="Reina Bess" publicationId="a7e1-2ac1-f810-c12d" page="73" hidden="true" collective="false" import="false" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2790-523d-7bff-8e74" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="853e-9bbe-4362-f351" value="1.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="853e-9bbe-4362-f351" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="df0d-40a3-3dfa-0de4" name="Reina Bess" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354"/>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4"/>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">7</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f"/>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b"/>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3"/>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Máquina de guerra</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"></characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="7815-a851-7077-dac7" name="Reina Bess" hidden="false">
+          <description>La Reina Bess es una máquina de guerra parecida a un cañón gigantesco. Para disparar la máquina, usa el siguiente procedimiento:1. Apunta la Reina Bess hacia el objetivo y declara la distancia a la que quieres dispararla (La Reina Bess tiene un alcance máximo de 180cm).2. Tira dos dados de artillería y añade los resultados obtenidos a la distancia declarada. La bala de cañón recorre esa distancia antes de caer al suelo.3. Por cada ¡Problemas!, debes efectuar una tirada en la tabla de Problemas del cañón (si salen dos Problemas, resuelve primero una tirada y luego la otra).4. Si no han salido Problemas en ninguno de los dos dados, coloca la plantilla pequeña de área de efecto con el agujero central justo sobre el punto en el que la bala toque el suelo.5. Tira el dado de artillería para determinar la distancia recorrida por la bala en el rebote y desplaza la plantilla entera hacia delante la distancia del rebote. Si el resultado del dado de artillería en la tirada de rebote es de ¡Problemas!, la bala de cañón se incrusta en el suelo y no rebota.6. Todas las miniaturas que hayan estado bajo la plantilla, ya sea en su localización inicial o durante su trayecto son impactadas (si ha sido parcial y en ningún momento ha estado completamente bajo la plantilla, con 4+ es impactada). Todas las miniaturas impactadas reciben un impacto de F10 con Heridas múltiples (1D6) y que Anula armaduras</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="6723-795b-e51e-6665" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
+        <categoryLink id="0b95-4f8d-ca85-02ad" name="Unidad especial" hidden="false" targetId="102e-012c-5785-3354" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="cea8-33be-737f-db72" name="Dotación" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6516-b3dd-e3f5-349b" type="min"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63b0-1e41-c957-ad88" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5d06-a2e3-a70f-a090" name="Dotación" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">0</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">2</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, No Muerto, Zombi</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="99aa-3f72-e75a-7ab1" name="No Muerto" hidden="false" targetId="0525-da82-46c3-ea36" type="rule"/>
+            <infoLink id="3a88-2908-c73c-4f89" name="Descerebrados" hidden="false" targetId="4c92-bc58-1b38-9074" type="rule"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="0788-96c5-fdba-3c85" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="4247-71be-d620-33fa">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee39-0417-e9c1-e65f" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5907-c5c2-753e-8ad4" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="4247-71be-d620-33fa" name="Arma de mano" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba06-14b3-d388-a9df" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7fc-89ce-a661-15e4" type="min"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="ee98-dfb9-255a-a82d" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="250.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ff36-3b98-3e3b-cd94" name="Coloso Necrofex" publicationId="a7e1-2ac1-f810-c12d" page="73" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="9de1-ae5e-8386-953d" value="1.0">
+          <repeats>
+            <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2790-523d-7bff-8e74" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2790-523d-7bff-8e74" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9de1-ae5e-8386-953d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c8b4-6e86-6f4a-5204" name="Coloso Necrofex" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">6</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo Arcano</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="7d7c-e996-9625-ddbb" name="Lamento de los mares" hidden="false">
+          <description>Funciona igual que el Lamento de la Doncella Espectral.</description>
+        </rule>
+        <rule id="7fb5-ce76-0b75-1e30" name="Disrupción de Poder" hidden="false">
+          <description>+1 a las tiradas para dispersar hechizos enemigos lanzados desde un punto (hechicero enemigo, portahechizos enemigo) a 60cm o menos del Coloso. Mide la distancia después de efectuar la tirada para dispersar y haber comprobado el alcance del hechizo.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="30f4-47a0-eaaf-4734" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
+        <infoLink id="df26-ffba-f547-fada" name="No Muerto" hidden="false" targetId="0525-da82-46c3-ea36" type="rule"/>
+        <infoLink id="e36a-fa06-b01f-c42c" name="Regeneración" hidden="false" targetId="d43f-f8c6-de44-18d0" type="rule"/>
+        <infoLink id="f484-2119-cbd6-3b19" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
+        <infoLink id="94d9-0036-0614-7cd1" name="Ataques mágicos" hidden="false" targetId="6e5c-a8a4-78d0-032b" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2b07-cad4-f4f6-b0fe" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8a96-dc11-c82d-ace5" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="e024-538d-48da-7632">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2b9-5ce5-a43a-c534" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3887-ad0a-55d7-13b3" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="e024-538d-48da-7632" name="Arma de mano" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f53b-c956-a697-dc85" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27b3-6557-22df-b410" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="06a2-d4e4-d268-2048" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="0c85-c797-e632-f998" name="Armas de proyectiles" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa7a-c29f-59ed-1ef5" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="eb20-650c-4350-b70d" name="Cañones acoplados" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2cad-5bba-d0ad-95c8" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="2333-51e7-3227-c9a4" name="Cañones acoplados" hidden="false">
+                  <description>Trátalo a todos los efectos como una Catapulta (en caso de problemas, si resulta destruida se destruye la Catapulta, no el Coloso). El Coloso puede disparar la Catapulta y hacer el Lamento en una misma fase de disparo y contra objetivos distintos.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="285.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -13389,6 +14105,9 @@ el mismo personaje.</description>
     <rule id="a259-f8a4-4181-1bc4" name="Personajes y unidades (si uno de los dos es No Muerto y el otro no)" hidden="false">
       <description>A no ser que se indique lo contrario, los Personajes de tipo No Muerto sólo pueden unirse a unidades de tipo No Muerto, y viceversa. Esto incluye mercenarios y regimientos de renombre.
 Esto quiere decir que un personaje No Muerto puede unirse a una unidad No Muerta, pero no a una unidad “viva” (incluyendo Demonios y demás). Y, de la misma forma, un personaje “vivo” (que no sea No Muerto) puede unirse a unidades “vivas”, pero no a unidades de No Muertos.</description>
+    </rule>
+    <rule id="2b62-dbe0-638b-068e" name="Artilleros Zombi. " hidden="false">
+      <description>Aunque tengan HP0, los Zombis impactan si obtienen un 6 en la tirada para impactar; no obstante, si sale 1 en la tirada para impactar, se resuelve contra la propia unidad que ha disparado</description>
     </rule>
   </sharedRules>
 </catalogue>
