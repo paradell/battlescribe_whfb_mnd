@@ -26,7 +26,7 @@ Estos ficheros permiten hacer la listas de Battlescribe tanto para Manuscritos d
 | 👑 [Imperio](./files/Imperio_MDN.cat)    | v2017 🟢 | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 | v6     |
 | 💰 [Mercenarios](./files/Mercenarios_MDN.cat)   | v2023 🟢  | Sí 🟢  | No 🔴  | No hay 🟢  | Sí 🟢| v7     |
 | 💀 [No Muertos](./files/No_Muertos_MDN.cat)   | Beta 🟢  | No 🔴  | No 🔴  | No 🔴  | No 🔴 | v2     |
-| 💚 [Orcos y Goblins](./files/Orcos_Goblins_MDN.cat)    | v2017 🟢  | No 🔴 | No 🔴 | No 🔴 | 50% 🟡 | v8     |
+| 💚 [Orcos y Goblins](./files/Orcos_Goblins_MDN.cat)    | v2017 🟢  | 8/24 🟡 | No 🔴 | No 🔴 | 50% 🟡 | v9     |
 | ✴️ [Reinos del Caos](./files/Reinos_del_Caos_MDN.cat)   | v2021 🟢    | Sí 🟢 | Sí 🟢 | No 🔴  | Sí 🟢 | v3     |
 | 🍖 [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)   | v2023 🟢    | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 | v7    |
 | 💀 [Reyes Funerarios](./files/Reyes_Funerarios_MDN.cat)   |v2020 🟢    |  Sí 🟢 | No 🔴  | No hay 🟢 | Sí 🟢 | v11     | 
