@@ -12108,11 +12108,13 @@ en la subfase de movimientos obligatorios debes comprobar si existe alguna unida
         <selectionEntryGroup id="1070-f680-6717-0bed" name="Escudo" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9705-2ab0-229f-4b69" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a6e-956a-f3aa-4f7a" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="7c7c-af35-6ce6-99c0" name="Escudo" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe24-152c-d6d4-47c3" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dad1-60a3-dda8-b84e" type="min"/>
               </constraints>
               <infoLinks>
                 <infoLink id="1930-8625-87dc-6750" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
@@ -13557,6 +13559,387 @@ en la subfase de movimientos obligatorios debes comprobar si existe alguna unida
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="210.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3d71-5c3e-929e-b6c4" name="Skarsnik" publicationId="1961-98cd-e2f9-7572" page="79" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cc9-47e3-bf79-0084" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d17e-9a48-a873-f105" name="Skarsnik" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+        <profile id="bb16-f7e6-d0a1-e589" name="Pinchagarrapatos" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment>También conocido simplemente como el Pincho de Skarsnik, el Pinchagarrapatos es el principal arma deSkarsnik, el líder indiscutible de la tribu de la Luna Torzida y Goblin Nocturno más artero de todos los tiempos. Se trata de unaespecie de tridente en el que está imbuido las maldiciones de varios chamanes de los Goblins Nocturnos, por lo que emanauna nube venenosa de malicia. Este puntiagudo implemento puede proyectar el resentimiento de los Pieles Verdes que hay enlos alrededores, canalizando el ansia de violencia de todos los Orcos y Goblins que están más cerca del portador de este arma,y la traduce en energía del ¡Whaaagh!. Llegado el momento oportuno, Skarsnik puede liberar toda esta energía acumuladasobre el enemigo en forma de poderosos proyectiles mágicos de gran fuerza destructiva.</comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Alabarda</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F+1</characteristic>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Además tiene algunos piedroz incrustados, que permiten a Skarsnik lanzar rayos por el Bastón en cada fase de magia propia. 
+En cada fase de magia, determina cuántas unidades de 10+ Orcos y 20+ Goblins hay a 30cm o menos de Skarsnik (amigas, enemigas, trabadas, huyendo...). Ese es el número de rayos que lanza Skarsnik, y todos ellos deben ir hacia el mismo objetivo.
+Una vez declarado el objetivo y determinado el número de rayos, CADA rayo es un objeto portahechizos de nivel 3 (el oponente debe dispersar cada rayo); si no es dispersado, es un proyectil mágico que causa un único impacto de F4 que Anula armaduras. Dado que son varios objetos portahechizos, se declara el primer rayo, el oponente puede dispersarlo, se comprueba si el enemigo está a distancia, se resuelve el disparo, y luego se dispara el segundo rayo (hacia el mismo objetivo).
+En caso que aniquiles al objetivo con los rayos y aún queden rayos por disparar, los rayos sobrantes se pierden (no puedes declarar otro objetivo).
+Los rayos que no lleguen a su objetivo se pierden igualmente.
+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="3f8d-e52d-8457-1d97" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
+        <infoLink id="2ff6-963d-508c-3e1c" name="Animosidad" hidden="false" targetId="725c-d300-2664-b9b1" type="rule"/>
+        <infoLink id="46e4-606d-c792-05e2" name="Odio a enanos" hidden="false" targetId="c2a2-6a3b-d376-7914" type="rule"/>
+        <infoLink id="49c0-ae8d-c88c-bd63" name="Miedo a los orejotaz" hidden="false" targetId="aaf0-33ec-68dc-5014" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="68d0-5d85-dbe0-4b77" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="3b8f-4218-d0cb-12ec" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="8c16-1107-1416-66a7" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="fde7-330a-55cd-ebc4" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="54c6-aa01-ec60-e5ae" name="Armadura" hidden="false" collective="false" import="true" defaultSelectionEntryId="176c-180d-3f26-400b">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b816-a255-e2dc-d512" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ddd-96cf-0222-d701" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="176c-180d-3f26-400b" name="Armadura ligera" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d9d-f4c5-bc4e-525e" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9db3-9f54-d57a-a043" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="ccc3-ed99-99e9-ae5f" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ff24-45cb-ab29-055a" name="Gobbla" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5d9-608e-d0c5-a359" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4803-6396-073a-c987" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="81ea-eadc-1826-22ef" name="Gobbla" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e795-11b9-f239-439d" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="27d2-31c7-e420-8c43" name="Gobbla" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">3</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Garrapato, Personaje especial.</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="aad0-09f3-c733-d4f6" name="Gobbla" hidden="false">
+                  <description>Gobbla. Gobbla es un Garrapato que va siempre encadenado a Skarsnik. Trata a Skarsnik y Gobbla como dos personajes individuales (hay que designar ataques a cada uno por separado, puede que uno esté bajo una plantilla y el otro no, etc). Siguen las siguientes reglas:
+Despliegue. Skarsnik y Gobbla despliegan en contacto peana con peana. Pueden estar en una unidad (como cualquier otro personaje).
+Movimiento. Skarsnik y Gobbla pueden salir de una unidad, unirse a ella y efectuar todos los movimientos habituales. La excepción es que Skarsnik y Gobbla SIEMPRE van juntos. En caso de que uno de ellos se vea sujeto a un movimiento obligatorio (por ejemplo hechizos que obliguen a mover un personaje), el otro se moverá con él.
+Disparo y magia. Trata a Skarsnik y Gobbla como dos personajes a todos los efectos.
+Combate. Como con los personajes, debes decidir qué ataques van a Skarsnik y qué ataques a Gobbla.
+Muerte de Gobbla. Si Gobbla muere, el oponente se lleva los puntos de victoria y Skarsnik actúa de la forma habitual.
+Muerte de Skarsnik. Si Skarsnik muere, Gobbla morderá las cadenas y deberá determinarse su reacción como si fuera un monstruo que ha perdido a su jinete. A partir de ese momento dejará de considerarse personaje (por lo que no podrá unirse a unidades) y (si puede hacerlo por la reacción de monstruos) moverá 5D6cm en dirección aleatoria como si fuera un garrapato normal (atacará si se coloca en contacto, etc). La excepción es que, pase lo que pase, si Skarsnik muere, Gobbla se enfurecerá tanto que pasará a ser Inmune a desmoralización e Inmune a psicología, y superará automáticamente todos los chequeos de Liderazgo.
+Apetito insaciable. Gobbla nunca morderá a Skarsnik, pero morderá al resto de pielesverdes en cuanto se le presente la más mínima oportunidad. En la fase de combate cuerpo a cuerpo, si Gobbla está incluido en alguna unidad y no tiene miniaturas enemigas en contacto peana con peana, lanza 1D6; con un resultado de 6, Gobbla “ataca” a la unidad en la que esté incluido (con sus 3 ataques). Estas bajas no se tienen en cuenta; la unidad no tiene que hacer ningún chequeo de desmoralización por las bajas que hayan sufrido por las “indiscreciones” de Gobbla.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1c37-6595-be0c-86e0" name="Gobbla Gigante" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edfa-2618-dbbc-aeda" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="1098-d1d6-f427-73b1" name="Gobbla Gigante" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">4</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa Garrapato, Personaje especial.</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="2dd0-6271-b590-2b70" name="Gobbla Gigante" hidden="false">
+                  <description>Disparos. Al ser considerado un monstruo montado, Skarsnik con Gobbla Gigante puede ser objetivo de hechizos y proyectiles incluso si va dentro de una unidad de infantería. Debido al gran tamaño de este Gobbla, los impactos se distribuyen lanzando 1D6: 1-5 resuelve el impacto contra el Gobba; 6- resuelve el impacto contra Skarsnik. En el momento que muera el Gobba Gigante, Skarsnik pasa a ser una miniatura tipo Infantería.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="100.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="175.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="383d-85fe-3f86-7413" name="Snagla Grobspit" publicationId="1961-98cd-e2f9-7572" page="" hidden="false" collective="false" import="false" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1071-d8e2-7a7c-6ff4" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="df7c-ebd4-eab8-fb81" name="Snagla Grobspit" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería, Goblin, Pielverde, Personaje especial.
+</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="332d-e6ce-518d-e931" name="Kuchilla de Snagla." hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+          <comment></comment>
+          <characteristics>
+            <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de mano.</characteristic>
+            <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
+            <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91"> Heridas múltiples (1D3). Además, una vez por partida, Snagla puede usar la Kuchilla como arma arrojadiza; en tal caso, pierde el arma mágica y pasará a tener sólo arma de mano.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="2c2a-fb14-fa3a-67bd" name="Acechantes" hidden="false">
+          <description>En su primer turno, Snagla (así como cualquier unidad de Jinetez de Araña a la que se haya movido) puede marchar aunque tenga enemigos cerca y, además, puede mover +3D6cm adicionales (haz la tirada cuando resuelvas su movimiento, esto podría afectar a su capacidad de carga).</description>
+        </rule>
+        <rule id="6085-cc4c-ef7f-acbc" name="Odio (Humanos)" hidden="false"/>
+      </rules>
+      <infoLinks>
+        <infoLink id="c7db-ecc4-0e1e-fcb5" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
+        <infoLink id="7c99-194c-4ae3-6723" name="Animosidad" hidden="false" targetId="725c-d300-2664-b9b1" type="rule"/>
+        <infoLink id="98a2-36bb-99b1-e17a" name="Miedo a los orejotaz" hidden="false" targetId="aaf0-33ec-68dc-5014" type="rule"/>
+        <infoLink id="e718-1f70-eb83-4c7c" name="Pinturas de guerra" hidden="false" targetId="85bb-372e-7aff-59dc" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0d5c-be47-116e-0292" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="e82b-5044-009e-c831" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="3d82-bbd7-c3a4-2193" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8a5a-e2cc-aba6-49ca" name="Montura" hidden="false" collective="false" import="true" defaultSelectionEntryId="d865-39f3-2bc5-8041">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="601b-e5a1-ebcd-faaa" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79f6-8387-560b-690d" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="d865-39f3-2bc5-8041" name="Araña Gigantge" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="123b-3801-fb3c-3767" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2db5-8002-b2b9-b095" type="min"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="a5a1-8dab-d6d2-89f9" name="Araña gigante" hidden="false" collective="false" import="true" targetId="66a7-33e5-d57a-b541" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3ebf-9c93-ea60-6589" name="Escudo" hidden="false" collective="false" import="true" defaultSelectionEntryId="e0e4-341a-b4df-816b">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d36-2183-4806-f604" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d36d-e011-6ac0-16d5" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="e0e4-341a-b4df-816b" name="Escudo" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31f2-5057-dd41-9ec7" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a2f-1770-cd92-00e1" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="4931-4028-24d9-7046" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="3.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="110.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="803f-4f14-0efc-458f" name="Grotsnag" publicationId="1961-98cd-e2f9-7572" page="62" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9ca-000e-2c6c-f61d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="4d13-1db9-5eae-79f9" name="Grotsnag" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería, Goblin, Pielverde, Personaje especial.
+</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="8efe-53a7-6df6-c45a" name="Provocador" hidden="false">
+          <comment>Grotsnag ha perfeccionado un fastidioso método de provocar a sus enemigos consistente en soltarles una retahílade improperios, muecas y ruidos para obligarlos a atacar y dejarlos así vulnerables y expuestos mientras él se aleja algalope haciendo pedorretas. </comment>
+          <description>Al inicio de cada turno enemigo, puedes elegir una unidad enemiga de tipo Enano que tenga línea de visiónhacia Grotsnag y que esté a 30cm o menos de él. Dicha unidad debe hacer un chequeo de Liderazgo; si lo falla, debe declararcarga hacia Grotsnag (o su unidad), que puede reaccionar a la carga de forma habitual.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="f3ec-53ae-5f91-30c2" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
+        <infoLink id="73e9-710d-7106-09c3" name="Animosidad" hidden="false" targetId="725c-d300-2664-b9b1" type="rule"/>
+        <infoLink id="600c-6e5a-3c09-bea3" name="Miedo a los orejotaz" hidden="false" targetId="aaf0-33ec-68dc-5014" type="rule"/>
+        <infoLink id="6fda-7f33-06aa-1fba" name="Caballería rápida" hidden="false" targetId="f6f9-0701-05a1-df5a" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="a9bb-9489-0df3-610b" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="ef8e-0c09-fa81-7124" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="6aef-d17e-f693-7d23" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="ee42-50b6-8d12-72cc" name="Armas de proyectiles" hidden="false" collective="false" import="true" defaultSelectionEntryId="ba31-04c5-428a-47c9">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0996-2af9-2178-6d9b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="639c-b03c-b051-2410" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="ba31-04c5-428a-47c9" name="Arco corto" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2dc1-9618-2acb-6efd" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5537-5d20-1eaf-005e" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="c167-e863-2e85-3d47" name="Arco corto" hidden="false" targetId="ce15-0fea-7ee7-1333" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b703-6a73-07ee-deed" name="Montura" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9cc-264f-3813-d324" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a88-d7d7-d3c9-d961" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="5828-e1b3-f506-028b" name="Gruñemucho" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="434a-8eb4-6f9b-2a94" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e45-fa6d-71af-43a7" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="8b00-9f84-7721-4865" name="Lobo gigante" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                  <characteristics>
+                    <characteristic name="M" typeId="2d56-9cad-9242-37bd">22</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
+                    <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+                    <characteristic name="R" typeId="30bd-8385-2b51-e039"/>
+                    <characteristic name="H" typeId="a41f-60f6-2336-73ab"/>
+                    <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                    <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">7</characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">+1</characteristic>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                    <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
+                    <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b449-51a2-0c77-c0a6" name="Escudo" hidden="false" collective="false" import="true" defaultSelectionEntryId="9f1c-bf77-fd11-4891">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f36a-9964-e3eb-1411" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35cc-a22b-7359-4c34" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9f1c-bf77-fd11-4891" name="Escudo" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96ad-cab9-3e30-0b41" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c878-f61d-5443-f89d" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="cc70-1d74-8eeb-53e6" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="3.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="8cf6-3826-7eda-e491" name="Último kaztañazo de Wollopa" hidden="false" collective="false" import="true" targetId="b075-2aa5-9f97-7e14" type="selectionEntry"/>
+        <entryLink id="17aa-5a3b-b183-2cfd" name="Kazko de Nobbla" hidden="false" collective="false" import="true" targetId="a4f8-820d-625b-30dc" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="98.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
