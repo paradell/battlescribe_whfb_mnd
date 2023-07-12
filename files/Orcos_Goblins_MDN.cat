@@ -5,6 +5,16 @@
   </publications>
   <selectionEntries>
     <selectionEntry id="c76f-cc67-773f-41b7" name="Kaudillo orco negro" publicationId="1961-98cd-e2f9-7572" page="20" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="9845-b290-dc14-f8b8" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8619-d20a-e714-1724" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9845-b290-dc14-f8b8" type="max"/>
+      </constraints>
       <profiles>
         <profile id="5ad0-270a-3530-6ffe" name="Kaudillo orco negro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -211,6 +221,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="f7e3-9ca3-fe82-8500" name="Gran chamán orco" publicationId="1961-98cd-e2f9-7572" page="20" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3304-5523-6294-cb3f" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8619-d20a-e714-1724" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3304-5523-6294-cb3f" type="max"/>
+      </constraints>
       <profiles>
         <profile id="3b87-7710-7e22-d26a" name="Gran chamán orco" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -467,9 +487,14 @@
         <selectionEntry id="e2eb-6174-d2ee-39d2" name="Portaestandarte de Batalla" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="6703-0948-f7a8-abd1" value="0.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f23f-065f-d1be-d11f" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8619-d20a-e714-1724" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f23f-065f-d1be-d11f" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -1551,8 +1576,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="bdd7-64a3-76d2-655b" name="Orcos negros" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="b32f-08b8-2159-1ba7" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f84f-dccb-64cd-872e" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5002-50df-94af-50c0" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b32f-08b8-2159-1ba7" type="min"/>
       </constraints>
       <profiles>
         <profile id="ac87-edff-aef8-89ea" name="Orco negro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -1925,6 +1958,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="a94d-93a1-6de8-7190" name="Kaudillo orco " publicationId="1961-98cd-e2f9-7572" page="20" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="e35a-9155-0b59-6d0f" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8619-d20a-e714-1724" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e35a-9155-0b59-6d0f" type="max"/>
+      </constraints>
       <profiles>
         <profile id="82c3-b8d6-e761-7abd" name="Kaudillo orco " hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3603,9 +3646,14 @@
         <selectionEntry id="52d7-a3cc-9db5-5424" name="Portaestandarte de Batalla" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="bf11-fd7e-c8f9-3854" value="0.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f23f-065f-d1be-d11f" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8619-d20a-e714-1724" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f23f-065f-d1be-d11f" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -4403,9 +4451,14 @@
         <selectionEntry id="fba5-eca1-a3d4-1801" name="Portaestandarte de Batalla" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="4af3-699e-e78f-af60" value="0.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f23f-065f-d1be-d11f" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8619-d20a-e714-1724" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f23f-065f-d1be-d11f" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -12133,17 +12186,19 @@ en la subfase de movimientos obligatorios debes comprobar si existe alguna unida
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="1626-1869-c276-9714" name="Montura" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="ad0b-c5d6-7c24-53c5" name="Montura" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="48de-63d1-88db-c168" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c017-bc8b-7fde-e203" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94c6-de7a-e140-2457" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="0e73-a269-175c-9742" name="Zierpe Alada" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="dbc4-994f-dc62-e872" name="Jabalí" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="954b-5c1e-ee20-08bf" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a532-c73c-7119-5533" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3fc4-5ff9-6de1-99f5" type="min"/>
               </constraints>
               <entryLinks>
-                <entryLink id="7d1b-4af0-a095-a2ef" name="Serpiente alada" hidden="false" collective="false" import="true" targetId="a3dd-abec-45e3-dd92" type="selectionEntry"/>
+                <entryLink id="489a-8a4d-af60-e81d" name="Jabalí" hidden="false" collective="false" import="true" targetId="0e11-d17c-6429-4802" type="selectionEntry"/>
               </entryLinks>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="230.0"/>
@@ -12625,6 +12680,13 @@ en la subfase de movimientos obligatorios debes comprobar si existe alguna unida
       </costs>
     </selectionEntry>
     <selectionEntry id="f23f-065f-d1be-d11f" name="Gorbad Garra’ierro" publicationId="1961-98cd-e2f9-7572" page="55" hidden="false" collective="false" import="false" type="model">
+      <modifiers>
+        <modifier type="set" field="ad55-9ad3-6f24-c452" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8619-d20a-e714-1724" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad55-9ad3-6f24-c452" type="max"/>
       </constraints>
@@ -13100,6 +13162,9 @@ en la subfase de movimientos obligatorios debes comprobar si existe alguna unida
               <entryLinks>
                 <entryLink id="44a9-847d-a92b-3a6a" name="Lobo gigante" hidden="false" collective="false" import="true" targetId="2a51-adf4-0c25-3413" type="selectionEntry"/>
               </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -13228,12 +13293,270 @@ en la subfase de movimientos obligatorios debes comprobar si existe alguna unida
               <entryLinks>
                 <entryLink id="9a82-8abd-170a-2971" name="Jabalí" hidden="false" collective="false" import="true" targetId="0e11-d17c-6429-4802" type="selectionEntry"/>
               </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="235.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8619-d20a-e714-1724" name="Grom el Panzudo" publicationId="1961-98cd-e2f9-7572" page="61" hidden="false" collective="false" import="false" type="model">
+      <modifiers>
+        <modifier type="set" field="fc0b-5791-f93b-f24e" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f23f-065f-d1be-d11f" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc0b-5791-f93b-f24e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0111-a905-3b64-8998" name="Grom el Panzudo" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Pielverde, Goblin, Personaje especial</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="987a-ae2d-d835-da35" name="General Goblin" hidden="false">
+          <description>Grom debe ser el General. Tu ejército debe incluir al menos una unidad de tipo Goblin. Además, Grom nuncatoleraría la presencia de alguien que pudiera disputarle el mando, así que no puedes incluir ningún personaje Comandantede tipo Orco.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="a6c9-ecba-4ac5-3054" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
+        <infoLink id="07d0-7c74-9534-fd9f" name="Animosidad" hidden="false" targetId="725c-d300-2664-b9b1" type="rule"/>
+        <infoLink id="d810-527e-4043-c248" name="Regeneración" hidden="false" targetId="d43f-f8c6-de44-18d0" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="78e7-1509-b825-659e" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="8451-1439-d7f3-280f" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="d939-b47b-1d6c-99de" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+        <categoryLink id="8417-afb0-8aa2-cf4a" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="a2f7-d598-c73e-464e" name="Niblit" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45a3-cdd1-2a53-88a5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ce6-c47c-3fae-627e" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="0d7f-2d5d-d7b3-c8d0" name="Niblit" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">2</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Pielverde, Goblin</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="f850-b9bd-1aae-163e" name="Estandarte Afortunado" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+              <comment>Niblit porta a la batalla un viejo y raído estandarte del que asegura que le da suerte. Sea como sea,todavía nunca ha dejado que les pase nada ni a Grom ni al propio Niblit.</comment>
+              <characteristics>
+                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">En combate cuerpo a cuerpo, tanto Grom comoNiblit pueden repetir una de las tiradas para impactar o para herir cada turno. Sólo pueden repetir una tirada cada uno porturno, y sólo ellos (no los lobos, ni el número de impactos por carga del carro, etc). Ten en cuenta que este estandarte lo llevaNiblit, por lo que si Niblit muere, el Estandarte se pierde.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="4cff-2e0b-a577-fe8c" name="Niblit" hidden="false">
+              <description>Niblit es el Goblin en el que más confía Grom, así que siempre es él quien porta el Estandarte de Batalladel ejército. Se trata del Portaestandarte de Batalla a todos los efectos (es más, aunque tenga una herida es un personaje, porlo que puede lanzar y aceptar desafíos, etc). Por tanto no puedes incluir otro Portaestandarte de Batalla.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="ce7e-67d9-5343-5466" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+            <infoLink id="2812-8c0e-04c5-7a13" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="75.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b7c9-be62-f833-5f51" name="Armadura" hidden="false" collective="false" import="true" defaultSelectionEntryId="64e3-a679-f309-6180">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12f7-efd5-ef3f-5c25" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83c7-dace-5b1e-5b46" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="64e3-a679-f309-6180" name="Armadura ligera" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="020f-166c-52d2-aaf7" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3358-3fc4-835b-0149" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="b46f-aab9-d85d-043d" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="cad4-a7dd-6a5b-3602" name="Montura" hidden="false" collective="false" import="true" defaultSelectionEntryId="a508-adb0-e413-665c">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fe2-a714-462c-8890" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc03-9a7d-3192-4e48" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="a508-adb0-e413-665c" name="Karro de Grom" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97b7-4729-0899-22f9" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0dd-e2b2-4bb6-a35d" type="min"/>
+              </constraints>
+              <rules>
+                <rule id="f2aa-3bcb-4cc9-9dee" name="Karro de Grom" hidden="false">
+                  <description>Grom despliega montado en su karro. Se trata de un Karro de lobos, tirado por 3 lobos. Sin embargo, no tienemás tripulación que Grom y Niblit. El Karro sigue las reglas habituales de los Carros (impactos por carga, terreno, destruidopor F7+), pero cuando se dispara al karro determina aleatoriamente dónde caen los impactos; lanza 1D6, con 1-5 va al Karro,con un 6 distribuye entre Grom o Niblit (si ambos siguen con vida). En combate cuerpo a cuerpo, usa la HA de los loboscuando el karro sea atacado. Si el karro es destruido, Grom y/o Niblit (depende de quién siga con vida) pasan a ser miniaturasindividuales de infantería. Si mueren ambos, el Karro sigue las reglas de los Monstruos que han perdido su jinete.</description>
+                </rule>
+              </rules>
+              <entryLinks>
+                <entryLink id="c1b1-3a68-f5eb-5067" name="Karro de lobos goblin" hidden="false" collective="false" import="true" targetId="321c-3af2-8c03-c9be" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="65.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="195.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f84f-dccb-64cd-872e" name="Morglum Quiebracuellos" publicationId="1961-98cd-e2f9-7572" page="73" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3d12-4ffd-ebe3-4fb0" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8619-d20a-e714-1724" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d12-4ffd-ebe3-4fb0" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3c5b-4270-f968-c69d" name="Morglum Quiebracuellos" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">7</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">9</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">4+</characteristic>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería, Pielverde, Orco, Orco negro, Personaje especial</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="02bb-40f8-be88-37e8" name="Armadura Sangrienta de Bulak" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+          <comment>Esta vieja y gastada armadura está completamente manchada de sangre, hasta el puntode que nunca más podrá limpiarse. Parece ser que la mayor parte de la sangre pertenecía a Bulak y no de sus enemigos, loque es una de las razones por la que Morglum porta la armadura en la actualidad. Se dice que la última batalla en la queBulak participó no fue precisamente justa, por lo que el espíritu de Bulak aún permanece dentro de la armadura, deseoso decobrarse venganza.</comment>
+          <characteristics>
+            <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">Armadura pesada (Tirada de salvación por armadura de 5+), que combinada con el Jabalí le da una Tiradade salvación por armadura final de 3+.</characteristic>
+            <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Además, proporciona una Tirada de salvación especial de 4+. No obstante, si falla latirada de salvación especial Morglum sufrirá dos heridas en vez de una, ¡ya que el espíritu de Bulak se estará cobrando suvenganza!</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="035d-ed03-bef1-0979" name="Líder nato" hidden="false">
+          <comment>O Morglum está al mando, o habrá problemas. Morglumno se toma muy bien que otros quieran ocupar el que,por naturaleza, es su puesto: general del ejército.</comment>
+          <description> Por lo tanto,mientras Morglum siga vivo, cualquier otro personaje (incluyendopersonajes especiales) con L9 o superior, se considera que tienenL8 a todos los efectos.</description>
+        </rule>
+        <rule id="4ca4-6eef-9fdc-06b9" name="Ejército del Este" hidden="false">
+          <description>El ejército de Morglum viene del Este y, portanto, debe incluir al menos una unidad de Orcos Negros (enalgunos ejércitos temáticos es posible tener más de una unidadde Orcos Negros).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="8526-f7a4-e7ac-2166" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
+        <infoLink id="d311-d9a8-797c-5563" name="Inmune a psicología" hidden="false" targetId="3970-3b01-1734-d642" type="rule"/>
+        <infoLink id="e664-448d-75fb-56a5" name="Evita animosidad" hidden="false" targetId="27c2-80e2-2305-4e4b" type="rule"/>
+        <infoLink id="8022-0751-d8ab-9896" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="44f6-91b5-8196-0f3c" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="44ea-5f62-30dc-69c6" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="fd7a-a866-9f25-014b" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="ab7e-438d-a6ed-d32f" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="0edf-5352-b943-9239" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="1d37-f773-b0ff-3497">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbfa-1a60-f884-1737" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39b1-27b3-0cff-d56c" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="1d37-f773-b0ff-3497" name="Dos Hachas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27d6-d8f9-deef-1a53" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="36b9-f9e2-40fe-07ce" type="min"/>
+              </constraints>
+              <rules>
+                <rule id="d108-97a4-dc8c-200a" name="Dos Hachas" hidden="false">
+                  <comment>Desde que Morglum venciera a su jabalí preferido en un concurso de cabezazos, se ganó el respeto delanimal de por vida. Es por esto que, ahora, el jabalí muestra un comportamiento modélico en el campo de batalla, lo quepermite a Morglum empuñar dos hachas y luchar con ambas. </comment>
+                  <description>Morglum tiene un ataque adicional por llevar dos armas, pesea que normalmente las miniaturas montadas no puedan aplicar esta regla.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="fa9e-caae-67a7-6dc3" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="65ae-2eff-ab19-0c6e" name="Montura" hidden="false" collective="false" import="true" defaultSelectionEntryId="defd-0856-41fb-5821">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f99-d2c7-c288-d6a7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d23-458b-08b5-4508" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="defd-0856-41fb-5821" name="Jabalí" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2032-98b8-dcf6-fdaf" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54a6-7830-16d6-095f" type="min"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="bcf9-a0f6-ff69-e84a" name="Jabalí" hidden="false" collective="false" import="true" targetId="0e11-d17c-6429-4802" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="230.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="210.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
