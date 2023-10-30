@@ -5819,6 +5819,9 @@ uno o más Señores de las Bestias en la unidad, ésta no sufre Estupidez (a no 
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -5977,7 +5980,7 @@ uno o más Señores de las Bestias en la unidad, ésta no sufre Estupidez (a no 
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4ce6-d8d3-a3ab-bd4b" name="Garrapulta de plaga" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="4ce6-d8d3-a3ab-bd4b" name="Garrapulta de plaga" publicationId="5ec3-575b-1ab0-ca98" page="33" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="increment" field="c006-5a07-9d16-e35d" value="1.0">
           <repeats>
@@ -6013,7 +6016,7 @@ uno o más Señores de las Bestias en la unidad, ésta no sufre Estupidez (a no 
             <characteristic name="HA" typeId="c87b-b820-6a47-1354"/>
             <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
             <characteristic name="F" typeId="79c2-0368-3eed-76b4"/>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">7</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
             <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f"/>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b"/>
@@ -6035,7 +6038,7 @@ uno o más Señores de las Bestias en la unidad, ésta no sufre Estupidez (a no 
           <description>La dotación tiene Furia Asesina (así que son inmunes a psicología y tienen un ataque adicional mientras no pierdan el combate); sin embargo, saben que su deber es permanecer junto a la máquina de guerra, así que no se ven sujetos a las cargas obligatorias de la Furia Asesina.</description>
         </rule>
         <rule id="7be4-98bf-a72c-585b" name="Garrapulta de plaga" hidden="false">
-          <description>Catapulta. Puede disparar a cualquier unidad entre 30cm y 120cm. Usa la plantilla grande (12cm). Impactos de F2 que anulan armaduras. La miniatura bajo el agujero central recibe un impacto de F5, anula armadura, heridas múltiples 1D3. Realiza Ataques mágicos</description>
+          <description>Catapulta. Puede disparar a cualquier unidad entre 30cm y 120cm. Usa la plantilla grande (12cm). Causa impactos de F2 que anulan armaduras y que son Ataques mágicos. La miniatura bajo el agujero central recibe un impacto idéntico al resto (ni dobla la Fuerza ni causa heridas múltiples). Cualquier unidad que sufra una o más bajas por un disparo de la Garrapulta de Plaga deberá efectuar chequeo de pánico al final de la fase de disparo.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -6043,7 +6046,7 @@ uno o más Señores de las Bestias en la unidad, ésta no sufre Estupidez (a no 
         <infoLink id="d3b7-bce7-57c1-6446" name="La vida no tiene ningún valor" hidden="false" targetId="83fc-d023-f97e-004d" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="dec4-cf5b-404f-3d00" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
+        <categoryLink id="f2b2-6163-bb48-6906" name="Unidad singular" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="248a-f035-1d6f-0159" name="Monjes de plaga" hidden="false" collective="false" import="true" type="upgrade">
@@ -6079,10 +6082,10 @@ uno o más Señores de las Bestias en la unidad, ésta no sufre Estupidez (a no 
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="75.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="85.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="63ca-7474-213c-04eb" name="Ratas ogro mejoradas" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="63ca-7474-213c-04eb" name="Ratas ogro de Asalto" publicationId="5ec3-575b-1ab0-ca98" page="32" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a59-de1b-eefa-4f05" type="max"/>
       </constraints>
@@ -6091,15 +6094,8 @@ uno o más Señores de las Bestias en la unidad, ésta no sufre Estupidez (a no 
         <rule id="1e5a-fe3e-d000-f896" name="Cerebro pequeño" hidden="false">
           <description>Las Ratas Ogro Mejoradas sufren de Estupidez, excepto si hay algún Señor de las Bestias o Personaje en la unidad.</description>
         </rule>
-        <rule id="318e-5577-26ca-d07f" name="Unidad mixta" hidden="false">
-          <description>Las Ratas Ogro (o Ratas Ogro Mejoradas) deben colocarse en primera fila todas, mientras que los Señores de las Bestias y los personajes deben ir en segunda fila de la unidad. En caso de impactos a distancia cada uno se distribuye con 1D6; 1-4 se impacta una Rata Ogro Mejorada y 5-6 se impacta
-un Señor de las Bestias. Las Ratas Ogro Mejoradas nunca pueden aplicar bonificador por filas al calcular resultado del combate.</description>
-        </rule>
-        <rule id="a4c6-4b56-6faf-22c5" name="Proporción" hidden="false">
-          <description>No puedes tener más Señores de las Bestias que Ratas Ogro mejoradas.</description>
-        </rule>
         <rule id="5392-1d57-9e6b-a2f8" name="Heridas y bajas" hidden="false">
-          <description>En caso de Ratas Ogro con algún equipo especial como Lanzallamas o Amerratadora, son Ratas Ogro con combinaciones de equipo distintas dentro de una misma unidad, pero no son personajes ni campeones ni miniaturas individuales, los disparos impactan normalmente (todos tienen la misma R y armadura). Cuando haya que retirar un una Rata Ogro como baja, el jugador Skaven elige cuál de ellas muere. De igual forma, en combate cuerpo a cuerpo las heridas van hacia la unidad (todas con la misma Resistencia y armadura, si van contra las Ratas Ogro y no contra los Señores de las Bestias) y si hay que retirar una Rata Ogro, el jugador Skaven elige cuál. El oponente no va “haciendo heridas” a cada Rata Ogro; si hace 3 heridas, se retira una Rata Ogro.</description>
+          <description>Puesto que las Ratas ogro de asalto tienen combinaciones de equipo distintas dentro de una misma unidad, pero no son personajes ni campeones ni miniaturas individuales, no es necesario repartir los disparos (todos tienen la misma R y armadura). Cuando haya que retirar una Rata ogro como baja, el jugador skaven elige cuál de ellas muere. De igual forma, en combate cuerpo a cuerpo las heridas van hacia la unidad (todas con la misma Resistencia y armadura) y si hay que retirar una, el jugador skaven elige cuál. El oponente no va “haciendo heridas” a cada Rata ogro; si hace 3 heridas, se retira una.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -6111,18 +6107,17 @@ un Señor de las Bestias. Las Ratas Ogro Mejoradas nunca pueden aplicar bonifica
         <categoryLink id="1f21-db26-152a-8334" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="ac1f-85c7-7985-7f3a" name="Ratas ogro mejoradas" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ac1f-85c7-7985-7f3a" name="Ratas ogro de Asalto" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a117-ecf3-042a-245b" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c100-e979-a2c1-957f" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a117-ecf3-042a-245b" type="min"/>
           </constraints>
           <profiles>
-            <profile id="fb87-8311-24d8-c02b" name="Rata ogro mejorada" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+            <profile id="fb87-8311-24d8-c02b" name="Rata ogro de asalto" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
               <characteristics>
                 <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
-                <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
-                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
-                <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
                 <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
                 <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
                 <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
@@ -6131,7 +6126,7 @@ un Señor de las Bestias. Las Ratas Ogro Mejoradas nunca pueden aplicar bonifica
                 <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
                 <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Skaven, Moulder, Skryre</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
               </characteristics>
             </profile>
@@ -6154,9 +6149,15 @@ un Señor de las Bestias. Las Ratas Ogro Mejoradas nunca pueden aplicar bonifica
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
+            <selectionEntryGroup id="921d-395b-8624-edc5" name="Armas" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff67-fa24-b5da-4183" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dccb-5a49-ee4f-f08a" type="max"/>
+              </constraints>
+            </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="55.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="65.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -6173,28 +6174,18 @@ un Señor de las Bestias. Las Ratas Ogro Mejoradas nunca pueden aplicar bonifica
                 <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac1f-85c7-7985-7f3a" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="decrement" field="9ded-dbbd-ef94-9ea8" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6eed-e16b-6630-705a" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="decrement" field="8d8d-9800-d9d2-0b32" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6eed-e16b-6630-705a" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ded-dbbd-ef94-9ea8" type="min"/>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d8d-9800-d9d2-0b32" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="f827-0b3f-a39e-5a5f" name="Guantelete de Perdición" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7f2d-479d-bb11-ee2b" name="Guantelete de Perdición" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca5d-917e-dd5f-1115" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e36-5d52-cc1e-eb1b" type="max"/>
               </constraints>
               <profiles>
-                <profile id="df00-5640-8b7a-19d0" name="Guantelete de Perdición" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                <profile id="c6a7-d9b5-d773-0024" name="Guantelete de Perdición" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
                   <characteristics>
                     <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a Cuerpo</characteristic>
                     <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
@@ -6203,26 +6194,15 @@ un Señor de las Bestias. Las Ratas Ogro Mejoradas nunca pueden aplicar bonifica
                 </profile>
               </profiles>
               <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="35.0"/>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ecf5-ea67-9e2c-1162" name="Tunelapuños" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="3fa9-85c5-185b-06ec" name="Guanteletes Electrificados" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c689-3179-8361-9457" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="3568-5a38-0157-ba7b" name="Salir desde Abajo" hidden="false" targetId="8868-40ff-26bd-e9a9" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="5e0d-e31d-a1f0-8e2c" name="Guanteletes Electrificados" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbf6-6451-f34a-16ff" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="083c-b882-64de-9845" type="max"/>
               </constraints>
               <profiles>
-                <profile id="b0fb-3fbd-cf42-be49" name="Guanteletes Electrificados" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                <profile id="6103-bd8d-9af2-dbeb" name="Guanteletes Electrificados" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
                   <characteristics>
                     <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a Cuerpo</characteristic>
                     <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
@@ -6231,71 +6211,36 @@ un Señor de las Bestias. Las Ratas Ogro Mejoradas nunca pueden aplicar bonifica
                 </profile>
               </profiles>
               <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
               </costs>
             </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="6eed-e16b-6630-705a" name="Armas de proyectiles" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="decrement" field="a3fe-372a-87dc-958d" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="99c2-41b3-497e-9577" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" field="a3fe-372a-87dc-958d" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac1f-85c7-7985-7f3a" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" field="3494-6d51-cd26-0cae" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac1f-85c7-7985-7f3a" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="decrement" field="3494-6d51-cd26-0cae" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="63ca-7474-213c-04eb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="99c2-41b3-497e-9577" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3494-6d51-cd26-0cae" type="min"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3fe-372a-87dc-958d" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="1229-ff22-7bf6-6b39" name="Amerratadora" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7afc-964e-4110-6ca8" name="Amerratadora" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b3e-e396-59cf-8002" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb17-d2ca-5c4a-a680" type="max"/>
               </constraints>
               <profiles>
-                <profile id="1c04-d53c-c743-4d83" name="Amerratadora" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                <profile id="a2dc-8075-7fb3-5e0c" name="Amerratadora" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
                   <characteristics>
-                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Alcance 20cm</characteristic>
+                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">20cm</characteristic>
                     <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F3</characteristic>
-                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">-1 TSA. Puede mover y disparar (no marchar y disparar). No puede aguantar y disparar. En caso de problemas, resuelve los disparos contra la propia unidad</characteristic>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">.-1 TSA. Puede mover y disparar (no marchar y disparar). No puede aguantar y disparar. En caso de problemas, resuelve los disparos contra la propia unidad.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
-              <rules>
-                <rule id="6f73-5bfa-d2af-2a56" name="Amerratadora" hidden="false">
-                  <description>unciona como el grupo de apoyo con los siguientes cambios. Alcance 20cm. F3. -1 TSA. Puede mover y disparar (no marchar y disparar). No puede aguantar y disparar. En caso de problemas, resuelve los disparos contra la propia unidad</description>
-                </rule>
-              </rules>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="35.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="5fc2-149e-61a0-2c67" name="Lanzallamas" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="1b1c-c859-d17a-ca05" name="Lanzallamas" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70f2-02d3-823a-3044" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d66-1402-e268-dc9e" type="max"/>
               </constraints>
               <profiles>
-                <profile id="2640-664a-4a91-e0d2" name="Lanzallamas" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                <profile id="15c4-0f11-3081-69da" name="Lanzallamas" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
                   <characteristics>
                     <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Arma de Aliento</characteristic>
-                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F4</characteristic>
-                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91"> Lanza 1D6. Si el resultado es 1, la unidad sufre 1 impacto de F4 con Heridas múltiples 1D3 (resolver como disparos).</characteristic>
+                    <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">F5</characteristic>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Cualquier unidad que sufra una o más heridas por el Lanzallamas deberá hacer un chequeo de pánico. No puede mover y disparar. Puede aguantar y disparar.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6303,30 +6248,30 @@ un Señor de las Bestias. Las Ratas Ogro Mejoradas nunca pueden aplicar bonifica
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="65a9-30dc-b73f-70c0" name="Mortero de Viento Envenenado" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="de95-cb46-7d74-f4df" name="Mortero de Viento Envenenado" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55e4-6b08-97a3-e1d1" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e33-b3c6-81f8-8057" type="max"/>
               </constraints>
               <profiles>
-                <profile id="1ecd-807e-915a-a9ee" name="Mortero de Viento Envenenado" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                <profile id="87ce-f335-37dc-200f" name="Mortero de Viento Envenenado" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
                   <characteristics>
-                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">15-30cm</characteristic>
+                    <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">15-45cm</characteristic>
                     <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd"/>
-                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">En caso de problemas, lanza 1D6 por cada miniatura de la unidad. Por cada resultado de 6, causa 1 herida en la unidad que anula armaduras (resolver como disparos)</characteristic>
+                    <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">En caso de problemas, la unidad de Ratas Ogro de Asalto sufre 1D3 impactos, que hieren a 5+ y Anulan armadura. Puede mover y disparar. Puede aguantar y disparar</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <rules>
-                <rule id="8707-f60b-10da-7b9d" name="Mortero de Viento Envenenado" hidden="false">
+                <rule id="18f1-e470-fa42-9bb3" name="Mortero de Viento Envenenado" hidden="false">
                   <description>Funciona como el grupo de apoyo con los siguientes cambios. Alcance: 15-30cm”. En caso de problemas, lanza 1D6 por cada miniatura de la unidad. Por cada resultado de 6, causa 1 herida en la unidad que anula armaduras (resolver como disparos)”.
 </description>
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="c4a2-4854-66dc-3703" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+                <infoLink id="0145-18ae-1e09-36bf" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="45.0"/>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="35.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -6336,44 +6281,32 @@ un Señor de las Bestias. Las Ratas Ogro Mejoradas nunca pueden aplicar bonifica
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7a07-a5a1-cd9d-f581" name="Abominación" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="a1dd-3286-509d-b9ca" value="1.0">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a1e-b85d-c12e-fe6a" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="7a07-a5a1-cd9d-f581" name="Abominación del pozo infernal" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1dd-3286-509d-b9ca" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1dd-3286-509d-b9ca" type="max"/>
       </constraints>
       <profiles>
         <profile id="71e4-ae26-56f1-43f7" name="Abominación" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">8D6</characteristic>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">5D6</characteristic>
             <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
             <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">1</characteristic>
             <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
             <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
             <characteristic name="H" typeId="a41f-60f6-2336-73ab">6</characteristic>
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">5</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">1d6+1</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo, Skaven, Moulder</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <rules>
-        <rule id="9809-c5b4-65a1-b085" name="Inclusión" hidden="false">
-          <description>Puedes incluir 0-1 Abominaciones por cada unidad de Guerreros del Clan en tu ejército.
-</description>
-        </rule>
         <rule id="db95-6c45-5702-6874" name="Moulder" hidden="false"/>
-        <rule id="a908-706c-c350-9ce0" name="Impactos por carga 1D6" hidden="false"/>
       </rules>
       <infoLinks>
         <infoLink id="7464-991e-f97f-cdda" name="¡El que corre hoy, vive para luchar mañana!" hidden="false" targetId="10cf-482d-0498-a47e" type="rule"/>
@@ -6387,10 +6320,10 @@ un Señor de las Bestias. Las Ratas Ogro Mejoradas nunca pueden aplicar bonifica
         <categoryLink id="57c1-11ef-4829-23bd" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="300.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="225.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="98af-dadd-a6c7-6094" name="Rueda de la muerte" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="98af-dadd-a6c7-6094" name="Rueda de la muerte" publicationId="5ec3-575b-1ab0-ca98" page="34" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="increment" field="aeff-b8fa-1d78-e58c" value="1.0">
           <repeats>
@@ -6493,7 +6426,7 @@ que corre hoy, vive para luchar mañana!).</description>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="150.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4c9d-ee73-87ba-bd69" name="Cañón de disformidad" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="4c9d-ee73-87ba-bd69" name="Cañón de disformidad" publicationId="5ec3-575b-1ab0-ca98" page="35" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="increment" field="af74-9ce4-0a45-9ff9" value="1.0">
           <repeats>
@@ -6574,7 +6507,7 @@ no se le permitiese (aunque la carga proceda de un arrasamiento, por ejemplo). <
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="100.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b319-1aaf-9b0f-2e8b" name="Portadores del incensario" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="b319-1aaf-9b0f-2e8b" name="Portadores del incensario" publicationId="5ec3-575b-1ab0-ca98" page="33" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="increment" field="70cc-2fdd-3d9b-4e50" value="1.0">
           <repeats>
@@ -8228,6 +8161,28 @@ Esto no es un objeto mágico, así que no puede anularse (mediante Piedra de la 
       </selectionEntries>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="210.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4544-443f-b050-a026" name="Horror de la camada" publicationId="5ec3-575b-1ab0-ca98" page="32" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="102e-012c-5785-3354">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c13b-e149-dca4-f4d4" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d360-823f-1e66-e6eb" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="444f-e6ff-8e3b-4f86" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
+        <categoryLink id="c189-0397-9c8b-cdd2" name="Unidad especial" hidden="false" targetId="102e-012c-5785-3354" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a173-9629-e67c-d033" name="Horror de la camada" hidden="false" collective="false" import="true" targetId="dc6a-3ce3-a082-980d" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="230.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
