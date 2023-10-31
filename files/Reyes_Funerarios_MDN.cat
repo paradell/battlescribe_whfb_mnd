@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="93c4-b6ad-9da5-4afc" name="Reyes Funerarios MDN" revision="11" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="93c4-b6ad-9da5-4afc" name="Reyes Funerarios MDN" revision="12" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
-    <publication id="9806-8ad8-97a2-86b5" name="Reyes Funerarios MDN - 2020" publisher="" publicationDate="Noviembre 2020" publisherUrl="https://www.cargad.com/index.php/manuscritos-de-nuth/"/>
+    <publication id="e8ce-95bb-4989-362d" name="Reyes Funerarios MDN - 2023"/>
   </publications>
   <selectionEntries>
-    <selectionEntry id="91c8-b537-62f8-c450" name="Carros ligeros" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="91c8-b537-62f8-c450" name="Carros ligeros" publicationId="e8ce-95bb-4989-362d" page="19" hidden="false" collective="false" import="true" type="upgrade">
       <modifierGroups>
         <modifierGroup>
           <conditionGroups>
@@ -270,14 +270,21 @@
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="77ea-7513-30ad-2fee" name="Esfinge de guerra" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
+    <selectionEntry id="77ea-7513-30ad-2fee" name="Esfinge de guerra" publicationId="e8ce-95bb-4989-362d" page="25" hidden="false" collective="false" import="true" type="upgrade">
+      <modifierGroups>
+        <modifierGroup>
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
           </conditions>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set" field="6137-c475-ef8f-0488" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6137-c475-ef8f-0488" type="max"/>
+      </constraints>
       <profiles>
         <profile id="0192-ca41-3e72-a782" name="Esfinge de guerra" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -316,13 +323,16 @@
 
 7- En caso de muerte del monstruo, la dotación (o el personaje) serán desplegados a como una unidad a pie a menos de 5cm del lugar donde haya caído su montura. Actuarán como una unidad independiente el resto de la batalla. No es posible resucitar la Esfinge aunque la dotación (o personaje) sigan vivos.</description>
         </rule>
+        <rule id="d07d-eba1-da15-6847" name="La Esfinge y el Cántico de Invocación de Djedra." hidden="false">
+          <description> El oponente debe acabar tanto con la dotación como con el monstruo para conseguir los puntos de victoria. El Cántico de Invocación de Djedra puede recuperar heridas de la dotación o del monstruo. Es posible, incluso, que habiendo únicamente un miembro de la dotación se levante tanto la dotación como el monstruo. Ten en cuenta que es posible que la Dotación muera y las heridas por Inestabilidad las sufra la propia Esfinge (todo es una misma unidad).</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="66b5-2e6d-0548-fdec" name="No muertos" hidden="false" targetId="39a2-3557-c70f-a611" type="rule"/>
         <infoLink id="b7d1-b255-74f0-2917" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
         <infoLink id="6ad1-c510-bfd3-4f54" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
-        <infoLink id="3beb-d188-1ab6-6a29" name="Monstruosidad de Piedra" hidden="false" targetId="8ca9-9d02-9e2d-0edd" type="rule"/>
         <infoLink id="dd0c-8e6b-28c2-a557" name="Criatura artefacto" hidden="false" targetId="bf98-3374-e754-f251" type="rule"/>
+        <infoLink id="df89-fcac-9b92-9db6" name="Impactos por carga" hidden="false" targetId="944f-4d13-dd5d-baa5" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="56ed-8a19-c5a3-fc88" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
@@ -395,12 +405,22 @@
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="244c-f2b3-c767-be12" name="Aguijón envenenado" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9515-bcee-5410-6dd8" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="39cd-7c71-ab67-e58b" name="Aguijón envenenado" hidden="false">
+              <description>Sus ataques en combate cuerpo a cuerpo son Envenenados (no afecta a impactos por carga ni Guardia).</description>
+            </rule>
+          </rules>
+        </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="230.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8271-bcd3-66a0-821d" name="Rey funerario" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="8271-bcd3-66a0-821d" name="Rey funerario" publicationId="e8ce-95bb-4989-362d" page="15" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="add" field="category" value="184a-30ec-bf7c-b603">
           <conditions>
@@ -571,13 +591,17 @@
           <selectionEntries>
             <selectionEntry id="58af-3a19-de24-7174" name="Esfinge de guerra" hidden="false" collective="false" import="true" type="upgrade">
               <comment>Sustituye a la tripulación de la Esfinge</comment>
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+              <modifierGroups>
+                <modifierGroup>
                   <conditions>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
                   </conditions>
-                </modifier>
-              </modifiers>
+                  <modifiers>
+                    <modifier type="set" field="577b-74c8-1dd4-51c7" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="577b-74c8-1dd4-51c7" type="max"/>
               </constraints>
@@ -593,6 +617,33 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83fa-2787-6acd-1bad" type="max"/>
               </constraints>
+              <selectionEntries>
+                <selectionEntry id="da53-bf24-2177-6e06" name="Dos Caballos esqueléticos adicionales" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifierGroups>
+                    <modifierGroup>
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                      </conditions>
+                      <modifiers>
+                        <modifier type="set" field="dcfb-1482-27c2-2ddc" value="0.0"/>
+                        <modifier type="set" field="hidden" value="true"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcfb-1482-27c2-2ddc" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e85f-29dd-8e71-d8e6" type="min"/>
+                  </constraints>
+                  <rules>
+                    <rule id="35d1-ab17-ffe7-f0ec" name="Dos Caballos esqueléticos adicionales" hidden="false">
+                      <description>El Carro de Guerra Ligero puede llevar dos Corceles Esqueléticos adicionales (+16), en cuyo caso debe usar una peana de 100x100.</description>
+                    </rule>
+                  </rules>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="16.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
               <entryLinks>
                 <entryLink id="d372-c9c7-ba47-7acb" name="Carro ligero" hidden="false" collective="false" import="true" targetId="2a2a-f06e-8e25-7c26" type="selectionEntry"/>
               </entryLinks>
@@ -625,7 +676,7 @@
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="170.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="936d-c1b2-f40f-7862" name="Sumo sacerdote funerario" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="936d-c1b2-f40f-7862" name="Sumo sacerdote funerario" publicationId="e8ce-95bb-4989-362d" page="15" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="790b-77b3-e452-bf92" value="0.0">
           <conditionGroups>
@@ -789,7 +840,7 @@
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="245.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8caa-6cb6-7d2d-bc98" name="Arca de las almas" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="8caa-6cb6-7d2d-bc98" name="Arca de las almas" publicationId="e8ce-95bb-4989-362d" page="22" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="cae1-2e0f-6283-e4f2" value="1.0">
           <conditionGroups>
@@ -947,7 +998,7 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="165.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a075-4756-1bc1-386c" name="Príncipe funerario" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="a075-4756-1bc1-386c" name="Príncipe funerario" publicationId="e8ce-95bb-4989-362d" page="16" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="add" field="category" value="184a-30ec-bf7c-b603">
           <conditions>
@@ -1121,20 +1172,25 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="aa11-df4d-813d-4f08" name="Montura" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="aa11-df4d-813d-4f08" name="Montura" hidden="false" collective="false" import="true" defaultSelectionEntryId="93f9-1712-aaf5-c283">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf91-f594-e88c-98fd" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1acf-bf3b-ed2c-9e7e" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="9688-5d93-978f-5b7d" name="Esfinge de guerra " hidden="false" collective="false" import="true" type="upgrade">
               <comment>Sustituye a la tripulación de la Esfinge</comment>
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+              <modifierGroups>
+                <modifierGroup>
                   <conditions>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
                   </conditions>
-                </modifier>
-              </modifiers>
+                  <modifiers>
+                    <modifier type="set" field="ca20-cd43-7ee3-ba02" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca20-cd43-7ee3-ba02" type="max"/>
               </constraints>
@@ -1156,6 +1212,33 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="45.0"/>
               </costs>
+            </selectionEntry>
+            <selectionEntry id="da3d-2de7-e793-3995" name="Corcel esquelético" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="f2ba-6851-c971-c483" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2ba-6851-c971-c483" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="f9ab-cbfa-d3a0-d095" name="Corcel esquelético" hidden="false" collective="false" import="true" targetId="20db-3f2b-bd9c-1363" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="8.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="93f9-1712-aaf5-c283" name="A pie" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c8a8-3b2f-0748-3046" type="max"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1182,7 +1265,7 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="100.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6434-1782-542e-3d35" name="Sacerdote funerario" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="6434-1782-542e-3d35" name="Sacerdote funerario" publicationId="e8ce-95bb-4989-362d" page="16" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="aeb0-e273-f3ea-4ae1" value="0.0">
           <conditionGroups>
@@ -1345,7 +1428,7 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="115.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a08f-d8b1-1c70-c95c" name="Portador del Icono Funerario" publicationId="9806-8ad8-97a2-86b5" page="17" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="a08f-d8b1-1c70-c95c" name="Portador del Icono Funerario" publicationId="e8ce-95bb-4989-362d" page="17" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="1a02-bc0f-9ae4-ce3a" value="0.0">
           <conditions>
@@ -1377,7 +1460,7 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
         </profile>
       </profiles>
       <rules>
-        <rule id="24f3-5bb9-cc05-ee25" name="Armas Funerarias" publicationId="9806-8ad8-97a2-86b5" page="17" hidden="false">
+        <rule id="24f3-5bb9-cc05-ee25" name="Armas Funerarias" publicationId="e8ce-95bb-4989-362d" page="17" hidden="false">
           <description>Los ataques del Portador del Icono Funerario hechos con su arma de mano son Ataques mágicos y tienen la regla Golpe letal. Si sustituye su arma de mano por una arma mágica, pierde el Golpe Letal.</description>
         </rule>
       </rules>
@@ -1514,22 +1597,23 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
     </selectionEntry>
     <selectionEntry id="7f6d-5f6d-80f4-8ccc" name="Necrotecto" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
-        </modifier>
         <modifier type="set" field="1b91-4fb4-8acc-9f16" value="0.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="1b91-4fb4-8acc-9f16" value="1.0">
-          <repeats>
-            <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="1b91-4fb4-8acc-9f16" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b91-4fb4-8acc-9f16" type="max"/>
       </constraints>
@@ -1555,7 +1639,7 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
       </profiles>
       <rules>
         <rule id="ab2f-65ca-0dd8-69e2" name="Forjador de piedra" hidden="false">
-          <description>Todas las miniaturas de tipo Constructo que tengan al inicio de turno uno o más Necrotectos a 30cm o menos, ganan la regla Regeneración (6+) hasta final de turno. Si ya la habían perdido (por ejemplo a causa de ataques flamígeros) la recuperan.</description>
+          <description>El Necrotecto puede lanzar un cántico por turno en fase de magia. Sin embargo, sólo puede lanzarlo sobre unidades amigas de tipo Constructo (así que no puede lanzar el Cántico de la Venganza). El Necrotecto entona los cánticos con nivel de energía 1D6</description>
         </rule>
         <rule id="04f2-2e1f-6c33-9a75" name="Ira del creador" hidden="false">
           <description>La unidad a la que se haya unido el Necrotecto (así como todos los personajes dentro de dicha unidad) tienen Odio hacia el enemigo (pese a ser inmunes a psicología).</description>
@@ -1685,10 +1769,10 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="55.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="65.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fc43-f01a-ed40-a3bf" name="Guerreros esqueleto" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="fc43-f01a-ed40-a3bf" name="Guerreros esqueleto" publicationId="e8ce-95bb-4989-362d" page="18" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="bb20-d431-e03d-3020" value="2.0">
           <conditions>
@@ -1951,7 +2035,7 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="149e-5d2d-d725-c46b" name="Caballería ligera de Khemri" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="149e-5d2d-d725-c46b" name="Caballería ligera de Khemri" publicationId="e8ce-95bb-4989-362d" page="17" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -2143,7 +2227,7 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="655f-15e5-fd8f-1735" name="Caballería pesada de Khemri" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="655f-15e5-fd8f-1735" name="Caballería pesada de Khemri" publicationId="e8ce-95bb-4989-362d" page="17" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -2349,7 +2433,7 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d3df-deee-9919-7c24" name="Enjambre funerario" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="d3df-deee-9919-7c24" name="Enjambre funerario" publicationId="e8ce-95bb-4989-362d" page="19" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="d812-0d03-f64e-6b13" value="2.0">
           <conditions>
@@ -2429,7 +2513,7 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="80d0-92cb-ec75-991d" name="Guardia del sepulcro" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="80d0-92cb-ec75-991d" name="Guardia del sepulcro" publicationId="e8ce-95bb-4989-362d" page="20" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2510,6 +2594,17 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="14ee-0919-e1be-d80f" name="Alabarda" hidden="false" collective="true" import="true" type="upgrade">
+                  <modifierGroups>
+                    <modifierGroup>
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                      </conditions>
+                      <modifiers>
+                        <modifier type="set" field="b0d3-38b6-6a9e-e798" value="0.0"/>
+                        <modifier type="set" field="hidden" value="true"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0d3-38b6-6a9e-e798" type="max"/>
                   </constraints>
@@ -2611,9 +2706,9 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b680-bcf5-ec67-033c" name="Momias" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
+    <selectionEntry id="b680-bcf5-ec67-033c" name="Momias" publicationId="e8ce-95bb-4989-362d" page="20" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -2622,8 +2717,26 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set" field="7a70-488f-26dc-ee6f" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93f9-1712-aaf5-c283" type="atLeast">
+              <comment>Rey Funerario a pie</comment>
+            </condition>
+          </conditions>
+          <modifiers>
+            <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
+            <modifier type="set-primary" field="category" value="ba68-224b-3224-a908"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a70-488f-26dc-ee6f" type="max"/>
+      </constraints>
       <profiles>
         <profile id="29e4-b447-fe11-b017" name="Momia" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -2690,7 +2803,7 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2722,34 +2835,7 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
                 </profile>
               </profiles>
               <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="16.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="523c-78af-38f1-d0be" name="Músico" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6537-d5be-8de4-b534" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="8.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="14d1-6ad4-9802-d0f1" name="Portaestandarte" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f001-85b3-fa5f-dc27" type="max"/>
-              </constraints>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="e909-74b9-e54c-89c3" name="Portaestandarte mágico" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8d81-5f57-77c6-ebf9" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a7e-95e8-4ed2-4351" type="max"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink id="55fc-2af4-e0d7-768d" name="Estandartes mágicos" hidden="false" collective="false" import="true" targetId="59b9-7426-7668-b734" type="selectionEntryGroup"/>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="16.0"/>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2759,7 +2845,7 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4a37-4ae4-0970-f3c4" name="Ushabti" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="4a37-4ae4-0970-f3c4" name="Ushabti" publicationId="e8ce-95bb-4989-362d" page="20" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -2814,37 +2900,10 @@ reglas igualmente (salvo, lógicamente, que los disparos que vayan hacia la dota
                   <comment>No tiene efectos en el juego</comment>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="574b-92be-8365-76ea" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db35-29d7-d72f-f1e5" type="min"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="65d0-d137-0ee6-8363" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="a1ef-a0c2-661c-e9c7" name="Arco compuesto" hidden="false" collective="true" import="true" type="upgrade">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="089e-3c7f-0641-9a7f" type="max"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="e715-c982-93aa-655b" name="Arco compuesto" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
-                      <characteristics>
-                        <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">75</characteristic>
-                        <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">6</characteristic>
-                        <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Saetas del áspid
-En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todos los efectos.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink id="02e9-848c-1e2e-d124" name="Saetas del áspid" hidden="false" targetId="6599-f3f5-b868-fbd8" type="rule"/>
                   </infoLinks>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -2862,7 +2921,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9fbf-5551-a49d-67bf" name="Buitres de Nehekara" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="9fbf-5551-a49d-67bf" name="Buitres de Nehekara" publicationId="e8ce-95bb-4989-362d" page="21" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -2937,7 +2996,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6ac3-6955-0f4a-e804" name="Gólem escorpión" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="6ac3-6955-0f4a-e804" name="Gólem escorpión" publicationId="e8ce-95bb-4989-362d" page="21" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -2985,14 +3044,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="85.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="af75-194e-775a-7c0b" name="Acechadores sepulcrales" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="af75-194e-775a-7c0b" name="Acechadores sepulcrales" publicationId="e8ce-95bb-4989-362d" page="21" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -3003,7 +3055,19 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
           </modifiers>
         </modifierGroup>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="308c-6028-44b2-7b8c" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
       </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="308c-6028-44b2-7b8c" type="max"/>
+      </constraints>
       <profiles>
         <profile id="324b-a85a-29c5-3e03" name="Acechador sepulcral" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3012,7 +3076,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
             <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
             <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
@@ -3024,10 +3088,12 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule id="97e5-d218-5559-ed86" name="Avance Subterraneo" hidden="false"/>
+      </rules>
       <infoLinks>
         <infoLink id="4514-7ba8-cb82-a487" name="No muertos" hidden="false" targetId="39a2-3557-c70f-a611" type="rule"/>
         <infoLink id="517a-f986-05c6-8338" name="Criatura artefacto" hidden="false" targetId="bf98-3374-e754-f251" type="rule"/>
-        <infoLink id="387d-5122-3130-c750" name="Salir desde Abajo" hidden="false" targetId="8868-40ff-26bd-e9a9" type="rule"/>
         <infoLink id="7b21-322c-2eef-c3ee" name="Petrificar (1d3)" hidden="false" targetId="c4fe-b574-87dd-e2e7" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -3061,7 +3127,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="52.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="60.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3069,7 +3135,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ee7c-6eb5-d8d8-8f13" name="Lanzacráneos" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="ee7c-6eb5-d8d8-8f13" name="Lanzacráneos" publicationId="e8ce-95bb-4989-362d" page="22" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="6f7e-ef96-ecd5-3d29" name="Lanzacráneos" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3180,14 +3246,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="90.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="37c7-e115-5fb4-5c08" name="Caballeros de la Necrópolis" publicationId="9806-8ad8-97a2-86b5" page="21" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="37c7-e115-5fb4-5c08" name="Caballeros de la Necrópolis" publicationId="e8ce-95bb-4989-362d" page="21" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -3198,7 +3257,19 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
           </modifiers>
         </modifierGroup>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="129a-a3b4-c056-b7dd" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
       </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="129a-a3b4-c056-b7dd" type="max"/>
+      </constraints>
       <profiles>
         <profile id="f184-b338-c374-6d14" name="Necrosierpe" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3238,16 +3309,16 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82b6-f319-4a13-e77c" type="min"/>
           </constraints>
           <profiles>
-            <profile id="4145-f49e-98dc-0629" name="Caballero de la Necrópolis" publicationId="9806-8ad8-97a2-86b5" page="21" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+            <profile id="4145-f49e-98dc-0629" name="Caballero de la Necrópolis" publicationId="e8ce-95bb-4989-362d" page="21" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
               <characteristics>
                 <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
-                <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
                 <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
                 <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
                 <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
                 <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
                 <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
-                <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
                 <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
                 <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
                 <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
@@ -3264,7 +3335,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             <infoLink id="7e12-f25d-99a5-b238" name="Golpe letal" hidden="false" targetId="917d-4fe5-c45b-ca64" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="63.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="70.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3284,16 +3355,16 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df67-49ba-bda1-27d6" type="max"/>
               </constraints>
               <profiles>
-                <profile id="c49b-67c0-c049-5ede" name="Capitán de la Necrópolis" publicationId="9806-8ad8-97a2-86b5" page="21" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+                <profile id="c49b-67c0-c049-5ede" name="Capitán de la Necrópolis" publicationId="e8ce-95bb-4989-362d" page="21" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
                   <characteristics>
                     <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
-                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                    <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
                     <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
                     <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
                     <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
                     <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
                     <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
-                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+                    <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
                     <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
                     <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
                     <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
@@ -3333,14 +3404,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f173-216b-f8e0-4380" name="Necroesfinge" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="f173-216b-f8e0-4380" name="Necroesfinge" publicationId="e8ce-95bb-4989-362d" page="25" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -3351,9 +3415,21 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             <modifier type="remove" field="category" value="184a-30ec-bf7c-b603"/>
           </modifiers>
         </modifierGroup>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="7163-7c16-fb3b-f27f" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
       </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7163-7c16-fb3b-f27f" type="max"/>
+      </constraints>
       <profiles>
-        <profile id="be1d-781a-986c-2299" name="Necroesfinge" publicationId="9806-8ad8-97a2-86b5" page="25" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+        <profile id="be1d-781a-986c-2299" name="Necroesfinge" publicationId="e8ce-95bb-4989-362d" page="25" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
             <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
             <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
@@ -3367,25 +3443,23 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo, Constructo, No Muerto.</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">5</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <rules>
-        <rule id="8bcd-56df-38a1-fba9" name="Golpe Decapitador" publicationId="9806-8ad8-97a2-86b5" page="25" hidden="false">
-          <description>Uno de sus ataques debes realizarlo con un dado de otro color. Ese ataque tiene la regla Heridas múltiples 1D6.</description>
+        <rule id="8bcd-56df-38a1-fba9" name="Golpe Decapitador" publicationId="e8ce-95bb-4989-362d" page="25" hidden="false">
+          <description>Uno de sus ataques debes realizarlo con un dado de otro color. Ese ataque es de F10, y tiene Golpe Letal contra cualquier tipo de miniatura (no sólo Infantería), incluyendo Monstruos (el ataque sigue sujeto a Golpe Letal y Heridas Múltiples (1D3).</description>
         </rule>
+        <rule id="5430-6b75-f136-181e" name="Heridas Múltiples (1d3)" hidden="false"/>
       </rules>
       <infoLinks>
         <infoLink id="45d6-add6-a4fb-c745" name="No muertos" hidden="false" targetId="39a2-3557-c70f-a611" type="rule"/>
         <infoLink id="f1e1-128b-4e10-ab34" name="Criatura artefacto" hidden="false" targetId="bf98-3374-e754-f251" type="rule"/>
         <infoLink id="1f55-e7d1-ed82-b2c1" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
         <infoLink id="36bf-4988-e080-4967" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
-        <infoLink id="3302-7f19-984c-4e81" name="Volar" hidden="false" targetId="90d6-fe4d-a823-314b" type="rule"/>
         <infoLink id="653f-b399-cd02-9e30" name="Golpe letal" hidden="false" targetId="917d-4fe5-c45b-ca64" type="rule"/>
-        <infoLink id="0963-d1aa-86d4-be0e" name="Pesado" hidden="false" targetId="e355-6ff4-079f-2351" type="rule"/>
-        <infoLink id="86f8-9520-3219-2145" name="Monstruosidad de Piedra" hidden="false" targetId="8ca9-9d02-9e2d-0edd" type="rule"/>
         <infoLink id="dd3e-9a51-501d-251f" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
       </infoLinks>
       <categoryLinks>
@@ -3393,11 +3467,23 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <categoryLink id="6360-03eb-2f06-ad63" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
         <categoryLink id="0029-782e-4d61-12bb" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d3ac-8f65-2741-cbec" name="Aguijón envenenado" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66d8-7c84-a0d6-d064" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="1ea5-05b5-7d23-35d4" name="Aguijón envenenado" hidden="false">
+              <description>Sus ataques en combate cuerpo a cuerpo son Envenenados (no afecta a impactos por carga ni Guardia).</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="275.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="240.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a0fb-ceb5-018d-87a4" name="Gigante de hueso" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="a0fb-ceb5-018d-87a4" name="Gigante de hueso" publicationId="e8ce-95bb-4989-362d" page="24" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -3459,8 +3545,20 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
               </costs>
             </selectionEntry>
             <selectionEntry id="ee4e-212c-abc4-c4dd" name="Arma de mano adicional" hidden="false" collective="true" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="d850-f261-f338-2304" value="1.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5dc1-5f84-b79e-ca13" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d850-f261-f338-2304" type="min"/>
               </constraints>
               <infoLinks>
                 <infoLink id="6b63-ea5e-ee0a-2fc9" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
@@ -3470,6 +3568,17 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
               </costs>
             </selectionEntry>
             <selectionEntry id="869c-6d0e-c3c5-b807" name="Arma a dos manos" hidden="false" collective="true" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="fddd-c9a3-deb7-1117" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fddd-c9a3-deb7-1117" type="max"/>
               </constraints>
@@ -3525,14 +3634,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="210.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="90f8-4d80-adaa-40a4" name="Hierotitán" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="90f8-4d80-adaa-40a4" name="Hierotitán" publicationId="e8ce-95bb-4989-362d" page="24" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -3543,7 +3645,19 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             <modifier type="remove" field="category" value="184a-30ec-bf7c-b603"/>
           </modifiers>
         </modifierGroup>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="a700-08f1-63aa-da8b" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
       </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a700-08f1-63aa-da8b" type="max"/>
+      </constraints>
       <profiles>
         <profile id="f96b-12de-773f-ac02" name="Hierotitán" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3551,7 +3665,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
             <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
             <characteristic name="F" typeId="79c2-0368-3eed-76b4">6</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
             <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">1</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
@@ -3566,10 +3680,13 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
       </profiles>
       <rules>
         <rule id="9f73-03f1-ce72-772d" name="Icono de Ptra" hidden="false">
-          <description>Se trata de un objeto portahechizos, de nivel de energía 3. Contiene el hechizo Mirada ardiente de Shem del Saber de la Luz (Proyectil mágico, 60cm, 1D6 impactos F4, ataques flamígeros).</description>
+          <description>Oobjeto portahechizo de Nivel de energía 5. Contiene el hechizo mirada ardiente de Shem del saber de la Luz.</description>
         </rule>
         <rule id="a818-88ce-11d9-86ca" name="Conducto espiritual" hidden="false">
-          <description>Cualquier Sacerdote (o Sumo Sacerdote) que tenga uno o más Hierotitanes amigos a 30cm o menos, suma un +1 a la tirada para determinar el nivel de energía de sus cánticos (acumulable a cualquier otro bonificador). Varios Sacerdotes pueden usar el mismo Hierotitán en una misma fase (no es el Hierotitán quien lanza el cántico). Conducto Espiritual funciona sólo con cánticos (no con objetos portahechizos) y sólo de Sacerdotes y Sumos Sacerdotes (no la regla ¡Hágase mi Voluntad!).</description>
+          <description>Cualquier Sacerdote (o Sumo Sacerdote), incluyendo personajes especiales, puede lanzar cualquiera de sus cánticos desde cualquier Hierotitán a 30cm o menos. Esto afecta tanto a línea de visión como alcance, pero debe ser ambas (no puedes usar línea de visión del Sacerdote y alcance desde el Hierotitán, por ejemplo). Varios Sacerdotes pueden usar el mismo Hierotitán en una misma fase (no es el Hierotitán quien lanza el cántico). Conducto Espiritual funciona sólo con cánticos (no con objetos portahechizos) y sólo de Sacerdotes y Sumos Sacerdotes (no la regla ¡Hágase mi Voluntad! ni Forjador de Piedra).</description>
+        </rule>
+        <rule id="d009-7cce-4a7f-3e07" name="Escamas de Usirian" hidden="false">
+          <description>Oobjeto portahechizo de Nivel de energía 5. Contiene el hechizo Robo del Alma del saber de la Muerte.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -3582,18 +3699,22 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <categoryLink id="3197-8f0c-9544-f69c" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="245.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="225.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3a7a-7fa7-9e85-6fd3" name="Ramhotep el Visionario" publicationId="9806-8ad8-97a2-86b5" page="36" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="3a7a-7fa7-9e85-6fd3" name="Ramhotep el Visionario" publicationId="e8ce-95bb-4989-362d" page="36" hidden="false" collective="false" import="true" type="unit">
       <comment>Necrotecto de Quatar</comment>
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
+      <modifierGroups>
+        <modifierGroup>
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
           </conditions>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set" field="097c-a10f-3090-a8bd" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="097c-a10f-3090-a8bd" type="max"/>
       </constraints>
@@ -3619,16 +3740,16 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
       </profiles>
       <rules>
         <rule id="bf34-bb38-1e8a-f07a" name="Forjador de piedra" hidden="false">
-          <description>Todas las miniaturas de tipo Constructo a 30cm o menos de Ramhotep Todas las miniaturas de tipo Constructo que tengan al inicio de turno a Ramhotep o a algún Necrotecto a 30cm o menos, ganan la regla Regeneración (6+) hasta final de turno. Si ya la habían perdido (por ejemplo a causa de ataques flamígeros) la recuperan.</description>
+          <description>Ramhotep puede lanzar un cántico por turno en fase de magia. Sin embargo, sólo puede lanzarlo sobre unidades amigas de tipo Constructo (así que no puede lanzar el Cántico de la Venganza). El Necrotecto entona los cánticos con nivel de energía 1D6.</description>
         </rule>
         <rule id="4a05-a2bd-cc4a-9aa0" name="Ira del creador" hidden="false">
-          <description> Tanto Ramhotep como la unidad donde esté tienen Odio hacia el enemigo.</description>
+          <description>Tanto Ramhotep como la unidad donde esté tienen Odio hacia el enemigo.</description>
         </rule>
         <rule id="6fbc-413b-ab6f-854d" name="Fervor frenético" hidden="false">
           <description>Ramhotep siempre tiene Furia Asesina (pese a ser inmune a psicología). Si Ramhotep se une a una unidad al inicio de (o durante) la partida, dicha unidad gana la regla especial Furia Asesina (pese a ser inmunes a psicología). Si Ramhotep abandona su unidad, la unidad que ha abandonado pierde Furia Asesina.</description>
         </rule>
         <rule id="9af2-5da3-0629-f5be" name="Maestro Artesano" hidden="false">
-          <description> Una unidad del ejército con la regla especial Criatura Artefacto puede repetir sus tiradas de salvación por armadura falladas. Esa unidad se determinará al azar al inicio de la batalla entre todas las que dispongan de esa regla especial.</description>
+          <description>Una unidad del ejército con la regla especial Criatura Artefacto puede repetir sus tiradas de salvación por armadura falladas. Esa unidad se determinará al azar al inicio de la batalla entre todas las que dispongan de esa regla especial.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -3637,7 +3758,6 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <infoLink id="fe71-c24f-3b92-826b" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
         <infoLink id="8524-edfd-f9eb-4ff5" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
         <infoLink id="8cc0-7748-d912-f545" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
-        <infoLink id="f229-17b6-e20b-206f" name="Odio" hidden="false" targetId="d574-0f13-6d93-2a87" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="556e-b11c-a9bd-777c" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
@@ -3645,10 +3765,10 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <categoryLink id="96b0-c3a1-bd81-7ccb" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="110.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="120.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ac5f-6d70-5220-6626" name="Arkhan el Negro" publicationId="9806-8ad8-97a2-86b5" page="30" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="ac5f-6d70-5220-6626" name="Arkhan el Negro" publicationId="e8ce-95bb-4989-362d" page="30" hidden="false" collective="false" import="true" type="unit">
       <comment>El Rey Exánime</comment>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -3671,7 +3791,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c421-a379-7672-8d76" type="max"/>
       </constraints>
       <profiles>
-        <profile id="4923-86be-8461-152c" name="Arkhan el Negro" publicationId="9806-8ad8-97a2-86b5" page="30" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+        <profile id="4923-86be-8461-152c" name="Arkhan el Negro" publicationId="e8ce-95bb-4989-362d" page="30" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
             <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
             <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
@@ -3689,19 +3809,19 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
           </characteristics>
         </profile>
-        <profile id="3827-be94-355f-ba96" name="Espada Funeraria de Arkhan." publicationId="9806-8ad8-97a2-86b5" page="30" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+        <profile id="3827-be94-355f-ba96" name="Espada Funeraria de Arkhan." publicationId="e8ce-95bb-4989-362d" page="30" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
           <characteristics>
             <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">-</characteristic>
             <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del Portador</characteristic>
             <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Arma de mano. Por cada herida causada por la Espada Funeraria (tras salvaciones), Arkhan (u otra miniatura de su unidad) puede recuperar una herida sufrida con anterioridad. No puede incrementarse las heridas por encima del límite inicial. Puede “levantar” miniaturas de su unidad mediante estas heridas, pero la unidad no puede tener más miniaturas de las que tenía al inicio de la partida.</characteristic>
           </characteristics>
         </profile>
-        <profile id="9bb1-5ba2-f7e8-ca2c" name="Báculo de Nagash" publicationId="9806-8ad8-97a2-86b5" page="30" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+        <profile id="9bb1-5ba2-f7e8-ca2c" name="Báculo de Nagash" publicationId="e8ce-95bb-4989-362d" page="30" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
           <characteristics>
             <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Este Báculo fue creado por el archinigromante Nagash para canalizar las reservas de energía oscura acumuladas en la Pirámide Negra. En cada turno propio, puedes guardar un dado de Energía no utilizado y usarlo como dado extra de dispersión en el siguiente turno enemigo. En cada turno enemigo, puedes guardar un dado de Dispersión no utilizado y usarlo como dado extra de Energía en tu siguiente turno.</characteristic>
           </characteristics>
         </profile>
-        <profile id="c10e-5760-b43b-1463" name="Liber Mortis" publicationId="9806-8ad8-97a2-86b5" page="30" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+        <profile id="c10e-5760-b43b-1463" name="Liber Mortis" publicationId="e8ce-95bb-4989-362d" page="30" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
           <characteristics>
             <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Este tomo maldito es uno de los legendarios Nueve Libros de Nagash, la fuente de poder nigromántico más poderosa del mundo. Arkhan se considera un Hechicero de quinto nivel a los efectos. Conoce 5 hechizos y genera 5 dados de energía y 3 de dispersión. Ten en cuenta que si se anula el Liber Mortis, Arkhan pasará a ser hechicero de nivel 4 a todos los efectos y perderá un hechizo al azar (aunque sea el 1).</characteristic>
           </characteristics>
@@ -3776,7 +3896,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69a1-5c77-727f-6130" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="ccb5-6f68-9cc2-2fd6" name="Carro de Arkhan" publicationId="9806-8ad8-97a2-86b5" page="30" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="ccb5-6f68-9cc2-2fd6" name="Carro de Arkhan" publicationId="e8ce-95bb-4989-362d" page="30" hidden="false" collective="false" import="true" type="upgrade">
               <comment>Sustituye a la tripulación del Carro</comment>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e481-675c-552f-3d76" type="max"/>
@@ -3803,7 +3923,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
                 </profile>
               </profiles>
               <rules>
-                <rule id="cf26-e9a5-51bc-4d99" name="Carro de Arkhan" publicationId="9806-8ad8-97a2-86b5" page="30" hidden="false">
+                <rule id="cf26-e9a5-51bc-4d99" name="Carro de Arkhan" publicationId="e8ce-95bb-4989-362d" page="30" hidden="false">
                   <description>Ten en cuenta que es un Carro, no un Carro Ligero, así que causa 1D6 impactos por carga y tiene Potencia de unidad 4. Los Impactos por Carga del carro de Arkhan son Ataques flamígeros.No es caballería rápida, así que si se une a una unidad de Carros ligeros, éstos perderán la regla Caballería rápida.</description>
                 </rule>
               </rules>
@@ -3826,7 +3946,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
                 </selectionEntry>
               </selectionEntries>
               <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="95.0"/>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="115.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -3836,29 +3956,30 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="370.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e3b9-092e-676d-35e7" name="Titán de Khemri" publicationId="9806-8ad8-97a2-86b5" page="26" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="e3b9-092e-676d-35e7" name="Titán de Khemri" publicationId="e8ce-95bb-4989-362d" page="26" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="b3d0-dc6e-c2e9-35ce" value="-1.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3a7a-7fa7-9e85-6fd3" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f6d-5f6d-80f4-8ccc" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="b3d0-dc6e-c2e9-35ce" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3d0-dc6e-c2e9-35ce" type="max"/>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3d0-dc6e-c2e9-35ce" type="max"/>
       </constraints>
       <profiles>
-        <profile id="af2c-927f-d919-8388" name="Titán de Khemri" publicationId="9806-8ad8-97a2-86b5" page="26" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+        <profile id="af2c-927f-d919-8388" name="Titán de Khemri" publicationId="e8ce-95bb-4989-362d" page="26" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
             <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
             <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
@@ -3872,61 +3993,67 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo, Constructo, No Muerto</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <rules>
-        <rule id="ebab-cece-4268-ee42" name="Ataques Especiales" publicationId="9806-8ad8-97a2-86b5" page="26" hidden="false">
-          <description>Lanza 1D6 al inicio cada fase de combate para saber qué ataque realiza el Titán en esa fase (contra miniaturas que no sean Infantería, Caballería o Enjambre, suma +1 a la tirada; en caso de personajes montados en monstruo o carro, suma igualmente un +1).
+        <rule id="ebab-cece-4268-ee42" name="Ataques Especiales" publicationId="e8ce-95bb-4989-362d" page="26" hidden="false">
+          <description>Lanza 1D6 al inicio cada fase de combate para saber qué ataque realiza el Titán en esa fase (contra Monsturos, Infantería Monstruosa o Caballería Monstruosa, suma un +1 a la tirada de dado):
 
-1 Escarabajos comecarne. Elige una unidad enemiga en contacto peana con peana con el Titán. Esa unidad sufre 3D6 impactos F2, con Poder de penetración.
+- 1-2 Cuchillas Cortantes. Efectúa 1D6 ataques de F6.
+- 3 Escarabajos comecarne. Elige una unidad enemiga en contacto peana con peana con el Titán. Esa unidad sufre 3D6 impactos F2, con Poder de penetración.
+- 4 Aliento de la Noche. El Titán no ataca. En la subfase de resolución de combate, a todos los efectos ha ganado el jugador de Khemri por 2 puntos. Si el oponente también ganase automáticamente (por ejemplo, también tiene un Titán de Khemri o un Gigante), el combate se considera empate a todos los efectos (se ignoran músicos).
+- 5 Mandíbulas devoradoras. Elige una única miniatura en contacto peana con peana con el Titán. Esa miniatura sufre un impacto de F8 con Golpe Letal. El Golpe Letal afecta a todas las miniaturas, incluyendo Monstruos. En el caso de una miniatura con varias partes, elige cuál de ellas (por ejemplo un personaje montado en monstruo).
+- 6+ Hambre devoraalmas. Lanza 1D6 por cada miniatura en contacto peana con peana con el Titán. Con un 5+, esa miniatura sufre 1D6 heridas que Anulan armadura.</description>
+        </rule>
+        <rule id="f03f-a4c6-5025-5ba6" name="Volar (25cm)" hidden="false"/>
+        <rule id="c514-1f3e-8191-02d4" name="Altar de la Eternidad." hidden="false">
+          <description>Una vez por fase de magia, puede escoger uno de los siguientes poderes:
 
-2-3 Hambre Insaciable. Elige una unidad enemiga en contacto peana con peana con el Titán. El Titán hace 2D6+1 ataques a esa unidad.
-
-4 Cuchillas Cortantes. Todas las miniaturas enemigas en contacto peana con peana con el Titán deberán realizar un chequeo de Iniciativa; si lo fallan sufren una herida que Anula armaduras.
-
-5 Mandíbulas devoradoras. Elige una unidad enemiga en contacto peana con peana con el Titán. Dicha unidad sufre 1D6 impactos de F6.
-
-6 Aliento de la Noche. El Titán no ataca. En la subfase de resolución de combate, a todos los efectos ha ganado el jugador de Khemri por 2 puntos. Si el oponente también ganase automáticamente (por ejemplo, también tiene un Titán de Khemri o un Gigante), el combate se considera empate a todos los efectos (se ignoran músicos).
-
-7 Hambre devoraalmas. Elige una miniatura enemiga en contacto peana con peana con el Titán. Dicha miniatura sufre un impacto de F10 con Heridas múltiples (1D6). En el caso de una miniatura con varias partes, distribuye como proyectiles.</description>
+- 1. Mirada del desierto. Objeto Portahechizos de nivel 5. Se trata de un Proyectil mágico con alcance de 60cm. Causa un impacto de F6, con las reglas de Lanzavirotes (puede mover y disparar).
+- 2. Ira de las arenas. Objeto Portahechizos de nivel 3. Todos los enemigos a 45 cm o menos tienen M-2 y un penalizador de -1 a las tiradas para impactar con armas de proyectiles.3. Despertar del poder antiguo: Objeto Portahechizos de nivel 
+- 3. El Titán recupera una herida sufrida anteriormente (no puedes incrementar a más de 6 Heridas).</description>
         </rule>
       </rules>
       <infoLinks>
         <infoLink id="9ae8-dec0-2a99-7d58" name="No muertos" hidden="false" targetId="39a2-3557-c70f-a611" type="rule"/>
         <infoLink id="586b-c2e2-c4ef-8409" name="Ataca en último lugar" hidden="false" targetId="5914-4089-52e4-33ec" type="rule"/>
         <infoLink id="bed0-2d61-b017-1966" name="Criatura artefacto" hidden="false" targetId="bf98-3374-e754-f251" type="rule"/>
-        <infoLink id="1d6e-eb6f-267e-26db" name="Volar" hidden="false" targetId="90d6-fe4d-a823-314b" type="rule"/>
         <infoLink id="4af7-bf03-608c-7701" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
         <infoLink id="92d9-baf6-c6c9-0561" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
-        <infoLink id="5476-763b-2daa-ebfa" name="Pesado" hidden="false" targetId="e355-6ff4-079f-2351" type="rule"/>
-        <infoLink id="66c7-0b75-f939-4c23" name="Monstruosidad de Piedra" hidden="false" targetId="8ca9-9d02-9e2d-0edd" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="67ef-2775-49e9-2b55" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
         <categoryLink id="2407-7e1e-4ad4-0b5d" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
         <categoryLink id="5bb6-cd71-a274-c6dc" name="Monstruos Arcanos" hidden="false" targetId="6edd-99c1-7d49-468f" primary="false"/>
+        <categoryLink id="c49e-a2ac-d179-fbbb" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="340.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="350.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e4ea-24cd-7211-203f" name="Apophas" publicationId="9806-8ad8-97a2-86b5" page="31" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="e4ea-24cd-7211-203f" name="Apophas" publicationId="e8ce-95bb-4989-362d" page="31" hidden="false" collective="false" import="true" type="unit">
       <comment>Señor Maldito de los Escarabajos</comment>
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
-          </conditions>
-        </modifier>
         <modifier type="set" field="9214-060b-4071-62f6" value="0.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="9214-060b-4071-62f6" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9214-060b-4071-62f6" type="max"/>
       </constraints>
@@ -3949,7 +4076,7 @@ En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todo
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
           </characteristics>
         </profile>
-        <profile id="58b4-9fc7-ed9e-f6f7" name="Escarabajos Voladores." publicationId="9806-8ad8-97a2-86b5" page="31" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+        <profile id="58b4-9fc7-ed9e-f6f7" name="Escarabajos Voladores." publicationId="e8ce-95bb-4989-362d" page="31" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
           <characteristics>
             <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Plantilla de lágrima.
 Parciales a 4+</characteristic>
@@ -3959,13 +4086,13 @@ Parciales a 4+</characteristic>
         </profile>
       </profiles>
       <rules>
-        <rule id="6fb3-94fb-eba8-889f" name="Aparición del desierto" publicationId="9806-8ad8-97a2-86b5" page="31" hidden="false">
+        <rule id="6fb3-94fb-eba8-889f" name="Aparición del desierto" publicationId="e8ce-95bb-4989-362d" page="31" hidden="false">
           <description>Apophas no puede unirse a unidades ni ser el General.</description>
         </rule>
-        <rule id="a514-06c7-68f7-23da" name="Príncipe Escarabajo" publicationId="9806-8ad8-97a2-86b5" page="31" hidden="false">
+        <rule id="a514-06c7-68f7-23da" name="Príncipe Escarabajo" publicationId="e8ce-95bb-4989-362d" page="31" hidden="false">
           <description>Además de poder usar los Escarabajos Voladores, si Apophas es destruido todas las unidades enemigas a 5D6cm sufren 2D6 impactos de F2 (cada una), adicionalmente al efecto de La Maldición.</description>
         </rule>
-        <rule id="d04f-3814-494a-307d" name="Cosechador de almas" publicationId="9806-8ad8-97a2-86b5" page="31" hidden="false">
+        <rule id="d04f-3814-494a-307d" name="Cosechador de almas" publicationId="e8ce-95bb-4989-362d" page="31" hidden="false">
           <description>El Dios del Inframundo ha determinado que una de las almas debe ser reclamada por Apophas. Al inicio de la partida, tras el despliegue, nomina con voz grave uno de los personajes enemigos como maldito por los antiguos espíritus. Apohas puede repetir todas las tiradas falladas para impactar y para herir en combate cuerpo a cuerpo contra dicho personaje (y su montura, si la tiene).</description>
         </rule>
       </rules>
@@ -3994,7 +4121,7 @@ Parciales a 4+</characteristic>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="150.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c585-c17a-4b94-9f64" name="Khalida Neferher" publicationId="9806-8ad8-97a2-86b5" page="33" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="c585-c17a-4b94-9f64" name="Khalida Neferher" publicationId="e8ce-95bb-4989-362d" page="33" hidden="false" collective="false" import="true" type="unit">
       <comment>Reina Guerrera de Lybaras y amada de Asaph</comment>
       <modifiers>
         <modifier type="set" field="7043-84b6-547f-a98e" value="0.0">
@@ -4025,26 +4152,26 @@ Parciales a 4+</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
           </characteristics>
         </profile>
-        <profile id="e4eb-d3ce-8b98-472c" name="Báculo del Áspid" publicationId="9806-8ad8-97a2-86b5" page="33" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+        <profile id="e4eb-d3ce-8b98-472c" name="Báculo del Áspid" publicationId="e8ce-95bb-4989-362d" page="33" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
           <characteristics>
             <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Khalida porta este cetro tallado en madera con la forma de una agresiva serpiente, que se agita como si estuviera vivo. Es capaz de morder e inocular el veneno que contiene, y escupe a sus enemigos con la misma furia y rencor con la que lo haría la propia Asaph, la Diosa Áspid. Objeto portahechizos nivel 5. Es un proyectil mágico con un alcance de 60 cm que causa 2D6 impactos de F4. Una unidad que sufra una o más heridas de este báculo (después de tiradas de salvación) no podrá mover de forma voluntaria en su próxima fase de movimiento (puede huir por pánico, terror, etc;).</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <rules>
-        <rule id="dea5-126c-5c88-b40e" name="Reina Khalida" publicationId="9806-8ad8-97a2-86b5" page="33" hidden="false">
+        <rule id="dea5-126c-5c88-b40e" name="Reina Khalida" publicationId="e8ce-95bb-4989-362d" page="33" hidden="false">
           <description>Cuenta como Rey Funerario a todos los efectos (incluyendo poder incluir Carros ligeros como unidad básica).</description>
         </rule>
-        <rule id="60dd-5b58-bbac-c2ff" name="Encarnación de la Diosa Áspid" publicationId="9806-8ad8-97a2-86b5" page="33" hidden="false">
+        <rule id="60dd-5b58-bbac-c2ff" name="Encarnación de la Diosa Áspid" publicationId="e8ce-95bb-4989-362d" page="33" hidden="false">
           <description>La Reina se mueve con la celeridad de una serpiente, y por sus venas fluyen potentes venenos que desembocan en sus largas cuchillas. Siempre ataca primero. Además, todos sus ataques son Ataques mágicos, y Ataques envenenados. Los ataques envenenados que hieran automáticamente (obteniendo un 6 en la tirada para impactar) tienen la regla Heridas múltiples (1D3).</description>
         </rule>
-        <rule id="eeb3-9fb8-d952-d5df" name="El mandato de la reina." publicationId="9806-8ad8-97a2-86b5" page="33" hidden="false">
+        <rule id="eeb3-9fb8-d952-d5df" name="El mandato de la reina." publicationId="e8ce-95bb-4989-362d" page="33" hidden="false">
           <description>Khalida puede entonar el Cántico del Embate de Horekhah una vez por fase de magia. No puede ser dispersado.</description>
         </rule>
-        <rule id="db02-faa1-651d-a64c" name="La bendición del áspid" publicationId="9806-8ad8-97a2-86b5" page="33" hidden="false">
+        <rule id="db02-faa1-651d-a64c" name="La bendición del áspid" publicationId="e8ce-95bb-4989-362d" page="33" hidden="false">
           <description> Cualquier unidad con arco normal (guerreros esqueleto, caballería ligera, carros, etc.) pueden tener la Bendición del áspid (+2/m). Dichas unidades resuelven sus disparos con Ataques envenenados. (No afecta al arco Arco compuesto de los Ushabti ni al Arco gigante del Gigante, sólo a miniaturas con arco).</description>
         </rule>
-        <rule id="ea61-72e6-7c17-409b" name="Maldición de la Reina Khalida" publicationId="9806-8ad8-97a2-86b5" page="33" hidden="false">
+        <rule id="ea61-72e6-7c17-409b" name="Maldición de la Reina Khalida" publicationId="e8ce-95bb-4989-362d" page="33" hidden="false">
           <description>Activa la maldición normal de los reyes funerarios con un 4+. En ese caso, además, cada unidad en combate lanza 1D6 y con un 6 recibe una herida sin salvaciones. Se repite al principio del turno de tu oponente hasta el final de la partida.</description>
         </rule>
       </rules>
@@ -4080,7 +4207,7 @@ Parciales a 4+</characteristic>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="420.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="940c-da1a-dd84-a738" name="Khatep" publicationId="9806-8ad8-97a2-86b5" page="34" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="940c-da1a-dd84-a738" name="Khatep" publicationId="e8ce-95bb-4989-362d" page="34" hidden="false" collective="false" import="true" type="unit">
       <comment>Gran Hierofante de Khemri</comment>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -4121,19 +4248,19 @@ Parciales a 4+</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
           </characteristics>
         </profile>
-        <profile id="35e0-00d5-9a43-cc84" name="Bastón de Liche" publicationId="9806-8ad8-97a2-86b5" page="34" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+        <profile id="35e0-00d5-9a43-cc84" name="Bastón de Liche" publicationId="e8ce-95bb-4989-362d" page="34" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
           <characteristics>
             <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Este antiguo bastón de cobre lleva grabados los nombres de todos los dioses y diosas de Nehekhara, y le proporciona a Khatep los conocimientos de sus poderes mágicos. Todos los Cánticos entonados por Khatep tienen un +2 a la tirada. Además, Khatep tiene una tirada de salvación especial de 4+.</characteristic>
           </characteristics>
         </profile>
-        <profile id="2e45-0f30-72e9-8c19" name="Pergamino de la Palabra Maldita." publicationId="9806-8ad8-97a2-86b5" page="34" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+        <profile id="2e45-0f30-72e9-8c19" name="Pergamino de la Palabra Maldita." publicationId="e8ce-95bb-4989-362d" page="34" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
           <characteristics>
             <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">Este pergamino maldice a todos aquellos que osan pronunciar encantamientos maléficos, llenándoles la boca con escarabajos peloteros o sustituyendo el aire que llena sus pulmones con arena ardiente. Un solo uso. Designa su uso cuando un hechicero enemigo declare que lanza un hechizo (antes de lanzar los dados); el hechicero objetivo debe hacer un chequeo de Resistencia; si lo falla no puede lanzar más hechizos este turno. Además, si en el chequeo de Resistencia saca un 6, sufre 1D3 heridas sin posibilidad de salvación por armadura ni especial.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <rules>
-        <rule id="98c9-aba8-9680-89a1" name="Gran Hierofante" publicationId="9806-8ad8-97a2-86b5" page="34" hidden="false">
+        <rule id="98c9-aba8-9680-89a1" name="Gran Hierofante" publicationId="e8ce-95bb-4989-362d" page="34" hidden="false">
           <description>Obviamente, el Gran Hierofante es el Hierofante del ejército y sigue la regla Hierofante. Además, puede lanzar hasta 3 Cánticos por turno (en vez de los 2 habituales de los Sumos Sacerdotes). Además, siempre puede repetir la tirada para determinar el nivel de energía del cántico.</description>
         </rule>
       </rules>
@@ -4152,7 +4279,7 @@ Parciales a 4+</characteristic>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="500.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e7b7-a65d-6d34-5e7b" name="Nekaph" publicationId="9806-8ad8-97a2-86b5" page="35" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="e7b7-a65d-6d34-5e7b" name="Nekaph" publicationId="e8ce-95bb-4989-362d" page="35" hidden="false" collective="false" import="true" type="unit">
       <comment>Campeón de Settra</comment>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -4190,13 +4317,13 @@ Parciales a 4+</characteristic>
         </profile>
       </profiles>
       <rules>
-        <rule id="359c-3798-78f9-8b11" name="Protección del Heraldo. " publicationId="9806-8ad8-97a2-86b5" page="35" hidden="false">
+        <rule id="359c-3798-78f9-8b11" name="Protección del Heraldo. " publicationId="e8ce-95bb-4989-362d" page="35" hidden="false">
           <description>Tirada de salvación especial de 5+.</description>
         </rule>
-        <rule id="6026-b72f-8188-cf62" name="Campeón de Settra" publicationId="9806-8ad8-97a2-86b5" page="35" hidden="false">
+        <rule id="6026-b72f-8188-cf62" name="Campeón de Settra" publicationId="e8ce-95bb-4989-362d" page="35" hidden="false">
           <description>Nekaph siempre debe lanzar y aceptar desafíos. Además, en Desafíos hace Golpe letal con 5-6 en vez de sólo 6 en la tirada para herir.</description>
         </rule>
-        <rule id="c5e0-0ec5-7665-a77f" name="Heraldo del Desespero" publicationId="9806-8ad8-97a2-86b5" page="35" hidden="false">
+        <rule id="c5e0-0ec5-7665-a77f" name="Heraldo del Desespero" publicationId="e8ce-95bb-4989-362d" page="35" hidden="false">
           <description>Todas las unidades enemigas que deban hacer un chequeo de Miedo por culpa de Nekaph (por querer luchar contra él o su unidad, o querer cargar a él o su unidad) lanzan un dado adicional y descartan el más bajo. En caso de unidades con Sangre Fría, lanzan 4 dados, y descartan el más bajo (por Heraldo) y el más alto (por Sangre Fría).</description>
         </rule>
       </rules>
@@ -4240,15 +4367,19 @@ Parciales a 4+</characteristic>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="160.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="cdaa-880b-9b1c-cc00" name="Sehenesmet" publicationId="9806-8ad8-97a2-86b5" page="37" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="cdaa-880b-9b1c-cc00" name="Sehenesmet" publicationId="e8ce-95bb-4989-362d" page="37" hidden="false" collective="false" import="true" type="model">
       <comment>Visir de Quatar</comment>
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
+      <modifierGroups>
+        <modifierGroup>
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
           </conditions>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set" field="f014-69bc-b3bf-0e85" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f014-69bc-b3bf-0e85" type="max"/>
       </constraints>
@@ -4310,7 +4441,7 @@ Parciales a 4+</characteristic>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="595.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="107c-be9a-65f9-080d" name="Settra" publicationId="9806-8ad8-97a2-86b5" page="40" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="107c-be9a-65f9-080d" name="Settra" publicationId="e8ce-95bb-4989-362d" page="40" hidden="false" collective="false" import="true" type="unit">
       <comment>El Imperecedero</comment>
       <modifiers>
         <modifier type="set" field="77a7-0573-e7a0-3f24" value="0.0">
@@ -4386,9 +4517,224 @@ Parciales a 4+</characteristic>
         <categoryLink id="5531-1a4a-9269-2d84" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
         <categoryLink id="52b3-fe29-d126-1763" name="Personaje Especial" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="bdfd-8624-d3ce-5483" name="Carro de los Dioses" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4cd-8fa5-8d9d-0f29" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="89fe-efc6-5988-86e1" name="Carro de los Dioses" hidden="false">
+              <description>Tipo de unidad: Carro, No Muerto
+Tamaño de peana: Dos Carros (100x100mm)
+Potencia de unidad: El Carro de los Dioses tiene potencia de unidad 6; si va montado por Settra, en conjunto tienen potencia 8.
+Tamaño de unidad:El Carro está tirado por 4 Corceles Esqueléticos.
+
+Este poderoso carruaje tiene imbuidas las bendiciones de todas los dioses y diosas de Nehekhara, y sus ruedas arden con llamas místicas. Se considera carro con cuchillas (1D6+1 impactos por carga). No es caballería rápida. Si se une a una unidad de Carros ligeros, éstos perderán la regla Caballería rápida.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="120.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="565.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="505.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="aa37-492d-f794-30b1" name="Arqueros Ushabti" publicationId="e8ce-95bb-4989-362d" page="20" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-880b-9b1c-cc00" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="ba68-224b-3224-a908"/>
+            <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="4ccc-afc5-a287-8aa7" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ccc-afc5-a287-8aa7" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="177e-4b5d-27e3-5120" name="Arquero Ushabti" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">2</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa</characteristic>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="2756-e0db-705f-387e" name="No muertos" hidden="false" targetId="39a2-3557-c70f-a611" type="rule"/>
+        <infoLink id="2889-0b93-c154-7830" name="Criatura artefacto" hidden="false" targetId="bf98-3374-e754-f251" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="cdde-0ff1-eab6-102d" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b77e-a6f0-1968-a677" name="Arquero Ushabtis" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27a4-a26e-494c-da14" type="min"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="1357-e8c9-3c82-ea65" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="c650-53fd-1037-eb5c">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b5e-b202-3074-7c64" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21de-1adf-f332-d56d" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="c650-53fd-1037-eb5c" name="Arco compuesto" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21e6-aabd-80d6-5f99" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c17-fc07-0f1b-2d1d" type="min"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="4c1d-e311-c885-3282" name="Arco compuesto" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
+                      <characteristics>
+                        <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">75</characteristic>
+                        <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">6</characteristic>
+                        <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Saetas del áspid
+En caso de llevar Arco Compuesto, su atributo de Fuerza se considera de 4 a todos los efectos.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink id="5aef-d227-1765-2609" name="Saetas del áspid" hidden="false" targetId="6599-f3f5-b868-fbd8" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="70.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ab87-6340-9198-ed7b" name="Morghast" publicationId="e8ce-95bb-4989-362d" page="24" hidden="false" collective="false" import="true" type="upgrade">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="09e5-abed-dbf7-05b6" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09e5-abed-dbf7-05b6" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="4b45-ea43-c246-595d" name="Inclusión" hidden="false">
+          <description>Puedes incluir dos Morghast como una única opción de unidad Singular (no forman unidad, simplemente dos ocupan una única opción de unidad Singular)</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="4c97-c44a-019f-9e45" name="Volar" hidden="false" targetId="90d6-fe4d-a823-314b" type="rule"/>
+        <infoLink id="0699-c41a-cfb4-348a" name="No muertos" hidden="false" targetId="39a2-3557-c70f-a611" type="rule"/>
+        <infoLink id="8c2b-490c-bcb9-c2a8" name="Golpe letal" hidden="false" targetId="917d-4fe5-c45b-ca64" type="rule"/>
+        <infoLink id="ed27-6ea2-6bc5-8035" name="Criatura artefacto" hidden="false" targetId="bf98-3374-e754-f251" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="62e9-1780-f232-4260" name="Unidad singular" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="fa23-eca8-ccf0-06e2" name="Morghast" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8af-de05-0a56-ed01" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23fb-0ddd-5a63-1ccc" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="747f-7dc8-61cb-c5ed" name="Morghast" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">5</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">4</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo, Constructo, No Muerto.</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">4</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a2ad-44a2-0941-cf15" name="Armadura de Ébano" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
+              <characteristics>
+                <characteristic name="Salvación por armadura" typeId="b9eb-92d5-e891-ed20">4+</characteristic>
+                <characteristic name="Reglas especiales" typeId="9bf4-3410-57d2-8871">Llevan una armadura de ébano. Junto al hecho de ser Criatura Artefacto, la miniatura tiene una Tirada de salvación por armadura de 4+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="7e61-c9b1-fce6-281e" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="f757-5b01-d90b-48ee" name="Armas" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebe5-839c-b594-8a1e" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="5fb7-9f84-be95-867d" name="Arma de mano adicional" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1a5-d876-ee6b-48b0" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="95e0-abbc-b69c-2230" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="a74c-e0fe-cffc-ef20" name="Alabarda" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="84c3-4d98-608f-c70b" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="2fcb-5f28-79f3-ba81" name="Alabarda" hidden="false" targetId="bc8b-5380-77a9-7fe7" type="profile"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="125.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -5451,7 +5797,7 @@ La Resistencia mágica funciona contra el Fulgor de los Muertos del Arca, mientr
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="39a2-3557-c70f-a611" name="No muertos" publicationId="9806-8ad8-97a2-86b5" page="8" hidden="false">
+    <rule id="39a2-3557-c70f-a611" name="No muertos" publicationId="e8ce-95bb-4989-362d" page="8" hidden="false">
       <description>Todo el ejército es No Muerto. Los No Muertos de los Reyes Funerarios siguen estas reglas especiales:
 1. Son inmunes a psicología. Ten en cuenta que hay muchos chequeos de Liderazgo que no son de psicología, los No Muertos siguen todas las reglas habituales para esos chequeos. Ejemplo: el chequeo de Liderazgo para intentar no perseguir a tropas desmoralizadas.
 2. Causan miedo.
@@ -5460,10 +5806,10 @@ La Resistencia mágica funciona contra el Fulgor de los Muertos del Arca, mientr
 5. No son Inmunes a ataques envenenados (a menos que así lo indique), así que les afectan como a los vivos.
 6. Inestables.</description>
     </rule>
-    <rule id="6486-671a-0f49-03ff" name="General" publicationId="9806-8ad8-97a2-86b5" page="8" hidden="false">
+    <rule id="6486-671a-0f49-03ff" name="General" publicationId="e8ce-95bb-4989-362d" page="8" hidden="false">
       <description>Sólo los personajes de tipo Rey Funerario o Príncipe Funerario pueden ser General. Esto quiere decir que un ejército debe incluir al menos un Rey Funerario o Príncipe Funerario.</description>
     </rule>
-    <rule id="670c-a920-30f1-170c" name="Hierofante" publicationId="9806-8ad8-97a2-86b5" page="8" hidden="false">
+    <rule id="670c-a920-30f1-170c" name="Hierofante" publicationId="e8ce-95bb-4989-362d" page="8" hidden="false">
       <description>Todo ejército de Reyes Funerarios debe incluir un Hierofante (que habitualmente será un Sacerdote o Sumo Sacerdote).
 Al principio de la batalla, el personaje de tipo Sacerdote (puede ser un Sacerdote, un Sumo Sacerdote o un Personaje Especial) con más
 Liderazgo será el Hierofante (si hay más de uno con el mismo Liderazgo, elige uno).
@@ -5476,16 +5822,16 @@ En caso de personajes montados en carro no incluidos en unidades, o de Personaje
 el chequeo, pero sí la montura (puede usar el Liderazgo del Personaje).
 La Desintegración sólo se aplica cuando el Hierofante muere definitivamente y es retirado como baja; si el Hierofante llega a 0 heridas pero consigue Regenerar suficientes heridas como para volver al juego, no ocurre la Desintegración.</description>
     </rule>
-    <rule id="bf98-3374-e754-f251" name="Criatura artefacto" publicationId="9806-8ad8-97a2-86b5" page="8" hidden="false">
+    <rule id="bf98-3374-e754-f251" name="Criatura artefacto" publicationId="e8ce-95bb-4989-362d" page="8" hidden="false">
       <description>Tirada de salvación por armadura 5+ (esta tirada puede mejorarse con equipo, hechizos, etc).
 Sufren una herida menos por los chequeos de Inestabilidad. Esto es adicional al Portaestandarte de Batalla, así que una Criatura Artefacto a 30cm o menos del Portaestandarte de Batalla sufrirá dos heridas menos por chequeos de Inestabilidad. Ten en cuenta que este efecto es por la Inestabilidad, no por la pérdida del Hierofante.</description>
     </rule>
-    <rule id="6599-f3f5-b868-fbd8" name="Saetas del áspid" publicationId="9806-8ad8-97a2-86b5" page="9" hidden="false">
+    <rule id="6599-f3f5-b868-fbd8" name="Saetas del áspid" publicationId="e8ce-95bb-4989-362d" page="9" hidden="false">
       <description>Las miniaturas del ejército de Reyes Funerarios que disparen con arma de proyectiles, siempre impactan a 5+ a sus objetivos. No se ven afectados por bonificadores ni penalizadores en las tiradas para impactar con sus arcos (ni por Objetivo Grande, ni por larga distancia,
 ni por mover y disparar, ni por hostigadores, etc.), ni ningún hechizo, regla u objeto mágico que fuerce un modificador a la tirada para
 impactar ni un resultado fijo (como el hechizo Pellejo de Medianoche).</description>
     </rule>
-    <rule id="9f06-28d7-a2c9-0aef" name="La maldición" publicationId="9806-8ad8-97a2-86b5" page="9" hidden="false">
+    <rule id="9f06-28d7-a2c9-0aef" name="La maldición" publicationId="e8ce-95bb-4989-362d" page="9" hidden="false">
       <description>Las miniaturas responsables de la muerte de un Rey o un Príncipe Funerario pueden sufrir la maldición.
 - Si hay una miniatura individual que haya causado la última herida (como un personaje en un desafío, un hechicero que lanza un
 hechizo que causa la última herida, ataques explícitos contra el Príncipe o Rey, etc), esa miniatura sufre La Maldición. Dicha miniatura deberá hacer un chequeo de Liderazgo; si lo falla, sufre 1D6 heridas directas.
@@ -5502,13 +5848,13 @@ participaban en el combate sufren La Maldición. Cada unidad debe hacer un chequ
 El chequeo de Liderazgo deben hacerlo incluso las miniaturas inmunes a psicología, y puede usarse el Liderazgo de un personaje en la
 unidad, o del jinete si es un monstruo, o del General cerca de la forma habitual. Cuando se habla de “hacer la última herida” se refiere a la miniatura o unidad que causa que se retire del juego al Rey; aquellos hechizos o reglas que hagan “retirar la miniatura” sin causar heridas (como algún ataque del Gigante) se considera que han hecho la última herida. Todas las heridas que causa La Maldición son heridas directas; Anulan armadura y no permiten tirada de salvación especial ni regeneración; pero pueden ser “transferidas” o “rebotadas” mediante reglas u objetos mágicos (como puede ser el Pectoral de Shapesh). Ten en cuenta que La Maldición no es un hechizo ni un proyectil ni un disparo; es una regla especial.</description>
     </rule>
-    <rule id="a02e-038f-2b66-38ad" name="Asalto imparable" publicationId="9806-8ad8-97a2-86b5" page="8" hidden="false">
+    <rule id="a02e-038f-2b66-38ad" name="Asalto imparable" publicationId="e8ce-95bb-4989-362d" page="8" hidden="false">
       <description>En carga, por cada tirada para herir exitosa que haga la miniatura con Asalto Imparable, puede hacer un ataque adicional (que a
 su vez, en caso de herir, desencadenará nuevos ataques). Nótese que es la tirada para herir, antes de salvaciones. Contra miniaturas
 que no tengan atributo de heridas (como los muros de un castillo o el Tanque de Vapor del Imperio) no se proporcionan ataques
 extra, no hay fuerza vital de la que el Gigante pueda alimentarse.</description>
     </rule>
-    <rule id="95a9-ecda-da00-c2fb" name="Cánticos de Nehekara" publicationId="9806-8ad8-97a2-86b5" page="10" hidden="false">
+    <rule id="95a9-ecda-da00-c2fb" name="Cánticos de Nehekara" publicationId="e8ce-95bb-4989-362d" page="10" hidden="false">
       <description>Se recomienda revisar el libro de ejército para detalles.
 Los Sacerdotes y Sumos Sacerdotes NO generan dados de magia. Sin embargo, se generan dos dados de energía igual que en todos los
 ejércitos; estos dados pueden añadirse a la reserva de dados de un Arúspice o Emisario Oscuro, pueden ser robados por un Goblin con
@@ -5551,17 +5897,17 @@ a 15cm de él. El Príncipe Funerario puede entonar un único cántico; sobre é
 Ten en cuenta que los Reyes y Príncipes, aunque puedan lanzar un cántico por turno, no se consideran Hechiceros a ningún efecto (ni
 generan dados de dispersión), así que no les afectarán los efectos que actúen sobre hechiceros (incluyendo Disipación de Magia).</description>
     </rule>
-    <rule id="fc41-20e3-d47f-5b9f" name="¡Hágase mi voluntad!" publicationId="9806-8ad8-97a2-86b5" page="10" hidden="false">
+    <rule id="fc41-20e3-d47f-5b9f" name="¡Hágase mi voluntad!" publicationId="e8ce-95bb-4989-362d" page="10" hidden="false">
       <description>Los Reyes Funerarios y Príncipes Funerarios pueden entonar el Cántico del Apremio de Mankara o el Cántico del Embate de Horekhah,
 con un nivel de energía 1D6. El Rey Funerario puede entonar hasta 2 cánticos; sobre él mismo, sobre él y su unidad, o sobre una unidad
 a 15cm de él. El Príncipe Funerario puede entonar un único cántico; sobre él mismo o sobre él y su unidad.
 Ten en cuenta que los Reyes y Príncipes, aunque puedan lanzar un cántico por turno, no se consideran Hechiceros a ningún efecto (ni
 generan dados de dispersión), así que no les afectarán los efectos que actúen sobre hechiceros (incluyendo Disipación de Magia).</description>
     </rule>
-    <rule id="e355-6ff4-079f-2351" name="Pesado" publicationId="9806-8ad8-97a2-86b5" page="8" hidden="false">
+    <rule id="e355-6ff4-079f-2351" name="Pesado" publicationId="e8ce-95bb-4989-362d" page="8" hidden="false">
       <description>Cuando una miniatura con la regla Pesado recibe el Cántico del Apremio de Mankara, no puede usar su movimiento volador (usa su atributo de Movimiento, no puede pasar por encima de otras unidades, etc).</description>
     </rule>
-    <rule id="1be3-a1cb-7c3f-0a37" name="La bendición del áspid" publicationId="9806-8ad8-97a2-86b5" page="33" hidden="false">
+    <rule id="1be3-a1cb-7c3f-0a37" name="La bendición del áspid" publicationId="e8ce-95bb-4989-362d" page="33" hidden="false">
       <description>Cualquier unidad con arco normal (guerreros esqueleto, caballería ligera, carros, etc.) pueden tener la Bendición del áspid (+2/m). Dichas unidades resuelven sus disparos con Ataques envenenados. (No afecta al arco Arco compuesto de los Ushabti ni al Arco gigante del Gigante, sólo a miniaturas con arco).</description>
     </rule>
   </sharedRules>
