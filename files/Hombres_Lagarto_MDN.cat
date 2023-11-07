@@ -116,6 +116,18 @@
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="6f3f-970c-2360-d7dc" name="Porteadores" hidden="false" collective="false" import="true" defaultSelectionEntryId="5367-0359-89b6-d537">
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" field="45f8-93e5-00b0-ce32" value="0.0"/>
+                <modifier type="set" field="dd40-6d5f-61d7-2fa6" value="0.0"/>
+                <modifier type="set" field="hidden" value="true"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd40-6d5f-61d7-2fa6" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45f8-93e5-00b0-ce32" type="min"/>
@@ -128,6 +140,9 @@
               <entryLinks>
                 <entryLink id="c757-5212-1f97-a1db" name="Palanquín" hidden="false" collective="false" import="true" targetId="01e8-50c4-ba7b-1fa8" type="selectionEntry"/>
               </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="8c1d-a5dd-77df-ca68" name="Porteadores Saurios." hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -137,11 +152,17 @@
                 <infoLink id="fa65-0940-d586-21bf" name="Tozudez" hidden="false" targetId="ad33-61eb-3490-bb38" type="rule"/>
                 <infoLink id="e88f-8c46-496d-31a5" name="Solitario" hidden="false" targetId="c000-e7d3-a7ea-3461" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="fe13-5e43-9529-bb56" name="Porteadores Esclavos." hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6ac-82f5-b6c1-cc73" type="max"/>
               </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -577,6 +598,20 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="059b-43f4-e1d2-5c17" name="Coatl" publicationId="3e4f-c33b-10d2-5ec4" page="15" hidden="false" collective="false" import="true" type="model">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="fe4c-14f5-2517-1d64" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe4c-14f5-2517-1d64" type="max"/>
+      </constraints>
       <profiles>
         <profile id="6071-fa1e-affe-5b5c" name="Coatl" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -965,6 +1000,17 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
                   </conditions>
                 </modifier>
               </modifiers>
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="25d2-4347-bde8-9ce8" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25d2-4347-bde8-9ce8" type="max"/>
               </constraints>
@@ -985,9 +1031,14 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
               </modifiers>
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="41b2-1179-2afc-924b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c8ec-df73-89e7-9ce5" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="41b2-1179-2afc-924b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c8ec-df73-89e7-9ce5" type="atLeast"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="hidden" value="true"/>
                     <modifier type="set" field="8d6b-8f64-6c01-da9a" value="0.0"/>
@@ -1039,9 +1090,14 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
               </modifiers>
               <modifierGroups>
                 <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="41b2-1179-2afc-924b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c8ec-df73-89e7-9ce5" type="atLeast"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="41b2-1179-2afc-924b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c8ec-df73-89e7-9ce5" type="atLeast"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                   <modifiers>
                     <modifier type="set" field="hidden" value="true"/>
                     <modifier type="set" field="e6fd-3872-82d4-44ad" value="0.0"/>
@@ -1228,6 +1284,17 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
                   </conditions>
                 </modifier>
               </modifiers>
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="0f06-5548-7872-4c08" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f06-5548-7872-4c08" type="max"/>
               </constraints>
@@ -1239,6 +1306,17 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
               </costs>
             </selectionEntry>
             <selectionEntry id="54e0-d411-559e-6330" name="Palanquín" hidden="false" collective="false" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="adfd-65a7-a47b-97dd" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="adfd-65a7-a47b-97dd" type="max"/>
               </constraints>
@@ -1556,6 +1634,17 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="b792-f75f-adbe-1dec" name="Arco corto" hidden="false" collective="true" import="true" type="upgrade">
+                  <modifierGroups>
+                    <modifierGroup>
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                      </conditions>
+                      <modifiers>
+                        <modifier type="set" field="6dad-255d-aa30-36d0" value="0.0"/>
+                        <modifier type="set" field="hidden" value="true"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6dad-255d-aa30-36d0" type="max"/>
                   </constraints>
@@ -1667,6 +1756,20 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
       </costs>
     </selectionEntry>
     <selectionEntry id="f9b1-4b95-0f99-f29a" name="Cohorte de eslizones" publicationId="3e4f-c33b-10d2-5ec4" page="19" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="2f04-7678-b3e6-dbd4" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f04-7678-b3e6-dbd4" type="max"/>
+      </constraints>
       <profiles>
         <profile id="c4ca-da4a-f5ac-9c02" name="Eslizón" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -1838,6 +1941,17 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
       </costs>
     </selectionEntry>
     <selectionEntry id="0e5b-4893-15a2-e66a" name="Esclavos" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="c162-a8a5-05cb-fcd9" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c162-a8a5-05cb-fcd9" type="max"/>
       </constraints>
@@ -2233,6 +2347,20 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
       </costs>
     </selectionEntry>
     <selectionEntry id="78d9-86b2-f801-6c76" name="Cocodrilos" publicationId="3e4f-c33b-10d2-5ec4" page="21" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="b041-9c34-cef5-c91b" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b041-9c34-cef5-c91b" type="max"/>
+      </constraints>
       <rules>
         <rule id="5dfa-a7a0-358a-005f" name="Unidad mixta" hidden="false">
           <description>Los Cuidadores pueden ir en cualquier lugar de la unidad (aunque suelen ir detrás). En caso de impactos a distancia cada uno se distribuye con 1D6; 1-5 se impacta una Cocodrilo y 6 se impacta un Cuidador.</description>
@@ -2297,7 +2425,7 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
                     <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
                     <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
                     <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
-                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
+                    <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
                     <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
@@ -2466,6 +2594,17 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
           </infoLinks>
           <selectionEntries>
             <selectionEntry id="eb86-84b2-57fe-3138" name="Piedras arrojadizas" hidden="false" collective="true" import="true" type="upgrade">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="9611-718c-052b-232c" value="0.0"/>
+                    <modifier type="set" field="hidden" value="true"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9611-718c-052b-232c" type="max"/>
               </constraints>
@@ -2503,6 +2642,17 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="6e9b-37f9-3c07-d220" name="Boleadora ígnea" hidden="false" collective="true" import="true" type="upgrade">
+                  <modifierGroups>
+                    <modifierGroup>
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                      </conditions>
+                      <modifiers>
+                        <modifier type="set" field="fe93-ed25-534d-9e32" value="0.0"/>
+                        <modifier type="set" field="hidden" value="true"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe93-ed25-534d-9e32" type="max"/>
                   </constraints>
@@ -2520,6 +2670,17 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="5eac-a997-1b99-8da9" name="Arco Corto" hidden="false" collective="true" import="true" type="upgrade">
+                  <modifierGroups>
+                    <modifierGroup>
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                      </conditions>
+                      <modifiers>
+                        <modifier type="set" field="9c7e-b5c7-5ea1-a49f" value="0.0"/>
+                        <modifier type="set" field="hidden" value="true"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c7e-b5c7-5ea1-a49f" type="max"/>
                   </constraints>
@@ -2597,6 +2758,20 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
       </costs>
     </selectionEntry>
     <selectionEntry id="1eb1-258f-68df-13c3" name="Rajadáctilos" publicationId="3e4f-c33b-10d2-5ec4" page="22" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="7743-abe9-bd4c-c7a8" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7743-abe9-bd4c-c7a8" type="max"/>
+      </constraints>
       <profiles>
         <profile id="2705-4bc7-6062-9389" name="Rajadáctilo" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -2697,10 +2872,25 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1ac8-6db4-1536-6d96" name="Salamandras" publicationId="3e4f-c33b-10d2-5ec4" page="23" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="1ac8-6db4-1536-6d96" name="Salamandras" publicationId="3e4f-c33b-10d2-5ec4" page="26" hidden="false" collective="false" import="true" type="upgrade">
       <rules>
-        <rule id="97c3-e715-4a74-a449" name="Escupir fuego" hidden="false">
-          <description> Las Salamandras pueden hacer un ataque en la fase de disparos; pueden mover y disparar pero no aguantar y disparar ni marchar y disparar. Designa una dirección de disparo y lanza el dado de artillería para determinar el punto de impacto del fuego. Coloca la plantilla de llamas en ese punto; las miniaturas bajo la plantilla (parciales a 4+) reciben un impacto de F3 con un -3 a la Tirada de salvación por armadura; son ataques flamígeros. Si se obtiene un resultado de Problemas en el dado de artillería, las Salamandras se comen 1D3 eslizones de la unidad. Ten en cuenta que no son máquina de guerra, así que podrán disparar aunque las máquinas de guerra necesiten un 4+ (como por ejemplo por Señor de la Lluvia... están todo el día bajo el agua, ¡no les afecta que llueva!). </description>
+        <rule id="d88c-f234-f94b-1ed4" name="Puntos de victoria" hidden="false">
+          <description>A efectos de puntos de victoria, contabiliza el número de miniaturas quehay en la unidad. Por ejemplo, si hay 3 Salamandras y 9 Eslizones (12 miniaturas), con aniquilar 7 miniaturas ya te llevas la mitad de los puntos de victoria (da igual si son 7 eslizones)</description>
+        </rule>
+        <rule id="5d0b-30af-808d-3b75" name="Disparos a las Salamandras" hidden="false">
+          <description>En la fase de disparo enemiga (recuerda que son Hostigadores), lanza 1D6 por cada impacto hecho contra la unidad; con un 1-4 resuelve para herir contra la Salamandra, y con un 5-6 a los Eslizones</description>
+        </rule>
+        <rule id="aa56-57f4-55f0-bc73" name="Salamandras en combate" hidden="false">
+          <description>En caso de combate cuerpo a cuerpo debes seguir las reglas de maximizar las miniaturas en contacto como si fuera una misma unidad de hostigadores, así que normalmente se pondrán delante eslizones (y, en las esquinas, Salamandras). Poner delante las Salamandras y detrás los Eslizones no es legal, es algo que sólo pueden hacer algunas unidades como las Ratas Ogro. Ten en cuenta que si la unidad recibe una carga y la miniatura más cercana al enemigo es una Salamandra, esa Salamandra deberá estar en combate (y, en ocasiones, significará que puedes poner alguna Salamandra trabada en combate).</description>
+        </rule>
+        <rule id="a314-b8ec-c4c4-87ea" name="Pérdida de eslizones por Problemas" hidden="false">
+          <description>Los Eslizones que causen baja por tener Problemas en la fase de disparo propia no pueden causar pánico, en este caso se tratan igual que las máquinas de guerra que pierdan parte de la dotación.</description>
+        </rule>
+        <rule id="8eb4-dff1-4350-60d4" name="Muerte de todos los Eslizones" hidden="false">
+          <description>Si mueren todos los Eslizones, las Salamandras deberán hacer un chequeo de Liderazgo y, si lo fallan, tirar en la Tabla de Reacción de Monstruos (página 105 del Reglamento de Warhammer); haz una única tirada para todas las salamandras de la unidad, actuarán juntas. Ten en cuenta que las Salamandras también tienen Sangre Fría. Obviamente, si se supera el chequeo, se mantiene el control de las Salamandras.</description>
+        </rule>
+        <rule id="0490-fd24-c7dd-bc6d" name="Muerte de todas las Salamandras" hidden="false">
+          <description>Si todas las Salamandras mueren, los eslizones forman una unidad de hostigadores de la forma habitual.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -2775,6 +2965,62 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
                   <infoLinks>
                     <infoLink id="0d5e-b0dd-a12d-d63c" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
                   </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="730b-45c1-b06f-d2dd" name="Tipo de Salamandras" hidden="false" collective="false" import="true" defaultSelectionEntryId="f012-0fb3-dd69-8d09">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="516e-5e57-dfef-d005" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e03c-e23b-7103-3ded" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="f012-0fb3-dd69-8d09" name="Salamandras" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifierGroups>
+                    <modifierGroup>
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                      </conditions>
+                      <modifiers>
+                        <modifier type="set" field="6a29-7a5a-7d30-4733" value="1.0"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="309a-34f8-98f4-b5ce" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a29-7a5a-7d30-4733" type="min"/>
+                  </constraints>
+                  <rules>
+                    <rule id="3c9c-aadf-e4e1-cf28" name="Escupir fuego" hidden="false">
+                      <description>Alcance 38cm. Pueden mover y disparar (no aguantar y disparar ni marchar y disparar). Designa un objetivo del disparo (todas las salamandras de la unidad disparan al mismo objetivo, como es habitual) y lanza un dado de artillería en pulgadas (!,2,4,6,8,10)* por cada Salamandra (si no tienes dado de artillería en pulgadas usa 1D6 y multiplica por 2 el resultado, donde el 6 es Problemas; ten en cuenta que no es un D6 “real” así que no puedes repetirlo con, por ejemplo, Segundo Sello de Amul). Una vez determinado el número de impactos, mide para comprobar si están en el alcance (38cm). El total en los dados indicará el número de impactos que se hacen (son impactos, no hay que tirar HP para impactar). Resuelve los impactos con F3, Poder de Penetración y Ataques Flamígeros. Por cada resultado de Problemas que obtengas en los dados para determinar el número de impactos, las Salamandras se comen 1D3 eslizones de la unidad. Ten en cuenta que primero se determina el número de disparos y luego se mide, así que podría ser que algún dado tenga Problemas y los demás disparos no lleguen. Las Salamandras no son máquina de guerra, así que no les afecta los hechizos y reglas de las máquinas de guerra (ten en cuenta que, por ejemplo, Señor de la Lluvia afecta a “unidades que disparan”, no sólo a máquinas de guerra, así que afecta a las Salamandras).</description>
+                    </rule>
+                  </rules>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="9c39-2aa3-dc42-825d" name="Razordones" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifierGroups>
+                    <modifierGroup>
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+                      </conditions>
+                      <modifiers>
+                        <modifier type="set" field="9ce4-9d06-8b1b-b6a3" value="0.0"/>
+                        <modifier type="set" field="hidden" value="true"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ce4-9d06-8b1b-b6a3" type="max"/>
+                  </constraints>
+                  <rules>
+                    <rule id="4fcf-fe70-b3f1-4d10" name="Razordones" hidden="false">
+                      <description>Puedes convertir todas las Salamandras de una unidad en Razordones de forma gratuita. Los Razordones siguen todas las reglas de las Salamandras, excepto que cada uno hace la mitad de impactos (!,1, 2, 3, 4, 5). Los impactos de los Razordones son de F5 con Poder de Penetración (sin ataques flamígeros ni Penetración). Los Razordones pueden Aguantar y Disparar.</description>
+                    </rule>
+                  </rules>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
                   </costs>
@@ -2887,7 +3133,10 @@ Mover junglas (6+) Objetivo: 1D6 elementos de tipo bosque (o jungla), siempre y 
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2b23-3108-aa5e-7f1c" name="Arcanodón y Artilugio de los Dioses" publicationId="3e4f-c33b-10d2-5ec4" page="25" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="2b23-3108-aa5e-7f1c" name="Arcanodón y Artilugio de los Dioses" publicationId="3e4f-c33b-10d2-5ec4" page="25" hidden="true" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1315-cf63-83c8-b22b" type="max"/>
+      </constraints>
       <profiles>
         <profile id="23a5-1920-e474-f4e5" name="Arcanodón" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -2960,7 +3209,21 @@ El oponente recibirá puntos de victoria si elimina al Arcanodón (no importa la
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="215.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c42f-b7f0-ab90-12e7" name="Terrosaurio" publicationId="3e4f-c33b-10d2-5ec4" page="25" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c42f-b7f0-ab90-12e7" name="Terrosaurio" publicationId="3e4f-c33b-10d2-5ec4" page="27" hidden="false" collective="false" import="true" type="upgrade">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="3584-d6d4-bc23-36ab" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3584-d6d4-bc23-36ab" type="max"/>
+      </constraints>
       <profiles>
         <profile id="4da1-a0a4-ed79-8aab" name="Terrosaurio" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -2968,7 +3231,7 @@ El oponente recibirá puntos de victoria si elimina al Arcanodón (no importa la
             <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
             <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
             <characteristic name="F" typeId="79c2-0368-3eed-76b4">7</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">7</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
             <characteristic name="H" typeId="a41f-60f6-2336-73ab">6</characteristic>
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">6</characteristic>
@@ -2976,7 +3239,7 @@ El oponente recibirá puntos de victoria si elimina al Arcanodón (no importa la
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo, Lagarto, Animal</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
           </characteristics>
         </profile>
@@ -2994,10 +3257,10 @@ El oponente recibirá puntos de victoria si elimina al Arcanodón (no importa la
         <categoryLink id="ebcd-3d9b-fa0e-e316" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="350.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="400.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c0dd-3c8e-3ca4-6d08" name="Gran Wyrm" publicationId="3e4f-c33b-10d2-5ec4" page="26" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c0dd-3c8e-3ca4-6d08" name="Gran Wyrm" publicationId="3e4f-c33b-10d2-5ec4" page="26" hidden="true" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="00f3-13b2-4409-3088" name="Gran Wyrm" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3032,7 +3295,18 @@ El oponente recibirá puntos de victoria si elimina al Arcanodón (no importa la
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="260.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b0e4-3b0e-03f3-d1c0" name="Altar de guerra" publicationId="3e4f-c33b-10d2-5ec4" page="26" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="b0e4-3b0e-03f3-d1c0" name="Altar de guerra" publicationId="3e4f-c33b-10d2-5ec4" page="27" hidden="false" collective="false" import="true" type="upgrade">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="6d73-547e-ba88-f1f5" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d73-547e-ba88-f1f5" type="max"/>
       </constraints>
@@ -3040,16 +3314,16 @@ El oponente recibirá puntos de victoria si elimina al Arcanodón (no importa la
         <profile id="f250-c4d7-5848-7c88" name="Altar de guerra" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
             <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
             <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
             <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
             <characteristic name="H" typeId="a41f-60f6-2336-73ab">4</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">4+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">6+</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">4+</characteristic>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">4</characteristic>
@@ -3058,29 +3332,30 @@ El oponente recibirá puntos de victoria si elimina al Arcanodón (no importa la
       </profiles>
       <rules>
         <rule id="b27a-943d-a063-1f26" name="Porteadores" hidden="false">
-          <description>El Altar es una única miniatura en una peana de 50x50mm, formada por varios Saurios (o esclavos) que portan un Altar. El Altar es una única miniatura con el perfil indicado arriba, y puede unirse a una unidad de Guerreros Saurios (no de Guardia del Templo ni de Eslizones). En tal caso, trátalo como un personaje que se hubiera unido a la unidad (¡Cuidado, Señor!, desafíos, designar impactos, etc), pero no puede designarse como objetivo de disparos (pese a ser una peana mayor), ya que son del mismo tamaño (Infantería). La miniatura ataca con todos sus ataques independientemente de cuántas heridas haya recibido. A efectos de Desoves Sagrados, el Altar de Guerra puede unirse a cualquier unidad, tenga los Desoves Sagrados que tenga.</description>
+          <description>El Altar es una única miniatura con el perfil indicado arriba, formada por varios Saurios (o esclavos) que portan un Altar</description>
         </rule>
         <rule id="c3bc-da45-0ebb-189f" name="Presencia inspiradora" hidden="false">
-          <description>Cualquier combate librado a 15cm o menos del Altar se resuelve con +1 punto de Resolución del Combate para el jugador Hombre Lagarto. Ten en cuenta que se suma +1 puntos en total al combate, no por cada unidad trabada.</description>
+          <description>Todas las unidades amigas a 15cm o menos del Altar de Guerra son Tozudas, aunque sean inmunes a psicología (incluyendo el propio Altar).</description>
         </rule>
         <rule id="5c6f-e206-0c97-7180" name="Protección arcana" hidden="false">
-          <description>La presencia del Altar de Guerra proporciona +1 dados de dispersión a la reserva de dados de dispersión del ejército. </description>
+          <description>La presencia del Altar de Guerra proporciona +1 dados de dispersión a la reserva de dados de dispersión del ejército.</description>
         </rule>
         <rule id="88ac-e9be-7f85-9f64" name="Escudo de los Ancestrales" hidden="false">
-          <description>El Altar (y cualquier unidad a la que se haya unido) tienen una tirada de salvación especial de 6+</description>
+          <description>El Altar (y cualquier unidad a la que se haya unido) tienen una tirada de salvación especial de 4+</description>
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="1cb3-cd55-a88c-bc7b" name="Sangre fría" hidden="false" targetId="18a5-e6cc-7f37-c6b2" type="rule"/>
+        <infoLink id="1cb3-cd55-a88c-bc7b" name="Inmune a psicología" hidden="false" targetId="3970-3b01-1734-d642" type="rule"/>
+        <infoLink id="0681-d52c-d8f0-20bf" name="Sangre fría" hidden="false" targetId="18a5-e6cc-7f37-c6b2" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="bcce-5185-8908-01eb" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="380.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="225.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a28c-ac7c-263c-4187" name="Lagarto atronador" publicationId="3e4f-c33b-10d2-5ec4" page="26" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="a28c-ac7c-263c-4187" name="Lagarto atronador" publicationId="3e4f-c33b-10d2-5ec4" page="26" hidden="true" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="0a34-7519-1c4a-a9ca" name="Lagarto atronador" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3120,10 +3395,24 @@ El oponente recibirá puntos de victoria si elimina al Arcanodón (no importa la
       </costs>
     </selectionEntry>
     <selectionEntry id="866d-4967-af39-7092" name="Bastiodón" hidden="false" collective="false" import="true" type="upgrade">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="672e-9c3f-31e8-ceda" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="672e-9c3f-31e8-ceda" type="max"/>
+      </constraints>
       <profiles>
         <profile id="2126-f1a7-c775-655c" name="Bastiodón" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
             <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
             <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
             <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
@@ -3132,10 +3421,10 @@ El oponente recibirá puntos de victoria si elimina al Arcanodón (no importa la
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">1</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">2+</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo, Lagarto, Animal</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">4</characteristic>
           </characteristics>
         </profile>
@@ -3143,21 +3432,21 @@ El oponente recibirá puntos de victoria si elimina al Arcanodón (no importa la
       <rules>
         <rule id="bea2-5e11-4434-176c" name="Siempre ataca último" hidden="false"/>
         <rule id="10ac-1e5d-0df9-d4c3" name="Defensa impenetrable" hidden="false">
-          <description>En la fase de combate cuerpo a cuerpo, a efectos de calcular los modificadores a la resolución de combate, un Bastiodón cuenta como si no tuviera flancos ni retaguardia (pero, por ejemplo, una carga por el flanco implicaría un chequeo de pánico). Eso significa que una unidad enemiga trabada por retaguardia con el Bastiodón no recibe el +2 a la resolución de combate por atacar por retaguardia.</description>
+          <description>En la fase de combate cuerpo a cuerpo, a efectos de calcular los modificadores a la resolución de combate, un Bastiodón cuenta como si no tuviera flancos ni retaguardia. Eso significa que una unidad enemiga trabada por retaguardia con el Bastiodón no recibe el +2 a la resolución de combate por atacar por retaguardia.</description>
         </rule>
         <rule id="6b76-e19f-4cda-2ac5" name="Mazazo atronador" hidden="false">
-          <description>Uno de los ataques del Bastiodón debe hacerse con un dado de otro color; este ataque lo realiza con la cola, se resuelve con F10 y tiene un +1 a las tiradas para impactar contra miniaturas situadas en su retaguardia.
-</description>
+          <description>Uno de los ataques del Bastiodón debe hacerse con un dado de otro color; este ataque lo realiza con la cola, se resuelve con F10 y tiene un +1 a las tiradas para impactar contra miniaturas situadas en su retaguardia</description>
         </rule>
       </rules>
       <infoLinks>
         <infoLink id="b485-c66f-be9f-fa28" name="Sangre fría" hidden="false" targetId="18a5-e6cc-7f37-c6b2" type="rule"/>
-        <infoLink id="0099-2a9b-3766-562a" name="Miedo" hidden="false" targetId="42bd-162f-4bb2-c783" type="rule"/>
+        <infoLink id="0099-2a9b-3766-562a" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
         <infoLink id="19a8-9a41-67f1-c77c" name="Monstruo montado" hidden="false" targetId="4059-2560-de3e-6b6c" type="rule"/>
         <infoLink id="30f5-5ff7-46fd-2e57" name="Piel escamosa" hidden="false" targetId="123c-5ab5-d266-d57d" type="rule"/>
+        <infoLink id="fef1-dbea-a0a2-ede0" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="5178-104d-132e-ef12" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
+        <categoryLink id="c58c-0456-947d-3953" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="6aba-780c-5b1b-7849" name="Eslizones" hidden="false" collective="false" import="true" type="upgrade">
@@ -3251,12 +3540,7 @@ Ataques envenenados</description>
               </constraints>
               <rules>
                 <rule id="8840-e8cd-95cf-5545" name="Artilugio solar" hidden="false">
-                  <description>Todas las unidades amigas con la regla Sangre Fría a 15cm o menos de uno o más Artilugios Solares tienen I+1 (hasta un máximo de 10). Además, en la fase de magia se puede activar el Artilugio Solar como un objeto portahechizos de nivel de energía 3; se trata de un Proyectil mágico con un alcance de 60cm, y si impacta lanza 1D6 y consulta la siguiente tabla: 
-- 1: Causa 1D3 impactos F3 flamígeros 
-- 2-3: Causa 1D6 impactos F4 flamígeros. 
-- 4-5: Causa 2D6 impactos F5 flamígeros. 
-- 6: Causa 2D6 impactos F6 flamígeros; además, la unidad objetivo sufre un penalizador de HA-1 y HP-1 hasta el final de su siguiente turno (los penalizadores son hasta un mínimo de 1, afectan incluso a unidades inmunes a psicología). 
-A todos los efectos, se trata de un objeto portahechizos, no de un disparo (así que puede marchar y activarse), pero dado que es un proyectil mágico se ve sujeto a las reglas habituales de proyectiles mágicos (por ejemplo, no puede usarse si el Bastiodón está trabado en combate cuerpo a cuerpo)</description>
+                  <description>Si eliges el Artilugio Solar, el Bastiodón va con 3 Eslizones en vez de 4. Todas las unidades amigas con la regla Sangre Fría a 15cm o menos de uno o más Artilugios Solares tienen I+1 (hasta un máximo de 10).Además, en la fase de magia se puede activar el Artilugio Solar como un objeto portahechizos de nivel de energía 4; se trata de un Proyectil mágico con un alcance de 60cm que causa 1D6 impactos de Fuerza F3+1D3</description>
                 </rule>
               </rules>
               <costs>
@@ -3269,9 +3553,7 @@ A todos los efectos, se trata de un objeto portahechizos, no de un disparo (así
               </constraints>
               <rules>
                 <rule id="fc55-c83f-4873-8cf9" name="Arca de Sotek" hidden="false">
-                  <description> El Arca de Sotek es un artilugio operado por los eslizones y puede activarse siempre que el Bastiodón no esté huyendo (pero puede activarse aunque el Bastiodón haya movido, cargado, esté trabado, etc). Puede activarse varios turnos (y en ambas fases).
-Al activar el Arca en la fase de disparo propia, cada unidad enemiga (estén o no en línea de visión) a 3D6cm o menos del Bastiodón recibe 2D6 impactos F2 distribuidos como si fueran proyectiles (determina el número de impactos de cada unidad por separado). Este ataque no afecta a unidades a las que habitualmente no se pueda disparar (como unidades enemigas trabadas en combate cuerpo a cuerpo, personajes enemigos cercanos a unidades no trabadas, una máquina de guerra Enana con Runa de la invisibilidad o Morghur), pero no se considera un disparo a ningún efecto más (no afecta Señor de la Lluvia, no se pueden efectuar salvaciones sólo contra disparos, etc).
-Además, al final de cada turno propio, elige una unidad propia (esté o no en línea de visión, esté o no trabada en combate) de Enjambre de la Jungla (o de Enjambre Pequeño si usas la Hueste Roja de Tehenhauin) a 15cm o menos del Bastiodón  y tira 1D6; con un 4+, añade 1 Enjambre de la Jungla a la unidad (o 3 Enjambres pequeños si usas la Hueste Roja de Tehenhauin). Esto puede aumentar el tamaño de la unidad por encima de su tamaño inicial (e incluso de su tamaño máximo). Si hay varios Bastiodones con Arcas de Sotek, haz la tirada por cada uno (una misma unidad de Enjambres puede verse afectada por más de un Arca).</description>
+                  <description>Puedes activar el Arca de Sotek como Objeto portahechizos de nivel de energía 4. Si se activa, cada unidad enemiga (estén o no en línea de visión) a 3D6cm o menos del Bastiodón recibe 2D6 impactos F2 distribuidos como si fueran proyectiles (determina el número de impactos de cada unidad por separado). Este ataque no afecta a unidades a las que habitualmente no se pueda disparar (como unidades enemigas trabadas en combate cuerpo a cuerpo, personajes enemigos cercanos a unidades no trabadas, una máquina de guerra Enana con Runa de la invisibilidad o Morghur), pero no se considera un disparo a ningún efecto más (no afecta Señor de la Lluvia, no se pueden efectuar salvaciones sólo contra disparos, etc).Además, si se ha activado con éxito, elige una unidad propia (esté o no en línea de visión, esté o no trabada en combate) de Enjambre de la Jungla a 15cm o menos del Bastiodón; añade 1 Enjambre de la Jungla a la unidad. Esto puede aumentar el tamaño de la unidad por encima de su tamaño inicial (pero no de su tamaño máximo). Una misma unidad de Enjambres puede verse afectada por más de un Arca de Sotek.</description>
                 </rule>
               </rules>
               <costs>
@@ -3282,7 +3564,7 @@ Además, al final de cada turno propio, elige una unidad propia (esté o no en l
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="106.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="175.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ad28-f6bd-2300-e040" name="Estegadón" publicationId="3e4f-c33b-10d2-5ec4" page="24" hidden="false" collective="false" import="true" type="unit">
@@ -3591,7 +3873,19 @@ Además, al final de cada turno propio, elige una unidad propia (esté o no en l
             <modifier type="set-primary" field="category" value="184a-30ec-bf7c-b603"/>
           </modifiers>
         </modifierGroup>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="0b11-2663-62b3-d535" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
       </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b11-2663-62b3-d535" type="max"/>
+      </constraints>
       <profiles>
         <profile id="d706-f303-4bc3-c7bc" name="Eslizón" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
@@ -3755,6 +4049,20 @@ Además, al final de cada turno propio, elige una unidad propia (esté o no en l
       </costs>
     </selectionEntry>
     <selectionEntry id="4d1c-3e31-b3e4-35f1" name="Estegadón Pellejoduro" publicationId="3e4f-c33b-10d2-5ec4" page="24" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="64c5-7f40-bed6-b38b" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64c5-7f40-bed6-b38b" type="max"/>
+      </constraints>
       <rules>
         <rule id="8d7a-0581-adac-1c2c" name="Puntos de victoria" hidden="false">
           <description>El oponente sólo gana los puntos de victoria si acaba con el Estegadón (no importan los Eslizones).</description>
@@ -3841,6 +4149,84 @@ Además, al final de cada turno propio, elige una unidad propia (esté o no en l
       </entryLinks>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="280.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0e5d-e4ba-fda5-468a" name="Troglodón" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="97d8-18f7-1c75-42b1" type="instanceOf"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="dbab-29b5-f5b6-5e18" value="0.0"/>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbab-29b5-f5b6-5e18" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="e557-5904-f02f-0a0e" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="82bb-ef2d-a61b-6b30" name="Jinete Oráculo" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bdb7-b96b-779f-8aa7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34e1-2f45-d5fd-4b47" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="be1a-cb5a-c044-eefc" name="Jinete Oráculo" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">-</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">-</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="ddb5-8871-f3f4-4105" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="4fb6-3c4f-2d72-dcc6">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3d2-2e1f-7cc2-08fb" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54dd-1854-bf52-825a" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="4fb6-3c4f-2d72-dcc6" name="Arma de mano" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="515a-c859-0afd-8721" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="778f-d4cb-da12-8647" type="min"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="cf64-1dc4-9258-9667" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="58c5-ec99-affb-ecb0" name="Troglodón" hidden="false" collective="false" import="true" targetId="7be9-b2ab-0907-d246" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="200.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -4068,11 +4454,23 @@ Además, al final de cada turno propio, elige una unidad propia (esté o no en l
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule id="0903-d265-be75-b97e" name="Bestia y jinete" hidden="false">
+          <description>Trata al Troglodón y su Jinete Oráculo como una miniatura (como harías con un Carro).</description>
+        </rule>
+        <rule id="c1d6-e624-a41a-ea4e" name="Rugido primitivo" hidden="false">
+          <description>Una vez por partida, el Troglodón puede hacer un Rugido Primitivo. Todas las unidades enemigas a 30cm o menos del Troglodón deberán hacer un chequeo de pánico.</description>
+        </rule>
+        <rule id="7c8b-c15e-da29-0c9f" name="Vasallo arcano" hidden="false">
+          <description>Aunque el Jinete Oráculo no es un chamán, los Slann pueden ver a través de él; cualquier Slann del ejército puede usar su regla Telepatía con los Jinetes Oráculos.</description>
+        </rule>
+      </rules>
       <infoLinks>
         <infoLink id="ab28-c8e0-4ca8-6187" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
         <infoLink id="6b12-8bbb-02c4-d0be" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
         <infoLink id="94ba-4b46-1e31-fef2" name="Ataques envenenados" hidden="false" targetId="d77c-34cb-f94c-aee1" type="rule"/>
-        <infoLink id="5c8e-d91c-ca72-0a79" name="Anfibio" hidden="false" targetId="36b7-50fc-7c8a-9f32" type="rule"/>
+        <infoLink id="5c8e-d91c-ca72-0a79" name="Sangre Fría" hidden="false" targetId="e11f-3d14-0853-cbf0" type="rule"/>
+        <infoLink id="53b8-0fbe-7d48-2c32" name="Anfibio" hidden="false" targetId="36b7-50fc-7c8a-9f32" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -4191,6 +4589,9 @@ Además, al final de cada turno propio, elige una unidad propia (esté o no en l
         <infoLink id="0aae-0c92-319c-1127" name="Sangre Fría" hidden="false" targetId="e11f-3d14-0853-cbf0" type="rule"/>
         <infoLink id="a0ca-114c-171a-31b2" name="Volar" hidden="false" targetId="90d6-fe4d-a823-314b" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="8f15-2a82-2c14-f252" name="Rajadáctilo de Guerra" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4223,6 +4624,9 @@ Además, al final de cada turno propio, elige una unidad propia (esté o no en l
         <infoLink id="b135-a524-35e3-08d6" name="Golpe letal" hidden="false" targetId="917d-4fe5-c45b-ca64" type="rule"/>
         <infoLink id="e72b-658e-c3ce-0d6f" name="Sangre Fría" hidden="false" targetId="e11f-3d14-0853-cbf0" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="e79c-99c8-6ba5-4499" name="Estegadón Pellejoduro" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
