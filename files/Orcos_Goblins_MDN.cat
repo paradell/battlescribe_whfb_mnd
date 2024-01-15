@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f551-0992-682c-c960" name="Orcos y Goblins MDN" revision="12" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f551-0992-682c-c960" name="Orcos y Goblins MDN" revision="13" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="1961-98cd-e2f9-7572" name="Orcos y Goblins MdN 2023"/>
   </publications>
@@ -6510,7 +6510,7 @@ que podría ser cargada, la unidad con Furia Asesina se verá obligada a cargar 
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="11.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -6933,39 +6933,23 @@ que podría ser cargada, la unidad con Furia Asesina se verá obligada a cargar 
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ec0-6a1d-e98d-d47e" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="16c3-bb94-5803-6e07" name="Jinete de garrapato" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">5D6</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">3</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <rules>
-        <rule id="5c5f-7b4a-ccfb-e717" name="Movimiento aleatorio (5D6)" hidden="false">
+        <rule id="5c5f-7b4a-ccfb-e717" name="Movimiento aleatorio (8D6)" hidden="false">
           <description>Uno de los dados debe ser de otro color. Si en ese dado sale un resultado de “6” retira un Jinete como baja (ese resultado se tiene en cuenta para el movimiento aleatorio igualmente). Ten en cuenta que esto solo ocurre en el movimiento “normal” que hacen, no en los demás movimientos (por ejemplo, esta regla de retirar jinete en cada 6 no se aplicaría al huir o perseguir, o si se le lanza La Mano de Gorko).
 </description>
         </rule>
         <rule id="441f-022d-96b5-5ae9" name="Peligrosos" hidden="false">
           <description>Los personajes no pueden unirse a la unidad de Jinetez de Garrapatos.</description>
         </rule>
+        <rule id="c3ff-47b5-4ea3-5103" name="Jinetez de garrapato" hidden="false">
+          <description>Los Jinetez se consideran infantería a todos los efectos (excepto aquellas reglas especiales que mencionen “montura”, como el hechizo La Bestia se Acobarda del Saber de las Bestias).�</description>
+        </rule>
       </rules>
       <infoLinks>
-        <infoLink id="9b6b-8b12-89b5-c7b1" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
+        <infoLink id="9b6b-8b12-89b5-c7b1" name="Animosidad" hidden="false" targetId="725c-d300-2664-b9b1" type="rule"/>
         <infoLink id="9a8b-6f79-dd36-4934" name="Inmune a psicología" hidden="false" targetId="3970-3b01-1734-d642" type="rule"/>
         <infoLink id="e62b-4be6-6ad9-ddea" name="Hostigadores" hidden="false" targetId="4717-34b5-7e01-9c40" type="rule"/>
+        <infoLink id="5675-bdb7-708a-6e8c" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="86d4-3fd6-b14d-5c94" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
@@ -6976,6 +6960,44 @@ que podría ser cargada, la unidad con Furia Asesina se verá obligada a cargar 
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3d8-ef05-b1cb-874c" type="min"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7aee-fb22-89de-7f9c" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="bd0a-d695-1fc3-9d47" name="Garrapato" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">8D6</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"></characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039"></characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab"></characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">3</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4aee-5f47-91fe-8057" name="Goblin" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">2</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Goblin, Pielverde, Garrapato�</characteristic>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+              </characteristics>
+            </profile>
+          </profiles>
           <selectionEntryGroups>
             <selectionEntryGroup id="088d-dd08-5cf0-5a34" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="e20f-6ec5-5a2f-c1a3">
               <constraints>
@@ -6999,7 +7021,7 @@ que podría ser cargada, la unidad con Furia Asesina se verá obligada a cargar 
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="18.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="20.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -8740,7 +8762,7 @@ puedes sustituir los 3 Goblin por Orcos (mismo perfil y equipo que el Ezpabilago
         <selectionEntry id="5c63-a45b-ce15-7273" name="Goblins de polvo" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5c7-1f9a-44da-54fb" type="min"/>
-            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7623-2c94-d865-236b" type="max"/>
+            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7623-2c94-d865-236b" type="max"/>
           </constraints>
           <selectionEntryGroups>
             <selectionEntryGroup id="5e30-e76a-1321-95e7" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="59d3-37fd-1aa9-8010">
@@ -9659,7 +9681,6 @@ en la subfase de movimientos obligatorios debes comprobar si existe alguna unida
       </constraints>
       <infoLinks>
         <infoLink id="0e79-6dd5-2d9b-a6a1" name="Inmune a desmoralización" hidden="false" targetId="3ea2-7beb-2798-15a0" type="rule"/>
-        <infoLink id="b9fe-f877-8831-54c5" name="Hostigadores" hidden="false" targetId="4717-34b5-7e01-9c40" type="rule"/>
         <infoLink id="a7ef-2488-e368-f5e9" name="Ataques envenenados" hidden="false" targetId="d77c-34cb-f94c-aee1" type="rule"/>
         <infoLink id="a3f3-270b-bab7-7d75" name="Objetivo pequeño." hidden="false" targetId="b6cc-4892-f34e-1e8d" type="rule"/>
       </infoLinks>
@@ -9669,8 +9690,8 @@ en la subfase de movimientos obligatorios debes comprobar si existe alguna unida
       <selectionEntries>
         <selectionEntry id="c2da-bd83-317f-ff59" name="Enjambre de Arañas" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec2c-5401-1912-9991" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08d2-ed55-3dc9-1fad" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec2c-5401-1912-9991" type="min"/>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08d2-ed55-3dc9-1fad" type="max"/>
           </constraints>
           <profiles>
             <profile id="fbc3-4af6-3a3e-34f7" name="Enjambre de Arañas" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -9714,7 +9735,7 @@ en la subfase de movimientos obligatorios debes comprobar si existe alguna unida
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="60.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -10263,7 +10284,10 @@ en la subfase de movimientos obligatorios debes comprobar si existe alguna unida
         <infoLink id="50fa-a010-fa12-15a5" name="Regeneración" hidden="false" targetId="d43f-f8c6-de44-18d0" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="6070-b563-86c5-d786" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
+        <categoryLink id="cc0e-4e34-fb82-94de" name="New CategoryLink" hidden="false" targetId="9374-09df-04a6-d8fe" primary="true"/>
+        <categoryLink id="272e-204f-69b1-494c" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+        <categoryLink id="496f-57e1-5814-e7d1" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false"/>
+        <categoryLink id="7195-4190-578f-0f02" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="d88e-8002-c320-47f5" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="1be5-094d-5bb9-f6a1">
@@ -13435,8 +13459,11 @@ Apetito insaciable. Gobbla nunca morderá a Skarsnik, pero morderá al resto de 
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
     </selectionEntry>
-    <selectionEntry id="12af-9327-fd9f-4f31" name="Arañas Gigantescas" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="12af-9327-fd9f-4f31" name="Arañas Gigantescas" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73eb-49ce-dfb2-b8cf" type="max"/>
       </constraints>
@@ -13450,6 +13477,9 @@ Apetito insaciable. Gobbla nunca morderá a Skarsnik, pero morderá al resto de 
         <infoLink id="807d-9715-3bf5-3fef" name="Ataques envenenados" hidden="false" targetId="d77c-34cb-f94c-aee1" type="rule"/>
         <infoLink id="6fdb-13ec-8ded-f845" name="El tamaño zí importa" hidden="false" targetId="60e5-aea4-30f5-3e7a" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="dcf0-df7e-3b6c-9482" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="de7e-ea6a-41f3-455f" name="Araña gigantesca" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -13480,6 +13510,9 @@ Apetito insaciable. Gobbla nunca morderá a Skarsnik, pero morderá al resto de 
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="a6e8-d20e-1a4c-3e3c" name="Zierpe Alada Salvaje" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
