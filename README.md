@@ -23,7 +23,7 @@ Estos ficheros permiten hacer la listas de Battlescribe tanto para Manuscritos d
 | ⚒️ [Enanos](./files/Enanos_MDN.cat)   | v2017 🟡 | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 | v4     |
 | 🔥 [Enanos del Caos](./files/Enanos_del_Caos_MDN.cat)   | v2017 🟡  | Sí 🟢 | No 🔴 | No 🔴 | Sí 🟢 | v7     |
 | 🦎 [Hombres Lagarto](./files/Hombres_Lagarto_MDN.cat)    | v2023 🟢  | No 🔴 | Sí 🟢 | No 🔴 | Sí 🟢 | v12     |
-| 👑 [Imperio](./files/Imperio_MDN.cat)    | v2017 🟡 | No 🔴 | No 🔴 | No 🔴 | Sí 🟢 | v6     |
+| 👑 [Imperio](./files/Imperio_MDN.cat)    | v2023 🟢  | Sí | No 🔴 | No 🔴 | Sí 🟢 | v7     |
 | 💰 [Mercenarios](./files/Mercenarios_MDN.cat)   | v2023 🟢  | Sí 🟢  | No 🔴  | No hay 🟢  | Sí 🟢| v7     |
 | 💀 [No Muertos](./files/No_Muertos_MDN.cat)   | Beta 🟢  | No 🔴  | No 🔴  | No 🔴  | No 🔴 | v2     |
 | 💚 [Orcos y Goblins](./files/Orcos_Goblins_MDN.cat)    | v2023 🟢  | 18/24 🟡 | Sí 🟢 | No 🔴 | 50% 🟡 | v13     |
