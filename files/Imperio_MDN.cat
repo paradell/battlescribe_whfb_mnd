@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d7c5-1d65-c35a-2131" name="Imperio MDN" revision="6" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d7c5-1d65-c35a-2131" name="Imperio MDN" revision="7" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
-    <publication id="0291-b199-d026-56a7" name="MdN Imperio"/>
+    <publication id="0291-b199-d026-56a7" name="MdN Imperio 2023"/>
   </publications>
   <selectionEntries>
     <selectionEntry id="becf-a2d3-2ca0-14ba" name="Conde elector" publicationId="0291-b199-d026-56a7" page="18" hidden="false" collective="false" import="true" type="model">
@@ -879,9 +879,12 @@
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="175.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a172-5863-ea06-6436" name="Archilector de Sigmar" publicationId="0291-b199-d026-56a7" page="19" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="a172-5863-ea06-6436" name="Archilector" publicationId="0291-b199-d026-56a7" page="19" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae63-fc5c-7cc7-ffb3" type="max"/>
+      </constraints>
       <profiles>
-        <profile id="39cd-cd7e-50ef-79f2" name="Archilector de Sigmar" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+        <profile id="39cd-cd7e-50ef-79f2" name="Archilector" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
           <characteristics>
             <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
             <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
@@ -901,17 +904,13 @@
         </profile>
       </profiles>
       <rules>
-        <rule id="3444-64a6-e3e6-6e31" name="Plegarias a Sigmar potenciadas" hidden="false">
-          <description>Cada Archilector de Sigmar puede lanzar dos Plegarias a Sigmar en cada fase de magia, en vez de una como los Sacerdotes (ten en cuenta que hay plegarias que desaparecen si el Archilector lanza otra Plegaria). Se tratan como objetos portahechizos de nivel de energía 4 (en vez de nivel 3 como los Sacerdotes).</description>
-        </rule>
         <rule id="bb6e-12d4-1faa-6a65" name="Bendición" hidden="false">
           <description>Tan profunda es la Bendición de Sigmar en un Archilector que proporciona +2 dados a la reserva de dados de dispersión del ejército (en vez de 1 como los Sacerdotes).</description>
         </rule>
+        <rule id="e23c-4cfe-544e-df2d" name="Plegarias" hidden="false">
+          <description>Cada Archilector de Sigmar puede lanzar dos Plegarias a Sigmar en cada fase de magia, en vez de una como los Sacerdotes (ten en cuenta que hay plegarias que desaparecen si el Archilector lanza otra Plegaria). Se tratan como objetos portahechizos de nivel de energía 4 (en vez de nivel 3 como los Sacerdotes).</description>
+        </rule>
       </rules>
-      <infoLinks>
-        <infoLink id="3261-8e58-2a44-ed1c" name="Furia justiciera" hidden="false" targetId="9503-0e09-c54d-f574" type="rule"/>
-        <infoLink id="ef4f-c650-127c-8519" name="Plegarias a Sigmar" hidden="false" targetId="e311-db4b-0824-ee64" type="rule"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="c459-5f47-1750-5673" name="New CategoryLink" hidden="false" targetId="9769-7233-6405-675e" primary="true"/>
         <categoryLink id="a1da-0cd4-a16b-d976" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
@@ -1055,6 +1054,46 @@
             <entryLink id="4791-fdb0-6e13-8450" name="Objetos hechizados" hidden="false" collective="false" import="true" targetId="a609-47e0-519c-06d0" type="selectionEntryGroup"/>
             <entryLink id="3a16-faa4-2636-39e7" name="Armas mágicas" hidden="false" collective="false" import="true" targetId="0abc-2e88-fbd4-2f9a" type="selectionEntryGroup"/>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="d1e8-232c-981a-3a11" name="Dios" hidden="false" collective="false" import="true" defaultSelectionEntryId="87c4-9ebd-0f45-2820">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2b2-695a-3448-e4df" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="397d-d9eb-eae8-4bcf" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="87c4-9ebd-0f45-2820" name="Sigmar" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7dc9-3360-d1d0-206a" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="00b3-9fc4-068d-8186" name="Furia justiciera" hidden="false" targetId="9503-0e09-c54d-f574" type="rule"/>
+                <infoLink id="e991-4074-8431-28c2" name="Plegarias a Sigmar" hidden="false" targetId="e311-db4b-0824-ee64" type="rule"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="1e3e-eefa-01fd-2d77" name="Ulric" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6469-3fb2-46db-8d21" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="abaf-6751-65e4-0b28" name="Sacerdotes de Ulric" hidden="false">
+                  <description>Los Sacerdotes de Ulric no pueden llevar ninguno de los siguientes objetos mágicos: Espada de Acero Bendito, Armadura de Oro Élfico, Armadura de Hierro Meteórico, Amuleto de Jade, Sello de Sigmar, Icono de Magnus�</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="da24-963d-3a1d-8140" name="Muerte a los débiles" hidden="false" targetId="6cd6-f7e9-baff-69a9" type="rule"/>
+                <infoLink id="f1d4-47e3-d421-2b74" name="Plegarias a Ulric" hidden="false" targetId="bfdc-cd51-2500-9e9e" type="rule"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="aa78-635e-5eb6-afb9" name="Verena" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ceac-7b90-0929-24de" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="f8ee-be23-c27d-69af" name="Fe en el equilibrio" hidden="false" targetId="23a6-d7b7-74f5-eb36" type="rule"/>
+                <infoLink id="b8ae-6a4a-fc8a-6b91" name="Plegarias a Verena" hidden="false" targetId="1067-81c9-c79f-5ecc" type="rule"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -2074,7 +2113,7 @@
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1">2</characteristic>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Personaje</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
           </characteristics>
@@ -2084,21 +2123,68 @@
         <rule id="409e-fec8-6ac4-e399" name="Habituado a lo sobrenatural" hidden="false">
           <description>Tanto el Cazador de Brujas como cualquier unidad a la que se haya unido son Inmunes a psicología. Ten en cuenta que una unidad tozuda, mientras sea inmune a psicología, pierde la tozudez</description>
         </rule>
-        <rule id="d5d2-81ed-a378-9064" name="Descarga cerrada" hidden="false">
-          <description>Si llevan dos pistolas, en la primera ronda de cada combate cuerpo a cuerpo, el Cazador puede realizar 2 ataques de F4 con Poder de penetración. Recuerda que no puede disparar dos veces en fase de disparo, aunque lleve dos pistolas</description>
-        </rule>
         <rule id="3e3a-c175-a9a7-cfbc" name="Armas de plata" hidden="false">
           <description>Todos los ataques del Cazador de Brujas (tanto en cuerpo a cuerpo como a distancia) son Ataques mágicos.</description>
         </rule>
-        <rule id="6b41-19c4-63fe-5350" name="¡Quemad al brujo!" hidden="false">
-          <description>Los Cazadores de Brujas siempre pueden repetir las tiradas para impactar y para herir contra miniaturas de tipo Hechicero, Demonio, No Muerto o Espíritu del Bosque (tanto en combate como en disparo). Por otra parte, un Cazador de Brujas no tolera lo sobrenatural, así que no
-puede estar en una unidad donde haya un personaje de tipo Hechicero.</description>
+        <rule id="a57b-0ecc-288a-b467" name="Protección arcana" hidden="false">
+          <description> El Cazador de Brujas, así como cualquier unidad a la que se haya unido, tienen Resistencia a la Magia (2).
+Armas de plata.</description>
+        </rule>
+        <rule id="30a9-f78a-c795-cca4" name="Herramientas de juicio" hidden="false">
+          <description>Los Cazadores de Brujas siempre pueden repetir las tiradas para impactar y para herir contra miniaturas de tipo Hechicero, Demonio, No Muerto o Espíritu del Bosque (tanto en combate como en disparo). Por otra parte, un Cazador de Brujas no tolera lo sobrenatural, así que no puede estar en una unidad donde haya un personaje de tipo Hechicero.</description>
         </rule>
       </rules>
       <categoryLinks>
         <categoryLink id="758a-762e-d7bc-f0af" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
         <categoryLink id="c700-1dd1-b6b6-70b6" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="2e97-4c7d-5efa-3903" name="Mastines de guerra" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3713-3683-3ce1-f9b0" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9274-5107-fb15-ac34" name="Mastines de guerra" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+              <characteristics>
+                <characteristic name="M" typeId="2d56-9cad-9242-37bd">18</characteristic>
+                <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
+                <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
+                <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
+                <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+                <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
+                <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
+                <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
+                <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">5</characteristic>
+                <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+                <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+                <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+                <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="11d3-2b15-38b4-7421" name="Movimiento" hidden="false">
+              <description>Mientras los Mastines acompañen al Cazador de Brujas, mueven 10.�</description>
+            </rule>
+            <rule id="6701-af17-d8db-09a1" name="Despliegue" hidden="false">
+              <description>Despliega de forma conjunta al Cazador de Brujas y sus Mastines. Inicialmente, forman una única unidad conjunta. Mientras vayan con él, el Cazador de Brujas no puede rehuir un desafío. Ten en cuenta que son unidad a todos los efectos; si no lleva Mastines, el Cazador es miniatura individual.�</description>
+            </rule>
+            <rule id="e3f0-50c7-cf9a-13a7" name="Disparo a un Cazador de Brujas con Mastines" hidden="false">
+              <description> Los proyectiles contra la unidad se distribuirán con 1D6: 1-4 Mastines, 5-6 Señor. Las bajas de los Mastines no provocan pánico.�</description>
+            </rule>
+            <rule id="36b8-8462-0b86-135d" name="Muerte del Cazador de Brujas" hidden="false">
+              <description>Si el Cazador de Brujas muere, los Mastines que estuvieran con él también lo hacen.�</description>
+            </rule>
+            <rule id="bad9-79d5-7c83-40ab" name="¡Cogedlos!" hidden="false">
+              <description> Los Mastines pueden separarse del Cazador de Brujas de dos formas. La primera es en la subfase de declaración de cargas; si los Mastines pueden declarar carga (no están huyendo, etc), puedes declarar carga con ellos (el Cazador de Brujas no podrá declarar carga, pero puede mover de forma habitual). Ten en cuenta que pueden declarar una carga el Cazador y sus Mastines como unidad, de forma habitual (simplemente, si cargas con los Mastines, pero no con el Cazador de Brujas, se separan). Alternativamente, pueden separarse en la subfase de resolución de combate; en caso de perseguir, puedes elegir que los Mastines persigan al enemigo derrotado en combate (8D6) y que el Cazador de Brujas se mantenga (no es necesario realizar chequeo de Liderazgo). Ten en cuenta que un Cazador de Brujas con dos Mastines no puede declarar que uno de los dos Mastines cargue (o persiga) y el otro se quede con él; los dos Mastines forman una nueva unidad independiente.�</description>
+            </rule>
+            <rule id="a5ca-e2fa-83cc-6288" name="Mastines en solitario. " hidden="false">
+              <description>A partir de que el Cazador de Brujas “suelta” a los Mastines, éstos forman una unidad separada (si hay dos, deben ir juntos). A esta unidad de Mastines no se puede unir ningún personaje, excepto el Cazador de Brujas que los tenía originalmente; en ese caso volverán a formar una unidad como cuando estaban juntos. Ten en cuenta que si el Cazador de Brujas muere mientras los Mastines están en solitario, estos ya no desaparecen, la regla Muerte del Cazador de Brujas es sólo para los que le acompañan.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="69b3-0a2f-80c4-d33c" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="574a-e353-a8b8-f5cb">
           <constraints>
@@ -2186,12 +2272,12 @@ puede estar en una unidad donde haya un personaje de tipo Hechicero.</descriptio
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="9cbb-e9c7-96f8-6a2f" name="Par de pistolas" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="9cbb-e9c7-96f8-6a2f" name="Pistolas" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbca-fb95-8cde-c289" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="0671-db9a-3549-1826" name="Par de pistolas" hidden="false" targetId="6e16-5ee8-8e8c-19c9" type="profile"/>
+                <infoLink id="0671-db9a-3549-1826" name="Pistola (disparo)" hidden="false" targetId="3cc9-65b6-1e88-d162" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="7.0"/>
@@ -2212,7 +2298,7 @@ puede estar en una unidad donde haya un personaje de tipo Hechicero.</descriptio
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="75.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="95.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5dbb-4ba5-9f2f-8996" name="Alabarderos" publicationId="0291-b199-d026-56a7" page="22" hidden="false" collective="false" import="true" type="unit">
@@ -10508,6 +10594,13 @@ grande (12cm). Impactos de F3 y poder de penetración. La miniatura bajo el aguj
       </costs>
     </selectionEntry>
     <selectionEntry id="24a6-227d-3ba4-3ace" name="Flagelantes" publicationId="0291-b199-d026-56a7" page="30" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="ab7e-371d-2d2d-bd87" value="-1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f818-db3f-1445-4f55" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab7e-371d-2d2d-bd87" type="max"/>
       </constraints>
@@ -12720,6 +12813,101 @@ Ten en cuenta que los Ingenieros no son inmunes al veneno, así que por cada ata
       </entryLinks>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f818-db3f-1445-4f55" name="Penitente" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54a6-0ad2-f088-3705" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="518e-8d0e-36a6-1e51" name="Penitente" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
+          <characteristics>
+            <characteristic name="M" typeId="2d56-9cad-9242-37bd">10</characteristic>
+            <characteristic name="HA" typeId="c87b-b820-6a47-1354">3</characteristic>
+            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
+            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
+            <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
+            <characteristic name="H" typeId="a41f-60f6-2336-73ab">2</characteristic>
+            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
+            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">10</characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="3d9a-6e65-c4a0-c6d9" name="¡Enajenados mentales!" hidden="false">
+          <description> Inmune a desmoralización. Siempre supera cualquier tirada de Liderazgo. Debe perseguir siempre. Sólo puede Mantener la posición como reacción a una carga. Obviamente, el Penitente nunca puede ser el General del ejército.�</description>
+        </rule>
+        <rule id="a1d9-fae3-fece-7c12" name="Señor de Flagelantes" hidden="false">
+          <description>El Penitente puede unirse a una unidad de Flagelantes (y no puede unirse a ninguna otra unidad). Si incluyes un Penitente, puedes incluir en el ejército cualquier unidad de Flagelantes (dejan de ser 0-1).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="2cc9-ed6f-f3c0-f263" name="Inmune a psicología" hidden="false" targetId="3970-3b01-1734-d642" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="307b-0b5e-dda6-2574" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
+        <categoryLink id="be9d-7f9f-871e-702b" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="f6a7-b957-9c9e-7169" name="Armas" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="90a4-4b37-72e8-e3b0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0bfc-fd05-b56b-2b63" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3f35-517a-f438-52cd" name="Arma de mano" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93b7-8c28-4018-fee6" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="a7f5-f502-4bdd-61ab" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e533-934a-d0f1-a662" name="Arma de mano adicional" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2120-3e7a-e544-7d51" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="2925-b5fe-611a-a5b3" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="4.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c9dc-3832-6ddb-50ba" name="Mayal" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03e8-c961-e8d0-1b24" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="97b7-61bd-0f3c-4c92" name="Mayal" hidden="false" targetId="8d08-4e9d-35c7-8005" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="4.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="8697-9088-6175-78da" name="Objetos mágicos" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="53ea-00f4-9046-81ff" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="307d-b074-5a00-780d" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="690b-a38a-c8f7-243b" name="Talismanes" hidden="false" collective="false" import="true" targetId="5cf3-b9ce-449c-749e" type="selectionEntryGroup"/>
+            <entryLink id="80bb-a1f6-9c8a-1531" name="Armas mágicas" hidden="false" collective="false" import="true" targetId="0abc-2e88-fbd4-2f9a" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="75.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
