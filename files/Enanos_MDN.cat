@@ -1205,6 +1205,32 @@ de estarlo si es destruida, o si mueve (voluntaria o involuntariamente), excepto
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c1d-1a5b-53b9-6a2f" type="min"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry id="967c-0c9a-102e-83b8" name="Montaraces" hidden="false" collective="true" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="5fe4-9ecf-c51c-badd" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5310-4d5d-a554-5308" type="atLeast">
+                          <comment>Barbaslargas Montaraces</comment>
+                        </condition>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4c8d-bdfe-5be0-e3fa" type="atLeast">
+                          <comment>Ballesteros Montaraces</comment>
+                        </condition>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5fe4-9ecf-c51c-badd" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="1.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="e71e-56c4-1348-fde3" name="Armadura" hidden="false" collective="false" import="true" defaultSelectionEntryId="2621-9628-57f2-e1ef">
               <constraints>
@@ -1266,8 +1292,16 @@ de estarlo si es destruida, o si mueve (voluntaria o involuntariamente), excepto
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="1bd2-2e0f-8203-5702" name="Arma a dos manos" hidden="false" collective="true" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="bca1-211a-5c69-e152" value="1.0">
+                      <conditions>
+                        <condition field="selections" scope="d899-92b5-5b55-8c6f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="967c-0c9a-102e-83b8" type="atLeast"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9c4-ab03-31e9-a8b4" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bca1-211a-5c69-e152" type="min"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="3d19-a9a0-af9c-4921" name="Arma a dos manos " hidden="false" targetId="bc8b-5380-77a9-7fe7" type="profile"/>
@@ -1289,6 +1323,35 @@ de estarlo si es destruida, o si mueve (voluntaria o involuntariamente), excepto
                   </constraints>
                   <infoLinks>
                     <infoLink id="d03d-5ee7-3155-ad03" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="1.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="de91-fc91-f23e-6bcc" name="Arma de proyectiles" hidden="true" collective="false" import="true">
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="d899-92b5-5b55-8c6f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="967c-0c9a-102e-83b8" type="atLeast"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="4ad6-5053-a852-e9b7" value="1.0"/>
+                    <modifier type="set" field="hidden" value="false"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ad6-5053-a852-e9b7" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="37d0-5ed5-66f2-e20a" name="Hachas Arrojadizas" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15ad-41f8-f569-1237" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="4339-1e2f-d1ff-a4eb" name="Hacha arrojadiza" hidden="false" targetId="d0b8-838e-926b-380a" type="profile"/>
                   </infoLinks>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="1.0"/>
@@ -1420,6 +1483,32 @@ de estarlo si es destruida, o si mueve (voluntaria o involuntariamente), excepto
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7750-7cda-9b54-0174" type="min"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry id="5310-4d5d-a554-5308" name="Montaraces" hidden="false" collective="true" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="c923-285c-ad6f-370b" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="967c-0c9a-102e-83b8" type="atLeast">
+                          <comment>Guerreros Montaraces</comment>
+                        </condition>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4c8d-bdfe-5be0-e3fa" type="atLeast">
+                          <comment>Ballesteros Montaraces</comment>
+                        </condition>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c923-285c-ad6f-370b" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="1.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="7593-3ebf-d77f-07fa" name="Armadura" hidden="false" collective="false" import="true" defaultSelectionEntryId="9ad2-41ea-9140-607b">
               <constraints>
@@ -1459,8 +1548,16 @@ de estarlo si es destruida, o si mueve (voluntaria o involuntariamente), excepto
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="4763-dc89-bb1a-4b58" name="Arma a dos manos" hidden="false" collective="true" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="7de2-6294-c740-7057" value="1.0">
+                      <conditions>
+                        <condition field="selections" scope="a8ec-f567-718b-357b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5310-4d5d-a554-5308" type="atLeast"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5974-ab21-376a-0758" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7de2-6294-c740-7057" type="min"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="d7b0-0232-2d55-4118" name="Arma a dos manos " hidden="false" targetId="bc8b-5380-77a9-7fe7" type="profile"/>
@@ -1562,7 +1659,7 @@ de estarlo si es destruida, o si mueve (voluntaria o involuntariamente), excepto
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3252-d9e8-1ff9-edb4" name="Montaraces" publicationId="792f-e9f2-7481-ab1e" page="17" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="3252-d9e8-1ff9-edb4" name="Montaraces" publicationId="792f-e9f2-7481-ab1e" page="17" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="2e4d-af4b-f61e-fe36" value="0.0">
           <conditions>
@@ -1811,6 +1908,32 @@ de estarlo si es destruida, o si mueve (voluntaria o involuntariamente), excepto
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f6d-a0df-9828-2807" type="min"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry id="4c8d-bdfe-5be0-e3fa" name="Montaraces" hidden="false" collective="true" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="f34e-5740-2794-13b8" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5310-4d5d-a554-5308" type="atLeast">
+                          <comment>Barbaslargas Montaraces</comment>
+                        </condition>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="967c-0c9a-102e-83b8" type="atLeast">
+                          <comment>Guerreros Montaraces</comment>
+                        </condition>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f34e-5740-2794-13b8" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="1.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="c45f-6532-0b41-6978" name="Armadura" hidden="false" collective="false" import="true" defaultSelectionEntryId="0eca-11f2-68d8-2a38">
               <constraints>
@@ -1850,8 +1973,16 @@ de estarlo si es destruida, o si mueve (voluntaria o involuntariamente), excepto
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="494d-b96e-ee73-44d2" name="Arma a dos manos" hidden="false" collective="true" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="01d7-504c-f3f6-56c1" value="1.0">
+                      <conditions>
+                        <condition field="selections" scope="5d04-c13c-f50b-fda9" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4c8d-bdfe-5be0-e3fa" type="atLeast"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e327-082c-168e-b109" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01d7-504c-f3f6-56c1" type="min"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="2777-4c62-db53-ce12" name="Arma a dos manos " hidden="false" targetId="bc8b-5380-77a9-7fe7" type="profile"/>
@@ -5265,7 +5396,7 @@ El Cañón Ligero puede disparar aunque el Juggernaut haya movido. En el caso de
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="205.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="79d6-0407-455b-7f98" name="Montaraces barbaslargas" publicationId="792f-e9f2-7481-ab1e" page="17" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="79d6-0407-455b-7f98" name="Montaraces barbaslargas" publicationId="792f-e9f2-7481-ab1e" page="17" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="9ebb-a92e-a077-b2e0" value="1.0">
           <conditionGroups>
