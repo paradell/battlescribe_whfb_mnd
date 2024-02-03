@@ -19,9 +19,9 @@ Estos ficheros permiten hacer la listas de Battlescribe tanto para Manuscritos d
 | ⚜️ [Bretonia](./files/Bretonia_MDN_2020.cat)   | v2023 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 | v14     |
 | 🦇 [Condes Vampiro](.files/Condes_Vampiro_MND.cat) | v2023 🟢 | Sí 🟢 | Sí 🟢 | 4/8 🟡 | Sí 🟢 | v16     |
 | 🐍 [Elfos Oscuros](./files/Elfos_Oscuros_MDN.cat)   | v2023 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 | v5     |
-| 🍃 [Elfos Silvanos](./files/Elfos_Silvanos_MDN.cat)  | v2022  🟢   | Sí  🟢 | No 🔴 | No hay  🟢 | Sí 🟢 | v4     |
+| 🍃 [Elfos Silvanos](./files/Elfos_Silvanos_MDN.cat)  | v2022  🟢   | Sí  🟢 | Sí  🟢 | No hay  🟢 | Sí 🟢 | v5     |
 | ⚒️ [Enanos](./files/Enanos_MDN.cat)   | v2023 🟢 | No 🔴 | Sí 🟢 | No 🔴 | Sí 🟢 | v6     |
-| 🔥 [Enanos del Caos](./files/Enanos_del_Caos_MDN.cat)   | v2017 🟡  | Sí 🟢 | No 🔴 | No 🔴 | Sí 🟢 | v7     |
+| 🔥 [Enanos del Caos](./files/Enanos_del_Caos_MDN.cat)   | v2023 🟢  | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 | v8     |
 | 🦎 [Hombres Lagarto](./files/Hombres_Lagarto_MDN.cat)    | v2023 🟢  | No 🔴 | Sí 🟢 | No 🔴 | Sí 🟢 | v12     |
 | 👑 [Imperio](./files/Imperio_MDN.cat)    | v2023 🟢  | Sí | No 🔴 | No 🔴 | Sí 🟢 | v7     |
 | 💰 [Mercenarios](./files/Mercenarios_MDN.cat)   | v2023 🟢  | Sí 🟢  | No 🔴  | No hay 🟢  | Sí 🟢| v7     |
