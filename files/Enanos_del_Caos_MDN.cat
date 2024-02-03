@@ -3526,6 +3526,9 @@ Caos. Los Jinetes de las Estepas no cuentan para el mínimo de unidades básicas
                   <infoLinks>
                     <infoLink id="b903-8fcb-9cbc-e647" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
                   </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -5869,7 +5872,7 @@ Cambiar Rompecráneos a &quot;Rompecráneos (+10). Al inicio de cada fase de com
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"></characteristic>
+            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería monstruosa, Caos</characteristic>
@@ -7241,47 +7244,6 @@ su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Giga
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="24ab-ceb4-f696-5450" name="Tauro de la Condenación" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="da2d-cbb7-08dc-b9df" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="28bd-35b2-416c-8dfb" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="3e00-dd37-4aa4-fc63" name="Tauro de la Condenación" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">15</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">0</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">3</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">4</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">3+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">5 (4+1 del jinete)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <rules>
-        <rule id="18bd-e05e-4030-43be" name="Inmune a ataques flamígeros" hidden="false"/>
-        <rule id="585f-96f9-5bc1-c8d2" name="Aliento de fuego" hidden="false">
-          <description>Se trata de un Ataque de Aliento que usa la plantilla de lágrima; causa impactos de F3 con la regla Ataques Flamígeros.</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="5215-98e5-9adc-8f86" name="Volar" hidden="false" targetId="90d6-fe4d-a823-314b" type="rule"/>
-        <infoLink id="da0e-e2cf-3dc1-5b92" name="Cuerpo ardiente" hidden="false" targetId="c5f3-0fc1-7a82-3653" type="rule"/>
-        <infoLink id="e087-0358-24a3-6a60" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
-        <infoLink id="29f8-2c5c-b924-ca20" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-      </costs>
-    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="59b2-4c61-5601-0d46" name="Armas mágicas" hidden="false" collective="false" import="true">
@@ -7335,14 +7297,12 @@ su atributo de Ataques) contra el Gigante. Si consigue herir al Gigante, el Giga
               <characteristics>
                 <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
                 <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario</characteristic>
-                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Arma de mano. Una vez por partida, el portador puede renunciar a sus ataques habituales para realizar un ataque especial; todas las miniaturas enemigas en contacto peana con peana con el personaje sufren 1d3 heridas directas que Anulan armadura. El resto de turnos cuenta simplemente como un arma de mano mágica.
-
-En el caso de personajes montados en carro o monstruo, ambos sufren las heridas (1D3 personaje, 1D3 carro o monstruo)</characteristic>
+                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">100). Arma de mano. Una vez por partida, el portador puede renunciar a sus ataques habituales para realizar un ataque especial; todas las miniaturas enemigas en contacto peana con peana con el personaje sufren 1D3 heridas directas que Anulan armadura. El resto de turnos cuenta simplemente como un arma de mano mágica. En el caso de personajes montados en carro o monstruo, ambos sufren las heridas (1D3 personaje, 1D3 carro o monstruo).</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="60.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="100.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b951-75d6-f87a-0f1e" name="Martillo negro de Hashut" hidden="false" collective="false" import="true" type="upgrade">
@@ -7355,12 +7315,12 @@ En el caso de personajes montados en carro o monstruo, ambos sufren las heridas 
               <characteristics>
                 <characteristic name="Alcance" typeId="cafc-207a-b76d-8124">Cuerpo a cuerpo</characteristic>
                 <characteristic name="Fuerza" typeId="c938-3c85-689c-fbbd">La del usuario +2</characteristic>
-                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Arma de mano. Los ataques hechos con esta arma se resuelven con F+2 y Ataques flamígeros.</characteristic>
+                <characteristic name="Reglas especiales" typeId="4348-8db0-9b33-fd91">Además, contra miniaturas inflamables, si consigue herir el enemigo es automáticamente destruido sin posibilidad de salvación por armadura ni salvación especial. A efectos de reglas, cuando la miniatura es eliminada trátala como si hubiera sido aniquilada por un Golpe Letal (pero válido contra todo tipo de miniaturas, y sin salvación especial).</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9ee5-fb89-be69-fbe5" name="Espada de fuego infernal" hidden="false" collective="false" import="true" type="upgrade">
@@ -7579,6 +7539,22 @@ En el caso de personajes montados en carro o monstruo, ambos sufren las heridas 
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="30.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="229f-80ab-f57e-74a8" name="Amuleto de fuego" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c33f-178c-b750-417c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8184-18a4-2d70-8660" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5360-adcc-b992-7fc1" name="Amuleto de Fuego" hidden="false" typeId="7e35-c20a-e9e9-6dad" typeName="Talismán">
+              <characteristics>
+                <characteristic name="Protección" typeId="9f41-c15e-1f5f-9d01">Un solo uso. Este objeto se usa automáticamente cuando se lance el primer hechizo con éxito contra el portador o su unidad, después de intentar dispersar. Si el hechizo no había sido lanzado con Fuerza Irresistible, queda dispersado (si había sido lanzado con Fuerza Irresistible, el hechizo tiene efecto igualmente).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="10.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="689f-33b9-19a7-c0c1" name="Talismán de protección" hidden="false" collective="false" import="true" targetId="f236-62d7-dea6-1d1c" type="selectionEntry"/>
@@ -7615,7 +7591,7 @@ En el caso de personajes montados en carro o monstruo, ambos sufren las heridas 
             </profile>
           </profiles>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0820-34d1-a808-6f01" name="Cetro ceremonial de Hashut" hidden="false" collective="false" import="true" type="upgrade">
@@ -7632,6 +7608,22 @@ En el caso de personajes montados en carro o monstruo, ambos sufren las heridas 
           </profiles>
           <costs>
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="804e-f46d-c970-9f7e" name="Libro de Ashur" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="86b9-96e3-7987-a4ee" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8815-67c4-ace1-e46d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5f1f-a305-0582-68d6" name="Libro de Ashur" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
+              <characteristics>
+                <characteristic name="Propiedades mágicas" typeId="e33b-a1fc-9f43-c88d">El portador conoce un hechizo más de los que le tocarían por nivel de magia; así, un hechicero de nivel 2 conocerá 3 hechizos. Esto no incrementa su nivel de magia ni el número de dados de energía o dispersión que genera.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="15.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
