@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="886f-5a7d-48a3-a553" name="Reinos del Caos" revision="3" battleScribeVersion="2.03" authorName="Aleix Paradell" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="886f-5a7d-48a3-a553" name="Reinos del Caos" revision="4" battleScribeVersion="2.03" authorName="Aleix Paradell" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Este fichero te permite hacer listas de los tres libros de Reinos del Caos:
 - Bestias del Caos
 - Demonios del Caos
@@ -3379,24 +3379,6 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="6591-eb06-843d-e9b9" name="Montura" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21f0-28bb-ef57-a61d" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="e080-ddd7-cac8-0fb4" name="Carro de tuskgors (cuenta como unidad básica, sustituye al bestigor de la tripulación)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd01-2f44-a46d-4802" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="bdce-c578-657b-172f" name="Carro de tuskgors" hidden="false" collective="false" import="true" targetId="a1c6-27a0-e095-a63a" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="85.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup id="ee6d-9485-bcba-e980" name="Armas" hidden="false" collective="false" import="true" defaultSelectionEntryId="9ac5-7253-d29c-94d1">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9760-9ae0-517d-a984" type="max"/>
@@ -3599,6 +3581,17 @@ ni el cuerno o tambor.</description>
                   </constraints>
                   <infoLinks>
                     <infoLink id="5af3-ac14-e4a3-6979" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="d23a-dc35-6dcd-d462" name="Alabarda" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1e4-4178-37f5-74ba" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="75f8-2791-b4f4-59af" name="Alabarda" hidden="false" targetId="ee3a-8a10-edff-cefe" type="profile"/>
                   </infoLinks>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -3936,7 +3929,7 @@ ni el cuerno o tambor.</description>
             <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
             <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
             <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">4</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
+            <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">6</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
@@ -3967,13 +3960,13 @@ ni el cuerno o tambor.</description>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f511-4e51-a66f-66f3" type="max"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="c3f1-b93a-1919-1d8e" name="Arma de mano" hidden="false" collective="true" import="true" type="upgrade">
+                <selectionEntry id="c3f1-b93a-1919-1d8e" name="Garras" hidden="false" collective="true" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7219-d2cb-0454-7999" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="687e-9f66-6d14-7c4f" type="min"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="ca17-4a83-aa0d-c6f1" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+                    <infoLink id="ca17-4a83-aa0d-c6f1" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
                   </infoLinks>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
@@ -4059,33 +4052,20 @@ ni el cuerno o tambor.</description>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d66b-bbcd-d83f-bc01" type="min"/>
           </constraints>
           <selectionEntryGroups>
-            <selectionEntryGroup id="e731-75b1-3908-14b8" name="Armadura" hidden="false" collective="false" import="true" defaultSelectionEntryId="22df-da2d-7c23-0d08">
+            <selectionEntryGroup id="e731-75b1-3908-14b8" name="Armadura" hidden="false" collective="false" import="true" defaultSelectionEntryId="8948-6f8a-5cbe-78e6">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6412-32c1-60f9-5044" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3984-3813-ce90-a1c8" type="min"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="22df-da2d-7c23-0d08" name="Armadura ligera" hidden="false" collective="true" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="60e8-f7d2-68e1-d4f9" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="08eb-95e4-b601-063a" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
                 <selectionEntry id="8948-6f8a-5cbe-78e6" name="Armadura pesada" hidden="false" collective="true" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f51-f8ce-2087-9710" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7631-acc6-9625-b5f4" type="min"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="c826-a674-c738-20d3" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
                   </infoLinks>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="1.0"/>
-                  </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -4097,7 +4077,7 @@ ni el cuerno o tambor.</description>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="11.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="12.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -6236,7 +6216,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
         <categoryLink id="437a-03da-0ab1-3acf" name="New CategoryLink" hidden="false" targetId="184a-30ec-bf7c-b603" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="260.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="220.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bdad-1dd4-c057-9da4" name="Gorgona" hidden="true" collective="false" import="true" type="unit">
@@ -9051,7 +9031,7 @@ Tzeentch (en la selección de ejército cuentan como parte de la unidad, así qu
             <infoLink id="3be9-faba-434a-8c32" name="Estandarte de Batalla" hidden="false" targetId="16f9-a928-9d5e-2b4f" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0845-ce1f-58b4-c805" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -9277,21 +9257,6 @@ El Heraldo Demoníaco pasa a ser un hechicero de nivel 2 que debe usar el saber 
               </constraints>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="45.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="afb5-23c7-ba17-7619" name="Diablo de Slaanesh (requiere marca de Slaanesh)" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3522-f424-a4de-77f7" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="5ccf-74b3-e36f-3943" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7758-911e-f124-d139" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3522-f424-a4de-77f7" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="40.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -14723,17 +14688,6 @@ a la reserva de dados de energía del ejército. Gana el tipo de unidad Tzeentch
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="120.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="f0d3-0abf-1b4b-eab5" name="Templete del Caos (ocupa unidad singular)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2926-a453-c797-4211" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="1c92-05a7-8c92-c327" name="Templete del Caos" hidden="false" collective="false" import="true" targetId="a5c1-68e6-2a88-4c15" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="130.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="7e4e-3d6c-4f2b-2baf" name="Diablo de Slaanesh (requiere Marca de Slaanesh)" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a505-2214-0dad-9f89" type="max"/>
@@ -16151,17 +16105,6 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="120.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="3840-bf56-ed93-1944" name="Templete del Caos (ocupa unidad singular)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="034c-40b2-86f7-424f" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="715b-e520-3f64-9ad4" name="Templete del Caos" hidden="false" collective="false" import="true" targetId="a5c1-68e6-2a88-4c15" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="130.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="5cf4-5518-e5be-b57d" name="Mantícora" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51fd-3584-9d14-215b" type="max"/>
@@ -16171,17 +16114,6 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
               </entryLinks>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="190.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f4ef-f04f-6f0d-a260" name="Quimera (requiere Marca del Caos Absoluto, ocupa unidad singular)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd0a-3d87-fb40-8c70" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="a49d-795f-fd97-526a" name="Quimera" hidden="false" collective="false" import="true" targetId="f7cc-0e8a-f286-1503" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="205.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="1e3d-c161-d405-51b1" name="Dragón del Caos (ocupa opción de héroe adicional)" hidden="false" collective="false" import="true" type="upgrade">
@@ -16621,17 +16553,6 @@ Muerte o Fuego. Puede ir montado en Diablo de Slaanesh (+40). Gana el tipo de un
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="200.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="957d-cecd-6cf8-5e0f" name="Quimera (requiere Marca del Caos Absoluto, ocupa unidad singular)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d86-2dde-4d69-23e7" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="c04b-dc56-4b3a-daea" name="Quimera" hidden="false" collective="false" import="true" targetId="f7cc-0e8a-f286-1503" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="205.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="bbf2-68a8-52d8-464b" name="Carro del Caos (requiere Marca correspondiente, ocupa unidad especial, sustituye a un miembro de la tripulación)" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f225-8982-cf43-5d35" type="max"/>
@@ -16964,24 +16885,6 @@ saber de Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica)
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="1690-40d6-a943-f0f4" name="Montura" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="76bb-ba9d-03bc-02e6" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="7a25-2d23-6815-3cc8" name="Carro de tuskgors (cuenta como unidad básica, sustituye al bestigor de la tripulación)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73f8-6f0d-6b60-c127" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="1d7a-85bb-c366-832d" name="Carro de tuskgors" hidden="false" collective="false" import="true" targetId="a1c6-27a0-e095-a63a" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="85.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup id="5e76-81dd-4f02-f070" name="Marca del Caos" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="98f0-b4cd-27a4-0a72" type="max"/>
@@ -17048,15 +16951,21 @@ de Slaanesh, Bestias, Sombras o Muerte. Gana el tipo de unidad Slaanesh.</descri
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="75.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="dbbc-9ff7-3c6e-9f33" name="Caudillo Bárbaro" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="dbbc-9ff7-3c6e-9f33" name="Caudillo Bárbaro" hidden="true" collective="false" import="true" type="model">
       <modifierGroups>
         <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="665c-bc75-c0dd-c114" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c97b-23ad-208f-4b2e" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="665c-bc75-c0dd-c114" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8073-0765-7f93-c85a" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
-            <modifier type="set" field="c91d-867f-de0a-2d35" value="-1.0"/>
             <modifier type="set" field="hidden" value="false"/>
+            <modifier type="set" field="c91d-867f-de0a-2d35" value="-1.0"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -17366,7 +17275,7 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
                 <entryLink id="c676-a30f-d3bb-45a9" name="Carro del Caos (Mortales)" hidden="false" collective="false" import="true" targetId="ffa7-a88d-9d16-bbc9" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="85.0"/>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="60.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="abe8-b7ee-836e-2ff8" name="Caballo de Guerra" hidden="false" collective="false" import="true" type="upgrade">
@@ -17535,14 +17444,26 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="60.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e603-0a4c-875e-0e1f" name="Caudillo Centauro" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="e603-0a4c-875e-0e1f" name="Caudillo Centauro" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="increment" field="d91d-c533-9679-be65" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="af19-7f7a-0d1e-9103" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="665c-bc75-c0dd-c114" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c97b-23ad-208f-4b2e" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="665c-bc75-c0dd-c114" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8073-0765-7f93-c85a" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
-            <modifier type="set" field="d91d-c533-9679-be65" value="-1.0"/>
             <modifier type="set" field="hidden" value="false"/>
           </modifiers>
         </modifierGroup>
@@ -17570,9 +17491,18 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule id="d68b-03ed-d716-3310" name="Centauro" hidden="false">
+          <description>Centauro. Los Centauros son Caballería a todos los efectos (afectan los hechizos que afectan a caballería, etc), salvo que no tienen perfil de montura, no tienen TSA+1 por caballería, y usan las reglas de armas a dos manos, dos armas de mano o arma de mano y escudo como si fueran infantería.</description>
+        </rule>
+        <rule id="f5c8-b8d3-d56b-5924" name="Arrollar" hidden="false">
+          <description>Además de sus armas, los Centauros usan sus pezuñas y su envergadura para aplastar al
+enemigo. Los Centauros tienen un ataque adicional (mostrado entre paréntesis en el perfil) que no se ve afectado por los bonificadores o las penalizaciones de las armas que utilicen (por ejemplo no tendrían el F+2 ni Siempre Ataca Último si atacan con arma a dos manos).</description>
+        </rule>
+      </rules>
       <infoLinks>
         <infoLink id="d042-f138-79e4-e0b7" name="Marcas del Caos" hidden="false" targetId="7a29-db77-2ea1-6f3d" type="rule"/>
-        <infoLink id="295c-3631-df38-887d" name="Personajes y unidades" hidden="false" targetId="1296-2d4f-50ed-f22f" type="rule"/>
+        <infoLink id="295c-3631-df38-887d" name="Caballería rápida" hidden="false" targetId="f6f9-0701-05a1-df5a" type="rule"/>
         <infoLink id="2ab5-f558-acf4-50eb" name="Dios del Caos" hidden="false" targetId="6aae-04fe-3715-466c" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -17589,46 +17519,6 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
           </infoLinks>
           <costs>
             <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="2.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6a43-71db-d9c0-ed85" name="General" hidden="false" collective="false" import="true" type="upgrade">
-          <modifierGroups>
-            <modifierGroup>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="665c-bc75-c0dd-c114" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c6f-40e2-931f-abbc" type="instanceOf"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="e603-0a4c-875e-0e1f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="77c2-6699-0964-1c96" type="lessThan"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b9b-0024-5e75-98ef" type="instanceOf"/>
-                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8073-0765-7f93-c85a" type="instanceOf"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-              <modifiers>
-                <modifier type="set" field="hidden" value="true"/>
-                <modifier type="set" field="c764-0a66-d966-0d51" value="0.0"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c764-0a66-d966-0d51" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="140f-9a9e-487e-0ae4" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -17650,27 +17540,14 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f7d-5839-b35b-1194" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="aa51-e604-66ab-b40b" name="Armadura del Caos" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="238f-f04e-f2cd-586b" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="61cf-23cf-bddd-5246" name="Armadura del Caos" hidden="false" targetId="3981-b341-6465-6d3e" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="8.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="1a47-5bb1-c262-0a60" name="Armadura ligera" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4bd-6fac-12a9-9379" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4bd-6fac-12a9-9379" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2051-088c-70c7-7382" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="f258-ad20-f1d8-f41b" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
               </infoLinks>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="2.0"/>
-              </costs>
             </selectionEntry>
             <selectionEntry id="79c7-ef44-1cd9-45e5" name="Armadura pesada" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -17711,6 +17588,24 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
               </infoLinks>
               <costs>
                 <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="fb42-d21e-ef2a-b4ef" name="Armas de proyectiles" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c8f-0b62-344b-006d" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f8ad-08e4-d322-a2bd" name="Arco" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a7c-4369-0d82-f7de" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="702d-d79b-cbea-13f5" name="Arco" hidden="false" targetId="dfc2-1321-c679-1bc0" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="4.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -17756,11 +17651,14 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">-</characteristic>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo, Caos, Demonio, Nurgle</characteristic>
+            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería Monstruosa, Caos, Demonio, Nurgle</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule id="e579-4bb7-00f4-9c4a" name="Ataques aleatorios (1d6+1)" hidden="false"/>
+      </rules>
       <infoLinks>
         <infoLink id="ff3d-fe8e-77b9-9ae3" name="Dios del Caos" hidden="false" targetId="6aae-04fe-3715-466c" type="rule"/>
         <infoLink id="08a8-fba2-738e-9bdf" name="Marcas del Caos" hidden="false" targetId="7a29-db77-2ea1-6f3d" type="rule"/>
@@ -17774,6 +17672,7 @@ Tzeentch. Puede ser hechicero pese a llevar armadura (normal o mágica). Gana el
         <selectionEntry id="f8fa-8978-c643-a37e" name="Bestia Demonio de Nurgle" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e230-64cf-292e-9347" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d3e-8d2c-24f8-aa9f" type="max"/>
           </constraints>
           <selectionEntryGroups>
             <selectionEntryGroup id="2da7-0007-4bc9-5e2c" name="Armas" hidden="false" collective="false" import="true">
@@ -18027,6 +17926,7 @@ el Carromato de Plaga no otorga +100 puntos de victoria adicionales por ser capt
         <selectionEntry id="9565-4e85-85c7-6982" name="Diablo de Slaneesh" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d235-814a-40c4-a7a5" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4578-9ebf-35cd-fd3e" type="max"/>
           </constraints>
           <selectionEntryGroups>
             <selectionEntryGroup id="28b5-4778-c5ef-36c0" name="Armas" hidden="false" collective="false" import="true">
