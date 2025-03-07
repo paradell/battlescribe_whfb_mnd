@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5e75-a17b-a3f4-ab3b" name="Warhammer Fantasy - MDN" revision="14" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="5e75-a17b-a3f4-ab3b" name="Warhammer Fantasy - MDN" revision="15" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="53ea-00f4-9046-81ff" name="puntos" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -36,6 +36,7 @@
         <characteristicType id="784b-e30f-e0fd-53b1" name="RM"/>
         <characteristicType id="4a99-e6a0-4022-a833" name="Tipo"/>
         <characteristicType id="6bbb-9823-b0cd-5705" name="Potencia"/>
+        <characteristicType id="9407-c9a7-f52f-ca91" name="Peana"/>
       </characteristicTypes>
     </profileType>
     <profileType id="7e35-c20a-e9e9-6dad" name="Talismán">
@@ -694,6 +695,7 @@ Esta lista incluye los ultimos cambios en los libros de ejército, FAQs y Errata
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
