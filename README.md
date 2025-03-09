@@ -21,15 +21,15 @@ Estos ficheros permiten hacer la listas de Battlescribe tanto para Manuscritos d
 | 🐍 [Elfos Oscuros](./files/Elfos_Oscuros_MDN.cat)   | v2023 🟢   | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 | v5     |
 | 🍃 [Elfos Silvanos](./files/Elfos_Silvanos_MDN.cat)  | v2022  🟢   | Sí  🟢 | Sí  🟢 | No hay  🟢 | Sí 🟢 | v5     |
 | ⚒️ [Enanos](./files/Enanos_MDN.cat)   | v2023 🟢 | No 🔴 | Sí 🟢 | No 🔴 | Sí 🟢 | v6     |
-| 🔥 [Enanos del Caos](./files/Enanos_del_Caos_MDN.cat)   | v2023 🟢  | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 | v8     |
+| 🔥 [Enanos del Caos](./files/Enanos_del_Caos_MDN.cat)   | v2023 🟢  | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 | v9     |
 | 🦎 [Hombres Lagarto](./files/Hombres_Lagarto_MDN.cat)    | v2023 🟢  | No 🔴 | Sí 🟢 | No 🔴 | Sí 🟢 | v12     |
 | 👑 [Imperio](./files/Imperio_MDN.cat)    | v2023 🟢  | No 🔴 | Sí 🟢 | No 🔴 | Sí 🟢 | v7     |
 | 💰 [Mercenarios](./files/Mercenarios_MDN.cat)   | v2023 🟢  | Sí 🟢  | No 🔴  | No hay 🟢  | Sí 🟢| v7     |
 | 💀 [No Muertos](./files/No_Muertos_MDN.cat)   | Beta 🟢  | No 🔴  | No 🔴  | No 🔴  | No 🔴 | v2     |
 | 💚 [Orcos y Goblins](./files/Orcos_Goblins_MDN.cat)    | v2023 🟢  | 18/24 🟡 | Sí 🟢 | No 🔴 | 50% 🟡 | v13     |
-| ✴️ [Reinos del Caos](./files/Reinos_del_Caos_MDN.cat)   | v2021 🟢    | Sí 🟢 | Sí 🟢 | No 🔴  | Sí 🟢 | v3     |
+| ✴️ [Reinos del Caos](./files/Reinos_del_Caos_MDN.cat)   | v2021 🟢    | Sí 🟢 | Sí 🟢 | No 🔴  | Sí 🟢 | v4     |
 | 🍖 [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)   | v2023 🟢    | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 | v8    |
-| 💀 [Reyes Funerarios](./files/Reyes_Funerarios_MDN.cat)   |v2023 🟢    |  Sí 🟢 | Sí 🟢  | No hay 🟢 | Sí 🟢 | v12     | 
+| 💀 [Reyes Funerarios](./files/Reyes_Funerarios_MDN.cat)   |v2023 🟢    |  Sí 🟢 | Sí 🟢  | No hay 🟢 | Sí 🟢 | v13     | 
 | 🐀 [Skaven](./files/Skaven_MDN.cat)   | v2023 🟢  |  Sí 🟢 | Sí 🟢 | No 🔴|  Sí 🟢 | v9     |
 
 
