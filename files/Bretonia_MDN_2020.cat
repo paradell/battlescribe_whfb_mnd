@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN" revision="14" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="95b0-9aeb-7806-1736" name="Bretonia MDN" revision="15" battleScribeVersion="2.03" authorName="Aleix Paradell" authorContact="" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="95b0-9aeb-pubN66253" name="PDF Bretonia MDN 2025" publicationDate="Enero 2025" publisherUrl="https://cargad.com/index.php/manuscritos-de-nuth/"/>
   </publications>
@@ -4792,9 +4792,14 @@ Obtiene un +2 cuando lanza hechizos del Saber de la Vida.
           </conditions>
         </modifier>
         <modifier type="set" field="bec9-09ef-9b19-bb80" value="-1.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cfe-b395-0563-be0d" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538a-a80b-ac8a-0a8b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cfe-b395-0563-be0d" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <modifierGroups>
@@ -6270,7 +6275,7 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Caballero</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
-            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"></characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
         <profile id="5ea9-e6ef-474b-e403" name="Espada de Quenelles" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
@@ -6328,7 +6333,7 @@ Siempre es TSE 5+, también para impactos de Fuerza menor que 5.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1">1</characteristic>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Humano, Caballero</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
-            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"></characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
         <profile id="6dc4-34df-1f9e-3570" name="Virtud del Estocismo" hidden="false" typeId="e6e9-07f2-7c47-6ca4" typeName="Virtud Caballeresca">
@@ -8199,58 +8204,6 @@ el Pot-de-Feu directamente explota (retira la máquina y su dotación como baja)
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="45.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="479c-3ccc-fdd1-9e33" name="Defensor del Grial" hidden="true" collective="false" import="true" type="upgrade">
-      <modifierGroups>
-        <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cfe-b395-0563-be0d" type="instanceOf"/>
-          </conditions>
-          <modifiers>
-            <modifier type="set" field="hidden" value="false"/>
-            <modifier type="set" field="4f6b-ed6a-de58-6dbb" value="-1.0"/>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
-      <constraints>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f6b-ed6a-de58-6dbb" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="c4c5-118a-2fbb-2b24" name="Defensor del Grial" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-          <characteristics>
-            <characteristic name="M" typeId="2d56-9cad-9242-37bd">-</characteristic>
-            <characteristic name="HA" typeId="c87b-b820-6a47-1354">6</characteristic>
-            <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">3</characteristic>
-            <characteristic name="F" typeId="79c2-0368-3eed-76b4">4</characteristic>
-            <characteristic name="R" typeId="30bd-8385-2b51-e039">4</characteristic>
-            <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-            <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">5</characteristic>
-            <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
-            <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
-            <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">2+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-            <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-            <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería, Humano, Caballero</characteristic>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2</characteristic>
-            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="a755-b34b-8867-5231" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
-        <infoLink id="a2d8-2784-b7cc-4fb9" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
-        <infoLink id="8ff4-866c-f9b0-1cdd" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
-        <infoLink id="c30b-ddb2-48cb-1b4c" name="Lanza de caballería" hidden="false" targetId="5bcd-ff0b-d571-38d0" type="profile"/>
-        <infoLink id="fd1f-8d28-d668-d8e4" name="Voto del Grial" hidden="false" targetId="3634-f177-bf91-ee8f" type="rule"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="328d-508e-e5a9-9f90" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="true"/>
-        <categoryLink id="bfd9-ecc8-b2a2-c664" name="New CategoryLink" hidden="false" targetId="c647-4209-4e6c-206a" primary="false"/>
-        <categoryLink id="3a4b-7da8-a987-ae4c" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="3be4-9aae-f4f5-8f42" name="Caballo de Guerra con barda" hidden="false" collective="false" import="true" targetId="6d9c-6159-156b-e21c" type="selectionEntry"/>
-      </entryLinks>
-    </selectionEntry>
     <selectionEntry id="7e2b-5d0a-e1bb-142c" name="Aliados del bosque" publicationId="95b0-9aeb-pubN66253" page="60" hidden="true" collective="false" import="true" type="upgrade">
       <modifierGroups>
         <modifierGroup>
@@ -8342,7 +8295,7 @@ el Pot-de-Feu directamente explota (retira la máquina y su dotación como baja)
                   <characteristics>
                     <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
                     <characteristic name="HA" typeId="c87b-b820-6a47-1354">4</characteristic>
-                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
+                    <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">5</characteristic>
                     <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
                     <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
                     <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
@@ -8365,6 +8318,9 @@ el Pot-de-Feu directamente explota (retira la máquina y su dotación como baja)
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="fd12-d252-380b-cfb9" name="Sargento de Armas" publicationId="95b0-9aeb-pubN66253" page="62" hidden="true" collective="false" import="true" type="model">
       <modifierGroups>
@@ -8523,6 +8479,9 @@ el Pot-de-Feu directamente explota (retira la máquina y su dotación como baja)
               <entryLinks>
                 <entryLink id="5df1-0c03-3797-09ba" name="Caballo" hidden="false" collective="false" import="true" targetId="6fb3-99a3-8c8c-b5ab" type="selectionEntry"/>
               </entryLinks>
+              <costs>
+                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -8807,6 +8766,9 @@ yendo la dotación de máquinas de guerra (pero no el Girocóptero, por ejemplo)
                   <infoLinks>
                     <infoLink id="12ae-e824-7cb9-91f6" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
                   </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
                 </selectionEntry>
                 <selectionEntry id="9b03-ab0d-4db4-9201" name="Armadura pesada" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
@@ -8896,6 +8858,9 @@ yendo la dotación de máquinas de guerra (pero no el Girocóptero, por ejemplo)
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="ff3c-5a1d-6abd-0d2a" name="Caballero del Hipogrifo" publicationId="95b0-9aeb-pubN66253" page="64" hidden="true" collective="false" import="true" type="model">
       <modifiers>
