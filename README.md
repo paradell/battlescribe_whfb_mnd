@@ -29,7 +29,7 @@ Estos ficheros permiten hacer la listas de Battlescribe tanto para Manuscritos d
 | 💚 [Orcos y Goblins](./files/Orcos_Goblins_MDN.cat)    | v2023 🟢  | 18/24 🟡 | Sí 🟢 | No 🔴 | 50% 🟡 | v13     |
 | ✴️ [Reinos del Caos](./files/Reinos_del_Caos_MDN.cat)   | v2021 🟢    | Sí 🟢 | Sí 🟢 | No 🔴  | Sí 🟢 | v4     |
 | 🍖 [Reinos Ogros](./files/Reinos_Ogros_MDN_2020.cat)   | v2023 🟢    | Sí 🟢 | Sí 🟢 | Sí 🟢 | Sí 🟢 | v8    |
-| 💀 [Reyes Funerarios](./files/Reyes_Funerarios_MDN.cat)   |v2023 🟢    |  Sí 🟢 | Sí 🟢  | No hay 🟢 | Sí 🟢 | v13     | 
+| 💀 [Reyes Funerarios](./files/Reyes_Funerarios_MDN.cat)   |v2025 🟢    |  Sí 🟢 | Sí 🟢  | 3/5 🟡 | Sí 🟢 | v14     | 
 | 🐀 [Skaven](./files/Skaven_MDN.cat)   | v2023 🟢  |  Sí 🟢 | Sí 🟢 | No 🔴|  Sí 🟢 | v9     |
 
 
