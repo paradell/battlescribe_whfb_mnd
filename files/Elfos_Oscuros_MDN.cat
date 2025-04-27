@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="88fd-bc7b-a990-f36e" name="Elfos Oscuros MDN" revision="5" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="88fd-bc7b-a990-f36e" name="Elfos Oscuros MDN" revision="6" battleScribeVersion="2.03" authorUrl="https://paradell.github.io/battlescribe_whfb_mnd/" library="false" gameSystemId="5e75-a17b-a3f4-ab3b" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
-    <publication id="a7c6-766e-bec9-a27e" name="Elfos Oscuros MdN 2023"/>
+    <publication id="a7c6-766e-bec9-a27e" name="Elfos Oscuros MdN 2025"/>
   </publications>
   <forceEntries>
     <forceEntry id="05a2-9e69-82b4-0e73" name="Guarnición de la Ciudad" publicationId="a7c6-766e-bec9-a27e" page="58" hidden="false">
@@ -844,6 +844,216 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
+    <forceEntry id="5cf3-3c5b-22b3-6d6c" name="Culto de Khaine" publicationId="a7c6-766e-bec9-a27e" page="61" hidden="false">
+      <categoryLinks>
+        <categoryLink id="07a1-df2b-94c0-44b6" name="Comandante" hidden="false" targetId="9769-7233-6405-675e" primary="false">
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="4d87-c763-97b8-cb77" value="0.0">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="4d87-c763-97b8-cb77" value="1.0">
+                  <repeats>
+                    <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d87-c763-97b8-cb77" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="7bb5-33f3-f546-071f" name="Héroe" hidden="false" targetId="c647-4209-4e6c-206a" primary="false">
+          <modifiers>
+            <modifier type="increment" field="c472-27fb-8a44-1bb4" value="2.0">
+              <repeats>
+                <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c472-27fb-8a44-1bb4" value="4.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="c472-27fb-8a44-1bb4" value="3.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c472-27fb-8a44-1bb4" value="0.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c472-27fb-8a44-1bb4" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="e2ff-ade2-cb59-98c2" name="Personaje" hidden="false" targetId="e679-542e-c187-1362" primary="false">
+          <modifiers>
+            <modifier type="set" field="8d2a-68bd-e562-7cfa" value="3.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="8d2a-68bd-e562-7cfa" value="4.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="8d2a-68bd-e562-7cfa" value="0.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="8d2a-68bd-e562-7cfa" value="2.0">
+              <repeats>
+                <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d2a-68bd-e562-7cfa" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="706e-7e71-4428-ac51" name="Unidad básica" hidden="false" targetId="ba68-224b-3224-a908" primary="false">
+          <modifiers>
+            <modifier type="increment" field="cd9a-525c-3a78-353e" value="1.0">
+              <repeats>
+                <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" field="cd9a-525c-3a78-353e" value="1.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd9a-525c-3a78-353e" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="a579-50f5-3ada-0795" name="Unidad básica (no cuenta para el mínimo)" hidden="false" targetId="0cfc-02a1-ad30-fb33" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee9d-b8e1-9e81-a308" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="1891-97ec-9a22-12b2" name="Unidad especial" hidden="false" targetId="102e-012c-5785-3354" primary="false">
+          <modifiers>
+            <modifier type="set" field="97c5-49cc-5533-2691" value="3.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="97c5-49cc-5533-2691" value="2.0">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="97c5-49cc-5533-2691" value="1.0">
+                  <repeats>
+                    <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97c5-49cc-5533-2691" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="bf66-8eec-614e-f985" name="Unidad singular" hidden="false" targetId="184a-30ec-bf7c-b603" primary="false">
+          <modifiers>
+            <modifier type="set" field="779b-a16d-33b9-3acf" value="1.0">
+              <conditions>
+                <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="779b-a16d-33b9-3acf" value="0.0">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="779b-a16d-33b9-3acf" value="1.0">
+                  <repeats>
+                    <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="779b-a16d-33b9-3acf" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="9763-9224-0c6f-832e" name="Personaje Especial" hidden="false" targetId="9374-09df-04a6-d8fe" primary="false"/>
+        <categoryLink id="c5cf-2cf5-92a9-e817" name="Monstruos Arcanos" hidden="false" targetId="6edd-99c1-7d49-468f" primary="false">
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="bede-df96-b180-88e1" value="0.0">
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="bede-df96-b180-88e1" value="1.0">
+                  <repeats>
+                    <repeat field="limit::53ea-00f4-9046-81ff" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::53ea-00f4-9046-81ff" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bede-df96-b180-88e1" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
   </forceEntries>
   <selectionEntries>
     <selectionEntry id="b1c8-bbe3-91ba-8a62" name="Carro de gélidos" hidden="false" collective="false" import="true" type="unit">
@@ -914,6 +1124,7 @@
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Carro</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">4</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -947,6 +1158,7 @@
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -976,6 +1188,7 @@
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1119,6 +1332,7 @@
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Carro</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">4</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1151,6 +1365,7 @@
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1180,6 +1395,7 @@
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1239,6 +1455,7 @@
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Personaje</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1477,6 +1694,7 @@
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Carro</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">4</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1519,6 +1737,7 @@
                         <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                         <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
                         <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                        <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -1548,6 +1767,7 @@
                         <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                         <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
                         <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                        <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -1754,6 +1974,7 @@
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Personaje</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2040,6 +2261,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Personaje</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2413,6 +2635,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Carro</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">4</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2455,6 +2678,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                         <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                         <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
                         <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                        <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -2484,6 +2708,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                         <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                         <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
                         <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                        <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -2716,6 +2941,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Personaje</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3028,6 +3254,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Personaje</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3171,6 +3398,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Personaje</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3330,6 +3558,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Personaje</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3557,6 +3786,7 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3619,6 +3849,7 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3737,6 +3968,7 @@ Ten en cuenta que pueden declarar una carga el Señor y sus Bestias como unidad,
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3821,6 +4053,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3959,6 +4192,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4044,6 +4278,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4168,6 +4403,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4281,6 +4517,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">25x50 o 30x60</characteristic>
           </characteristics>
         </profile>
         <profile id="d060-e1f0-bd71-ef6f" name="Corcel oscuro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -4299,6 +4536,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4457,6 +4695,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4555,11 +4794,6 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
       <constraints>
         <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ef3-ee9e-fdb5-1d97" type="max"/>
       </constraints>
-      <rules>
-        <rule id="9b77-f359-5d92-84e2" name="No cuentan para el mínimo de unidades básicas" hidden="false">
-          <description>Los Mastines NO se contabilizan para el mínimo de unidades básicas que debes incluir en el ejército.</description>
-        </rule>
-      </rules>
       <categoryLinks>
         <categoryLink id="31ad-b882-0511-315f" name="Unidad especial" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
       </categoryLinks>
@@ -4585,6 +4819,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -4643,6 +4878,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">25x50</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4739,6 +4975,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4845,6 +5082,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4939,6 +5177,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -5036,6 +5275,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5130,6 +5370,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5251,6 +5492,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5357,6 +5599,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5462,6 +5705,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">25x50 o 30x60</characteristic>
           </characteristics>
         </profile>
         <profile id="7167-1a46-f50c-3646" name="Gélido" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -5480,6 +5724,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -5635,6 +5880,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5754,6 +6000,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
         <profile id="0473-3208-bc40-6d26" name="Corcel oscuro con barda" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -5772,6 +6019,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">25x50 o 30x60</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5779,7 +6027,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
         <infoLink id="0429-98f0-8b65-c952" name="Barda" hidden="false" targetId="4020-12ef-debf-3510" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="646e-8da9-18e8-127c" name="New CategoryLink" hidden="false" targetId="102e-012c-5785-3354" primary="true"/>
+        <categoryLink id="e08d-0464-37a4-485b" name="New CategoryLink" hidden="false" targetId="0cfc-02a1-ad30-fb33" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="effd-8bd3-66aa-0f36" name="Jinetes mortales" hidden="false" collective="false" import="true" type="upgrade">
@@ -5790,99 +6038,79 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <infoLink id="a29a-c926-2389-bb93" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup id="6494-4969-63a7-7dbc" name="Armadura" hidden="false" collective="false" import="true" defaultSelectionEntryId="3556-8e1b-93d2-a8f1">
+            <selectionEntryGroup id="7918-02b3-6d79-1c8a" name="Armadura" hidden="false" collective="false" import="true" defaultSelectionEntryId="4b2e-c1df-80f5-e966">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e826-d550-fdf2-a900" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72c8-243f-27ac-b5aa" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a5a-d846-34ae-7f21" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7abc-de32-6074-7efb" type="min"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="1b02-2100-66e6-7925" name="Armadura pesada" hidden="false" collective="true" import="true" type="upgrade">
+                <selectionEntry id="4b2e-c1df-80f5-e966" name="Armadura ligera" hidden="false" collective="true" import="true" type="upgrade">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d92f-926d-7dd5-1fb8" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5f4-ccdd-4d2d-1800" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b28-d6ec-19e8-d7c5" type="min"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="7426-db18-1c5d-1cef" name="Armadura pesada" hidden="false" targetId="dfbb-a75f-240a-704f" type="profile"/>
+                    <infoLink id="6525-fcf1-7ee4-00a6" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="6a10-5592-66eb-ac1f" name="Armas" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08d5-b5da-b55d-8686" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d79f-679c-2559-4786" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="1441-2872-2afc-533c" name="Arma de mano" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c8d-45be-2ff0-14ad" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="3149-87e6-283c-142c" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="baa3-67c6-fd2c-bed6" name="Lanza (caballería)" hidden="false" collective="true" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="8270-61ef-c285-ea74" value="0.0">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="effd-8bd3-66aa-0f36" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3ae-c7aa-7f3a-bea4" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2533-bca3-d84e-7847" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8270-61ef-c285-ea74" type="min"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="dbea-ea3b-08dc-b28c" name="Lanza (caballería)" hidden="false" targetId="0115-9609-e617-662d" type="profile"/>
                   </infoLinks>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="2.0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="3556-8e1b-93d2-a8f1" name="Armadura ligera" hidden="false" collective="true" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d610-2123-b9af-7e93" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="c6e0-5e0d-eb8f-4996" name="Armadura ligera" hidden="false" targetId="c534-e31e-c936-c2f2" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
-            <selectionEntryGroup id="96ed-455e-bd89-f4d2" name="Armas" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="3d6e-2aac-44b1-f1fb" name="Armas de proyectiles" hidden="false" collective="false" import="true">
               <constraints>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="550c-2d2a-722b-6e1f" type="max"/>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28ec-c918-b092-147d" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63aa-902f-fd3c-f176" type="max"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="dfca-caf7-8ecd-b25c" name="Arma de mano" hidden="false" collective="true" import="true" type="upgrade">
+                <selectionEntry id="b3ae-c7aa-7f3a-bea4" name="Ballesta de repetición" hidden="false" collective="true" import="true" type="upgrade">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d048-bde4-5a27-5d67" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9014-504b-91f1-38b6" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f5a-44fd-8382-64ab" type="max"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="abc4-ee74-2688-484b" name="Arma de mano" hidden="false" targetId="4645-41a2-83c2-d8bc" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="589c-e3b7-637e-90e3" name="Lanza de caballería" hidden="false" collective="true" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2afb-bc35-89a4-5494" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="782a-9090-c773-6278" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="5e48-5fca-f4e0-edbe" name="Lanza de caballería" hidden="false" targetId="5bcd-ff0b-d571-38d0" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-            <selectionEntryGroup id="7674-2c80-bbb8-ae4c" name="Escudo" hidden="false" collective="false" import="true" defaultSelectionEntryId="dd56-ab67-bf93-bc68">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9a2-1ac1-b0b4-f37b" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f045-ddce-2ff6-e6ce" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="dd56-ab67-bf93-bc68" name="Escudo" hidden="false" collective="true" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b516-45c7-0ef8-8cf4" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ce0-26da-eb0a-008f" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="6f20-7403-9ffa-e0ee" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-            <selectionEntryGroup id="9932-8a90-651c-fa27" name="Arma de proyectiles" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a85-1eb9-3848-7f4c" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="6d2f-93f8-6bb3-34ce" name="Ballesta de repetición" hidden="false" collective="true" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b89-983d-9392-ba3f" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="616c-545d-53d7-34d2" name="Ballesta de repetición" hidden="false" targetId="279e-04f5-dc00-2a6b" type="profile"/>
+                    <infoLink id="c44f-cbe6-7829-5206" name="Ballesta de repetición" hidden="false" targetId="279e-04f5-dc00-2a6b" type="profile"/>
                   </infoLinks>
                   <costs>
                     <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="6.0"/>
@@ -5890,9 +6118,26 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
+            <selectionEntryGroup id="c9f2-e9eb-084b-7b7f" name="Escudo" hidden="false" collective="false" import="true" defaultSelectionEntryId="c1b4-bd62-7c29-002e">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6069-a405-c688-7adf" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df92-bf02-541a-e0da" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="c1b4-bd62-7c29-002e" name="Escudo" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5829-6958-8cf2-7c66" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5bd-09a0-3717-ee0b" type="min"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="f614-e0eb-7c0d-94e0" name="Escudo" hidden="false" targetId="1e84-3cd7-87ca-0372" type="profile"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="21.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="18.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -5920,6 +6165,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5951,6 +6197,13 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="8d0a-a5cf-12ee-1d6e" name="Medusa drenasangre" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="87bc-7552-ef74-f9ff" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3a05-ac15-a637-2286" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditionGroups>
@@ -5979,7 +6232,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
         </modifierGroup>
       </modifierGroups>
       <constraints>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87bc-7552-ef74-f9ff" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87bc-7552-ef74-f9ff" type="max"/>
       </constraints>
       <rules>
         <rule id="6181-b3b8-1936-6ac1" name="Solitario" hidden="false">
@@ -5996,7 +6249,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
       <selectionEntries>
         <selectionEntry id="9d51-0875-0800-f1f7" name="Medusa Drenasangre" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e06b-6ec0-4495-7a5a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e06b-6ec0-4495-7a5a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d07b-12f5-f1e6-649d" type="min"/>
           </constraints>
           <profiles>
@@ -6016,6 +6269,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -6059,146 +6313,18 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="10dd-27dc-e300-9aaa" name="Montura" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0bf-8578-dec7-2025" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="393e-07c5-c75f-14c3" name="Altar drenasangre" hidden="false" collective="false" import="true" type="unit">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcd7-719a-b945-16c5" type="max"/>
-              </constraints>
-              <rules>
-                <rule id="257d-3e37-18ac-5d52" name="Resistencia a la magia 1" hidden="false"/>
-                <rule id="46c8-e522-3777-1c2a" name="Aura de agonía" hidden="false">
-                  <description>Todos los personajes y unidades amigos a 15cm o menos de uno o más Altares Drenasangre se considera que tienen L+1 (hasta un máximo de L10). Todos los personajes y unidades enemigas a 15cm o menos de uno o más Altares Drenasangre se considera que tienen L-1 (hasta un mínimo de 2).</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink id="79b0-8895-6558-4875" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
-                <infoLink id="a473-98a0-abe3-76fa" name="Objetivo grande" hidden="false" targetId="9e28-dc38-0f21-77f6" type="rule"/>
-                <infoLink id="bf38-6c74-e787-862f" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
-                <infoLink id="0316-bba8-3a9b-64e7" name="Inmune a desmoralización" hidden="false" targetId="3ea2-7beb-2798-15a0" type="rule"/>
-              </infoLinks>
-              <selectionEntries>
-                <selectionEntry id="1bf4-b5fc-ea79-dc9f" name="Elfas brujas" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee87-6a6c-f06b-8cba" type="min"/>
-                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57a8-347b-b475-5b6b" type="max"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="05a5-b8e1-54bd-8ee1" name="Elfa bruja" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-                      <characteristics>
-                        <characteristic name="M" typeId="2d56-9cad-9242-37bd">12</characteristic>
-                        <characteristic name="HA" typeId="c87b-b820-6a47-1354">5</characteristic>
-                        <characteristic name="HP" typeId="8ab7-c800-6644-f5ec">4</characteristic>
-                        <characteristic name="F" typeId="79c2-0368-3eed-76b4">3</characteristic>
-                        <characteristic name="R" typeId="30bd-8385-2b51-e039">3</characteristic>
-                        <characteristic name="H" typeId="a41f-60f6-2336-73ab">1</characteristic>
-                        <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f">6</characteristic>
-                        <characteristic name="A" typeId="6b2b-37c4-6774-748b">1</characteristic>
-                        <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
-                        <characteristic name="TSA" typeId="2532-2940-06ec-7a6e"/>
-                        <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-                        <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-                        <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
-                        <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink id="8d47-2dce-c0a3-d5b2" name="Ataques envenenados" hidden="false" targetId="d77c-34cb-f94c-aee1" type="rule"/>
-                    <infoLink id="1ec0-f804-a458-ecfc" name="Furia asesina" hidden="false" targetId="000a-cfde-6e79-aecb" type="rule"/>
-                    <infoLink id="6e9a-8c24-b2bf-ce66" name="Odio a los altos elfos" hidden="false" targetId="51d3-6fd2-e493-0e8d" type="rule"/>
-                  </infoLinks>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup id="cd99-b6f6-bfe5-85b3" name="Armas" hidden="false" collective="false" import="true">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f26d-123f-32dc-27c8" type="max"/>
-                      </constraints>
-                      <selectionEntries>
-                        <selectionEntry id="25f9-fc27-6d88-583d" name="Dos armas de mano" hidden="false" collective="true" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="012c-ec06-eba5-5201" type="max"/>
-                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae1c-347d-5e95-201f" type="min"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="3433-1067-8052-5e50" name="Arma de mano adicional " hidden="false" targetId="ea69-c00a-f73d-2263" type="profile"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                          </costs>
-                        </selectionEntry>
-                      </selectionEntries>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="c772-2769-d60f-95da" name="Altar drenasangre" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62b8-4e75-35d7-7931" type="min"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be41-a007-7cce-3ab0" type="max"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="67b5-0384-6a1c-f53c" name="Altar drenasangre" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
-                      <characteristics>
-                        <characteristic name="M" typeId="2d56-9cad-9242-37bd"/>
-                        <characteristic name="HA" typeId="c87b-b820-6a47-1354"/>
-                        <characteristic name="HP" typeId="8ab7-c800-6644-f5ec"/>
-                        <characteristic name="F" typeId="79c2-0368-3eed-76b4">5</characteristic>
-                        <characteristic name="R" typeId="30bd-8385-2b51-e039">6</characteristic>
-                        <characteristic name="H" typeId="a41f-60f6-2336-73ab">5</characteristic>
-                        <characteristic name="I" typeId="fdd9-0cd1-90d5-1b6f"/>
-                        <characteristic name="A" typeId="6b2b-37c4-6774-748b"/>
-                        <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3"/>
-                        <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">5+</characteristic>
-                        <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
-                        <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
-                        <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Máquina de guerra</characteristic>
-                        <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">5 más la medusa (las elfas no cuentan)</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <rules>
-                    <rule id="0577-3192-f5f7-d252" name="Carro" hidden="false">
-                      <description>1D6 impactos por carga, destruido por heridas de F7, terreno...</description>
-                    </rule>
-                    <rule id="6f19-4774-144e-194f" name="Altar de la medusa" hidden="false">
-                      <description>Trata a todos los efectos una Medusa montada en Altar Drenasangre como tratarías un personaje montado en carro (pueden ser atacados de forma separada, dan puntos de victoria de forma individual, etc). La Medusa no puede abandonar el Altar de forma voluntaria (no puede “desmontarse”). Si el Altar es destruido y la Medusa sobrevive, automáticamente se separará de la unidad que estuviera empujando el Altar y se tratará a la Medusa como un Monstruo individual.</description>
-                    </rule>
-                    <rule id="a079-be9d-4769-98e9" name="Empujada" hidden="false">
-                      <description>Un Altar Drenasangre no mueve por sí solo. Sin embargo, puede incluirse dentro de una unidad de tipo Infantería (situándose en primera fila) como si fuera un personaje montado en Monstruo a todos los efectos (incluso aunque las reglas de la Medusa diga que no pueden unirse a unidades). Si está en una unidad de 10 o más miniaturas (excluyendo el Altar) tendrá el mismo movimiento que la unidad que lo empuja. Por cada miniatura por debajo de 10 en la unidad, resta 2 al Movimiento; una unidad de 5 o menos miniaturas no puede empujar el Altar. Las miniaturas se sitúan alrededor del Altar (primero a sus lados y luego detrás); a efectos de calcular el bonificador por filas, cuenta las miniaturas que ocuparía el Altar (normalmente, 15). Debes hacer que una unidad empuje el Altar a principio de la partida; el Altar no puede “irse” a otra unidad, la unidad no puede abandonar el Altar. Si la unidad que empuja el Altar huye o es destruida, el Altar es destruido junto a las Elfas brujas de “dotación”; si en ese momento la Medusa seguía viva pasa a ser una miniatura independiente (fuera de la unidad).</description>
-                    </rule>
-                  </rules>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="93c4-425b-603c-211d" name="Ocupa un hueco de unidad singular" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb70-c982-1daf-e117" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75f0-0645-2f67-70fb" type="min"/>
-                  </constraints>
-                  <costs>
-                    <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <costs>
-                <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="160.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3a05-ac15-a637-2286" name="Altar drenasangre" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="8128-71fe-5ae9-e721" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8d0a-a5cf-12ee-1d6e" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditionGroups>
@@ -6258,6 +6384,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -6312,6 +6439,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Máquina de guerra</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">5 más la medusa (las elfas no cuentan)</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -6352,6 +6480,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -6451,6 +6580,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
         <profile id="5a51-005d-855f-bbf3" name="Maestro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -6469,6 +6599,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -6640,6 +6771,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6729,6 +6861,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6810,10 +6943,11 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="A" typeId="6b2b-37c4-6774-748b">2</characteristic>
             <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
             <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
-            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+            <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">6+</characteristic>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">25x50 o 30x60</characteristic>
           </characteristics>
         </profile>
         <profile id="d12d-00e3-79af-878e" name="Corcel oscuro" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -6832,6 +6966,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -6877,7 +7012,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="23.0"/>
+            <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="25.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -6901,10 +7036,11 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="A" typeId="6b2b-37c4-6774-748b">3</characteristic>
                     <characteristic name="L" typeId="458e-bb4b-f7c9-e0b3">8</characteristic>
                     <characteristic name="TSA" typeId="2532-2940-06ec-7a6e">6+</characteristic>
-                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
+                    <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458">6+</characteristic>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6995,6 +7131,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -7050,6 +7187,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Máquina de guerra</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">La de la dotación</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -7079,6 +7217,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -7194,6 +7333,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Máquina de guerra</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">La de la dotación</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
             <profile id="da1a-c180-d2ef-e581" name="Elfo" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -7212,6 +7352,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -7334,6 +7475,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">5 + 1 por cada aprendiz vivo</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">50x100 o 60x100</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7345,7 +7487,9 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
             <rule id="c860-e38b-4a2c-3f5e" name="Controlado" hidden="false">
               <description>Los dos Aprendices deben desplegar a 3cm y no pueden quedar alejados a más de 3cm del Kharibdyss. Si los Aprendices son eliminados, el Kharibdyss actuará como un monstruo que ha perdido su jinete (será necesario un chequeo de la Tabla de reacción de monstruos). Si el Kharibdyss pierde sus Aprendices se considera una miniatura independiente. Todo disparo contra la unidad se considera que va contra Objetivo grande, pero deberá repartirse entre el Kharibdyss y los Elfos con 1D6 (1-4 Kharibdyss, 5-6 Aprendices), a no ser que no haya línea de visión entre quien dispara y los aprendices (en ese caso todos los disparos van Al Kharibdyss). En combate cuerpo a cuerpo actúan como una unidad de Hostigadores, colocando los Aprendices al lado del Kharibdyss. Sin embargo, los Aprendices son expertos en utilizar al Kharibdyss para su propia protección, con lo que el enemigo atacará al Kharibdyss si le es posible en vez de a los Aprendices. En la fase de declaración de cargas, es el Kharibdyss quien carga (tiene que estar en su línea de visión; no se considera que tenga visión 360º).</description>
             </rule>
-            <rule id="98c2-2f98-9c53-8bc4" name="Asalto Imparable" hidden="false"/>
+            <rule id="98c2-2f98-9c53-8bc4" name="Boca Terrible" hidden="false">
+              <description>Uno de los ataques de la Kharibdyss debe realizarse con un dado de color distinto. Ese ataque tiene la regla Heridas múltiples (1D6)</description>
+            </rule>
           </rules>
           <infoLinks>
             <infoLink id="41b5-d51e-4ee9-aa75" name="Terror" hidden="false" targetId="31ab-3ff3-e34f-baac" type="rule"/>
@@ -7400,6 +7544,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -7434,7 +7579,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="275.0"/>
+        <cost name="puntos" typeId="53ea-00f4-9046-81ff" value="225.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="02cd-03ec-e6b4-a745" name="Hidra de guerra" hidden="false" collective="false" import="true" type="unit">
@@ -7485,6 +7630,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6 + 1 por cada aprendiz vivo</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">50x100 o 60x100</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7615,6 +7761,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -7692,6 +7839,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Personaje</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7802,6 +7950,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7923,6 +8072,7 @@ En tal caso, se considera parte de la dotación a todos los efectos, sustituyend
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7977,7 +8127,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe19-890c-5a04-d9e1" type="greaterThan"/>
           </conditions>
           <modifiers>
-            <modifier type="set-primary" field="category" value="ba68-224b-3224-a908"/>
+            <modifier type="set-primary" field="category" value="0cfc-02a1-ad30-fb33"/>
             <modifier type="remove" field="category" value="102e-012c-5785-3354"/>
           </modifiers>
         </modifierGroup>
@@ -8037,6 +8187,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">25x50 o 30x60</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8129,6 +8280,7 @@ una brillante estela roja en el aire.</comment>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Personaje Especial.</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
         <profile id="794b-804b-3b89-fd3e" name="Amuleto Ígneo" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
@@ -8243,6 +8395,7 @@ ser el General.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Personaje Especial.</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
         <profile id="cc4f-d8fd-1a1d-d2b9" name="Armadura de Hierro" hidden="false" typeId="7895-caab-ea85-11a6" typeName="Armadura">
@@ -8313,6 +8466,7 @@ ser el General.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Personaje especial.</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
         <profile id="7bca-cab8-cbdb-f32c" name="Espadas Rojas" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
@@ -8407,6 +8561,7 @@ ser el General.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
         <profile id="f9f6-d517-f889-ff96" name="Destructora" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
@@ -8531,6 +8686,7 @@ Heridas múltiples contra Malekith se considera que siempre causa 1 única herid
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">7 (6+1 del jinete)</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -8606,6 +8762,7 @@ herir fallidas.</characteristic>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
         <profile id="4327-64f5-ef91-0731" name="Malus Darkblade" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -8623,7 +8780,8 @@ herir fallidas.</characteristic>
             <characteristic name="TSE" typeId="5d21-7e7e-60e3-a458"/>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
-            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+            <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"></characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -8692,6 +8850,7 @@ En caso de que Malus ataque a una miniatura amiga, estas heridas no se tienen en
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -8763,6 +8922,7 @@ En caso de que Malus ataque a una miniatura amiga, estas heridas no se tienen en
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1">1</characteristic>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Hechicero, Personaje especial.</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
         <profile id="e167-4a1b-5e59-4b83" name="Arrancacorazones" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
@@ -8875,6 +9035,7 @@ obligación. Toda unidad de Elfas Brujas a 30cm o menos de Morathi puede usar su
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -8936,6 +9097,7 @@ obligación. Toda unidad de Elfas Brujas a 30cm o menos de Morathi puede usar su
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Personaje Especial.</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
         <profile id="b851-c79d-e54e-6dac" name="Látigo de la Agonía" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
@@ -9039,6 +9201,7 @@ chequeo, la miniatura impactada sólo impactará con resultados de 6 en la tirad
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Personaje especial.</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
         <profile id="08dd-6346-0aff-e005" name="Corazón del Infortunio" hidden="false" typeId="0912-c473-dc44-71c2" typeName="Objetos mágicos">
@@ -9130,6 +9293,7 @@ Shadowblade puede beberse su Poción de fuerza en el momento en que el enemigo l
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Personaje especial.</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
         <profile id="954a-b37d-5780-4328" name="Hacha de los Verdugos" hidden="false" typeId="83dc-30c1-3c91-3ea4" typeName="Arma">
@@ -9218,6 +9382,7 @@ puede abandonar de forma voluntaria la unidad de Verdugos en la que estaba inici
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -9359,6 +9524,7 @@ puede abandonar de forma voluntaria la unidad de Verdugos en la que estaba inici
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9405,6 +9571,7 @@ puede abandonar de forma voluntaria la unidad de Verdugos en la que estaba inici
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">6</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -9454,6 +9621,7 @@ puede abandonar de forma voluntaria la unidad de Verdugos en la que estaba inici
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Slaanesh.</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -9800,6 +9968,7 @@ puede abandonar de forma voluntaria la unidad de Verdugos en la que estaba inici
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Personaje</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">25x25 o 30x30</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10006,6 +10175,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Personaje</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -10160,6 +10330,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10334,6 +10505,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10396,6 +10568,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -10506,6 +10679,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10552,6 +10726,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Slaanesh.</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10651,6 +10826,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería, Elfo, Elfo Oscuro, Slaanesh.</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10697,6 +10873,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">25x50 o 30x60</characteristic>
           </characteristics>
         </profile>
         <profile id="ac0c-796f-9b78-f340" name="Diablilla" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -10715,6 +10892,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -10827,6 +11005,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10873,6 +11052,7 @@ Diablo de Slaanesh (+40). Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">25x25 o 30x30</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -11043,6 +11223,7 @@ en Guerreros Elegidos del Caos (+6/m). Los Guerreros Elegidos del Caos sustituye
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11117,6 +11298,7 @@ en Guerreros Elegidos del Caos (+6/m). Los Guerreros Elegidos del Caos sustituye
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">20x20 o 25x25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -11221,6 +11403,7 @@ en Guerreros Elegidos del Caos (+6/m). Los Guerreros Elegidos del Caos sustituye
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
         <profile id="e798-8847-75b9-813b" name="Corcel de Slaanesh" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -11239,6 +11422,7 @@ en Guerreros Elegidos del Caos (+6/m). Los Guerreros Elegidos del Caos sustituye
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">25x50 o 30x60</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -11355,6 +11539,7 @@ en Guerreros Elegidos del Caos (+6/m). Los Guerreros Elegidos del Caos sustituye
                     <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                     <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Infantería</characteristic>
                     <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+                    <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11417,6 +11602,7 @@ en Guerreros Elegidos del Caos (+6/m). Los Guerreros Elegidos del Caos sustituye
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo, Caos, Demonio, Slaneesh</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -11527,6 +11713,7 @@ en Guerreros Elegidos del Caos (+6/m). Los Guerreros Elegidos del Caos sustituye
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">3</characteristic>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -11605,6 +11792,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería, Humano, Caos.</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">1</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91">25x50 o 30x60</characteristic>
           </characteristics>
         </profile>
         <profile id="9691-6bc6-f3bc-eb10" name="Corcel del Caos con barda" hidden="false" typeId="1025-8460-b30f-58db" typeName="Modelo">
@@ -11623,6 +11811,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -11803,6 +11992,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Carro</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">4</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -11842,6 +12032,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -11871,6 +12062,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -11959,6 +12151,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Carro</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">4</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -11997,6 +12190,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -12026,6 +12220,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
                 <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
                 <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833"/>
                 <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705"/>
+                <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
               </characteristics>
             </profile>
           </profiles>
@@ -12085,6 +12280,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -12114,6 +12310,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -12152,6 +12349,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">4 (3+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -12189,6 +12387,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">5 (4+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -12223,6 +12422,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">7 (6+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -12273,6 +12473,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -12302,6 +12503,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Monstruo, Caos, Demonio, Slaanesh</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">4 (3+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -12336,6 +12538,7 @@ de 5D6. Gana el tipo de unidad Slaanesh.</description>
             <characteristic name="RM" typeId="784b-e30f-e0fd-53b1"/>
             <characteristic name="Tipo" typeId="4a99-e6a0-4022-a833">Caballería</characteristic>
             <characteristic name="Potencia" typeId="6bbb-9823-b0cd-5705">2 (1+1 del jinete)</characteristic>
+            <characteristic name="Peana" typeId="9407-c9a7-f52f-ca91"/>
           </characteristics>
         </profile>
       </profiles>
@@ -14549,7 +14752,8 @@ o más miniaturas con Almizcle Soporífero ven su HA y su Iniciativa reducidas a
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="9b93-87ee-bb9b-0644" name="Petrificar" hidden="false">
-      <description>La mirada de esta criatura convierte a sus enemigos en piedra. Se considera a todos los efectos un ataque de disparo con un alcance de 20cm; no es necesario hacer tirada para impactar (y puede hacerse aunque la miniatura tenga HP0). El ataque impacta automáticamente. La víctima puede intentar apartarse en el último momento para evitar el destino que le espera. Para ello, la víctima debe hacer un chequeo de Iniciativa (lanza 1D6, debe obtenerse un valor inferior o igual a la Iniciativa, un 6 siempre es un fallo. Si lo supera, no ocurre nada. Si no lo supera, la víctima se transforma lentamente en piedra y muere (retírala como baja, sea cual sea su tamaño). No pueden efectuarse tiradas de salvación por armadura contra este ataque ni regeneración, pero sí tiradas de salvación especial.</description>
+      <description>Se trata de un ataque de proyectiles a todos los efectos. Alcance 20cm. Este ataque causa un impacto automático. Sin embargo, la víctima puede intentar apartarse en el último momento para evitar el destino que le espera. La víctima efectúa un
+chequeo de iniciativa; si lo supera, no ocurre nada, pero si no lo supera, queda convertida en estatua de piedra. Naturalmente, resulta fatal sea cual sea el número de Heridas que posea la miniatura, por lo que es retirada como baja (no importa el tamaño de la miniatura). Este ataque Anula Armaduras (puede efectuarse Tirada de salvación especial). Se puede aplicar Regeneración. No tiene efectos sobre Máquinas de guerra (pero sí su dotación), edifcios (incluyendo murallas), ni miniaturas de tipo Constructo.</description>
     </rule>
     <rule id="aece-2a87-b48c-0b8f" name="Despliegue oculto" hidden="false">
       <description>Antes de la partida, anota en qué unidad está esta miniatura. Si la unidad es destruida (o sale del tablero) antes de ser revelado, esta miniatura se considera baja (el oponente gana sus puntos de victoria). Antes de que la miniatura sea revelada, no podrá ser dañada de ninguna forma (por ejemplo, un hechizo que daña a toda la unidad no dañaría al asesino). Al inicio de cualquier turno, o al inicio de cualquier fase de combate cuerpo a cuerpo, el jugador puede revelar las miniaturas ocultas que quiera. En ese momento las miniaturas pueden colocarse en cualquier parte de la unidad (desplazando miniaturas si es necesario), incluso trabadas en combate cuerpo a cuerpo. En el turno en que se revela, la miniatura gana la regla Siempre ataca primero. Alternativamente, puedes desplegar esta miniatura como Explorador (por ejemplo, en una unidad de Sombras), o de la forma habitual en una unidad.</description>
